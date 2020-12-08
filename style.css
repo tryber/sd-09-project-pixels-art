@@ -1,0 +1,21 @@
+
+#color-pallete {
+  margin: auto;
+  background-color: green;
+}
+
+.color {
+  padding: 35px;
+  display: inline-block;
+  border: black solid 1px;
+}
+
+.linePixel {
+  display: inline-block;
+}
+
+.pixel {
+  padding: 19px;
+  border: black solid 1px;
+  background-color: white;
+}
