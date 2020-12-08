@@ -1,5 +1,6 @@
 window.onload = function () {
     let currentColorSelected = 'black';
+    changeClassSelectedElement(currentColorSelected);
     let colorPalette = document.getElementById('color-palette');
     colorPalette.addEventListener('click', setColorToPaint);
     let pixelBoard = document.getElementById('pixel-board');
@@ -12,6 +13,7 @@ window.onload = function () {
     function setColorToPaint (evt) {
         let colorSelectedElementId = evt.target.id;
         changeClassSelectedElement(colorSelectedElementId);
+        removePreviousSelectedElementClass(colorSelectedElementId);
         currentColorSelected = colorSelectedElementId;       
     }
 
@@ -38,7 +40,6 @@ window.onload = function () {
     function changeClassSelectedElement (elementId) {
         let element = document.getElementById(elementId);
         element.classList.add('selected');
-        removePreviousSelectedElementClass(currentColorSelected);
     }
 
     function removePreviousSelectedElementClass (elementId) {
