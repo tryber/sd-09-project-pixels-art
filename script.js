@@ -24,7 +24,7 @@ function makePixelBoard(numOfRows, numOfColumns) {
 
 makePixelBoard(5,5);
 
-function setColorPalette() {
+function setColorPaletteEvents() {
   const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', pickColor)
 }
@@ -39,9 +39,9 @@ function pickColor() {
   }
 }
 
-setColorPalette();
+setColorPaletteEvents();
 
-function setPixelBoard() {
+function setPixelBoardEvents() {
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.addEventListener('click', paintPixel)
 }
@@ -55,4 +55,35 @@ function paintPixel() {
   }
 }
 
-setPixelBoard();
+setPixelBoardEvents();
+
+function makeClearButton() {
+  const row = document.createElement('div');
+  const button = document.createElement('button');
+  const pixelBoard = document.querySelector('#pixel-board');
+  const main = document.querySelector('main');
+  row.id = 'button-container';
+  button.id = 'clear-board';
+  button.innerText = 'Limpar';
+  row.appendChild(button);
+  main.insertBefore(row, pixelBoard);
+}
+
+makeClearButton();
+
+function setClearBoardEvents() {
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', clearBoard)
+}
+
+setClearBoardEvents();
+
+function clearBoard() {
+  const pixelRows = document.querySelectorAll('.pixel-row');
+  for (let rowIndex = 0; rowIndex < pixelRows.length; rowIndex += 1) {
+    let pixels = pixelRows[rowIndex].children;
+    for (let pixelIndex = 0; pixelIndex < pixels.length; pixelIndex += 1) {
+      pixels[pixelIndex].style.backgroundColor = 'white';
+    }
+  }
+}
