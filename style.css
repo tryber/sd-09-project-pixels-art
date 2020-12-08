@@ -4,6 +4,13 @@
   width: 50%;
   padding: 6px;
 }
+.black {
+    background-color: black;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
 .blue {
   background-color: blue;
   display: inline-block;
@@ -18,13 +25,7 @@
   width: 50px;
   border: 1px solid black;
 }
-.black {
-  background-color: black;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
-}
+
 .green {
   background-color:green;
   display: inline-block;
