@@ -53,15 +53,19 @@ function botaPreto(color){
     let addPreto = document.querySelectorAll('.color')[0];
     addPreto.style.backgroundColor = color;
   }
+  botaPreto(preto);
   function botaAzul(color){
     let addAzul = document.querySelectorAll('.color')[1];
     addAzul.style.backgroundColor = color;
   }
+  botaAzul(azul);
   function botaVerde(color){
     let addVerde = document.querySelectorAll('.color')[2];
     addVerde.style.backgroundColor = color;
   }
+  botaVerde(verde);
   function botaVermelho(color){
     let addVermelho = document.querySelectorAll('.color')[3];
     addVermelho.style.backgroundColor = color;
   }
+  botaVermelho(vermelho);
