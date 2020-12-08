@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+}
+
+#title {
+    text-align: center;
+    background-color: lawngreen;
+}
+
+#color-palette {
+  background-color: white;
+  text-align: center;
+  height: 52px;
+  min-width: 600px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 10px;
+}
+
+.color {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.black {
+  background-color: black;
+}
