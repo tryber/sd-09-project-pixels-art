@@ -8,7 +8,7 @@ h1 {
   width: 50px;
 }
 #color-palette .color:nth-child(4n - 3) {
-  background-color: chartreuse;
+  background-color: black;
 }
 #color-palette .color:nth-child(4n - 2) {
   background-color: crimson;
@@ -17,5 +17,5 @@ h1 {
   background-color: cyan;
 }
 #color-palette .color:nth-child(4n) {
-  background-color: gold;
+  background-color: chartreuse;
 }
