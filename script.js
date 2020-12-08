@@ -36,7 +36,7 @@ window.onload = function() {
     }
     function palette(number){
         const divFather = document.querySelector('#color-palette');
-        createBox('color','rgb(0, 0, 0)', divFather, 1)
+        createBox('color selected','rgb(0, 0, 0)', divFather, 1)
         for (let index = 0; index < number; index += 1) {
             createBox('color', getRandomColor(), divFather, 1)
         }
@@ -56,4 +56,5 @@ window.onload = function() {
         }
     }
     createBoard(5, 5);
+
 }
