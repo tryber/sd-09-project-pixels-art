@@ -1,6 +1,5 @@
 window.onload = function () {
     let currentColorSelected = 'black';
-    //changeClassSelectedElement(currentColorSelected);
     let colorPalette = document.getElementById('color-palette');
     colorPalette.addEventListener('click', setColorToPaint);
     let pixelBoard = document.getElementById('pixel-board');
@@ -13,8 +12,8 @@ window.onload = function () {
     function setColorToPaint (evt) {
         let colorSelectedElementId = evt.target.id;
         changeClassSelectedElement(colorSelectedElementId);
-        removePreviousSelectedElementClass(colorSelectedElementId);
-        currentColorSelected = colorSelectedElementId;       
+        removePreviousSelectedElementClass(currentColorSelected);
+        currentColorSelected = colorSelectedElementId;     
     }
 
     function changePixelColor (evt) {
@@ -32,7 +31,7 @@ window.onload = function () {
     }
 
     function createCustomPixelBoarder () {
-        let currentPixelBoard = document.getElementById('pixel-board');
+        let currentPixelBoard = document.getElementsByClassName('pixel');
         let pixelBoardLength = currentPixelBoard.length;
         console.log(pixelBoardLength);
     }
