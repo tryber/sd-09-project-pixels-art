@@ -3,18 +3,34 @@
   display: inline-block;
 }
 
-#color-one {
+.black {
   background-color: black;
 }
 
-#color-two {
+.cyan {
   background-color: cyan;
 }
 
-#color-three {
+.blueviolet {
   background-color: blueviolet;
 }
 
-#color-four {
+.green {
   background-color: green;
+}
+
+#pixel-board {
+  display: table;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
+
+.pixel {
+  background-color: white;
 }
