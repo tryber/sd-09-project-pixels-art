@@ -4,6 +4,7 @@
 
 body {
   padding: 12px;
+  text-align: center;
 }
 
 .color {
@@ -41,4 +42,8 @@ body {
   height: 40px;
   width: 40px;
   margin: 0px;
+}
+
+button {
+    margin: 10px;
 }

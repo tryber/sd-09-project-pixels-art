@@ -3,6 +3,7 @@ window.onload = function() {
     let boardLines = document.querySelectorAll('.board-line');
     let colorPalette = document.getElementById('color-palette');
     let selectedColor = 'black';
+    let buttonClear = document.getElementById('clear-board')
 
     fillPixelBoard(boardLines);
     selectColor();
@@ -41,10 +42,23 @@ window.onload = function() {
         let pixelBoard = document.getElementById('pixel-board');
 
         pixelBoard.addEventListener('click', function(event) {
-            selectedColor = document.querySelector('.selected').id;
-            event.target.style.backgroundColor = selectedColor;
-        });
+            if (event.target.className === 'pixel') {
+                event.target.style.backgroundColor = selectedColor;
+            }
+        }); 
     }
 
     paintPixelWithColorSelected();
+
+    function clearBoard() {
+        let allPixels = document.querySelectorAll('.pixel')
+
+        buttonClear.addEventListener('click', function() {
+            for (let index = 0; index < allPixels.length; index += 1) {
+                allPixels[index].style.backgroundColor = 'white';
+            }
+        });
+    }
+
+    clearBoard();
 }
