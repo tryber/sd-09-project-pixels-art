@@ -2,21 +2,6 @@
   border: solid 1px black;
   display: inline-block;
   height: 50px;
+  margin: 2px;
   width: 50px;
-}
-
-#black {
-  background-color: black;
-}
-
-#green {
-  background-color: green;
-}
-
-#red {
-  background-color: red;
-}
-
-#yellow {
-  background-color: yellow;
 }
