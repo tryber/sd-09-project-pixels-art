@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   text-align: center;
 }
@@ -27,13 +33,28 @@ h1 {
   background-color: black;
 }
 
+
 /* Palette */
 #color-palette {
   text-align: center;
 }
 
+
 /* Pixel Board */
 #pixel-board {
-  margin-top: 28px;
   text-align: center;
+}
+
+#pixel-board {
+  margin: 0;
+  padding: 0;
+}
+
+.line-pixel {
+  height: 40px;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
 }
