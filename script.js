@@ -37,3 +37,18 @@ function fillPixelBoard() {
 }
 
 fillPixelBoard();
+
+// Step 6 & 7
+function selectColor() {
+  const myColors = document.querySelectorAll('.color')
+  let colorSelected = myColors[0]
+  for (let color of myColors) {
+    color.addEventListener('click', (event) => {
+      colorSelected.className = 'color'
+      event.target.className = 'color selected'
+      colorSelected = event.target
+    })
+  }
+}
+
+selectColor()
