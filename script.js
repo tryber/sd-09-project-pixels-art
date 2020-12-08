@@ -11,6 +11,7 @@ const palette1 = document.querySelector('#color1');
 const palette2 = document.querySelector('#color2');
 const palette3 = document.querySelector('#color3');
 const palette4 = document.querySelector('#color4');
+const btnErase = document.querySelector('#clear-board');
 
 function makeLinePixels(line) {
   for (let index = 0; index < 5; index += 1) {
@@ -50,6 +51,18 @@ function setSelected() {
   colorPalette.addEventListener('click', selectPalette);
 }
 
+function eraseAll() {
+  const pixel = document.querySelectorAll('.pixel');
+  for(let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
+
+function eraseScrean() {
+  btnErase.addEventListener('click', eraseAll);
+}
+
 makePixels();
 colorizePixels();
 setSelected();
+eraseScrean();
