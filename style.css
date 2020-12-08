@@ -25,3 +25,10 @@
 .green{
   background-color: green;
 }
+
+.pixel{
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+}
