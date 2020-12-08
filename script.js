@@ -1,9 +1,6 @@
 window.onload = function () {
   document.querySelector('#color1').className += ' selected';
   document.querySelector('#color1').style.backgroundColor = 'black';
-  document.querySelector('#color2').style.backgroundColor = 'red';
-  document.querySelector('#color3').style.backgroundColor = 'green';
-  document.querySelector('#color4').style.backgroundColor = 'blue';
   makePixels(5);
 };
 const pixelBoard = document.querySelector('#pixel-board');
@@ -17,6 +14,19 @@ const numberSquare = document.querySelector('#board-size');
 const generateSquare = document.querySelector('#generate-board');
 let atualNumber = 5;
 
+function ranndomPalet() {
+  let color = 'rgb('
+  color += `${Math.ceil(Math.random() * 255)}, `;
+  color += `${Math.ceil(Math.random() * 255)}, `;
+  color += `${Math.ceil(Math.random() * 255)})`;
+  return color
+}
+
+function setColor() {
+  document.querySelector('#color2').style.backgroundColor = ranndomPalet();
+  document.querySelector('#color3').style.backgroundColor = ranndomPalet();
+  document.querySelector('#color4').style.backgroundColor = ranndomPalet();
+}
 function isInside() {
   let rightSize = parseInt(numberSquare.value);
   if (rightSize < 5) {
@@ -95,7 +105,8 @@ function eraseScrean() {
   btnErase.addEventListener('click', eraseAll);
 }
 
-
+ranndomPalet();
+setColor();
 makePixels();
 colorizePixels();
 setSelected();
