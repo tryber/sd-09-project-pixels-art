@@ -22,11 +22,8 @@
 #vermelho{
     background-color: red;
 }
-
-#amarelo{
-    background-color: yellow;
-}
-
-#rosa{
-    background-color: pink;
-}
+#pixel-board {
+    border: black solid 1px;
+    display: table;
+    margin: 10px auto;
+  }
