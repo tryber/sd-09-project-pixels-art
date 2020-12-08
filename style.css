@@ -1,20 +1,20 @@
 .color {
   border: 1px solid black;
-  width: 35px;
-  height: 35px;
   display: inline-block;
+  height: 35px;
+  width: 35px;
 }
 
 #pixel-board {
-  width: 250px;
   line-height: 10px;
   margin-top: 5px;
+  width: 250px;
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
   background-color: white;
+  border: 1px solid black;
   display: inline-block;
+  height: 40px;
+  width: 40px;
 }
