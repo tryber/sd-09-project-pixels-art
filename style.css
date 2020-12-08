@@ -1,37 +1,37 @@
 div #color-palette {
-	display: block;
+  display: block;
 }
 
 .color {
-	border: 1px solid black;
-	display: inline-block;
-	height: 40px;
-	width: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .first-color {
-	background-color: black;
+  background-color: black;
 }
 
 .second-color {
-	background-color: rgb(196 , 77 , 88);
+  background-color: rgb(196 , 77 , 88);
 }
 
 .third-color {
-	background-color: rgb(199 , 244 , 100);
+  background-color: rgb(199 , 244 , 100);
 }
 
 .fourth-color {
-	background-color: rgb(78 , 170 , 198);
+  background-color: rgb(78 , 170 , 198);
 }
 
 .pixel {
-	background-color: white;
-	border: 1px solid black;
-	height: 40px;
-	width: 40px;
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-line {
-	display: inline-block;
+  display: inline-block;
 }
