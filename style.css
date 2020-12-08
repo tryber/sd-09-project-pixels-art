@@ -1,4 +1,4 @@
-* {
+body {
   box-sizing: border-box;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .tr {
-  display: table-row
+  display: table-row;
 }
 
 .td {
