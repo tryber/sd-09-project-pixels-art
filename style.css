@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body{
+  background-image: url("bk.png");
+  background-size: 1366px 798px;
+  background-position: 0 -170px ;
+}
+
 h1 {
   margin: auto;
   width: 50%;
@@ -43,16 +49,15 @@ h1 {
 }
 
 #pixel-board{
-    margin: auto;
-
-    width: 210px;
-    height: 210px;
+  margin: auto;
+  width: 210px;
+  height: 210px;
 }
 
 .pixel{
-    background-color: white;
-    float: left;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+  background-color: white;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
 }
