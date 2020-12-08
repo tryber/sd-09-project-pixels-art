@@ -1,4 +1,4 @@
-* {
+html {
   margin: 0;
   padding: 0;
 }
@@ -8,17 +8,16 @@ body {
   text-align: center;
 }
 
-.color-block {
-  margin: 10px;
-  border: 1px solid black;
-  width: 55px;
-  height: 55px;
-  display: inline-block;
-}
-
 .color-palette {
   display: inline;
-  align:center;
+}
+
+.palette-square {
+  border: 1px solid black;
+  display: inline-block;
+  height: 55px;
+  margin: 10px;
+  width: 55px;
 }
 
 .black {

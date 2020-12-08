@@ -1,1 +1,1 @@
-console.log('VQV')
+// Arquivo de JS do projeto pixels-art
