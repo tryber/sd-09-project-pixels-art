@@ -18,7 +18,7 @@ header {
   width: 100vw;
 }
 
-h1#title {
+#title {
   color: white;
   font-family: Ubuntu, sans-serif;
   font-size: 5rem;
@@ -34,7 +34,7 @@ h1#title {
   width: 70%;
 }
 
-div#color-palette {
+#color-palette {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -52,7 +52,7 @@ div#color-palette {
   width: 100%;
 }
 
-table#pixel-board {
+#pixel-board {
   border-collapse: collapse;
   margin: auto;
 }
