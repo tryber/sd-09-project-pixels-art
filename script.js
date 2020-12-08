@@ -1,6 +1,6 @@
 function drawColorPallets() {
-  let pallets = document.querySelectorAll('#color-palette .color');
-  let colors = ['black', 'red', 'green', 'blue'];
+  const pallets = document.querySelectorAll('#color-palette .color');
+  const colors = ['black', 'red', 'green', 'blue'];
   for (let index = 0; index < pallets.length; index += 1) {
     pallets[index].style.backgroundColor = colors[index];
     pallets[index].style.border = '1px black solid';
@@ -15,10 +15,10 @@ function drawColorPallets() {
   pallets[3].style.backgroundColor = 'blue';
 }
 
-function randomRGB () {
-  Math.random
+function randomRGB() {
+  Math.random;
 }
 
-window.onload = function() {
+window.onload = function () {
   drawColorPallets();
 }

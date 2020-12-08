@@ -1,8 +1,7 @@
-#title {
+.title {
   text-align: center;
 }
-#color-palette {
+.color-palette {
   margin: auto;
   width: 50%;
-  /* display: inline-block; */
 }
