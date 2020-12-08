@@ -4,19 +4,19 @@
   padding: 24px;
 }
 
-.black {
+.color.black {
   background-color: black;
 }
 
-.blue {
+.color.blue {
   background-color: lightblue;
 }
 
-.green {
+.color.green {
   background-color: lightgreen;
 }
 
-.pink {
+.color.pink {
   background-color: lightpink;
 }
 
