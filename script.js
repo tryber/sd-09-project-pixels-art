@@ -12,3 +12,28 @@ function setPalletColors() {
 }
 
 setPalletColors()
+
+// Step 4
+function createPixel(className) {
+  const pixel = document.createElement('div')
+  pixel.className = className
+  return pixel
+}
+
+function createPixelBoard(idName) {
+  const pixelBoard = document.createElement('div')
+  pixelBoard.id = idName
+  return document.body.appendChild(pixelBoard)
+}
+
+createPixelBoard('pixel-board')
+
+function fillPixelBoard() {
+  const pixelBoard = document.querySelector('#pixel-board')
+  const maxNumberOfPixels = 25
+  for (let pixelIndex = 0; pixelIndex < maxNumberOfPixels; pixelIndex += 1) {
+    pixelBoard.appendChild(createPixel('pixel')) 
+  }
+}
+
+fillPixelBoard()
