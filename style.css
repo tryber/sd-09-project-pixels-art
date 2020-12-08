@@ -3,18 +3,26 @@ h1 {
 }
 
 .block {
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid #000000;
-  width: 32px;
-  height: 32px;
+  background-color: white;
+  border: 1px solid black;
   display: inline-block;
+  height: 32px;
+  width: 32px;
 }
 
 /* Colors */
-.blue { background-color: rgba(5,68,92,1); }
-.pink { background-color: rgba(242,49,127,1); }
-.purple { background-color: rgba(92,79,116,1); }
-.black { background-color: rgba(0,0,0,1); }
+.blue { 
+  background-color: rgba(5, 68, 92, 1);
+}
+.pink { 
+  background-color: rgba(242, 49, 127, 1);
+}
+.purple { 
+  background-color: rgba(92, 79, 116, 1);
+}
+.black { 
+  background-color: black;
+}
 
 /* Palette */
 #color-palette {
@@ -23,6 +31,6 @@ h1 {
 
 /* Pixel Board */
 #pixel-board {
-  text-align: center;
   margin-top: 28px;
+  text-align: center;
 }
