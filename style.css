@@ -49,8 +49,8 @@ h1 {
 }
 
 .pixel {
+  border: 1px solid black;
   display: inline-block;
   height: 38px;
-  border: 1px solid black;
   width: 38px;
 }
