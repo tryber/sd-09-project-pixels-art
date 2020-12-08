@@ -15,12 +15,24 @@ h1 {
 .color{
   display: inline-block;
   border: solid 1px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
 }
 
 #black {
   background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
 }
 
 #pixel-board {
@@ -30,8 +42,8 @@ h1 {
 
 .pixel {
   border: solid 1px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   background-color: white;
 }
 
