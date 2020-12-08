@@ -1,4 +1,4 @@
-* {
+html {
   margin: 0;
   padding: 0;
 }
@@ -32,7 +32,7 @@ body {
   background-color: yellow;
 }
 
-#pixel-board {
+.pixel-board {
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
@@ -40,8 +40,8 @@ body {
 }
 
 .pixel {
-  border: 1px solid black;
   background-color: white;
+  border: 1px solid black;
   display: inline-block;
   height: 40px;
   margin: -2px 0;
