@@ -19,3 +19,17 @@ function fiveTimesLine() {
     }
 }
 fiveTimesLine()
+
+let getPalet1 = document.querySelector('#color-palette')
+
+
+function selecPalet(evento) {
+    let getAllPalet = document.querySelector('.selected')
+    getAllPalet.className = 'color'
+    evento.target.className = 'color selected'
+
+}
+
+getPalet1.addEventListener('click', selecPalet)
+
+
