@@ -19,3 +19,18 @@
 .purple {
   background-color: rgb(173, 27, 173);
 }
+
+#table {
+  display: table;
+}
+.tr {
+  border: 1px solid black;
+  padding: 35px;
+  display: table-row;
+}
+
+.pixel {
+  border: 1px solid black;
+  padding: 35px;
+  display: table-cell;
+}
