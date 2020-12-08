@@ -1,5 +1,4 @@
       #title {
-        background: red;
         border: 8px black;
         text-align: center;
       }
@@ -62,7 +61,7 @@
         margin-right: 25%;
       }
 
-      td, th {
+      td {
         width: 40px;
         height: 40px;
         border: 1px solid black;
