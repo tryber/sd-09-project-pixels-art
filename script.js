@@ -12,6 +12,7 @@ function createColorPalette() {
     colorPalette.appendChild(color);
   }
 }
+
 createColorPalette();
 
 function createPixelBoard() {
@@ -25,6 +26,7 @@ function createPixelBoard() {
     }
   }
 }
+
 createPixelBoard();
 
 function selectColor() {
@@ -40,6 +42,7 @@ function selectColor() {
     });
   });
 }
+
 selectColor();
 
 function paintSelectedPixel() {
@@ -53,6 +56,7 @@ function paintSelectedPixel() {
     }
   });
 }
+
 paintSelectedPixel();
 
 function clearBoard() {
@@ -65,4 +69,5 @@ function clearBoard() {
     });
   });
 }
+
 clearBoard();
