@@ -1,4 +1,12 @@
 window.onload = function() {
+    let btn = document.querySelector('#clear-board');
+    btn.addEventListener('click', function() {
+        let pixels = document.querySelectorAll('.pixel');
+        for (let index in pixels) {
+             pixels[index].style.backgroundColor = 'white';
+        }
+    })
+
     let colorPalette = document.querySelector('#color-palette');
     colorPalette.addEventListener('click', function(event) {
         let colors = document.querySelectorAll('.color')
