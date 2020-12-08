@@ -1,0 +1,26 @@
+#color-palette {
+    display: inline;
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 4rem;
+  height: 4rem;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
+}
