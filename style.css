@@ -1,5 +1,5 @@
 .color{
-  border-color: black;
-  border-style: solid;
-  border-width: 0px 0px 0px 1px;
+  border: solid black;
+  display: inline-block;
+  padding: 35px;
 }
