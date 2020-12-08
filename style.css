@@ -5,14 +5,24 @@
 
 .color {
     border: black solid 1px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
+    margin-right: 7px;
 }
 
-.pixel {
+#pixel-board {
     width: 200px;
     height: 200px;
     border: black solid 1px;
     background-color: white;
+    display: table;
+}
+
+.line { 
+    display: table-row; 
+}
+
+.column { 
+    display: table-cell;
 }
