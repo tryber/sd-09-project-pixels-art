@@ -1,27 +1,27 @@
-.color-black{
-    border: black solid 1px;
-    background-color: black;
-    padding: 35px;
-    display: inline-block;   
+.color {
+    
+  border: black solid 1px;
+  padding: 35px;
+  display: inline-block;
 }
 
-.color-green{
-    border: black solid 1px;
-    background-color: green;
-    padding: 35px;
-    display: inline-block;
+.black {
+  
+  background-color: black;  
+  
 }
 
-.color-orange{
-    border: black solid 1px;
-    background-color: orange;
-    padding: 35px;
-    display: inline-block;
+.green {
+  
+  background-color: green;    
 }
 
-.color-red{
-    border: black solid 1px;
-    background-color: red;
-    padding: 35px;
-    display: inline-block;
+.orange {
+  
+  background-color: orange;   
+}
+
+.red {
+  
+  background-color: red;    
 }
