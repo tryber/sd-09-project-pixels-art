@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.color {
+  border: 1px solid rgb(0 , 0 , 0);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+#black {
+  background-color: rgb(0 , 0 , 0);
+}
+
+#red {
+  background-color: rgb(201 , 0 , 0);
+}
+
+#yellow {
+  background-color: rgb(216 , 175 , 3);
+}
+
+#green {
+  background-color: rgb(4 , 144 , 21);
+}
