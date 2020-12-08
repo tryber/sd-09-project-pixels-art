@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+#color-palette .color:nth-child(4n - 3) {
+  background-color: chartreuse;
+}
+#color-palette .color:nth-child(4n - 2) {
+  background-color: crimson;
+}
+#color-palette .color:nth-child(4n - 1) {
+  background-color: cyan;
+}
+#color-palette .color:nth-child(4n) {
+  background-color: gold;
+}
