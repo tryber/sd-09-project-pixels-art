@@ -15,14 +15,13 @@
     width: 200px;
     height: 200px;
     border: black solid 1px;
-    background-color: white;
     display: table;
 }
 
-.line { 
-    display: table-row; 
+.line {
+    display: table-row;
 }
 
-.column { 
+.pixel {
     display: table-cell;
 }

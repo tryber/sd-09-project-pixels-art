@@ -7,26 +7,25 @@ window.onload = function() {
         color[3].style.backgroundColor = 'yellow'
     }
     colorPalette();
-
-    function createdPixelLine() {
-        let pixelBoard = document.querySelector('#pixel-board')
+    
+    let pixelBoard = document.querySelector('#pixel-board')
+    
+    function createdPixelLine(line) {
         for (let index = 0; index < 5; index += 1) {
             let createdElement = document.createElement('div')
-            pixelBoard.appendChild(createdElement)
-            createdElement.className = 'pixel line'
+            createdElement.className = 'pixel'
+            line.appendChild(createdElement)
             }
         }
-        createdPixelLine()
-
-        function createdPixelColumn() {
-            let pixelBoard = document.querySelectorAll('.pixel.line')
-            for (let index = 0; index < pixelBoard.length; index += 1) {
-                for (let indexTwo = 0; indexTwo < 5; indexTwo += 1) {
-                let createdElement = document.createElement('div')
-                pixelBoard[index].appendChild(createdElement)
-                createdElement.className = 'pixel column'
-                }
-                }
-            }
-            createdPixelColumn()
+        
+    function createdPixelColumn() {
+        for (let index = 0; index < 5; index += 1) {
+            let line = document.createElement('div')
+            line.className = 'line'
+            pixelBoard.appendChild(line)
+            createdPixelLine(line)
+        }
+    }
+    createdPixelColumn();
 }
+    
