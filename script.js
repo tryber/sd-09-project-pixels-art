@@ -24,11 +24,13 @@ function selectedAssigns() {
 selectedAssigns();
 
 function paintDiv() {
-  const selectedDiv = document.querySelector('.selected');
-  let color = selectedDiv.style.backgroundColor;
+
   const pixel = document.querySelector('.linhaColunaContainer')
   pixel.addEventListener('click', function(event) {
+    const selectedDiv = document.querySelector('.color.selected');
+    let color = selectedDiv.style.backgroundColor;
     event.target.style.background = color;
+    console.log(selectedDiv)
   })
 }
 paintDiv();
