@@ -15,3 +15,15 @@
   text-align: center;
   margin-top: 15%;
 }
+
+.linha {
+  border: solid 1px;
+  width: 50px;
+  height: 50px;
+}
+
+.linhaColunaContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
