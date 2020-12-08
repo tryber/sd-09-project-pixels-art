@@ -17,6 +17,14 @@
     background-color: red;
 }
 
-.yellow {
-    background-color: yellow;
+.black {
+    background-color: black;
+}
+
+.pixel {
+    background-color: white;
+    display: inline-block;
+    width: 10%;
+    height: 50px;
+    border: black solid 1px;
 }
