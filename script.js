@@ -4,7 +4,8 @@ function colorOnload() {
 
   return black
 }
-console.log(colorBlackSelectedOnload())
+
+console.log(colorOnload())
 
 // Função que pinta os quadrados
 function paintSquare() {
@@ -12,4 +13,4 @@ function paintSquare() {
 }
 
 // 1 - faço a função que vai selecionar a cor preta no carregamento da página
-// 2 - crio a função que vai pintar os quadrados
+// 2 - crio a função que seleciona a cor 
