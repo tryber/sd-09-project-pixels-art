@@ -5,6 +5,10 @@
   display: inline-block;
 }
 
+#color-palette {
+  
+}
+
 .color:hover {
     cursor: pointer;
 }
@@ -22,4 +26,23 @@
 
 .cyan {
   background-color: rgb(65 , 234 , 212);
+}
+
+.white {
+  background-color: white;
+}
+
+.pixel {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.pixel:hover {
+  cursor: pointer;
+}
+
+#pixel-board {
+  
 }
