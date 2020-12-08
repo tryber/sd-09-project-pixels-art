@@ -1,37 +1,37 @@
-#color-palette {
-    display: block;
+div #color-palette {
+	display: block;
 }
 
 .color {
-    display: inline-block;
-    border: 1px solid rgb(0, 0, 0);
-    width: 40px;
-    height: 40px;
+	border: 1px solid black;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
 }
 
-.color.first-color {
-    background-color: rgb(0, 0, 0);
+.first-color {
+	background-color: black;
 }
 
-.color.second-color {
-    background-color: rgb(196,77,88);
+.second-color {
+	background-color: rgb(196 , 77 , 88);
 }
 
-.color.third-color {
-    background-color: rgb(199,244,100);
+.third-color {
+	background-color: rgb(199 , 244 , 100);
 }
 
-.color.fourth-color {
-    background-color: rgb(78,170,198);
+.fourth-color {
+	background-color: rgb(78 , 170 , 198);
 }
 
 .pixel {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
+	background-color: white;
+	border: 1px solid black;
+	height: 40px;
+	width: 40px;
 }
 
 .pixel-line {
-    display: inline-block;
+	display: inline-block;
 }
