@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+
+.black {
+  background-color: black;
+}
+
+body {
+  text-align: center;
+  width: 1366px;
+  height: 768px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  padding: 25px;
+  margin: 6px;
+}
+
+.container {
+  background-color: rgb(204, 221, 221);
+  margin: 10px auto;
+  width: 1200px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
