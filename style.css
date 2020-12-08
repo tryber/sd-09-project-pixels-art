@@ -11,8 +11,8 @@
 }
 
 .button-container {
-  padding-top:30px;
-  text-align:center;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .color {
@@ -25,22 +25,6 @@
   line-height: 50px;
   text-shadow: 1px 1px black;
   width: 120px;
-}
-
-.cor0 {
-  background-color: black;
-}
-
-.cor1 {
-  background-color: #c5c3c6;
-}
-
-.cor2 {
-  background-color: #46494c;
-}
-
-.cor3 {
-  background-color: #1985a1;
 }
 
 h1 {
