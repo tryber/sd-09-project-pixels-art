@@ -1,0 +1,41 @@
+header {
+    text-align: center;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+
+}
+
+.color {
+    display: inline-block;
+    margin: 2px;
+    border: black solid 1px;
+    width: 40px;
+    height: 40px;
+
+}
+
+.color.black {
+    background-color: black;
+
+}
+
+.color.red {
+    background-color: red;
+
+}
+
+.color.green {
+    background-color: green;
+
+}
+
+.color.blue {
+    background-color: blue;
+}
+
+#main-content {
+
+}
