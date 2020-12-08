@@ -1,6 +1,6 @@
 #title {
     text-align: center;
-    background-color: blue;
+    
 }
 
 #color-palette {
@@ -12,6 +12,7 @@
     border-color: black;
     border-width: 1px;
     display: inline-block;
+    padding: 40px;
 }
 
 .black {
@@ -29,4 +30,18 @@
 
 .blue {
     background-color: blue;
+}
+
+.pixel-board {
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+}
+
+.pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    
 }
