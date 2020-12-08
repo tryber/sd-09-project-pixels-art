@@ -1,0 +1,21 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 30px;
+}
+
+#black {
+  background-color: black;
+}
+
+#lightBlue {
+  background-color: lightblue;
+}
+
+#red {
+    background-color: red;
+}
+
+#lightGreen {
+    background-color: lightgreen;
+}
