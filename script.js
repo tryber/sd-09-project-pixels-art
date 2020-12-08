@@ -34,16 +34,40 @@ window.onload = teste (5, 5)
 
 }
 
-addEventListener(window.onload, selectedColor('black')) 
+addEventListener(window.onload, selectedColor('black')) ;
 
 function selectedColor(colorName){
-    //puxar classes color
-    let getColorsPallete = document.querySelectorAll('.color')
-    //o parametro colorName é igual o background color de alguma classe color?
-    for (let index in getColorsPallete){
-        if (String(getColorsPallete[index].className).includes(colorName)){
-            getColorsPallete[index].className += ' selected'
+    let getColorsPalette = document.querySelectorAll('.color');
+    for (let index in getColorsPalette){
+        if (String(getColorsPalette[index].className).includes(colorName)){
+            getColorsPalette[index].className += 'selected'
         }
     }
 
+}    
+
+let getColorsPalette = document.getElementById('color-palette');
+
+getColorsPalette.addEventListener('click', recebeclick)
+
+function recebeclick(eventOrigin){
+
+    if (eventOrigin.target.id !== 'color-palette'){
+    let clickedColorClassNameString = String(eventOrigin.target.className);
+    let clickedColorClassName = eventOrigin.target.className;
+    let getColorsPaletteElements = document.querySelectorAll('.color');
+
+    if (clickedColorClassNameString.includes('selected')){
+        let newClass = String(clickedColorClassName.replace('selected', ''));
+        eventOrigin.target.className = newClass
+    } else {        
+        for (let index in getColorsPaletteElements){
+            if (String(getColorsPaletteElements[index].className).includes('selected')){
+            let newClass = String(getColorsPaletteElements[index].className.replace('selected', ''));
+            getColorsPaletteElements[index].className = newClass 
+            }
+        }
+        eventOrigin.target.className += 'selected'
+        }
+    } 
 }
