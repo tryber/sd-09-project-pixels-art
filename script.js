@@ -12,3 +12,16 @@ function createPixelBoard() {
   }
 }
 createPixelBoard();
+
+function selectColor() {
+  const colorPalette = document.querySelector('#color-palette');
+  colorPalette.addEventListener('click', (event) => {
+    for (let child = 0; child < colorPalette.childElementCount; child += 1) {
+      if (colorPalette.children[child].className.includes('selected')) {
+        colorPalette.children[child].classList.remove('selected');
+      }
+    }
+    event.target.classList.add('selected');
+  });
+}
+selectColor();
