@@ -1,4 +1,8 @@
 
+* {
+	margin: 0;
+	padding: 0;
+}
 
 #title {
   font-size: 3em;
@@ -6,30 +10,29 @@
 
 #color-palette {
   width: 226px;
-  display: flex;
-  margin: 10px;
 }
 
 #pixel-board {
-	width: 216px;
-  height: 216px;
+	width: 210px;
+  height: 210px;
 	margin: 0;
+	line-height: 0;
+	display: flex; 
+	flex-wrap: wrap;
 }
 
 .pixel {
     border: 1px solid black;
     width: 40px;
     height: 40px;
-		color: white;
-		float: left;
-
+		color:rgb(255 , 255 , 255);
 }
 
 .color {
-  margin: 0 auto;
   border: 1px solid black;
   width: 40px;
-  height: 40px;
+	height: 40px;
+	display: inline-block;
 }
 
 .black {
