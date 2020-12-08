@@ -22,27 +22,55 @@ function randomRgbNumberColor() {
 }
 
 // Put color random on the elements
-function randomColorsPalette() {
-  const pixelColorSquare = document.querySelectorAll('.color');
-  for (let index = 1; index < pixelColorSquare.length; index += 1) {
+function randomColorsPalette(paletteColorElement) {
+  paletteColorElement[0].style.backgroundColor = 'rgb(0, 0, 0)';// frist color black
+  for (let index = 1; index < paletteColorElement.length; index += 1) {
     const colorNumber = randomRgbNumberColor();
-    pixelColorSquare[index].style.backgroundColor = `rgb(${colorNumber[0]}, ${colorNumber[1]}, ${colorNumber[2]})`;
+    paletteColorElement[index].style.backgroundColor = `rgb(${colorNumber[0]}, ${colorNumber[1]}, ${colorNumber[2]})`;
   }
 }
 
+// Create Pixel element
 function createPixelElement() {
   const pixelBoardElement = document.querySelector('#pixel-board');
   const numberOfElements = 5;
   const widthPixelBoardElement = (numberOfElements * 40) + (numberOfElements * 5);
   for (let index = 0; index < Math.pow(numberOfElements, 2); index += 1) {
-      const pixelElement = document.createElement('div');
-      pixelElement.className = 'pixel';
-      pixelBoardElement.appendChild(pixelElement);
+    let pixelElement = document.createElement('div');
+    pixelElement.className = 'pixel';
+    pixelBoardElement.appendChild(pixelElement);
   }
   pixelBoardElement.style.maxWidth = `${widthPixelBoardElement}px`;
 }
 
-window.onload = function() {
-  randomColorsPalette();
-  createPixelElement();
+// Function Checks Selected Class And Remove
+function checksSelectedClassAndRemove(paletteColorElement) {
+  for (let index = 0; index < paletteColorElement.length; index += 1) {
+    if (paletteColorElement[index].classList.contains('selected')) {
+      paletteColorElement[index].classList.remove('selected');
+    }
+  }
 }
+
+// Function of selecting the desired color
+function selectColorPalette (paletteColorElement) {
+  for (let index = 0; index < paletteColorElement.length; index += 1) {
+    paletteColorElement[index].addEventListener('click', function (event) {
+      checksSelectedClassAndRemove(paletteColorElement);
+      event.target.classList.toggle('selected');
+    });
+  }
+}
+
+function coloringPixel() {
+  
+}
+
+window.onload = function () {
+  const paletteColorElement = document.querySelectorAll('.color');
+  randomColorsPalette(paletteColorElement);
+  createPixelElement();
+  selectColorPalette(paletteColorElement);
+  coloringPixel();
+}
+
