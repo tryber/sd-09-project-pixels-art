@@ -1,50 +1,51 @@
 body {
-    width: 1366px;
-    height: 768px;
-    font-size: 16px;
+  width: 1366px;
+  height: 768px;
+  font-size: 16px;
 }
 
-ul li a{
-    text-decoration: none;
-    color: cadetblue;
+ul li a {
+  text-decoration: none;
+  color: cadetblue;
 }
 
-#main {
-    width: 1366px;
-    height: 768px;
-    background-color: rgb(200, 173, 226);
-
+#mainDiv {
+  width: 1366px;
+  height: 768px;
+  background-color: rgb(200, 173, 226);
 }
 
-#title {
-    text-align: center;
-    margin: 0;
-}
-
-.headerElements {
-    text-align: right;
-    background-color: goldenrod;
-}
-
-.headerLinks {
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.headerLinksAll {
-    display: inline-block;
-    margin: 10px 10px 0;
+.box {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }
 
 .color {
-    border: 1px solid black;
-    display: inline-block;
+  border: 1px solid black;
+  display: inline-block;
 }
 
-.color-palette {
-    text-align: center;
+.headerElements {
+  text-align: right;
+  background-color: goldenrod;
 }
-.box {
-    width: 50px;
-    height: 50px;
+
+.headerLinks {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.headerLinksAll {
+  display: inline-block;
+  margin: 10px 10px 0;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.pixelBoardRow{
+    margin-bottom: -4px;
 }
