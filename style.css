@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .color{
@@ -24,6 +25,12 @@
 
 .green{
   background-color: green;
+}
+
+table{
+  table-layout: none;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .pixel{
