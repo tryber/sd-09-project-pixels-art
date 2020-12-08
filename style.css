@@ -1,4 +1,4 @@
-#color-palette {
+.color-palette {
   height: auto;
   text-align: center;
 }
@@ -42,7 +42,7 @@ h1 {
   text-align: center;
 }
 
-#pixel-board {
+.pixel-board {
   display: inline-block;
   margin: auto;
   text-align: center;
@@ -50,7 +50,7 @@ h1 {
 
 .pixel {
   display: inline-block;
-  height: 40px;
-  outline: 1px solid black;
-  width: 40px;
+  height: 38px;
+  border: 1px solid black;
+  width: 38px;
 }
