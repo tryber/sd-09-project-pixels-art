@@ -24,7 +24,14 @@
 .pixel {
     background-color: white;
     display: inline-block;
-    width: 10%;
-    height: 50px;
+    width: 39px;
+    height: 39px;
     border: black solid 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row-pixel {
+    margin: 0px;
+    display: flex;
 }
