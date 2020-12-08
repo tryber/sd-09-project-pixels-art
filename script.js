@@ -1,5 +1,5 @@
 // Seleciona a cor preta ao abrir o app
-function colorBlackSelectedOnload() {
+function colorOnload() {
   let black = document.getElementById('black')
 
   return black
