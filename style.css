@@ -9,17 +9,17 @@
 .pixel {
   background-color: white;
 }
-#color-palette .color:nth-child(4n - 3) {
+.black {
   background-color: black;
 }
-#color-palette .color:nth-child(4n - 2) {
-  background-color: crimson;
+.red {
+  background-color: red;
 }
-#color-palette .color:nth-child(4n - 1) {
+.cyan {
   background-color: cyan;
 }
-#color-palette .color:nth-child(4n) {
-  background-color: chartreuse;
+.yellow {
+  background-color: yellow;
 }
 
 #pixel-board {
