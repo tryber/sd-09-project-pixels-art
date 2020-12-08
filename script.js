@@ -28,16 +28,12 @@ function isInside(size) {
 
 function makeSquare() {
   let widthSquare = numberSquare.value;
-  if (widthSquare == '') {
-    alert('Board inválido!')
-  } else {
-    widthSquare = isInside(parseInt(widthSquare));
-  }
+  widthSquare = isInside(parseInt(widthSquare));
   return widthSquare;
 }
 
 function reposeSquare() {
-  if (makeSquare() == 0) {
+  if (numberSquare.value == '') {
     alert('Board inválido!');
   } else {
     const pixelBoard = document.querySelector('#pixel-board');
