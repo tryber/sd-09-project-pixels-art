@@ -27,18 +27,22 @@ header h1{
 .background-item1 {
     background-color: black;
 }
+/* rgb(0, 0, 0) */
 
 .background-item2 {
-    background-color: #595959;
+    background-color: rgb(89, 89, 89);
 }
+/* #595959 */
 
 .background-item3 {
-    background-color: #737373;
+    background-color: rgb(115, 115, 115);
 }
+/* #737373 */
 
 .background-item4 {
-    background-color: #D9D9D9;
+    background-color: rgb(217, 217, 217);
 }
+/* #D9D9D9 */
 
 #table {
     width: 100%;
