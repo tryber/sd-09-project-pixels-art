@@ -23,16 +23,17 @@
     height: 50px;
 }
 #pixel-board {
-    width: 25px;
-    height: 25px;
+    width: 200px;
+    height: 200px;
     display:table;
 }
 .row {
     display:table-row;
 }
-.pixel{
+.pixel {
     background-color: white;
     width: 40px;
     height: 40px;
     display:table-cell;
+    border: solid black 1px;
 }
