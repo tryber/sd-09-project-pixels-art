@@ -23,5 +23,19 @@ function selectColor() {
     }
     event.target.classList.add('selected');
   });
+
 }
 selectColor();
+
+function fillPixel() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected');
+    const pixel = event.target;
+    
+    if (pixel.className === 'pixel') {
+      pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+    }
+  });
+}
+fillPixel();
