@@ -1,0 +1,6 @@
+.color {
+  border: black solid 1px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
