@@ -66,4 +66,21 @@ window.onload = function() {
       document.querySelectorAll('.color')[0].className = 'color selected'
     }
   }
+
+  function boxLoop() {
+    const boxL = document.querySelectorAll('.pixel')
+    for (let index = 0; index < boxL.length; index += 1){
+      boxL[index].addEventListener('click', colorChange);
+    }
+  }
+  boxLoop();
+
+  function colorChange(origin) {
+    const boxColor = document.querySelector('.color.selected')
+    if (origin.target.style.backgroundColor != boxColor.style.backgroundColor) {
+      origin.target.style.backgroundColor = boxColor.style.backgroundColor;
+    } else {
+      origin.target.style.backgroundColor = 'white';
+    }
+  }
 }
