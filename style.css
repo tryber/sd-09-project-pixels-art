@@ -21,3 +21,10 @@
 #blue {
     background-color: blue;
 }
+
+.pixel {
+    border: solid 1px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}

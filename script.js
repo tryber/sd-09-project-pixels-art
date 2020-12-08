@@ -6,7 +6,7 @@ function pixelLine(){
         let lineContainer = document.createElement('div');
         for(let columnIndex = 0; columnIndex < 5; columnIndex += 1) {
             let pxColumn = document.createElement('div');
-            pxColumn.className = 'color';
+            pxColumn.className = 'pixel';
             lineContainer.appendChild(pxColumn);
         }
         pixelBoard.appendChild(lineContainer);
