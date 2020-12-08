@@ -10,10 +10,12 @@ window.onload = function () {
     boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
 
     function setColorToPaint (evt) {
-        let colorSelectedElementId = evt.target.id;
-        changeClassSelectedElement(colorSelectedElementId);
-        removePreviousSelectedElementClass(currentColorSelected);
-        currentColorSelected = colorSelectedElementId;     
+        if (evt.target.className) {
+            let colorSelectedElementId = evt.target.id;
+            changeClassSelectedElement(colorSelectedElementId);
+            removePreviousSelectedElementClass(currentColorSelected);
+            currentColorSelected = colorSelectedElementId; 
+        }   
     }
 
     function changePixelColor (evt) {
@@ -31,9 +33,13 @@ window.onload = function () {
     }
 
     function createCustomPixelBoarder () {
-        let currentPixelBoard = document.getElementsByClassName('pixel');
+        let currentPixelBoard = document.querySelectorAll('.pixel-board-child');
         let pixelBoardLength = currentPixelBoard.length;
-        console.log(pixelBoardLength);
+        let boardSizeValue = document.getElementById('board-size');
+        boardSizeValue = parseInt(boardSizeValue, 10);
+        if (boardSizeValue > 0) {
+            designNewBoarder(boardSizeValue);
+        }
     }
 
     function changeClassSelectedElement (elementId) {
