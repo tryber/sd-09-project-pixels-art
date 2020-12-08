@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .black {
   background-color: black;
 }
@@ -27,15 +22,24 @@ body {
 .container {
   background-color: rgb(204, 221, 221);
   margin: 10px auto;
-  padding: 10px 80px;
-  width: 300px;
+  padding: 10px;
+  width: 50%;
 }
 
 .pixel {
+  background-color: white;
   border: black solid 1px;
   display: inline-block;
   margin: 0;
   padding: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+#pixel-board {
+  line-height: 0;
+  width: 470px;
+  margin: 10px auto;
 }
 
 .red {
