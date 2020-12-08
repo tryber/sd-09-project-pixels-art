@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding:  0;
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
 }
 
-table {
+#pixel-board {
+  border: 1px solid black;
   border-collapse: collapse;
   margin: auto;
 }

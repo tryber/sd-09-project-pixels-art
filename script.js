@@ -18,11 +18,11 @@ function rgbRandom() {
 
 function colorizePalette() {
   for (let index = 0; index < colors.length; index += 1) {
-    color.style.backgroundColor = rgbRandom();
-    colors[index].style.backgroundColor = 'black';
+    colors[index].style.backgroundColor = rgbRandom();
+    colors[0].style.backgroundColor = 'black';
   }
 }
-// colorizePalette();
+colorizePalette();
 
 function createPixelsLine() {
   const pixelsRows = document.createElement('tr');
@@ -35,12 +35,14 @@ function createPixelsColumns(line = 0) {
   const pixelsColumn = document.createElement('td');
   pixelsColumn.className = 'pixel';
   pixelsColumn.style.height = '40px';
-  pixelsColumn.style.border = '1px solid gray';
+  pixelsColumn.style.border = '1px solid black';
+  pixelsColumn.style.backgroundColor = 'white';
   lines[line].appendChild(pixelsColumn);
 }
 
 function createBoard(width = 5) {
   pixelBoard.style.width = `${width * 40}px`;
+  pixelBoard.style.height = `${width * 40}px`;
 
   for (let rows = 0; rows < width; rows += 1) {
     createPixelsLine();
