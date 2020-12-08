@@ -1,5 +1,11 @@
+body {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
 #color-palette {
-    display: inline;
+    display: block;
 }
 
 .color {
@@ -9,18 +15,31 @@
   height: 4rem;
 }
 
+#black {
+  background-color: black;
+}
+
 #red {
-  background-color: red;
+    background-color: red;
+}
+
+#green {
+    background-color: green;
 }
 
 #blue {
   background-color: blue;
 }
 
-#green {
-  background-color: green;
+ul {
+  list-style-type: none;
+  width: 250px;
+  display: inline-block;
 }
 
-#yellow {
-  background-color: yellow;
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  display: inline-block;
 }
