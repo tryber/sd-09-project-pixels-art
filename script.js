@@ -12,7 +12,6 @@ function createColorPalette() {
     colorPalette.appendChild(color);
   }
 }
-
 createColorPalette();
 
 function createPixelBoard() {
@@ -26,7 +25,6 @@ function createPixelBoard() {
     }
   }
 }
-
 createPixelBoard();
 
 function selectColor() {
@@ -42,7 +40,6 @@ function selectColor() {
     });
   });
 }
-
 selectColor();
 
 function paintSelectedPixel() {
@@ -51,10 +48,11 @@ function paintSelectedPixel() {
   pixelBoard.addEventListener('click', function (event) {
     const selectedColor = document.querySelector('.selected');
     const color = selectedColor.style.backgroundColor;
-    event.target.style.backgroundColor = color;
+    if (event.target.className === 'pixel') {
+      event.target.style.backgroundColor = color;
+    }
   });
 }
-
 paintSelectedPixel();
 
 function clearBoard() {
@@ -67,5 +65,4 @@ function clearBoard() {
     });
   });
 }
-
 clearBoard();
