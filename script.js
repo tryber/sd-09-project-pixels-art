@@ -5,3 +5,24 @@ for (let index = 0; index < colors.length; index += 1){
   colorsPalette.className = 'color ' + colors[index];
   getColorPalette.appendChild(colorsPalette);
 }
+
+function printPixelsFrame() {
+  let getPixelBoard = document.getElementById('pixel-board');
+  /*for (let index = 0; index < 5; index += 1) {
+    let createDivLines = document.createElement('div');
+    createDivLines.className = 'lines';
+    getPixelBoard.appendChild(createDivLines);
+  }*/
+  //let getPixelLines = document.getElementsByClassName('lines');
+  for (let line = 0; line < 5; line += 1) {
+    let createDivLine = document.createElement('div');
+    for (let column = 0; column < 5; column += 1) {
+      let createDivColumns = document.createElement('div');
+      createDivColumns.className = 'pixel';
+      createDivLine.appendChild(createDivColumns);
+    }
+    getPixelBoard.appendChild(createDivLine);
+  }
+
+}
+printPixelsFrame();
