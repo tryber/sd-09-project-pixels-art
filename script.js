@@ -17,9 +17,9 @@ function rgbRandom() {
 }
 
 function colorizePalette() {
-  for (const color in colors) {
+  for (let index = 0; index < colors.length; index += 1) {
     color.style.backgroundColor = rgbRandom();
-    colors[0].style.backgroundColor = 'black';
+    colors[index].style.backgroundColor = 'black';
   }
 }
 // colorizePalette();
