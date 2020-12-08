@@ -72,6 +72,23 @@
     filter: grayscale(0%);
     border: none;
   }
+
+  #pixel-board {
+      margin: auto;
+      display: inline-block;
+      margin-top: 20px;
+      width: 260px;
+  }
+
+  .pixel {
+      width: 10px;
+      height: 10px;
+      display: block;
+      border: 1px solid black;
+      float: left;
+      margin: auto;
+      padding: 20px;
+  }
   
   /* 
   
