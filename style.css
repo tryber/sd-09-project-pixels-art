@@ -1,4 +1,4 @@
-#color-palette .color {
+.colors .color {
   display: block;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -10,10 +10,11 @@
   width: 25px;
 }
 
-#color-palette {
+.colors {
   margin-top: 50px;
 }
 
-#title {
+.page-title {
   text-align: center;
+  margin-top: 35px;
 }
