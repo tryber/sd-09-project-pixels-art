@@ -1,17 +1,20 @@
-.colors .color {
-  display: block;
-  flex-wrap: wrap;
+body {
+  margin: 0;
+  padding: 0;
+}
+.color {
+  display: inline-block;
+  padding: 25px;
+  margin: 5px;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 50%;
-  padding: 25px;
-  margin: 15px;
-  margin-left: 15%;
-  width: 25px;
 }
 
 .colors {
-  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
 }
 
 .page-title {
