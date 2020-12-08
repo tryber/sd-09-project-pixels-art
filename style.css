@@ -24,8 +24,20 @@
   height: 40px;
 }
 
-#color-palete-black {
-  background-color: black;
+#color-palette-black {
+    background-color:rgba(0, 0, 0, 10);
+}
+
+#color-palette-red {
+  background-color:rgba(255, 0, 0, 0.9);
+}
+
+#color-palette-blue {
+    background-color:rgba(25, 0, 255, 0.918);
+}
+
+#color-palette-green {
+    background-color:rgb(0, 255, 21);
 }
 
 #pixel-board{
