@@ -1,0 +1,10 @@
+#title {
+    color: red;
+}
+
+.color {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+}
