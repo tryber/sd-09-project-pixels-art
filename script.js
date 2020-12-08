@@ -12,20 +12,19 @@ function drawColorPallets() {
 
 function drawPixelBoard(boardSize) {
   const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.style.display = 'table';
   for (let index = 0; index < boardSize; index += 1) {
-    let pixelLine = document.createElement('div');
+    const pixelLine = document.createElement('div');
+    pixelLine.style.display = 'table-row'
     for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
-    let pixelSquare = document.createElement('div');
-    pixelSquare.className = 'pixel';
-    pixelSquare.backgroundColor = 'white';
-    pixelLine.appendChild(pixelSquare);
+      const pixelSquare = document.createElement('div');
+      pixelSquare.className = 'pixel';
+      pixelSquare.style.backgroundColor = 'white';
+      pixelSquare.style.display = 'table.cell'
+      pixelLine.appendChild(pixelSquare);
     }
     pixelBoard.appendChild(pixelLine);
   }
-}
-
-function randomRGB() {
-  Math.random;
 }
 
 window.onload = function () {
