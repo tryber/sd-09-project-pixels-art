@@ -1,5 +1,3 @@
-window.onload = criaQuadro(5);
-
 function inicioPreto(){
     let inicio = document.querySelector("#pixel-board");
     inicio.addEventListener("click", function (event) {
@@ -7,18 +5,39 @@ function inicioPreto(){
     });
   }
   inicioPreto();
-const quadro = document.querySelector('#pixel-board');
-function criaQuadro(number){
-    for (let a = 0; a<number; a++){
-    let linha = document.createElement("div");
-    quadro.appendChild(linha);
-for (let b=0; b<number; b++){
-let coluna = document.createElement("div")
-linha.appendChild(coluna);
-coluna.className = "pixel";
-}
-}
-}
+
+  function selecionaCor() {
+    let paleta = document.getElementById('color-palette');
+  
+    paleta.addEventListener('click', function (event) {
+      removeCor();
+      let cor = event.target;
+  
+      cor.classList.add('selected');
+      paleta.classList.remove('selected');
+    });
+  }
+  selecionaCor();
+
+  function removeCor() {
+    let color = document.querySelectorAll('.selected');
+  
+    for (let index = 0; index < color.length; index += 1) {
+      color[index].classList.remove('selected');
+    }
+  }
+
+  function pixelColorido() {
+    let pixels = document.querySelectorAll('.pixel');
+  
+    for (let index = 0; index < pixels.length; index += 1) {
+      let pixelItem = pixel[index];
+      pixelItem.addEventListener('click', function (event) {
+        event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+      })
+    }
+  }
+  pixelColorido();
 
 function limparQuadro() {
     let totalPixel = document.querySelectorAll(".pixel");
@@ -29,3 +48,20 @@ function limparQuadro() {
 }
 let limpa = document.querySelector("#limpaTudo");
 limpa.addEventListener("click", limparQuadro);
+
+function botaPreto(color){
+    let addPreto = document.querySelectorAll('.color')[0];
+    addPreto.style.backgroundColor = color;
+  }
+  function botaAzul(color){
+    let addAzul = document.querySelectorAll('.color')[1];
+    addAzul.style.backgroundColor = color;
+  }
+  function botaVerde(color){
+    let addVerde = document.querySelectorAll('.color')[2];
+    addVerde.style.backgroundColor = color;
+  }
+  function botaVermelho(color){
+    let addVermelho = document.querySelectorAll('.color')[3];
+    addVermelho.style.backgroundColor = color;
+  }
