@@ -25,7 +25,7 @@ div #color-palette {
   background-color: rgb(78 , 170 , 198);
 }
 
-.pixel {
+div .pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
