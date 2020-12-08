@@ -27,13 +27,26 @@ function isInside(size) {
 }
 
 function makeSquare() {
-  let widthSquare = parseInt(numberSquare.value);
-  if (widthSquare == NaN) {
-    alert('Board inválido!');
+  let widthSquare = numberSquare.value;
+  if (widthSquare == '') {
+    alert('Board inválido!')
   } else {
-    widthSquare = isInside(widthSquare);
+    widthSquare = isInside(parseInt(widthSquare));
   }
   return widthSquare;
+}
+
+function reposeSquare() {
+  if (makeSquare() == 0) {
+    alert('Board inválido!');
+  } else {
+    const pixelBoard = document.querySelector('#pixel-board');
+    let childrenPixel = document.querySelectorAll('.linePixel');
+    for (let index = 0; index < atualNumber; index += 1){
+      pixelBoard.removeChild(childrenPixel[index]);
+    }
+    makePixels();
+  }
 }
 
 function makeLinePixels(line) {
@@ -46,14 +59,6 @@ function makeLinePixels(line) {
   atualNumber = makeSquare();
 }
 
-function reposeSquare() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  let childrenPixel = document.querySelectorAll('.linePixel');
-  for (let index = 0; index < atualNumber; index += 1){
-    pixelBoard.removeChild(childrenPixel[index]);
-  }
-  makePixels();
-}
 
 function makePixels() {
   let numberOfSquare = makeSquare();
