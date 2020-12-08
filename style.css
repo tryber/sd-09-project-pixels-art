@@ -54,7 +54,9 @@ header {
 
 #pixel-board {
   border-collapse: collapse;
+  height: 200px;
   margin: auto;
+  width: 200px;
 }
 
 .pixel {
