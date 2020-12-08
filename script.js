@@ -28,13 +28,14 @@ window.onload = function() {
         }
         createdPixelColumn();
 
-    const paletteColor = document.querySelector('#color-palette')
+    const paletteColor = document.querySelector('#color-palette').children
     
     function clickPaletteColor() {
-        paletteColor.addEventListener('click', function(event) {
+        for (let index = 0; index < paletteColor.length; index += 1)
+        paletteColor[index].addEventListener('click', function(event) {
             let change = document.querySelector('.selected')
-            event.target.className = 'color selected'
             change.className = 'color'
+            event.target.className = 'color selected'
         })
     }
     clickPaletteColor()
