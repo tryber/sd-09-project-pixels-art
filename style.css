@@ -10,3 +10,14 @@
     display: flex;
     justify-content: space-around;
 }
+
+.pixel{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.pixel-board-line{
+    margin: 0;
+}
