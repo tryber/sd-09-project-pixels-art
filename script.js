@@ -21,6 +21,9 @@ function drawPixelBoard(boardSize) {
       pixelSquare.className = 'pixel';
       pixelSquare.style.backgroundColor = 'white';
       pixelSquare.style.display = 'table-cell';
+      pixelSquare.style.width = '40px';
+      pixelSquare.style.height = '40px';
+      pixelSquare.style.border = '1px black solid'
       pixelLine.appendChild(pixelSquare);
     }
     pixelBoard.appendChild(pixelLine);
