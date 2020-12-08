@@ -8,7 +8,7 @@
   top: 0;
   background-color: rgb(10, 126, 81);
   color: white;
-  text-align: center;
+  /*text-align: center;*/
   font-family: fantasy;
   margin-bottom: 20px;
   padding: 20px;
@@ -19,7 +19,7 @@
 #section-color {
   display: inline;
   margin: 40px;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #color-palette {
@@ -28,7 +28,7 @@
 
 #color {
   display: inline-block;
-  margin: 0px;
+  margin-left: 5px;
   border: solid 1px black;
   padding: 20px;
   margin-bottom: 20px;
@@ -36,14 +36,17 @@
 
 #section-pixel {
   margin-top: 5px;
+  margin-left: 5px;
 }
 
 #pixel-board {
+  margin: 0;
   list-style-type: none;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #pixel {
+  margin: 0;
   padding: 25px;
   display: inline-block;
   border: solid 1px black;
