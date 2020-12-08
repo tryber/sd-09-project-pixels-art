@@ -18,6 +18,15 @@ makeLinePixels();
 
 //mudar cor da paleta:
 
+function changeSelectedColor(event) {
+  const getOldSelectedColor = document.querySelector('.selected');
+  const targetSelectedColor = event.target;
+  if (targetSelectedColor !== getOldSelectedColor) {
+    getOldSelectedColor.classList.remove('selected');
+    targetSelectedColor.classList.add('selected');
+  }
+}
+
 function getSelectedColor() {
   for (let index = 0; index < 4; index += 1) {
     const getColorPallete = document.querySelectorAll('.color')[index];
@@ -25,35 +34,47 @@ function getSelectedColor() {
   }
 }
 
-function changeSelectedColor(event) {
-  const getOldSelectedColor = document.querySelector('.selected');
-  let x = event.target;
-  
-  if (x !== getOldSelectedColor){
-    console.log(x);
-    getOldSelectedColor.classList.remove('selected');
-    console.log(x);
-    x.classList.add('selected');
-    console.log(x);
-  }
-}
-
 getSelectedColor();
 
 //adicionar eventos ao quadrado:
 
-/*
+
 function pixelEvents() {
   for (let index = 0; index < 25; index += 1) {
     const getPixels = document.querySelectorAll('.pixel')[index];
-    getPixels.addEventListener('click' falta criar a funçao para pintar)
+    getPixels.addEventListener('click', pixelColoring);
   }
 }
-*/
+
+function pixelColoring(event) {
+  let cor = 'black';
+  const getColorSelected = document.querySelector('.selected'); 
+
+  const getClassColorsBlack = document.querySelector('.colorBlack');
+  const getClassColorsRed = document.querySelector('.colorRed');
+  const getClassColorsGreen= document.querySelector('.colorGreen');
+  const getClassColorsYellow = document.querySelector('.colorYellow');
+
+  const targetSelectedPixel = event.target;
+
+  for (let index = 0; index < 4; index += 1){
+    if (getColorSelected === getClassColorsBlack) {
+      cor = 'black';
+    } else if (getColorSelected === getClassColorsRed) {
+      cor = 'red';
+    } else if (getColorSelected === getClassColorsGreen) {
+      cor = 'green';
+    } else if (getColorSelected === getClassColorsYellow){
+      cor = 'yellow';
+    }
+  }
+
+  targetSelectedPixel.style.backgroundColor = cor;
+}
+
+pixelEvents();
 
 //colorir quadrados:
-
-
 
 //limpa todos os quadrados:
 
@@ -64,5 +85,5 @@ function clearAllPixels() {
   }
 }
 
-let clearButton = document.getElementById('clear-board');
+const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clearAllPixels);
