@@ -8,8 +8,12 @@
   padding: 35px;
 }
 
+.pixelBoard{
+  display: table;
+}
+
 .linePixel {
-  display: inline-block;
+  display: table-row;
 }
 
 .pixel {
@@ -17,4 +21,5 @@
   border: black solid 1px;
   height: 40px;
   width: 40px;
+  display: table-cell;
 }
