@@ -1,5 +1,5 @@
 #pixel-board{
-  margin: 0;
+  line-height: 0;
 }
 
 #color-palette{
@@ -21,8 +21,7 @@
 }
 
 .line{
-  margin: 0;
-  height: 40px;
+
 }
 
 .pixel{
