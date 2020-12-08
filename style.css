@@ -33,3 +33,10 @@
   border-color: black;
   border-width: 1px;
 }
+
+td {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: black solid 1px;
+}
