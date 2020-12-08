@@ -27,5 +27,5 @@ for(let index of divs){
     color = window.getComputedStyle(color, null);
     event.target.style.backgroundColor = color.backgroundColor;
     console.log(color.backgroundColor);
-  })
+  });
 }
