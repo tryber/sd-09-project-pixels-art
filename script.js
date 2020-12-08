@@ -5,7 +5,7 @@ function inicioPreto(){
     });
   }
   inicioPreto();
-
+let quadro = document.querySelector('#pixel-board');
 function criaQuadro(number){
     for (let a = 0; a<number; a++){
     let linha = document.createElement("div");
