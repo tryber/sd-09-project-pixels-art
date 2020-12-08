@@ -11,8 +11,8 @@ window.onload = teste (5, 5)
     function createPixel (){
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
-        pixel.style.width = '40px';
-        pixel.style.height = '40px';
+        pixel.style.width = '38px';
+        pixel.style.height = '38px';
         pixel.style.background = 'white'
         return pixel 
     }
