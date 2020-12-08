@@ -33,3 +33,17 @@ window.onload = teste (5, 5)
 
 
 }
+
+addEventListener(window.onload, selectedColor('black')) 
+
+function selectedColor(colorName){
+    //puxar classes color
+    let getColorsPallete = document.querySelectorAll('.color')
+    //o parametro colorName é igual o background color de alguma classe color?
+    for (let index in getColorsPallete){
+        if (String(getColorsPallete[index].className).includes(colorName)){
+            getColorsPallete[index].className += ' selected'
+        }
+    }
+
+}

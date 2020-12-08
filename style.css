@@ -47,7 +47,7 @@ header {
 
 
 .pixel {
-    outline: solid black 1px;
+    border: 1px solid black;
 }
 
 .lines {
