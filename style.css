@@ -9,7 +9,7 @@ h1 {
 
 #color-palette {
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .color{
@@ -17,4 +17,24 @@ h1 {
   border: solid 1px;
   width: 100px;
   height: 100px;
+}
+
+#black {
+  background-color: black;
+}
+
+#pixel-board {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.pixel {
+  border: solid 1px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.linhas {
+  display: inline-block;
 }
