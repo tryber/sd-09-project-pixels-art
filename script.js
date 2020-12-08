@@ -5,7 +5,7 @@ function generatePalette() {
 
   // [Task 3] First color is always BLACK
   const firstColor = document.createElement('div');
-  firstColor.className = 'color selected';
+  firstColor.className = 'selected color';
   firstColor.style.backgroundColor = 'black';
   palette.appendChild(firstColor);
 
@@ -17,14 +17,6 @@ function generatePalette() {
     color.style.backgroundColor = colorPaletteArray[i];
     palette.appendChild(color);
   }
-  palette.addEventListener('click', function () {
-    const selectedColor = document.getElementsByClassName('color');
-    if (selectedColor.className !== 'color selected') {
-      selectedColor.className = 'color selected';
-    } else {
-      selectedColor.className = 'color';
-    }
-  });
 }
 
 function generateBoardColumn(pixelBoard) {
@@ -42,7 +34,20 @@ function generateBoardRow() {
   }
 }
 
+function selectColor() {
+  const colorPalette = document.getElementById('color-palette');
+  const selectedColor = document.getElementsByClassName('selected color');
+  colorPalette.addEventListener('click', function (event) {
+    if (selectedColor.length === 1) {
+      event.target.className = 'color';
+    } else {
+      event.target.className = 'selected color';
+    }
+  });
+}
+
 window.onload = function () {
   generatePalette();
   generateBoardRow();
+  selectColor();
 };
