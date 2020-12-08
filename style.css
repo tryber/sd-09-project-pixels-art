@@ -27,10 +27,10 @@ html {
 }
 
 .pixel {
+  background-color: white;
   border: solid;
   border-color: black;
   border-width: 1px;
-  background-color: white;
   display: inline-block;
   height: 40px;
   width: 40px;
