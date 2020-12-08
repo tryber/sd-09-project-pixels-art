@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 
 :root {
@@ -19,28 +19,28 @@ header {
 
 #title {
   color: white;
-  font-size: 5.0rem;
   font-family: Ubuntu, sans-serif;
+  font-size: 5rem;  
 }
 
 .article {
-  width: 70%;
-  height: 100%;
-  margin: 2rem auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 70%;
 }
 
 #color-palette {
   display: flex;
   justify-content: center;
-  width: 100%;  
+  width: 100%;
 }
 
 .color {
-  width: 5rem;
-  height: 5rem;
   border: 1px solid black;
+  height: 5rem;
   margin: 1rem;
+  width: 5rem;
 }

@@ -3,12 +3,14 @@ const colorTwo = document.querySelectorAll('.color')[1];
 const colorThree = document.querySelectorAll('.color')[2];
 const colorFour = document.querySelectorAll('.color')[3];
 
-function colorGenerator () {
+function colorGenerator() {
   const hex = '0123456789ABCDEF';
   let color = '#';
   for (let index = 0; index < 6; index += 1) {
-    color = color + hex[Math.floor(Math.random() * 16)];
-    console.log(color)
+    color += hex[Math.floor(Math.random() * 16)];
+    if (color === '#FFFFFF' || color === '#000000') {
+      color = '#CCCCCC';
+    }
   }
   return color;
 }
