@@ -1,72 +1,70 @@
-  body {
-  color: red ;
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: red;
 }
 
-  #color-pallete {
+#color-pallete {
   background-color: yellowgreen;
   color: aquamarine;
 }
 
-  header {
+header {
   background-color: aquamarine;
   height: 100px;
 }
 
-  #title {
+#title {
   color: blue;
 }
 
-  main {
+main {
   background-color: papayawhip;
   height: 500px;
 }
 
-  .color {
+.color {
   background-color: bisque;
   border: solid 1px black;
-  height: 50px;
-  width: 50px;
   display: inline-block;
+  height: 50px;
   margin-top: 50px;  
+  width: 50px;
 }
 
-  .black {
+.black {
   background-color: black;
 }
 
-  .purple {
+.purple {
   background-color: purple;
 }
 
-  .cyan {
-  background-color: cyan;     
+.cyan {
+  background-color: cyan;
 }
 
-  .green {
-  background-color: green;
-}
-
-  .red {
+.red {
   background-color: red;
 
 }
 
-  #pixel-board{
+#pixel-board {
   background-color: transparent;
   height: 230px;
   width: 230px;
 }
 
-  .pixel{
+.pixel {
   background-color: transparent;
-  height: 40px;
-  width: 40px;
   border: solid 1px black;
   display: inline-block;
-
+  height: 40px;
+  width: 40px;
 }
 
-  footer {
+footer {
   background-color: indianred;
   height: 200px;
 }
