@@ -3,9 +3,18 @@ window.onload = function (){
 
   function changeSelectedColor(event){
     let oldselectedColor = document.querySelector('.selected')
-    oldselectedColor.classList.remove('selected')
-
+    let paintColor = oldselectedColor.classList[1]
     let newselectedColor = event.target
+
+    if(newselectedColor.classList.contains('color')){
+    oldselectedColor.classList.remove('selected')
     newselectedColor.className += ' selected'
+    }
+    else if(newselectedColor.classList.contains('pixel')){
+      newselectedColor.style.backgroundColor = `${paintColor}`
+    }
+    else{
+      console.log('erro')
+    }
   }
 }
