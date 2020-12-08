@@ -11,19 +11,8 @@
     background-color: green;
 }
 
-#color-palette {
-
-    height: 7%;
-
-    width: 17%;
-
-
-}
 .color {
-    margin-top: 5px;
-    margin-left: 2px;
+
     border: black solid 1px;
-    height: 70px;
-    width: 70px;
     display: inline-block;
 }
