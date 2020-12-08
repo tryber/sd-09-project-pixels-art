@@ -5,8 +5,8 @@
 
 .pixel {
     background-color: white;
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     border: 1px solid black;
     display: inline-block;
 }
