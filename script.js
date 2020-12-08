@@ -12,9 +12,11 @@ window.onload = function () {
     function setColorToPaint (evt) {
         if (evt.target.className) {
             let colorSelectedElementId = evt.target.id;
-            changeClassSelectedElement(colorSelectedElementId);
-            removePreviousSelectedElementClass(currentColorSelected);
-            currentColorSelected = colorSelectedElementId; 
+            if (colorSelectedElementId !== currentColorSelected){
+                changeClassSelectedElement(colorSelectedElementId);
+                removePreviousSelectedElementClass(currentColorSelected);
+                currentColorSelected = colorSelectedElementId;
+            } 
         }   
     }
 
@@ -37,9 +39,10 @@ window.onload = function () {
         let pixelBoardLength = currentPixelBoard.length;
         let boardSizeValue = document.getElementById('board-size');
         boardSizeValue = parseInt(boardSizeValue, 10);
-        if (boardSizeValue > 0) {
+        if (boardSizeValue > 0 && pixelBoardLength < boardSizeValue) {
             designNewBoarder(boardSizeValue);
         }
+
     }
 
     function changeClassSelectedElement (elementId) {
