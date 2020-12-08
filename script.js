@@ -8,11 +8,20 @@ function drawColorPallets() {
     pallets[index].style.width = '40px';
     pallets[index].style.height = '40px';
   }
+}
 
-  pallets[0].style.backgroundColor = 'black';
-  pallets[1].style.backgroundColor = 'red';
-  pallets[2].style.backgroundColor = 'green';
-  pallets[3].style.backgroundColor = 'blue';
+function drawPixelBoard(boardSize) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  for (let index = 0; index < boardSize; index += 1) {
+    let pixelLine = document.createElement('div');
+    for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
+    let pixelSquare = document.createElement('div');
+    pixelSquare.className = 'pixel';
+    pixelSquare.backgroundColor = 'white';
+    pixelLine.appendChild(pixelSquare);
+    }
+    pixelBoard.appendChild(pixelLine);
+  }
 }
 
 function randomRGB() {
@@ -21,4 +30,5 @@ function randomRGB() {
 
 window.onload = function () {
   drawColorPallets();
+  drawPixelBoard(5);
 }
