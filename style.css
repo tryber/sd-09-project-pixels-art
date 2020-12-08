@@ -3,3 +3,20 @@
   display: inline-block;
   padding: 35px;
 }
+
+#black{
+  background-color: black;
+}
+
+#red{
+  background-color: rgb(245, 81, 81);
+}
+
+#green{
+  background-color: rgb(7, 110, 7);
+}
+
+#purple{
+  background-color: rgb(173, 27, 173);
+}
+
