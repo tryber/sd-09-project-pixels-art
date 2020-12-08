@@ -23,3 +23,19 @@ function makePixelBoard(numOfRows, numOfColumns) {
 }
 
 makePixelBoard(5,5);
+
+function setColorPalette() {
+    const colorPalette = document.querySelector('#color-palette');
+    colorPalette.addEventListener('click', pickColor)
+}
+
+function pickColor() {
+    let newSelection = event.target;
+    if (newSelection.className === 'color') {
+        let selected = document.querySelector('.selected');
+        selected.classList.remove('selected');
+        newSelection.classList.add('selected');
+    }
+}
+
+setColorPalette();
