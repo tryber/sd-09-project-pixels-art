@@ -1,11 +1,6 @@
-* {
-  margin: 0;
-}
-
-#title {
-    text-align: center;
-    background-color: lawngreen;
-}
+.black {
+    background-color: black;
+  }
 
 #color-palette {
   background-color: white;
@@ -18,6 +13,10 @@
   padding: 10px;
 }
 
+.blue {
+  background-color: blue;
+}
+
 .color {
   display: inline-block;
   height: 50px;
@@ -25,10 +24,6 @@
   border-style: solid;
   border-color: black;
   border-width: 1px;
-}
-
-.blue {
-  background-color: blue;
 }
 
 .green {
@@ -39,10 +34,11 @@
   background-color: red;
 }
 
-.yellow {
-  background-color: yellow;
+#title {
+  text-align: center;
+  background-color: lawngreen;
 }
 
-.black {
-  background-color: black;
+.yellow {
+  background-color: yellow;
 }
