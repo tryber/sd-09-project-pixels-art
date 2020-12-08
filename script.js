@@ -15,20 +15,17 @@ createDivColors('blue');
 
 function createMatrixPixels() {
   const boardElement = document.querySelector('#pixel-board');
-  const board = [];
 
   for (let y = 1; y <= 5; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
     let row = [];
     for (let x = 1; x <= 5; x += 1) {
-      var cell = {};
-      cell.element = document.createElement("div")
+      let cell = {};
+      cell.element = document.createElement("div");
       cell.element.className = 'pixel';
       boardElement.appendChild(cell.element);
       row.push(cell);
     }
-    board.push(row);
   }
-
-
 }
 createMatrixPixels();
+
