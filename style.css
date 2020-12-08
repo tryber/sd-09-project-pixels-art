@@ -38,10 +38,6 @@
   background-color: #1985a1;
 }
 
-.cor4 {
-  background-color: #f25f5c;
-}
-
 h1 {
   text-align: center;
 }
@@ -53,9 +49,8 @@ h1 {
 }
 
 .pixel {
-  border: 1px solid black;
   display: inline-block;
   height: 40px;
+  outline: 1px solid black;
   width: 40px;
-  margin: 0px -1px;
 }
