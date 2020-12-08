@@ -1,43 +1,44 @@
-#color-pallete {
+#color-palette {
   height: auto;
   text-align: center;
 }
 
 .boardHolder {
   box-sizing: border-box;
+  margin: auto;
   padding-top: 50px;
   text-align: center;
-  margin:auto;
 }
 
 .color {
-  height: 50px;
-  width: 120px;
-  border-radius: 30px;
   border: 1px solid black;
-  display: inline-block;
-  line-height: 50px;
+  border-radius: 30px;
   color: white;
+  display: inline-block;
   font-weight: 600;
+  height: 50px;
+  line-height: 50px;
   text-shadow: 1px 1px black;
+  width: 120px;
 }
 
-#cor0 {
+.cor0 {
   background-color: black;
 }
 
-#cor1 {
+.cor1 {
   background-color: #c5c3c6;
 }
 
-#cor2 {
+.cor2 {
   background-color: #46494c;
 }
 
-#cor3 {
+.cor3 {
   background-color: #1985a1;
 }
-#cor4 {
+
+.cor4 {
   background-color: #f25f5c;
 }
 
@@ -46,15 +47,15 @@ h1 {
 }
 
 #pixel-board {
-  text-align: center;
   display: inline-block;
-  margin:auto;
-  border: 1px solid black;
+  margin: auto;
+  text-align: center;
 }
 
 .pixel {
-  display:inline-block;
-  height:38px;
-  width: 38px;
   border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0px -1px;
 }
