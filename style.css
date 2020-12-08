@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .black {
   background-color: black;
   border: 1px solid black;
@@ -26,9 +29,14 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 5em;
-  width: 5em;
+  height: 40px;
+  margin: 0;
+  width: 40px;
   display: inline-block;
+}
+#pixel-board {
+  height: 200px;
+  width: 200px;
 }
 .red {
   background-color: red;
