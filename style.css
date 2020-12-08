@@ -10,15 +10,6 @@ body {
   margin: 0;
 }
 
-.color {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-}
-
 .color-palette {
   background-color: white;
   text-align: center;
@@ -28,6 +19,15 @@ body {
   border-color: black;
   border-width: 1px;
   padding: 10px;
+}
+
+.color {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
 .green {
