@@ -10,21 +10,6 @@ window.onload = function() {
     return color;
   }
   
-    // function createBox(number) {
-    //     const divFather = document.querySelector('#color-palette');
-    //     const boxColor = document.createElement('div');
-    //         boxColor.className = 'color';
-    //         boxColor.style.backgroundColor = 'rgb(0, 0, 0)';
-    //         divFather.appendChild(boxColor);
-    //     for (let index = 0; index < number; index += 1){
-    //         const boxColor = document.createElement('div');
-    //         boxColor.className = 'color';
-    //         boxColor.style.backgroundColor = getRandomColor();
-    //         divFather.appendChild(boxColor);
-    //     }
-    // }
-    // createBox(3);
-
   function createBox(classN, color, father, number) {
     for (let index = 0; index < number; index += 1){
       const boxColor = document.createElement('div');
@@ -78,6 +63,7 @@ window.onload = function() {
       origin.target.className = 'color selected';
     } else {
       origin.target.className = 'color';
+      document.querySelectorAll('.color')[0].className = 'color selected'
     }
   }
 }
