@@ -1,30 +1,30 @@
 .color {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    display: inline-block;
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
-#black {
-    background-color: black;
+.black {
+  background-color: black;
 }
 
-#red {
-    background-color: red;
+.red {
+  background-color: red;
 }
 
-#green {
-    background-color: green;
+.green {
+  background-color: green;
 }
 
-#blue {
-    background-color: blue;
+.blue {
+  background-color: blue;
 }
