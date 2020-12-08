@@ -19,3 +19,13 @@ colors.forEach(element => {
   element.addEventListener('click', exchange);
 });
 
+// Requisito 8
+let divs = document.querySelectorAll('.pixel');
+for(let index of divs){
+  index.addEventListener('click' ,function(event){
+    let color = document.querySelector('.selected');
+    color = window.getComputedStyle(color, null);
+    event.target.style.backgroundColor = color.backgroundColor;
+    console.log(color.backgroundColor);
+  })
+}
