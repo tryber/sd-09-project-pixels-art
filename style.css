@@ -29,3 +29,23 @@ body {
   margin: 9px;
   width: 40px;
 }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#pixel-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid;
+  border-color: black;
+  height: 40px;
+  margin-top: 2%;
+  width: 40px;
+}

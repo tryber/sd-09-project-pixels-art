@@ -11,8 +11,8 @@ function verifyColorWrite(sumNumbersColors, rgbArray) {
 // Function of random RGB numbers
 function randomRgbNumberColor() {
   const numberColorsRgb = 3;
-  const rgbArray = [];
-  const sumNumbersColors = 0;
+  let rgbArray = [];
+  let sumNumbersColors = 0;
   for (let index = 0; index < numberColorsRgb; index += 1) {
     rgbArray.push(Math.random() * 255);
     sumNumbersColors += rgbArray[index];
@@ -32,8 +32,17 @@ function randomColorsPalette() {
 
 function createPixelElement() {
   const pixelBoardElement = document.querySelector('#pixel-board');
+  const numberOfElements = 5;
+  const widthPixelBoardElement = (numberOfElements * 40) + (numberOfElements * 5);
+  for (let index = 0; index < Math.pow(numberOfElements, 2); index += 1) {
+      const pixelElement = document.createElement('div');
+      pixelElement.className = 'pixel';
+      pixelBoardElement.appendChild(pixelElement);
+  }
+  pixelBoardElement.style.maxWidth = `${widthPixelBoardElement}px`;
 }
 
 window.onload = function() {
   randomColorsPalette();
+  createPixelElement();
 }
