@@ -1,12 +1,24 @@
 
-function changeSelected () {
-  let paletteColors = document.getElementById('color-palette')
+function changeSelected() {
+  const paletteColors = document.getElementById('color-palette');
   paletteColors.addEventListener('click', function () {
-    let palettes = document.querySelectorAll('.color');
-      for (let index = 0; index < palettes.length; index += 1) {
-        palettes[index].className = 'color'
-      }
-    event.target.className = "color selected"
-  })
+    const palettes = document.querySelectorAll('.color');
+    for (let index = 0; index < palettes.length; index += 1) {
+      palettes[index].className = 'color';
+    }
+    event.target.className = 'color selected';
+  });
 }
-changeSelected()
+changeSelected();
+
+function paintPixel() {
+  const pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', function(event) {
+    let pixel = document.getElementsByClassName('pixel');
+    let selectedColor = document.querySelector('.selected')
+    let colorPaint = selectedColor.id
+    event.target.style.background = colorPaint;
+    
+  });
+}
+paintPixel()
