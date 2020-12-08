@@ -1,3 +1,9 @@
+#button-clear {
+    width: 250px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .color {
     border: 1px solid black;
     display: inline-block;

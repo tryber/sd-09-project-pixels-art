@@ -83,4 +83,24 @@ window.onload = function() {
       origin.target.style.backgroundColor = 'white';
     }
   }
+
+  function createButton(idC, name, father) {
+    const buttonClear = document.createElement('button');
+    buttonClear.id = idC;
+    buttonClear.innerText = name;
+    const buttonFather = document.querySelector(father)
+    buttonFather.appendChild(buttonClear);
+  }
+  
+  createButton('clear-board', 'Limpar', '#button-clear')
+
+  const buttonClear = document.querySelector('#clear-board')
+  buttonClear.addEventListener('click', clearBoard)
+
+  function clearBoard() {
+    const totalPixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < totalPixels.length; index += 1) {
+      totalPixels[index].style.backgroundColor = 'white';
+    }
+  }
 }
