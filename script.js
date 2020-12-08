@@ -1,12 +1,19 @@
 function drawColorPallets() {
-  const pallets = document.querySelectorAll('#color-palette .color');
-  const colors = ['black', 'red', 'green', 'blue'];
-  for (let index = 0; index < pallets.length; index += 1) {
-    pallets[index].style.backgroundColor = colors[index];
-    pallets[index].style.border = '1px black solid';
-    pallets[index].style.display = 'inline-block';
-    pallets[index].style.width = '40px';
-    pallets[index].style.height = '40px';
+  const colorPalette = document.querySelector('#color-palette');
+  const stdColors = ['black', 'red', 'green', 'blue'];
+  for (let index = 0; index < stdColors.length; index += 1) {
+    let color = document.createElement('div');
+    color.className = 'color';
+    if (index === 0) {
+      color.className = 'color selected';
+    }
+    color.style.backgroundColor = stdColors[index];
+    color.style.border = '1px black solid';
+    color.style.display = 'inline-block';
+    color.style.margin = '1px';
+    color.style.width = '40px';
+    color.style.height = '40px';
+    colorPalette.appendChild(color);
   }
 }
 
@@ -23,7 +30,7 @@ function drawPixelBoard(boardSize) {
       pixelSquare.style.display = 'table-cell';
       pixelSquare.style.width = '40px';
       pixelSquare.style.height = '40px';
-      pixelSquare.style.border = '1px black solid'
+      pixelSquare.style.border = '1px black solid';
       pixelLine.appendChild(pixelSquare);
     }
     pixelBoard.appendChild(pixelLine);
