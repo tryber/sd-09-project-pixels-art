@@ -1,5 +1,5 @@
 function coloringTheColorPalette() {
-    let colorsPalette = document.getElementsByClassName('color');
+    let colorsPalette = document.getElementsById('color-pallete');
     for (let index = 0; index < colorsPalette.length; index += 1) {
         if (colorsPalette[index] === colorsPalette[0]) {
         colorsPalette.style.backgroundColor = 'blue';

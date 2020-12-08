@@ -1,6 +1,20 @@
 .color {
     border-color: black;
     border-style: solid;
+    height: 40px;
+    width: 40px;
     border-width: 1px;
-    display: inline;
+    display: inline-block;
+}
+.black {
+    background-color: black;
+}
+.green {
+    background-color: green;
+}
+.pink {
+    background-color: hotpink;
+}
+.blue {
+    background-color: blue;
 }
