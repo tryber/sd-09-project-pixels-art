@@ -1,31 +1,22 @@
-.black {
-  background-color: green;
+.color {
   border: solid 1px black;
   display: inline-block;
   height: 50px;
   width: 50px;
 }
 
-.blue {
+#blue {
   background-color: blue;
-  border: solid 1px black;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
 }
 
-.red {
+#green {
+  background-color: green;
+}
+
+#red {
   background-color: red;
-  border: solid 1px black;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
 }
 
-.yellow {
+#yellow {
   background-color: yellow;
-  border: solid 1px black;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
 }
