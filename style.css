@@ -1,0 +1,30 @@
+#title {
+    text-align: center;
+    background-color: blue;
+}
+
+#color-palette {
+    display: inline-block;
+    
+}
+.color {
+    
+
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
