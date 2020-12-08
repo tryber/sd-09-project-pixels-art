@@ -29,3 +29,20 @@ body {
 #green {
   background-color: green;
 }
+
+#pixel-board {
+  height: 250px;
+  width: 250px;
+}
+
+.board-line {
+    height: 50px;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  margin: 0px;
+}
