@@ -1,10 +1,19 @@
+.board_of_pixel {
+  max-width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 15px;
+  margin-left: 460px;
+  border: 1px solid black;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 .color {
   display: inline-block;
-  padding: 25px;
+  padding: 40px;
   margin: 5px;
   box-sizing: border-box;
   border: 1px solid black;
@@ -21,3 +30,13 @@ body {
   text-align: center;
   margin-top: 35px;
 }
+
+.pixel {
+  max-width: 40px;
+  max-height: 40px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 40px 40px;
+  margin: 15px;
+}
+
