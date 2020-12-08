@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 .black {
@@ -7,9 +8,9 @@
 }
 
 body {
+  height: 100%;
   text-align: center;
-  width: 1366px;
-  height: 768px;
+  width: 100%;
 }
 
 .blue {
@@ -19,14 +20,22 @@ body {
 .color {
   border: black solid 1px;
   display: inline-block;
-  padding: 25px;
   margin: 6px;
+  padding: 25px;
 }
 
 .container {
   background-color: rgb(204, 221, 221);
   margin: 10px auto;
-  width: 1200px;
+  padding: 10px 80px;
+  width: 300px;
+}
+
+.pixel {
+  border: black solid 1px;
+  display: inline-block;
+  margin: 0;
+  padding: 25px;
 }
 
 .red {
