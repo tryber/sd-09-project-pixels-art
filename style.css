@@ -1,5 +1,5 @@
 .black{
-  border: solid black 3px;
+  border: 1px solid black;
   display: inline-block;
   padding: 35px;
   background-color: black;
@@ -7,7 +7,7 @@
 }
 
 .red{
-  border: solid black 3px;
+  border: 1px solid black;
   display: inline-block;
   padding: 35px;
   background-color: rgb(245, 81, 81);
@@ -15,7 +15,7 @@
   }
 
 .green{
-  border: solid black 3px;
+  border: 1px solid black;
   display: inline-block;
   padding: 35px;
   background-color: rgb(7, 110, 7);
@@ -23,7 +23,7 @@
   }
 
 .purple{
-  border: solid black 3px;
+  border: 1px solid black;
   display: inline-block;
   padding: 35px;
   background-color: rgb(173, 27, 173);
