@@ -1,4 +1,11 @@
-  function createColorPalette() {
+window.onload = function () {
+  createColorPalette();
+  createPixelBoard();
+  selectColor();
+  paintSelectedPixel();
+};
+
+function createColorPalette() {
     const colorPalette = document.querySelector('#color-palette');
     const backgroundColors = ['black', 'red', 'green', 'blue'];
     const totalNumberOfColors = 4;
@@ -13,8 +20,6 @@
     }
   }
 
-  createColorPalette();
-
   function createPixelBoard() {
     const pixelBoardLines = document.querySelectorAll('.pixel-board-line');
 
@@ -26,8 +31,6 @@
       }
     }
   }
-
-  createPixelBoard();
 
   function selectColor() {
     const colorsPalette = document.querySelector('#color-palette');
@@ -43,8 +46,6 @@
     });
   }
 
-  selectColor();
-
   function paintSelectedPixel() {
     const pixelBoard = document.querySelector('#pixel-board');
 
@@ -54,5 +55,3 @@
       event.target.style.backgroundColor = color;
     });
   }
-
-  paintSelectedPixel();
