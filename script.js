@@ -3,7 +3,7 @@ const pixelBoard = document.getElementById('pixel-board');
 
 //cria os 25 pixels:
 function makeLinePixels() {
-  for (let index = 0; index < 25; index += 1) {
+  for (let index = 0; index <= 24; index += 1) {
     const pixels = document.createElement('div');
     pixels.className = 'pixel';
     pixelBoard.appendChild(pixels);
