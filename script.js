@@ -8,6 +8,7 @@ window.onload = function() {
       for (let j = 1; j <= entrada; j += 1) {
         let div = document.createElement('div');
         div.id = `${i}x${j}`
+        div.className = 'divs_matriz';
         div_matriz.appendChild(div);
       }
     }

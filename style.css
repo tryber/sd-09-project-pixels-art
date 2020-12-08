@@ -1,12 +1,22 @@
 .color {
+  position: relative;
   border: 1px solid black;
   width: 40px;
   height: 40px;
   float: left;
 }
 
+#color-palette {
+  display: block;
+  width: 200px;
+  height: 45px;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
 #div1 {
   background-color: black;
+  margin-left: 15px;
 }
 
 #div2 {
@@ -23,4 +33,12 @@
 
 #div5 {
   background-color: magenta;
+}
+
+.divs_matriz {
+  position: relative;
+  border: 1px solid black;
+  float: left;
+  width: 40px;
+  height: 40px;
 }
