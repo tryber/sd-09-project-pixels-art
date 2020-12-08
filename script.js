@@ -1,12 +1,30 @@
 window.onload = function() {
-    let pixelsColumns = 5;
-    let boardLines = document.querySelectorAll('.board-line');
+    let pixelsMatrix = 80;
+    let boardLines;
     let colorPalette = document.getElementById('color-palette');
     let selectedColor = 'black';
-    let buttonClear = document.getElementById('clear-board')
+    let buttonClear = document.getElementById('clear-board');
+    let pixelBoard = document.getElementById('pixel-board');
 
+    checkSizeBoard();
+    createBoardLine(pixelsMatrix);
     fillPixelBoard(boardLines);
     selectColor();
+
+    function checkSizeBoard() {
+        if (pixelsMatrix > 50) pixelsMatrix = 50;
+        if (pixelsMatrix < 5) pixelsMatrix = 5;
+    }
+
+    function createBoardLine(linesQuantity) {
+        for (let index = 0; index < linesQuantity; index += 1) {
+            let newLine = document.createElement('div');
+            newLine.className = 'board-line';
+            pixelBoard.appendChild(newLine);
+        }
+        boardLines = document.querySelectorAll('.board-line');
+
+    }
 
     function fillPixelBoard(boardLines) {
         for (let index = 0; index < boardLines.length; index += 1) {
@@ -15,7 +33,7 @@ window.onload = function() {
     }
 
     function fillPixelBoardLine(lineToFill) {
-        for (let index = 0; index < pixelsColumns; index += 1) {
+        for (let index = 0; index < pixelsMatrix; index += 1) {
             let pixel = createPixel('pixel');
             lineToFill.appendChild(pixel);
         }
