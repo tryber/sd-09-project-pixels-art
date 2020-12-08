@@ -1,11 +1,11 @@
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .color {
-  display: inline-block;
   border: 1px solid black;
+  display: inline-block;
   height: 100px;
   width: 100px;
 }
@@ -24,4 +24,12 @@ body {
 
 .blue {
   background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
 }
