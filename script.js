@@ -6,7 +6,7 @@ window.onload = function () {
   document.querySelector('#color4').style.backgroundColor = 'blue';
 };
 const pixelBoard = document.querySelector('#pixel-board');
-const colorPalette = document.querySelector('.colorPalette')
+const colorPalette = document.querySelector('.colorPalette');
 const palette1 = document.querySelector('#color1');
 const palette2 = document.querySelector('#color2');
 const palette3 = document.querySelector('#color3');
