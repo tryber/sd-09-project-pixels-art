@@ -20,3 +20,21 @@ function grid(){
 
 }
 grid()
+const paletteBlack = document.getElementsByClassName('black')[0]
+const paletteRed = document.getElementsByClassName('red')[0]
+const paletteGreen = document.getElementsByClassName('green')[0]
+const paletteBlue = document.getElementsByClassName('blue')[0]
+paletteBlack.addEventListener('click', colorSelector)
+paletteRed.addEventListener('click', colorSelector)
+paletteGreen.addEventListener('click', colorSelector)
+paletteBlue.addEventListener('click', colorSelector)
+function colorSelector(chosenColor) {
+    const chosenPaletteColor = chosenColor.target;
+    const previousColorSelected = document.querySelector('.selected');
+    previousColorSelected.classList.remove('selected');
+    chosenPaletteColor.classList.add('selected');
+    
+
+
+
+}
