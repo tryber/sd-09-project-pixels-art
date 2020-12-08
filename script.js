@@ -13,5 +13,17 @@ window.onload = function() {
         }
     }
     addTabela()
+
+    function adicionaEventos(){
+        //let color = document.querySelectorAll('.color');
+        let divsPixels = document.querySelectorAll('.pixel');
+    
+        for (let index = 0; index < divsPixels.length; index += 1){
+            divsPixels[index].addEventListener('click', function(){
+                divsPixels[index].className += ' selected'
+            })
+        }
+    }
+    adicionaEventos()
     
 }
