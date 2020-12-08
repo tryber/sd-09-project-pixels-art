@@ -2,10 +2,6 @@ html {
   margin: 0;
 }
 
-.blue {
-  background-color: blue;
-}
-
 .color {
   border: solid;
   border-width: 1px;
@@ -14,12 +10,16 @@ html {
   width: 50px;
 }
 
-.green {
-  background-color: green;
+.black {
+  background-color: black;
+}
+  
+.blue {
+  background-color: blue;
 }
 
-.red {
-  background-color: red;
+.green {
+  background-color: green;
 }
 
 .yellow {
