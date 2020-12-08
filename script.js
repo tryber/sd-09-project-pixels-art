@@ -1,18 +1,18 @@
-let colors = document.querySelectorAll('.color');
-let pixelBoard = document.querySelector('#pixel-board');
+const colors = document.querySelectorAll('.color');
+const pixelBoard = document.querySelector('#pixel-board');
 
 function rgbRandom() {
-  let r = Math.ceil(Math.random() * 256);
-  let g = Math.ceil(Math.random() * 256);
-  let b = Math.ceil(Math.random() * 256);
+  const r = Math.ceil(Math.random() * 256);
+  const g = Math.ceil(Math.random() * 256);
+  const b = Math.ceil(Math.random() * 256);
 
-  let rgb = `rgb(${r} , ${g} , ${b})`;
+  const rgb = `rgb(${r} , ${g} , ${b})`;
 
   return rgb;
 }
 
 function colorizePalette() {
-  for (color of colors) {
+  for (let color of colors) {
     color.style.backgroundColor = rgbRandom();
     colors[0].style.backgroundColor = 'black';
   }
@@ -20,14 +20,14 @@ function colorizePalette() {
 colorizePalette();
 
 function createPixelsLine() {
-  let pixelsRows = document.createElement('tr');
+  const pixelsRows = document.createElement('tr');
   pixelsRows.style.width = '40px';
   pixelBoard.appendChild(pixelsRows);
 }
 
 function createPixelsColumns(line = 0) {
-  let lines = document.querySelectorAll('tr');
-  let pixelsColumn = document.createElement('td');
+  const lines = document.querySelectorAll('tr');
+  const pixelsColumn = document.createElement('td');
   pixelsColumn.className = 'pixel';
   pixelsColumn.style.height = '40px';
   pixelsColumn.style.border = '1px solid gray';
