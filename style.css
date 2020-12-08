@@ -1,0 +1,26 @@
+.color {
+  border: black solid 1px;
+  display: inline;
+}
+
+.blue {
+  background-color: rgb(0 , 26 , 255);
+  color: azure;
+}
+
+.red{
+  background-color: red;
+}
+ 
+.green{
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
