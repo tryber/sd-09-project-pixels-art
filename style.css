@@ -1,0 +1,22 @@
+.color {
+  display: inline-block;
+  border: 1px solid black;
+  width: 55px;
+  height: 55px;
+}
+
+.salmon {
+  background-color: salmon;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.champagne {
+  background-color: rgb(239 , 233 , 174);
+}
+
+.teal {
+  background-color: teal;
+}
