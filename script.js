@@ -32,8 +32,8 @@ window.onload = function() {
     
     function clickPaletteColor() {
         paletteColor.addEventListener('click', function(event) {
-            event.target.className = 'color selected'
             let change = document.querySelector('.selected')
+            event.target.className = 'color selected'
             change.className = 'color'
         })
     }
