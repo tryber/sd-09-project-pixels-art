@@ -1,3 +1,4 @@
+window.onload = function() {
 function createPixelBoard() {
   const pixelBoardLines = document.querySelectorAll('.pixel-board-line');
 
@@ -11,3 +12,4 @@ function createPixelBoard() {
 }
 
 createPixelBoard();
+}
