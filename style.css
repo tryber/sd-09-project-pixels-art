@@ -11,7 +11,7 @@
     border: solid 1px black;
 }
 
-#blackColor {  
+#black {  
     width: 40px;
     height: 40px;
     background-color: black;
@@ -19,7 +19,7 @@
     background: black;
 }
 
-#redColor {
+#red {
     width: 40px;
     height: 40px;
     background-color: red;
@@ -27,7 +27,7 @@
     background: red;
 }
 
-#yellowColor {
+#yellow {
     width: 40px;
     height: 40px;
     background-color: yellow;
@@ -35,7 +35,7 @@
     background: yellow;
 }
 
-#greenColor {
+#green {
     width: 40px;
     height: 40px;
     background-color: green;
