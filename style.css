@@ -2,8 +2,8 @@ html {
   margin: 0;
 }
 
-h1 {
-  color: 'blue';
+.blue {
+  background-color: blue;
 }
 
 .color {
@@ -14,18 +14,14 @@ h1 {
   display: inline-block;
 }
 
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
 .green {
   background-color: green;
 }
 
+.red {
+  background-color: red;
+}
+
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
