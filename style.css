@@ -5,12 +5,16 @@
   display: inline-block;
 }
 
+#title {
+  text-align: center;
+}
+
 .selected {
   
 }
 
 #color-palette {
-  
+  text-align: center;
 }
 
 .color:hover {
@@ -49,5 +53,5 @@
 }
 
 #pixel-board {
-  
+  text-align: center;
 }
