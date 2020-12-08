@@ -19,9 +19,6 @@
 }
 
 /* ====== PALETA DE CORES ======== */
-/* .color {
-  
-} */
 #black {
   background-color: rgb(0, 0, 0);
 }
@@ -39,10 +36,6 @@
 }
 
 /* ====== CAIXA DE PIXELS ======== */
-/* .row {
-  border: 1px solid red;
-} */
-
 .pixel {
   background-color: rgb(255, 255, 255);
 }

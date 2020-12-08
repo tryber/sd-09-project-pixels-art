@@ -2,11 +2,14 @@ window.onload = function () {
   function createPaletteColor () {
     const colorPalette = document.getElementById('color-palette');
     const colorsId = ['black', 'red', 'yellow', 'green'];
-    // console.log(colorsId);
-
+    
     for (let index = 0; index < colorsId.length; index += 1) {
       let colorBox = document.createElement('div');
-      colorBox.classList.add('box', 'color');
+      if (index === 0) {
+        colorBox.classList.add('box', 'color', 'selected');
+      } else {
+        colorBox.classList.add('box', 'color');
+      }
       colorBox.id = colorsId[index];
       colorPalette.appendChild(colorBox);
     }
@@ -23,14 +26,12 @@ window.onload = function () {
     }
 
     const boardRow = document.getElementsByClassName('row');
-    
 
     for (let indexWidth = 0; indexWidth < boardRow.length; indexWidth += 1) {
       for (let indexHeight = 0; indexHeight < boardRow.length; indexHeight += 1) {
         const pixel = document.createElement('div');
         pixel.classList.add('box', 'pixel');
         boardRow[indexWidth].appendChild(pixel);
-        // console.log(boardRow[index]);
       }
     }
   }
