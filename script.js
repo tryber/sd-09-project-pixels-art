@@ -1,6 +1,6 @@
 window.onload = firstSelectedFun;
 
-//Quando a página carregar, executa os comandos abaixo:
+//Quando a página carregar, executa os códigos  abaixo:
 function firstSelectedFun() {
   document.querySelector('.black').classList.add('selected');
   clickSelect();
@@ -71,6 +71,9 @@ function clickSelect() {
   });
 }
 
+/* Adiciona o eventListener "click" em todos os pixels brancos e verifica-se ao clicar em um deles
+qual cor estava selecionada na palheta de cores, mudando assim, a cor do pixel branco para a cor selecionada
+na palheta*/
 function paintPixel(){
     let localWhite = document.querySelectorAll('.pixel')
     let localRed = document.querySelector('.red');
