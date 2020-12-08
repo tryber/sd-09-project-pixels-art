@@ -1,3 +1,19 @@
+* {
+  margin: 20px;
+}
+
 body {
-  background:  rgb(238,238,238);
-  }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eee;
+}
+
+button {
+  margin: 20px;
+}
+
+.color {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}

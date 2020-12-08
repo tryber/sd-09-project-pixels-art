@@ -23,6 +23,31 @@ Cada elemento da paleta de cores deverá ter uma borda preta, sólida e com 1 pi
 A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores";
 
 A paleta de cores não deve conter cores repetidas.
+*/
+
+let divCollorPalette = document.createElement('div');
+divCollorPalette.id = 'color-palette';
+document.querySelector('h1').appendChild(divCollorPalette);
+
+function createPalette() {
+
+  let createDivPalette = document.createElement('div');
+  createDivPalette.className = 'color';
+  let positioToAppend = document.querySelector('#color-palette')
+  let created = positioToAppend.appendChild(createDivPalette);
+  return created
+
+}
+
+createPalette().style.background = 'red';
+createPalette().style.background = 'blue';
+createPalette().style.background = 'green';
+createPalette().style.background = 'yellow';
+
+
+
+
+/*
 
 3 - A cor preta deve ser a primeira na paleta de cores.
 As seguintes verificações serão feitas:
