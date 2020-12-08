@@ -1,3 +1,8 @@
+#color-palette {
+    width: auto;
+    height: 300px;
+}
+
 .color {
     border: black solid 1px;
     width: 50px;
@@ -5,7 +10,9 @@
     display: inline-block;
 }
 
-#color-palette {
-    width: auto;
-    height: 300px;
+.pixel {
+    width: 200px;
+    height: 200px;
+    border: black solid 1px;
+    background-color: white;
 }
