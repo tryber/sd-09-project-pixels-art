@@ -1,3 +1,5 @@
+window.onload = criaQuadro(5);
+
 function inicioPreto(){
     let inicio = document.querySelector("#pixel-board");
     inicio.addEventListener("click", function (event) {
