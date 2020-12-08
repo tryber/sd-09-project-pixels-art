@@ -6,11 +6,22 @@ window.onload = function() {
 function setEvents() {
     setPaletteEvent();
     setBoardEvent();
+    let clearButton = document.querySelector('#clear-board');
+    clearButton.addEventListener('click', clearBoardOfPixels);
+}
+
+function clearBoardOfPixels() {
+    let mainColor = 'white';
+    let classPosition = 1;
+    let pixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixels.length; index += 1) {
+        pixels[index].className = pixels[index].className.replace(pixels[index].classList[classPosition], mainColor);
+    }
 }
 
 function setBoardEvent() {
     let divElements = document.querySelector('#pixel-board');
-    divElements.addEventListener("click", changePixelColor);
+    divElements.addEventListener('click', changePixelColor);
 }
 
 function changePixelColor(event) {
@@ -19,19 +30,19 @@ function changePixelColor(event) {
         let selected = document.querySelector('.selected');
         event.target.className = event.target.className.replace(event.target.classList[colorPosition], selected.classList[colorPosition]);
     }
-    console.log(event.target);
 }
 
 function setPaletteEvent() {
     let divElements = document.querySelector('#color-palette');
-    divElements.addEventListener("click", changeSelectedColor);
+    divElements.addEventListener('click', changeSelectedColor);
 }
 
 function changeSelectedColor(event) {
+    let classSelected = 'selected';
     if (!(event.target.className === "" || event.target.className === null)) {
         let divElements = document.querySelectorAll('#color-palette div');
         divElements = removeAllSelections(divElements);
-        event.target.className = event.target.className + ' selected';
+        event.target.className = event.target.className + ' ' + classSelected;
     }
 }
 

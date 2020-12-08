@@ -9,6 +9,15 @@
   text-align: center;
 }
 
+#clear-board {
+  height: 35px;
+  width: 100px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .selected {
   
 }
@@ -18,7 +27,7 @@
 }
 
 .color:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .black {
