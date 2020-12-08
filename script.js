@@ -1,6 +1,12 @@
 window.onload = function() {
     let pixelsColumns = 5;
     let boardLines = document.querySelectorAll('.board-line');
+    let selectBlackColor = document.getElementById('black');
+
+    selectBlackColor.className += ' selected';
+    selectBlackColor.className = selectBlackColor.className.split(' selected');
+
+    fillPixelBoard(boardLines);
 
     function fillPixelBoard(boardLines) {
         for (let index = 0; index < boardLines.length; index += 1) {
@@ -23,5 +29,4 @@ window.onload = function() {
     }
 
 
-    fillPixelBoard(boardLines);
 }
