@@ -40,10 +40,10 @@ body {
 }
 
 .pixel {
-  margin: -2px 0px;
   border: 1px solid black;
   background-color: white;
   display: inline-block;
   height: 40px;
+  margin: -2px 0;
   width: 40px;
 }
