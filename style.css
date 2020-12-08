@@ -2,8 +2,8 @@
   border: 1px solid;
   height: 100px;
   line-height: 0;
-  margin: 5px;
   width: 100px;
+  margin: 0 5px 0 0;
 }
 
 .box {
@@ -31,12 +31,9 @@
 
 #color-palette {
   display: flex;
+  margin: 5px 0 5px 0;
 }
 
 .pixel {
-  border: 1px solid;
-}
-
-#pixel-board {
   display: flex;
 }
