@@ -60,6 +60,6 @@ header {
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 4rem;
-  width: 4rem;
+  height: 40px;
+  width: 40px;
 }
