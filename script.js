@@ -1,4 +1,6 @@
 let baseDoQuadro = 5;
+sessionStorage.selectedColor = 'black';
+
 
 function clearBoard() {
   let allPixels = document.querySelectorAll('.pixel');
@@ -8,7 +10,7 @@ function clearBoard() {
 }
 
 let clearButton = document.querySelector('#clear-board');
-clearButton.addEventListener('click', function(target) {
+clearButton.addEventListener('click', function (target) {
   clearBoard(target);
 });
 
@@ -20,7 +22,7 @@ for (let idx = 0; idx < baseDoQuadro; idx += 1) {
 }
 
 let minhasLinhas = document.querySelectorAll('.linha');
-for (let idx = 0; idx < minhasLinhas.length; idx += 1 ) {
+for (let idx = 0; idx < minhasLinhas.length; idx += 1) {
   minhasLinhas[idx].style.height = '40px';
   minhasLinhas[idx].style.width = `${baseDoQuadro * 40}px`;
 }
@@ -36,6 +38,14 @@ for (let idx = 0; idx < minhasLinhas.length; idx += 1) {
 
 const colorButtons = document.querySelectorAll('.color');
 
+function removeColorButtonMarks () {
+  for (let idx = 0; idx < colorButtons.length; idx += 1) {
+    if (colorButtons[idx].classList.contains('selected')) {
+      colorButtons[idx].classList.toggle('selected');
+    }
+  }
+}
+
 function selectColor(self) {
   removeColorButtonMarks();
   let selectedColor = self.target.style.backgroundColor;
@@ -43,16 +53,20 @@ function selectColor(self) {
   self.target.classList.toggle('selected');
 }
 
-for (let idx = 0; idx < colorButtons.length; idx +=1 ){
-  colorButtons[idx].addEventListener('click', function(target){
+for (let idx = 0; idx < colorButtons.length; idx += 1) {
+  colorButtons[idx].addEventListener('click', function(target) {
     selectColor(target);
   });
 }
 
-function removeColorButtonMarks () {
-  for (let idx = 0 ; idx < colorButtons.length; idx += 1) {
-    if (colorButtons[idx].classList.contains('selected')) {
-      colorButtons[idx].classList.toggle('selected');
-    }
-  }
+function colorPixel(self){
+  self.target.style.backgroundColor = sessionStorage.selectedColor;
+}
+
+const myPixels = document.querySelectorAll('.pixel');
+
+for (let idx = 0; idx < myPixels.length; idx += 1) {
+  myPixels[idx].addEventListener('click', function(target) {
+    colorPixel(target);
+  });
 }
