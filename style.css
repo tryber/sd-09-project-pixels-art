@@ -1,4 +1,5 @@
 body {
+  background-color: #e3e3eb;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,12 +21,13 @@ header {
 #title {
   color: white;
   font-family: Ubuntu, sans-serif;
-  font-size: 5rem;  
+  font-size: 5rem;
 }
 
 .article {
   align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100%;
   justify-content: center;
   margin: 2rem auto;
@@ -42,5 +44,21 @@ header {
   border: 1px solid black;
   height: 5rem;
   margin: 1rem;
+  width: 5rem;
+}
+
+.pixel-frame {
+  width: 100%;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 5rem;
   width: 5rem;
 }
