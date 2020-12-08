@@ -1,0 +1,20 @@
+#black {
+  background-color:black;
+  }
+
+#red {
+  background-color:red;
+  }
+    
+#blue {
+  background-color:blue;
+  }
+
+#green{
+  background-color:green;
+  }  
+
+.color {
+  border: solid black 1px;
+  display: inline;
+}
