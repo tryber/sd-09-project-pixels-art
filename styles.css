@@ -33,21 +33,19 @@ div.color {
 /* style of challenge 4 */
 /* style of challenge 5 */
 
-div.pixel-board {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .pixel {
   width: 40px;
   height: 40px;
   border: 1px solid black;
+  background-color: white;
 }
-div.row-square {
+div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  max-width: calc(40px * 6);
+  max-height: calc(40px * 6);
 }
