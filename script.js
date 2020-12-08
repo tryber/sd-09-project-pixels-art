@@ -22,3 +22,14 @@ function paintPixel() {
   });
 }
 paintPixel()
+
+function clearBoard() {
+  let button = document.querySelector('#clear-board');
+  button.addEventListener('click', function() {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.background = 'white'
+    }
+  });
+}
+clearBoard()
