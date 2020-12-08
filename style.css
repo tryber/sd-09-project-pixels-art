@@ -10,6 +10,10 @@ body {
   display: inline-block;
 }
 
+.center {
+    text-align: center;
+}
+
 #title {
   text-align: center;
 }
@@ -32,10 +36,6 @@ body {
   cursor: pointer;
   opacity: 0.6;
   transition: 1s;
-}
-
-.selected {
-  
 }
 
 #color-palette {
@@ -71,11 +71,16 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
+  margin: 0;
   border: 1px solid black;
 }
 
 .pixel:hover {
   cursor: pointer;
+}
+
+.line-pixels {
+    margin: -5px;
 }
 
 #pixel-board {

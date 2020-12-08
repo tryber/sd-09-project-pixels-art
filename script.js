@@ -1,6 +1,73 @@
 window.onload = function() {
     
     setEvents();
+    setNumberOfLines();
+}
+
+function setNumberOfLines() {
+    let minValueOfQtty = 5;
+    let maxValueOfQtty = 50;
+    let inputValue = parseInt(document.querySelector('#board-size').value);
+    if (isNaN(inputValue)) {
+        alert('Board inválido!');
+        return;
+    }
+    let sectionOfBoard = document.querySelector('#pixel-board');
+    clearBoard(sectionOfBoard.children.length);
+    if (inputValue >= 5 && inputValue <= 50) {
+        for (let index = 0; index < inputValue; index += 1) {
+            sectionOfBoard.appendChild(setNumberOfPixels());
+        }
+    }else if (inputValue < 5) {
+        for (let index = 0; index < minValueOfQtty; index += 1) {
+            sectionOfBoard.appendChild(setNumberOfPixels());
+        }
+    }else {
+        for (let index = 0; index < maxValueOfQtty; index += 1) {
+            sectionOfBoard.appendChild(setNumberOfPixels());
+        }
+    }
+    
+}
+
+function setNumberOfPixels() {
+    let inputValue = parseInt(document.querySelector('#board-size').value);
+    return checkSize(inputValue);
+}
+
+function clearBoard(numberOfChilds) {
+    let sectionOfBoard = document.querySelector('#pixel-board');
+    for (let index = 0; index < numberOfChilds; index += 1) {
+        sectionOfBoard.removeChild(sectionOfBoard.firstElementChild);
+    }
+}
+
+function checkSize(inputValue) {
+    let minValueOfQtty = 5;
+    let maxValueOfQtty = 50;
+    let subDiv = document.createElement('div');
+    subDiv.className = 'line-pixels';
+    if (inputValue >= 5 && inputValue <= 50) {
+        for (let index = 0; index < inputValue; index += 1) {
+            let newPixel = document.createElement('div');
+            newPixel.className = 'pixel white';
+            subDiv.appendChild(newPixel);
+        }
+    } else if (inputValue < minValueOfQtty) {
+        for (let index = 0; index < minValueOfQtty; index += 1) {
+            let newPixel = document.createElement('div');
+            newPixel.className = 'pixel white';
+            subDiv.appendChild(newPixel);
+        }
+    }else {
+        for (let index = 0; index < maxValueOfQtty; index += 1) {
+            let newPixel = document.createElement('div');
+            newPixel.className = 'pixel white';
+            subDiv.appendChild(newPixel);
+        }
+    }
+    return subDiv;
+
 }
 
 function setEvents() {
@@ -8,6 +75,8 @@ function setEvents() {
     setBoardEvent();
     let clearButton = document.querySelector('#clear-board');
     clearButton.addEventListener('click', clearBoardOfPixels);
+    let generateBoardButton = document.querySelector('#generate-board');
+    generateBoardButton.addEventListener('click', setNumberOfLines);
 }
 
 function clearBoardOfPixels() {
