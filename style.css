@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    text-align: center;
+    /*background-color: aquamarine;*/
+}
+
+#color-palette {
+    text-align: center;
+    /*background-color: rosybrown;*/
+}
+
+.color {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    /*background-color: burlywood;*/
+}
+
+.background-item1 {
+    background-color: black;
+}
+
+.background-item2 {
+    background-color: #595959;
+}
+
+.background-item3 {
+    background-color: #737373;
+}
+
+.background-item4 {
+    background-color: #D9D9D9;
+}
