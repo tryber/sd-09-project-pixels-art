@@ -1,17 +1,10 @@
 window.onload = function () {
-  button();
-}
 
-function button(){
-  let button = document.createElement('button')
-  let pBoard = document.querySelector('#pixel-board')
-  pBoard.appendChild = button
-}
+  let box = document.querySelector('#pixel-board');
+  let color = document.querySelector('#black');
 
-
-let color = document.querySelector('#color-palette');
-color.addEventListener('click', clickColor);
-
-function clickColor(event) {
- event.target.color = console.log('ok')
+  function boxColor(event) {
+    event.target.style.backgroundColor = 'black';
+  }
+  box.addEventListener('click', boxColor);
 }
