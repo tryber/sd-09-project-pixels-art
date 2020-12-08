@@ -1,8 +1,8 @@
-/* body {
+body, div {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} */
+}
 
 h1 {
   text-align: center;
@@ -43,11 +43,6 @@ h1 {
 /* Pixel Board */
 #pixel-board {
   text-align: center;
-}
-
-#pixel-board {
-  margin: 0;
-  padding: 0;
 }
 
 .line-pixel {
