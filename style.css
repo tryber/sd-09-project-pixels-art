@@ -2,6 +2,12 @@
     margin-left: 44%;
 }
 
+#command-buttons {
+    margin-left: 55%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
 #title {
     text-align: center;
 }

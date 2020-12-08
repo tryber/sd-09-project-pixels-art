@@ -3,7 +3,9 @@ window.onload = function () {
     let colorPalette = document.getElementById('color-palette');
     colorPalette.addEventListener('click', setColorToPaint);
     let pixelBoard = document.getElementById('pixel-board');
-    pixelBoard.addEventListener('click', changePixelColor); 
+    pixelBoard.addEventListener('click', changePixelColor);
+    let clearButton = document.getElementById('clear-board');
+    clearButton.addEventListener('click', clearPixelBoard);
 
     function setColorToPaint (evt) {
         let colorSelectedElementId = evt.target.id;
@@ -16,7 +18,14 @@ window.onload = function () {
             let clickedElement = evt.target;
             clickedElement.style.backgroundColor = currentColorSelected;
         }
-    }   
+    }
+    
+    function clearPixelBoard () {
+        let pixelBoard = document.getElementsByClassName('pixel');
+        for (let index = 0; index < pixelBoard.length; index += 1) {
+            pixelBoard[index].style.backgroundColor = 'white';            
+        }
+    }
 
     function chageClassSelectedElement (elementId) {
         let element = document.getElementById(elementId);
