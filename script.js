@@ -15,6 +15,7 @@ function grid(){
             const pixelCell =document.createElement("div");
             rowPixel.appendChild(pixelCell)
             pixelCell.className += "pixel"
+            pixelCell.addEventListener('click', pixelColoring)
         }
     }
 
@@ -24,17 +25,19 @@ const paletteBlack = document.getElementsByClassName('black')[0]
 const paletteRed = document.getElementsByClassName('red')[0]
 const paletteGreen = document.getElementsByClassName('green')[0]
 const paletteBlue = document.getElementsByClassName('blue')[0]
-paletteBlack.addEventListener('click', colorSelector)
-paletteRed.addEventListener('click', colorSelector)
-paletteGreen.addEventListener('click', colorSelector)
-paletteBlue.addEventListener('click', colorSelector)
-function colorSelector(chosenColor) {
+paletteBlack.addEventListener('click', colorPaletteSelector)
+paletteRed.addEventListener('click', colorPaletteSelector)
+paletteGreen.addEventListener('click', colorPaletteSelector)
+paletteBlue.addEventListener('click', colorPaletteSelector)
+
+function colorPaletteSelector(chosenColor) {
     const chosenPaletteColor = chosenColor.target;
     const previousColorSelected = document.querySelector('.selected');
     previousColorSelected.classList.remove('selected');
     chosenPaletteColor.classList.add('selected');
-    
-
-
-
+}
+function pixelColoring(chosenPixel) {
+    const pixelSelected = chosenPixel.target;
+    const chosenPaletteColor = document.querySelector('.selected').classList[1];
+    pixelSelected.style.backgroundColor = chosenPaletteColor;
 }
