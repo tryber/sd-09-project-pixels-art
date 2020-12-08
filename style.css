@@ -11,16 +11,19 @@ h1 {
 }
 
 /* Colors */
-.blue { 
+.blue {
   background-color: rgba(5, 68, 92, 1);
 }
-.pink { 
+
+.pink {
   background-color: rgba(242, 49, 127, 1);
 }
-.purple { 
+
+.purple {
   background-color: rgba(92, 79, 116, 1);
 }
-.black { 
+
+.black {
   background-color: black;
 }
 
