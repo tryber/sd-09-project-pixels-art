@@ -6,10 +6,13 @@
     margin: 5px;
 }
 
+.line {
+    height: 50px;
+}
+
 .pixel {
     border: 1px solid black;
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 40px;
+    height: 40px;
 }
