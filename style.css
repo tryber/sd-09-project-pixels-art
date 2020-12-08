@@ -1,16 +1,5 @@
 .black {
     background-color: black;
-  }
-
-.color-palette {
-  background-color: white;
-  text-align: center;
-  height: 52px;
-  min-width: 600px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
-  padding: 10px;
 }
 
 .blue {
@@ -28,6 +17,17 @@ body {
   border-style: solid;
   border-color: black;
   border-width: 1px;
+}
+
+.color-palette {
+  background-color: white;
+  text-align: center;
+  height: 52px;
+  min-width: 600px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 10px;
 }
 
 .green {
