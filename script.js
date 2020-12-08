@@ -2,9 +2,7 @@ window.onload = function() {
     let pixelsColumns = 5;
     let boardLines = document.querySelectorAll('.board-line');
     let selectBlackColor = document.getElementById('black');
-
-    selectBlackColor.className += ' selected';
-    selectBlackColor.className = selectBlackColor.className.split(' selected');
+    let colorPalette = document.getElementById('color-palette');
 
     fillPixelBoard(boardLines);
 
@@ -28,5 +26,16 @@ window.onload = function() {
         return pixel;
     }
 
+    function selectColor() {
+        colorPalette.addEventListener('click', function(event) {
+            let lastSelected = document.querySelector('.selected');
+            let newSelection = event.target;
+            console.log(newSelection);
+            lastSelected.className = 'color';
+            newSelection.className += ' selected';
+        });
+    }
+
+    selectColor();
 
 }
