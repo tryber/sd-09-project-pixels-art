@@ -1,0 +1,26 @@
+.color {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+#div1 {
+  background-color: black;
+}
+
+#div2 {
+  background-color: red;
+}
+
+#div3 {
+  background-color: green;
+}
+
+#div4 {
+  background-color: blue;
+}
+
+#div5 {
+  background-color: magenta;
+}
