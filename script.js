@@ -1,10 +1,11 @@
 window.onload = function() {
     let pixelsColumns = 5;
     let boardLines = document.querySelectorAll('.board-line');
-    let selectBlackColor = document.getElementById('black');
     let colorPalette = document.getElementById('color-palette');
+    let selectedColor = 'black';
 
     fillPixelBoard(boardLines);
+    selectColor();
 
     function fillPixelBoard(boardLines) {
         for (let index = 0; index < boardLines.length; index += 1) {
@@ -30,12 +31,20 @@ window.onload = function() {
         colorPalette.addEventListener('click', function(event) {
             let lastSelected = document.querySelector('.selected');
             let newSelection = event.target;
-            console.log(newSelection);
             lastSelected.className = 'color';
             newSelection.className += ' selected';
+            selectedColor = newSelection.id;
         });
     }
 
-    selectColor();
+    function paintPixelWithColorSelected() {
+        let pixelBoard = document.getElementById('pixel-board');
 
+        pixelBoard.addEventListener('click', function(event) {
+            selectedColor = document.querySelector('.selected').id;
+            event.target.style.backgroundColor = selectedColor;
+        });
+    }
+
+    paintPixelWithColorSelected();
 }
