@@ -34,3 +34,18 @@ function selectingColorBlack() {
 }
 selectingColorBlack();
 
+function selectingAllColors() {
+  let palette = document.querySelector('#color-palette');
+
+  palette.addEventListener('click', function (e) {
+    let selected = document.querySelector('.selected');
+    selected.className = 'color';
+
+    if (e.target.className == 'color') {
+      e.target.className = 'color selected';
+    }
+  });
+}
+selectingAllColors();
+
+
