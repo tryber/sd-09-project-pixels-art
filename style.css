@@ -23,14 +23,15 @@
 }
 
 #pixel-board {
-  width: 220px;
+  height: 200px;
+  width: 200px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
+  box-sizing: border-box;
   display: inline-block;
   height: 40px;
-  margin: 1px;
   width: 40px;
 }
