@@ -1,6 +1,11 @@
 const colors = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
 
+colors[0].style.backgroundColor = 'black';
+colors[1].style.backgroundColor = 'red';
+colors[2].style.backgroundColor = 'blue';
+colors[3].style.backgroundColor = 'green';
+
 function rgbRandom() {
   const r = Math.ceil(Math.random() * 256);
   const g = Math.ceil(Math.random() * 256);
@@ -12,12 +17,12 @@ function rgbRandom() {
 }
 
 function colorizePalette() {
-  for (let color of colors) {
+  for (const color in colors) {
     color.style.backgroundColor = rgbRandom();
     colors[0].style.backgroundColor = 'black';
   }
 }
-colorizePalette();
+// colorizePalette();
 
 function createPixelsLine() {
   const pixelsRows = document.createElement('tr');
