@@ -1,0 +1,28 @@
+#palet1 {
+    background-color: black;
+}
+#palet2 {
+    background-color: blue;
+}
+#palet3 {
+    background-color: red;
+}
+#palet4 {
+    background-color: green;
+}
+
+#color-palette {
+    border: black ridge 1px;
+    height: 7%;
+    display: inline-block;
+    width: 17%;
+
+}
+.color {
+    margin-top: 5px;
+    margin-left: 2px;
+    border: black solid 1px;
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+}
