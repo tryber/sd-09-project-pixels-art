@@ -1,9 +1,9 @@
-const getColorPalette = document.getElementById('color-palette');
 window.onload = function() {
   const colorSelected = document.querySelector('.black');
   colorSelected.classList.add('selected');
 }
 
+const getColorPalette = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
 for (let index = 0; index < colors.length; index += 1){
   let colorsPalette = document.createElement('div');
@@ -22,6 +22,15 @@ function printPixelsFrame() {
     }
     getPixelBoard.appendChild(createDivLine);
   }
-
 }
 printPixelsFrame();
+
+function changeColorSelected() {
+  let getColors = document.querySelector('#color-palette');
+  getColors.addEventListener('click', function(event) {
+    let getSelectedColor = document.querySelector('.selected');
+    getSelectedColor.classList.remove('selected');
+    event.target.classList.add('selected');
+  })
+}
+changeColorSelected();
