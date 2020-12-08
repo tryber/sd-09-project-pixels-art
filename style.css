@@ -36,6 +36,21 @@ header {
     background-color: blue;
 }
 
-#main-content {
+.container-center {
+    margin: 20px;
+}
 
+#pixel-board {
+    display: flex;
+    justify-content: center;
+}
+
+.pixel {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+.lines {
+    display: inline-block;
 }
