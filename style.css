@@ -1,4 +1,4 @@
-#title {
+.page-title {
   font-style: italic;
   color: blueviolet;
 }
@@ -10,19 +10,19 @@
   height: 60px;
 }
 
-#first-color {
+.first-color {
   background-color: black;
 }
 
-#second-color {
+.second-color {
   background-color: blue;
 }
 
-#third-color {
+.third-color {
   background-color: coral;
 }
 
-#fourth-color {
+.fourth-color {
   background-color: darkgoldenrod;
 }
 
