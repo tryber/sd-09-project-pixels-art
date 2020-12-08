@@ -4,19 +4,41 @@ window.addEventListener("load", main)
 function main() {
   // verify if started color starts with black
   console.log(document.getElementsByClassName("selected"))
-
-
   selectedColor()
-
+  paintPixel()
   loadMsg()
 }
 
 function factory() {
   const palleteOptions = document.getElementsByClassName("color")
+  const paint = document.querySelector(".selected")
+  const myPixels = document.getElementsByClassName("pixel")
   return {
-    MyPallete: palleteOptions
+    MyPallete: palleteOptions,
+    Paint: paint,
+    MyPixels: myPixels
   }
 }
+
+function paintPixel() {
+  const makeFactory = factory()
+  const myPixels = makeFactory.MyPixels
+  for ( let i = 0; i < myPixels.length; i += 1) {
+    myPixels[i].addEventListener("click", function() {
+
+      colorizePixels(i)
+    })
+  }
+}
+function colorizePixels(index){
+  const makeFactory = factory()
+  const paint = makeFactory.Paint
+  const myPixels = makeFactory.MyPixels
+  const color = paint.classList[1]
+  console.log(myPixels[index])
+  myPixels[index].style.backgroundColor = color
+}
+
 
 function selectedColor() {
   const makeFactory = factory()
