@@ -5,25 +5,25 @@ const greenBox = document.querySelector('.green');
 
 function changeColor() {
   cyanBox.addEventListener('click', function () {
-    cyanBox.classList.toggle('selected');
+    cyanBox.classList.add('selected');
     blackBox.classList.remove('selected');
     blueVioletBox.classList.remove('selected');
     greenBox.classList.remove('selected');
   });
   blackBox.addEventListener('click', function () {
-    blackBox.classList.toggle('selected');
+    blackBox.classList.add('selected');
     cyanBox.classList.remove('selected');
     blueVioletBox.classList.remove('selected');
     greenBox.classList.remove('selected');
   });
   blueVioletBox.addEventListener('click', function () {
-    blueVioletBox.classList.toggle('selected');
+    blueVioletBox.classList.add('selected');
     cyanBox.classList.remove('selected');
     blackBox.classList.remove('selected');
     greenBox.classList.remove('selected');
   });
   greenBox.addEventListener('click', function () {
-    greenBox.classList.toggle('selected');
+    greenBox.classList.add('selected');
     cyanBox.classList.remove('selected');
     blueVioletBox.classList.remove('selected');
     blackBox.classList.remove('selected');
