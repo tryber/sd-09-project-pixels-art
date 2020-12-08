@@ -1,5 +1,13 @@
 window.onload = function (){
-  let selectedColor = document.querySelector('.black')
+  var selectedColor = document.querySelector('.black')
+  selectedColor.className += ' selected'
 
-  selectedColor.className = 'color black selected'
+  addEventListener('click', changeSelectedColor)
+
+  function changeSelectedColor(event){
+    selectedColor = event.target
+    selectedColor.className += ' selected'
+
+    console.log(selectedColor)
+  }
 }

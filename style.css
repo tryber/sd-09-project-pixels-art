@@ -28,13 +28,14 @@
 }
 
 table{
+  display: inline-block;
   table-layout: none;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .pixel{
-  color: white;
+  background-color: white;
   width: 40px;
   height: 40px;
   border: black solid 1px;
