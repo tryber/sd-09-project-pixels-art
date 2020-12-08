@@ -1,34 +1,26 @@
 .color{
-  border: 1px solid black;
+  border: solid black 3px;
   display: inline-block;
   padding: 35px;
 }
 
 #black{
   background-color: black;
-  border: solid black;
-  display: inline-block;
-  padding: 35px;
+
 }
 
 #red{
   background-color: rgb(245, 81, 81);
-  border: solid black;
-  display: inline-block;
-  padding: 35px;
-}
+
+  }
 
 #green{
   background-color: rgb(7, 110, 7);
-  border: solid black;
-  display: inline-block;
-  padding: 35px;
-}
+
+  }
 
 #purple{
   background-color: rgb(173, 27, 173);
-  border: solid black;
-  display: inline-block;
-  padding: 35px;
+
 }
 
