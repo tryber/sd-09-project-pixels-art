@@ -37,6 +37,7 @@ header {
 #color-palette {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
@@ -59,6 +60,6 @@ header {
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
 }
