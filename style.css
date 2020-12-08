@@ -1,9 +1,13 @@
 .color { 
-  display: inline; 
+  width: 51px;
+  height: 51px;
   border-style: solid;
   border-width: 1px;  
-  border-color: black;
- 
+  border-color: black;   
+}
+
+#color-pallete {
+  margin: 1px;
 }
 
 #black {
