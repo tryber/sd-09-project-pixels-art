@@ -10,7 +10,6 @@
 .color {
   width: 100px;
   height: 100px;
-  background-color: aqua;
   display: inline-block;
   margin: 5px;
   border-radius: 10%;
@@ -31,4 +30,8 @@
 
 .sunray {
   background-color: rgb(237, 180, 88);
+}
+
+.black {
+  background-color: black;
 }
