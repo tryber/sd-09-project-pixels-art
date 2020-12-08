@@ -1,0 +1,1 @@
+console.log('para o codeclimate nao xiar');
