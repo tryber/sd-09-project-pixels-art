@@ -1,15 +1,14 @@
-window.onload = function () {
   function createColorPalette() {
     const colorPalette = document.querySelector('#color-palette');
     const backgroundColors = ['black', 'red', 'green', 'blue'];
-    
-    for(let index = 0; index < 4; index += 1){
+    let totalNumberOfColors = 4;
+    for (let index = 0; index < totalNumberOfColors; index += 1) {
       const color = document.createElement('div');
       color.className = 'color';
       if (index === 0) {
         color.classList.add('selected');
       }
-      color.style.backgroundColor = backgroundColors[index]
+      color.style.backgroundColor = backgroundColors[index];
       colorPalette.appendChild(color);
     }
   }
@@ -45,4 +44,15 @@ window.onload = function () {
   }
 
   selectColor();
-};
+
+  function paintSelectedPixel() {
+    const pixelBoard = document.querySelector('#pixel-board');
+
+    pixelBoard.addEventListener('click', function (event) {
+      const selectedColor = document.querySelector('.selected');
+      let color = selectedColor.style.backgroundColor;
+      event.target.style.backgroundColor = color;
+    });
+  }
+
+  paintSelectedPixel();
