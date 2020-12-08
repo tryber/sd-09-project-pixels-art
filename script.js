@@ -1,7 +1,7 @@
   function createColorPalette() {
     const colorPalette = document.querySelector('#color-palette');
     const backgroundColors = ['black', 'red', 'green', 'blue'];
-    let totalNumberOfColors = 4;
+    const totalNumberOfColors = 4;
     for (let index = 0; index < totalNumberOfColors; index += 1) {
       const color = document.createElement('div');
       color.className = 'color';
@@ -50,7 +50,7 @@
 
     pixelBoard.addEventListener('click', function (event) {
       const selectedColor = document.querySelector('.selected');
-      let color = selectedColor.style.backgroundColor;
+      const color = selectedColor.style.backgroundColor;
       event.target.style.backgroundColor = color;
     });
   }
