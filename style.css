@@ -1,0 +1,37 @@
+#color-pallete {
+    height:auto;
+    text-align:center;
+}
+
+.color {
+    height: 50px;
+    width: 120px; 
+    border-radius:30px;
+    border: 1px solid black;
+    display: inline-block;
+    line-height: 50px;
+    color:white;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
+}
+
+#cor0{
+    background-color: black;
+}
+
+#cor1{
+    background-color: #c5c3c6;
+}
+
+#cor2{
+    background-color: #46494c;
+}
+
+#cor3{
+    background-color: #1985a1;
+}
+
+
+h1 {
+    text-align:center;
+}
