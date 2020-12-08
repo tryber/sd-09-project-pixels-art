@@ -8,7 +8,7 @@ function makePixelRow(numOfDivs) {
   const row = document.createElement('div');
   row.className = 'pixel-row';
   for (let i = 0; i < numOfDivs; i += 1) {
-    div = makePixelDiv();
+    let div = makePixelDiv();
     row.appendChild(div);
   }
   return row;
@@ -17,16 +17,9 @@ function makePixelRow(numOfDivs) {
 function makePixelBoard(numOfRows, numOfColumns) {
   const board = document.querySelector('#pixel-board');
   for (let i = 0; i < numOfRows; i += 1) {
-    row = makePixelRow(numOfColumns);
+    let row = makePixelRow(numOfColumns);
     board.appendChild(row);
   }
-}
-
-makePixelBoard(5,5);
-
-function setColorPaletteEvents() {
-  const colorPalette = document.querySelector('#color-palette');
-  colorPalette.addEventListener('click', pickColor)
 }
 
 function pickColor() {
@@ -35,15 +28,12 @@ function pickColor() {
     const selected = document.querySelector('.selected');
     selected.classList.remove('selected');
     newSelection.classList.add('selected');
-    console.log(event.target.style.backgroundColor)
   }
 }
 
-setColorPaletteEvents();
-
-function setPixelBoardEvents() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.addEventListener('click', paintPixel)
+function setColorPaletteEvents() {
+  const colorPalette = document.querySelector('#color-palette');
+  colorPalette.addEventListener('click', pickColor);
 }
 
 function paintPixel() {
@@ -55,7 +45,10 @@ function paintPixel() {
   }
 }
 
-setPixelBoardEvents();
+function setPixelBoardEvents() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.addEventListener('click', paintPixel);
+}
 
 function makeClearButton() {
   const row = document.createElement('div');
@@ -69,15 +62,6 @@ function makeClearButton() {
   main.insertBefore(row, pixelBoard);
 }
 
-makeClearButton();
-
-function setClearBoardEvents() {
-  const clearButton = document.querySelector('#clear-board');
-  clearButton.addEventListener('click', clearBoard)
-}
-
-setClearBoardEvents();
-
 function clearBoard() {
   const pixelRows = document.querySelectorAll('.pixel-row');
   for (let rowIndex = 0; rowIndex < pixelRows.length; rowIndex += 1) {
@@ -87,3 +71,14 @@ function clearBoard() {
     }
   }
 }
+
+function setClearBoardEvents() {
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', clearBoard);
+}
+
+makePixelBoard(5, 5);
+makeClearButton();
+setPixelBoardEvents();
+setColorPaletteEvents();
+setClearBoardEvents();
