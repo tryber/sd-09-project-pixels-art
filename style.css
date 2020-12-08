@@ -33,3 +33,19 @@
     width: 65px;
     border: 1px solid black;
 }
+
+#pixel-board{
+    border: 1px solid black;
+    width: 29%;
+    padding: 4px;
+    
+}
+
+.pixel{
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 1px;
+}
