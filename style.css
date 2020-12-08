@@ -50,3 +50,8 @@ h1 {
 .linhas {
   display: inline-block;
 }
+
+#clear-board {
+  margin-left: 30px;
+  margin-top: 10px;
+}
