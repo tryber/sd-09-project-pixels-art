@@ -13,7 +13,7 @@ function setPalletColors() {
 
 setPalletColors();
 
-// Step 4
+// Step 4 & 5
 function createPixel(className) {
   const pixel = document.createElement('div');
   pixel.className = className;
