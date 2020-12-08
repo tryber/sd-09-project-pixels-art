@@ -4,6 +4,7 @@ window.onload = function () {
   document.querySelector('#color2').style.backgroundColor = 'red';
   document.querySelector('#color3').style.backgroundColor = 'green';
   document.querySelector('#color4').style.backgroundColor = 'blue';
+  makePixels(5);
 };
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('.colorPalette');
@@ -16,20 +17,14 @@ const numberSquare = document.querySelector('#board-size');
 const generateSquare = document.querySelector('#generate-board');
 let atualNumber = 5;
 
-function isInside(size) {
-  let rightSize = size;
-  if (size < 5) {
+function isInside() {
+  let rightSize = parseInt(numberSquare.value);
+  if (rightSize < 5) {
     rightSize = 5;
-  } else if (size > 50) {
+  } else if (rightSize > 50) {
     rightSize = 50;
   }
-  return rightSize;
-}
-
-function makeSquare() {
-  let widthSquare = numberSquare.value;
-  widthSquare = isInside(parseInt(widthSquare));
-  return widthSquare;
+  makePixels(rightSize);
 }
 
 function reposeSquare() {
@@ -41,26 +36,24 @@ function reposeSquare() {
     for (let index = 0; index < atualNumber; index += 1){
       pixelBoard.removeChild(childrenPixel[index]);
     }
-    makePixels();
+      isInside();
   }
 }
 
-function makeLinePixels(line) {
-  let numberOfSquare = makeSquare();
-  for (let index = 0; index < numberOfSquare; index += 1) {
+function makeLinePixels(line, numbers) {
+  for (let index = 0; index < numbers; index += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
     line.appendChild(pixel);
   }
-  atualNumber = makeSquare();
+  atualNumber = numbers;
 }
 
 
-function makePixels() {
-  let numberOfSquare = makeSquare();
-  for (let index = 0; index < numberOfSquare; index += 1) {
+function makePixels(numbers) {
+  for (let index = 0; index < numbers; index += 1) {
     const pixelLine = document.createElement('div');
-    makeLinePixels(pixelLine);
+    makeLinePixels(pixelLine, numbers);
     pixelLine.className = 'linePixel';
     pixelBoard.appendChild(pixelLine);
   }
