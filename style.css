@@ -40,3 +40,7 @@ table{
   height: 40px;
   border: black solid 1px;
 }
+
+.selected {
+  border: yellow 1px solid;
+}

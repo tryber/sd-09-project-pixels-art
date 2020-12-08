@@ -1,13 +1,18 @@
 window.onload = function (){
-  var selectedColor = document.querySelector('.black')
-  selectedColor.className += ' selected'
+  let blackcolor = document.querySelector('.black')
+  let redcolor = document.querySelector('.red')
+  let bluecolor = document.querySelector('.blue')
+  let greencolor = document.querySelector('.green')
+
+  blackcolor.className += ' selected'
 
   addEventListener('click', changeSelectedColor)
 
   function changeSelectedColor(event){
-    selectedColor = event.target
-    selectedColor.className += ' selected'
+    let oldselectedColor = document.querySelector('.selected')
+    oldselectedColor.classList.remove('selected')
 
-    console.log(selectedColor)
+    let newselectedColor = event.target
+    newselectedColor.className += ' selected'
   }
 }
