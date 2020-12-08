@@ -8,7 +8,7 @@ function makePixelRow(numOfDivs) {
   const row = document.createElement('div');
   row.className = 'pixel-row';
   for (let i = 0; i < numOfDivs; i += 1) {
-    let div = makePixelDiv();
+    const div = makePixelDiv();
     row.appendChild(div);
   }
   return row;
@@ -17,7 +17,7 @@ function makePixelRow(numOfDivs) {
 function makePixelBoard(numOfRows, numOfColumns) {
   const board = document.querySelector('#pixel-board');
   for (let i = 0; i < numOfRows; i += 1) {
-    let row = makePixelRow(numOfColumns);
+    const row = makePixelRow(numOfColumns);
     board.appendChild(row);
   }
 }
@@ -65,7 +65,7 @@ function makeClearButton() {
 function clearBoard() {
   const pixelRows = document.querySelectorAll('.pixel-row');
   for (let rowIndex = 0; rowIndex < pixelRows.length; rowIndex += 1) {
-    let pixels = pixelRows[rowIndex].children;
+    const pixels = pixelRows[rowIndex].children;
     for (let pixelIndex = 0; pixelIndex < pixels.length; pixelIndex += 1) {
       pixels[pixelIndex].style.backgroundColor = 'white';
     }
