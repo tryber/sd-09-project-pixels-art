@@ -13,8 +13,17 @@ window.onload = function (){
     else if(newselectedColor.classList.contains('pixel')){
       newselectedColor.style.backgroundColor = `${paintColor}`
     }
-    else{
-      console.log('erro')
+  }
+
+  let button = document.querySelector('#clear-board')
+
+  button.addEventListener('click', cleartable)
+
+  function cleartable(){
+    let pixels = document.querySelectorAll('.pixel')
+
+    for(let index = 0; index < pixels.length; index++){
+      pixels[index].style.backgroundColor = "white";
     }
   }
 }
