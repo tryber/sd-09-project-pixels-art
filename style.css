@@ -1,7 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
 }
 
 :root {
@@ -9,38 +9,38 @@
 }
 
 header {
-  width: 100vw;
-  height: 9rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #2a9d8f;
+  display: flex;
+  height: 9rem;
+  justify-content: center;
+  width: 100vw;
 }
 
 #title {
-  color:white;
+  color: white;
   font-size: 5.0rem;
   font-family: Ubuntu, sans-serif;
 }
 
-#article {
+.article {
   width: 70%;
   height: 100%;
-  margin: 5rem auto;
+  margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #color-palette {
-  width: 100%;
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  width: 100%;  
 }
 
 .color {
   width: 5rem;
   height: 5rem;
   border: 1px solid black;
+  margin: 1rem;
 }
-
