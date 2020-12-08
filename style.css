@@ -8,20 +8,16 @@
 
 #pixel-board {
     display: table;
-    width: 210px;
-    height: 210px;
 }
 
 .line {
-    border: black solid 1px;
-    width: 40px;
-    height: 40px;
-    display: inline-block
+    display: table-row;
 }
 
-.pixel.column {
-    display: inline-block;
-    border: black solid 1px;
+.pixel {
+    display: table-cell;
+    background-color: white;
     width: 40px;
     height: 40px;
+    border: black solid 1px;
 }
