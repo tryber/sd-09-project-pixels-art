@@ -1,9 +1,9 @@
 .color {
   border: 1px solid black;
-  width: 80px;
+  display: inline-block;
   height: 80px;
   margin: 10px auto;
-  display: inline-block;
+  width: 80px;
 }
 
 .black {
