@@ -10,22 +10,18 @@ window.onload = function() {
     
     let pixelBoard = document.querySelector('#pixel-board')
     
-    function createdPixelLine(line) {
-        for (let index = 0; index < 5; index += 1) {
+    function createdPixelLine() {
+        for (let index = 0; index < 25; index += 1) {
             let createdElement = document.createElement('div')
-            createdElement.className = 'pixel'
-            line.appendChild(createdElement)
+            if (index < 5) {
+            createdElement.classList = 'pixel line'
+            } else {
+                createdElement.classList = 'pixel column'
+            }
+            pixelBoard.appendChild(createdElement)
             }
         }
+        createdPixelLine();
         
-    function createdPixelColumn() {
-        for (let index = 0; index < 5; index += 1) {
-            let line = document.createElement('div')
-            line.className = 'line'
-            pixelBoard.appendChild(line)
-            createdPixelLine(line)
-        }
-    }
-    createdPixelColumn();
 }
     
