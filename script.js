@@ -30,8 +30,7 @@ function setColorPalette() {
 }
 
 function pickColor() {
-  let newSelection = event.target;
-  if (newSelection.className === 'color') {
+  if (event.target.className === 'color') {
     let selected = document.querySelector('.selected');
     selected.classList.remove('selected');
     newSelection.classList.add('selected');
@@ -47,8 +46,7 @@ function setPixelBoard() {
 }
 
 function paintPixel() {
-  let clickedPixel = event.target;
-  if (clickedPixel.className === 'pixel') {
+  if (event.target.className === 'pixel') {
     let selected = document.querySelector('.selected');
     // Reference: https://stackoverflow.com/a/25991851/14759260
     let selectedColor = window.getComputedStyle(selected).getPropertyValue('background-color');
