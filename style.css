@@ -3,16 +3,10 @@ h1 {
 }
 
 .block {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #000000;
   width: 32px;
   height: 32px;
-}
-
-/* Palette */
-#color-palette {
-  text-align: center;
-}
-.color {
-  border: 1px solid #000000;
   display: inline-block;
 }
 
@@ -21,3 +15,14 @@ h1 {
 .pink { background-color: rgba(242,49,127,1); }
 .purple { background-color: rgba(92,79,116,1); }
 .black { background-color: rgba(0,0,0,1); }
+
+/* Palette */
+#color-palette {
+  text-align: center;
+}
+
+/* Pixel Board */
+#pixel-board {
+  text-align: center;
+  margin-top: 28px;
+}
