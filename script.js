@@ -1,1 +1,2 @@
-console.log ('testando')
+const teste = 'testando';
+teste += ' o projeto';
