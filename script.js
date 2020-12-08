@@ -6,7 +6,7 @@
         chngClr[index].classList.remove('selected');
       } else {
         paletteRed.classList.add('selected');
-        }
+      }
     }
   }
   const paletteBlue = document.querySelector('.blue');
