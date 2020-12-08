@@ -1,0 +1,33 @@
+#color-palette{
+
+}
+
+#title{
+    text-align: center;
+
+}
+
+.color{
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.black {
+    background-color: black;
+}
+
+.red{
+    background-color:red;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
