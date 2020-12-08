@@ -1,4 +1,4 @@
-// Step 2
+// Step 2 & 3
 function setPalletColors() {
   const color1 = document.querySelector('.color')
   const color2 = color1.nextElementSibling
