@@ -21,3 +21,15 @@
 .orange-box {
   background-color: rgb(253, 167, 6);
 }
+
+#pixel-board {
+  width: 220px;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 1px;
+  width: 40px;
+}
