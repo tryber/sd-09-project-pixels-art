@@ -5,6 +5,10 @@
   width: 60px;
 }
 
+.container {
+padding-left: 550px;
+}
+
 .first-color {
   background-color: black;
 }
@@ -14,15 +18,21 @@
 }
 
 .page-title {
-  font-style: italic;
   color: blueviolet;
+  font-style: italic;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
-  width: 40px;
   height: 40px;
+  width: 40px;
+}
+
+.pixels-box {
+  background-color: rgb(253, 200, 200);
+  margin-left: 25px;
+  width: 210px;
 }
 
 .second-color {
