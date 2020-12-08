@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+.pixel {
+    background-color: white;
+}
+
 #black {
     background-color: black;
     width: 40px;
