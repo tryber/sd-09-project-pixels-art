@@ -1,21 +1,33 @@
 .color {
   border: 1px solid black;
   display: inline-block;
-  padding: 30px;
+  padding: 24px;
 }
 
 #black {
   background-color: black;
 }
 
-#lightBlue {
+#blue {
   background-color: lightblue;
 }
 
-#red {
-    background-color: red;
+#pink {
+  background-color: lightpink;
 }
 
-#lightGreen {
-    background-color: lightgreen;
+#green {
+  background-color: lightgreen;
+}
+
+.pixel-line {
+  display: table-row;
+}
+
+.pixel {
+  display: table-cell;
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
