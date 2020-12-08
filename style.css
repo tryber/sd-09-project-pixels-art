@@ -25,3 +25,11 @@ html {
 .yellow {
   background-color: yellow;
 }
+
+.pixel {
+  border: solid;
+  border-width: 1px;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+}
