@@ -1,5 +1,5 @@
 #pixel-board{
-
+  margin: 0;
 }
 
 #color-palette{
@@ -7,42 +7,42 @@
 }
 
 #title{
-    text-align: center;
+  text-align: center;
 
 }
 
 .color{
-    display: inline-block;
-    border: 1px solid black;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
+  border: 1px solid black;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
 }
 
 .line{
-    height: 25px;
+  margin: 0;
 }
 
 .pixel{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .red{
-    background-color:red;
+  background-color:red;
 }
 
 .green{
-    background-color: green;
+  background-color: green;
 }
 
 .blue{
-    background-color: blue;
+  background-color: blue;
 }
