@@ -5,30 +5,32 @@
 
 .pixel {
     background-color: white;
-    height: 40px;
     width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
 #black {
     background-color: black;
-    height: 40px;
     width: 40px;
+    height: 40px;
 }
 
 #red {
     background-color: red;
-    height: 40px;
     width: 40px;
+    height: 40px;
 }
 
 #green {
     background-color: green;
-    height: 40px;
     width: 40px;
+    height: 40px;
 }
 
 #blue {
     background-color: blue;
-    height: 40px;
     width: 40px;
+    height: 40px;
 }
