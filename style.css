@@ -1,7 +1,9 @@
+* {
+  margin: 0px;
+}
 body {
-  margin: auto;
   text-align: center;
-  align-items: center;
+  
 }
 
 #color-palette {
@@ -31,10 +33,10 @@ body {
   background-color: blue;
 }
 
-ul {
-  list-style-type: none;
+#pixel-board {
   width: 250px;
   display: inline-block;
+  line-height: 0px;
 }
 
 .pixel {
@@ -42,4 +44,6 @@ ul {
   width: 40px;
   border: 1px solid black;
   display: inline-block;
+  background-color: white;
+  margin: 0;
 }
