@@ -1,5 +1,18 @@
 let baseDoQuadro = 5;
 
+function clearBoard(){
+  let allPixels = document.querySelectorAll('.pixel');
+  for (let item of allPixels) {
+    item.style.backgroundColor = 'white';
+  }
+}
+
+let clearButton = document.querySelector('#clear-board')
+clearButton.addEventListener('click', function(target){
+  clearBoard(target);
+});
+
+
 for (let idx = 0; idx < baseDoQuadro; idx += 1) {
   const newLine = document.createElement('div');
   newLine.className = 'linha';
@@ -20,3 +33,4 @@ for (let idx = 0; idx < minhasLinhas.length; idx += 1) {
     minhasLinhas[idx].appendChild(newPixel);
   }
 }
+
