@@ -6,10 +6,12 @@ window.onload = function () {
     pixelBoard.addEventListener('click', changePixelColor);
     let clearButton = document.getElementById('clear-board');
     clearButton.addEventListener('click', clearPixelBoard);
+    let boardCreatorButton = document.getElementById('generate-board');
+    boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
 
     function setColorToPaint (evt) {
         let colorSelectedElementId = evt.target.id;
-        chageClassSelectedElement(colorSelectedElementId);
+        changeClassSelectedElement(colorSelectedElementId);
         currentColorSelected = colorSelectedElementId;       
     }
 
@@ -27,7 +29,13 @@ window.onload = function () {
         }
     }
 
-    function chageClassSelectedElement (elementId) {
+    function createCustomPixelBoarder () {
+        let currentPixelBoard = document.getElementById('pixel-board');
+        let pixelBoardLength = currentPixelBoard.length;
+        console.log(pixelBoardLength);
+    }
+
+    function changeClassSelectedElement (elementId) {
         let element = document.getElementById(elementId);
         element.classList.add('selected');
         removePreviousSelectedElementClass(currentColorSelected);
