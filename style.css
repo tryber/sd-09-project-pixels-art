@@ -6,12 +6,12 @@
   margin: 3px;
 }
 
-#color-palette {
+.PaletaDeCores {
   display: flex;
   justify-content: center;
 }
 
-#title {
+.title {
   text-align: center;
   margin-top: 15%;
 }
