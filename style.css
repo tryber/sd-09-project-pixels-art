@@ -8,3 +8,19 @@ body {
   height: 50px;
   display: inline-block;
 }
+
+.color.black {
+  background-color: black;
+}
+
+.color.two {
+  background-color: blue;
+}
+
+.color.three {
+  background-color: red;
+}
+
+.color.four {
+  background-color: green;
+}

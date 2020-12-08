@@ -28,25 +28,26 @@ A paleta de cores não deve conter cores repetidas.
 As seguintes verificações serão feitas:
 As demais cores podem ser escolhidas livremente.
 */
+document.body.appendChild(document.createElement('section'));
 
 let divCollorPalette = document.createElement('div');
 divCollorPalette.id = 'color-palette';
-document.querySelector('h1').appendChild(divCollorPalette);
+document.querySelector('section').appendChild(divCollorPalette);
 
 function createPalette() {
 
   let createDivPalette = document.createElement('div');
   createDivPalette.className = 'color';
-  let positioToAppend = document.querySelector('#color-palette')
-  let created = positioToAppend.appendChild(createDivPalette);
+  let positionToAppend = document.querySelector('#color-palette')
+  let created = positionToAppend.appendChild(createDivPalette);
   return created
 
 }
 
-createPalette().style.background = 'black';
-createPalette().style.background = 'blue';
-createPalette().style.background = 'green';
-createPalette().style.background = 'yellow';
+createPalette().className = 'color' + ' ' + 'black';
+createPalette().className = 'color' + ' ' + 'two';
+createPalette().className = 'color' + ' ' + 'three';
+createPalette().className = 'color' + ' ' + 'four';
 
 
 /*
@@ -65,10 +66,15 @@ let linePixels = 5;
 let columnPixels = 5;
 let pixelBoard = document.createElement('div');
 pixelBoard.id = 'pixel-board';
-let pixel = document.createElement('div');
-pixel.className = 'pixel';
+document.querySelector()
 
 
+
+for (let index = 0; index < linePixels - 1; index++) {
+  let pixel = document.createElement('div');
+  pixel.className = 'pixel';
+
+}
 
 
 /*
