@@ -10,17 +10,15 @@ window.onload = function() {
         div.id = `${i}x${j}`
         div.className = 'pixel';
         div_matriz.appendChild(div);
+        div.style.backgroundColor = 'white';
       }
     }
   }
   createDivsRowsColumns(entrada)
   console.log(div_colorPalette);
   console.log(div_matriz);
-
-
-
 }
 
-function listener() {
-
-}
+// function listener(object) {
+//   object.;
+// }
