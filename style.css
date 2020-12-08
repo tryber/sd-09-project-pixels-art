@@ -4,6 +4,7 @@
   display: inline-block;
   height: 40px;
   width: 40px;
+  margin-right: -4px;
 }
 .pixel {
   background-color: white;
@@ -22,5 +23,6 @@
 }
 
 #pixel-board {
-  width: 250px;
+  width: 220px;
+  line-height: 0;
 }
