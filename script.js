@@ -1,11 +1,11 @@
 function makePixelDiv() {
-  let div = document.createElement('div');
+  const div = document.createElement('div');
   div.className = 'pixel';
   return div;
 }
 
 function makePixelRow(numOfDivs) {
-  let row = document.createElement('div');
+  const row = document.createElement('div');
   row.className = 'pixel-row';
   for (let i = 0; i < numOfDivs; i += 1) {
     div = makePixelDiv();
@@ -15,7 +15,7 @@ function makePixelRow(numOfDivs) {
 }
 
 function makePixelBoard(numOfRows, numOfColumns) {
-  let board = document.querySelector('#pixel-board');
+  const board = document.querySelector('#pixel-board');
   for (let i = 0; i < numOfRows; i += 1) {
     row = makePixelRow(numOfColumns);
     board.appendChild(row);
@@ -30,8 +30,9 @@ function setColorPalette() {
 }
 
 function pickColor() {
-  if (event.target.className === 'color') {
-    let selected = document.querySelector('.selected');
+  const newSelection = event.target;
+  if (newSelection.className === 'color') {
+    const selected = document.querySelector('.selected');
     selected.classList.remove('selected');
     newSelection.classList.add('selected');
     console.log(event.target.style.backgroundColor)
@@ -47,9 +48,9 @@ function setPixelBoard() {
 
 function paintPixel() {
   if (event.target.className === 'pixel') {
-    let selected = document.querySelector('.selected');
+    const selected = document.querySelector('.selected');
     // Reference: https://stackoverflow.com/a/25991851/14759260
-    let selectedColor = window.getComputedStyle(selected).getPropertyValue('background-color');
+    const selectedColor = window.getComputedStyle(selected).getPropertyValue('background-color');
     event.target.style.backgroundColor = selectedColor;
   }
 }
