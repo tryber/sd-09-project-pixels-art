@@ -65,3 +65,30 @@ function changePixelColor() {
 }
 
 changePixelColor()
+
+// Step 9
+function resetColors(pixelArray) {
+  for (let pixel of pixelArray) {
+    pixel.style.background = 'white'
+  }
+}
+
+function setResetButton() {
+  let myButton = document.createElement('button')
+  myButton.id = 'clear-board'
+  myButton.innerText = 'Limpar'
+  document.body.appendChild(myButton)
+  document.body.replaceChild(myButton, document.body.childNodes[4])
+}
+
+setResetButton()
+
+function resetButtonEvent() {
+  const myButton = document.querySelector('button')
+  const myPixelArray = document.querySelectorAll('.pixel')
+  myButton.addEventListener('click', () => {
+    resetColors(myPixelArray)
+  })
+}
+
+resetButtonEvent()
