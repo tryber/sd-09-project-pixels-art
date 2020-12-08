@@ -1,3 +1,14 @@
-.title {
+#title {
   font-style: italic;
+  color: blueviolet;
+}
+.color {
+  display: inline-block;
+  border: 1px solid black;
+}
+#first-color {
+  background-color: black;
+}
+.pixel {
+  background-color: white;
 }
