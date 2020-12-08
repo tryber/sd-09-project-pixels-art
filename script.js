@@ -56,3 +56,7 @@ function createBoard(width = 5) {
   }
 }
 createBoard(5);
+
+colorPalette.addEventListener('click', function(event) {
+  console.log(event.target.style.backgroundColor);
+});
