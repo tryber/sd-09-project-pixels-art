@@ -17,7 +17,8 @@ window.onload = function() {
     function adicionaEventos(){
         //let color = document.querySelectorAll('.color');
         let divsPixels = document.querySelectorAll('.pixel');
-    
+        let elementoBlack = document.querySelector('#black');
+        elementoBlack.className += ' selected'
         for (let index = 0; index < divsPixels.length; index += 1){
             divsPixels[index].addEventListener('click', function(){
                 divsPixels[index].className += ' selected'

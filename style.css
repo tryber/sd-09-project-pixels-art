@@ -1,37 +1,37 @@
 #black{
     background-color: black;
+    border: 1px solid black;
     color: black;
     display: inline-block;
     height: 65px;
     width: 65px;
-    border: 1px solid black;
 }
 
 #red{
     background-color: red;
+    border: 1px solid black;
     color: red;
     display: inline-block;
     height: 65px;
     width: 65px;
-    border: 1px solid black;
 }
 
 #blue{
     background-color: blue;
+    border: 1px solid black;
     color: blue;
     display: inline-block;
     height: 65px;
     width: 65px;
-    border: 1px solid black;
 }
 
 #green{
     background-color: green;
+    border: 1px solid black;
     color: green;
     display: inline-block;
     height: 65px;
     width: 65px;
-    border: 1px solid black;
 }
 
 #pixel-board{
@@ -40,7 +40,6 @@
     border: 1px solid black;
     padding: 5px;
     display: inline-block;
-    border: 1px solid black;
 }
 
 .pixel{
