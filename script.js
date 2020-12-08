@@ -4,7 +4,7 @@ function inicioPreto(){
       event.target.style.backgroundColor = "black";
     });
   }
-  inicioPreto();
+  window.onload = inicioPreto();
 
   function selecionaCor() {
     let paleta = document.getElementById('color-palette');
@@ -31,7 +31,7 @@ function inicioPreto(){
     let pixels = document.querySelectorAll('.pixel');
   
     for (let index = 0; index < pixels.length; index += 1) {
-      let pixelItem = pixel[index];
+      let pixelItem = pixels[index];
       pixelItem.addEventListener('click', function (event) {
         event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
       })
@@ -46,26 +46,26 @@ function limparQuadro() {
         totalPixel[i].style.backgroundColor = "white";
   }
 }
-let limpa = document.querySelector("#limpaTudo");
+let limpa = document.querySelector("#clear-board");
 limpa.addEventListener("click", limparQuadro);
 
 function botaPreto(color){
     let addPreto = document.querySelectorAll('.color')[0];
     addPreto.style.backgroundColor = color;
   }
-  botaPreto(preto);
+  botaPreto("preto");
   function botaAzul(color){
     let addAzul = document.querySelectorAll('.color')[1];
     addAzul.style.backgroundColor = color;
   }
-  botaAzul(azul);
+  botaAzul("azul");
   function botaVerde(color){
     let addVerde = document.querySelectorAll('.color')[2];
     addVerde.style.backgroundColor = color;
   }
-  botaVerde(verde);
+  botaVerde("verde");
   function botaVermelho(color){
     let addVermelho = document.querySelectorAll('.color')[3];
     addVermelho.style.backgroundColor = color;
   }
-  botaVermelho(vermelho);
+  botaVermelho("vermelho");
