@@ -1,0 +1,11 @@
+#table{ 
+  display: table; 
+}
+.tr{ 
+  display: table-row; 
+  border: 1px solid black;
+}
+.td{ 
+  display: table-cell; 
+  border: 1px solid black;
+}
