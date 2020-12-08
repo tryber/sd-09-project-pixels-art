@@ -4,11 +4,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-bottom: 40px;
 }
 
 div.color {
-   width: 100px;
-   height: 100px;
+   width: 25px;
+   height: 25px;
    border: 1px solid black;
 }
 
@@ -29,3 +30,24 @@ div.color {
   background-color: yellow;
 }
 
+/* style of challenge 4 */
+/* style of challenge 5 */
+
+div.pixel-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+div.row-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
