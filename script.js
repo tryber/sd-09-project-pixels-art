@@ -1,6 +1,6 @@
 window.onload = function () {
     let currentColorSelected = 'black';
-    changeClassSelectedElement(currentColorSelected);
+    //changeClassSelectedElement(currentColorSelected);
     let colorPalette = document.getElementById('color-palette');
     colorPalette.addEventListener('click', setColorToPaint);
     let pixelBoard = document.getElementById('pixel-board');
