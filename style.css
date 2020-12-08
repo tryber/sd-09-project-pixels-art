@@ -1,1 +1,60 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.color-1 {
+  background-color: black;
+  margin-left: 33px;
+}
+
+.color-2 {
+  background-color: #ff7c24;
+}
+
+.color-3 {
+  background-color: #60f252;
+}
+
+.color-4 {
+  background-color: #8b5b3b;
+}
+
+.section-second {
+  margin-left: 36px;
+  margin-top: 10px;
+  max-width: 220px;
+}
+
+.section-second div {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: -3px;
+  width: 40px;
+}
 
