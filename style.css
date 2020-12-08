@@ -30,19 +30,14 @@ body {
   background-color: green;
 }
 
-#pixel-board {
-  height: 250px;
-  width: 250px;
-}
-
 .board-line {
-    height: 50px;
+    height: 42px;
 }
 
 .pixel {
   border: 1px solid black;
   display: inline-block;
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   margin: 0px;
 }

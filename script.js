@@ -1,7 +1,6 @@
 window.onload = function() {
     let pixelsColumns = 5;
     let boardLines = document.querySelectorAll('.board-line');
-    console.log(boardLines.length);
 
     function fillPixelBoard(boardLines) {
         for (let index = 0; index < boardLines.length; index += 1) {
@@ -23,7 +22,6 @@ window.onload = function() {
         return pixel;
     }
 
-    // console.log(pixelBoard);
 
     fillPixelBoard(boardLines);
 }
