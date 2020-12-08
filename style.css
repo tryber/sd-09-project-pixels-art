@@ -1,44 +1,38 @@
 
-.color{
-  /* Requisitos obrigatorios*/
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.color {
   display: inline-block;
   border: 1px solid black;
-  /*não obrigt--------------------------------*/
   width: 5px;
   padding: 25px;
 }
 
-.black{
-    background-color: black;
+.green {
+  background-color: green;
 }
 
-.blue{
-    background-color: blue;
+.pixel {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: rgb(255,255,255);
+  width: 40px;
+  height: 40px;
+  padding: 20px;   
 }
 
-.green{
-    background-color: green;
-}
-
-.red{
-    background-color: red;
-}
-
-.pixel{
-    /* Requisitos obrigatorios*/
-    display: inline-block;
-    border: 1px solid black;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    /*não obrigt--------------------------------*/
-   
-    padding: 20px;   
-  }
-
-.pixels-board{
-  width:200px;
+.pixel-board {
+  width: 200px;
   height: 200px;
   background-color: orange;
-  
+}
+
+.red {
+  background-color: red;
 }
