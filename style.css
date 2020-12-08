@@ -27,12 +27,12 @@
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
+  height: 40px;
   margin: 0;
-  width: 100px;
-  background-color: white;
+  width: 40px;
 }
 
 /* ID styles */
@@ -45,9 +45,9 @@
 
 #pixel-board {
   border: 1px solid black;
-  height: 550px;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
   padding: 0;
-  width: 550px;
+  width: 230px;
 }
