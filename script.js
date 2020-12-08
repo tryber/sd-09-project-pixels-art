@@ -24,3 +24,8 @@ function createPixelBoard() {
 }
 
 createPixelBoard();
+
+window.onload = function() {
+  let colorSelected = document.querySelector('#color-palette .selected').classList[2];
+  console.log(colorSelected);
+}

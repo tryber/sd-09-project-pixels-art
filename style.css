@@ -1,4 +1,4 @@
-body, div {
+body , div {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,8 +12,15 @@ h1 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 32px;
-  width: 32px;
+}
+
+.block:nth-child(even) {
+  border-left: 0;
+  border-right: 0;
+}
+
+.line-pixel:not(:last-child) .block {
+  border-bottom: 0;
 }
 
 /* Colors */
@@ -37,6 +44,11 @@ h1 {
 /* Palette */
 #color-palette {
   text-align: center;
+}
+
+.color {
+  height: 32px;
+  width: 32px;
 }
 
 
