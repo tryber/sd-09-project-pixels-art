@@ -39,7 +39,7 @@ function createPalette() {
 
 }
 
-createPalette().style.background = 'red';
+createPalette().style.background = 'black';
 createPalette().style.background = 'blue';
 createPalette().style.background = 'green';
 createPalette().style.background = 'yellow';
