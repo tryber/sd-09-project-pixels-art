@@ -1,4 +1,21 @@
 window.onload = function () {
+  function createColorPalette() {
+    const colorPalette = document.querySelector('#color-palette');
+    const backgroundColors = ['black', 'red', 'green', 'blue'];
+    
+    for(let index = 0; index < 4; index += 1){
+      const color = document.createElement('div');
+      color.className = 'color';
+      if (index === 0) {
+        color.classList.add('selected');
+      }
+      color.style.backgroundColor = backgroundColors[index]
+      colorPalette.appendChild(color);
+    }
+  }
+
+  createColorPalette();
+
   function createPixelBoard() {
     const pixelBoardLines = document.querySelectorAll('.pixel-board-line');
 
@@ -19,7 +36,7 @@ window.onload = function () {
 
     colorsPalette.addEventListener('click', function (event) {
       colors.forEach(function (color) {
-        if (event.target.id != 'color-palette') {
+        if (event.target.id !== 'color-palette') {
           color.classList.remove('selected');
           event.target.classList.add('selected');
         }
