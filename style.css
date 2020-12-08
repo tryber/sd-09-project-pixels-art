@@ -30,10 +30,6 @@
   width: 40px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .no-margin {
   display: flex;
   height: 40px;
