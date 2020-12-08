@@ -42,11 +42,12 @@
 }
 
 #pixel-board {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
   padding: 0;
   width: 210px;
-  display: flex;
-  flex-wrap: wrap;
+
 }
