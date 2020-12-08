@@ -1,5 +1,5 @@
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .blue {
@@ -12,22 +12,22 @@ body {
 
 .color-palette {
   background-color: white;
-  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
   height: 52px;
   min-width: 600px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
   padding: 10px;
+  text-align: center;
 }
 
 .color {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
   display: inline-block;
   height: 50px;
   width: 50px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
 }
 
 .green {
@@ -43,8 +43,8 @@ h1 {
 }
 
 .title {
-  text-align: center;
   background-color: lawngreen;
+  text-align: center;
 }
 
 .yellow {
