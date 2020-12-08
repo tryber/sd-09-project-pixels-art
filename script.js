@@ -27,5 +27,16 @@ window.onload = function() {
             }
         }
         createdPixelColumn();
+
+    const paletteColor = document.querySelector('#color-palette')
+    
+    function clickPaletteColor() {
+        paletteColor.addEventListener('click', function(event) {
+            event.target.className = 'color selected'
+            let change = document.querySelector('.selected')
+            change.className = 'color'
+        })
+    }
+    clickPaletteColor()
 }
     
