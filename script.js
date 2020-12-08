@@ -6,3 +6,16 @@ function callback(){
 }
 window.addEventListener('load', callback);
 
+// Requisito 7
+function exchange(event){
+  colors.forEach(element => {
+    element.classList.remove('selected');
+  })
+  event.currentTarget.classList.add('selected');
+}
+
+let colors = document.querySelectorAll('.color');
+colors.forEach(element => {
+  element.addEventListener('click', exchange);
+});
+
