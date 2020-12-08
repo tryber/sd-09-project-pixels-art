@@ -5,6 +5,10 @@
   display: inline-block;
 }
 
+.selected {
+  
+}
+
 #color-palette {
   
 }
@@ -16,6 +20,7 @@
 .black {
   background-color:black;
 }
+
 .pink {
   background-color: rgb(255 , 32 , 110);
 }
