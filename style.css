@@ -56,4 +56,5 @@ header h1{
     width: 40px;
     height: 40px;
     border: 1px solid black;
+    line-height: 0;
 }
