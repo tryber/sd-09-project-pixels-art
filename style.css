@@ -1,20 +1,16 @@
-* {
-  margin: 0px;
-}
 body {
   text-align: center;
-  
 }
 
 #color-palette {
-    display: block;
+  display: block;
 }
 
 .color {
-  display: inline-block;
   border: 1px solid black;
-  width: 4rem;
+  display: inline-block;
   height: 4rem;
+  width: 4rem;
 }
 
 #black {
@@ -22,11 +18,11 @@ body {
 }
 
 #red {
-    background-color: red;
+  background-color: red;
 }
 
 #green {
-    background-color: green;
+  background-color: green;
 }
 
 #blue {
@@ -34,16 +30,16 @@ body {
 }
 
 #pixel-board {
-  width: 250px;
   display: inline-block;
-  line-height: 0px;
+  line-height: 0;
+  width: 250px;
 }
 
 .pixel {
-  height: 40px;
-  width: 40px;
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
-  background-color: white;
+  height: 40px;
   margin: 0;
+  width: 40px;
 }
