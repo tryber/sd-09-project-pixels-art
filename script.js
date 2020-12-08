@@ -52,3 +52,16 @@ function selectColor() {
 }
 
 selectColor()
+
+// Step 8
+function changePixelColor() {
+  const myPixelArray = document.querySelectorAll('.pixel')
+  for (let pixel of myPixelArray) {
+    pixel.addEventListener('click', (event) => {
+      let colorSelected = document.getElementsByClassName('color selected')[0].style.background
+      event.target.style.background = colorSelected
+    })
+  }
+}
+
+changePixelColor()
