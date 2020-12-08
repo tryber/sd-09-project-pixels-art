@@ -1,37 +1,60 @@
 #color-pallete {
-    height:auto;
-    text-align:center;
+  height: auto;
+  text-align: center;
+}
+
+.boardHolder {
+  box-sizing: border-box;
+  padding-top: 50px;
+  text-align: center;
+  margin:auto;
 }
 
 .color {
-    height: 50px;
-    width: 120px; 
-    border-radius:30px;
-    border: 1px solid black;
-    display: inline-block;
-    line-height: 50px;
-    color:white;
-    font-weight: 600;
-    text-shadow: 1px 1px black;
+  height: 50px;
+  width: 120px;
+  border-radius: 30px;
+  border: 1px solid black;
+  display: inline-block;
+  line-height: 50px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px black;
 }
 
-#cor0{
-    background-color: black;
+#cor0 {
+  background-color: black;
 }
 
-#cor1{
-    background-color: #c5c3c6;
+#cor1 {
+  background-color: #c5c3c6;
 }
 
-#cor2{
-    background-color: #46494c;
+#cor2 {
+  background-color: #46494c;
 }
 
-#cor3{
-    background-color: #1985a1;
+#cor3 {
+  background-color: #1985a1;
 }
-
+#cor4 {
+  background-color: #f25f5c;
+}
 
 h1 {
-    text-align:center;
+  text-align: center;
+}
+
+#pixel-board {
+  text-align: center;
+  display: inline-block;
+  margin:auto;
+  border: 1px solid black;
+}
+
+.pixel {
+  display:inline-block;
+  height:38px;
+  width: 38px;
+  border: 1px solid black;
 }
