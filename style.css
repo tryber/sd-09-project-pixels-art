@@ -16,10 +16,10 @@ body {
   border-style: solid;
   border-width: 1px;
   height: 52px;
+  margin-bottom: 10px;
   min-width: 600px;
   padding: 10px;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .color {
@@ -49,21 +49,21 @@ h1 {
   border-style: solid;
   border-width: 1px;
   display: inline-block;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-board {
   border-style: solid;
   border-width: 1px;
   border-color: block;
+  margin: auto;
   padding: 10px;
   text-align: center;
-  margin: auto;
 }
 
 .pixel-line {
-  height: 25px;
+  height: 40px;
 }
 
 .red {
