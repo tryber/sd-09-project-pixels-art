@@ -28,10 +28,7 @@ div #color-palette {
 div .pixel {
   background-color: white;
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
   width: 40px;
-}
-
-.pixel-line {
-  display: inline-block;
 }
