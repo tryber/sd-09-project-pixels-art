@@ -10,3 +10,25 @@ function fillColorPalette() {
   }
 }
 fillColorPalette();
+
+const colorPalette = document.querySelector('#color-palette');
+
+function selectedAssigns() {
+  colorPalette.addEventListener('click', function (event) {
+    let selected = document.querySelector('.selected');
+    selected.className = 'color';
+    event.target.className = 'color selected';
+  })
+
+}
+selectedAssigns();
+
+function paintDiv() {
+  const selectedDiv = document.querySelector('.selected');
+  let color = selectedDiv.style.backgroundColor;
+  const pixel = document.querySelector('.linhaColunaContainer')
+  pixel.addEventListener('click', function(event) {
+    event.target.style.background = color;
+  })
+}
+paintDiv();

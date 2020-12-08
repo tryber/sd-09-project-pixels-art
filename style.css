@@ -9,6 +9,7 @@
 .PaletaDeCores {
   display: flex;
   justify-content: center;
+  display: table;
 }
 
 .title {
