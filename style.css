@@ -2,3 +2,40 @@
     margin: 0;
     padding: 0;
 }
+
+h1{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+#color-palette{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.color{
+    padding: 15px;
+    display: inline-block;
+    border: 1px solid #000000;
+    margin: 3px;
+}
+
+.color1{
+    background-color: #332c50;
+}
+
+.color2{
+    background-color: #46878f;
+}
+
+.color3{
+    background-color: #94e344;
+}
+
+.color4{
+    background-color: #e2f3e4;
+}
