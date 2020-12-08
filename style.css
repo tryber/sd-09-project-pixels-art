@@ -1,5 +1,7 @@
 .color {
     border: 1px solid black;
+    width: 40px;
+    height: 40px;
     display: inline-block;
 }
 
@@ -13,24 +15,16 @@
 
 #black {
     background-color: black;
-    width: 40px;
-    height: 40px;
 }
 
 #red {
     background-color: red;
-    width: 40px;
-    height: 40px;
 }
 
 #green {
     background-color: green;
-    width: 40px;
-    height: 40px;
 }
 
 #blue {
     background-color: blue;
-    width: 40px;
-    height: 40px;
 }
