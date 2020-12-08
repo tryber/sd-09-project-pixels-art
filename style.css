@@ -8,7 +8,7 @@
   top: 0;
   background-color: rgb(10, 126, 81);
   color: white;
-  /*text-align: center;*/
+  text-align: center;
   font-family: fantasy;
   margin-bottom: 20px;
   padding: 20px;
@@ -16,40 +16,22 @@
   width: 100%;
 }
 
-#section-color {
-  display: inline;
-  margin: 40px;
-  /*text-align: center;*/
-}
-
 #color-palette {
-  list-style-type: none;
-}
-
-#color {
-  display: inline-block;
-  margin-left: 5px;
-  border: solid 1px black;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
-#section-pixel {
-  margin-top: 5px;
-  margin-left: 5px;
-}
-
-#pixel-board {
-  margin: 0;
-  list-style-type: none;
-  /*text-align: center;*/
-}
-
-#pixel {
-  margin: 0;
-  padding: 25px;
+#color {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #c3c3c3;
   display: inline-block;
-  border: solid 1px black;
-  height: 40px;
-  width: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+#color-palette2 {
+  display: flex;
+  justify-content: center;
 }
