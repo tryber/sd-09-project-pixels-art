@@ -26,24 +26,20 @@ h1 {
   margin: 3px;
 }
 
-.color0 {
+.color1 {
   background-color: black;
 }
 
-.color1 {
-  background-color: #332c50;
-}
-
 .color2 {
-  background-color: #46878f;
+  background-color: blue;
 }
 
 .color3 {
-  background-color: #94e344;
+  background-color: green;
 }
 
 .color4 {
-  background-color: #e2f3e4;
+  background-color: red;
 }
 
 #pixel-board{
