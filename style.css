@@ -1,14 +1,5 @@
-* {
-  margin: 20px;
-}
-
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #eee;
-}
-
-button {
-  margin: 20px;
+  text-align: center;
 }
 
 .color {

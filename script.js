@@ -23,6 +23,10 @@ Cada elemento da paleta de cores deverá ter uma borda preta, sólida e com 1 pi
 A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores";
 
 A paleta de cores não deve conter cores repetidas.
+
+3 - A cor preta deve ser a primeira na paleta de cores.
+As seguintes verificações serão feitas:
+As demais cores podem ser escolhidas livremente.
 */
 
 let divCollorPalette = document.createElement('div');
@@ -45,13 +49,7 @@ createPalette().style.background = 'green';
 createPalette().style.background = 'yellow';
 
 
-
-
 /*
-
-3 - A cor preta deve ser a primeira na paleta de cores.
-As seguintes verificações serão feitas:
-As demais cores podem ser escolhidas livremente.
 4 - A página deve possuir um quadro de pixels, com 25 pixels.
 As seguintes verificações serão feitas:
 O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
@@ -61,6 +59,19 @@ O quadro de "pixels" deve possuir o id denominado pixel-board, ao passo que cada
 A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
 
 O quadro de "pixels" deve aparecer abaixo da paleta de cores.
+*/
+
+let linePixels = 5;
+let columnPixels = 5;
+let pixelBoard = document.createElement('div');
+pixelBoard.id = 'pixel-board';
+let pixel = document.createElement('div');
+pixel.className = 'pixel';
+
+
+
+
+/*
 
 5 - Cada elemento do quadro de pixels deve possuir 40 pixels de largura e 40 pixels de altura e ser delimitado por uma borda preta de 1 pixel.
 As seguintes verificações serão feitas:
