@@ -49,23 +49,23 @@ function limparQuadro() {
 let limpa = document.querySelector("#clear-board");
 limpa.addEventListener("click", limparQuadro);
 
-function botaPreto(color){
+function botaPreto(){
     let addPreto = document.querySelectorAll('.color')[0];
-    addPreto.style.backgroundColor = color;
+    addPreto.style.backgroundColor = "black";
   }
-  botaPreto('preto');
+  botaPreto();
   function botaAzul(color){
     let addAzul = document.querySelectorAll('.color')[1];
-    addAzul.style.backgroundColor = color;
+    addAzul.style.backgroundColor = "blue";
   }
-  botaAzul('azul');
-  function botaVerde(color){
+  botaAzul();
+  function botaVerde(){
     let addVerde = document.querySelectorAll('.color')[2];
-    addVerde.style.backgroundColor = color;
+    addVerde.style.backgroundColor = "green";
   }
-  botaVerde('verde');
-  function botaVermelho(color){
+  botaVerde();
+  function botaVermelho(){
     let addVermelho = document.querySelectorAll('.color')[3];
-    addVermelho.style.backgroundColor = color;
+    addVermelho.style.backgroundColor = "red";
   }
-  botaVermelho('vermelho');
+  botaVermelho();
