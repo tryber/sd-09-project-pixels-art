@@ -29,3 +29,8 @@ function createMatrixPixels() {
 }
 createMatrixPixels();
 
+function selectingColorBlack() {
+  document.querySelectorAll('.color')[0].className = 'color selected';
+}
+selectingColorBlack();
+
