@@ -40,7 +40,7 @@ body {
 }
 
 .pixel {
-  background-color: white;
+  background-color: red;
   border: 1px solid black;
   display: inline-block;
   height: 40px;
