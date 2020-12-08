@@ -39,5 +39,17 @@ window.onload = function() {
         })
     }
     clickPaletteColor()
+
+    function fillColor() {
+        let pixel = document.querySelectorAll('.pixel')
+        for (let index = 0; index < pixel.length; index += 1)
+        pixel[index].addEventListener('click', function(event) {
+           let selectedClass = document.querySelector('.selected')
+           let colorSelected = selectedClass.style.backgroundColor
+
+           event.target.style.backgroundColor = colorSelected
+        })
+    }
+    fillColor();
 }
     
