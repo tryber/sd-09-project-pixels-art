@@ -1,0 +1,72 @@
+  body {
+  color: red ;
+}
+
+  #color-pallete {
+  background-color: yellowgreen;
+  color: aquamarine;
+}
+
+  header {
+  background-color: aquamarine;
+  height: 100px;
+}
+
+  #title {
+  color: blue;
+}
+
+  main {
+  background-color: papayawhip;
+  height: 500px;
+}
+
+  .color {
+  background-color: bisque;
+  border: solid 1px black;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin-top: 50px;  
+}
+
+  .black {
+  background-color: black;
+}
+
+  .purple {
+  background-color: purple;
+}
+
+  .cyan {
+  background-color: cyan;     
+}
+
+  .green {
+  background-color: green;
+}
+
+  .red {
+  background-color: red;
+
+}
+
+  #pixel-board{
+  background-color: transparent;
+  height: 230px;
+  width: 230px;
+}
+
+  .pixel{
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  display: inline-block;
+
+}
+
+  footer {
+  background-color: indianred;
+  height: 200px;
+}
