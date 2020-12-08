@@ -62,19 +62,28 @@ A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca
 O quadro de "pixels" deve aparecer abaixo da paleta de cores.
 */
 
-let linePixels = 5;
-let columnPixels = 5;
+let lineColumnPixels = 5;
 let pixelBoard = document.createElement('div');
 pixelBoard.id = 'pixel-board';
-document.querySelector()
+document.querySelector('section').appendChild(pixelBoard);
 
 
+function createLinePixel(linecolumns) {
+  let position = document.querySelector('#pixel-board');
 
-for (let index = 0; index < linePixels - 1; index++) {
-  let pixel = document.createElement('div');
-  pixel.className = 'pixel';
+
+  for (let index = 1; index <= linecolumns; index += 1) {
+    for (let index2 = 1; index2 <= linecolumns; index2 += 1) {
+      let pixel = document.createElement('div');
+      pixel.className = 'pixel' + ' ' + index + 'x' + index2;
+      position.appendChild(pixel)
+    }
+  }
 
 }
+createLinePixel(lineColumnPixels);
+
+
 
 
 /*
