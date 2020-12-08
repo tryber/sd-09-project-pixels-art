@@ -35,16 +35,18 @@
 }
 
 #pixel-board{
+    margin-top: 2%;
+    margin-left: 2%;
     border: 1px solid black;
-    width: 29%;
-    padding: 4px;
-    
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid black;
 }
 
 .pixel{
     display: inline-block;
-    height: 65px;
-    width: 65px;
+    height: 40px;
+    width: 40px;
     border: 1px solid black;
     background-color: white;
     padding: 1px;
