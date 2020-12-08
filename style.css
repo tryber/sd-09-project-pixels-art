@@ -1,12 +1,12 @@
-h1 {
-  text-align: center;
-}
 .color,
 .pixel {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
+}
+.pixel {
+  background-color: white;
 }
 #color-palette .color:nth-child(4n - 3) {
   background-color: black;
@@ -19,4 +19,8 @@ h1 {
 }
 #color-palette .color:nth-child(4n) {
   background-color: chartreuse;
+}
+
+#pixel-board {
+  width: 250px;
 }
