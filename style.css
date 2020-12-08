@@ -4,26 +4,26 @@
   padding: 24px;
 }
 
-.color#black {
+.black {
   background-color: black;
 }
 
-.color#blue {
+.blue {
   background-color: lightblue;
 }
 
-.color#pink {
-  background-color: lightpink;
-}
-
-.color#green {
+.green {
   background-color: lightgreen;
 }
 
+.pink {
+  background-color: lightpink;
+}
+
 .pixel {
-  display: table-cell;
   background-color: white;
   border: 1px solid black;
+  display: table-cell;
   height: 40px;
   width: 40px;
 }
