@@ -1,0 +1,28 @@
+#color-palette{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+.color{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+.colorBlack{
+    background-color: black;
+}
+.colorRed{
+    background-color: red;
+}
+.colorYellow{
+    background-color: yellow;
+}
+.colorPurple{
+    background-color: purple;
+}
+.pixel{
+background-color: white;
+border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
