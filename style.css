@@ -1,14 +1,14 @@
-
 .color {
-  display: inline-block;
   border: 1px solid black;
-  width: 60px;
+  display: inline-block;
   height: 60px;
+  width: 60px;
 }
 
 .first-color {
   background-color: black;
 }
+
 .fourth-color {
   background-color: darkgoldenrod;
 }
