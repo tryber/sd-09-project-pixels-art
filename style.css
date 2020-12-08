@@ -45,8 +45,12 @@ header {
     justify-content: center;
 }
 
-.pixel {
+.border-pixel{
     border: 1px solid black;
+}
+
+.pixel {
+    
 }
 
 .lines {

@@ -11,10 +11,13 @@ window.onload = teste (5, 5)
     function createPixel (){
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
-        pixel.style.width = '38px';
-        pixel.style.height = '38px';
-        pixel.style.background = 'white'
-        return pixel 
+        pixel.style.width = '40px';
+        pixel.style.height = '40px';
+        pixel.style.background = 'white';
+        let borderPixel = document.createElement('div');
+        borderPixel.className = 'border-pixel'
+        borderPixel.appendChild(pixel)
+        return borderPixel 
     }
 
     // acrescentar o número de linhas no pixelboard
@@ -24,8 +27,8 @@ window.onload = teste (5, 5)
             lines.className = 'lines';
             //acrescentar o número de colunas nas linhas 
             for(let index = 0; index < numberOfColumns; index += 1){
-                let pixel = createPixel();
-                lines.appendChild(pixel);
+                let borderPixel = createPixel();
+                lines.appendChild(borderPixel);
             };
             getPixelBoard.appendChild(lines);
         }
