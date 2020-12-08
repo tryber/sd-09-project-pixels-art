@@ -16,4 +16,11 @@ window.onload = function() {
   createDivsRowsColumns(entrada)
   console.log(div_colorPalette);
   console.log(div_matriz);
+
+
+
+}
+
+function listener() {
+
 }
