@@ -3,10 +3,15 @@
   padding: 0;
 }
 
+#title {
+  text-align: center;
+  padding-top: 20px;
+}
+
 #color-palette {
   width: 350px;
   margin-left: 420px;
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 50px;
 }
 
@@ -53,18 +58,20 @@
 
 
 
-
-#table{ 
+#pixel-board{ 
   display: table; 
-  margin-top: 100px;
+  margin-top: 90px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 .tr{ 
   display: table-row; 
   border: 1px solid black;
 }
-.td{ 
+.pixel{ 
   display: table-cell; 
   border: 1px solid black;
+  width: 80px;
+  height: 80px;
 }
