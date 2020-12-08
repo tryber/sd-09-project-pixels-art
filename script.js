@@ -34,7 +34,6 @@ function inicioPreto(){
       let pixelItem = pixels[index];
       pixelItem.addEventListener('click', function (event) {
         event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-        console.log('s');
       })
     }
   }
