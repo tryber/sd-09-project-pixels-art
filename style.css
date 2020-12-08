@@ -8,8 +8,10 @@
     
 }
 .color {
-    
-
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    display: inline-block;
 }
 
 .black {
