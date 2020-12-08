@@ -21,3 +21,20 @@
 .green {
   background-color: green;
 }
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.no-margin {
+  display: flex;
+  height: 40px;
+}
