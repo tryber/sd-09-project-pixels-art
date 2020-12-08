@@ -1,3 +1,4 @@
+/* Wildcard '*' pra restear tudo */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ h1 {
   width: 50%;
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 25px;
 }
 
 .color {
@@ -42,4 +44,20 @@ h1 {
 
 .color4 {
   background-color: #e2f3e4;
+}
+
+#pixel-board{
+    margin: auto;
+
+    width: 160px;
+    height: 160px;
+}
+
+.pixel{
+    background-color: white;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    
 }
