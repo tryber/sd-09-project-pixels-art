@@ -5,28 +5,30 @@
 
 .pixel {
     background-color: white;
+    height: 40px;
+    width: 40px;
 }
 
 #black {
     background-color: black;
-    width: 40px;
     height: 40px;
+    width: 40px;
 }
 
 #red {
     background-color: red;
-    width: 40px;
     height: 40px;
+    width: 40px;
 }
 
 #green {
     background-color: green;
-    width: 40px;
     height: 40px;
+    width: 40px;
 }
 
 #blue {
     background-color: blue;
-    width: 40px;
     height: 40px;
+    width: 40px;
 }
