@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+.block {
+  width: 32px;
+  height: 32px;
+}
+
+/* Palette */
+#color-palette {
+  text-align: center;
+}
+.color {
+  border: 1px solid #000000;
+  display: inline-block;
+}
+
+/* Colors */
+.blue { background-color: rgba(5,68,92,1); }
+.pink { background-color: rgba(242,49,127,1); }
+.purple { background-color: rgba(92,79,116,1); }
+.black { background-color: rgba(0,0,0,1); }
