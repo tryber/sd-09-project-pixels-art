@@ -29,3 +29,33 @@ function createPixelBoard(sizeBoard) {
   };
 }
 createPixelBoard(5);
+
+function changeColor () {
+  let colorPaleteAll = document.querySelector('#color-palette').children;
+  colorPaleteAll[0].className += " selected";
+  for (item of colorPaleteAll) {
+    item.addEventListener('click', function (event) {
+      for (item2 of colorPaleteAll) {
+        item2.className = 'color box';
+        }
+      event.target.className = 'color box selected';
+    });
+  }
+}
+changeColor();
+
+function paintPixel () {
+  let colorPaleteAll = document.querySelector('#color-palette').children;
+  let pixelsBoardAll = document.querySelectorAll('.pixel');
+  for (item of pixelsBoardAll){
+    item.addEventListener('click', function (event) {
+      for (item of colorPaleteAll) {
+        if (item.className === 'color box selected') {
+          aa = event.target.style.backgroundColor = item.style.backgroundColor;
+          console.log(aa);
+        };
+      };
+    });
+  };
+}
+paintPixel();
