@@ -4,7 +4,7 @@ window.onload = function() {
   let paletteColors = ['black', 'red', 'green', 'blue'];
   let pincelColor = 'black';
   let entrada = 5;
-  // div_matriz.style.width = (entrada*40);
+
   function createDivsRowsColumns(entrada) {
     for (let i = 1; i <= entrada; i += 1) {
       for (let j = 1; j <= entrada; j += 1) {
@@ -17,7 +17,7 @@ window.onload = function() {
     }
   }
   createDivsRowsColumns(entrada)
-  // console.log(div_colorPalette);
+
   let qntColors = paletteColors.length;
   function createPalettes(qntColors) {
     for (let i = 1; i <= qntColors; i += 1) {
@@ -30,30 +30,22 @@ window.onload = function() {
   }
   createPalettes(qntColors);
 
-  console.log(div_colorPalette);
-  console.log(div_matriz);
-
+  let div_black = document.querySelector('#div1');
+  div_black.className = 'color selected';
+  div_colorPalette.addEventListener('click', colorCapture);
   div_matriz.addEventListener('click', colorize);
 
   function colorize(event) {
     let targ = event.target;
     targ.style.backgroundColor = pincelColor;
-    // console.log(targ.style.backgroundColor);
   }
-
-  div_colorPalette.addEventListener('click', colorCapture);
 
   function colorCapture(event) {
     let capturedColor = event.target;
     let color = capturedColor.style.backgroundColor;
     pincelColor = color;
-    // pincelColor.style.backgroundColor = capturedColor.style.backgroundColor;
-    console.log(color);
+    let selected = document.querySelector('.selected');
+    selected.className = 'color';
+    capturedColor.className = 'color selected';
   }
-
-
 }
-
-// div.addEventListener('click', colorize(i,j));
-
-
