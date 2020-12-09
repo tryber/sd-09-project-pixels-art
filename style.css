@@ -1,0 +1,23 @@
+.box {
+  
+}
+
+.color {
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {  
+  background-color: red;
+}

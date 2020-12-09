@@ -118,15 +118,15 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 **Ou seja, dada uma paleta de cores e um quadro composto por pixels, você vai permitir que quem usa consiga pintar o que quiser no quadro!** 👩‍🎨
 
-### 1 - A página deve possuir o título "Paleta de Cores".
+### 1 - A página deve possuir o título "Paleta de Cores". :heavy_check_mark
 
 ##### As seguintes verificações serão feitas:
 
-- O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
+- O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`; :heavy_check_mark
 
-- O texto do título deve ser **exatamente** "Paleta de Cores".
+- O texto do título deve ser **exatamente** "Paleta de Cores". :heavy_check_mark
 
-### 2 - A página deve possuir uma paleta de quatro cores distintas.
+### 2 - A página deve possuir uma paleta de quatro cores distintas. :heavy_check_mark
 
 ##### As seguintes verificações serão feitas:
 
