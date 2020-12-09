@@ -1,12 +1,17 @@
 window.onload = matrix (5, 5), paintPallete(), firstColor ()
 
 function matrix (width, height){
-    
-    let numberOfLines = width;
-    let numberOfColumns = height;
+
     let getPixelBoard = document.getElementById('pixel-board');
+    let lines = document.querySelectorAll('.line')
+
+    fillPixelBoard(lines)
     
-    fillPixelBoard()
+    function fillPixelBoard(lines){
+        for (let index = 0; index < width; index += 1){
+            fillWidth(lines[index]);
+        }
+    }
 
     //cria 1 pixel
     function createPixel (){
@@ -17,20 +22,12 @@ function matrix (width, height){
         pixel.style.background = 'white';
         return pixel
     }
-    // acrescentar o número de linhas no pixelboard
-    function fillPixelBoard(){
+    function fillWidth(divLine){
 
-        for (let index = 0; index < numberOfLines; index += 1){
-            let lines = document.createElement('div');
-            lines.className = 'lines';
-            getPixelBoard.appendChild(lines);
-    
-            for(let index = 0; index < numberOfColumns; index += 1){
-            let pixel = createPixel()
-            lines.appendChild(pixel)
-            };
+        for (let index = 0; index < height; index += 1){
+            let pixel = createPixel();
+            divLine.appendChild(pixel);
         }
-
     }
 }
 
@@ -64,7 +61,7 @@ getColorsPaletteDiv.addEventListener('click', function (eventOrigin){
     if (eventOrigin.target.id !== 'color-palette'){
 
         let clickedColorClassNameString = String(eventOrigin.target.className);
-        let clickedColorClassName = eventOrigin.target.className;
+        // let clickedColorClassName = eventOrigin.target.className;
         let clickedColor = eventOrigin.target.style.backgroundColor
         let getColorsPaletteElements = document.querySelectorAll('.color');
         
@@ -84,5 +81,4 @@ getColorsPaletteDiv.addEventListener('click', function (eventOrigin){
         }
            return clickedColor
     } 
-}
-)
+})

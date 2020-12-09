@@ -46,6 +46,13 @@ header {
     justify-content: center;
 }
 
+#pixel-board-width{
+    display: inline-block;
+}
+
+#pixel-board-height{
+    display: inline-block;
+}
 
 .pixel {
     border: 1px solid black;
