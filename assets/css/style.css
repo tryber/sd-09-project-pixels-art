@@ -40,9 +40,9 @@ body {
 td {
   border: 1px solid black;
   display: table-cell;
-  height: 39px;
+  height: 40px;
   padding: 0;
-  width: 39px;
+  width: 40px;
 }
 
 .actionButton {
