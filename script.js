@@ -137,15 +137,14 @@ window.onload = function () {
   }
 
   function storeBoardSize() {
-      const boardSize = document.querySelector('#board-size');
-      if (boardSize.value === ''){
+      if (inputBoardSize.value === ''){
         return alert('Board inválido!');
-      } else if (boardSize.value < 5) {
-        boardSize.value = 5;
-      } else if (boardSize.value > 50) {
-        boardSize.value = 50;
+      } else if (inputBoardSize.value < 5) {
+        inputBoardSize.value = 5;
+      } else if (inputBoardSize.value > 50) {
+        inputBoardSize.value = 50;
       } 
-      sessionStorage.setItem('board-size', (boardSize.value * boardSize.value));
+      sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
   }
 
   function updateBoardSize(board) {
@@ -172,6 +171,8 @@ window.onload = function () {
   const buttonClearBoard = document.querySelector('#clear-board');
 
   const buttonGenerateBoard = document.querySelector('#generate-board');
+
+  const inputBoardSize = document.querySelector('#board-size');
 
   buttonClearBoard.addEventListener('click', clearBoard);
 
