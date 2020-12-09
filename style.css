@@ -1,6 +1,6 @@
 body {
   background-color: #3a506b;
-  color:white;
+  color: white;
 }
 
 .boardHolder {
@@ -16,9 +16,9 @@ body {
 }
 
 .button {
-  font-size:1.5em;
-  height:auto;
-  width:auto;
+  font-size: 1.5em;
+  height: auto;
+  width: auto;
 }
 
 .color-palette {
@@ -38,10 +38,10 @@ body {
   width: 120px;
 }
 
-.inputHolder{
-  margin:auto;
-  padding-top:50px;
-  text-align:center;
+.inputHolder {
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
 }
 
 h1 {
@@ -49,14 +49,14 @@ h1 {
 }
 
 .label {
-  font-size:1.2em;
-  height:auto;
-  width:auto;
+  font-size: 1.2em;
+  height: auto;
+  width: auto;
 }
 
-input.label{
-  text-align:center;
-  width:260px;
+input.label {
+  text-align: center;
+  width: 260px;
 }
 
 .pixel-board {
