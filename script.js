@@ -1,5 +1,6 @@
 window.onload = function () {
     let currentColorSelected = 'black';
+    colorGenerator();
     let colorPalette = document.getElementById('color-palette');
     colorPalette.addEventListener('click', setColorToPaint);
     let pixelBoard = document.getElementById('pixel-board');
@@ -10,6 +11,21 @@ window.onload = function () {
     boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
     let boardSizeInput = document.getElementById('board-size');
     boardSizeInput.addEventListener('change', numbersInputValidator);
+
+    function colorGenerator() {
+        let colorBlock = document.getElementsByClassName('color');
+        for (let index = 0; index < colorBlock.length; index += 1) {
+            let newColor = Math.floor(Math.random()*16777215).toString(16);
+            //Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
+            let colorString = '#' + newColor;
+            if(colorBlock[index].id !== 'black') {
+                colorBlock[index].style.backgroundColor = colorString;
+                colorBlock[index].id = colorString;
+            } else {
+                colorBlock[index].style.backgroundColor = currentColorSelected;
+            }
+        }
+    }
 
     function numbersInputValidator () {
         let typedNumber = boardSizeInput.value;

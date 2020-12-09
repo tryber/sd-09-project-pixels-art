@@ -15,38 +15,8 @@
 .color {
     display: inline-block;
     border: solid 1px black;
-}
-
-#black {  
     width: 40px;
     height: 40px;
-    background-color: black;
-    display: inline-block;
-    background: black;
-}
-
-#red {
-    width: 40px;
-    height: 40px;
-    background-color: red;
-    display: inline-block;
-    background: red;
-}
-
-#yellow {
-    width: 40px;
-    height: 40px;
-    background-color: yellow;
-    display: inline-block;
-    background: yellow;
-}
-
-#green {
-    width: 40px;
-    height: 40px;
-    background-color: green;
-    display: inline-block;
-    background: green;
 }
 
 #pixel-board {
