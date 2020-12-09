@@ -26,9 +26,12 @@
             <button class='label'>Confirmar</button>
         </div>
         <script src='script.js'></script>
-
         <script>
-            window.addEventListener('onload', begins());
+            document.addEventListener('DOMContentLoaded', function(){
+                setStarterColors();
+                constructBoard(5);
+                assignPixels();
+            });
         </script>
     </body>
 </html>
