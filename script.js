@@ -50,7 +50,6 @@ selectingAllColors();
 
 function fillsSquarePixel() {
   let board = document.querySelector('#pixel-board');
-  let pixelColors = document.querySelectorAll('.pixel')
 
   board.addEventListener('click', function (e) {
     let colorSelected = document.querySelector('.selected');
@@ -58,3 +57,23 @@ function fillsSquarePixel() {
   });
 }
 fillsSquarePixel();
+
+function btnClearBoard() {
+  btnClear = document.createElement('button');
+  btnClear.id = 'clear-board';
+  btnClear.innerText = 'Limpar';
+  btnClear.style.margin = '7px';
+  btnClear.style.padding = '5px';
+  let divBtnClear = document.querySelector('#button-clear');
+  divBtnClear.appendChild(btnClear);
+
+  divBtnClear.addEventListener('click', function (e) {
+    let board = document.querySelector('#pixel-board');
+    board.style.background = '';
+    let pixels = document.querySelectorAll('.pixel');
+    for(let i in pixels) {
+        pixels[i].style.backgroundColor = '';
+    }    
+  })
+}
+btnClearBoard();
