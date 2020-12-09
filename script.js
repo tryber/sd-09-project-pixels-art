@@ -1,13 +1,14 @@
 let arrayColors = [];
 
-window.addEventListener('load', function() {
-  arrayColors = (randomColor(3, 255));
-})
+window.addEventListener ('load', function() {
+  arrayColors = randomColor(3, 255);
+});
+
 function randomColor(numberOfColors, numberMaxRGB) {
   const firstColor = 'rgb(0, 0, 0)';
   arrayColors[0] = firstColor;
-  for (let index = 1; index <= numberOfColors; index += 1){
-    let createColor = {
+  for (let index = 1; index <= numberOfColors; index += 1) {
+    const createColor = {
       r: parseInt((Math.random() * numberMaxRGB), 10),
       g: parseInt((Math.random() * numberMaxRGB), 10),
       b: parseInt((Math.random() * numberMaxRGB), 10),
@@ -142,7 +143,7 @@ function minMaxBoardCreator(valueInput) {
     sizeBoard = 5;
     if (valueInput > 5) {
       sizeBoard = valueInput;
-    }
+    };
   }
   else {
     sizeBoard = 50;
