@@ -161,7 +161,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 ### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
 
 ##### As seguintes verificações serão feitas:
-
+   
 - O quadro de pixels tem altura e comprimento de 5 elementos;
 
 - 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
