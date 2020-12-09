@@ -5,7 +5,10 @@ function firstSelectedFun() {
   document.querySelector(".black").classList.add("selected");
   clickSelect();
   paintPixel();
+  buttonReset();
 }
+
+
 
 // Recupera caminho das cores e adiciona classe 'selected'
 function clickSelect() {
@@ -71,6 +74,8 @@ function clickSelect() {
   });
 }
 
+
+
 /* Adiciona o eventListener "click" em todos os pixels brancos e verifica-se ao clicar em um deles
 qual cor estava selecionada na palheta de cores, mudando assim, a cor do pixel branco para a cor selecionada
 na palheta*/
@@ -94,4 +99,15 @@ function paintPixel() {
       }
     });
   }
+}
+
+// Funcionalidades do botão: Determina caminho dos pixels brancos, adiciona evento click que restaura cor
+function buttonReset(){
+  const localWhite = document.querySelectorAll(".pixel");
+  let buttonPosition = document.querySelector("#reset-button")
+  buttonPosition.addEventListener("click", function(){
+    for (let contador = 0; contador < localWhite.length; contador += 1){
+      localWhite[contador].style.backgroundColor = "white"
+    }
+  })
 }
