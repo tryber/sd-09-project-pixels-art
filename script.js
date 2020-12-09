@@ -17,8 +17,8 @@ function generateRandomColors(numberOfColors) {
 
 function createColorPaletteElements() {
   const colors = generateRandomColors(3);
-  let colorPallete = document.querySelector('#color-palette');
-  for (let color of colors) {
+  const colorPallete = document.querySelector('#color-palette');
+  for (const color of colors) {
     const colorElement = document.createElement('div');
     colorElement.className = 'color';
     colorElement.style.backgroundColor = color;
@@ -39,7 +39,7 @@ function fillLineElements(size) {
 }
 
 function createPixelBoard(size) {
-  let pixelBoard = document.querySelector('#pixel-board');
+  const pixelBoard = document.querySelector('#pixel-board');
   for (let i = 0; i < size; i += 1) {
     const line = fillLineElements(size);
     pixelBoard.appendChild(line);
@@ -107,7 +107,7 @@ function getBoardSize() {
 function generateNewBoard() {
   const size = getBoardSize();
   if (size) {
-    boardStruct = document.querySelectorAll('.pixel-board-line');
+    const boardStruct = document.querySelectorAll('.pixel-board-line');
     for (const element of boardStruct) {
       element.remove();
     }
@@ -128,4 +128,4 @@ window.onload = function () {
   clearButton.addEventListener('click', clearPixelBoard);
   const generateBoardButton = document.querySelector('#generate-board');
   generateBoardButton.addEventListener('click', generateNewBoard);
-}
+};
