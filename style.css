@@ -30,7 +30,7 @@ body {
 .color {
   border: 1px solid black;
   border-radius: 30px;
-  color: white;
+  color: rgb(184, 236, 234);
   display: inline-block;
   font-weight: 600;
   height: 50px;

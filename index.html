@@ -60,11 +60,11 @@
                     const newLine = document.createElement('div');
 
                     if (idx === 0){
-                        newLine.className = `color cor${idx+1} selected `
+                        newLine.className = 'color selected'
                     } else {
-                    newLine.className = `color cor${idx+1}`;
+                    newLine.className = 'color';
                     }
-
+                    newLine.id = `cor${idx+1}`
                     newLine.style.backgroundColor = starterColors[idx];
                     newLine.innerText = starterColors[idx];
                     document.querySelector('.color-palette').appendChild(newLine);
