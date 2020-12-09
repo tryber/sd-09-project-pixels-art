@@ -37,14 +37,14 @@ function generateBoardRow() {
 function selectColor() {
   const colorPalette = document.getElementById('color-palette');
   const colors = document.getElementsByClassName('color');
-  colorPalette.addEventListener('click', function (event) {
-    if (event.target.className !== 'selected color') {
+  colorPalette.addEventListener('click', function (colorSelection) {
+    if (colorSelection.target.className === 'color') {
       for (let i = 0; i < colors.length; i += 1) {
-          colors[i].className = 'color';
-          event.target.className = 'selected color';
+        colors[i].className = 'color';
       }
-    } else {
-      event.target.className = 'color';
+      colorSelection.target.className = 'selected color';
+    } else if (colorSelection.target.className === 'selected color') {
+      colorSelection.target.className = 'color';
     }
   });
 }
