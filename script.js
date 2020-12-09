@@ -15,3 +15,21 @@ function pxBoard(){
     }
 }
 pxBoard();
+
+function colorSelecter(event) {
+    const selected = document.querySelector('.selected');
+    const targetSelected = event.target;
+    if(targetSelected !== selected) {
+        selected.classList.remove('selected');
+        targetSelected.classList.add('selected');
+    }
+}
+
+function getSelecter() {
+    for (let index = 0; index < 4; index += 1) {
+        const paletteList = document.querySelectorAll('.color')[index];
+        paletteList.addEventListener('click', colorSelecter);
+    }
+}
+
+getSelecter();
