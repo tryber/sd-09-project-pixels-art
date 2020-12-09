@@ -40,14 +40,77 @@ function selectColor() {
 selectColor();
 
 // Limpar pixels
+function clearingPixels() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}
 function clearBoard() {
   const clearPixels = document.querySelector('#clear-board');
   clearPixels.addEventListener('click', function () {
-    const pixels = document.querySelectorAll('.pixel');
-    for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = 'white';
-    }
+    clearingPixels();
   });
 }
 
 clearBoard();
+
+// Personaliza tamanho do quadro
+function addPixels(sizeValue) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  const pixels = document.querySelectorAll('.pixel');
+  const pixelSize = 42;
+  pixelBoard.style.width = `${sizeValue * pixelSize}px`;
+  while (pixels.lenght <= sizeValue ** 2) {
+    const newdiv = document.createElement('div');
+    newdiv.className = 'pixel';
+    pixelBoard.appendChild(newdiv);
+  }
+}
+function resize(sizeValue) {
+  if (sizeValue < 5) {
+    sizeValue = 5;
+  } else if (sizeValue > 50) {
+    sizeValue = 50;
+  }
+  addPixels(sizeValue);
+}
+
+function checkSize(sizeValue) {
+  let check = true;
+  if (sizeValue === '') {
+    check = false;
+    alert('Board inválido!');
+  } else if (isNaN(sizeValue)) {
+    check = false;
+    alert('Valor digitado não é um número!');
+  }
+  return check;
+}
+
+function startResizing(sizeValue) {
+  if (checkSize(sizeValue)) {
+    resize(sizeValue);
+  }
+}
+
+function changeSize() {
+  const changeButton = document.querySelector('#btn-change');
+  changeButton.addEventListener('click', function () {
+    const newSize = document.querySelector('#board-size').value;
+    clearingPixels();
+    startResizing(newSize);
+  });
+  /* const inputBox = document.querySelector('#board-size');
+  inputBox.addEventListener('keyDown', function (event) {
+    if (event.keyCode === 13) {
+      const newSize = document.querySelector('#board-size').value;
+      console.log('xablau');
+      clearingPixels();
+      startResizing(newSize);
+    }
+  }); */
+
+}
+
+changeSize();
