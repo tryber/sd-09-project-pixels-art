@@ -5,6 +5,7 @@ window.onload = function () {
 
 // Pintando o pixel
 function changeColor(target, pixelColor) {
+  console.log(target.style.backgroundColor !== pixelColor);
   if (target.style.backgroundColor !== pixelColor) {
     target.style.backgroundColor = pixelColor;
   } else {
@@ -12,14 +13,18 @@ function changeColor(target, pixelColor) {
   }
 }
 
+function eventFunction(event) {
+  console.log('click')
+  const selectedColor = document.querySelector('.selected');
+  changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color'));
+}
+
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     const pixelClicked = pixels[index];
-    pixelClicked.addEventListener('click', function (event) {
-      const selectedColor = document.querySelector('.selected');
-      changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color'));
-    });
+    pixelClicked.removeEventListener('click', eventFunction);
+    pixelClicked.addEventListener('click', eventFunction);
   }
 }
 
@@ -75,7 +80,7 @@ function removePixels(sizeValue) {
   const pixelSize = 42;
   pixelBoard.style.width = `${sizeValue * pixelSize}px`;
   while (pixels.length > Math.pow(sizeValue,2)) {
-    pixelBoard.removeChild(pixels[0]);
+    pixelBoard.removeChild(pixels[pixels.length - 1]);
     pixels = document.querySelectorAll('.pixel');
   }
 }
@@ -89,8 +94,10 @@ function resize(sizeValue) {
   const pixels = document.querySelectorAll('.pixel');
   if (sizeValue < Math.sqrt(pixels.length)) {
     removePixels(sizeValue);
+  } else {
+    addPixels(sizeValue);
   }
-  addPixels(sizeValue);
+  paintPixel();
 }
 
 function checkSize(sizeValue) {
@@ -112,7 +119,7 @@ function startResizing(sizeValue) {
 }
 
 function changeSize() {
-  const changeButton = document.querySelector('#btn-change');
+  const changeButton = document.querySelector('#generate-board');
   changeButton.addEventListener('click', function () {
     const newSize = document.querySelector('#board-size').value;
     clearingPixels();
