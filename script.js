@@ -35,12 +35,10 @@ window.onload = function () {
 
   function selectedColor(event) {
     let actualColor = event.target;
-    if(actualColor.className = 'color') {
-      let lastSelectedColor = document.querySelector('.selected');
-      lastSelectedColor.classList.remove('selected');
-      chosenColor = actualColor.id; //altera o valor da cor selecionada
-      actualColor.classList.add('selected');
-    }
+    let lastSelectedColor = document.querySelector('.selected');
+    lastSelectedColor.classList.remove('selected');
+    chosenColor = actualColor.id; //altera o valor da cor selecionada
+    actualColor.classList.add('selected');
   }
 
   document.querySelector('#clear-board').onclick = function() {
