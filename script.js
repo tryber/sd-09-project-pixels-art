@@ -1,6 +1,6 @@
-sessionStorage.selectedColor = 'black';
+sessionStorage.selectedColor = '#000000';
 
-
+// funcão utilizada para modificar o bgcolor de todos os pixel para white
 function clearBoard() {
   const allPixels = document.querySelectorAll('.pixel');
   for (let idx = 0; idx < allPixels.length; idx += 1) {
@@ -8,11 +8,13 @@ function clearBoard() {
   }
 }
 
+// associa a função acima co botão VQV
 const clearButton = document.querySelector('#clear-board');
 clearButton.addEventListener('click', function (target) {
   clearBoard(target);
 });
 
+// para evitar apenas adicionar elementos na linha da board, essa função limpa as divs filhas
 function destructBoard() {
   const linhas = document.querySelectorAll('.linha');
   for (let index = linhas.length - 1; index >= 0; index -= 1) {
@@ -20,6 +22,7 @@ function destructBoard() {
   }
 }
 
+// funcão de colorir os pixels e sua associação
 function colorPixel(self) {
   self.target.style.backgroundColor = sessionStorage.selectedColor;
 }
@@ -32,6 +35,8 @@ function assignPixels() {
   }
 }
 
+// constói a board primeiro por linha depois adiciona o numero de pixels em cada linha
+// por ultimo associa a função de click (acima) em cada pixel
 function constructBoard(baseDoQuadro) {
   destructBoard();
   for (let idx = 0; idx < baseDoQuadro; idx += 1) {
@@ -53,6 +58,7 @@ function constructBoard(baseDoQuadro) {
   assignPixels();
 }
 
+// verifica se o max e o min
 function verificaNovaBase(number) {
   if (number >= 50) {
     return 50;
@@ -62,11 +68,12 @@ function verificaNovaBase(number) {
   return number;
 }
 
+// funcao e evento de criar uma nova board usando o botão
 function mudaBoardPeloBotao() {
   const fieldValue = document.querySelector('.input').value;
   if (fieldValue === '' || fieldValue < 0) {
     document.querySelector('.input').value = '';
-    return alert('Board inválido!');
+    alert('Board inválido!');
   }
   const answer = verificaNovaBase(fieldValue);
   constructBoard(answer);

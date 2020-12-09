@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1 id='title'>Paleta de Cores</h1>
-        
+
         <section id='color-palette' class='color-palette'></section>
 
         <div class='button-container'>
@@ -24,7 +24,7 @@
         <script src='script.js'></script>
         <script>
             document.addEventListener('DOMContentLoaded', function(){
-
+                //Array de cores não repetidas para colocar no pallete
                 const colorArray = ['#2a9d8f', '#f4a261', '#c5c3c6', '#46494c', '#1985a1',
                     '#cb997e', '#ddbea9', '#e5989b', '#b5838d', '#e63946', '#a8dadc', '#457b9d',
                     '#457b9d', '#f4f1de', '#e07a5f', '#81b29a', '#f2cc8f', '#ffd6a5', '#9bf6ff',
@@ -34,8 +34,10 @@
                     '#ffe66d', '#d8572a', '#edb183', '#251605', '#0d21a1', '#e18ad4', '#f2545b',
                     '#890620', '#890620', '#01baef'];
 
+                // monta um array de tamanho 4 que vai ser a palette inicial
+                // o while ajuda a não ter repetidos
                 function pickStarterColors(array) {
-                const starterColors = ['black'];
+                const starterColors = ['#000000'];
                 let ok;
                 let num;
                 for (let idx = 0; idx < 3; idx += 1) {
@@ -51,15 +53,24 @@
                 return (starterColors);
                 }
 
+                // usar o array de cores para criar as 4 palettes iniciais, sendo que a primeira
+                //  cor é black ou #000000
                 const starterColors = pickStarterColors(colorArray);
                 for (let idx = 0 ; idx < starterColors.length; idx += 1) {
                     const newLine = document.createElement('div');
+
+                    if (idx === 0){
+                        newLine.className = 'color selected'
+                    } else {
                     newLine.className = 'color';
+                    }
+
                     newLine.style.backgroundColor = starterColors[idx];
                     newLine.innerText = starterColors[idx];
                     document.querySelector('.color-palette').appendChild(newLine);
                 }
 
+                // funcao utilizada para tirar todas as class selected da palette
                 function removeColorButtonMarks() {
                     for (let idx = 0; idx < colorButtons.length; idx += 1) {
                         if (colorButtons[idx].classList.contains('selected')) {
@@ -68,6 +79,8 @@
                     }
                 }
 
+                // utiliza a funcao acima para remover a class das outras palettes e deixar selected
+                //  somente nela mesma. Essa função ja grava no localStorage a cor selecionada
                 function selectColor(self) {
                     removeColorButtonMarks();
                     const selectedColor = self.target.style.backgroundColor;
@@ -75,13 +88,14 @@
                     self.target.classList.toggle('selected');
                 }
 
+                // coloca o evento de clicar na palette e escolher a cor.
                 const colorButtons = document.querySelectorAll('.color')
                 for (let idx = 0; idx < colorButtons.length; idx += 1) {
                     colorButtons[idx].addEventListener('click', function (target) {
                     selectColor(target);
                     });
                 }
-                colorButtons[0].classList.add('selected');
+                //constroi a board inicial de tamanho padrão 5
                 constructBoard(5);
             });
         </script>
