@@ -41,3 +41,19 @@ function pixelColoring(chosenPixel) {
     const chosenPaletteColor = document.querySelector('.selected').classList[1];
     pixelSelected.style.backgroundColor = chosenPaletteColor;
 }
+
+const buttonClear = document.getElementById('clear-board')
+buttonClear.addEventListener('click', clearPixelBoard)
+
+function clearPixelBoard () {
+    // const gridN = 5
+    // for (let index = 0; index<gridN; index++){
+    //     for (let pixelIndex = 0; pixelIndex<gridN; pixelIndex++){
+
+    //     }
+    // }
+    const pixelList = document.getElementsByClassName("pixel")
+    for (let index = 0; index<pixelList.length; index++){
+        pixelList[index].style.backgroundColor = 'white'
+    }
+}
