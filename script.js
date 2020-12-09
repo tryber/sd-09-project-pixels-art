@@ -6,14 +6,22 @@ window.onload = function() {
   let entrada = 5;
 
   function createDivsRowsColumns(entrada) {
-    for (let i = 1; i <= entrada; i += 1) {
-      for (let j = 1; j <= entrada; j += 1) {
-        let div = document.createElement('div');
-        div.id = `${i}x${j}`;
-        div.className = 'pixel';
-        div.style.backgroundColor = 'white';
-        div_matriz.appendChild(div);
+    if(entrada >= 2 && entrada <= 10) {
+      let heighWidth = entrada * '42';
+      let div_matriz = document.querySelector('#pixel-board');
+      div_matriz.style.width = heighWidth+'px';
+      div_matriz.style.height = heighWidth+'px';
+      for (let i = 1; i <= entrada; i += 1) {
+        for (let j = 1; j <= entrada; j += 1) {
+          let div = document.createElement('div');
+          div.id = `${i}x${j}`;
+          div.className = 'pixel';
+          div.style.backgroundColor = 'white';
+          div_matriz.appendChild(div);
+        }
       }
+    } else {
+      return console.log('Valor pode ser de 2 a 10 apenas');
     }
   }
   createDivsRowsColumns(entrada)
