@@ -10,6 +10,10 @@ ul li a {
   text-decoration: none;
 }
 
+#myForm{
+  height: 50px;
+}
+
 .box {
   display: inline-block;
   height: 40px;
@@ -26,16 +30,17 @@ ul li a {
 }
 
 .headerElements {
-  background-color: goldenrod;
   text-align: right;
 }
 
 .headerLinks {
   display: inline-block;
   padding: 0 15px;
+  background-color: rgba(252, 238, 238, 0.836);
+  width: 30px;
 }
 
-.headerLinksAll {
+.headerButton {
   display: inline-block;
   margin: 10px 10px 0;
 }

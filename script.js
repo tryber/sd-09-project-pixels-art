@@ -71,6 +71,84 @@ function clearButton() {
       pixelsBoardAll[index].style.backgroundColor = 'white';
     }
   });
+  const elementHolder2 = document.querySelector('.principal');
+  const buttonClearRemove = document.querySelector('button#clear-board');
+  if (buttonClearRemove != null) {
+    elementHolder2.removeChild(buttonClearRemove);
+  }
   elementHolder.insertAdjacentElement('afterend', newelement);
 }
 clearButton();
+
+function CreateButtonSizePainel () {
+  const elementHolder = document.querySelector('#clear-board');
+  const formulary = document.createElement('form');
+  formulary.id = 'myForm';
+  const inputlabel = document.createElement('label');
+  inputlabel.for = 'sizeOfElement';
+  inputlabel.innerText = 'Digite o tamanho do painel: '
+  const inputData = document.createElement('input');
+  inputData.min = 0;
+  inputData.max = 50;
+  inputData.id = 'board-size';
+  inputData.type = 'text';
+  inputData.name = 'sizeOfElement';
+  inputData.className = 'headerLinks';
+  const buttonSubmit = document.createElement('button');
+  buttonSubmit.type = 'submit';
+  buttonSubmit.id = 'generate-board';
+  buttonSubmit.className = 'headerButton';
+  buttonSubmit.innerText = 'VQV';
+  formulary.appendChild(inputlabel);
+  formulary.appendChild(inputData);
+  formulary.appendChild(buttonSubmit);
+  elementHolder.insertAdjacentElement('afterend', formulary);
+}
+CreateButtonSizePainel();
+
+function clearPixelBoard() {
+  const pixelsBoard = document.querySelector('#pixel-board');
+  const pixelsBoardRows = document.querySelectorAll('.pixelBoardRow');
+  for (let index = 0; index < pixelsBoardRows.length; index += 1) {
+    pixelsBoard.removeChild(pixelsBoardRows[index]);
+  }
+}
+
+function createNewBoard(valueInput) {
+  clearPixelBoard();
+  createPixelBoard(valueInput);
+  paintPixel();
+  clearButton();
+}
+
+function minMaxBoardCreator(valueInput) {
+  if (valueInput < 5) {
+    createNewBoard(5);
+  }
+  if (valueInput > 50) {
+    createNewBoard(50);
+  }
+  if (valueInput >= 5 && valueInput <= 50) {
+    createNewBoard(valueInput);
+  }
+}
+
+function verifyPainelNumber(valueInput) {
+  if (!Number(valueInput)) {
+    return alert('Board inválido!');
+  }
+  if (valueInput <= 0){
+    return alert('Board inválido!');
+  }
+  minMaxBoardCreator(valueInput);
+}
+
+function changePainelSize() {
+  const formulary = document.querySelector('#myForm');
+  formulary.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const sizePainel = event.target.sizeOfElement.value;
+    verifyPainelNumber(sizePainel);
+  });
+}
+changePainelSize();
