@@ -1,21 +1,23 @@
-window.addEventListener('load',function() {
-  arrayColors = (randomColor(3,255));
+let arrayColors = [];
+
+window.addEventListener('load', function() {
+  arrayColors = (randomColor(3, 255));
 })
-let arrayColorsValue = [];
-function randomColor(numberOfColors,numberMaxRGB) {
-  let arrayColors = ['rgb(0, 0, 0)'];
+function randomColor(numberOfColors, numberMaxRGB) {
+  const firstColor = 'rgb(0, 0, 0)';
+  arrayColors[0] = firstColor;
   for (let index = 1; index <= numberOfColors; index += 1){
     let createColor = {
-      r: parseInt(Math.random() * numberMaxRGB),
-      g: parseInt(Math.random() * numberMaxRGB),
-      b: parseInt(Math.random() * numberMaxRGB),
-    }
+      r: parseInt((Math.random() * numberMaxRGB), 10),
+      g: parseInt((Math.random() * numberMaxRGB), 10),
+      b: parseInt((Math.random() * numberMaxRGB), 10),
+    };
     arrayColors[index] = (`rgb(${createColor.r}, ${createColor.g}, ${createColor.b})`);
   }
   return arrayColors;
 }
 
-let arrayColors = randomColor(3,255);
+arrayColors = randomColor(3, 255);
 
 function addPaletteColor() {
   const elementHolder = document.querySelector('#color-palette');
@@ -137,12 +139,9 @@ function createNewBoard(valueInput) {
 function minMaxBoardCreator(valueInput) {
   let sizeBoard = 0;
   if (valueInput <= 50) {
-    if(valueInput < 5) {
-      sizeBoard = 5;
-      alert('Tamanho mínimo 5');
-    }
+    sizeBoard = 5;
     if (valueInput > 5) {
-    sizeBoard = valueInput;
+      sizeBoard = valueInput;
     }
   }
   else {
