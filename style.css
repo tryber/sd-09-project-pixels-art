@@ -5,7 +5,7 @@
   display: inline-block;
 }
 
-.color.black {
+.color.selected {
   background-color: black;
 }
 

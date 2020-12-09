@@ -3,7 +3,6 @@ As seguintes verificações serão feitas:
 O título deverá ficar dentro de uma tag h1 com o id denominado title;
 
 O texto do título deve ser exatamente "Paleta de Cores".
-
 */
 let titleElement = document.createElement('h1');
 titleElement.id = 'title';
@@ -44,7 +43,7 @@ function createPalette() {
 
 }
 
-createPalette().className = 'color' + ' ' + 'black';
+createPalette().className = 'color' + ' ' + 'selected';
 createPalette().className = 'color' + ' ' + 'two';
 createPalette().className = 'color' + ' ' + 'three';
 createPalette().className = 'color' + ' ' + 'four';
@@ -60,6 +59,11 @@ O quadro de "pixels" deve possuir o id denominado pixel-board, ao passo que cada
 A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
 
 O quadro de "pixels" deve aparecer abaixo da paleta de cores.
+5 - Cada elemento do quadro de pixels deve possuir 40 pixels de largura e 40 pixels de altura e ser delimitado por uma borda preta de 1 pixel.
+As seguintes verificações serão feitas:
+O quadro de pixels tem altura e comprimento de 5 elementos;
+
+40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 */
 
 let lineColumnPixels = 5;
@@ -83,23 +87,31 @@ function createLinePixel(linecolumns) {
 }
 createLinePixel(lineColumnPixels);
 
-
-
-
 /*
-
-5 - Cada elemento do quadro de pixels deve possuir 40 pixels de largura e 40 pixels de altura e ser delimitado por uma borda preta de 1 pixel.
-As seguintes verificações serão feitas:
-O quadro de pixels tem altura e comprimento de 5 elementos;
-
-40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
-
 6 - Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
 As seguintes verificações serão feitas:
 O elemento da cor preta deve possuir, inicialmente, a classe selected;
 
 Note que o elemento que deverá receber a classe selected deve ser um dos elementos que possuem a classe color, como especificado no requisito 2.
+*/
+window.onload = () => {
+  let pixelSelector = document.querySelectorAll('.pixel');
 
+  function coloringPixels(event) {
+
+    event.target.style.backgroundColor = 'black'
+  }
+
+  for (let index = 0; index < pixelSelector.length; index += 1) {
+    pixelSelector[index].addEventListener('click', coloringPixels);
+  }
+
+
+
+}
+
+
+/*
 7 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 As seguintes verificações serão feitas:
 A classe selected deve ser adicionada à cor selecionada na paleta, ao mesmo tempo em que é removida da cor anteriormente selecionada;
