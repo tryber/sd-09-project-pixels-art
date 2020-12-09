@@ -7,6 +7,7 @@ html {
   border-width: 1px;
   display: inline-block;
   height: 50px;
+  margin-right: 10px;
   width: 50px;
 }
 
@@ -18,8 +19,32 @@ html {
   background-color: blue;
 }
 
+.brown {
+  background-color: brown;
+}
+
 .green {
   background-color: green;
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.red {
+  background-color: red;
 }
 
 .yellow {

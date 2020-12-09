@@ -1,4 +1,11 @@
 window.onload = function () {
+  const colorPalette = document.querySelector('#color-palette');
+  const blackInsert = createPalette();
+  blackInsert.className = 'color black selected';
+  colorPalette.appendChild(blackInsert);
+  for (let index = 1; index <= 3; index += 1) {
+    colorPalette.appendChild(createPalette());
+  }
   const btn = document.querySelector('#clear-board');
   btn.addEventListener('click', function () {
     const pixels = document.querySelectorAll('.pixel');
@@ -7,11 +14,10 @@ window.onload = function () {
     }
   });
 
-  const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', function (event) {
-    const colors = document.querySelectorAll('.color');
-    for (let index = 0; index < colors.length; index += 1) {
-      if (event.target === colors[index]) {
+    const colorsPalette = document.querySelectorAll('.color');
+    for (let index = 0; index < colorsPalette.length; index += 1) {
+      if (event.target === colorsPalette[index]) {
         const selected = document.querySelector('.selected');
         selected.classList.remove('selected');
         event.target.classList.add('selected');
@@ -22,8 +28,8 @@ window.onload = function () {
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.addEventListener('click', function (event) {
     if (event.target.className === 'pixel') {
-      const color = document.querySelector('.selected');
-      event.target.style.backgroundColor = color.classList[1];
+      const colorSelected = document.querySelector('.selected');
+      event.target.style.backgroundColor = colorSelected.classList[1];
     }
   });
 
@@ -58,3 +64,11 @@ window.onload = function () {
     }
   });
 };
+
+function createPalette() {
+    let colors = ['red','yellow','magenta','blue','green','pink','gray','purple','orange','brown'];
+    let number = Math.ceil(Math.random() * 9);
+    const color = document.createElement('div');
+    color.className = `color ${colors[number]}`;
+    return color;
+}
