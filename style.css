@@ -10,9 +10,8 @@ header {
 }
 
 #color-palette {
+    text-align: center;
     padding: 15px;
-    width: 400px;
-    border: 1px black solid;
 }
 
 .color {
@@ -38,4 +37,19 @@ header {
 
 #blue {
     background-color: blue;
+}
+
+#pixel-board {
+    text-align: center;
+    width: 210px;
+    height: 210px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#pixel {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 1px black solid;
 }
