@@ -3,14 +3,20 @@ const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
 const btnClear = document.querySelector('#clear-board');
 const inBoardSize = document.querySelector('#board-size');
-const inValue = document.querySelector('#inValue');
+const inValue = document.querySelector('.inValue');
 const btnGenerateBoard = document.querySelector('#generate-board');
 
+// Salva o valor do input do usuário
+let userInput = Number(inBoardSize.value);
+console.log(userInput);
+
+// cor inicial dos pixels de referência
 colors[0].style.backgroundColor = 'black';
 colors[1].style.backgroundColor = 'red';
 colors[2].style.backgroundColor = 'blue';
 colors[3].style.backgroundColor = 'green';
 
+// Cria uma cor aleatória
 function rgbRandom() {
   const r = Math.ceil(Math.random() * 256);
   const g = Math.ceil(Math.random() * 256);
@@ -21,6 +27,7 @@ function rgbRandom() {
   return rgb;
 }
 
+// Colore as caixas referência de cores
 function colorizePalette() {
   for (let index = 0; index < colors.length; index += 1) {
     colors[index].style.backgroundColor = rgbRandom();
@@ -29,20 +36,20 @@ function colorizePalette() {
 }
 colorizePalette();
 
+// Cria pixel
 function createPixel() {
   const lineOfPixels = document.createElement('div');
   lineOfPixels.className = 'pixel';
   pixelBoard.appendChild(lineOfPixels);
 }
 
+// Cria a tabela com os pixels e adiciona a classe 'selected' ao primeiro pixel
 function createBoard(boardSize) {
-  if (boardSize === '') {
-    boardSize = 5;
-  }else {
-    boardSize = Number(inValue.value);
-  }
+  colors[0].classList.add('selected');
   
-  colors[0].className += ' selected';
+  if (boardSize === 0) {
+    boardSize = 5;
+  }
 
   for (let pixelRow = 0; pixelRow < boardSize; pixelRow += 1) {
     for (let pixelColumn = 0; pixelColumn < boardSize; pixelColumn += 1) {
@@ -53,25 +60,32 @@ function createBoard(boardSize) {
   pixelBoard.style.height = `${boardSize * colors[0].offsetWidth}px`;
   pixelBoard.style.margin = 'auto';
 }
-createBoard(inValue.value);
 
-let savedColor = 'black';
-colorPalette.addEventListener('click', function (event) {
+// Remove a classe 'selected'
+function removeClassSelected() {
   for (let color = 0; color < colors.length; color += 1) {
     if (colors[color].className === 'color selected') {
-      colors[color].className = 'color';
+      colors[color].classList.remove('selected');
     }
   }
+}
+
+// Adiciona a classe 'selected' ao pixel e guarda a cor em uma variável
+colorPalette.addEventListener('click', function (event) {
+  removeClassSelected();
   if (event.target.className === 'color') {
-    event.target.className = 'color selected';
+    event.target.classList.add('selected');
     savedColor = event.target.style.backgroundColor;
   }
 });
 
+// Salva a cor do pixel que estiver com a classe 'selected'
+let savedColor = 'black';
 pixelBoard.addEventListener('click', function (event) {
   event.target.style.backgroundColor = savedColor;
 });
 
+// Preenche os pixels com a cor branca
 btnClear.addEventListener('click', () => {
   const pixel = document.querySelectorAll('#pixel-board div');
   for (let item = 0; item < pixel.length; item += 1) {
@@ -79,7 +93,5 @@ btnClear.addEventListener('click', () => {
   }
 });
 
-inBoardSize.addEventListener('change', () => {
-  let value = inBoardSize.value;
-  inValue.value = value;
-})
+// Evento 'VQV', altera o tamanho da tabela
+btnGenerateBoard.addEventListener('click', createBoard(userInput));
