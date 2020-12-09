@@ -69,11 +69,7 @@ getColorsPaletteDiv.addEventListener('click', function (eventOrigin){
         let getColorsPaletteElements = document.querySelectorAll('.color');
         
 
-
-        if (clickedColorClassNameString.includes('selected')){
-            let newClass = clickedColorClassNameString.replace('selected', '')
-            eventOrigin.target.className = newClass
-        } else {
+        if (clickedColorClassNameString.includes('selected') === false) {
             for (let index = 0; index < getColorsPaletteElements.length; index += 1){
                 if (String(getColorsPaletteElements[index].className).includes('selected')) {
                    let newClass = String(getColorsPaletteElements[index].className.replace('selected', ''))
