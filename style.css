@@ -70,6 +70,10 @@ h1 {
   background-color: red;
 }
 
+.selected {
+  background-color: black;
+}
+
 .title {
   background-color: lawngreen;
   text-align: center;
