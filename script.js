@@ -55,7 +55,9 @@ function paint() {
   board.addEventListener('click', function (pixelSelection) {
     const currentColor = document.querySelector('.selected');
     const color = currentColor.style.backgroundColor;
-    pixelSelection.target.style.backgroundColor = color;
+    if (pixelSelection.target.className === 'pixel') {
+      pixelSelection.target.style.backgroundColor = color;
+    }
   });
 }
 
