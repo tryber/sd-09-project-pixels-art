@@ -1,3 +1,8 @@
+function randomizeColors(length) {
+  length = Math.floor(Math.random() * length);
+  return length;
+}
+
 function generatePalette() {
   const palette = document.getElementById('color-palette');
   const colorPaletteArray = ['green', 'blue', 'red', 'yellow', 'purple', 'orange', 'teal', 'pink', 'gray'];
@@ -13,8 +18,8 @@ function generatePalette() {
   for (let i = 1; i < paletteSize; i += 1) {
     const color = document.createElement('div');
     color.className = 'color';
-    // color.style.backgroundColor = colorPaletteArray[randomizeColor(colorPaletteArray.length)];
-    color.style.backgroundColor = colorPaletteArray[i];
+    color.style.backgroundColor = colorPaletteArray[randomizeColors(colorPaletteArray.length)];
+    // color.style.backgroundColor = colorPaletteArray[i];
     palette.appendChild(color);
   }
 }
