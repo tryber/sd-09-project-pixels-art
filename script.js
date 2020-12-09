@@ -63,7 +63,7 @@ colorizePalette();
 function createBoard(width = 5, height = 5) {
   pixelBoard.style.width = `${width * 40}px`;
   pixelBoard.style.height = `${height * 40}px`;
-  pixelBoard.style.margin = ' 0 auto';
+  pixelBoard.style.margin = 'auto';
 
   colors[0].className += ' selected';
 
@@ -105,6 +105,6 @@ pixelBoard.addEventListener('click', function (event) {
 btnClear.addEventListener('click', () => {
   const pixel = document.querySelectorAll('#pixel-board div');
   for (let item = 0; item < pixel.length; item += 1) {
-    pixel[item].style.backgroundColor = 'white';
+    pixel[item].style.backgroundColor = 'rgb(256, 256, 256)';
   }
 });
