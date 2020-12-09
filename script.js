@@ -23,18 +23,18 @@ colorFour.style.backgroundColor = colorGenerator();
 sessionStorage.setItem('color', 'black');
 
 function selectColorPalette() {
-  let colors = document.querySelectorAll('.color');
+  const colors = document.querySelectorAll('.color');
   for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', function (event) {
       let element = colors[0];
       while (element) {
-        if(element.className === 'color selected') {
+        if (element.className === 'color selected') {
           element.classList.remove('selected');
         }
         element = element.nextElementSibling;
       }
       event.target.classList.add('selected');
-    })
+    });
   }
 }
-selectColorPalette()
+selectColorPalette();
