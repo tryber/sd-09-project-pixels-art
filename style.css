@@ -23,6 +23,5 @@
 }
 
 .selected {
-  height: 55px;
-  width: 55px;
+  display: inline-block;
 }
