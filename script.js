@@ -10,11 +10,11 @@ window.onload = function () {
   let clearButton = document.querySelector('#clear-board');
   clearButton.addEventListener('click', clearPixelBoard);
   let generateBoardButton = document.querySelector('#generate-board');
-  generateBoardButton.addEventListener('click', generateNewBoard)
+  generateBoardButton.addEventListener('click', generateNewBoard);
 }
 
 function createColorPaletteElements() {
-  let colors = ['rgb(0,0,0)', 'rgb(46, 204, 113)', 'rgb(41, 128, 185)', 'rgb(231, 76, 60)'];
+  let colors = generateRandomColors(5);
   let colorPallete = document.querySelector('#color-palette');
   for (let color of colors) {
     let colorElement = document.createElement('div');
@@ -112,4 +112,24 @@ function generateNewBoard() {
     }
     createPixelBoard(size);
   }
+}
+
+function generateRandomColors(numberOfColors){
+  let rgbColor = ['rgb(0, 0, 0)'];
+  let stringConstructor;
+  for(let i = 0; i < numberOfColors; i++){
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    stringConstructor = 'rgb(' + red +', ' + green + ', ' + blue + ')';
+    if (!rgbColor.includes(stringConstructor))
+    {
+      rgbColor.push(stringConstructor);
+    }else{
+      i -= 1;
+    }
+  }
+
+  return rgbColor;
+
 }
