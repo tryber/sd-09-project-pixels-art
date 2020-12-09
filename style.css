@@ -1,4 +1,4 @@
-.caixaDeTinta {
+.caixaDeTinta .color {
   border: 1px solid black;
 }
 
@@ -32,8 +32,4 @@
   border: 1px solid black;
   height: 40px;
   width: 40px;
-}
-
-.pixel-board {
-
 }

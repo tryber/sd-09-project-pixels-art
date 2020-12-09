@@ -5,14 +5,9 @@ const corPreenchida = document.getElementsByClassName('color');
 const corDePintura = document.getElementsByClassName('pixel');
 let corDorQuadrado = 'black';
 
-window.onload = () => {
-  corPreenchida[0].classList.add('selected');
-};
-
 paletaDeCores.addEventListener('click', (event) => {
   for (let i = 0; i <= corPreenchida.length; i += 1) {
     if (corPreenchida[i] === event.target) {
-      // console.log("evento Selecionado")
       corPreenchida[i].classList.add('selected');
       corDorQuadrado = corPreenchida[i].classList[1];
     } else if (corPreenchida[i] !== event.target) {
@@ -20,7 +15,6 @@ paletaDeCores.addEventListener('click', (event) => {
         corPreenchida[i].classList.remove('selected');
       } catch (e) {
         return e;
-        // console.log("Foi removido seleção anterior")
       }
     }
   }
