@@ -21,6 +21,8 @@
 }
 
 #table {
+margin: 40px 40px;
+border: 1px solid black;
 background-color: white;
 display: table;
 }
