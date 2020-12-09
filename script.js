@@ -16,3 +16,20 @@ for (let index = 0; index < initialColorOfPincel.length; index += 1) {
         initialColorOfPincel[index].className += ' selected';
     }
 }
+
+let selectColorOfPalet = document.querySelector('#color-palette');
+
+window.onload = function() {
+    selectColorOfPalet.addEventListener('click', function(event) { 
+        let colors = document.querySelectorAll('.color');
+        let indexOfSelectedClass = 1;
+        for (let index = 0; index < colors.length; index += 1) { 
+            if (colors[index].classList[indexOfSelectedClass] === 'selected') {
+                colors[index].classList.remove('selected');
+            }
+        }
+
+        event.target.className += ' selected';
+    
+    });
+ }
