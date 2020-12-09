@@ -25,8 +25,8 @@
 .pixel {
     border: solid 1px;
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-color: white;
     display: table-cell;
 }
