@@ -33,21 +33,26 @@ window.onload = function () {
     if (inputBoardSize.value === '') {
       alert('Board inválido!');
     } else {
+      if (inputBoardSize < 5) {
+        inputBoardSize = 5;
+      }else if (inputBoardSize > 50) {
+        inputBoardSize = 50;
+      }
       const linesBoard = document.querySelectorAll('.line-board');
       for (let index = 0; index < linesBoard.length; index += 1) {
-          pixelBoard.removeChild(linesBoard[index]);
-        }
+        pixelBoard.removeChild(linesBoard[index]);
+      }
       for (let index = 1; index <= inputBoardSize.value; index += 1) {
-          let lineBoard = document.createElement('div');
-          lineBoard.className = 'line-board';
-          pixelBoard.appendChild(lineBoard);
-        }
+        let lineBoard = document.createElement('div');
+        lineBoard.className = 'line-board';
+        pixelBoard.appendChild(lineBoard);
+      }
       const newLines = document.querySelectorAll('.line-board');
       for (let line = 0; line < newLines.length; line += 1) {
         for (let count = 1; count <= inputBoardSize.value; count += 1) {
-            let pixel = document.createElement('div');
-            pixel.className = 'pixel';
-            newLines[line].appendChild(pixel);
+          let pixel = document.createElement('div');
+          pixel.className = 'pixel';
+          newLines[line].appendChild(pixel);
         }
       }
     }
