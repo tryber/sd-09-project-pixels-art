@@ -76,5 +76,5 @@ h1 {
 }
 
 .selected {
-  font-size: 1.8em;
+  text-shadow:3px 3px red;
 }
