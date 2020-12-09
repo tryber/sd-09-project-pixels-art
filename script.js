@@ -1,27 +1,29 @@
-function inicioPreto(){
+/*function inicioPreto(){
     let inicio = document.querySelector("#pixel-board");
     inicio.addEventListener("click", function (event) {
       event.target.style.backgroundColor = "black";
     });
   }
-  window.onload = inicioPreto();
+  window.onload = inicioPreto();*/
 
   function selecionaCor() {
-    let paleta = document.getElementById('color-palette');
-  
-    paleta.addEventListener('click', function (event) {
-      removeCor();
-      let cor = event.target;
-  
-      cor.classList.add('selected');
-      paleta.classList.remove('selected');
+    let paleta = document.getElementById('color-palette').children;
+    //paleta[0].className += ' selected';
+    for(let item of paleta){
+      item.addEventListener('click', function (event) {
+        for(let index=0;index<paleta.length;index+=1){
+          paleta[index].className = "color";
+        }
+        event.target.className = 'color selected';
     });
+    }
   }
   selecionaCor();
 
   function removeCor() {
     let color = document.querySelectorAll('.selected');
-  
+    console.log(color);
+  //addEventListener
     for (let index = 0; index < color.length; index += 1) {
       color[index].classList.remove('selected');
     }
@@ -33,8 +35,8 @@ function inicioPreto(){
     for (let index = 0; index < pixels.length; index += 1) {
       let pixelItem = pixels[index];
       pixelItem.addEventListener('click', function (event) {
-        event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
-      })
+      event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+      });
     }
   }
   pixelColorido();
@@ -54,7 +56,7 @@ function botaPreto(){
     addPreto.style.backgroundColor = "black";
   }
   botaPreto();
-  function botaAzul(color){
+  function botaAzul(){
     let addAzul = document.querySelectorAll('.color')[1];
     addAzul.style.backgroundColor = "blue";
   }
