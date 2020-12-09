@@ -62,7 +62,7 @@ function paint() {
 }
 
 function clearButton() {
-  const container = document.getElementById('button-container');
+  const container = document.querySelector('.button-container');
   const button = document.createElement('button');
   button.id = 'clear-board';
   button.innerText = 'Limpar';
