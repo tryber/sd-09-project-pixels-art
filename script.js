@@ -62,7 +62,7 @@ function createGenBoardBtn() {
   genBoardBtn.id = 'generate-board';
   genBoardBtn.innerText = 'VQV';
   genBoardBtn.style.backgroundColor = 'black';
-  genBoardBtn.style.color = 'white'
+  genBoardBtn.style.color = 'white';
   genBoardBtn.style.borderRadius = '10px';
   btnSection.appendChild(genBoardBtn);
 }

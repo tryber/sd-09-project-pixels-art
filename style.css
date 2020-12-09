@@ -44,7 +44,7 @@ footer {
 }
 
 h1 {
-  background-color:rgb(15, 21, 27);
+  background-color: rgb(15, 21, 27);
   color: white;
   padding: 10px;
   text-align: center;
@@ -52,14 +52,14 @@ h1 {
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .palette {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px;
   width: 27%;
 }
