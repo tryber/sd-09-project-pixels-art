@@ -1,6 +1,7 @@
 /* Tag and WildCard Styles */
 * {
   margin: 0;
+  font-family: 'Tangerine', cursive;
 }
 
 body, html {
@@ -14,17 +15,35 @@ body, html {
   background-size: cover;
   height: 100%;
   opacity: 0.9;
+  padding: 2% 10%;
+}
+
+.palette-container {
+  background-color: rgb(255 , 255 , 255);
+  box-shadow: 0 10px 6px -6px black;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  padding: 20px;
+}
+
+.color-palette-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.color-palette-item {
+  font-size: 40px;
+  font-weight: 700;
+  list-style-type: none;
 }
 
 .color {
   border: 1px solid black;
-  display: inline-block;
+  border-radius: 50%;
   height: 50px;
+  opacity: 1.0;
   width: 50px;
-}
-
-.color-palette-item {
-  display: inline-block;
 }
 
 .black {
@@ -51,11 +70,16 @@ body, html {
 }
 
 /* ID styles */
+#title {
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
 #color-palette {
-  border: 5px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #pixel-board {
@@ -69,6 +93,6 @@ body, html {
 
 }
 
-#clear-board {
-  width: 100px;
-}
+/* Inherit styles */
+
+
