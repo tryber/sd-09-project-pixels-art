@@ -1,7 +1,6 @@
 window.onload = function () {
   const rowColumnTotal = 5;
   const divPixelBoard = document.getElementById('pixel-board');
-  
   createDivPixel();
 
   function createDiv(className) {
