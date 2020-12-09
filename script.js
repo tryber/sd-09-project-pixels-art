@@ -42,12 +42,12 @@ fillPixelBoard();
 function selectColor() {
   const myColors = document.querySelectorAll('.color');
   let colorSelected = myColors[0];
-  for (let color of myColors) {
+  for (const color of myColors) {
     color.addEventListener('click', (event) => {
       colorSelected.className = 'color';
       event.target.className = 'color selected';
-      colorSelected = event.target;
-    })
+      return colorSelected = event.target;
+    });
   }
 }
 
@@ -56,11 +56,11 @@ selectColor();
 // Step 8
 function changePixelColor() {
   const myPixelArray = document.querySelectorAll('.pixel');
-  for (let pixel of myPixelArray) {
+  for (const pixel of myPixelArray) {
     pixel.addEventListener('click', (event) => {
-      let colorSelected = document.getElementsByClassName('color selected')[0].style.background;
-      event.target.style.background = colorSelected;
-    })
+      const colorSelected = document.getElementsByClassName('color selected')[0].style.background;
+      return event.target.style.background = colorSelected;
+    });
   }
 }
 
@@ -68,13 +68,13 @@ changePixelColor();
 
 // Step 9
 function resetColors(pixelArray) {
-  for (let pixel of pixelArray) {
+  for (const pixel of pixelArray) {
     pixel.style.background = 'white';
   }
 }
 
 function setResetButton() {
-  let myButton = document.createElement('button');
+  const myButton = document.createElement('button');
   myButton.id = 'clear-board';
   myButton.innerText = 'Limpar';
   document.body.appendChild(myButton);
@@ -88,7 +88,7 @@ function resetButtonEvent() {
   const myPixelArray = document.querySelectorAll('.pixel');
   myButton.addEventListener('click', () => {
     resetColors(myPixelArray);
-  })
+  });
 }
 
 resetButtonEvent();
