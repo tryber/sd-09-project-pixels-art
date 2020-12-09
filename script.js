@@ -4,6 +4,11 @@ function selectColor(event) {
   event.target.className = 'color selected';
 }
 
+function paintSquare(event) {
+  const paletteColor = document.querySelector('.color.selected');
+  event.target.style.backgroundColor = paletteColor.style.backgroundColor;
+}
+
 function drawColorPallets() {
   const colorPalette = document.querySelector('#color-palette');
   const stdColors = ['black', 'red', 'green', 'blue'];
@@ -27,6 +32,7 @@ function drawColorPallets() {
 function drawPixelBoard(boardSize) {
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.style.display = 'table';
+  pixelBoard.addEventListener('click', paintSquare);
   for (let index = 0; index < boardSize; index += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.style.display = 'table-row';
