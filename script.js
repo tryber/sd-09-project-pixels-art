@@ -106,7 +106,7 @@ function setClearBoardEvents() {
   clearButton.addEventListener('click', clearBoard);
 }
 
-function createGeneratorElements() {
+function createGenerateBoardElements() {
   const sizeInputProperties = {
     // Reference: https://www.w3schools.com/tags/att_input_min.asp
     type: 'number',
@@ -130,7 +130,7 @@ function createGeneratorElements() {
 
 createPixelBoard(5, 5);
 createClearButton();
-createGeneratorElements();
+createGenerateBoardElements();
 setPixelBoardEvents();
 setColorPaletteEvents();
 setClearBoardEvents();
