@@ -3,9 +3,9 @@
 }
 
 body {
-  margin: 0px;
-  font-family: 'Roboto', sans-serif;
   background-color: rgb(11 , 30 , 30);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 .cyan {
@@ -13,31 +13,31 @@ body {
 }
 
 .center-button {
-  height: 25px;
-  width: 100px;
-  margin: auto;
   background-color: black;
-  color: white;
   border: 0;
+  color: white;
+  height: 25px;
+  margin: auto;
+  width: 100px;
 }
 
 .center-input {
-  text-align: center;
   margin-left: 40%;
+  text-align: center;
 }
 
 #clear-board {
-  height: 35px;
-  width: 100px;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
   background-color: black;
-  color: white;
   border: 0;
+  color: white;
+  display: block;
+  height: 35px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
   opacity: 1;
   transition: 1s;
+  width: 100px;
 }
 
 #clear-board:hover {
@@ -48,9 +48,9 @@ body {
 
 .color {
   border: 1px solid black;
-  width: 50px;
-  height: 50px;
   display: inline-block;
+  height: 50px;
+  width: 50px;
 }
 
 .color:hover {
@@ -58,12 +58,12 @@ body {
 }
 
 #color-palette {
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
 .line-pixels {
-    margin: -5px;
+  margin: -5px;
 }
 
 .pink {
@@ -71,11 +71,11 @@ body {
 }
 
 .pixel {
+  border: 1px solid black;
   display: inline-block;
-  width: 40px;
   height: 40px;
   margin: 0;
-  border: 1px solid black;
+  width: 40px;
 }
 
 .pixel:hover {
@@ -87,8 +87,8 @@ body {
 }
 
 #title {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .white {
