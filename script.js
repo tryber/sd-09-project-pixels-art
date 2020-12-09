@@ -58,5 +58,12 @@ function createBoard(width = 5) {
 createBoard(5);
 
 colorPalette.addEventListener('click', function(event) {
-  console.log(event.target.style.backgroundColor);
+  for (let color = 0; color < colors.length; color += 1) {
+    if (colors[color].className === 'color selected') {
+      colors[color].className = 'color';
+    }
+  }
+  if (event.target.className === 'color') {
+    event.target.className = 'color selected';
+  }
 });
