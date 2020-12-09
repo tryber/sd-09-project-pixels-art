@@ -5,6 +5,10 @@ const corPreenchida = document.getElementsByClassName('color');
 const corDePintura = document.getElementsByClassName('pixel');
 let corDorQuadrado = 'black';
 
+window.onload = () => {
+  corPreenchida[0].classList.add('selected')
+};
+
 paletaDeCores.addEventListener('click', (event) => {
   for (let i = 0; i <= corPreenchida.length; i += 1) {
     if (corPreenchida[i] === event.target) {
