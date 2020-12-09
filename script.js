@@ -60,6 +60,16 @@ colorizePalette();
 
 // const pixelBoard = document.querySelector('#pixel-board');
 
+function createPixel() {
+  const lineOfPixels = document.createElement('div');
+  lineOfPixels.className = 'pixel';
+  lineOfPixels.style.width = '40px';
+  lineOfPixels.style.height = '40px';
+  lineOfPixels.style.backgroundColor = 'white';
+  lineOfPixels.style.border = '1px solid black';
+  pixelBoard.appendChild(lineOfPixels);
+}
+
 function createBoard(width = 5, height = 5) {
   pixelBoard.style.width = `${width * 40}px`;
   pixelBoard.style.height = `${height * 40}px`;
@@ -74,16 +84,6 @@ function createBoard(width = 5, height = 5) {
   }
 }
 createBoard(5, 5);
-
-function createPixel() {
-  let lineOfPixels = document.createElement('div');
-  lineOfPixels.className = 'pixel';
-  lineOfPixels.style.width = '38px';
-  lineOfPixels.style.height = '38px';
-  lineOfPixels.style.backgroundColor = 'white';
-  lineOfPixels.style.border = '1px solid black';
-  pixelBoard.appendChild(lineOfPixels);
-}
 
 let savedColor = 'black';
 colorPalette.addEventListener('click', function (event) {
