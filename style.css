@@ -1,28 +1,43 @@
+h1 {
+  text-align: center;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+}
 .color,
 .pixel {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
+  cursor: pointer;
   margin-right: -4px;
+}
+.color:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .pixel {
   background-color: white;
 }
-.black {
-  background-color: black;
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-.red {
-  background-color: red;
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.cyan {
-  background-color: cyan;
-}
-.yellow {
-  background-color: yellow;
-}
-
-#pixel-board {
+.pixels {
   width: 220px;
   line-height: 0;
 }
