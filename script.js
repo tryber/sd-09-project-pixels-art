@@ -1,33 +1,33 @@
 window.onload = function () {
-    let currentColorSelected = 'black';
-    colorGenerator();
-    let colorPalette = document.getElementById('color-palette');
-    colorPalette.addEventListener('click', setColorToPaint);
-    let pixelBoard = document.getElementById('pixel-board');
-    pixelBoard.addEventListener('click', changePixelColor);
-    let clearButton = document.getElementById('clear-board');
-    clearButton.addEventListener('click', clearPixelBoard);
-    let boardCreatorButton = document.getElementById('generate-board');
-    boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
-    let boardSizeInput = document.getElementById('board-size');
-    boardSizeInput.addEventListener('change', numbersInputValidator);
-
-    function colorGenerator() {
-        let colorBlock = document.getElementsByClassName('color');
-        for (let index = 0; index < colorBlock.length; index += 1) {
-            let newColor = Math.floor(Math.random()*16777215).toString(16);
-            //Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
-            let colorString = '#' + newColor;
-            if(colorBlock[index].id !== 'black') {
-                colorBlock[index].style.backgroundColor = colorString;
-                colorBlock[index].id = colorString;
-            } else {
-                colorBlock[index].style.backgroundColor = currentColorSelected;
-            }
+  let currentColorSelected = 'black';
+  colorGenerator();
+  const colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', setColorToPaint);
+  const pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', changePixelColor);
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', clearPixelBoard);
+  const boardCreatorButton = document.getElementById('generate-board');
+  boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
+  const boardSizeInput = document.getElementById('board-size');
+  boardSizeInput.addEventListener('change', numbersInputValidator);
+  
+  function colorGenerator() {
+    const colorBlock = document.getElementsByClassName('color');
+    for (let index = 0; index < colorBlock.length; index += 1) {
+      const newColor = Math.floor(Math.random()*16777215).toString(16);
+      // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
+      const colorString = '#' + newColor;
+      if (colorBlock[index].id !== 'black') {
+        colorBlock[index].style.backgroundColor = colorString;
+        colorBlock[index].id = colorString;
+      } else {
+          colorBlock[index].style.backgroundColor = currentColorSelected;
         }
     }
+  }
 
-    function numbersInputValidator () {
+    function numbersInputValidator() {
         let typedNumber = boardSizeInput.value;
         if (typedNumber === '') {
             alert('Board inválido!');
@@ -41,35 +41,35 @@ window.onload = function () {
         }
     }
 
-    function setColorToPaint (evt) {
+    function setColorToPaint(evt) {
         if (evt.target.className) {
-            let colorSelectedElementId = evt.target.id;
-            if (colorSelectedElementId !== currentColorSelected){
+            const colorSelectedElementId = evt.target.id;
+            if (colorSelectedElementId !== currentColorSelected) {
                 changeClassSelectedElement(colorSelectedElementId);
                 removePreviousSelectedElementClass(currentColorSelected);
                 currentColorSelected = colorSelectedElementId;
-            } 
-        }   
+            }
+        }
     }
 
-    function changePixelColor (evt) {
+    function changePixelColor(evt) {
         if (evt.target.className === 'pixel') {
-            let clickedElement = evt.target;
+            const clickedElement = evt.target;
             clickedElement.style.backgroundColor = currentColorSelected;
         }
     }
-    
-    function clearPixelBoard () {
-        let pixelBoard = document.getElementsByClassName('pixel');
-        for (let index = 0; index < pixelBoard.length; index += 1) {
-            pixelBoard[index].style.backgroundColor = 'white';            
+
+    function clearPixelBoard() {
+        let pixelBoardSelected = document.getElementsByClassName('pixel');
+        for (let index = 0; index < pixelBoardSelected.length; index += 1) {
+            pixelBoardSelected[index].style.backgroundColor = 'white';
         }
     }
 
-    function createCustomPixelBoarder () {
+    function createCustomPixelBoarder() {
         numbersInputValidator();
-        let currentPixelBoard = document.querySelectorAll('.pixel-board-child');
-        let currentPixelBoardLength = currentPixelBoard.length;
+        const currentPixelBoard = document.querySelectorAll('.pixel-board-child');
+        const currentPixelBoardLength = currentPixelBoard.length;
         let boardSizeValue = document.getElementById('board-size').value;
         boardSizeValue = parseInt(boardSizeValue, 10);
         designNewBoard(boardSizeValue, currentPixelBoardLength);
@@ -95,18 +95,18 @@ window.onload = function () {
     }
 
     function addLinesToPixelBoard(boardSize) {
-        let pixelBoard = document.getElementById('pixel-board');
+        const pixelBoardSelected = document.getElementById('pixel-board');
         for (let index = 0; index < boardSize; index += 1) {
             let newLine = document.createElement('div');
             newLine.className = 'pixel-board-child';
             addPixelsToLinesOfTheBoard(boardSize, newLine);
-            pixelBoard.appendChild(newLine)
+            pixelBoardSelected.appendChild(newLine);
         }
     }
 
     function addPixelsToLinesOfTheBoard(pixelsToAdd, line) {
         for (let index = 0; index < pixelsToAdd; index += 1) {
-            let newPixel = document.createElement('div');
+            const newPixel = document.createElement('div');
             newPixel.className = 'pixel';
             newPixel.style.backgroundColor = 'white';
             line.appendChild(newPixel);
@@ -114,19 +114,19 @@ window.onload = function () {
     }
 
     function removeLinesFromPixelBoard(linesToRemove) {
-        let pixelBoard = document.getElementById('pixel-board');
-        for (let index = linesToRemove -1 ; index >= 0; index -= 1) {
-            pixelBoard.removeChild(pixelBoard.children[0]);        
+        const pixelBoardSelected = document.getElementById('pixel-board');
+        for (let index = linesToRemove - 1; index >= 0; index -= 1) {
+            pixelBoardSelected.removeChild(pixelBoardSelected.children[0]);
         }
     }
 
-    function changeClassSelectedElement (elementId) {
-        let element = document.getElementById(elementId);
+    function changeClassSelectedElement(elementId) {
+        const element = document.getElementById(elementId);
         element.classList.add('selected');
     }
 
-    function removePreviousSelectedElementClass (elementId) {
-        let element = document.getElementById(elementId);
+    function removePreviousSelectedElementClass(elementId) {
+        const element = document.getElementById(elementId);
         element.classList.toggle('selected');
     }
 }
