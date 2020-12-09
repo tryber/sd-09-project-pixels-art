@@ -100,19 +100,23 @@ function generateBoard() {
   container.appendChild(button);
 
   button.addEventListener('click', function () {
-    // Remove existing board
-    const board = document.getElementById('pixel-board');
-    const existingRows = document.querySelectorAll('.row');
-    for (let i = 0; i < existingRows.length; i += 1) {
-      board.removeChild(existingRows[i]);
-    }
+    if (document.getElementById('board-size').value > 0) {
+      // Remove existing board
+      const board = document.getElementById('pixel-board');
+      const existingRows = document.querySelectorAll('.row');
+      for (let i = 0; i < existingRows.length; i += 1) {
+        board.removeChild(existingRows[i]);
+      }
 
-    // Generate new Board
-    const size = document.getElementById('board-size').value;
-    if (size === '') {
-      alert('Invalid board!');
+      // Generate new Board
+      const size = document.getElementById('board-size').value;
+      if (size === '') {
+        alert('Invalid board!');
+      } else {
+        generateBoardRow(size);
+      }
     } else {
-      generateBoardRow(size);
+      alert('Invalid Value!');
     }
   });
 }
