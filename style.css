@@ -1,3 +1,8 @@
+.button-reset {
+  text-align: center;
+  width: 100%;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -17,6 +22,10 @@ padding-left: 550px;
   background-color: darkgoldenrod;
 }
 
+h1 {
+  padding-left: 30px;
+}
+
 .page-title {
   color: blueviolet;
   font-style: italic;
@@ -25,7 +34,7 @@ padding-left: 550px;
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 40px;
+  height: 45px;
   width: 40px;
 }
 
