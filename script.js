@@ -1,3 +1,21 @@
+function generateRandomColors(numberOfColors) {
+  let rgbColor = ['rgb(0, 0, 0)'];
+  let stringConstructor;
+  for (let i = 0; i < numberOfColors; i++) {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    stringConstructor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+    if (!rgbColor.includes(stringConstructor)) {
+      rgbColor.push(stringConstructor);
+    } else {
+      i -= 1;
+    }
+  }
+
+  return rgbColor;
+
+}
 
 function createColorPaletteElements() {
   let colors = generateRandomColors(3);
@@ -8,6 +26,18 @@ function createColorPaletteElements() {
     colorElement.style.backgroundColor = color;
     colorPallete.appendChild(colorElement);
   }
+}
+
+function fillLineElements(size) {
+  let line = document.createElement('div');
+  line.className = 'pixel-board-line';
+  for (let i = 0; i < size; i++) {
+    let pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'rgb(255, 255, 255)';
+    line.appendChild(pixel);
+  }
+  return line;
 }
 
 function createPixelBoard(size) {
@@ -36,18 +66,6 @@ function createControls() {
   generateBoardButton.innerText = 'VQV';
   controlsContainer.appendChild(input);
   controlsContainer.appendChild(generateBoardButton);
-}
-
-function fillLineElements(size) {
-  let line = document.createElement('div');
-  line.className = 'pixel-board-line';
-  for (let i = 0; i < size; i++) {
-    let pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixel.style.backgroundColor = 'rgb(255, 255, 255)';
-    line.appendChild(pixel);
-  }
-  return line;
 }
 
 function getPelleteColor(event) {
@@ -100,25 +118,7 @@ function generateNewBoard() {
   }
 }
 
-function generateRandomColors(numberOfColors){
-  let rgbColor = ['rgb(0, 0, 0)'];
-  let stringConstructor;
-  for(let i = 0; i < numberOfColors; i++){
-    let red = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
-    stringConstructor = 'rgb(' + red +', ' + green + ', ' + blue + ')';
-    if (!rgbColor.includes(stringConstructor))
-    {
-      rgbColor.push(stringConstructor);
-    }else{
-      i -= 1;
-    }
-  }
 
-  return rgbColor;
-
-}
 
 window.onload = function () {
   createColorPaletteElements();
