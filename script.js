@@ -5,7 +5,7 @@ function generatePalette() {
 
   // [Task 3] First color is always BLACK
   const firstColor = document.createElement('div');
-  firstColor.className = 'selected color';
+  firstColor.className = 'color selected';
   firstColor.style.backgroundColor = 'black';
   palette.appendChild(firstColor);
 
@@ -41,8 +41,8 @@ function selectColor() {
     if (colorSelection.target.className === 'color') {
       for (let i = 0; i < colors.length; i += 1) {
         colors[i].className = 'color';
+        colorSelection.target.className = 'color selected';
       }
-      colorSelection.target.className = 'selected color';
     } else if (colorSelection.target.className === 'selected color') {
       colorSelection.target.className = 'color';
     }
