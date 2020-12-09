@@ -13,7 +13,7 @@ window.onload = function () {
   function addColorSquare(palette, colors) {
     for (let index = 0; index < palette.length; index += 1) {
       palette[index].style.backgroundColor = colors[index];
-      if (colors[index] === 'black'){
+      if (colors[index] === 'black') {
         palette[index].className += ' selected';
       }
     }
@@ -38,7 +38,20 @@ window.onload = function () {
     }
   }
 
+  function selectColor(event) {
+    const selectedColor = event.target;
+    deselectColor();
+    selectedColor.className += ' selected';
+  }
+
+  function deselectColor(){
+    const currentColor = document.querySelector('.selected');
+    currentColor.className = 'color';
+  }
+
   createColorsPalette(paletteColor, amountColors);
+
   createSquares(pixelBoard, amountSquares);
 
-}
+  paletteColor.addEventListener('click', selectColor);
+};
