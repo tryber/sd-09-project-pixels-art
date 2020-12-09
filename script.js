@@ -3,7 +3,7 @@ let colorsTable = document.querySelector('#color-palette');
 let pixels = document.querySelector('#pixel-board');
 var selected = document.querySelector('.selected');
 var color = selected.style.backgroundColor;
-window.onload = console.log(color);
+var btnClear = document.querySelector('#clear-board');
 //selected.classList = 'color selected';
 
 //Codigo abaixo gera o quadro de pixels
@@ -49,3 +49,13 @@ pixels.addEventListener('click', function (event){
         event.target.style.backgroundColor = 'black';
     }
 })
+
+//Codigo para o botao que limpa o quadro
+btnClear.addEventListener('click',button)
+function button() {
+    var clrPixel = document.querySelectorAll('.pixel');
+    console.log(clrPixel);
+    for (i in clrPixel){
+        clrPixel[i].style.backgroundColor = 'white';
+    }
+}
