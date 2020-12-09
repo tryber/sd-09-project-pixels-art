@@ -22,6 +22,8 @@ window.onload = function() {
       }
     }
   }
+  createDivsRowsColumns(5);
+
 
   let qntColors = paletteColors.length;
   function createPalettes(qntColors) {
