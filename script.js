@@ -28,4 +28,35 @@ function biuldSquares (divLine, numberSquaresPerLine){
   }
 }
 
-window.onload = biuldSquaresFrame();
+  function addEvents () {
+    //Adiciona escutador de clique na paleta de cores
+    let colorPalette = document.querySelector('#color-palette')
+    colorPalette.addEventListener('click',selectColor)
+
+    //Adiciona escutador de clique no pixel board
+    let pixelBoard = document.querySelector('#pixel-board')
+    pixelBoard.addEventListener('click', paintPixel)
+  }
+
+  function selectColor (event) {
+    //Remover o selectec da DIV Atual
+    document.querySelector('.selected').classList.remove('selected')
+    //Adicionar o selectec a DIV clicada
+    event.target.classList.add('selected')
+  }
+
+  //https://zellwk.com/blog/css-values-in-js/#:~:text=First%2C%20you%20need%20to%20select,to%20get%20the%20element's%20styles.&text=If%20you%20log%20style%20%2C%20you,property%20and%20their%20respective%20values.&text=You%20can%20also%20see%20this%20object%20in%20Chrome's%20and%20Firefox's%20dev%20tools.
+  function paintPixel (event) {
+    let pixel = event.target
+    let pixelStyle = getComputedStyle(pixel)
+    pixel.style.backgroundColor = getSelectedColor()
+
+  }
+
+  function getSelectedColor() {
+    let divSelected = document.querySelector('.selected')
+    let divSelectedStyle = getComputedStyle(divSelected)
+    return divSelectedStyle.backgroundColor
+  }
+
+window.onload = biuldSquaresFrame() , addEvents();
