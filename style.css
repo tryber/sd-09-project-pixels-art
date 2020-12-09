@@ -1,6 +1,17 @@
 body {
-  text-align: center;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.button {
+  padding: 15px;
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
 }
 
 .centered {
@@ -12,6 +23,13 @@ body {
   border: 1px solid black;
   display: inline-block;
   padding: 24px;
+}
+
+.palette {
+  padding: 10px;
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
 }
 
 .black {
@@ -40,4 +58,8 @@ body {
 
 .pixel-line {
   display: table-row;
+}
+
+.selected {
+  transform: scale(1.2);
 }

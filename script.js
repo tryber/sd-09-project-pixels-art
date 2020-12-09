@@ -29,6 +29,10 @@ function createBtn() {
   const clearBtn = document.createElement('button');
   clearBtn.id = 'clear-board';
   clearBtn.innerText = 'Limpar';
+  clearBtn.style.background = 'black';
+  clearBtn.style.color = 'white';
+  clearBtn.style.padding = '7px';
+  clearBtn.style.borderRadius = '10px';
   btnSection.appendChild(clearBtn);
 }
 
@@ -57,6 +61,9 @@ function createGenBoardBtn() {
   const genBoardBtn = document.createElement('button');
   genBoardBtn.id = 'generate-board';
   genBoardBtn.innerText = 'VQV';
+  genBoardBtn.style.backgroundColor = 'black';
+  genBoardBtn.style.color = 'white'
+  genBoardBtn.style.borderRadius = '10px';
   btnSection.appendChild(genBoardBtn);
 }
 
