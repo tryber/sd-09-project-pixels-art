@@ -6,7 +6,7 @@ const corDePintura = document.getElementsByClassName('pixel');
 let corDorQuadrado = 'black';
 
 window.onload = () => {
-  corPreenchida[0].classList.add('selected')
+  corPreenchida[0].classList.add('selected');
 };
 
 paletaDeCores.addEventListener('click', (event) => {
@@ -45,7 +45,7 @@ paletaDePreenchimento.addEventListener('click', (event) => {
 
 resetaPaleta.addEventListener('click', () => {
   for (let i = 0; i < corDePintura.length; i += 1) {
-    corDePintura[i].className = 'pixel';
+    corDePintura[i].className = 'pixel white';
   }
   return 0;
 },
