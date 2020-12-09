@@ -11,22 +11,22 @@
     height: 50px;
     width: 50px;
 }
-.black {
+#black {
     background-color: rgb(0,0,0);
 }
-.yellow {
+#yellow {
     background-color: rgb(255,255,0);
 }
-.violet {
+#violet {
     background-color: rgb(153,50,204);
 }
-.green {
+#green {
     background-color: rgb(0,100,0);
 }
 #pixel-board {
     line-height: 0;
-    height: 201px;
-    width: 201px;
+    height: 200px;
+    width: 200px;
 }
 .pixel {
     border: black solid 1px;
