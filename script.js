@@ -1,38 +1,36 @@
 window.onload = function() {
-  let squareBase = 4;  
+  let squareBase = 4;
+  let line = document.querySelectorAll(".line");
 
-  let pixels = document.querySelectorAll(".pixels");
-
-    function selecionaCor () {  
-      
+    function selecionaCor () { 
       
     }
-      let clickBlack = document.getElementById("black");
-      let clickRed = document.getElementById("red");
-      let clickBlue = document.getElementById("blue");
-      let clickPink = document.getElementById("pink");
-      clickBlack.addEventListener("click", selecionaCor);
-      clickRed.addEventListener('click', selecionaCor);
-      clickBlue.addEventListener('click', selecionaCor);
-      clickPink.addEventListener('click', selecionaCor);
+    let clickBlack = document.getElementById("black");
+    let clickRed = document.getElementById("red");
+    let clickBlue = document.getElementById("blue");
+    let clickPink = document.getElementById("pink");
+    clickBlack.addEventListener("click", selecionaCor);
+    clickRed.addEventListener('click', selecionaCor);
+    clickBlue.addEventListener('click', selecionaCor);
+    clickPink.addEventListener('click', selecionaCor);
   
-  fillSquare(pixels);
-  function fillSquare(pixels) {
-    for(let index = 0; index < pixels.length; index += 1) {
-      fillLine(pixels[index]);    
+  fillSquare(line);
+  function fillSquare(line) {
+    for(let index = 0; index < line.length; index += 1) {
+      fillLine(line[index]);
     }
   }
 
   function createBox(className) {
-    let box = document.createElement("div");
-    box.className = className;
-    return box;
+    let pixels = document.createElement("div");
+    pixels.className = className;
+    return pixels;
   }
 
-  function fillLine(divPixels) {
+  function fillLine(divLine) {
     for (let lineColumn = 0; lineColumn <= squareBase; lineColumn += 1) {
-      let box = createBox("box");
-      divPixels.appendChild(box);
+      let pixels = createBox("pixels");
+      divLine.appendChild(pixels);
     }
   }
 }

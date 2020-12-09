@@ -30,13 +30,13 @@
   display: inline-block;
 }
 
-.pixels {
+.line {
   width: 400px;
   height: 40px;
  background-color: white;
 }
 
-.box {
+.pixels {
   width: 40px;
   height: 40px;
   display: inline-block;
