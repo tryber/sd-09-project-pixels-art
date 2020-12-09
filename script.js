@@ -101,27 +101,12 @@ const buttonClear = document.querySelector('#clear-board');
 buttonClear.addEventListener('click', clearBoard);
 
 createButton('generate-board', 'VQV', '.size');
-
-function generateBoard() {
-  if (textInput.value === '') {
-    alert('Board inválido!');
-  }
-  const sizeValor = textInput.value;
-  textInput.value = '';
-
-  removeBoard();
-  createBoard(checkNumber(sizeValor));
-  boxLoop();
-}
-
 const textInput = document.querySelector('#board-size');
-const buttonGenerate = document.querySelector('#generate-board');
-buttonGenerate.addEventListener('click', generateBoard);
 
 function removeBoard() {
   const board = document.querySelectorAll('.line');
   for (let indexS = 0; indexS < board.length; indexS += 1) {
-    let boardRemove = board[indexS];
+    const boardRemove = board[indexS];
     boardRemove.remove();
   }
 }
@@ -136,6 +121,22 @@ function checkNumber(number) {
   }
   return number;
 }
+
+function generateBoard() {
+  if (textInput.value === '') {
+    alert('Board inválido!');
+  }
+  const sizeValor = textInput.value;
+  textInput.value = '';
+
+  removeBoard();
+  createBoard(checkNumber(sizeValor));
+  boxLoop();
+}
+
+
+const buttonGenerate = document.querySelector('#generate-board');
+buttonGenerate.addEventListener('click', generateBoard);
 
 palette(3);
 createBoard(5);
