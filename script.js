@@ -117,16 +117,26 @@ window.onload = function() {
     }
   }
 
+  function checkNumber(number) {
+    if (number < 5) {
+      number = 5;
+      return number;
+    } else if (number > 50) {
+      number = 50;
+      return number;
+    }
+    return number;
+  }
+
   function generateBoard() {
-     if (textInput.value === "") {
-       return alert('Board inválido!');
-      }
+    if (textInput.value === "") {
+      return alert('Board inválido!');
+    }
     let sizeValor = parseInt(textInput.value);
     textInput.value = "";
-    if (sizeValor >= 5 && sizeValor <= 50) {
-      sizeValor;
-    }
+    
     removeBoard();
-    createBoard(sizeValor);
+    createBoard(checkNumber(sizeValor));
   }
+  createBoard(5);
 }
