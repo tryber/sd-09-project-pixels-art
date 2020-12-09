@@ -1,10 +1,29 @@
+.black {
+  background-color:black;
+}
+
 body {
   margin: 0px;
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(11 , 30 , 30);
 }
 
-#title {
+.cyan {
+  background-color: rgb(65 , 234 , 212);
+}
+
+.center-button {
+  height: 25px;
+  width: 100px;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border: 0;
+}
+
+.center-input {
   text-align: center;
+  margin-left: 40%;
 }
 
 #clear-board {
@@ -27,15 +46,6 @@ body {
   transition: 1s;
 }
 
-#color-palette {
-  text-align: center;
-  padding: 10px;
-}
-
-#pixel-board {
-  text-align: center;
-}
-
 .color {
   border: 1px solid black;
   width: 50px;
@@ -43,32 +53,21 @@ body {
   display: inline-block;
 }
 
-.center {
-    text-align: center;
-}
-
 .color:hover {
   cursor: pointer;
 }
 
-.black {
-  background-color:black;
+#color-palette {
+  text-align: center;
+  padding: 10px;
+}
+
+.line-pixels {
+    margin: -5px;
 }
 
 .pink {
   background-color: rgb(255 , 32 , 110);
-}
-
-.yellow {
-  background-color: rgb(251 , 255 , 18);
-}
-
-.cyan {
-  background-color: rgb(65 , 234 , 212);
-}
-
-.white {
-  background-color: white;
 }
 
 .pixel {
@@ -83,6 +82,19 @@ body {
   cursor: pointer;
 }
 
-.line-pixels {
-    margin: -5px;
+#pixel-board {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.yellow {
+  background-color: rgb(251 , 255 , 18);
 }
