@@ -44,13 +44,11 @@ function updateBoardDimensions(board, amountSquare) {
   board.style.height = `${boardSize}px`;
 }
 function createSquares(board, amount) {
-  const squaresArray = [];
   updateBoardDimensions(board, amount);
   for (let index = 0; index < amount; index += 1) {
     const square = board.appendChild(createDivs());
     square.className = 'pixel';
     square.style.backgroundColor = 'white';
-    squaresArray.push(square);
   }
 }
 function removeSquares(board) {
@@ -58,18 +56,21 @@ function removeSquares(board) {
     board.removeChild(board.lastChild);
   }
 }
-function updateBoardSize(board) {
+/*function updateBoardSize(board) {
   const newBoardSize = sessionStorage.getItem('board-size');
   if (newBoardSize !== undefined) {
     removeSquares(board);
     createSquares(board, newBoardSize);
   }
 }
+*/
 function loadBoard(board, amount) {
   if (sessionStorage.getItem('board-size') === null) {
     createSquares(board, amount);
   } else {
-    updateBoardSize(board);
+    const newBoardSize = sessionStorage.getItem('board-size');
+    removeSquares(board);
+    createSquares(board, newBoardSize);
   }
 }
 const amountSquares = 25;
@@ -133,7 +134,7 @@ function createInputSizeBoard(section) {
   formInput.max = 50;
   inputButton.innerText = 'VQV';
   inputButton.id = 'generate-board';
-  inputButton.type = 'submit';
+  inputButton.type = 'input';
 }
 createInputSizeBoard(buttonSection);
 function storeBoardSize() {
@@ -146,6 +147,7 @@ function storeBoardSize() {
     inputBoardSize.value = 50;
   }
   sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
+  loadBoard(pixelBoard);
 }
 const buttonGenerateBoard = document.querySelector('#generate-board');
 buttonGenerateBoard.addEventListener('click', storeBoardSize);
