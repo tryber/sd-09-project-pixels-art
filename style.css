@@ -48,10 +48,6 @@ header {
   width: 5rem;
 }
 
-.selected {
-  border: 3px solid red;
-}
-
 .pixel-frame {
   width: 100%;
 }
