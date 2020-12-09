@@ -1,4 +1,4 @@
-window.onload = matrix (5, 5), paintPallete(), firstColor ()
+window.onload = matrix (15, 15), paintPallete(), firstColor ()
 
 function matrix (width, height){
 
