@@ -4,7 +4,6 @@ const cyanColor = document.querySelector('#cyan');
 const yellowColor = document.querySelector('#yellow');
 let bgColor = 'black'
 
-
 function palletColor() {
   blackColor.style.backgroundColor = 'black';
   redColor.style.backgroundColor = 'red';
@@ -49,7 +48,6 @@ function clearPixel() {
     pixels[index].style.backgroundColor = 'white';
   }
 }
-
 
 window.onload = function () {
   palletColor();
