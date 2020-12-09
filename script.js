@@ -3,8 +3,7 @@ window.onload = function () {
 	let pixelRow = document.getElementById('pixel-board');
 	let canvasHeight = 5;
   let canvasWidth = 5;   
-  let bgColor = 'black';
-  let chosenColor = document.querySelector('.selected').style.backgroundColor;
+  let chosenColor = 'black'
 
 	function createRows() {
     for(let i = 0; i < canvasHeight; i += 1) {
@@ -22,8 +21,8 @@ window.onload = function () {
   createRows();
   startPalette();
   
-  function paintPixel() {
-    console.log(event.target);
+  function paintPixel(event) {
+    console.log(chosenColor);
     event.target.style.backgroundColor = chosenColor;
   }
 
@@ -34,12 +33,13 @@ window.onload = function () {
     }    
   }
 
-  function selectedColor() {
+  function selectedColor(event) {
     let actualColor = event.target;
     if(actualColor.className = 'color') {
       let lastSelectedColor = document.querySelector('.selected');
       lastSelectedColor.classList.remove('selected');
       actualColor.classList.add('selected');
+      chosenColor = actualColor.id;
     }
   }
 
