@@ -5,19 +5,19 @@
   display: inline-block;
 }
 
-.color.selected {
+.black {
   background-color: black;
 }
 
-.color.two {
+.blue{
   background-color: blue;
 }
 
-.color.three {
+.red {
   background-color: red;
 }
 
-.color.four {
+.green {
   background-color: green;
 }
 

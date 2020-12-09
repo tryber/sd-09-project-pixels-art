@@ -37,17 +37,17 @@ function createPalette() {
 
   let createDivPalette = document.createElement('div');
   createDivPalette.className = 'color';
+
   let positionToAppend = document.querySelector('#color-palette')
   let created = positionToAppend.appendChild(createDivPalette);
   return created
 
 }
 
-createPalette().className = 'color' + ' ' + 'selected';
-createPalette().className = 'color' + ' ' + 'two';
-createPalette().className = 'color' + ' ' + 'three';
-createPalette().className = 'color' + ' ' + 'four';
-
+createPalette().className = 'color black selected';
+createPalette().className = 'color blue';
+createPalette().className = 'color red';
+createPalette().className = 'color green';
 
 /*
 4 - A página deve possuir um quadro de pixels, com 25 pixels.
@@ -79,8 +79,9 @@ function createLinePixel(linecolumns) {
   for (let index = 1; index <= linecolumns; index += 1) {
     for (let index2 = 1; index2 <= linecolumns; index2 += 1) {
       let pixel = document.createElement('div');
-      pixel.className = 'pixel' + ' ' + index + 'x' + index2;
+      pixel.className = 'pixel';
       position.appendChild(pixel)
+
     }
   }
 
@@ -93,25 +94,7 @@ As seguintes verificações serão feitas:
 O elemento da cor preta deve possuir, inicialmente, a classe selected;
 
 Note que o elemento que deverá receber a classe selected deve ser um dos elementos que possuem a classe color, como especificado no requisito 2.
-*/
-window.onload = () => {
-  let pixelSelector = document.querySelectorAll('.pixel');
 
-  function coloringPixels(event) {
-
-    event.target.style.backgroundColor = 'black'
-  }
-
-  for (let index = 0; index < pixelSelector.length; index += 1) {
-    pixelSelector[index].addEventListener('click', coloringPixels);
-  }
-
-
-
-}
-
-
-/*
 7 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 As seguintes verificações serão feitas:
 A classe selected deve ser adicionada à cor selecionada na paleta, ao mesmo tempo em que é removida da cor anteriormente selecionada;
@@ -119,7 +102,49 @@ A classe selected deve ser adicionada à cor selecionada na paleta, ao mesmo tem
 Somente uma das cores da paleta deve ter a classe selected de cada vez;
 
 Note que os elementos que deverão receber a classe selected devem ser os mesmos elementos que possuem a classe color, como especificado no requisito 2.
+*/
 
+let paletteColor = document.querySelectorAll('.color')
+let colorSelected = '';
+
+function selectedColor(event) {
+
+  let selectedElement = document.querySelector('.color.selected');
+  selectedElement.classList.remove('selected');
+  event.target.classList.add('selected');
+  colorSelected = event.target.className;
+  console.log(colorSelected)
+}
+
+for (let index = 0; index < paletteColor.length; index++) {
+
+  paletteColor[index].addEventListener('click', selectedColor);
+}
+
+
+let pixelsToColoring = document.querySelectorAll('.pixel');
+
+function coloringPixels(event) {
+  if (colorSelected === 'color black selected') {
+    event.target.style.backgroundColor = 'black';
+  } else if (colorSelected === 'color blue selected') {
+    event.target.style.backgroundColor = 'blue';
+  } else if (colorSelected === 'color red selected') {
+    event.target.style.backgroundColor = 'red';
+  } else {
+    event.target.style.backgroundColor = 'green';
+  }
+
+}
+
+for (let index = 0; index < pixelsToColoring.length; index += 1) {
+
+  pixelsToColoring[index].addEventListener('click', coloringPixels);
+
+}
+
+
+/*
 8 - Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
 As seguintes verificações serão feitas:
 Ao carregar a página deve ser possível pintar os pixels de preto;
