@@ -71,9 +71,9 @@ function btnBoardClear() {
     let board = document.querySelector('#pixel-board');
     board.style.background = 'white';
     let pixels = document.querySelectorAll('.pixel');
-    for(let i in pixels) {
-        pixels[i].style.backgroundColor = 'white';
-    }    
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
   })
 }
 btnBoardClear();
