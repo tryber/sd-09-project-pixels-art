@@ -19,10 +19,10 @@ header h1 {
 
 header {
   border: 5px solid rgb(220, 221, 225);
-  padding: 20px;
   border-radius: 20px;
-  width: 60%;
   margin: auto;
+  padding: 20px;
+  width: 60%; 
 }
 
 .pixel {
@@ -41,16 +41,16 @@ body {
 }
 
 #controls-container {
-  margin: auto;
   border: 5px solid rgb(220, 221, 225);
   border-radius: 20px;
-  padding: 10px;
-  width: 30%;
-  text-align: center;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin: auto;  
   margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
 }
 
 #pixel-board {
@@ -63,18 +63,18 @@ body {
 }
 
 footer {
+  bottom: 0;
   background-color: rgb(37, 36, 34);
   border-top: 5px solid rgb(245, 246, 250);
-  bottom: 0;
   color: rgb(245, 246, 250);
   display: inline-block;
-  text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
   font-weight: 600;
   left: 0;
   margin-top: 75px;
   position: fixed;
+  text-align: center;
   width: 100%;
 }
 
