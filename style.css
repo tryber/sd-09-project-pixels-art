@@ -35,7 +35,7 @@ h1 {
   background-color: white;
   border: 1px solid black;
   height: 40px;
-  width: 40px;  
+  width: 40px;
 }
 
 .pixels-box {
@@ -45,6 +45,10 @@ h1 {
 
 .second-color {
   background-color: blue;
+}
+
+table {
+  margin-left: 15px;
 }
 
 .third-color {
