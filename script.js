@@ -68,11 +68,27 @@ function addPixels(sizeValue) {
     pixels = document.querySelectorAll('.pixel');
   }
 }
+
+function removePixels(sizeValue) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  let pixels = document.querySelectorAll('.pixel');
+  const pixelSize = 42;
+  pixelBoard.style.width = `${sizeValue * pixelSize}px`;
+  while (pixels.length > Math.pow(sizeValue,2)) {
+    pixelBoard.removeChild(pixels[0]);
+    pixels = document.querySelectorAll('.pixel');
+  }
+}
+
 function resize(sizeValue) {
   if (sizeValue < 5) {
     sizeValue = 5;
   } else if (sizeValue > 50) {
     sizeValue = 50;
+  }
+  const pixels = document.querySelectorAll('.pixel');
+  if (sizeValue < Math.sqrt(pixels.length)) {
+    removePixels(sizeValue);
   }
   addPixels(sizeValue);
 }
