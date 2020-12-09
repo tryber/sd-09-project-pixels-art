@@ -12,6 +12,7 @@ function designingTheColorPalette() {
         designsPalette[index].style.display = 'inline-block';
         designsPalette[index].style.borderColor = 'black';
         designsPalette[index].style.borderStyle = 'solid';
+        designsPalette[index].style.borderWidth = '1px';
         designsPalette[index].style.height = '60px';
         designsPalette[index].style.width = '60px';
         designsPalette[index].style.borderRadius = '10px';
