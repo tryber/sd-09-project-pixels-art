@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <HTml lang="pt-BR">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Pixel Art Project</title>
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <section id="color-palette">
-        <div class="color selected" id='black'></div>
-        <div class="color" id='red'></div>
-        <div class="color" id='green'></div>
-        <div class="color" id='blue'></div>
-    </section>
-    <button id='clear-board' value="Limpar">Limpar</button>
-    <section id="pixel-board">
-        <!-- linha 1 -->
-        <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        <!-- linha 2 -->
-        <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        <!-- linha 3 -->
-        <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        <!-- linha 4 -->
-        <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-        <!-- linha 5 -->
-        <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
-    </section>
-    
-
+      <section id="color-palette">
+          <div class="color selected" id='black'></div>
+          <div class="color" id='red'></div>
+          <div class="color" id='green'></div>
+          <div class="color" id='blue'></div>
+      </section>
+      <section class='control-board'>
+        <button id='clear-board' value="Limpar" class='control'>Limpar</button>
+        <input type="text" id='board-size' name="board-size" class='control'>
+        <button id='generate-board' class='control' >#VQV</button>
+      </section>  
+      <section id="pixel-board">
+          <!-- linha 1
+          <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div>
+          <!-- linha 2 -->
+          <!-- <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div> -->
+          <!-- linha 3 -->
+          <!-- <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div> -->
+          <!-- linha 4 -->
+          <!-- <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div> -->
+          <!-- linha 5 -->
+          <!-- <div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div><div class="pixel"></div> --> 
+      </section> 
+      <footer>
+        create by: Johne Alves - LinkedIn | Github
+      </footer>
     <script src="script.js"></script>
   </body>
 </HTml>

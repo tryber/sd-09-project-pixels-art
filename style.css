@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #color-palette {
@@ -8,6 +9,7 @@ body {
 
 .color {
   border: 1px solid black;
+  border-radius: 10px;
   display: inline-block;
   height: 4rem;
   width: 4rem;
@@ -27,6 +29,18 @@ body {
 
 #blue {
   background-color: blue;
+}
+
+.control-board {
+  display: block;
+  margin: 5px;
+}
+
+.control {
+  display: inline-block;
+  border: 1px solid black;
+  height: 25px;
+  width: 70px;
 }
 
 #pixel-board {
@@ -51,4 +65,12 @@ button {
   margin-bottom: 5px;
   padding: 5px;
   width: 100px;
+}
+footer {
+  font-size: 20px;
+  color: rgb(240, 239, 245);
+  margin-top: 200px;
+  background-color: rgb(21, 100, 146);
+  min-height: 50px;
+  padding: 50px;  
 }
