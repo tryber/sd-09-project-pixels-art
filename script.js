@@ -1,7 +1,6 @@
 window.onload = function () {
   const blackPixelPalette = document.querySelector('.black');
   blackPixelPalette.className += ' selected';
-  console.log('Color 1 selected');
 };
 
 // Pintando o pixel
@@ -13,15 +12,16 @@ function changeColor(target, pixelColor) {
   }
 }
 
-function paintPixel () {
+function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
-    let pixelClicked = pixels[index];
+    const pixelClicked = pixels[index];
     pixelClicked.addEventListener('click', function (event) {
       const selectedColor = document.querySelector('.selected');
-      changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color')); 
-  });
-}}
+      changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color'));
+    });
+  }
+}
 
 paintPixel();
 
@@ -33,7 +33,6 @@ function selectColor() {
       const selectedColor = document.querySelector('.selected');
       selectedColor.className = selectedColor.className.replace(' selected', '');
       colorPalette[index].className += ' selected';
-      console.log(`Color ${index + 1} selected.`);
     });
   }
 }
@@ -41,7 +40,6 @@ function selectColor() {
 selectColor();
 
 // Limpar pixels
-
 function clearBoard() {
   const clearPixels = document.querySelector('#clear-board');
   clearPixels.addEventListener('click', function () {
@@ -49,8 +47,7 @@ function clearBoard() {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'white';
     }
-    console.log('Board successfully cleared.')
-});
+  });
 }
 
 clearBoard();
