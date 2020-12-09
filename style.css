@@ -28,11 +28,12 @@ border: 1px solid black;
     width: 40px;
     height: 40px;
 }
-#.ixel-board{ 
+.pixel-board{ 
     display: table; 
 }
 .tr{ 
     display: table-row; 
 }
 .td{ 
-    display: table-cell; }
+    display: table-cell;
+ }
