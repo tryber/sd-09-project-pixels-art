@@ -1,6 +1,7 @@
 window.onload = function () {
   createEventColorBox();
   clear();
+  classSelected()
 };
 
 function createEventColorBox() {
@@ -9,7 +10,7 @@ function createEventColorBox() {
 
   for (let index = 0; index < color.length; index += 1) {
     color[index].addEventListener("click", function (event) {
-      cor = event.target.id;
+      let cor = event.target.id;
       for (let i = 0; i < box.length; i += 1) {
         box[i].addEventListener("click", function (event) {
           event.target.style.backgroundColor = cor;
@@ -29,4 +30,18 @@ function clear() {
       pixel[index].style.backgroundColor = "white";
     }
   }
+}
+
+function classSelected() {
+  let color = document.querySelectorAll('.color')
+  let colorP = document.querySelector('#color-palette')
+
+  colorP.addEventListener('click', (event) => {
+    for (let index = 0; index < color.length; index++) {
+      if (event.target.id != 'color-palette'){
+        color[index].classList.remove('selected');
+        event.target.classList.add('selected');
+      }
+    }
+  });
 }
