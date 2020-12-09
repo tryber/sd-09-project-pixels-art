@@ -1,3 +1,9 @@
+#pixel-board {
+  display: flex;
+  width: 210px;
+  border: 1px solid;
+}
+
 .box {
   border: 1px solid;
   width: 40px;
@@ -9,18 +15,9 @@
   display: inline-block;
 }
 
-.line {
-  border: 1px solid black;
-}
-
 .pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
-}
-
-#pixel-board {
-  display: flex;
-  width: 210px;
-  border: 1px solid;
+  background-color: white;
 }

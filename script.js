@@ -35,7 +35,6 @@
     for (let index = 0; index < 5; index++) {
       let box = document.createElement('div');
       box.className = 'pixel';
-      box.style.backgroundColor = 'white';
       line.appendChild(box);
       box.addEventListener('click', paintPixel);
     }
