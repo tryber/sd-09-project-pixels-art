@@ -10,7 +10,11 @@
 header {
     text-align: center;
     padding: 20px 0 ;
-    background-color: gray;
+    background-color: #043565;
+}
+
+#main-content {
+    background-color: #5158BB;
 }
 
 #color-palette {
@@ -26,6 +30,11 @@ header {
     border: 1px black solid;
     border-radius: 40%;
     cursor: pointer;
+    box-shadow: 8px 2px 13px 1px rgba(0,0,0,0.44);
+}
+
+#size-content, #clear-content {
+    display: inline;
 }
 
 #pixel-board {
@@ -33,6 +42,7 @@ header {
     height: 210px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 300px;
 }
 
 .pixel {
@@ -43,6 +53,14 @@ header {
     cursor: pointer;
 }
 
+#board-size {
+    display: block;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
 #clear-board {
     font-size: 15px;
     display: block;
@@ -51,4 +69,14 @@ header {
     margin-bottom: 20px;
     width: 100px;
     height: 40px;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #02394A;
 }
