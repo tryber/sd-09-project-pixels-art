@@ -17,11 +17,11 @@ paletaDeCores.addEventListener('click', (event) => {
       } catch (e) {
         return e;
         // console.log("Foi removido seleção anterior")
-    }
+      }
     }
   }
   return 0;
-  }
+  },
 );
 
 paletaDePreenchimento.addEventListener('click', (event) => {
@@ -32,16 +32,16 @@ paletaDePreenchimento.addEventListener('click', (event) => {
         corDePintura[i].classList.add(corDorQuadrado);
       } catch (e) {
         return e;
+      }
     }
-    }
-  }
-  }
-)
-
-resetaPaleta.addEventListener('click', (event) => {
-  for (let i = 0; i < corDePintura.length; i += 1) {
-    corDePintura[i].className = 'pixel';
-    console.log("Cores limpas")
   }
   return 0;
-})
+  },
+)
+
+resetaPaleta.addEventListener('click', () => {
+  for (let i = 0; i < corDePintura.length; i += 1) {
+    corDePintura[i].className = 'pixel';
+  }
+  return 0;
+},)
