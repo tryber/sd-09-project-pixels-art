@@ -30,8 +30,8 @@ body {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
   border-collapse: collapse;
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
 }
 
 #pixel-board {
