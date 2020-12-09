@@ -11,10 +11,18 @@
   justify-content: space-around;
 }
 
-header h1{
+header h1 {
+  color: rgb(245, 246, 250);
   font-family: 'Press Start 2P', cursive;
-  margin: auto;
   text-align: center;
+}
+
+header {
+  border: 5px solid rgb(220, 221, 225);
+  padding: 20px;
+  border-radius: 20px;
+  width: 60%;
+  margin: auto;
 }
 
 .pixel {
@@ -27,3 +35,46 @@ header h1{
 .pixel-board-line {
   margin: 0;
 }
+
+body {
+  background-color: rgb(53, 59, 72);
+}
+
+#controls-container {
+  margin: auto;
+  border: 5px solid rgb(220, 221, 225);
+  border-radius: 20px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#pixel-board {
+  padding: 30px;
+}
+
+#pixel-board .pixel-board-line {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: rgb(37, 36, 34);
+  border-top: 5px solid rgb(245, 246, 250);
+  bottom: 0;
+  color: rgb(245, 246, 250);
+  display: inline-block;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  left: 0;
+  margin-top: 75px;
+  position: fixed;
+  width: 100%;
+}
+
