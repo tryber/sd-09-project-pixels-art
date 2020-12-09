@@ -29,9 +29,9 @@ body {
 .pixel {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
-  border-collapse: collapse;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  line-height: 0;
+  width: 40px;
 }
 
 #pixel-board {
