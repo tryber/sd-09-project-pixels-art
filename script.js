@@ -160,10 +160,10 @@ function validateBoardSize(boardSizeInput) {
 function setGenerateBoardEvents() {
   const boardSizeInput = document.querySelector('#board-size');
   const generateBoardButton = document.querySelector('#generate-board');
-  boardSizeInput.addEventListener('change', function() {
+  boardSizeInput.addEventListener('change', function () {
     validateBoardSize(boardSizeInput);
   });
-  generateBoardButton.addEventListener('click', function() {
+  generateBoardButton.addEventListener('click', function () {
     generateNewBoard(boardSizeInput.value);
   });
 }
