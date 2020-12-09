@@ -113,10 +113,12 @@ function generateBoardBtn() {
 }
 
 function generateColor() {
-  const blackSquare = document.querySelector('.color');
+  const blackSquare = document.querySelector('.black');
   blackSquare.style.backgroundColor = 'black';
+  const whiteSquare = document.querySelector('.white');
+  whiteSquare.style.backgroundColor = 'white';
   const colorSquares = document.querySelectorAll('.color');
-  for (let index = 1; index < colorSquares.length; index += 1) {
+  for (let index = 1; index < colorSquares.length - 1; index += 1) {
     colorSquares[index].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
   }
 }
