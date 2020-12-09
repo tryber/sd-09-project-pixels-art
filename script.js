@@ -27,7 +27,7 @@ function createMatrixPixels(size) {
     }
   }
 }
-createMatrixPixels(10);
+createMatrixPixels(5);
 
 function selectingColorBlack() {
   document.querySelectorAll('.color')[0].className = 'color selected';
@@ -76,4 +76,4 @@ function createBtnClear() {
     }
   })
 }
-definingMatrixSize();
+createBtnClear();
