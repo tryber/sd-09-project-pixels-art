@@ -1,4 +1,4 @@
-window.onload = matrix (5, 5), paintPallete(), firstColor ()
+window.onload = matrix (10, 10), paintPallete(), firstColor ()
 
 function matrix (width, height){
 
@@ -58,7 +58,6 @@ function firstColor(){
 }
     
 let getColorsPaletteDiv = document.querySelector('#color-palette');
-
 getColorsPaletteDiv.addEventListener('click', selectColor)
 
 function selectColor (colorOrigin){
@@ -91,3 +90,12 @@ function paintPixel (pixelOrigin){
     }
 }
 
+let getClearButton = document.querySelector('#clear-board');
+getClearButton.addEventListener('click', clear)
+
+function clear (){
+    let getPixel = document.getElementsByClassName('pixel')
+    for (let index in getPixel){
+        getPixel[index].style.backgroundColor = 'white'
+    }
+}

@@ -37,6 +37,17 @@ header {
     /* background-color: blue; */
 }
 
+#button-clear-board{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#clear-board{
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
 #pixel-board {
     display: block;
     text-align: center;
