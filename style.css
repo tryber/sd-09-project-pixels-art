@@ -1,13 +1,10 @@
 body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
   box-sizing: border-box;
+  color: royalblue;
   margin: 0;
   padding: 0;
-  color: red;
-}
-
-#color-pallete {
-  background-color: yellowgreen;
-  color: aquamarine;
 }
 
 header {
@@ -20,44 +17,33 @@ header {
 }
 
 main {
-  background-color: papayawhip;
-  height: 500px;
+  background-color: darkolivegreen;
+  height: 330px;
+  width: 31%;
+  margin-left: 25%;
+  margin-right: 20%;
+  text-align: center;
 }
 
 .color {
-  background-color: bisque;
   border: solid 1px black;
   display: inline-block;
   height: 50px;
-  margin-top: 50px;  
+  margin-top: 50px;
   width: 50px;
-}
-
-.black {
-  background-color: black;
-}
-
-.purple {
-  background-color: purple;
-}
-
-.cyan {
-  background-color: cyan;
-}
-
-.red {
-  background-color: red;
-
+  text-align: center;
 }
 
 #pixel-board {
-  background-color: transparent;
-  height: 230px;
+  background-color: black;
+  height: 224px;
   width: 230px;
+  display: inline-block;
+  text-align: center;
 }
 
 .pixel {
-  background-color: transparent;
+  background-color: white;
   border: solid 1px black;
   display: inline-block;
   height: 40px;
@@ -66,5 +52,5 @@ main {
 
 footer {
   background-color: indianred;
-  height: 200px;
+  height: 100px;
 }
