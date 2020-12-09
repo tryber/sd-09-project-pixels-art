@@ -21,3 +21,14 @@ form {
   margin-left: -1px;
   width: 40px;
 }
+
+.main-page{
+  border: 1px solid black;
+  margin: 2% 20%;
+  text-align: center;
+}
+
+.page-header{
+  border: 1px solid black;
+  margin: 2% 20%;
+}

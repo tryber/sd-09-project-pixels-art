@@ -50,6 +50,7 @@ window.onload = function () {
     for (let index = 0; index < amount; index += 1) {
       const square = board.appendChild(createDivs());
       square.className = 'pixel';
+      square.style.backgroundColor = 'white';
       squaresArray.push(square);
     }
   }
@@ -65,19 +66,11 @@ window.onload = function () {
       createSquares(board, newBoardSize);
     }
   }
-  function clearBoard() {
-    const squares = document.querySelectorAll('.pixel');
-    for (let index = 0; index < squares.length; index += 1) {
-      squares[index].style.backgroundColor = 'white';
-    }
-  }
   function loadBoard(board, amount) {
     if (sessionStorage.getItem('board-size') === null) {
       createSquares(board, amount);
-      clearBoard();
     } else {
       updateBoardSize(board);
-      clearBoard();
     }
   }
   const amountSquares = 25;
@@ -120,6 +113,12 @@ window.onload = function () {
     newForm.appendChild(newLabel);
     newForm.appendChild(newInput);
     return newForm;
+  }
+  function clearBoard() {
+    const squares = document.querySelectorAll('.pixel');
+    for (let index = 0; index < squares.length; index += 1) {
+      squares[index].style.backgroundColor = 'white';
+    }
   }
   const buttonClearBoard = document.querySelector('#clear-board');
   buttonClearBoard.addEventListener('click', clearBoard);
