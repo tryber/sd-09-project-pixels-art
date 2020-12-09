@@ -5,12 +5,13 @@ window.onload = function() {
     let palletColor = document.getElementsByClassName('color');
     palletColor[0].style.backgroundColor = 'black';
 
+    //injects white background-color to .pixel div's
     let pixels = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixels.length; index += 1){
         pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
 
-    // creates random colors for the #color-palette
+    // injects random colors in .color div's
     for (let index = 1; index < palletColor.length; index += 1){
         palletColor[index].style.backgroundColor = `rgb(${Math.ceil(Math.random() * 255)}, ${Math.ceil(Math.random() * 255)}, ${Math.ceil(Math.random() * 255)})`;
     }
@@ -39,3 +40,18 @@ function selectColor(){
 };
 
 selectColor();
+
+
+function coloringPixel() {
+    const divs = document.querySelectorAll('.pixel');
+    for(let index of divs){
+        index.addEventListener('click' ,function(event){
+            let color = document.querySelector('.selected');
+            color = window.getComputedStyle(color, null);
+
+            event.target.style.backgroundColor = color.backgroundColor;
+        })
+    }
+}
+
+coloringPixel();
