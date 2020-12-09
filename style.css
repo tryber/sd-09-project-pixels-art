@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 .container {
     display: flex;
@@ -25,8 +24,8 @@
 }
 #pixel-board {
     line-height: 0;
-    height: 200px;
-    width: 200px;
+    height: 210px;
+    width: 210px;
 }
 .pixel {
     border: black solid 1px;

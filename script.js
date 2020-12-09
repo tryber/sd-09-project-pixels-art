@@ -8,9 +8,13 @@ window.onload = function () {
             divFather.appendChild(pixel);
         }
     }
+    function changeColor (event) {
+        let initialPixelStyle = document.getElementsByClassName('pixel').style.backgroundColor;
+        
+    }   
 }
 function selected(event) {
-    const selectedItem = document.getElementsByClassName('selected')[0];
+    let selectedItem = document.getElementsByClassName('selected')[0];
     selectedItem.className = 'color';
     event.target.className = 'color selected';
 }
@@ -19,3 +23,5 @@ function clickColorPalette () {
     colorPalette.addEventListener('click', selected);
 }
 clickColorPalette()
+
+
