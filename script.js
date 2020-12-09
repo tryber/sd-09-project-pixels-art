@@ -1,5 +1,4 @@
 window.onload = function () {
-
   const chngClr = document.querySelectorAll('.color');
   const paletteRed = document.querySelector('.red');
   function changeColorToRed() {
@@ -49,8 +48,9 @@ window.onload = function () {
 
   function paintPixel() {
     const pixelBoard = document.getElementById('pixel-board');
-    pixelBoard.addEventListener('click', function(event) {
+    pixelBoard.addEventListener('click', function (event) {
       const selectedColor = document.querySelector('.selected');
+      let colr;
       if (selectedColor.classList[1] === 'red') {
         colr = 'red';
       } else if (selectedColor.classList[1] === 'blue') {
@@ -63,9 +63,7 @@ window.onload = function () {
       event.target.style.backgroundColor = colr;
     });
   }
-  paintPixel()
-
-  
+  paintPixel();
   function clearPixelsButton(buttonName) {
     const botao = document.querySelector('#clear');
     const newButton = document.createElement('button');
@@ -75,8 +73,6 @@ window.onload = function () {
     botao.appendChild(newButton);
   }
   clearPixelsButton('Limpar');
-
-
   const clr = document.querySelectorAll('.pixel');
   const bttn = document.querySelector('#clear-board');
   const color = 'white';
