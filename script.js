@@ -58,7 +58,7 @@ function fillsSquarePixel() {
 }
 fillsSquarePixel();
 
-function btnClearBoard() {
+function btnBoardClear() {
   btnClear = document.createElement('button');
   btnClear.id = 'clear-board';
   btnClear.innerText = 'Limpar';
@@ -69,11 +69,11 @@ function btnClearBoard() {
 
   divBtnClear.addEventListener('click', function (e) {
     let board = document.querySelector('#pixel-board');
-    board.style.background = '';
+    board.style.background = 'white';
     let pixels = document.querySelectorAll('.pixel');
     for(let i in pixels) {
-        pixels[i].style.backgroundColor = '';
+        pixels[i].style.backgroundColor = 'white';
     }    
   })
 }
-btnClearBoard();
+btnBoardClear();
