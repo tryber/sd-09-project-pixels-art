@@ -1,21 +1,33 @@
 #title {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #color-palette {
-    width: fit-content;
-}
-
-.color {
-    display: inline-block;
-    background-color: black;
-    width: 40px;
-    height: 40px;
+  width: 172px;
 }
 
 #pixel-board {
-    width: 250px;
-    height: 250px;
-    border: 1px solid black;
-    margin-top: 10px;
+  display: inline-block;
+  height: 210px;
+  margin-top: 10px;
+  width: 210px;
+}
+
+.color {
+  background-color: black;
+  display: inline-block;
+  border: 1px solid black;
+  height: 40px;
+  margin-right: 1px;
+  width: 40px;
+  }
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: -1px;
+  margin-top: -4px;
 }
