@@ -23,8 +23,6 @@
     height: 50px;
 }
 #pixel-board {
-    width: 205px;
-    height: 205px;
     display:table;
 }
 .row {
