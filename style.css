@@ -1,3 +1,49 @@
-.{ 
-  
+. {
+  width: 1366px;
+  height: 768px;
+}
+
+#color-palette {
+  display: inline-block;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 10px ;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.indigo {
+  background-color: indigo;
+}
+
+.violet {
+  background-color: violet;
 }
