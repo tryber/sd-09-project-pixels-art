@@ -28,15 +28,39 @@ function createPixelBoard(idName) {
 
 createPixelBoard('pixel-board');
 
-function fillPixelBoard() {
+function setNewMatrix() {
+  const myButton = document.querySelector('#generate-board');
+  const inputNumber = document.querySelector('#board-size');
+  myButton.addEventListener('click', () => {
+    const maxNumberOfPixels = Number(inputNumber.value**2);
+    removePixelBoard(maxNumberOfPixels);
+    fillPixelBoard(maxNumberOfPixels);
+    changePixelColor();
+    selectColor();
+    resetButton();
+  });
+}
+
+setNewMatrix();
+
+function fillPixelBoard(maxNumberOfPixels) {
   const pixelBoard = document.querySelector('#pixel-board');
-  const maxNumberOfPixels = 25;
   for (let pixelIndex = 0; pixelIndex < maxNumberOfPixels; pixelIndex += 1) {
     pixelBoard.appendChild(createPixel('pixel'));
   }
 }
 
-fillPixelBoard();
+function removePixelBoard(maxNumberOfPixels) {
+  const pixel = document.querySelectorAll('.pixel')
+  if (pixel.length > maxNumberOfPixels) {
+    maxNumberOfPixels = pixel.length
+  }
+  for (let pixelIndex = 0; pixelIndex < maxNumberOfPixels; pixelIndex += 1) {
+    if (pixel[pixelIndex]) {
+      pixel[pixelIndex].remove();
+    }
+  }
+}
 
 // Step 6 & 7
 function selectColor() {
@@ -51,8 +75,6 @@ function selectColor() {
   }
 }
 
-selectColor();
-
 // Step 8
 function changePixelColor() {
   const myPixelArray = document.querySelectorAll('.pixel');
@@ -63,8 +85,6 @@ function changePixelColor() {
     });
   }
 }
-
-changePixelColor();
 
 // Step 9
 function resetColors(pixelArray) {
@@ -80,5 +100,3 @@ function resetButton() {
     resetColors(pixelArray);
   });
 }
-
-resetButton();
