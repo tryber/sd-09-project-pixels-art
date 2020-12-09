@@ -17,9 +17,13 @@
       <div class="color"></div>
       <div class="color"></div>
     </nav>
-    <button id="clear-board">Limpar</button>
+    <div class="box-input">
+      <input type="number" min="5" max="50" id="board-size" placeholder="Quantidade de pixels" value="5">
+      <button id="generate-board">VQV</button>
+    </div>
   </header>
   <main class="main-container">
+    <button id="clear-board">Limpar</button>
     <section id="pixel-board"></section>
   </main>
   <script src="script.js"></script>
