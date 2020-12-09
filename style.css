@@ -1,15 +1,15 @@
 .button-clear {
-  width: 250px;
   margin-bottom: 10px;
   text-align: center;
+  width: 250px;
 }
 
 .color {
   border: 1px solid black;
   display: inline-block;
-  width: 50px;
   height: 50px;
   margin: 5px;
+  width: 50px;
 }
 
 .div-size {
@@ -23,12 +23,12 @@
 .pixel {
   border: 1px solid black;
   display: inline-block;
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
 
 .size {
-  width: 450px;
-  margin: 5px;
   display: inline-block;
+  margin: 5px;
+  width: 450px;
 }
