@@ -1,6 +1,6 @@
 // Variáveis Globais
-const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
+const pixelBoard = document.querySelector('#pixel-board');
 let colorSelected = '';
 
 // Funções
@@ -49,7 +49,7 @@ function createPixelBoard() {
 createPixelBoard();
 
 // Estrutura
-colorSelected = createColorPalette(colorPalette );
+colorSelected = createColorPalette(colorPalette);
 // console.log(colorSelected);
 
 colorPalette.addEventListener('click', function (event) {
@@ -65,4 +65,12 @@ colorPalette.addEventListener('click', function (event) {
     colorSelected = colorDiv;
   }
   // console.log(colorSelected);
+});
+
+pixelBoard.addEventListener('click', function (event) {
+  const classes = event.target;
+
+  if (classes.className !== 'line-pixel') {
+    classes.classList.add(colorSelected);
+  }
 });
