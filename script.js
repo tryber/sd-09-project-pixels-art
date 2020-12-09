@@ -46,7 +46,7 @@ function selectColor() {
     color.addEventListener('click', (event) => {
       colorSelected.className = 'color';
       event.target.className = 'color selected';
-      return colorSelected = event.target;
+      return (colorSelected = event.target);
     });
   }
 }
@@ -59,7 +59,7 @@ function changePixelColor() {
   for (const pixel of myPixelArray) {
     pixel.addEventListener('click', (event) => {
       const colorSelected = document.getElementsByClassName('color selected')[0].style.background;
-      return event.target.style.background = colorSelected;
+      return (event.target.style.background = colorSelected);
     });
   }
 }
