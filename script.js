@@ -48,4 +48,13 @@ function selectingAllColors() {
 }
 selectingAllColors();
 
+function fillsSquarePixel() {
+  let board = document.querySelector('#pixel-board');
+  let pixelColors = document.querySelectorAll('.pixel')
 
+  board.addEventListener('click', function (e) {
+    let colorSelected = document.querySelector('.selected');
+    e.target.style.backgroundColor = colorSelected.style.backgroundColor
+  });
+}
+fillsSquarePixel();
