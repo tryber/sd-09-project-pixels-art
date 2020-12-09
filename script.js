@@ -1,3 +1,9 @@
+function selectColor(event) {
+  const deselect = document.querySelector('.color.selected');
+  deselect.className = 'color';
+  event.target.className = 'color selected';
+}
+
 function drawColorPallets() {
   const colorPalette = document.querySelector('#color-palette');
   const stdColors = ['black', 'red', 'green', 'blue'];
@@ -36,12 +42,6 @@ function drawPixelBoard(boardSize) {
     }
     pixelBoard.appendChild(pixelLine);
   }
-}
-
-function selectColor(event) {
-  const deselect = document.querySelector('.color.selected')
-  deselect.className = 'color';
-  event.target.className = 'color selected';
 }
 
 window.onload = function () {
