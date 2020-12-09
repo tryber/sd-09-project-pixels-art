@@ -22,7 +22,6 @@ main {
   width: 31%;
   margin-left: 25%;
   margin-right: 20%;
-  text-align: center;
 }
 
 .color {
@@ -31,7 +30,6 @@ main {
   height: 50px;
   margin-top: 50px;
   width: 50px;
-  text-align: center;
 }
 
 #pixel-board {
@@ -39,7 +37,6 @@ main {
   height: 224px;
   width: 230px;
   display: inline-block;
-  text-align: center;
 }
 
 .pixel {
