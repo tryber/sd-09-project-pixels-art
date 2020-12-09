@@ -106,11 +106,11 @@ function generateBoardBtn() {
 }
 
 function generateColor() {
-  blackSquare = document.querySelector('.color');
+  const blackSquare = document.querySelector('.color');
   blackSquare.style.backgroundColor = 'black';
-  colorSquares = document.querySelectorAll('.color');
-  for (index = 1; index < colorSquares.length; index += 1) {
-    colorSquares[index].style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`
+  const colorSquares = document.querySelectorAll('.color');
+  for (let index = 1; index < colorSquares.length; index += 1) {
+    colorSquares[index].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
   }
 }
 
