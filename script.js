@@ -16,21 +16,21 @@ function rgbRandom() {
   const rgb = `rgb(${r} , ${g} , ${b})`;
 
   return rgb;
-};
+}
 
 function colorizePalette() {
   for (let index = 0; index < colors.length; index += 1) {
     colors[index].style.backgroundColor = rgbRandom();
     colors[0].style.backgroundColor = 'black';
   }
-};
+}
 colorizePalette();
 
 function createPixelsLine(width) {
   const pixelsRows = document.createElement('tr');
   pixelsRows.style.width = `${width * 40}px`;
   pixelBoard.appendChild(pixelsRows);
-};
+}
 
 function createPixelsColumns(line = 0) {
   const lines = document.querySelectorAll('tr');
@@ -41,7 +41,7 @@ function createPixelsColumns(line = 0) {
   pixelsColumn.style.border = '1px solid black';
   pixelsColumn.style.backgroundColor = 'white';
   lines[line].appendChild(pixelsColumn);
-};
+}
 
 function createBoard(width = 5) {
   pixelBoard.style.width = `${width * 40}px`;
@@ -55,7 +55,7 @@ function createBoard(width = 5) {
       createPixelsColumns(rows);
     }
   }
-};
+}
 createBoard(5);
 
 let savedColor = 'black';
