@@ -19,22 +19,22 @@ header {
 }
 
 .color.black {
-    background-color: black;
+    /* background-color: black;      */
 
 }
 
 .color.red {
-    background-color: red;
+    /* background-color: red; */
 
 }
 
 .color.green {
-    background-color: green;
+    /* background-color: green; */
 
 }
 
 .color.blue {
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .container-center {
