@@ -1,10 +1,6 @@
 body {
   background-color: #3a506b;
-}
-
-.color-palette {
-  height: auto;
-  text-align: center;
+  color:white;
 }
 
 .boardHolder {
@@ -16,6 +12,17 @@ body {
 
 .button-container {
   padding-top: 30px;
+  text-align: center;
+}
+
+.button {
+  font-size:1.5em;
+  height:auto;
+  width:auto;
+}
+
+.color-palette {
+  height: auto;
   text-align: center;
 }
 
@@ -31,8 +38,25 @@ body {
   width: 120px;
 }
 
+.inputHolder{
+  margin:auto;
+  padding-top:50px;
+  text-align:center;
+}
+
 h1 {
   text-align: center;
+}
+
+.label {
+  font-size:1.2em;
+  height:auto;
+  width:auto;
+}
+
+input.label{
+  text-align:center;
+  width:260px;
 }
 
 .pixel-board {

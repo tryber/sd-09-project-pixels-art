@@ -15,15 +15,20 @@
             <li style='background-color: #1985a1;' class='color'>#1985a1</li>
         </ul>
         <div class='button-container'>
-        <button id='clear-board'>Limpar</button>
+        <button class='button' id='clear-board'>Limpar</button>
         </div>
         <section class='boardHolder'>
             <div id='pixel-board' class='pixel-board'></div>
         </section>
-
+        <div class='inputHolder'>
+            <label class='label' for='size_input'>Novo Tamanho:</label>
+            <input type='text' class='label' placeholder='coloque um numero de 5 a 50'>
+            <button class='label'>Confirmar</button>
+        </div>
         <script src='script.js'></script>
+        
         <script>
-            window.addEventListener('onload',setStarterColors());
+            window.addEventListener('onload', begins());
         </script>
     </body>
 </html>

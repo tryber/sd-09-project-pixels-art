@@ -1,4 +1,4 @@
-let baseDoQuadro = 5;
+let baseQuadro = 6;
 sessionStorage.selectedColor = 'black';
 
 const colorArray = ['#2a9d8f','#f4a261','#c5c3c6','#46494c','#1985a1',
@@ -30,7 +30,7 @@ function pickStarterColors(array) {
 function setStarterColors(){
   let starterColors = pickStarterColors(colorArray);
   let colors = document.querySelectorAll('.color');
-  for (let idx = 1; idx < colors.length; idx += 1){
+  for (let idx = 1; idx < colors.length; idx += 1) {
     colors[idx].style.backgroundColor = starterColors[idx-1];
     colors[idx].innerText = starterColors[idx-1];
   }
@@ -48,30 +48,34 @@ clearButton.addEventListener('click', function (target) {
   clearBoard(target);
 });
 
-
-for (let idx = 0; idx < baseDoQuadro; idx += 1) {
-  const newLine = document.createElement('div');
-  newLine.className = 'linha';
-  document.querySelector('#pixel-board').appendChild(newLine);
+function constructBoard(baseDoQuadro){
+  destructBoard();
+  for (let idx = 0; idx < baseDoQuadro; idx += 1) {
+    const newLine = document.createElement('div');
+    newLine.className = 'linha';
+    newLine.style.height = '40px';
+    newLine.style.width = `${baseDoQuadro * 40}px`;
+    document.querySelector('#pixel-board').appendChild(newLine);
+  }
+  let myLines = document.querySelectorAll('.linha')
+  for (let idx = 0 ; idx < baseDoQuadro; idx += 1) {
+    for (let idx2 = 0; idx2 < baseDoQuadro; idx2 += 1) {
+      const newPixel = document.createElement('div');
+      newPixel.style.backgroundColor = 'white';
+      newPixel.className = 'pixel';
+      myLines[idx].appendChild(newPixel);
+    }
+  }
 }
 
-let minhasLinhas = document.querySelectorAll('.linha');
-for (let idx = 0; idx < minhasLinhas.length; idx += 1) {
-  minhasLinhas[idx].style.height = '40px';
-  minhasLinhas[idx].style.width = `${baseDoQuadro * 40}px`;
-}
-
-for (let idx = 0; idx < minhasLinhas.length; idx += 1) {
-  for (let idx2 = 0; idx2 < baseDoQuadro; idx2 += 1) {
-    const newPixel = document.createElement('div');
-    newPixel.style.backgroundColor = 'white';
-    newPixel.className = 'pixel';
-    minhasLinhas[idx].appendChild(newPixel);
+function destructBoard(){
+  let linhas = document.querySelectorAll('.linha');
+  for (let index = linhas.length - 1; index >= 0; index -= 1){
+    linhas[index].parentNode.removeChild(linhas[index]);
   }
 }
 
 const colorButtons = document.querySelectorAll('.color');
-
 function removeColorButtonMarks() {
   for (let idx = 0; idx < colorButtons.length; idx += 1) {
     if (colorButtons[idx].classList.contains('selected')) {
@@ -98,9 +102,13 @@ function colorPixel(self) {
 }
 
 const myPixels = document.querySelectorAll('.pixel');
-
 for (let idx = 0; idx < myPixels.length; idx += 1) {
   myPixels[idx].addEventListener('click', function (target) {
     colorPixel(target);
   });
+}
+
+function begins(){
+  setStarterColors();
+  constructBoard(5);
 }
