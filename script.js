@@ -18,7 +18,13 @@ getBlackSlotOnPalette.style.backgroundColor = 'black';
 getRedSlotOnPalette.style.backgroundColor = 'red';
 getGreenSlotOnPalette.style.backgroundColor = 'green';
 getBlueSlotOnPalette.style.backgroundColor = 'blue';
-
+/*function putBackgroundOnPixels() {
+  const getAllPixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < getAllPixels.length; index += 1) {
+    getAllPixels[index].style.backgroundColor = 'white';
+  }
+}
+putBackgroundOnPixels();*/
 
 function printPixelsFrame() {
   let getPixelBoard = document.getElementById('pixel-board');

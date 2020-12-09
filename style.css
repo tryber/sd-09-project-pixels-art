@@ -2,14 +2,12 @@
   box-sizing: border-box;
 }
 .black {
-  /*background-color: black;*/
   border: 1px solid black;
   height: 5em;
   margin: 3px;
   width: 5em;
 }
 .blue {
-  /*background-color: blue;*/
   border: 1px solid black;
   height: 5em;
   margin: 3px;
@@ -20,14 +18,13 @@
   margin: 30px;
 }
 .green {
-  /*background-color: green;*/
   border: 1px solid black;
   height: 5em;
   margin: 3px;
   width: 5em;
 }
 .pixel {
-  /*background-color: white;*/
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   margin: 0;
@@ -39,7 +36,6 @@
   width: 200px;
 }
 .red {
-  /*background-color: red;*/
   border: 1px solid black;
   height: 5em;
   margin: 3px;
