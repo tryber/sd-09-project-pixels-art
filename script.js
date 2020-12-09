@@ -1,14 +1,28 @@
+function generateRandomNumber() {
+  const randomNumber = Math.floor(Math.random() * 256);
+
+  return randomNumber;
+}
+
+function generateRandomRGB() {
+  const randomRGB = `rgb(${generateRandomNumber()}, ${generateRandomNumber()}, ${generateRandomNumber()})`;
+
+  return randomRGB;
+}
+
 function createColorPalette() {
   const colorPalette = document.querySelector('#color-palette');
-  const backgroundColors = ['black', 'red', 'green', 'blue'];
   const totalNumberOfColors = 4;
   for (let index = 0; index < totalNumberOfColors; index += 1) {
+    const randomColor = generateRandomRGB();
     const color = document.createElement('div');
     color.className = 'color';
     if (index === 0) {
       color.classList.add('selected');
+      color.style.backgroundColor = 'black';
+    } else {
+      color.style.backgroundColor = randomColor;
     }
-    color.style.backgroundColor = backgroundColors[index];
     colorPalette.appendChild(color);
   }
 }
@@ -113,7 +127,7 @@ function controlBoardSize() {
     if (boardSizeInput.value === '') {
       alert('Board inválido!');
     } else {
-      let sizeValue = checkInputValue(boardSizeInput.value);
+      const sizeValue = checkInputValue(boardSizeInput.value);
       generatePixelBoardLines(sizeValue);
       createPixelBoard();
     }
