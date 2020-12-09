@@ -18,13 +18,6 @@ getBlackSlotOnPalette.style.backgroundColor = 'black';
 getRedSlotOnPalette.style.backgroundColor = 'red';
 getGreenSlotOnPalette.style.backgroundColor = 'green';
 getBlueSlotOnPalette.style.backgroundColor = 'blue';
-/*function putBackgroundOnPixels() {
-  const getAllPixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < getAllPixels.length; index += 1) {
-    getAllPixels[index].style.backgroundColor = 'white';
-  }
-}
-putBackgroundOnPixels();*/
 
 function printPixelsFrame() {
   let getPixelBoard = document.getElementById('pixel-board');
@@ -60,3 +53,14 @@ function changePixelColor() {
   }
 }
 changePixelColor();
+
+function clearPixelsBoard() {
+  let getClearButton = document.querySelector('#clear-board');
+  getClearButton.addEventListener('click', function() {
+    let getPixelBoard = document.querySelectorAll('.pixel');
+    for (let index = 0; index < getPixelBoard.length; index += 1) {
+      getPixelBoard[index].style.backgroundColor = 'white';
+    }
+  })
+}
+clearPixelsBoard();
