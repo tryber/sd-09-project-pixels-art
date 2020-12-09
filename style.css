@@ -37,10 +37,11 @@
 #pixel-board {
   margin: auto;
   max-width: 210px;
+  overflow: hidden;
   text-align: center;
 }
 
-.pixel{
+.pixel {
   background-color: white;
   border: 1px solid black;
   float: left;
