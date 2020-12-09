@@ -3,8 +3,8 @@
   border: 1px solid black;
   display: inline-block;
   height: 40px;
-	margin-right: 1px;
-	margin-top: -3px;
+  margin-right: 1px;
+  margin-top: -3px;
   width: 40px;
 }
 
@@ -19,8 +19,8 @@
 }
 
 #color-palette {
-	max-width: 258px;
-	width: fit-content;
+  max-width: 258px;
+  width: fit-content;
 }
 
 #pixel-board {
@@ -32,4 +32,12 @@
 
 #title {
   font-weight: 600;
+}
+
+#clear-palette {
+	border: 1px solid black;
+	height: 39px;
+	margin-left: -1px;
+	text-align: center;
+	width: 78px;
 }
