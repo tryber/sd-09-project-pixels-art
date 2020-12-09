@@ -27,8 +27,7 @@
   position: relative;
   width: 40px;
 }
-/*
-#pixel-board {
-  height: 210px;
-  width: 210px;
-} */
+
+#clear-board {
+  margin: 10px auto;
+}

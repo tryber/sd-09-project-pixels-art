@@ -20,8 +20,6 @@ window.onload = function() {
           div_matriz.appendChild(div);
         }
       }
-    } else {
-      return console.log('Valor pode ser de 2 a 10 apenas');
     }
   }
   createDivsRowsColumns(entrada)
@@ -38,14 +36,22 @@ window.onload = function() {
   }
   createPalettes(qntColors);
 
+  let btn_clear = document.querySelector('#clear-board');
   let div_black = document.querySelector('#div1');
   div_black.className = 'color selected';
+  btn_clear.addEventListener('click', white);
   div_colorPalette.addEventListener('click', colorCapture);
   div_matriz.addEventListener('click', colorize);
 
   function colorize(event) {
     let targ = event.target;
     targ.style.backgroundColor = pincelColor;
+  }
+  function white() {
+    let clearDivs = div_matriz.children;
+    for (let i = 0; i < clearDivs.length; i += 1) {
+      clearDivs[i].style.backgroundColor = 'white';
+    }
   }
 
   function colorCapture(event) {
