@@ -1,5 +1,6 @@
 window.onload = function(){
-    let arrayPixel = document.getElementsByClassName('pixel');
+    let rowColumnTotal = 5;
+    let divPixelBoard = document.getElementById('pixel-board')
     
     createDivPixel();
 
@@ -8,12 +9,12 @@ window.onload = function(){
         divBox.className = className;
         return divBox;
     };
-    
+
     function createDivPixel(){
-        for(let indexDivPixel = 0; indexDivPixel < arrayPixel.length; indexDivPixel += 1){
-            for(indexDivBoxPixel = 0; indexDivBoxPixel< arrayPixel.length; indexDivBoxPixel += 1){
-                let createBox = createDiv('box-pixel');
-                let x = arrayPixel[indexDivBoxPixel].appendChild(createBox);
+        for(let indexDivPixel = 0; indexDivPixel < rowColumnTotal; indexDivPixel += 1){
+            for(indexDivBoxPixel = 0; indexDivBoxPixel< rowColumnTotal; indexDivBoxPixel += 1){
+                let createBox = createDiv('pixel');
+                let pixelFrame = divPixelBoard.appendChild(createBox);
             };
         };
     };
