@@ -68,6 +68,9 @@ window.onload = function() {
   btn_newMatriz.addEventListener('click', imputWidth);
   function imputWidth() {
     let num = document.querySelector('#board-size').value;
+    if (num === '') {
+      alert('Board inválido!')
+    }
     if (num < 5) {
       num = 5;
     }
