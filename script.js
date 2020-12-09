@@ -40,55 +40,55 @@ fillPixelBoard();
 
 // Step 6 & 7
 function selectColor() {
-  const myColors = document.querySelectorAll('.color')
-  let colorSelected = myColors[0]
+  const myColors = document.querySelectorAll('.color');
+  let colorSelected = myColors[0];
   for (let color of myColors) {
     color.addEventListener('click', (event) => {
-      colorSelected.className = 'color'
-      event.target.className = 'color selected'
-      colorSelected = event.target
+      colorSelected.className = 'color';
+      event.target.className = 'color selected';
+      colorSelected = event.target;
     })
   }
 }
 
-selectColor()
+selectColor();
 
 // Step 8
 function changePixelColor() {
-  const myPixelArray = document.querySelectorAll('.pixel')
+  const myPixelArray = document.querySelectorAll('.pixel');
   for (let pixel of myPixelArray) {
     pixel.addEventListener('click', (event) => {
-      let colorSelected = document.getElementsByClassName('color selected')[0].style.background
-      event.target.style.background = colorSelected
+      let colorSelected = document.getElementsByClassName('color selected')[0].style.background;
+      event.target.style.background = colorSelected;
     })
   }
 }
 
-changePixelColor()
+changePixelColor();
 
 // Step 9
 function resetColors(pixelArray) {
   for (let pixel of pixelArray) {
-    pixel.style.background = 'white'
+    pixel.style.background = 'white';
   }
 }
 
 function setResetButton() {
-  let myButton = document.createElement('button')
-  myButton.id = 'clear-board'
-  myButton.innerText = 'Limpar'
-  document.body.appendChild(myButton)
-  document.body.replaceChild(myButton, document.body.childNodes[4])
+  let myButton = document.createElement('button');
+  myButton.id = 'clear-board';
+  myButton.innerText = 'Limpar';
+  document.body.appendChild(myButton);
+  document.body.replaceChild(myButton, document.body.childNodes[4]);
 }
 
-setResetButton()
+setResetButton();
 
 function resetButtonEvent() {
-  const myButton = document.querySelector('button')
-  const myPixelArray = document.querySelectorAll('.pixel')
+  const myButton = document.querySelector('button');
+  const myPixelArray = document.querySelectorAll('.pixel');
   myButton.addEventListener('click', () => {
-    resetColors(myPixelArray)
+    resetColors(myPixelArray);
   })
 }
 
-resetButtonEvent()
+resetButtonEvent();
