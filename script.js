@@ -45,6 +45,19 @@ window.onload = function () {
   paletteGreen.addEventListener('click', changeColorToGreen);
   paletteBlack.addEventListener('click', changeColorToBlack);
 
+
+  function paintPixel() {
+    const pixelBoard = document.getElementById('pixel-board');
+    pixelBoard.addEventListener('click', function(event) {
+      const selectedColor = document.querySelector('.selected');
+      const colr = selectedColor.style.background;
+      event.target.style.background = colr;
+    });
+  }
+  paintPixel()
+
+
+  
   function clearPixelsButton(buttonName) {
     const botao = document.querySelector('#clear');
     const newButton = document.createElement('button');
