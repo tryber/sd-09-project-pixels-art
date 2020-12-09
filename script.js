@@ -2,12 +2,10 @@ window.onload = function () {
   const paletteColor = document.querySelector('#color-palette');
   const pixelBoard = document.querySelector('#pixel-board');
   const buttonSection = document.querySelector('#button-section');
-
   function createDivs() {
     const div = document.createElement('div');
     return div;
   }
-
   function generateRandomColors() {
     const rgbNumberArray = [];
     let color = '';
@@ -20,7 +18,6 @@ window.onload = function () {
     color = `rgb(${rgbNumberArray.join(', ')})`;
     return color;
   }
-
   function addColorSquare(palette) {
     for (let index = 0; index < palette.length; index += 1) {
       if (index === 0) {
@@ -31,7 +28,6 @@ window.onload = function () {
       }
     }
   }
-
   function createColorsPalette(palette, amount) {
     const palleteArray = [];
     for (let index = 0; index < amount; index += 1) {
@@ -41,16 +37,13 @@ window.onload = function () {
     }
     addColorSquare(palleteArray);
   }
-
   const amountColors = 4;
   createColorsPalette(paletteColor, amountColors);
-
-  function updateBoardDimensions(board,amountSquare) {
+  function updateBoardDimensions(board, amountSquare) {
     const boardSize = (Math.sqrt(amountSquare)) * 40;
     board.style.width = `${boardSize}px`;
     board.style.height = `${boardSize}px`;
   }
-
   function createSquares(board, amount) {
     const squaresArray = [];
     updateBoardDimensions(board, amount);
@@ -60,45 +53,37 @@ window.onload = function () {
       squaresArray.push(square);
     }
   }
-
   function removeSquares(board) {
     while (board.firstChild) {
       board.removeChild(board.lastChild);
     }
   }
-
   function updateBoardSize(board) {
     const newBoardSize = sessionStorage.getItem('board-size');
-    if (newBoardSize !== undefined){
+    if (newBoardSize !== undefined) {
       removeSquares(board);
-      createSquares(board,newBoardSize);
+      createSquares(board, newBoardSize);
     }
   }
-
-  function loadBoard (board, amount){
-    if (sessionStorage.getItem('board-size') === null){
+  function loadBoard(board, amount) {
+    if (sessionStorage.getItem('board-size') === null) {
       createSquares(board, amount);
     } else {
       updateBoardSize(board);
     }
   }
-  
   const amountSquares = 25;
   loadBoard(pixelBoard, amountSquares);
-
   function deselectColor() {
     const currentColor = document.querySelector('.selected');
     currentColor.className = 'color';
   }
-
   function selectColor(event) {
     const selectedColor = event.target;
     deselectColor();
     selectedColor.className += ' selected';
   }
-
   paletteColor.addEventListener('click', selectColor);
-
   function fillSquare(event) {
     const selectedSquare = event.target;
     if (selectedSquare !== document.querySelector('#pixel-board')) {
@@ -106,24 +91,19 @@ window.onload = function () {
       selectedSquare.style.backgroundColor = currentColor.style.backgroundColor;
     }
   }
-
   pixelBoard.addEventListener('click', fillSquare);
-
   function createButton(section) {
     const newButton = document.createElement('button');
     newButton.type = 'button';
     section.appendChild(newButton);
     return newButton;
   }
-
   function createClearButton(section) {
     const clearButton = createButton(section);
     clearButton.innerText = 'Limpar';
     clearButton.id = 'clear-board';
   }
-
   createClearButton(buttonSection);
-
   function createForm(section) {
     const newForm = document.createElement('form');
     const newLabel = document.createElement('label');
@@ -133,18 +113,14 @@ window.onload = function () {
     newForm.appendChild(newInput);
     return newForm;
   }
-
   function clearBoard() {
     const squares = document.querySelectorAll('.pixel');
     for (let index = 0; index < squares.length; index += 1) {
       squares[index].style.backgroundColor = 'white';
     }
   }
-
   const buttonClearBoard = document.querySelector('#clear-board');
-
   buttonClearBoard.addEventListener('click', clearBoard);
-  
   function createInputSizeBoard(section) {
     const inputForm = createForm(section);
     const inputButton = createButton(inputForm);
@@ -158,13 +134,11 @@ window.onload = function () {
     inputButton.id = 'generate-board';
     inputButton.type = 'submit';
   }
-
   createInputSizeBoard(buttonSection);
-
   function storeBoardSize() {
     const inputBoardSize = document.querySelector('#board-size');
     if (inputBoardSize.value === '') {
-     return alert('Board inválido!');
+      return alert('Board inválido!');
     } else if (inputBoardSize.value < 5) {
       inputBoardSize.value = 5;
     } else if (inputBoardSize.value > 50) {
@@ -172,9 +146,6 @@ window.onload = function () {
     }
     sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
   }
-
   const buttonGenerateBoard = document.querySelector('#generate-board');
-
   buttonGenerateBoard.addEventListener('click', storeBoardSize);
-
 };
