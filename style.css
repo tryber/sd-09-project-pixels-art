@@ -21,11 +21,13 @@
 }
 
 #table {
-margin: 40px 40px;
+width: 40px;
+height: 40px;
 border: 1px solid black;
 background-color: white;
 display: table;
 }
+
 .tr {
   border: 1px solid black;
   padding: 35px;
