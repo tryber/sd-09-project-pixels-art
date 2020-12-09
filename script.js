@@ -9,3 +9,10 @@ let pixels = document.querySelectorAll('td');
 for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].className = 'pixel'; 
 }
+
+let initialColorOfPincel = document.querySelectorAll('.color');
+for (let index = 0; index < initialColorOfPincel.length; index += 1) { 
+    if (initialColorOfPincel[index].style.backgroundColor === "black") {
+        initialColorOfPincel[index].className += ' selected';
+    }
+}
