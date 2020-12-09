@@ -2,14 +2,14 @@
   background-color: black;
 }
 
+.blue {
+  background-color: blue;
+}
+
 body {
   height: 100%;
   text-align: center;
   width: 100%;
-}
-
-.blue {
-  background-color: blue;
 }
 
 .color {
@@ -22,7 +22,7 @@ body {
 .container {
   background-color: rgb(204, 221, 221);
   margin: 10px auto;
-  padding: 10px;
+  padding: 10px 10px;
   width: 50%;
 }
 
@@ -38,7 +38,9 @@ body {
 
 .pixel-board {
   line-height: 0;
-  margin: 10px auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   width: 470px;
 }
 

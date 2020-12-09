@@ -1,9 +1,8 @@
 window.onload = function() {
-  paletteColor();
-  pixelFrame();
-  selectColor();
+  selectColor('.black');
 }
 
+// Cria paleta com quatro cores distintas
 function paletteColor() {
   const palette = document.querySelector('#color-palette');
   const color = ['black', 'blue', 'yellow', 'red'];
@@ -14,7 +13,9 @@ function paletteColor() {
     palette.appendChild(divColor);
   }
 }
+paletteColor();
 
+// Cria quadro com 25 pixels
 function pixelFrame() {
   const container = document.querySelector('.container');
   const pixelBoard = document.createElement('div');
@@ -27,8 +28,32 @@ function pixelFrame() {
   }
   container.appendChild(pixelBoard);
 }
+pixelFrame();
 
-function selectColor() {
-  const select = document.querySelector('.black');
+// Seleciona a cor
+function selectColor(color) {
+  const select = document.querySelector(color);
   select.classList.add('selected');
+  select.style.borderRadius = '8px';
 }
+
+// Tira a seleção da cor
+function stripSelection() {
+  const unselect = document.querySelectorAll('.color');
+  for (let index = 0; index < unselect.length; index += 1) {
+    unselect[index].classList.remove('selected');
+    unselect[index].style.borderRadius = '0';
+  }
+}
+
+// Seleciona a cor ao clicar
+function clicSelectColor() {
+  const colorPalette = document.querySelector('#color-palette');
+  colorPalette.addEventListener('click', function(event) {
+    const colorSelect = event.target.classList;
+    let cor = '.' + colorSelect[1];
+    stripSelection();
+    selectColor(cor);
+  });
+}
+clicSelectColor();
