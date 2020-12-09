@@ -8,6 +8,22 @@ window.onload = function () {
     clearButton.addEventListener('click', clearPixelBoard);
     let boardCreatorButton = document.getElementById('generate-board');
     boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
+    let boardSizeInput = document.getElementById('board-size');
+    boardSizeInput.addEventListener('change', numbersInputValidator);
+
+    function numbersInputValidator () {
+        let typedNumber = boardSizeInput.value;
+        if (typedNumber === '') {
+            alert('Board inválido!');
+        }
+        typedNumber = parseInt(typedNumber, 10);
+        if (typedNumber < 5) {
+            boardSizeInput.value = 5;
+        }
+        if (typedNumber > 50) {
+            boardSizeInput.value = 50;
+        }
+    }
 
     function setColorToPaint (evt) {
         if (evt.target.className) {
@@ -35,25 +51,31 @@ window.onload = function () {
     }
 
     function createCustomPixelBoarder () {
+        numbersInputValidator();
         let currentPixelBoard = document.querySelectorAll('.pixel-board-child');
         let currentPixelBoardLength = currentPixelBoard.length;
         let boardSizeValue = document.getElementById('board-size').value;
         boardSizeValue = parseInt(boardSizeValue, 10);
-        if (boardSizeValue > 0) {
-            designNewBoard(boardSizeValue, currentPixelBoardLength);
-        } else {
-            alert('Board invalido!');
-        }
+        designNewBoard(boardSizeValue, currentPixelBoardLength);
     }
 
     function designNewBoard(boardSize, currentBoardSize) {
-        if (currentBoardSize > boardSize) {
-            let linesToRemove = currentBoardSize - boardSize
-            removeLinesFromPixelBoard(linesToRemove);
-            return null;
+        if (boardSize < 5) {
+            removeLinesFromPixelBoard(currentBoardSize);
+            currentBoardSize = 5;
+            addLinesToPixelBoard(boardSize);
+            return 0;
+        }
+        if (boardSize > 50) {
+            removeLinesFromPixelBoard(currentBoardSize);
+            currentBoardSize = 50;
+            addLinesToPixelBoard(boardSize);
+            return 1;
         }
         removeLinesFromPixelBoard(currentBoardSize);
         addLinesToPixelBoard(boardSize);
+        currentBoardSize = boardSize;
+        return 2;
     }
 
     function addLinesToPixelBoard(boardSize) {
@@ -70,6 +92,7 @@ window.onload = function () {
         for (let index = 0; index < pixelsToAdd; index += 1) {
             let newPixel = document.createElement('div');
             newPixel.className = 'pixel';
+            newPixel.style.backgroundColor = 'white';
             line.appendChild(newPixel);
         }
     }
@@ -78,13 +101,6 @@ window.onload = function () {
         let pixelBoard = document.getElementById('pixel-board');
         for (let index = linesToRemove -1 ; index >= 0; index -= 1) {
             pixelBoard.removeChild(pixelBoard.children[0]);        
-        }
-        removePixelsFromLinesOFTheBoard(linesToRemove)
-    }
-
-    function removePixelsFromLinesOFTheBoard(pixelsToRemove) {
-        for (let index = pixelsToRemove - 1; index >= 0; index -= 1) {
-            pixelBoard.children[index].removeChild(pixelBoard.children[index].children[0]);
         }
     }
 
