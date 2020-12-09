@@ -2,6 +2,9 @@ const colors = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
 const btnClear = document.querySelector('#clear-board');
+const inBoardSize = document.querySelector('#board-size');
+const inValue = document.querySelector('#inValue');
+const btnGenerateBoard = document.querySelector('#generate-board');
 
 colors[0].style.backgroundColor = 'black';
 colors[1].style.backgroundColor = 'red';
@@ -26,63 +29,31 @@ function colorizePalette() {
 }
 colorizePalette();
 
-// function createPixelsLine(width) {
-//   const pixelsRows = document.createElement('tr');
-//   pixelsRows.style.width = `${width * 40}px`;
-//   pixelBoard.appendChild(pixelsRows);
-// }
-
-// function createPixelsColumns(line = 0) {
-//   const lines = document.querySelectorAll('tr');
-//   const pixelsColumn = document.createElement('td');
-//   pixelsColumn.className = 'pixel';
-//   pixelsColumn.style.width = '40px';
-//   pixelsColumn.style.height = '40px';
-//   pixelsColumn.style.border = '1px solid black';
-//   pixelsColumn.style.backgroundColor = 'white';
-//   lines[line].appendChild(pixelsColumn);
-// }
-
-// function createBoard(width = 5) {
-//   pixelBoard.style.width = `${width * 40}px`;
-//   pixelBoard.style.height = `${width * 40}px`;
-
-//   colors[0].className += ' selected';
-
-//   for (let rows = 0; rows < width; rows += 1) {
-//     createPixelsLine(5);
-//     for (let column = 0; column < width; column += 1) {
-//       createPixelsColumns(rows);
-//     }
-//   }
-// }
-// createBoard(5);
-
-// const pixelBoard = document.querySelector('#pixel-board');
-
 function createPixel() {
   const lineOfPixels = document.createElement('div');
   lineOfPixels.className = 'pixel';
-  lineOfPixels.style.width = '40px';
-  lineOfPixels.style.height = '40px';
-  lineOfPixels.style.backgroundColor = 'white';
-  lineOfPixels.style.border = '1px solid black';
   pixelBoard.appendChild(lineOfPixels);
 }
 
-function createBoard(width = 5, height = 5) {
+function createBoard(boardSize) {
+  if (boardSize === '') {
+    boardSize = 5;
+  }else {
+    boardSize = Number(inValue.value);
+  }
+  
   colors[0].className += ' selected';
 
-  for (let pixelRow = 0; pixelRow < width; pixelRow += 1) {
-    for (let pixelColumn = 0; pixelColumn < height; pixelColumn += 1) {
+  for (let pixelRow = 0; pixelRow < boardSize; pixelRow += 1) {
+    for (let pixelColumn = 0; pixelColumn < boardSize; pixelColumn += 1) {
       createPixel();
     }
   }
-  pixelBoard.style.width = `${width * colors[0].offsetWidth}px`;
-  pixelBoard.style.height = `${height * colors[0].offsetWidth}px`;
+  pixelBoard.style.width = `${boardSize * colors[0].offsetWidth}px`;
+  pixelBoard.style.height = `${boardSize * colors[0].offsetWidth}px`;
   pixelBoard.style.margin = 'auto';
 }
-createBoard(5, 5);
+createBoard(inValue.value);
 
 let savedColor = 'black';
 colorPalette.addEventListener('click', function (event) {
@@ -104,6 +75,11 @@ pixelBoard.addEventListener('click', function (event) {
 btnClear.addEventListener('click', () => {
   const pixel = document.querySelectorAll('#pixel-board div');
   for (let item = 0; item < pixel.length; item += 1) {
-    pixel[item].style.backgroundColor = 'rgb(256, 256, 256)';
+    pixel[item].style.backgroundColor = '#fff';
   }
 });
+
+inBoardSize.addEventListener('change', () => {
+  let value = inBoardSize.value;
+  inValue.value = value;
+})
