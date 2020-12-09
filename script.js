@@ -59,17 +59,22 @@ function drawPixelBoard(boardSize) {
 
 function deleteBoard() {
   const pixelBoard = document.querySelector('#pixel-board');
-  // let child;
   while (pixelBoard.firstElementChild) {
-    let child = pixelBoard.firstElementChild
+    const child = pixelBoard.firstElementChild;
     pixelBoard.removeChild(child);
   }
 }
 
 function generatePixelBoard() {
-  const inputValue = document.querySelector('#board-size').value;
+  let inputValue = document.querySelector('#board-size').value;
   if (!inputValue) {
     alert('Board inválido!');
+  }
+  if (inputValue < 5) {
+    inputValue = 5;
+  }
+  if (inputValue > 50) {
+    inputValue = 50;
   }
   if (inputValue) {
     deleteBoard();
