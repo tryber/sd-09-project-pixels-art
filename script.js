@@ -3,11 +3,10 @@ function selectColor() {
   const colors = document.getElementsByClassName('color');
 
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener ('click', function(event) {
+    colors[index].addEventListener('click', function (event) {
       for (let index2 = 0; index2 < selectedColors.length; index2 += 1) {
         selectedColors[index2].classList.remove('selected');
       }
-
       event.target.classList.add('selected');
     });
   }
@@ -35,7 +34,7 @@ function createBtn() {
 
 function clearBoard() {
   const clearBtn = document.querySelector('#clear-board');
-  clearBtn.addEventListener('click', function() {
+  clearBtn.addEventListener('click', function () {
     const pixels = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'white';
@@ -62,8 +61,14 @@ function createGenBoardBtn() {
 }
 
 function generateBoard() {
-  const inputValue = document.querySelector('#board-size').value;
+  let inputValue = document.querySelector('#board-size').value;
   const pixelBoardDiv = document.querySelector('#pixel-board');
+  if (inputValue < 5) {
+    inputValue = 5;
+  }
+  if (inputValue > 50) {
+    inputValue = 50;
+  }
   for (let index = 0; index < inputValue; index +=1) {
     const boardLine = document.createElement('div');
     boardLine.className = 'pixel-line';
@@ -77,6 +82,7 @@ function generateBoard() {
       boardColumn.className = 'pixel';
       boardColumn.style.display = 'table-cell';
       pixelLine[index].appendChild(boardColumn);
+
     }
   }
 }
