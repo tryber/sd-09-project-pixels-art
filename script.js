@@ -25,7 +25,7 @@ function createPixelBoard(sizeBoard) {
       divCol.className = 'pixel box';
       divRow.appendChild(divCol);
     }
-  elementHolder.appendChild(divRow);
+    elementHolder.appendChild(divRow);
   }
 }
 createPixelBoard(5);
@@ -47,29 +47,29 @@ changeColor();
 function paintPixel() {
   const colorPaleteAll = document.querySelector('#color-palette').children;
   const pixelsBoardAll = document.querySelectorAll('.pixel');
-  for (let index1 = 0; index1 < pixelsBoardAll.length; index1 += 1){
+  for (let index1 = 0; index1 < pixelsBoardAll.length; index1 += 1) {
     pixelsBoardAll[index1].addEventListener('click', function (event) {
       for (let index2 = 0; index2 < colorPaleteAll.length; index2 += 1) {
         if (colorPaleteAll[index2].className === 'color box selected') {
           event.target.style.backgroundColor = colorPaleteAll[index2].style.backgroundColor;
         }
       }
-    })
+    });
   }
 }
 paintPixel();
 
 function clearButton() {
   const elementHolder = document.querySelector('#color-palette');
-  let pixelsBoardAll = document.querySelectorAll('.pixel');
+  const pixelsBoardAll = document.querySelectorAll('.pixel');
   const newelement = document.createElement('button');
   newelement.id = 'clear-board';
-  newelement.className = 'buttonClear'
+  newelement.className = 'buttonClear';
   newelement.innerText = 'Limpar';
   newelement.addEventListener('click', function () {
-  for (let index = 0; index < pixelsBoardAll.length; index += 1) {
-    pixelsBoardAll[index].style.backgroundColor = 'white';
-  }
+    for (let index = 0; index < pixelsBoardAll.length; index += 1) {
+      pixelsBoardAll[index].style.backgroundColor = 'white';
+    }
   });
   elementHolder.insertAdjacentElement('afterend', newelement);
 }
