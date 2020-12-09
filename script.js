@@ -4,7 +4,8 @@ function colorGenerator() {
   for (let index = 0; index < colorBlock.length; index += 1) {
     const newColor = Math.floor(Math.random() * 16777215).toString(16);
     // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
-    const colorString = '#' + newColor;
+    const colorString = '#';
+    colorString +=  newColor;
     if (colorBlock[index].id !== 'black') {
       colorBlock[index].style.backgroundColor = colorString;
       colorBlock[index].id = colorString;
