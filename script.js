@@ -65,6 +65,12 @@ window.onload = function () {
       createSquares(board, newBoardSize);
     }
   }
+  function clearBoard() {
+    const squares = document.querySelectorAll('.pixel');
+    for (let index = 0; index < squares.length; index += 1) {
+      squares[index].style.backgroundColor = 'white';
+    }
+  }
   function loadBoard(board, amount) {
     if (sessionStorage.getItem('board-size') === null) {
       createSquares(board, amount);
@@ -115,12 +121,6 @@ window.onload = function () {
     newForm.appendChild(newInput);
     return newForm;
   }
-  function clearBoard() {
-    const squares = document.querySelectorAll('.pixel');
-    for (let index = 0; index < squares.length; index += 1) {
-      squares[index].style.backgroundColor = 'white';
-    }
-  }
   const buttonClearBoard = document.querySelector('#clear-board');
   buttonClearBoard.addEventListener('click', clearBoard);
   function createInputSizeBoard(section) {
@@ -130,9 +130,9 @@ window.onload = function () {
     const formInput = formLabel.nextSibling;
     formLabel.for = 'board-size';
     formInput.id = 'board-size';
-    formInput.type = 'text';
+    formInput.type = 'number';
     formInput.min = 1;
-    formInput.max = 50
+    formInput.max = 50;
     inputButton.innerText = 'VQV';
     inputButton.id = 'generate-board';
     inputButton.type = 'submit';
