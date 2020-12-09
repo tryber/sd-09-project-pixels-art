@@ -1,15 +1,28 @@
+window.addEventListener('load',function() {
+  arrayColors = (randomColor(3,255));
+})
+let arrayColorsValue = [];
+function randomColor(numberOfColors,numberMaxRGB) {
+  let arrayColors = ['rgb(0, 0, 0)'];
+  for (let index = 1; index <= numberOfColors; index += 1){
+    let createColor = {
+      r: parseInt(Math.random() * numberMaxRGB),
+      g: parseInt(Math.random() * numberMaxRGB),
+      b: parseInt(Math.random() * numberMaxRGB),
+    }
+    arrayColors[index] = (`rgb(${createColor.r}, ${createColor.g}, ${createColor.b})`);
+  }
+  return arrayColors;
+}
+
+let arrayColors = randomColor(3,255);
+
 function addPaletteColor() {
   const elementHolder = document.querySelector('#color-palette');
-  const colors = {
-    1: 'rgb(0, 0, 0)',
-    2: 'rgb(114, 87, 87)',
-    3: 'rgb(219, 86, 219)',
-    4: 'rgb(30, 144, 255)',
-  };
-  for (let index = 1; index <= Object.keys(colors).length; index += 1) {
+  for (let index = 0; index < arrayColors.length; index += 1) {
     const newElement = document.createElement('div');
     newElement.className = 'color box';
-    newElement.style.backgroundColor = colors[index];
+    newElement.style.backgroundColor = arrayColors[index];
     elementHolder.appendChild(newElement);
   }
 }
@@ -124,22 +137,28 @@ function createNewBoard(valueInput) {
 function minMaxBoardCreator(valueInput) {
   let sizeBoard = 0;
   if (valueInput <= 50) {
-    sizeBoard = 5;
+    if(valueInput < 5) {
+      sizeBoard = 5;
+      alert('Tamanho mínimo 5');
+    }
     if (valueInput > 5) {
-      sizeBoard = valueInput;
+    sizeBoard = valueInput;
     }
   }
   else {
     sizeBoard = 50;
+    alert('Tamanho máximo 50');
   }
-  return createNewBoard(sizeBoard);
+  createNewBoard(sizeBoard);
 }
 
 function verifyPainelNumber(valueInput) {
   if (valueInput === '') {
-    return alert('Board inválido!');
+    alert('Board inválido!');
   }
-  minMaxBoardCreator(valueInput);
+  else {
+    minMaxBoardCreator(valueInput);
+  }
 }
 
 function changePainelSize() {
