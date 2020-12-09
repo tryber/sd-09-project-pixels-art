@@ -38,12 +38,14 @@ h1 {
 #pixel-board {
   margin-top: 30px;
   margin-left: 30px;
+  width: 210px;
 }
 
 .pixel {
   border: solid 1px;
   width: 40px;
   height: 40px;
+  display: flex;
   background-color: white;
 }
 
