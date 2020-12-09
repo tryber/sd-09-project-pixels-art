@@ -4,23 +4,29 @@ window.onload = function () {
 }
 
 function createEventColorBox() {
-  let box = document.querySelector('#pixel-board');
-  let color = document.querySelectorAll('.color');
+  let box = document.querySelectorAll('.pixel');
+  let color = document.querySelectorAll('#color-palette .color');
 
-  function boxColor(event) {
-    event.target.style.backgroundColor = 'gray';
+  for (let index = 0; index < color.length; index += 1) {
+    color[index].addEventListener('click', function(event){
+      let cor = event.target.id;
+
+      for (let i = 0; i < box.length; i += 1) {
+        box[i].addEventListener('click', function(event) {
+        event.target.style.backgroundColor = cor;
+      });
+      }
+    });
   }
-  box.addEventListener('click', boxColor);
 }
 
 function clear() {
   let button = document.querySelector('#clear-board')
-  console.log(button);
   let pixel = document.querySelectorAll('div .pixel')
 
   button.addEventListener('click', colored)
   function colored(){
-    for (let index = 0; index < pixel.length; index++) {
+    for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.backgroundColor = 'white'
     }
   }
