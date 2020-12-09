@@ -64,7 +64,7 @@ function verificaNovaBase(number) {
 
 function mudaBoardPeloBotao() {
   const fieldValue = document.querySelector('.input').value;
-  if (fieldValue === '' || fieldValue < 0){
+  if (fieldValue === '' || fieldValue < 0) {
     document.querySelector('.input').value = '';
     return alert('Board inválido!');
   }
@@ -79,9 +79,9 @@ function mudaPeloEnter(self) {
   const key = self.keyCode;
   if (key === 13) {
     const fieldValue = document.querySelector('.input').value;
-    if (fieldValue ===''|| fieldValue < 0){
+    if (fieldValue === ''|| fieldValue < 0) {
       document.querySelector('.input').value = '';
-      return alert ('Board inválido!');
+      return alert('Board inválido!');
     }
     const answer = verificaNovaBase(fieldValue);
     constructBoard(answer);

@@ -18,8 +18,8 @@ body {
 .button {
   font-size: 1.2em;
   height: auto;
+  margin-right: 200px;
   width: auto;
-  margin-right:200px;
 }
 
 .color-palette {

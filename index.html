@@ -44,11 +44,11 @@
                 for (let idx = 0; idx < 3; idx += 1) {
                     ok = false;
                     while (!ok) {
-                    num = Math.floor(Math.random() * array.length);
-                    if (!starterColors.includes(array[num])) {
-                        starterColors.push(array[num]);
-                        ok = true;
-                    }
+                        num = Math.floor(Math.random() * array.length);
+                        if (!starterColors.includes(array[num])) {
+                            starterColors.push(array[num]);
+                            ok = true;
+                        }
                     }
                 }
                 return (starterColors);
@@ -62,7 +62,7 @@
                     newLine.innerText = starterColors[idx];
                     document.querySelector('.color-palette').appendChild(newLine);
                 }
-                
+
                 function removeColorButtonMarks() {
                     for (let idx = 0; idx < colorButtons.length; idx += 1) {
                         if (colorButtons[idx].classList.contains('selected')) {
