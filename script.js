@@ -22,15 +22,15 @@ window.onload = function() {
   }
 
   function createBox(className) {
-    let pixels = document.createElement("div");
-    pixels.className = className;
-    return pixels;
+    let pixel = document.createElement("div");
+    pixel.className = className;
+    return pixel;
   }
 
   function fillLine(divLine) {
     for (let lineColumn = 0; lineColumn <= squareBase; lineColumn += 1) {
-      let pixels = createBox("pixels");
-      divLine.appendChild(pixels);
+      let pixel = createBox("pixel");
+      divLine.appendChild(pixel);
     }
   }
 }
