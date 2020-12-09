@@ -110,13 +110,9 @@ function generateBoard() {
 
       // Generate new Board
       const size = document.getElementById('board-size').value;
-      if (size === '') {
-        alert('Invalid board!');
-      } else {
-        generateBoardRow(size);
-      }
+      generateBoardRow(size);
     } else {
-      alert('Invalid Value!');
+      alert('Board inválido!');
     }
   });
 }
