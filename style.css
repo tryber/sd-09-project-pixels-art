@@ -1,12 +1,12 @@
 .color {
-  display: inline-block;
   border: 1px solid black;
-  width: 55px;
-  height: 55px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
-.salmon {
-  background-color: salmon;
+.black {
+  background-color: black;
 }
 
 .pink {
@@ -14,9 +14,21 @@
 }
 
 .champagne {
-  background-color: rgb(239 , 233 , 174);
+  background-color: rgb(239, 233, 174);
 }
 
 .teal {
   background-color: teal;
+}
+
+.pixel {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 40px;
+  width: 40px;
+}
+
+#pixel-board {
+  border-collapse: collapse;
 }
