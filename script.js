@@ -1,11 +1,11 @@
 // Variáveis Globais
 const colorPalette = document.querySelector('#color-palette');
 const pixelBoard = document.querySelector('#pixel-board');
-const colors = ['black', 'blue', 'pink', 'purple'];
 let colorSelected = '';
 
 // Funções
 function createColorPalette(blocks) {
+  const colors = ['black', 'blue', 'pink', 'purple'];
   colorSelected = '';
 
   for (let index = 0; index < colors.length; index += 1) {
@@ -46,12 +46,6 @@ function createPixelBoard() {
   }
 }
 
-function removeColorClasses(elementPixel) {
-  for (let indexColor = 0; indexColor < colors.length; indexColor += 1) {
-    elementPixel.classList.remove(colors[indexColor]);
-  }
-}
-
 createPixelBoard();
 
 // Estrutura
@@ -74,18 +68,7 @@ colorPalette.addEventListener('click', function (event) {
 pixelBoard.addEventListener('click', function (event) {
   const classes = event.target;
 
-  removeColorClasses(classes);
-
   if (classes.className !== 'line-pixel') {
     classes.classList.add(colorSelected);
-    console.log(classes.className);
-  }
-});
-
-const clearButton = document.querySelector('#clear-board');
-const pixelDiv = document.querySelectorAll('#pixel-board .pixel');
-clearButton.addEventListener('click', function () {
-  for (let index = 0; index < pixelDiv.length; index += 1) {
-    removeColorClasses(pixelDiv[index]);
   }
 });
