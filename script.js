@@ -33,11 +33,12 @@ window.onload = function () {
     if (inputBoardSize.value === '') {
       alert('Board inválido!');
     } else {
-      if (inputBoardSize < 5) {
-        inputBoardSize = 5;
-      }else if (inputBoardSize > 50) {
-        inputBoardSize = 50;
+      if (inputBoardSize.value < 5) {
+        inputBoardSize.value = 5;
+      }else if (inputBoardSize.value > 50) {
+        inputBoardSize.value = 50;
       }
+      console.log(inputBoardSize.value);
       const linesBoard = document.querySelectorAll('.line-board');
       for (let index = 0; index < linesBoard.length; index += 1) {
         pixelBoard.removeChild(linesBoard[index]);
