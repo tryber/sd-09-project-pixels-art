@@ -14,7 +14,7 @@ window.onload = function () {
 }
 
 function createColorPaletteElements() {
-  let colors = generateRandomColors(5);
+  let colors = generateRandomColors(3);
   let colorPallete = document.querySelector('#color-palette');
   for (let color of colors) {
     let colorElement = document.createElement('div');
