@@ -1,23 +1,13 @@
-window.onload = function () {
-  createEventColorBox();
-  clear();
-  classSelected()
-};
-
 function createEventColorBox() {
-  let box = document.querySelectorAll(".pixel");
-  let color = document.querySelectorAll("#color-palette .color");
+  let box = document.querySelector("#pixel-board");
 
-  for (let index = 0; index < color.length; index += 1) {
-    color[index].addEventListener("click", function (event) {
-      let cor = event.target.id;
-      for (let i = 0; i < box.length; i += 1) {
-        box[i].addEventListener("click", function (event) {
-          event.target.style.backgroundColor = cor;
-        });
-      }
-    });
-  }
+  box.addEventListener('click', (event) => {
+    let selectedColor = document.querySelector('.selected');
+    let cor = window.getComputedStyle(selectedColor)
+    event.target.style.backgroundColor = cor.getPropertyValue('background-color');
+
+
+  })
 }
 
 function clear() {
@@ -45,3 +35,21 @@ function classSelected() {
     }
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.onload = function () {
+  classSelected()
+  createEventColorBox();
+  clear();
+};
