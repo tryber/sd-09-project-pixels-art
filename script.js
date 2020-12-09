@@ -73,22 +73,12 @@ function resetColors(pixelArray) {
   }
 }
 
-function setResetButton() {
-  const myButton = document.createElement('button');
-  myButton.id = 'clear-board';
-  myButton.innerText = 'Limpar';
-  document.body.appendChild(myButton);
-  document.body.replaceChild(myButton, document.body.childNodes[4]);
-}
-
-setResetButton();
-
-function resetButtonEvent() {
-  const myButton = document.querySelector('button');
-  const myPixelArray = document.querySelectorAll('.pixel');
+function resetButton() {
+  const myButton = document.querySelector('#clear-board');
+  const pixelArray = document.querySelectorAll('.pixel');
   myButton.addEventListener('click', () => {
-    resetColors(myPixelArray);
+    resetColors(pixelArray);
   });
 }
 
-resetButtonEvent();
+resetButton();
