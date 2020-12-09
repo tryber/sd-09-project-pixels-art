@@ -1,11 +1,3 @@
-/*function inicioPreto(){
-    let inicio = document.querySelector("#pixel-board");
-    inicio.addEventListener("click", function (event) {
-      event.target.style.backgroundColor = "black";
-    });
-  }
-  window.onload = inicioPreto();*/
-
   function selecionaCor() {
     let paleta = document.getElementById('color-palette').children;
     //paleta[0].className += ' selected';
