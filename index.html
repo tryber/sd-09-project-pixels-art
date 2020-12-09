@@ -9,19 +9,16 @@
         <h1 id='title'>Paleta de Cores</h1>
 
         <ul id='color-palette' class='color-palette'>
-            <li style='background-color: black;' class='color selected'>black</li>
-            <li class='color'></li>
-            <li class='color'></li>
-            <li class='color'></li>
+            <li style='background-color: black;' class='color cor1 selected'>black</li>
+            <li class='color cor2'></li>
+            <li class='color cor3'></li>
+            <li class='color cor4'></li>
         </ul>
-        
-        <div class='button-container'>
-        <button class='button' id='clear-board'>Limpar</button>
-        </div>
 
-        <div class='inputHolder'>
+        <div class='button-container'>
+            <button class='button' id='clear-board'>Limpar</button>
             <label class='label' for='size_input'>Novo Tamanho:</label>
-            <input id='board-size' type='text' class='input' placeholder='coloque um numero de 5 a 50'>
+            <input id='board-size' type='number' min='1' class='input' placeholder='insert desired size'>
             <button id ='generate-board' class='confirmButton'>VQV</button>
         </div>
 

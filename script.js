@@ -111,5 +111,4 @@ function mudaPeloEnter(self) {
   }
 }
 
-
 document.querySelector('.input').addEventListener('keydown', mudaPeloEnter);
