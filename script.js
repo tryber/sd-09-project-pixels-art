@@ -1,6 +1,7 @@
 window.onload = function () {
   const paletteColor = document.querySelector('#color-palette');
   const pixelBoard = document.querySelector('#pixel-board');
+  const buttonSection = document.querySelector('#button-section');
   const colorsArray = ['black', 'blue', 'green', 'red'];
   const amountColors = 4;
   const amountSquares = 25;
@@ -57,11 +58,32 @@ window.onload = function () {
     }
   }
 
+  function createButton(section) {
+    const newButton = document.createElement('button');
+    newButton.type = 'button';
+    newButton.innerText = 'Limpar';
+    newButton.id = 'clear-board';
+    section.appendChild(newButton);
+  }
+
+  function clearBoard() {
+    const squares = document.querySelectorAll('.pixel');
+    for (let index = 0; index < squares.length; index += 1){
+      squares[index].style.backgroundColor = 'white';
+    }
+  }
+
   createColorsPalette(paletteColor, amountColors);
 
   createSquares(pixelBoard, amountSquares);
 
+  createButton(buttonSection); 
+
   paletteColor.addEventListener('click', selectColor);
 
   pixelBoard.addEventListener('click', fillSquare);
+
+  const buttonClearBoard = document.querySelector('#clear-board');
+
+  buttonClearBoard.addEventListener('click', clearBoard);
 };
