@@ -58,13 +58,14 @@ clearBoard();
 // Personaliza tamanho do quadro
 function addPixels(sizeValue) {
   const pixelBoard = document.querySelector('#pixel-board');
-  const pixels = document.querySelectorAll('.pixel');
+  let pixels = document.querySelectorAll('.pixel');
   const pixelSize = 42;
   pixelBoard.style.width = `${sizeValue * pixelSize}px`;
-  while (pixels.lenght <= sizeValue ** 2) {
+  while (pixels.length < Math.pow(sizeValue,2)) {
     const newdiv = document.createElement('div');
     newdiv.className = 'pixel';
     pixelBoard.appendChild(newdiv);
+    pixels = document.querySelectorAll('.pixel');
   }
 }
 function resize(sizeValue) {
