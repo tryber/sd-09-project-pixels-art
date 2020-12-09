@@ -114,8 +114,14 @@ function generateButton(container) {
       }
 
       // Generate new Board
-      const size = document.getElementById('board-size').value;
-      generateBoardRow(size);
+      const size = document.getElementById('board-size');
+      if (size.value <= 5) { // Task 11
+        size.value = 5;
+      } else if (size.value >= 50) {
+        size.value = 50;
+      }
+      generateBoardRow(size.value);
+      size.value = '';
     } else {
       alert('Board inválido!');
     }
