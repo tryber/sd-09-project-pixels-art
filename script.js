@@ -44,9 +44,17 @@ window.onload = function () {
     selectedColor.className += ' selected';
   }
 
-  function deselectColor(){
+  function deselectColor() {
     const currentColor = document.querySelector('.selected');
     currentColor.className = 'color';
+  }
+
+  function fillSquare(event) {
+    const selectedSquare = event.target;
+    if (selectedSquare !== document.querySelector('#pixel-board')){
+      const currentColor = document.querySelector('.selected');
+      selectedSquare.style.backgroundColor = currentColor.style.backgroundColor; 
+    }
   }
 
   createColorsPalette(paletteColor, amountColors);
@@ -54,4 +62,6 @@ window.onload = function () {
   createSquares(pixelBoard, amountSquares);
 
   paletteColor.addEventListener('click', selectColor);
+
+  pixelBoard.addEventListener('click', fillSquare);
 };
