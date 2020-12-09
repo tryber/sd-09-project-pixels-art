@@ -32,9 +32,9 @@ function chooseColor() {
     blackBox.classList.remove('selected');
   });
 }
-chooseColor;
+chooseColor();
 
-function cleanBoard () {
+function cleanBoard() {
   clearBoard.addEventListener('click', function () {
     for (let index = 0; index < pixelElement.length; index += 1) {
       pixelElement[index].style.backgroundColor = 'white';
