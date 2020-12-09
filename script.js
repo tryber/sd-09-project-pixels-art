@@ -1,6 +1,5 @@
 window.onload = function() {
     let divPai = document.querySelector('#pixel-board');
-
     function addTabela(){
         for (let index = 1; index <= 5; index += 1 ){
             let lineDiv = document.createElement('div');
@@ -13,18 +12,30 @@ window.onload = function() {
         }
     }
     addTabela()
-
     function adicionaEventos(){
-        //let color = document.querySelectorAll('.color');
         let divsPixels = document.querySelectorAll('.pixel');
-        let elementoBlack = document.querySelector('#black');
+        let elementoBlack = document.querySelector('.black');
         elementoBlack.className += ' selected'
+
         for (let index = 0; index < divsPixels.length; index += 1){
             divsPixels[index].addEventListener('click', function(){
-                divsPixels[index].className += ' selected'
-            })
+                divsPixels[index].style.backgroundColor = 'black';
+            });
         }
     }
     adicionaEventos()
+
     
+    function escolheACor(){
+        let color = document.querySelectorAll('.color');
+        for (let index = 0; index < color.length; index += 1){
+            color[index].addEventListener('click', function(){
+                for(let second = 0; second < color.length; second += 1){
+                    color[second].classList.remove('selected')
+                }
+                color[index].classList.toggle('selected')
+            })
+        }
+    }
+   escolheACor()
 }

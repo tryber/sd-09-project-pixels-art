@@ -1,4 +1,4 @@
-#black{
+.black{
     background-color: black;
     border: 1px solid black;
     color: black;
@@ -7,7 +7,7 @@
     width: 65px;
 }
 
-#red{
+.red{
     background-color: red;
     border: 1px solid black;
     color: red;
@@ -16,7 +16,7 @@
     width: 65px;
 }
 
-#blue{
+.blue{
     background-color: blue;
     border: 1px solid black;
     color: blue;
@@ -25,7 +25,7 @@
     width: 65px;
 }
 
-#green{
+.green{
     background-color: green;
     border: 1px solid black;
     color: green;
@@ -34,7 +34,7 @@
     width: 65px;
 }
 
-#pixel-board{
+.pixel-board{
     margin-top: 2%;
     margin-left: 2%;
     border: 1px solid black;
@@ -51,6 +51,3 @@
     padding: 1px;
 }
 
-.selected{
-    background-color: black;
-}
