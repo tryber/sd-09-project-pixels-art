@@ -22,11 +22,11 @@ function randomRgbNumberColor() {
 }
 
 // Put color random on the elements
-function randomColorsPalette(paletteColorElement) {
-  paletteColorElement[0].style.backgroundColor = 'rgb(0, 0, 0)';// frist color black
-  for (let index = 1; index < paletteColorElement.length; index += 1) {
+function randomColorsPalette(paletteColorElements) {
+  paletteColorElements[0].style.backgroundColor = 'rgb(0, 0, 0)';// frist color black
+  for (let index = 1; index < paletteColorElements.length; index += 1) {
     const colorNumber = randomRgbNumberColor();
-    paletteColorElement[index].style.backgroundColor = `rgb(${colorNumber[0]}, ${colorNumber[1]}, ${colorNumber[2]})`;
+    paletteColorElements[index].style.backgroundColor = `rgb(${colorNumber[0]}, ${colorNumber[1]}, ${colorNumber[2]})`;
   }
 }
 
@@ -44,33 +44,38 @@ function createPixelElement() {
 }
 
 // Function Checks Selected Class And Remove
-function checksSelectedClassAndRemove(paletteColorElement) {
-  for (let index = 0; index < paletteColorElement.length; index += 1) {
-    if (paletteColorElement[index].classList.contains('selected')) {
-      paletteColorElement[index].classList.remove('selected');
+function checksSelectedClassAndRemove(paletteColorElements) {
+  for (let index = 0; index < paletteColorElements.length; index += 1) {
+    if (paletteColorElements[index].classList.contains('selected')) {
+      paletteColorElements[index].classList.remove('selected');
     }
   }
 }
 
 // Function of selecting the desired color
-function selectColorPalette (paletteColorElement) {
-  for (let index = 0; index < paletteColorElement.length; index += 1) {
-    paletteColorElement[index].addEventListener('click', function (event) {
-      checksSelectedClassAndRemove(paletteColorElement);
+function selectColorPalette(paletteColorElements) {
+  coloringPixel('rgb(0, 0, 0)');
+  for (let index = 0; index < paletteColorElements.length; index += 1) {
+    paletteColorElements[index].addEventListener('click', function (event) {
+      checksSelectedClassAndRemove(paletteColorElements);
       event.target.classList.toggle('selected');
+      coloringPixel(event.target.style.backgroundColor);
     });
   }
 }
 
-function coloringPixel() {
-  
+function coloringPixel(colorSelected) {
+  const pixelsElements = document.querySelectorAll('.pixel');
+  pixelsElements.forEach(pixel => {
+    pixel.addEventListener('click', function () {
+      pixel.style.backgroundColor = colorSelected;
+    });
+  });
 }
 
 window.onload = function () {
-  const paletteColorElement = document.querySelectorAll('.color');
-  randomColorsPalette(paletteColorElement);
+  const paletteColorElements = document.querySelectorAll('.color');
+  randomColorsPalette(paletteColorElements);
   createPixelElement();
-  selectColorPalette(paletteColorElement);
-  coloringPixel();
+  selectColorPalette(paletteColorElements);
 }
-
