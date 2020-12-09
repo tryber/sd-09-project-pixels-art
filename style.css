@@ -3,7 +3,8 @@
   border: 1px solid black;
   display: inline-block;
   height: 40px;
-  margin-right: 1px;
+	margin-right: 1px;
+	margin-top: -3px;
   width: 40px;
 }
 
@@ -18,7 +19,8 @@
 }
 
 #color-palette {
-  width: 172px;
+	max-width: 258px;
+	width: fit-content;
 }
 
 #pixel-board {
