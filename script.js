@@ -3,8 +3,8 @@ window.onload = function start() {
 
   function aleatoryColor() {
     let newColor = 'rgb(';
-    newColor += `${Math.round(Math.random() * 255)} , `
-    newColor += `${Math.round(Math.random() * 255)} , `
+    newColor += `${Math.round(Math.random() * 255)} , `;
+    newColor += `${Math.round(Math.random() * 255)} , `;
     newColor += `${Math.round(Math.random() * 255)})`;
     return newColor;
   }
@@ -30,7 +30,7 @@ window.onload = function start() {
       document.getElementsByClassName('pixel-board-inside')[0].appendChild(pixelsLine);
       for (let index2 = 0; index2 < matrix; index2 += 1) {
         const pixelsColumn = document.createElement('div');
-        pixelsColumn.className = `pixel`;
+        pixelsColumn.className = 'pixel';
         document.querySelectorAll('.pixel-line')[index].appendChild(pixelsColumn);
       }
     }
@@ -38,11 +38,10 @@ window.onload = function start() {
 
   pixelBoard(5);
 
-  let onclick = document.getElementsByClassName('pixel-board-inside')[0];
-  onclick.addEventListener('click', paint);
-
   function paint(coloring) {
     coloring.target.style.backgroundColor = color;
   }
 
+  const onclick = document.getElementsByClassName('pixel-board-inside')[0];
+  onclick.addEventListener('click', paint);
 };
