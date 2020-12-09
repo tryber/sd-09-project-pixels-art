@@ -43,6 +43,7 @@ function drawColumns(lineId, columns) {
   for (let lineColumn = 1; lineColumn <= columns; lineColumn += 1) {
     let newPixel = document.createElement('td')
     newPixel.setAttribute('class', 'pixel')
+    newPixel.style.backgroundColor = 'white'
     line.appendChild(newPixel)
   }
 }
