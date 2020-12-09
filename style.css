@@ -1,32 +1,32 @@
-  .centralized {
-    margin-left: 44%;
-  }
+.centralized {
+  margin-left: 44%;
+}
 
-  .color {
-    display: inline-block;
-    border: solid 1px black;
-    width: 40px;
-    height: 40px;
-  }
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
 
-  .command-buttons {
-    margin-left: 45%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-  }
+.command-buttons {
+  margin-bottom: 1%;
+  margin-left: 45%;
+  margin-top: 1%;
+}
 
-  h1 {
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+}
 
-  .pixel {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: solid 1px black;
-    background-color: white;
-  }
+.pixel {
+  background-color: white;
+  border: solid 1px black;
+  height: 40px;
+  display: inline-block;
+  width: 40px;
+}
 
-  .pixel-board-child {
-    margin-left: 42%;
-  }
+.pixel-board-child {
+  margin-left: 42%;
+}
