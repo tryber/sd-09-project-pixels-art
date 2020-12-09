@@ -1,12 +1,21 @@
 function selectColor(event) {
   const deselect = document.querySelector('.color.selected');
   deselect.className = 'color';
+  deselect.style.border = '1px black solid';
   event.target.className = 'color selected';
+  event.target.style.border = '2px black solid';
 }
 
 function paintSquare(event) {
   const paletteColor = document.querySelector('.color.selected');
   event.target.style.backgroundColor = paletteColor.style.backgroundColor;
+}
+
+function clearPixelBoard() {
+  const pixelSquare = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelSquare.length; index += 1) {
+    pixelSquare[index].style.backgroundColor = 'white';
+  }
 }
 
 function drawColorPallets() {
@@ -16,11 +25,13 @@ function drawColorPallets() {
   for (let index = 0; index < stdColors.length; index += 1) {
     const color = document.createElement('div');
     color.className = 'color';
+    color.style.border = '1px black solid';
     if (index === 0) {
       color.className = 'color selected';
+      color.style.border = '2px black solid';
+
     }
     color.style.backgroundColor = stdColors[index];
-    color.style.border = '1px black solid';
     color.style.display = 'inline-block';
     color.style.margin = '1px';
     color.style.width = '40px';
@@ -50,7 +61,16 @@ function drawPixelBoard(boardSize) {
   }
 }
 
+function drawMenu() {
+  const clearBtn = document.createElement('button');
+  clearBtn.id = 'clear-board';
+  clearBtn.innerText = 'Limpar';
+  clearBtn.addEventListener('click', clearPixelBoard);
+  document.querySelector('.button-list').appendChild(clearBtn);
+}
+
 window.onload = function () {
   drawColorPallets();
   drawPixelBoard(5);
+  drawMenu();
 };
