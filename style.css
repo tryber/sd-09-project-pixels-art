@@ -24,6 +24,8 @@
 }
 #pixel-board {
     display:table;
+    margin-left:auto;
+    margin-right:auto;
 }
 .row {
     display:table-row;
@@ -34,4 +36,20 @@
     height: 40px;
     display:table-cell;
     border: solid black 1px;
+}
+#title {
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    background-image: url('bgheader.png');
+    padding: 15px;
+    text-align: center;
+}
+main {
+    text-align: center;
+}
+#clear-board {
+    padding: 5px;
+    background-color: rgb(121, 233, 121);
+    margin: 15px;
+    color: forestgreen;
 }
