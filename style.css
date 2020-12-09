@@ -47,8 +47,8 @@
 }
 
 .pixel {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
   display: inline-block;
   margin: 0;
