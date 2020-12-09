@@ -1,3 +1,4 @@
+window.onload = function () {
   const chngClr = document.querySelectorAll('.color');
   const paletteRed = document.querySelector('.red');
   function changeColorToRed() {
@@ -43,3 +44,4 @@
   paletteBlue.addEventListener('click', changeColorToBlue);
   paletteGreen.addEventListener('click', changeColorToGreen);
   paletteBlack.addEventListener('click', changeColorToBlack);
+}
