@@ -50,7 +50,7 @@ body {
 }
 
 #clear-board {
-  background-color: rgb( 12 , 81 , 120 );
+  background-color: rgb(12, 81, 120);
   border: none;
   border-radius: 5px;
   color: white;
@@ -62,5 +62,5 @@ body {
 }
 
 #clear-board:hover {
-  background-color: rgb( 4 , 45 , 68 );
+  background-color: rgb(4, 45, 68);
 }

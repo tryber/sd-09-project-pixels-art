@@ -1,4 +1,4 @@
-// Validate color to not be white
+// Validate color to not be white in Palette
 function verifyColorWrite(sumNumbersColors, rgbArray) {
   const colorWhiteNumber = 765;
   if (sumNumbersColors === colorWhiteNumber) {
@@ -8,7 +8,7 @@ function verifyColorWrite(sumNumbersColors, rgbArray) {
   return rgbArray;
 }
 
-// Function of random RGB numbers
+// Function of random RGB numbers for palette
 function randomRgbNumberColor() {
   const numberColorsRgb = 3;
   let rgbArray = [];
@@ -21,7 +21,7 @@ function randomRgbNumberColor() {
   return rgbArray;
 }
 
-// Put color random on the elements
+// Put color random on the elements on palette
 function randomColorsPalette(paletteColorElements) {
   paletteColorElements[0].style.backgroundColor = 'rgb(0, 0, 0)';// frist color black
   for (let index = 1; index < paletteColorElements.length; index += 1) {
@@ -43,7 +43,7 @@ function createPixelElement() {
   pixelBoardElement.style.maxWidth = `${widthPixelBoardElement}px`;
 }
 
-// Function Checks Selected Class And Remove
+// Function Checks Selected Class And Remove for toggle class
 function checksSelectedClassAndRemove(paletteColorElements) {
   for (let index = 0; index < paletteColorElements.length; index += 1) {
     if (paletteColorElements[index].classList.contains('selected')) {
@@ -77,7 +77,7 @@ function selectColorPalette(paletteColorElements) {
 function clearBoard() {
   const pixelsElements = document.querySelectorAll('.pixel');
   pixelsElements.forEach((pixel) => {
-   pixel.style.backgroundColor = 'rgb(255, 255, 255)';
+    pixel.style.backgroundColor = 'rgb(255, 255, 255)';
   });
 }
 
