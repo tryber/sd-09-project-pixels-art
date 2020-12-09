@@ -38,8 +38,8 @@ window.onload = function () {
     if(actualColor.className = 'color') {
       let lastSelectedColor = document.querySelector('.selected');
       lastSelectedColor.classList.remove('selected');
-      actualColor.classList.add('selected');
       chosenColor = actualColor.id; //altera o valor da cor selecionada
+      actualColor.classList.add('selected');
     }
   }
 
