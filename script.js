@@ -1,8 +1,8 @@
 window.onload = function () {
   document.querySelector('#color1').className += ' selected';
   document.querySelector('#color1').style.backgroundColor = 'black';
-  makePixels(5);
 };
+
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('.colorPalette');
 const palette1 = document.querySelector('#color1');
@@ -15,39 +15,17 @@ const generateSquare = document.querySelector('#generate-board');
 let atualNumber = 5;
 
 function ranndomPalet() {
-  let color = 'rgb('
+  let color = 'rgb(';
   color += `${Math.ceil(Math.random() * 255)}, `;
   color += `${Math.ceil(Math.random() * 255)}, `;
   color += `${Math.ceil(Math.random() * 255)})`;
-  return color
+  return color;
 }
 
 function setColor() {
   document.querySelector('#color2').style.backgroundColor = ranndomPalet();
   document.querySelector('#color3').style.backgroundColor = ranndomPalet();
   document.querySelector('#color4').style.backgroundColor = ranndomPalet();
-}
-function isInside() {
-  let rightSize = parseInt(numberSquare.value);
-  if (rightSize < 5) {
-    rightSize = 5;
-  } else if (rightSize > 50) {
-    rightSize = 50;
-  }
-  makePixels(rightSize);
-}
-
-function reposeSquare() {
-  if (numberSquare.value == '') {
-    alert('Board inválido!');
-  } else {
-    const pixelBoard = document.querySelector('#pixel-board');
-    let childrenPixel = document.querySelectorAll('.linePixel');
-    for (let index = 0; index < atualNumber; index += 1){
-      pixelBoard.removeChild(childrenPixel[index]);
-    }
-      isInside();
-  }
 }
 
 function makeLinePixels(line, numbers) {
@@ -66,6 +44,28 @@ function makePixels(numbers) {
     makeLinePixels(pixelLine, numbers);
     pixelLine.className = 'linePixel';
     pixelBoard.appendChild(pixelLine);
+  }
+}
+
+function isInside() {
+  let rightSize = parseInt(numberSquare.value, 10);
+  if (rightSize < 5) {
+    rightSize = 5;
+  } else if (rightSize > 50) {
+    rightSize = 50;
+  }
+  makePixels(rightSize);
+}
+
+function reposeSquare() {
+  if (numberSquare.value === '') {
+    alert('Board inválido!');
+  } else {
+    const childrenPixel = document.querySelectorAll('.linePixel');
+    for (let index = 0; index < atualNumber; index += 1) {
+      pixelBoard.removeChild(childrenPixel[index]);
+    }
+    isInside();
   }
 }
 
@@ -90,6 +90,7 @@ function selectPalette(event) {
   event.target.className = 'color selected';
 }
 
+
 function setSelected() {
   colorPalette.addEventListener('click', selectPalette);
 }
@@ -105,6 +106,7 @@ function eraseScrean() {
   btnErase.addEventListener('click', eraseAll);
 }
 
+makePixels(5);
 ranndomPalet();
 setColor();
 makePixels();
