@@ -17,8 +17,10 @@ function generatePalette() {
   // Remaining colors
   for (let i = 1; i < paletteSize; i += 1) {
     const color = document.createElement('div');
+    const randomIndex = randomizeColors(colorPaletteArray.length);
     color.className = 'color';
-    color.style.backgroundColor = colorPaletteArray[randomizeColors(colorPaletteArray.length)];
+    color.style.backgroundColor = colorPaletteArray[randomIndex];
+    colorPaletteArray.splice(randomIndex, 1); // Prevent color repetition
     // color.style.backgroundColor = colorPaletteArray[i];
     palette.appendChild(color);
   }
