@@ -8,12 +8,14 @@
 }
 
 .color {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   border: 1px solid black;
   display: inline-block;
-  box-sizing: border-box;
-  margin-right: 10px ;
+}
+
+.white {
+  background-color: rgb(255 , 255 , 255);
 }
 
 .black {
