@@ -1,7 +1,7 @@
 // Referencia Random Color:
 // https://stackoverflow.com/questions/1484506/random-color-generator
 function getRandomColor() {
-  let letters = '0123456789ABCDEF';
+  const letters = '0123456789ABCDEF';
   let color = '#';
   for (let index = 0; index < 6; index += 1) {
     color += letters[Math.floor(Math.random() * 16)];
@@ -10,22 +10,32 @@ function getRandomColor() {
 }
 
 function createBox(classN, color, father, number) {
-  for (let index = 0; index < number; index += 1){
+  for (let index = 0; index < number; index += 1) {
     const boxColor = document.createElement('div');
     boxColor.className = classN;
     boxColor.style.backgroundColor = color;
     father.appendChild(boxColor);
-  }   
+  }
+}
+
+function selectedColor(origin) {
+  if (origin.target.className !== 'color selected') {
+    selectedColorClear();
+    origin.target.className = 'color selected';
+  } else {
+    origin.target.className = 'color';
+    document.querySelectorAll('.color')[0].className = 'color selected';
+  }
 }
 
 function selectedColorLoop() {
-  const colorSelect = document.querySelectorAll('.color')
+  const colorSelect = document.querySelectorAll('.color');
   for (let index = 0; index < colorSelect.length; index += 1) {
     colorSelect[index].addEventListener('click', selectedColor);
   }
 }
 
-function palette(number){
+function palette(number) {
   const divFather = document.querySelector('#color-palette');
   createBox('color selected', 'rgb(0, 0, 0)', divFather, 1);
   for (let index = 0; index < number; index += 1) {
@@ -54,25 +64,8 @@ function selectedColorClear() {
   }
 }
 
-function selectedColor(origin) {
-  if (origin.target.className != 'color selected') {
-    selectedColorClear();
-    origin.target.className = 'color selected';
-  } else {
-    origin.target.className = 'color';
-    document.querySelectorAll('.color')[0].className = 'color selected'
-  }
-}
-
-function boxLoop() {
-  const boxL = document.querySelectorAll('.pixel')
-  for (let index = 0; index < boxL.length; index += 1){
-    boxL[index].addEventListener('click', colorChange);
-  }
-}
-
 function colorChange(origin) {
-  const boxColor = document.querySelector('.color.selected')
+  const boxColor = document.querySelector('.color.selected');
   if (origin.target.style.backgroundColor != boxColor.style.backgroundColor) {
     origin.target.style.backgroundColor = boxColor.style.backgroundColor;
   } else {
@@ -80,18 +73,22 @@ function colorChange(origin) {
   }
 }
 
+function boxLoop() {
+  const boxL = document.querySelectorAll('.pixel');
+  for (let index = 0; index < boxL.length; index += 1) {
+    boxL[index].addEventListener('click', colorChange);
+  }
+}
+
 function createButton(idC, name, father) {
   const buttonClear = document.createElement('button');
   buttonClear.id = idC;
   buttonClear.innerText = name;
-  const buttonFather = document.querySelector(father)
+  const buttonFather = document.querySelector(father);
   buttonFather.appendChild(buttonClear);
 }
 
-createButton('clear-board', 'Limpar', '.button-clear')
-
-const buttonClear = document.querySelector('#clear-board')
-buttonClear.addEventListener('click', clearBoard)
+createButton('clear-board', 'Limpar', '.button-clear');
 
 function clearBoard() {
   const totalPixels = document.querySelectorAll('.pixel');
@@ -100,16 +97,19 @@ function clearBoard() {
   }
 }
 
-createButton('generate-board', 'VQV', '.size')
+const buttonClear = document.querySelector('#clear-board');
+buttonClear.addEventListener('click', clearBoard);
+
+createButton('generate-board', 'VQV', '.size');
 
 const textInput = document.querySelector('#board-size');
-const buttonGenerate = document.querySelector('#generate-board')
+const buttonGenerate = document.querySelector('#generate-board');
 buttonGenerate.addEventListener('click', generateBoard)
 
 function removeBoard() {
   const board = document.querySelectorAll('.line');
-  for (let indexS = 0; indexS < board.length; indexS += 1){
-    boardRemove = board[indexS]
+  for (let indexS = 0; indexS < board.length; indexS += 1) {
+    boardRemove = board[indexS];
     boardRemove.remove();
   }
 }
@@ -140,4 +140,3 @@ boxLoop();
 palette(3);
 createBoard(5);
 boxLoop();
-

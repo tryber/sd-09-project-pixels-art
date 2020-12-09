@@ -13,14 +13,6 @@
 }
 
 .div-size {
-    width: 210px;
-    margin: 0px;
-    display: inline;
-}
-
-#generate-board {
-    margin-top: 5px;
-    margin-bottom: 5px;
     display: inline;
 }
 
@@ -37,5 +29,6 @@
 
 .size {
     width: 450px;
+    margin: 5px;
     display: inline-block;
 }
