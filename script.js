@@ -1,5 +1,5 @@
 var color;
-var button = document.getElementById('clear')
+var button = document.getElementById('clear-board')
 document.querySelectorAll('.color').forEach(item => {
     item.addEventListener('click', event => {
         verifiedClass()
