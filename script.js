@@ -59,25 +59,35 @@ function firstColor(){
     
 let getColorsPaletteDiv = document.querySelector('#color-palette');
 
-getColorsPaletteDiv.addEventListener('click', function (eventOrigin){
+getColorsPaletteDiv.addEventListener('click', selectColor)
 
-    if (eventOrigin.target.id !== 'color-palette'){
+function selectColor (colorOrigin){
 
-        let clickedColorClassNameString = String(eventOrigin.target.className);
-        // let clickedColorClassName = eventOrigin.target.className;
-        let clickedColor = eventOrigin.target.style.backgroundColor
+    if (colorOrigin.target.id !== 'color-palette'){
+
+        let clickedColorClassNameString = String(colorOrigin.target.className);
         let getColorsPaletteElements = document.querySelectorAll('.color');
         
-
-        if (clickedColorClassNameString.includes('selected') === false) {
+        if (!clickedColorClassNameString.includes('selected')) {
             for (let index = 0; index < getColorsPaletteElements.length; index += 1){
                 if (String(getColorsPaletteElements[index].className).includes('selected')) {
                    let newClass = String(getColorsPaletteElements[index].className.replace('selected', ''))
                    getColorsPaletteElements[index].className = newClass;
                 }
             }
-            eventOrigin.target.className += 'selected'
+            colorOrigin.target.className += 'selected'
         }
-           return clickedColor
     } 
-})
+}
+
+let getPixelBoard = document.querySelector('#pixel-board')
+getPixelBoard.addEventListener('click', paintPixel)
+
+function paintPixel (pixelOrigin){
+    let getPixel = pixelOrigin.target 
+    if (getPixel.className === 'pixel'){
+        let getColorSelected = document.querySelector('.selected').style.backgroundColor
+        getPixel.style.backgroundColor = getColorSelected
+    }
+}
+

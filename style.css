@@ -41,8 +41,11 @@ header {
     display: block;
     text-align: center;
     margin: 20px;
+    width: auto;
+    height: auto;
 }
 
 .pixel {
     border: 1px solid black;
+    cursor: pointer;
 }
