@@ -11,13 +11,13 @@ window.onload = function () {
   }
 
   function generateRandomColors() {
-    let rgbNumberArray = [];
+    const rgbNumberArray = [];
     let color = '';
     for (let index = 0; index < 3; index += 1) {
-        rgbNumberArray.push(Math.round(Math.random() * 255));
-        if (rgbNumberArray[index] === 0) {
-          rgbNumberArray[index] += 1;
-        }
+      rgbNumberArray.push(Math.round(Math.random() * 255));
+      if (rgbNumberArray[index] === 0) {
+        rgbNumberArray[index] += 1;
+      }
     }
     color = `rgb(${rgbNumberArray.join(', ')})`;
     return color;
@@ -44,7 +44,7 @@ window.onload = function () {
     addColorSquare(palleteArray);
   }
 
-  function updateBoardDimensions (board,amountSquare) {
+  function updateBoardDimensions(board,amountSquare) {
     const boardSize = (Math.sqrt(amountSquare)) * 40;
     board.style.width = `${boardSize}px`;
     board.style.height = `${boardSize}px`;
@@ -61,8 +61,16 @@ window.onload = function () {
   }
 
   function removeSquares(board) {
-    while(board.firstChild){
-       board.removeChild(board.lastChild);
+    while (board.firstChild) {
+      board.removeChild(board.lastChild);
+    }
+  }
+
+  function updateBoardSize(board) {
+    const newBoardSize = sessionStorage.getItem('board-size');
+    if (newBoardSize !== undefined){
+      removeSquares(board);
+      createSquares(board,newBoardSize);
     }
   }
 
@@ -74,22 +82,22 @@ window.onload = function () {
     }
   }
 
+  function deselectColor() {
+    const currentColor = document.querySelector('.selected');
+    currentColor.className = 'color';
+  }
+
   function selectColor(event) {
     const selectedColor = event.target;
     deselectColor();
     selectedColor.className += ' selected';
   }
 
-  function deselectColor() {
-    const currentColor = document.querySelector('.selected');
-    currentColor.className = 'color';
-  }
-
   function fillSquare(event) {
     const selectedSquare = event.target;
     if (selectedSquare !== document.querySelector('#pixel-board')) {
       const currentColor = document.querySelector('.selected');
-      selectedSquare.style.backgroundColor = currentColor.style.backgroundColor; 
+      selectedSquare.style.backgroundColor = currentColor.style.backgroundColor;
     }
   }
 
@@ -131,30 +139,24 @@ window.onload = function () {
     formLabel.for = 'board-size';
     formInput.id = 'board-size';
     formInput.type = 'text';
+    formInput.min = 1;
     inputButton.innerText = 'VQV';
     inputButton.id = 'generate-board';
     inputButton.type = 'submit';
   }
 
+  const inputBoardSize = document.querySelector('#board-size');
+
   function storeBoardSize() {
-      if (inputBoardSize.value === ''){
-        return alert('Board inválido!');
-      } else if (inputBoardSize.value < 5) {
-        inputBoardSize.value = 5;
-      } else if (inputBoardSize.value > 50) {
-        inputBoardSize.value = 50;
-      } 
-      sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
-  }
-
-  function updateBoardSize(board) {
-    const newBoardSize = sessionStorage.getItem('board-size');
-    if (newBoardSize !== undefined){
-      removeSquares(board);
-      createSquares(board,newBoardSize);
+    if (inputBoardSize.value === '') {
+     return alert('Board inválido!');
+    } else if (inputBoardSize.value < 5) {
+      inputBoardSize.value = 5;
+    } else if (inputBoardSize.value > 50) {
+      inputBoardSize.value = 50;
     }
+    sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
   }
-
 
   createColorsPalette(paletteColor, amountColors);
 
@@ -171,8 +173,6 @@ window.onload = function () {
   const buttonClearBoard = document.querySelector('#clear-board');
 
   const buttonGenerateBoard = document.querySelector('#generate-board');
-
-  const inputBoardSize = document.querySelector('#board-size');
 
   buttonClearBoard.addEventListener('click', clearBoard);
 
