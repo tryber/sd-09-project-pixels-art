@@ -3,8 +3,9 @@ window.onload = function() {
 
   let pixels = document.querySelectorAll(".pixels");
 
-    function selecionaCor (eventClick) {  
-      console.log(eventClick.target);    
+    function selecionaCor () {  
+      
+      
     }
       let clickBlack = document.getElementById("black");
       let clickRed = document.getElementById("red");
