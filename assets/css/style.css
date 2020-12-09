@@ -1,20 +1,20 @@
 body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-#canvas {
+.canvas {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-#color-palette {
-  padding: 0;
+.color-palette {
   list-style-type: none;
+  padding: 0;
 }
 
 .color {
@@ -28,23 +28,23 @@ body {
   background-color: black;
 }
 
-#pixel-board {
-  display: table;
+.pixel-board {
   border-collapse: collapse;
   border-spacing: 0;
+  display: table;
 }
 
 td {
-  border: 1px solid black; 
+  border: 1px solid black;
   display: table-cell;
   height: 39px;
   padding: 0;
   width: 39px;
 }
 
-#clear-board {
-  border: 1px solid black;
-  padding: 8px;
-  margin-bottom: 15px;
+.clear-board {
   background-color: white;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  padding: 8px;
 }
