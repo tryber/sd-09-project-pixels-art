@@ -7,9 +7,6 @@ for (let index = 1; index <= 25; index += 1) {
   document.querySelector('#pixel-board').appendChild(div);
 }
 
-
-window.onload = changeBackgroundColor();
-
 document.querySelector('.black').classList.add('selected');
 
 function selectedBlack() {
@@ -58,3 +55,4 @@ function changeBackgroundColor() {
     });
   }
 }
+window.onload = changeBackgroundColor();
