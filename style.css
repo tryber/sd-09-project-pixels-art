@@ -63,8 +63,12 @@ h1 {
 }
 
 .pixel-board {
+  border: 8px solid black;
+  border-radius: 15px;
+  box-shadow:-3px 3px cyan;
   display: inline-block;
   margin: auto;
+  padding: 10px;
   text-align: center;
 }
 
