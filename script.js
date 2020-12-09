@@ -18,6 +18,13 @@ function createBox(classN, color, father, number) {
   }
 }
 
+function selectedColorClear() {
+  const selectedClear = document.querySelectorAll('.color');
+  for (let index = 0; index < selectedClear.length; index += 1) {
+    selectedClear[index].className = 'color';
+  }
+}
+
 function selectedColor(origin) {
   if (origin.target.className !== 'color selected') {
     selectedColorClear();
@@ -57,16 +64,9 @@ function createBoard(size) {
   }
 }
 
-function selectedColorClear() {
-  const selectedClear = document.querySelectorAll('.color');
-  for (let index = 0; index < selectedClear.length; index += 1) {
-    selectedClear[index].className = 'color';
-  }
-}
-
 function colorChange(origin) {
   const boxColor = document.querySelector('.color.selected');
-  if (origin.target.style.backgroundColor != boxColor.style.backgroundColor) {
+  if (origin.target.style.backgroundColor !== boxColor.style.backgroundColor) {
     origin.target.style.backgroundColor = boxColor.style.backgroundColor;
   } else {
     origin.target.style.backgroundColor = 'white';
@@ -102,14 +102,26 @@ buttonClear.addEventListener('click', clearBoard);
 
 createButton('generate-board', 'VQV', '.size');
 
+function generateBoard() {
+  if (textInput.value === '') {
+    alert('Board inválido!');
+  }
+  const sizeValor = textInput.value;
+  textInput.value = '';
+
+  removeBoard();
+  createBoard(checkNumber(sizeValor));
+  boxLoop();
+}
+
 const textInput = document.querySelector('#board-size');
 const buttonGenerate = document.querySelector('#generate-board');
-buttonGenerate.addEventListener('click', generateBoard)
+buttonGenerate.addEventListener('click', generateBoard);
 
 function removeBoard() {
   const board = document.querySelectorAll('.line');
   for (let indexS = 0; indexS < board.length; indexS += 1) {
-    boardRemove = board[indexS];
+    let boardRemove = board[indexS];
     boardRemove.remove();
   }
 }
@@ -123,18 +135,6 @@ function checkNumber(number) {
     return number;
   }
   return number;
-}
-
-function generateBoard() {
-  if (textInput.value === "") {
-    return alert('Board inválido!');
-  }
-  let sizeValor = parseInt(textInput.value);
-  textInput.value = "";
-
-removeBoard();
-createBoard(checkNumber(sizeValor));
-boxLoop();
 }
 
 palette(3);
