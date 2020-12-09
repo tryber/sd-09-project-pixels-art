@@ -40,7 +40,7 @@ function deletePixels() {
 
 function generateBoard() {
   if (document.querySelectorAll('.pixel').length === 0) {
-    createPixels();    
+    createPixels();
   } else {
     deletePixels();
     createPixels();
