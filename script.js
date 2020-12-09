@@ -5,7 +5,7 @@ function colorGenerator() {
     const newColor = Math.floor(Math.random() * 16777215).toString(16);
     // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
     let colorString = '#';
-    colorString +=  newColor;
+    colorString += newColor;
     if (colorBlock[index].id !== 'black') {
       colorBlock[index].style.backgroundColor = colorString;
       colorBlock[index].id = colorString;
