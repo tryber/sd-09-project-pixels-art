@@ -6,7 +6,6 @@
   border: 1px solid black;
   width: 40px;
   height: 40px;
-  display: inline-block;
 }
 
 #container {
@@ -19,6 +18,11 @@
 }
 
 /* ====== PALETA DE CORES ======== */
+#color-palette {
+  display: flex;
+  border: 1px solid black;
+}
+
 #black {
   background-color: rgb(0, 0, 0);
 }
@@ -36,6 +40,11 @@
 }
 
 /* ====== CAIXA DE PIXELS ======== */
+#pixel-board {
+  display: flex;
+  border: 1px solid black;
+}
+
 .pixel {
   background-color: rgb(255, 255, 255);
 }

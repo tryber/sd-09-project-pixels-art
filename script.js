@@ -1,8 +1,16 @@
 window.onload = function () {
+  const colorsId = ['black', 'red', 'yellow', 'green'];
+
+  function selectColor (event) {
+    const selectedColor = document.querySelector('.selected');
+    selectedColor.classList.remove('selected');
+    const currentColor = event.target;
+    currentColor.classList.add('selected');
+  }
+  
   function createPaletteColor () {
     const colorPalette = document.getElementById('color-palette');
-    const colorsId = ['black', 'red', 'yellow', 'green'];
-    
+
     for (let index = 0; index < colorsId.length; index += 1) {
       let colorBox = document.createElement('div');
       if (index === 0) {
@@ -11,6 +19,7 @@ window.onload = function () {
         colorBox.classList.add('box', 'color');
       }
       colorBox.id = colorsId[index];
+      colorBox.addEventListener('click', selectColor);
       colorPalette.appendChild(colorBox);
     }
   }
@@ -35,6 +44,7 @@ window.onload = function () {
       }
     }
   }
+
   createPaletteColor();
   createPixelBoard();
 };
