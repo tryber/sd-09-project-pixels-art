@@ -1,6 +1,7 @@
 window.onload = function() {
   let squareBase = 4;
   let line = document.querySelectorAll(".line");
+  
 
     function selecionaCor () { 
       
