@@ -1,17 +1,17 @@
 let currentColorSelected = 'black';
 function colorGenerator() {
-    const colorBlock = document.getElementsByClassName('color');
-    for (let index = 0; index < colorBlock.length; index += 1) {
-      const newColor = Math.floor(Math.random() * 16777215).toString(16);
-      // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
-      const colorString = '#' + newColor;
-      if (colorBlock[index].id !== 'black') {
-        colorBlock[index].style.backgroundColor = colorString;
-        colorBlock[index].id = colorString;
-      } else {
-        colorBlock[index].style.backgroundColor = currentColorSelected;
-      }
+  const colorBlock = document.getElementsByClassName('color');
+  for (let index = 0; index < colorBlock.length; index += 1) {
+    const newColor = Math.floor(Math.random() * 16777215).toString(16);
+    // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
+    const colorString = '#' + newColor;
+    if (colorBlock[index].id !== 'black') {
+      colorBlock[index].style.backgroundColor = colorString;
+      colorBlock[index].id = colorString;
+    } else {
+      colorBlock[index].style.backgroundColor = currentColorSelected;
     }
+  }
 }
 
 function numbersInputValidator() {
@@ -30,8 +30,8 @@ function numbersInputValidator() {
 }
 
 function changeClassSelectedElement(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.add('selected');
+  const element = document.getElementById(elementId);
+  element.classList.add('selected');
 }
 
 function removePreviousSelectedElementClass(elementId) {
@@ -83,32 +83,31 @@ function addLinesToPixelBoard(boardSize) {
   }
 }
 
-
 function removeLinesFromPixelBoard(linesToRemove) {
-    const pixelBoardSelected = document.getElementById('pixel-board');
-    for (let index = linesToRemove - 1; index >= 0; index -= 1) {
-      pixelBoardSelected.removeChild(pixelBoardSelected.children[0]);
-    }
+  const pixelBoardSelected = document.getElementById('pixel-board');
+  for (let index = linesToRemove - 1; index >= 0; index -= 1) {
+    pixelBoardSelected.removeChild(pixelBoardSelected.children[0]);
   }
+}
 
 function designNewBoard(boardSize, currentBoardSize) {
-    if (boardSize < 5) {
-      removeLinesFromPixelBoard(currentBoardSize);
-      currentBoardSize = 5;
-      addLinesToPixelBoard(boardSize);
-      return 0;
-    }
-    if (boardSize > 50) {
-      removeLinesFromPixelBoard(currentBoardSize);
-      currentBoardSize = 50;
-      addLinesToPixelBoard(boardSize);
-      return 1;
-    }
+  if (boardSize < 5) {
     removeLinesFromPixelBoard(currentBoardSize);
+    currentBoardSize = 5;
     addLinesToPixelBoard(boardSize);
-    currentBoardSize = boardSize;
-    return 2;
+    return 0;
   }
+  if (boardSize > 50) {
+    removeLinesFromPixelBoard(currentBoardSize);
+    currentBoardSize = 50;
+    addLinesToPixelBoard(boardSize);
+    return 1;
+  }
+  removeLinesFromPixelBoard(currentBoardSize);
+  addLinesToPixelBoard(boardSize);
+  currentBoardSize = boardSize;
+  return 2;
+}
 
 function createCustomPixelBoarder() {
   numbersInputValidator();
