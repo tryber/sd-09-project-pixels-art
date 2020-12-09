@@ -38,8 +38,8 @@ header {
 }
 
 #pixel-board {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
     margin: 20px;
 }
 

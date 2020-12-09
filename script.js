@@ -13,12 +13,14 @@ function matrix (width, height){
         pixel.style.width = '40px';
         pixel.style.height = '40px';
         pixel.style.background = 'white';
+        pixel.style.display = 'inline-block';
         return pixel
     }
 
     for(let widthIndex = 0; widthIndex < width; widthIndex += 1){
         for (let heightIndex = 0; heightIndex < height; heightIndex += 1){
             pixelBoardWidth.className = 'pixel-board-width';
+            pixelBoardWidth.style.lineHeight = '0'
             let pixel = createPixel();
             pixelBoardWidth.appendChild(pixel)
         }
@@ -30,15 +32,18 @@ function matrix (width, height){
 }
 
 function paintPallete(){
-    let getBlack = document.querySelector('.color.black')
-    let getRed = document.querySelector('.color.red')
-    let getGreen = document.querySelector('.color.green')
-    let getBlue = document.querySelector('.color.blue')
-
-    getBlack.style.backgroundColor = 'black'
-    getRed.style.backgroundColor = 'red'
-    getGreen.style.backgroundColor = 'green'
-    getBlue.style.backgroundColor = 'blue'
+    let getColorsPaletteElements = document.querySelectorAll('.color')
+    for (let index = 0; index < getColorsPaletteElements.length; index += 1){
+        if (index === 0){
+            getColorsPaletteElements[index].style.backgroundColor = 'black'
+        } else if (index === 1){
+            getColorsPaletteElements[index].style.backgroundColor = 'green'
+        } else if (index === 2){
+            getColorsPaletteElements[index].style.backgroundColor = 'blue'
+        } else if (index === 3){
+            getColorsPaletteElements[index].style.backgroundColor = 'red'
+        }
+    }
 
 }
 
