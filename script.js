@@ -36,12 +36,15 @@ function generateBoardRow() {
 
 function selectColor() {
   const colorPalette = document.getElementById('color-palette');
-  const selectedColor = document.getElementsByClassName('selected color');
+  const colors = document.getElementsByClassName('color');
   colorPalette.addEventListener('click', function (event) {
-    if (selectedColor.length === 1) {
-      event.target.className = 'color';
+    if (event.target.className !== 'selected color') {
+      for (let i = 0; i < colors.length; i += 1) {
+          colors[i].className = 'color';
+          event.target.className = 'selected color';
+      }
     } else {
-      event.target.className = 'selected color';
+      event.target.className = 'color';
     }
   });
 }
