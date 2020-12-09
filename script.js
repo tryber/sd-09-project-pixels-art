@@ -6,5 +6,3 @@ window.onload = function() {
 
   selectColor1[0].className += ' selected';
 }
-
-console.log(function);
