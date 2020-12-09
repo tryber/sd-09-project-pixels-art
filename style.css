@@ -25,3 +25,7 @@
 .selected {
   display: inline-block;
 }
+
+button , input {
+  margin-right: 3px;
+}

@@ -19,18 +19,25 @@ function generatePalette() {
   }
 }
 
-function generateBoardColumn(pixelBoard) {
-  for (let i = 0; i < 5; i += 1) {
+function generateBoardColumn(pixelBoard, size) {
+  for (let i = 0; i < size; i += 1) {
     const row = document.createElement('div');
     row.className = 'pixel';
     pixelBoard.appendChild(row);
   }
 }
 
-function generateBoardRow() {
+function generateBoardRow(size) {
+  const container = document.getElementById('pixel-board');
+  for (let i = 0; i < size; i += 1) {
+    const row = document.createElement('div');
+    row.className = 'row';
+    container.appendChild(row);
+  }
+
   const pixelBoard = document.querySelectorAll('.row');
   for (let i = 0; i < pixelBoard.length; i += 1) {
-    generateBoardColumn(pixelBoard[i]);
+    generateBoardColumn(pixelBoard[i], size);
   }
 }
 
@@ -76,10 +83,44 @@ function clearButton() {
   });
 }
 
+function generateBoard() {
+  const container = document.querySelector('.button-container');
+
+  // Input
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.id = 'board-size';
+  input.placeholder = 'Type board dimension here';
+  container.appendChild(input);
+
+  // Button
+  const button = document.createElement('button');
+  button.id = 'generate-board';
+  button.innerText = 'VQV';
+  container.appendChild(button);
+
+  button.addEventListener('click', function () {
+    // Remove existing board
+    const board = document.getElementById('pixel-board');
+    const existingRows = document.querySelectorAll('.row');
+    for (let i = 0; i < existingRows.length; i += 1) {
+      board.removeChild(existingRows[i]);
+    }
+
+    // Generate new Board
+    const size = document.getElementById('board-size').value;
+    if (size === '') {
+        alert('Invalid board!');
+    } else {
+      generateBoardRow(size);
+    }
+  });
+}
+
 window.onload = function () {
   generatePalette();
-  generateBoardRow();
   selectColor();
   paint();
   clearButton();
+  generateBoard();
 };
