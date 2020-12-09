@@ -43,3 +43,21 @@ function cleanBoard() {
 }
 cleanBoard();
 
+function changeColor() {
+  blackBox.style.backgroundColor = 'black';
+  cyanBox.style.backgroundColor = 'cyan';
+  blueVioletBox.style.backgroundColor = 'blueviolet';
+  greenBox.style.backgroundColor = 'green';
+  pixelBoard.addEventListener('click', function (event) {
+    if (blackBox.classList.contains('selected')) {
+      event.target.style.backgroundColor = blackBox.style.backgroundColor;
+    } else if (cyanBox.classList.contains('selected')) {
+      event.target.style.backgroundColor = cyanBox.style.backgroundColor;
+    } else if (blueVioletBox.classList.contains('selected')) {
+      event.target.style.backgroundColor = blueVioletBox.style.backgroundColor;
+    } else if (greenBox.classList.contains('selected')) {
+      event.target.style.backgroundColor = greenBox.style.backgroundColor;
+    }
+  });
+}
+changeColor();
