@@ -23,7 +23,6 @@ function selectColor() {
     }
     event.target.classList.add('selected');
   });
-
 }
 selectColor();
 
@@ -32,10 +31,22 @@ function fillPixel() {
   pixelBoard.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected');
     const pixel = event.target;
-    
+
     if (pixel.className === 'pixel') {
       pixel.style.backgroundColor = selectedColor.style.backgroundColor;
     }
   });
 }
 fillPixel();
+
+function clearBoard() {
+  const btnClearBoard = document.querySelector('#clear-board');
+  btnClearBoard.addEventListener('click', () => {
+    const pixelBoard = document.querySelector('#pixel-board');
+
+    for (let index = 0; index < pixelBoard.childElementCount; index += 1) {
+      pixelBoard.children[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearBoard();
