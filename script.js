@@ -29,19 +29,18 @@ window.onload = function() {
   }
   palette(3);
 
-  function createBoard(height, width) {
+  function createBoard(size) {
     const divFather = document.querySelector('#pixel-board');
-    for (let indexS = 0; indexS < height; indexS += 1){
+    for (let indexS = 0; indexS < size; indexS += 1){
       const board = document.createElement('section');
       board.className = 'line'
       divFather.appendChild(board);
       const fatherBox = document.querySelectorAll('.line')
-      for (let index = 0; index < width; index += 1) {
+      for (let index = 0; index < size; index += 1) {
         createBox('pixel', 'white', fatherBox[indexS], 1)
       }
     }
   }
-  createBoard(5, 5);
 
   function selectedColorLoop() {
     const colorSelect = document.querySelectorAll('.color')
@@ -102,5 +101,32 @@ window.onload = function() {
     for (let index = 0; index < totalPixels.length; index += 1) {
       totalPixels[index].style.backgroundColor = 'white';
     }
+  }
+
+  createButton('generate-board', 'VQV', '#size')
+
+  const textInput = document.querySelector('#board-size');
+  const buttonGenerate = document.querySelector('#generate-board')
+  buttonGenerate.addEventListener('click', generateBoard)
+
+  function removeBoard() {
+    const board = document.querySelectorAll('.line');
+    for (let indexS = 0; indexS < board.length; indexS += 1){
+      boardRemove = board[indexS]
+      boardRemove.remove();
+    }
+  }
+
+  function generateBoard() {
+     if (textInput.value === "") {
+       return alert('Board inválido!');
+      }
+    let sizeValor = parseInt(textInput.value);
+    textInput.value = "";
+    if (sizeValor >= 5 && sizeValor <= 50) {
+      sizeValor;
+    }
+    removeBoard();
+    createBoard(sizeValor);
   }
 }

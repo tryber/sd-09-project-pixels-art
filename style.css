@@ -1,3 +1,7 @@
+#board-size {
+    width: 200px;
+}
+
 #button-clear {
     width: 250px;
     margin-bottom: 10px;
@@ -12,6 +16,18 @@
     margin: 5px;
 }
 
+#div-size {
+    width: 210px;
+    margin: 0px;
+    display: inline;
+}
+
+#generate-board {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline;
+}
+
 .line {
     height: 40px;
 }
@@ -21,4 +37,9 @@
     display: inline-block;
     width: 40px;
     height: 40px;
+}
+
+#size {
+    width: 450px;
+    display: inline-block;
 }
