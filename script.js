@@ -21,7 +21,7 @@ paletaDeCores.addEventListener('click', (event) => {
     }
   }
   return 0;
-  },
+},
 );
 
 paletaDePreenchimento.addEventListener('click', (event) => {
@@ -36,12 +36,13 @@ paletaDePreenchimento.addEventListener('click', (event) => {
     }
   }
   return 0;
-  },
-)
+},
+);
 
 resetaPaleta.addEventListener('click', () => {
   for (let i = 0; i < corDePintura.length; i += 1) {
     corDePintura[i].className = 'pixel';
   }
   return 0;
-},)
+},
+);
