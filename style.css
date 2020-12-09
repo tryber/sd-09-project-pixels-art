@@ -1,0 +1,31 @@
+#color-palette div {
+    border: 1px solid black;
+}
+.color {
+    width: 52.4px;
+    height: 52.4px;
+    display: inline-block;
+}
+.black {
+    background-color: black !important;
+}
+.green {
+    background-color: green !important;
+}
+.blue {
+    background-color: blue !important;
+}
+.gray {
+    background-color: gray !important;
+}
+
+.white {
+    background-color:white;
+}
+
+.pixel {
+ 
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
