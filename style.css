@@ -22,8 +22,8 @@ h1 {
 .pixel {
   background-color: white;
   border: solid 1px black;
-  height: 40px;
   display: inline-block;
+  height: 40px;
   width: 40px;
 }
 

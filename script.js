@@ -1,54 +1,43 @@
 let currentColorSelected = 'black';
-colorGenerator();
-const colorPalette = document.getElementById('color-palette');
-colorPalette.addEventListener('click', setColorToPaint);
-const pixelBoard = document.getElementById('pixel-board');
-pixelBoard.addEventListener('click', changePixelColor);
-const clearButton = document.getElementById('clear-board');
-clearButton.addEventListener('click', clearPixelBoard);
-const boardCreatorButton = document.getElementById('generate-board');
-boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
-const boardSizeInput = document.getElementById('board-size');
-boardSizeInput.addEventListener('change', numbersInputValidator);
-
 function colorGenerator() {
-  const colorBlock = document.getElementsByClassName('color');
-  for (let index = 0; index < colorBlock.length; index += 1) {
-    const newColor = Math.floor(Math.random() * 16777215).toString(16);
-    // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
-    const colorString = '#' + newColor;
-    if (colorBlock[index].id !== 'black') {
-      colorBlock[index].style.backgroundColor = colorString;
-      colorBlock[index].id = colorString;
-    } else {
-      colorBlock[index].style.backgroundColor = currentColorSelected;
+    const colorBlock = document.getElementsByClassName('color');
+    for (let index = 0; index < colorBlock.length; index += 1) {
+      const newColor = Math.floor(Math.random() * 16777215).toString(16);
+      // Solution by CSS Tricks on https://css-tricks.com/snippets/javascript/random-hex-color/
+      const colorString = '#' + newColor;
+      if (colorBlock[index].id !== 'black') {
+        colorBlock[index].style.backgroundColor = colorString;
+        colorBlock[index].id = colorString;
+      } else {
+        colorBlock[index].style.backgroundColor = currentColorSelected;
+      }
     }
-  }
 }
 
 function numbersInputValidator() {
-  let typedNumber = boardSizeInput.value;
+  const boardSizeInputText = document.getElementById('board-size');
+  let typedNumber = boardSizeInputText.value;
   if (typedNumber === '') {
     alert('Board inválido!');
   }
   typedNumber = parseInt(typedNumber, 10);
   if (typedNumber < 5) {
-    boardSizeInput.value = 5;
+    boardSizeInputText.value = 5;
   }
   if (typedNumber > 50) {
-    boardSizeInput.value = 50;
+    boardSizeInputText.value = 50;
   }
 }
 
 function changeClassSelectedElement(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('selected');
-  }
-  
-  function removePreviousSelectedElementClass(elementId) {
-    const element = document.getElementById(elementId);
-    element.classList.toggle('selected');
-  }
+}
+
+function removePreviousSelectedElementClass(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.toggle('selected');
+}
 
 function setColorToPaint(evt) {
   if (evt.target.className) {
@@ -76,23 +65,23 @@ function clearPixelBoard() {
 }
 
 function addPixelsToLinesOfTheBoard(pixelsToAdd, line) {
-    for (let index = 0; index < pixelsToAdd; index += 1) {
-      const newPixel = document.createElement('div');
-      newPixel.className = 'pixel';
-      newPixel.style.backgroundColor = 'white';
-      line.appendChild(newPixel);
-    }
+  for (let index = 0; index < pixelsToAdd; index += 1) {
+    const newPixel = document.createElement('div');
+    newPixel.className = 'pixel';
+    newPixel.style.backgroundColor = 'white';
+    line.appendChild(newPixel);
   }
+}
 
 function addLinesToPixelBoard(boardSize) {
-    const pixelBoardSelected = document.getElementById('pixel-board');
-    for (let index = 0; index < boardSize; index += 1) {
-      const newLine = document.createElement('div');
-      newLine.className = 'pixel-board-child';
-      addPixelsToLinesOfTheBoard(boardSize, newLine);
-      pixelBoardSelected.appendChild(newLine);
-    }
+  const pixelBoardSelected = document.getElementById('pixel-board');
+  for (let index = 0; index < boardSize; index += 1) {
+    const newLine = document.createElement('div');
+    newLine.className = 'pixel-board-child';
+    addPixelsToLinesOfTheBoard(boardSize, newLine);
+    pixelBoardSelected.appendChild(newLine);
   }
+}
 
 
 function removeLinesFromPixelBoard(linesToRemove) {
@@ -129,3 +118,15 @@ function createCustomPixelBoarder() {
   boardSizeValue = parseInt(boardSizeValue, 10);
   designNewBoard(boardSizeValue, currentPixelBoardLength);
 }
+
+colorGenerator();
+const colorPalette = document.getElementById('color-palette');
+colorPalette.addEventListener('click', setColorToPaint);
+const pixelBoard = document.getElementById('pixel-board');
+pixelBoard.addEventListener('click', changePixelColor);
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearPixelBoard);
+const boardCreatorButton = document.getElementById('generate-board');
+boardCreatorButton.addEventListener('click', createCustomPixelBoarder);
+const boardSizeInput = document.getElementById('board-size');
+boardSizeInput.addEventListener('change', numbersInputValidator);
