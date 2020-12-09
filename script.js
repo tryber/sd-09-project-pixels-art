@@ -1,6 +1,8 @@
 const colors = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
+const selectedColor = document.querySelector('.selected');
+const pixel = document.querySelectorAll('.pixel');
 
 colors[0].style.backgroundColor = 'black';
 colors[1].style.backgroundColor = 'red';
@@ -57,6 +59,7 @@ function createBoard(width = 5) {
 }
 createBoard(5);
 
+let test = 'black';
 colorPalette.addEventListener('click', function(event) {
   for (let color = 0; color < colors.length; color += 1) {
     if (colors[color].className === 'color selected') {
@@ -65,5 +68,10 @@ colorPalette.addEventListener('click', function(event) {
   }
   if (event.target.className === 'color') {
     event.target.className = 'color selected';
+    test = event.target.style.backgroundColor;
   }
-});
+})
+
+pixelBoard.addEventListener('click', function(event) {
+  event.target.style.backgroundColor = test;
+})
