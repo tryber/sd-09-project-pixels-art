@@ -33,3 +33,13 @@ function selecPalet(evento) {
 getPalet1.addEventListener('click', selecPalet)
 
 
+let allPixel = document.querySelector('#pixel-board')
+
+function changeBlocks(eventoOne) {
+    let getColorSelected = document.querySelector('.color.selected')
+    let getColorStyle = getColorSelected.style.backgroundColor;
+    eventoOne.target.style.backgroundColor = getColorStyle;
+    
+}
+
+allPixel.addEventListener('click', changeBlocks)
