@@ -80,16 +80,16 @@ function clearButton() {
 }
 clearButton();
 
-function CreateButtonSizePainel () {
+function CreateButtonSizePainel() {
   const elementHolder = document.querySelector('#clear-board');
   const formulary = document.createElement('form');
   formulary.id = 'myForm';
+  formulary.className = 'formContent';
   const inputlabel = document.createElement('label');
   inputlabel.for = 'sizeOfElement';
-  inputlabel.innerText = 'Digite o tamanho do painel: '
+  inputlabel.innerText = 'Digite o tamanho do painel: ';
   const inputData = document.createElement('input');
-  inputData.min = 0;
-  inputData.max = 50;
+  inputData.min = 1;
   inputData.id = 'board-size';
   inputData.type = 'text';
   inputData.name = 'sizeOfElement';
@@ -137,7 +137,7 @@ function verifyPainelNumber(valueInput) {
   if (!Number(valueInput)) {
     return alert('Board inválido!');
   }
-  if (valueInput <= 0){
+  if (valueInput <= 0) {
     return alert('Board inválido!');
   }
   minMaxBoardCreator(valueInput);
