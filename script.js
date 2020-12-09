@@ -1,8 +1,8 @@
 let colorPalette = document.createElement('div');
 colorPalette.setAttribute('id', 'color-palette');
 
-let mainBody = document.getElementsByTagName('main')[0];
-mainBody.appendChild(colorPalette);
+let headerBody = document.getElementsByTagName('header')[0];
+headerBody.appendChild(colorPalette);
 
 let arrayOfColors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
