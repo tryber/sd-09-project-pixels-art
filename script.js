@@ -4,5 +4,5 @@ window.onload = function() {
   let selectColor3 = document.getElementsByClassName('.background-item3');
   let selectColor4 = document.getElementsByClassName('.background-item4');
 
-selectColor1[0].className += ' selected';
+  selectColor1[0].className += ' selected';
 }
