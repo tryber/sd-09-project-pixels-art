@@ -32,6 +32,7 @@ h1 {
 }
 
 .color {
+  margin: 4px;
   height: 32px;
   width: 32px;
 }
