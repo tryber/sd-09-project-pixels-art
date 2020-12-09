@@ -25,7 +25,7 @@ ul li a {
   display: inline-block;
 }
 
-.formContent{
+.formContent {
   height: 50px;
 }
 
@@ -33,7 +33,7 @@ ul li a {
   text-align: right;
 }
 
-.headerLinks {
+.inputElement {
   display: inline-block;
   padding: 0 15px;
   width: 30px;

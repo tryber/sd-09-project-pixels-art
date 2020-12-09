@@ -91,9 +91,9 @@ function CreateButtonSizePainel() {
   const inputData = document.createElement('input');
   inputData.min = 1;
   inputData.id = 'board-size';
-  inputData.type = 'text';
+  inputData.type = 'number';
   inputData.name = 'sizeOfElement';
-  inputData.className = 'headerLinks';
+  inputData.className = 'inputElement';
   const buttonSubmit = document.createElement('button');
   buttonSubmit.type = 'submit';
   buttonSubmit.id = 'generate-board';
@@ -122,22 +122,21 @@ function createNewBoard(valueInput) {
 }
 
 function minMaxBoardCreator(valueInput) {
-  if (valueInput < 5) {
-    createNewBoard(5);
+  let sizeBoard = 0;
+  if (valueInput <= 50) {
+    sizeBoard = 5;
+    if (valueInput > 5) {
+      sizeBoard = valueInput;
+    }
   }
-  if (valueInput > 50) {
-    createNewBoard(50);
+  else {
+    sizeBoard = 50;
   }
-  if (valueInput >= 5 && valueInput <= 50) {
-    createNewBoard(valueInput);
-  }
+  return createNewBoard(sizeBoard);
 }
 
 function verifyPainelNumber(valueInput) {
-  if (!Number(valueInput)) {
-    return alert('Board inválido!');
-  }
-  if (valueInput <= 0) {
+  if (valueInput === '') {
     return alert('Board inválido!');
   }
   minMaxBoardCreator(valueInput);
