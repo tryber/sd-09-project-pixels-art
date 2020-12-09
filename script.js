@@ -54,7 +54,7 @@ function clearPixels() {
   const btnClear = document.querySelector('#clear-board');
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
-    btnClear.addEventListener('click', function() {
+    btnClear.addEventListener('click', function () {
       pixels[index].style.backgroundColor = 'white';
     });
   }
