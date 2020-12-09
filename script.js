@@ -1,9 +1,7 @@
 function selectColor(event) {
   const deselect = document.querySelector('.color.selected');
   deselect.className = 'color';
-  deselect.style.border = '1px black solid';
   event.target.className = 'color selected';
-  event.target.style.border = '2px black solid';
 }
 
 function paintSquare(event) {
@@ -28,8 +26,6 @@ function drawColorPallets() {
     color.style.border = '1px black solid';
     if (index === 0) {
       color.className = 'color selected';
-      color.style.border = '2px black solid';
-
     }
     color.style.backgroundColor = stdColors[index];
     color.style.display = 'inline-block';
