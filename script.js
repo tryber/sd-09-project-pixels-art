@@ -37,14 +37,25 @@ function paintPallete(){
         if (index === 0){
             getColorsPaletteElements[index].style.backgroundColor = 'black'
         } else if (index === 1){
-            getColorsPaletteElements[index].style.backgroundColor = 'green'
+            getColorsPaletteElements[index].style.backgroundColor = '#049CD8'
         } else if (index === 2){
-            getColorsPaletteElements[index].style.backgroundColor = 'blue'
+            getColorsPaletteElements[index].style.backgroundColor = 'white'
         } else if (index === 3){
-            getColorsPaletteElements[index].style.backgroundColor = 'red'
-        }
+            getColorsPaletteElements[index].style.backgroundColor = '#FBD000'
+        } else if (index === 4){
+            getColorsPaletteElements[index].style.backgroundColor = '#E52521'
+        } else if (index === 5){
+            getColorsPaletteElements[index].style.backgroundColor = '#0066cc'
+        } else if (index === 6){
+            getColorsPaletteElements[index].style.backgroundColor = '#43B047'
+        } else if (index === 7){
+            getColorsPaletteElements[index].style.backgroundColor = '#f6c883'
+        } else if (index === 8){
+            getColorsPaletteElements[index].style.backgroundColor = '#854f2b'
+        } else if (index === 9){
+            getColorsPaletteElements[index].style.backgroundColor = '#00c0c0'
+        } 
     }
-
 }
 
 function firstColor(){
@@ -98,4 +109,15 @@ function clear (){
     for (let index in getPixel){
         getPixel[index].style.backgroundColor = 'white'
     }
+}
+
+let getGoButton = document.querySelector('#go-button');
+getGoButton.addEventListener('click', go)
+
+function go (){
+    let numberOfColumns = document.getElementById('colunas').value
+    let numberOfLines = document.getElementById('linhas').value
+    let pixelBoard = document.getElementById('pixel-board')
+    pixelBoard.innerHTML = ''
+    matrix(numberOfLines, numberOfColumns)
 }
