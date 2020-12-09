@@ -128,7 +128,7 @@ function generateBoard() {
   }
   const sizeValor = textInput.value;
   textInput.value = '';
-  
+
   removeBoard();
   createBoard(checkNumber(sizeValor));
   boxLoop();
