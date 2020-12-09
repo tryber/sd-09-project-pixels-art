@@ -49,8 +49,19 @@ function selectColor() {
   });
 }
 
+function paint() {
+  const board = document.getElementById('pixel-board');
+
+  board.addEventListener('click', function (pixelSelection) {
+    const currentColor = document.querySelector('.selected');
+    const color = currentColor.style.backgroundColor;
+    pixelSelection.target.style.backgroundColor = color;
+  });
+}
+
 window.onload = function () {
   generatePalette();
   generateBoardRow();
   selectColor();
+  paint();
 };
