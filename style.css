@@ -10,8 +10,8 @@
 }
 
 .pixel {
+  border: 1px solid black;
   height: 40px;
-  border: 1px solid;
   width: 40px;
 }
 
