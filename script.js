@@ -43,7 +43,7 @@ function button() {
   const buttonCreate = document.createElement('button');
   const buttoncontainer = document.querySelector('#button-container');
   buttonCreate.id = 'clear-board';
-  buttonCreate.innerText = 'Clear';
+  buttonCreate.innerText = 'Limpar';
   buttonCreate.addEventListener('click', clearPixel);
   buttoncontainer.appendChild(buttonCreate);
 }
