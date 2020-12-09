@@ -110,7 +110,7 @@ function generateBoard() {
     // Generate new Board
     const size = document.getElementById('board-size').value;
     if (size === '') {
-        alert('Invalid board!');
+      alert('Invalid board!');
     } else {
       generateBoardRow(size);
     }
@@ -119,6 +119,7 @@ function generateBoard() {
 
 window.onload = function () {
   generatePalette();
+  generateBoardRow(5);
   selectColor();
   paint();
   clearButton();
