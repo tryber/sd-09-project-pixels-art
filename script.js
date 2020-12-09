@@ -96,6 +96,15 @@ function clearBoard() {
 
 clearBoard();
 
+function checkInputValue(inputValue) {
+  if (inputValue < 5) {
+    inputValue = 5;
+  } else if (inputValue > 50) {
+    inputValue = 50;
+  }
+  return inputValue;
+}
+
 function controlBoardSize() {
   const boardSizeInput = document.querySelector('#board-size');
   const generateBoardButton = document.querySelector('#generate-board');
@@ -104,7 +113,7 @@ function controlBoardSize() {
     if (boardSizeInput.value === '') {
       alert('Board inválido!');
     } else {
-      const sizeValue = boardSizeInput.value;
+      let sizeValue = checkInputValue(boardSizeInput.value);
       generatePixelBoardLines(sizeValue);
       createPixelBoard();
     }
