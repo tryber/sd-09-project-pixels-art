@@ -16,7 +16,11 @@ window.onload = function start() {
       document.getElementsByClassName('color-palette')[0].appendChild(paletteColor);
       const allPaletColors = document.querySelectorAll('.color');
       for (let index2 = 0; index2 < allPaletColors.length; index2 += 1) {
-        allPaletColors[index2].style.backgroundColor = aleatoryColor();
+        if (index2 === 0) {
+          allPaletColors[index2].style.backgroundColor = color;
+        } else {
+          allPaletColors[index2].style.backgroundColor = aleatoryColor();
+        }
       }
     }
   }
