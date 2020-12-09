@@ -1,31 +1,35 @@
 #color-palette div {
-    border: 1px solid black;
+  border: 1px solid black;
 }
+
 .color {
-    width: 52.4px;
-    height: 52.4px;
-    display: inline-block;
+  display: inline-block;
+  height: 52.4px;
+  width: 52.4px;
 }
+
 .black {
-    background-color: black !important;
+  background-color: black;
 }
+
 .green {
-    background-color: green !important;
+  background-color: green;
 }
+
 .blue {
-    background-color: blue !important;
+  background-color: blue;
 }
+
 .gray {
-    background-color: gray !important;
+  background-color: gray;
 }
 
 .white {
-    background-color:white;
+  background-color:white;
 }
 
 .pixel {
- 
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
