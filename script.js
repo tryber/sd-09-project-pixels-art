@@ -1,9 +1,5 @@
 let arrayColors = [];
 
-window.addEventListener ('load', function() {
-  arrayColors = randomColor(3, 255);
-});
-
 function randomColor(numberOfColors, numberMaxRGB) {
   const firstColor = 'rgb(0, 0, 0)';
   arrayColors[0] = firstColor;
@@ -143,9 +139,8 @@ function minMaxBoardCreator(valueInput) {
     sizeBoard = 5;
     if (valueInput > 5) {
       sizeBoard = valueInput;
-    };
-  }
-  else {
+    }
+  } else {
     sizeBoard = 50;
     alert('Tamanho máximo 50');
   }
@@ -155,8 +150,7 @@ function minMaxBoardCreator(valueInput) {
 function verifyPainelNumber(valueInput) {
   if (valueInput === '') {
     alert('Board inválido!');
-  }
-  else {
+  } else {
     minMaxBoardCreator(valueInput);
   }
 }
@@ -170,3 +164,7 @@ function changePainelSize() {
   });
 }
 changePainelSize();
+
+window.addEventListener('load', function () {
+  arrayColors = randomColor(3, 255);
+});
