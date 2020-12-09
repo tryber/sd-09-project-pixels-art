@@ -61,7 +61,7 @@ window.onload = function () {
   const color = 'white';
   function clearPixels() {
     for (let index = 0; index < clr.length; index += 1) {
-      clr[index].style.background = color;
+      clr[index].style.backgroundColor = color;
     }
   }
   bttn.addEventListener('click', clearPixels);
