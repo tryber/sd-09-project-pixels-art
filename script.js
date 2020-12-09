@@ -13,12 +13,12 @@ createDivColors('orange');
 createDivColors('green');
 createDivColors('blue');
 
-function createMatrixPixels() {
+function createMatrixPixels(size) {
   const boardElement = document.querySelector('#pixel-board');
 
-  for (let y = 1; y <= 5; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
+  for (let y = 1; y <= size; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
     let row = [];
-    for (let x = 1; x <= 5; x += 1) {
+    for (let x = 1; x <= size; x += 1) {
       let cell = {};
       cell.element = document.createElement("div");
       cell.element.className = 'pixel';
@@ -27,7 +27,7 @@ function createMatrixPixels() {
     }
   }
 }
-createMatrixPixels();
+createMatrixPixels(10);
 
 function selectingColorBlack() {
   document.querySelectorAll('.color')[0].className = 'color selected';
@@ -58,22 +58,22 @@ function fillsSquarePixel() {
 }
 fillsSquarePixel();
 
-function btnBoardClear() {
+function createBtnClear() {
   btnClear = document.createElement('button');
   btnClear.id = 'clear-board';
   btnClear.innerText = 'Limpar';
-  btnClear.style.margin = '7px';
   btnClear.style.padding = '5px';
   let divBtnClear = document.querySelector('#button-clear');
   divBtnClear.appendChild(btnClear);
+  let button = document.querySelector('#clear-board');
 
-  divBtnClear.addEventListener('click', function (e) {
+  button.addEventListener('click', function (e) {
     let board = document.querySelector('#pixel-board');
-    board.style.background = 'white';
+    board.style.backgroundColor = 'white';
     let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = 'white';
     }
   })
 }
-btnBoardClear();
+definingMatrixSize();
