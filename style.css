@@ -11,6 +11,12 @@
   justify-content: space-around;
 }
 
+header h1{
+  font-family: 'Press Start 2P', cursive;
+  margin: auto;
+  text-align: center;
+}
+
 .pixel {
   border: 1px solid black;
   display: inline-block;
