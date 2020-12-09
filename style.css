@@ -1,3 +1,7 @@
+.button-container {
+  margin-bottom: 8px;
+}
+
 .color {
   border: solid 1px black;
   display: inline-block;
@@ -16,4 +20,8 @@
 
 .row {
   line-height: 0;
+}
+
+.selected {
+  border: solid 3px green;
 }

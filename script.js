@@ -61,9 +61,25 @@ function paint() {
   });
 }
 
+function clearButton() {
+  const container = document.getElementById('button-container');
+  const button = document.createElement('button');
+  button.id = 'clear-board';
+  button.innerText = 'Limpar';
+  container.appendChild(button);
+
+  button.addEventListener('click', function () {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  });
+}
+
 window.onload = function () {
   generatePalette();
   generateBoardRow();
   selectColor();
   paint();
+  clearButton();
 };
