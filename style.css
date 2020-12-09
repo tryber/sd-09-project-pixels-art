@@ -34,3 +34,9 @@
   display: flex;
   height: 40px;
 }
+
+#clear-board {
+  background-color: silver;
+  margin: 20px;
+  text-align: center;
+}
