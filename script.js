@@ -133,6 +133,7 @@ Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, se
 
 
 
+
 let pixelsToColoring = document.querySelectorAll('.pixel');
 
 function coloringPixels(event) {
@@ -164,4 +165,20 @@ O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
 O texto do botão deve ser "Limpar". */
 
-document.querySelector
+
+let cleaner = document.createElement('button');
+cleaner.id = 'clear-board';
+cleaner.innerText = 'Limpar';
+document.querySelector('#color-palette').after(cleaner);
+
+function cleaning() {
+  let position = document.querySelectorAll('.pixel')
+
+  for (let index = 0; index < position.length; index++) {
+    position[index].style.backgroundColor = 'white';
+  }
+
+}
+let clean = document.getElementById('clear-board');
+clean.addEventListener('click', cleaning)
+
