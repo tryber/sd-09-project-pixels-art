@@ -28,12 +28,12 @@
 
   // criando uma caixa para linha
   function createBoxLine(pixelBoard) {
-    let line = document.createElement('div');
+    let line = document.createElement('tr');
     
     searchPixel.appendChild(line);
     
     for (let index = 0; index < 5; index++) {
-      let box = document.createElement('div');
+      let box = document.createElement('td');
       box.className = 'pixel';
       line.appendChild(box);
       box.addEventListener('click', paintPixel);
