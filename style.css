@@ -28,6 +28,7 @@ display: table;
   border: 1px solid black;
   padding: 35px;
   display: table-row;
+  background-color: white
   
 }
 
@@ -35,4 +36,5 @@ display: table;
   border: 1px solid black;
   padding: 35px;
   display: table-cell;
+  background-color: white
 }
