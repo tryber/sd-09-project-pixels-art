@@ -5,3 +5,19 @@
   margin: 2px;
   width: 100px;
 }
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: -5px;
+  margin-left: -1px;
+  width: 40px;
+}
+
+#pixel-board {
+  height: 200px;
+  width: 200px;
+}

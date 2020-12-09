@@ -1,6 +1,9 @@
 window.onload = function () {
   const paletteColor = document.querySelector('#color-palette');
+  const pixelBoard = document.querySelector('#pixel-board');
   const colorsArray = ['black', 'blue', 'green', 'red'];
+  const amountColors = 4;
+  const amountSquares = 25;
 
   function createDivs() {
     const div = document.createElement('div');
@@ -13,9 +16,9 @@ window.onload = function () {
     }
   }
 
-  function createColorsPalette(palette) {
+  function createColorsPalette(palette, amount) {
     const palleteArray = [];
-    for (let index = 0; index < 4; index += 1) {
+    for (let index = 0; index < amount; index += 1) {
       const paletteSquare = palette.appendChild(createDivs());
       paletteSquare.className = 'color';
       palleteArray.push(paletteSquare);
@@ -23,6 +26,16 @@ window.onload = function () {
     addColorSquare(palleteArray, colorsArray);
   }
 
-  createColorsPalette(paletteColor);
+  function createSquares(board, amount) {
+    const squaresArray = [];
+    for (let index = 0; index < amount; index += 1){
+      const square = board.appendChild(createDivs());
+      square.className = 'pixel';
+      squaresArray.push(square);
+    }
+  }
+
+  createColorsPalette(paletteColor, amountColors);
+  createSquares(pixelBoard, amountSquares);
 
 };
