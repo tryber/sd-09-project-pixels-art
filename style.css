@@ -54,7 +54,9 @@ h1 {
   width: auto;
 }
 
-input.label {
+.input {
+  font-size: 1.2em;
+  height: auto;
   text-align: center;
   width: 260px;
 }
@@ -66,8 +68,12 @@ input.label {
 }
 
 .pixel {
-  border: 1px solid black;
+  outline: 1px solid black;
   display: inline-block;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  width: 40px;
+}
+
+.selected {
+  font-size:1.8em;
 }

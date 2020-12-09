@@ -99,7 +99,7 @@ for (let idx = 0; idx < colorButtons.length; idx += 1) {
 function colorPixel(self) {
   self.target.style.backgroundColor = sessionStorage.selectedColor;
 }
-function assignPixels(){
+function assignPixels() {
   const myPixels = document.querySelectorAll('.pixel');
   for (let idx = 0; idx < myPixels.length; idx += 1) {
     myPixels[idx].addEventListener('click', function (target) {
