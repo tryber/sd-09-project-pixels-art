@@ -43,18 +43,6 @@ header {
     margin: 20px;
 }
 
-#pixel-board-width{
-    display: inline-block;
-}
-
-#pixel-board-height{
-    display: inline-block;
-}
-
 .pixel {
     border: 1px solid black;
-}
-
-.lines {
-    display: inline-block;
 }
