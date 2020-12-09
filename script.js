@@ -1,8 +1,8 @@
 const paletaDeCores = document.getElementById('color-palette');
 const paletaDePreenchimento = document.getElementById('pixel-board');
 const resetaPaleta = document.getElementById('clear-board');
-const corPreenchida = document.getElementsByClassName('color')
-const corDePintura = document.getElementsByClassName('pixel')
+const corPreenchida = document.getElementsByClassName('color');
+const corDePintura = document.getElementsByClassName('pixel');
 let corDorQuadrado = 'black';
 
 paletaDeCores.addEventListener('click', (event) => {
@@ -18,23 +18,24 @@ paletaDeCores.addEventListener('click', (event) => {
         return e;
         // console.log("Foi removido seleção anterior")
     }
-   }
+    }
   }
- }
+  return 0;
+  }
 );
 
 paletaDePreenchimento.addEventListener('click', (event) => {
   for (let i = 0; i <= corDePintura.length; i += 1) {
     if (corDePintura[i] === event.target) {
       try {
-      corDePintura[i].className = 'pixel';
-      corDePintura[i].classList.add(corDorQuadrado);
+        corDePintura[i].className = 'pixel';
+        corDePintura[i].classList.add(corDorQuadrado);
       } catch (e) {
-      return e;
+        return e;
     }
-   }
+    }
   }
- }
+  }
 )
 
 resetaPaleta.addEventListener('click', (event) => {
@@ -42,4 +43,5 @@ resetaPaleta.addEventListener('click', (event) => {
     corDePintura[i].className = 'pixel';
     console.log("Cores limpas")
   }
+  return 0;
 })
