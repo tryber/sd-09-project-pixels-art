@@ -1,7 +1,11 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
 .header {
@@ -29,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-#pixel-board {
+.pixel-board-style {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -44,7 +48,7 @@ body {
   width: 40px;
 }
 
-#clear-board {
+.clear-board-style {
   background-color: rgb(12, 81, 120);
   border: none;
   border-radius: 5px;
