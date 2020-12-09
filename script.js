@@ -1,22 +1,22 @@
 window.onload = function() {
-  //Referencia Random Color:
+  // Referencia Random Color:
   // https://stackoverflow.com/questions/1484506/random-color-generator
   function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let index = 0; index < 6; index += 1) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
   }
-  
+
   function createBox(classN, color, father, number) {
     for (let index = 0; index < number; index += 1){
       const boxColor = document.createElement('div');
       boxColor.className = classN;
       boxColor.style.backgroundColor = color;
       father.appendChild(boxColor);
-    }    
+    }   
   }
 
   function palette(number){
@@ -47,7 +47,7 @@ window.onload = function() {
       colorSelect[index].addEventListener('click', selectedColor)
     }
   }
-  
+
   function selectedColorClear() {
     const selectedClear = document.querySelectorAll('.color')
     for (let index = 0; index < selectedClear.length; index += 1) {
@@ -88,8 +88,8 @@ window.onload = function() {
     const buttonFather = document.querySelector(father)
     buttonFather.appendChild(buttonClear);
   }
-  
-  createButton('clear-board', 'Limpar', '#button-clear')
+
+  createButton('clear-board', 'Limpar', '.button-clear')
 
   const buttonClear = document.querySelector('#clear-board')
   buttonClear.addEventListener('click', clearBoard)
@@ -101,7 +101,7 @@ window.onload = function() {
     }
   }
 
-  createButton('generate-board', 'VQV', '#size')
+  createButton('generate-board', 'VQV', '.size')
 
   const textInput = document.querySelector('#board-size');
   const buttonGenerate = document.querySelector('#generate-board')
@@ -132,12 +132,12 @@ window.onload = function() {
     }
     let sizeValor = parseInt(textInput.value);
     textInput.value = "";
-    
+
     removeBoard();
     createBoard(checkNumber(sizeValor));
     boxLoop();
   }
-  
+
   palette(3);
   createBoard(5);
   boxLoop();

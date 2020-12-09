@@ -1,8 +1,4 @@
-#board-size {
-    width: 200px;
-}
-
-#button-clear {
+.button-clear {
     width: 250px;
     margin-bottom: 10px;
     text-align: center;
@@ -16,7 +12,7 @@
     margin: 5px;
 }
 
-#div-size {
+.div-size {
     width: 210px;
     margin: 0px;
     display: inline;
@@ -39,7 +35,7 @@
     height: 40px;
 }
 
-#size {
+.size {
     width: 450px;
     display: inline-block;
 }
