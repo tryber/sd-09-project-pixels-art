@@ -35,13 +35,12 @@ h1 {
   background-color: white;
   border: 1px solid black;
   height: 40px;
-  width: 40px;
+  width: 40px;  
 }
 
 .pixels-box {
   background-color: rgb(253, 200, 200);
-  padding-left: 15px;
-  width: 210px;
+  width: 260px;
 }
 
 .second-color {
