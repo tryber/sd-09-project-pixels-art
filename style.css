@@ -37,6 +37,11 @@ h1 {
   width: 32px;
 }
 
+/* Buttons */
+#buttons {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 /* Pixel Board */
 #pixel-board {
