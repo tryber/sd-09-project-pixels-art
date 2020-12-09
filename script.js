@@ -4,7 +4,7 @@ const colorPalette = document.querySelector('#color-palette');
 let colorSelected = '';
 
 // Funções
-function createColorPalette(colorPalette) {
+function createColorPalette(blocks) {
   const colors = ['black', 'blue', 'pink', 'purple'];
   colorSelected = '';
 
@@ -17,7 +17,7 @@ function createColorPalette(colorPalette) {
       colorDiv.classList.add('selected');
     }
 
-    colorPalette.appendChild(colorDiv);
+    blocks.appendChild(colorDiv);
   }
 
   return colorSelected;
@@ -48,10 +48,8 @@ function createPixelBoard() {
 
 createPixelBoard();
 
-
-
 // Estrutura
-colorSelected = createColorPalette(colorPalette);
+colorSelected = createColorPalette(colorPalette );
 // console.log(colorSelected);
 
 colorPalette.addEventListener('click', function (event) {
