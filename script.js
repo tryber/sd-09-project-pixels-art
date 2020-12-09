@@ -1,10 +1,8 @@
-window.onload = generateRandomColors;
-
 function propObjectToArray(propObject) {
   const outputArray = [];
   for (const key in propObject) {
     if (Object.prototype.hasOwnProperty.call(propObject, key)) {
-      outputArray.push({ key, value: propObject[key] })
+      outputArray.push({ key, value: propObject[key] });
     }
   }
   return outputArray;
@@ -80,9 +78,9 @@ function setPixelBoardEvents() {
 }
 
 function createClearButton() {
-  const settingsDivProperties = { id: 'settings', style: { padding: '10px 5px' }};
+  const settingsDivProperties = { id: 'settings', style: { padding: '10px 5px' } };
   const settingsDiv = createNewElement('div', settingsDivProperties);
-  const buttonDivProperties = { style: { display: 'inline-block' }};
+  const buttonDivProperties = { style: { display: 'inline-block' } };
   const buttonDiv = createNewElement('div', buttonDivProperties);
   const button = createNewElement('button', { id: 'clear-board', innerText: 'Limpar' });
   const pixelBoard = document.querySelector('#pixel-board');
@@ -121,8 +119,8 @@ function createGenerateBoardElements() {
   const button = createNewElement('button', buttonProperties);
   const containerDivProperties = { style: {
     display: 'inline-block',
-    marginRight: '5px'
-  }};
+    marginRight: '5px',
+  } };
   const containerDiv = createNewElement('div', containerDivProperties);
   const settingsDiv = document.querySelector('#settings');
   containerDiv.appendChild(sizeInput);
@@ -187,6 +185,8 @@ function generateRandomColors() {
     colorDivs[index].style.backgroundColor = getRandomColor();
   }
 }
+
+window.onload = generateRandomColors;
 
 createPixelBoard(5, 5);
 createClearButton();
