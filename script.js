@@ -2,8 +2,11 @@ const blackBox = document.querySelector('.black');
 const cyanBox = document.querySelector('.cyan');
 const blueVioletBox = document.querySelector('.blueviolet');
 const greenBox = document.querySelector('.green');
+const pixelBoard = document.querySelector('#pixel-board');
+const clearBoard = document.querySelector('#clear-board');
+const pixelElement = document.querySelectorAll('.pixel');
 
-function changeColor() {
+function chooseColor() {
   cyanBox.addEventListener('click', function () {
     cyanBox.classList.add('selected');
     blackBox.classList.remove('selected');
@@ -29,4 +32,14 @@ function changeColor() {
     blackBox.classList.remove('selected');
   });
 }
-changeColor();
+chooseColor;
+
+function cleanBoard () {
+  clearBoard.addEventListener('click', function () {
+    for (let index = 0; index < pixelElement.length; index += 1) {
+      pixelElement[index].style.backgroundColor = 'white';
+    }
+  });
+}
+cleanBoard();
+
