@@ -4,14 +4,10 @@
       }
       
       #color-palette {
-        display: inline-block;
         border: 3px solid darkgreen;
-        width: 98%;
         height: auto;
-        text-align: center;
-        padding: 10px;    
-        margin: 10px auto;
-        text-align: center;    
+        text-align:center;       
+        max-width:250px; 
       }
 
       .color {
@@ -23,22 +19,22 @@
         border-radius: 150px;   
       }
 
-      #red {
+      .red {
         background-color: red;
         background:red;
         
         
       }
-      #yellow {
+      .yellow {
         background-color:yellow;
         background:yellow;
       }
-      #black {
+      .black {
         background-color: black;
         background:black;
       }
       
-      #green {
+      .green {
         background-color: darkgreen;
         background: darkgreen;
       }
@@ -67,4 +63,8 @@
         height: 40px;
         border: 1px solid black;
         line-height: 0;
+      }
+      body {
+        text-align:center;
+        margin: 0 auto;
       }

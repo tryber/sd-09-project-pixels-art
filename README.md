@@ -130,7 +130,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- A paleta de cores deve ser um elemento com `id` denominado `c`olor-palette, ao passo que cada cor individual da paleta de cores deve possuir a `classe` `color`;
+- A paleta de cores deve ser um elemento com `id` denominado `color-palette, ao passo que cada cor individual da paleta de cores deve possuir a `classe` `color`;
 
 - A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**;
 

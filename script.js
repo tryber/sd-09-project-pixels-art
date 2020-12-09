@@ -1,3 +1,6 @@
+console.log(document.getElementById('color-palette'));
+
+
 // window.onload = function() {
 //         let basePyramid = 9;
 //         let numberOfLines = (basePyramid + 1) / 2; // 5
