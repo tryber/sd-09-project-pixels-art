@@ -5,7 +5,6 @@ window.onload = function () {
 
 // Pintando o pixel
 function changeColor(target, pixelColor) {
-  console.log(target.style.backgroundColor !== pixelColor);
   if (target.style.backgroundColor !== pixelColor) {
     target.style.backgroundColor = pixelColor;
   } else {
@@ -14,7 +13,6 @@ function changeColor(target, pixelColor) {
 }
 
 function eventFunction(event) {
-  console.log('click')
   const selectedColor = document.querySelector('.selected');
   changeColor(event.target, window.getComputedStyle(selectedColor, null).getPropertyValue('background-color'));
 }
@@ -66,7 +64,7 @@ function addPixels(sizeValue) {
   let pixels = document.querySelectorAll('.pixel');
   const pixelSize = 42;
   pixelBoard.style.width = `${sizeValue * pixelSize}px`;
-  while (pixels.length < Math.pow(sizeValue,2)) {
+  while (pixels.length < sizeValue ** 2) {
     const newdiv = document.createElement('div');
     newdiv.className = 'pixel';
     pixelBoard.appendChild(newdiv);
@@ -79,7 +77,7 @@ function removePixels(sizeValue) {
   let pixels = document.querySelectorAll('.pixel');
   const pixelSize = 42;
   pixelBoard.style.width = `${sizeValue * pixelSize}px`;
-  while (pixels.length > Math.pow(sizeValue,2)) {
+  while (pixels.length > sizeValue ** 2) {
     pixelBoard.removeChild(pixels[pixels.length - 1]);
     pixels = document.querySelectorAll('.pixel');
   }
@@ -134,7 +132,6 @@ function changeSize() {
       startResizing(newSize);
     }
   }); */
-
 }
 
 changeSize();
