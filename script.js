@@ -43,15 +43,25 @@ selectColor();
 
 
 function coloringPixel() {
-    const divs = document.querySelectorAll('.pixel');
-    for(let index of divs){
-        index.addEventListener('click' ,function(event){
-            let color = document.querySelector('.selected');
-            color = window.getComputedStyle(color, null);
+    let pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.addEventListener('click', function(event){
+        let color = document.querySelector('.selected');
+        color = window.getComputedStyle(color, null);
 
-            event.target.style.backgroundColor = color.backgroundColor;
-        })
-    }
-}
+        event.target.style.backgroundColor = color.backgroundColor;
+    });
+};
 
 coloringPixel();
+
+function clearBoard(){
+    let button = document.querySelector('#clear-board');
+    button.addEventListener('click', function(){
+        let pixelsList = document.querySelectorAll('.pixel');
+        for (let index = 0; index < pixelsList.length; index += 1){
+            pixelsList[index].style.backgroundColor = 'white';
+        }
+    });
+};
+
+clearBoard();
