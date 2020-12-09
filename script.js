@@ -11,7 +11,7 @@ color4.style.background = 'purple';
 
 }
 setColors();
-
+/*
 let basePixels = document.querySelectorAll(".pixel");;
 let numberOfLines = (basePixels);
 let columnPixels = numberOfLines
@@ -41,4 +41,4 @@ function fillPixel(divPixel){
         divPixel.appendChild(createPixel("pixel"));
   }
  }
-}
+}*/

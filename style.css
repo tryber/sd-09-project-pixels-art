@@ -33,14 +33,13 @@ main {
 }
 
 #pixel-board {
-  background-color: black;
+  background-color: transparent;
   height: 224px;
   width: 230px;
   display: inline-block;
 }
 
 .pixel {
-  background-color: white;
   border: solid 1px black;
   display: inline-block;
   height: 40px;
