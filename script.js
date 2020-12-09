@@ -12,7 +12,7 @@ function addElementHTML(element, classes, parentID) {
   for (let index = 0; index < classes.length; index += 1) {
     elementHTML.classList.add(classes[index]);
   }
-  
+
   parentID.appendChild(elementHTML);
   return elementHTML;
 }
@@ -42,10 +42,10 @@ function removeColorClasses(pixelElement) {
 
 // Criando Tabela de Pixel
 function createPixelBoard(sizeGrid) {
-  for (let index = 0; index < sizeGrid; index += 1) {
+  for (let indexLine = 0; indexLine < sizeGrid; indexLine += 1) {
     const linePixel = addElementHTML('div', ['line-pixel'], pixelBoard);
 
-    for (let index = 0; index < sizeGrid; index += 1) {
+    for (let indexColumn = 0; indexColumn < sizeGrid; indexColumn += 1) {
       addElementHTML('div', ['pixel', 'block'], linePixel);
     }
   }
@@ -97,20 +97,20 @@ clearButton.addEventListener('click', function () {
 });
 
 const inputBoardSize = document.querySelector('#board-size');
-let valueInput = 0;
+let inputSize;
 inputBoardSize.addEventListener('input', function (event) {
-  valueInput = event.target.value;
+  inputSize = event.target.value;
 });
 
 const buttonGenerateBoard = document.querySelector('#generate-board');
 buttonGenerateBoard.addEventListener('click', function () {
-  console.log(valueInput);
-  if (valueInput < 0) {
+  if (inputSize < 0) {
     alert('Digite valores acima de 0.');
-  } else if (valueInput === '') {
+  } else if ((inputSize === undefined) || (inputSize === '')) {
     alert('Board inválido!');
   } else {
+    size = inputSize;
     removePixelBoard();
-    createPixelBoard(valueInput);
+    createPixelBoard(size);
   }
 });
