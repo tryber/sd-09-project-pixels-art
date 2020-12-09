@@ -1,3 +1,3 @@
-let function paintPixel () {
+function paintPixel () {
     
 }

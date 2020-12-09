@@ -1,6 +1,7 @@
 .button-reset {
-  text-align: center;
-  width: 100%;
+  text-align:center;
+  width:100%;
+
 }
 
 .color {
@@ -40,8 +41,8 @@ h1 {
 
 .pixels-box {
   background-color: rgb(253, 200, 200);
-  margin-left: 25px;
-  width: 210px;
+  margin-left: 15px;
+  width: 230px;
 }
 
 .second-color {
