@@ -20,7 +20,12 @@
 /* ====== PALETA DE CORES ======== */
 #color-palette {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+
+.circle {
+  border-radius: 50%;
+  margin: 5px;
 }
 
 #black {
@@ -43,8 +48,9 @@
 #pixel-board {
   display: flex;
   border: 1px solid black;
+  margin-top: 20px;
 }
 
 .pixel {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
