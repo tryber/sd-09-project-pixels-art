@@ -57,8 +57,10 @@ function createControls() {
   const generateBoardButton = document.createElement('button');
   input.type = 'number';
   input.max = '50';
-  input.min = '5';
+  input.min = '1';
   input.id = 'board-size';
+  input.placeholder = 'Tamanho do Tabuleiro';
+  input.style.width = '170px';
   generateBoardButton.id = 'generate-board';
   generateBoardButton.innerText = 'VQV';
   controlsContainer.appendChild(input);
