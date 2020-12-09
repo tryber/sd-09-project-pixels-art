@@ -36,7 +36,7 @@ body {
 .pixel-board-style {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .pixel {
@@ -44,7 +44,6 @@ body {
   border: 1px solid;
   border-color: black;
   height: 40px;
-  margin-top: 2%;
   width: 40px;
 }
 
@@ -60,6 +59,6 @@ body {
   width: 200px;
 }
 
-#clear-board:hover {
+.clear-board-style:hover {
   background-color: rgb(4, 45, 68);
 }

@@ -31,17 +31,27 @@ function randomColorsPalette(paletteColorElements) {
 }
 
 function getNumberElementsValue(valueInputBoardSize) {
-  if ((valueInputBoardSize < 5) || (valueInputBoardSize > 50) || valueInputBoardSize === '') {
+  if ((valueInputBoardSize < 5) || (valueInputBoardSize === '')) {
     alert('Board inválido!');
-    valueInputBoardSize = 0;
+    valueInputBoardSize = '5';
+  } else if (valueInputBoardSize > 50) {
+    valueInputBoardSize = '50';
   }
   return valueInputBoardSize;
+}
+
+function deletPixelsElementsBoard(pixelBoardElement) {
+  const pixelElement = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelElement.length; index += 1) {
+    pixelBoardElement.removeChild(pixelBoardElement.lastChild);
+  }
 }
 
 // Create Pixel element
 function createPixelElement(numberOfElements) {
   const pixelBoardElement = document.querySelector('#pixel-board');
-  const widthPixelBoardElement = (numberOfElements * 40) + (numberOfElements * 5);
+  deletPixelsElementsBoard(pixelBoardElement);
+  const widthPixelBoardElement = (numberOfElements * 42);
   for (let index = 0; index < (numberOfElements ** 2); index += 1) {
     const pixelElement = document.createElement('div');
     pixelElement.className = 'pixel';
