@@ -17,18 +17,29 @@ form {
   box-sizing: border-box;
   display: inline-block;
   height: 40px;
-  margin-bottom: -5px;
-  margin-left: -1px;
   width: 40px;
+}
+
+.column {
+  display: table-row;
+}
+
+.line {
+  display: table-cell;
 }
 
 .main-page {
   border: 1px solid black;
-  margin: 2% 20%;
+  margin: auto;
   text-align: center;
 }
 
 .page-header {
   border: 1px solid black;
-  margin: 2% 20%;
+  margin: auto;
+  text-align: center;
+}
+
+#pixel-board {
+  display: table;
 }

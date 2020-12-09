@@ -38,17 +38,18 @@ function createColorsPalette(palette, amount) {
 }
 const amountColors = 4;
 createColorsPalette(paletteColor, amountColors);
-function updateBoardDimensions(board, amountSquare) {
-  const boardSize = (Math.sqrt(amountSquare)) * 40;
-  board.style.width = `${boardSize}px`;
-  board.style.height = `${boardSize}px`;
-}
 function createSquares(board, amount) {
-  updateBoardDimensions(board, amount);
-  for (let index = 0; index < amount; index += 1) {
-    const square = board.appendChild(createDivs());
-    square.className = 'pixel';
-    square.style.backgroundColor = 'white';
+  let column = Math.sqrt(amount);
+  let line = Math.sqrt(amount);
+  for (let index = 0; index < column; index += 1) {
+    const squarecolumn = board.appendChild(createDivs());
+    squarecolumn.className = 'pixel column';
+    squarecolumn.style.backgroundColor = 'white';
+    for (let index = 0; index < line; index += 1) {
+      const squareLine = squarecolumn.appendChild(createDivs());
+      squareLine.className = 'pixel line';
+      squareLine.style.backgroundColor = 'white';
+    }
   }
 }
 function removeSquares(board) {
@@ -56,14 +57,6 @@ function removeSquares(board) {
     board.removeChild(board.lastChild);
   }
 }
-/*function updateBoardSize(board) {
-  const newBoardSize = sessionStorage.getItem('board-size');
-  if (newBoardSize !== undefined) {
-    removeSquares(board);
-    createSquares(board, newBoardSize);
-  }
-}
-*/
 function loadBoard(board, amount) {
   if (sessionStorage.getItem('board-size') === null) {
     createSquares(board, amount);
