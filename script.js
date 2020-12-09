@@ -1,10 +1,10 @@
 function generateRandomColors(numberOfColors) {
-  let rgbColor = ['rgb(0, 0, 0)'];
+  const rgbColor = ['rgb(0, 0, 0)'];
   let stringConstructor;
-  for (let i = 0; i < numberOfColors; i++) {
-    let red = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
+  for (let i = 0; i < numberOfColors; i += 1) {
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
     stringConstructor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
     if (!rgbColor.includes(stringConstructor)) {
       rgbColor.push(stringConstructor);
@@ -12,16 +12,14 @@ function generateRandomColors(numberOfColors) {
       i -= 1;
     }
   }
-
   return rgbColor;
-
 }
 
 function createColorPaletteElements() {
-  let colors = generateRandomColors(3);
+  const colors = generateRandomColors(3);
   let colorPallete = document.querySelector('#color-palette');
   for (let color of colors) {
-    let colorElement = document.createElement('div');
+    const colorElement = document.createElement('div');
     colorElement.className = 'color';
     colorElement.style.backgroundColor = color;
     colorPallete.appendChild(colorElement);
@@ -29,10 +27,10 @@ function createColorPaletteElements() {
 }
 
 function fillLineElements(size) {
-  let line = document.createElement('div');
+  const line = document.createElement('div');
   line.className = 'pixel-board-line';
-  for (let i = 0; i < size; i++) {
-    let pixel = document.createElement('div');
+  for (let i = 0; i < size; i += 1) {
+    const pixel = document.createElement('div');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = 'rgb(255, 255, 255)';
     line.appendChild(pixel);
@@ -42,22 +40,21 @@ function fillLineElements(size) {
 
 function createPixelBoard(size) {
   let pixelBoard = document.querySelector('#pixel-board');
-  for (let i = 0; i < size; i++) {
-    let line = fillLineElements(size);
+  for (let i = 0; i < size; i += 1) {
+    const line = fillLineElements(size);
     pixelBoard.appendChild(line);
   }
-
 }
 
 function createControls() {
-  let controlsContainer = document.querySelector('#controls-container');
-  let clearButton = document.createElement('button');
+  const controlsContainer = document.querySelector('#controls-container');
+  const clearButton = document.createElement('button');
   clearButton.innerText = 'Limpar';
   clearButton.id = 'clear-board';
   controlsContainer.appendChild(clearButton);
 
-  let input = document.createElement('input');
-  let generateBoardButton = document.createElement('button');
+  const input = document.createElement('input');
+  const generateBoardButton = document.createElement('button');
   input.type = 'number';
   input.max = '50';
   input.min = '5';
@@ -82,20 +79,10 @@ function paintPixel(event) {
 }
 
 function clearPixelBoard() {
-  let pixels = document.querySelectorAll('.pixel');
-  for (let pixel of pixels) {
+  const pixels = document.querySelectorAll('.pixel');
+  for (const pixel of pixels) {
     pixel.style.backgroundColor = 'rgb(255,255,255)';
   }
-}
-
-function getBoardSize() {
-  let size = document.querySelector('#board-size').value;
-
-  if (size.length === 0) {
-    alert('Board inválido!');
-    return false;
-  }
-  return validSize(size);
 }
 
 function validSize(size) {
@@ -107,18 +94,26 @@ function validSize(size) {
   return size;
 }
 
+function getBoardSize() {
+  const size = document.querySelector('#board-size').value;
+
+  if (size.length === 0) {
+    alert('Board inválido!');
+    return false;
+  }
+  return validSize(size);
+}
+
 function generateNewBoard() {
-  let size = getBoardSize();
+  const size = getBoardSize();
   if (size) {
     boardStruct = document.querySelectorAll('.pixel-board-line');
-    for (let element of boardStruct) {
+    for (const element of boardStruct) {
       element.remove();
     }
     createPixelBoard(size);
   }
 }
-
-
 
 window.onload = function () {
   createColorPaletteElements();
