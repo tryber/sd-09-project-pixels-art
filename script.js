@@ -1,4 +1,4 @@
-let pixelBoard = document.querySelector('.pixel-board');
+let pixelBoard = document.querySelector('#pixel-board');
 let pxColumn = document.querySelector('.pixel-column');
 
 function pxBoard(){
