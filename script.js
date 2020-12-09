@@ -31,7 +31,7 @@ function randomColorsPalette(paletteColorElements) {
 }
 
 function getNumberElementsValue(valueInputBoardSize) {
-  if ((valueInputBoardSize <  5) || (valueInputBoardSize > 50) || valueInputBoardSize === '') {
+  if ((valueInputBoardSize < 5) || (valueInputBoardSize > 50) || valueInputBoardSize === '') {
     alert('Board inválido!');
     valueInputBoardSize = 0;
   }
@@ -42,7 +42,7 @@ function getNumberElementsValue(valueInputBoardSize) {
 function createPixelElement(numberOfElements) {
   const pixelBoardElement = document.querySelector('#pixel-board');
   const widthPixelBoardElement = (numberOfElements * 40) + (numberOfElements * 5);
-  for (let index = 0; index < (numberOfElements**2); index += 1) {
+  for (let index = 0; index < (numberOfElements ** 2); index += 1) {
     const pixelElement = document.createElement('div');
     pixelElement.className = 'pixel';
     pixelBoardElement.appendChild(pixelElement);
