@@ -5,6 +5,24 @@ window.onload = function() {
     pixel.className = 'pixel';
     pixelBoard.appendChild(pixel);
   }  
+  randomColor()
+}
+
+function randomNumber() {
+  let rn = Math.ceil(Math.random() * 255);
+  return rn;
+}
+function randomColor() {
+  let cp = document.querySelector('#color-palette');
+  for (let index = 0; index < 3; index += 1) {
+    let newDiv = document.createElement('div')
+    newDiv.className = 'color'
+    let rgb = `${randomNumber()}, ${randomNumber()}, ${randomNumber()}`;
+    newDiv.id = `rgb(${rgb})`;
+    newDiv.style.background = newDiv.id;
+    cp.appendChild(newDiv)
+
+  }
 }
 
 function changeSelected() {
@@ -82,3 +100,4 @@ function generatorBoard() {
   generate.addEventListener('click', sizeBoard)
 }
 generatorBoard()
+
