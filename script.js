@@ -1,8 +1,4 @@
-function loadSelected (){
-    document.getElementsByClassName('color1')[0].classList.add('selected')
-}
-
-window.onload = loadSelected();
+window.onload = document.getElementsByClassName('color1')[0].classList.add('selected');
 
 function changeSelected() {
     let selectedColor = document.getElementsByClassName('color');
@@ -16,3 +12,14 @@ function changeSelected() {
     }
 }
 changeSelected();
+
+function paintPixel() {
+    let canvas = document.getElementById('pixel-board')
+    canvas.addEventListener('click', function(event){
+        let colorSelected = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue('background-color');
+        if (event.target.style.backgroundColor !== colorSelected){
+            event.target.style.backgroundColor = colorSelected
+        }
+    })
+}
+paintPixel();
