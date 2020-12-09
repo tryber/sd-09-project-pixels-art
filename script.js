@@ -36,13 +36,56 @@ window.onload = function () {
 
     function createCustomPixelBoarder () {
         let currentPixelBoard = document.querySelectorAll('.pixel-board-child');
-        let pixelBoardLength = currentPixelBoard.length;
-        let boardSizeValue = document.getElementById('board-size');
+        let currentPixelBoardLength = currentPixelBoard.length;
+        let boardSizeValue = document.getElementById('board-size').value;
         boardSizeValue = parseInt(boardSizeValue, 10);
-        if (boardSizeValue > 0 && pixelBoardLength < boardSizeValue) {
-            designNewBoarder(boardSizeValue);
+        if (boardSizeValue > 0) {
+            designNewBoard(boardSizeValue, currentPixelBoardLength);
+        } else {
+            alert('Board invalido!');
         }
+    }
 
+    function designNewBoard(boardSize, currentBoardSize) {
+        if (currentBoardSize > boardSize) {
+            let linesToRemove = currentBoardSize - boardSize
+            removeLinesFromPixelBoard(linesToRemove);
+            return null;
+        }
+        removeLinesFromPixelBoard(currentBoardSize);
+        addLinesToPixelBoard(boardSize);
+    }
+
+    function addLinesToPixelBoard(boardSize) {
+        let pixelBoard = document.getElementById('pixel-board');
+        for (let index = 0; index < boardSize; index += 1) {
+            let newLine = document.createElement('div');
+            newLine.className = 'pixel-board-child';
+            addPixelsToLinesOfTheBoard(boardSize, newLine);
+            pixelBoard.appendChild(newLine)
+        }
+    }
+
+    function addPixelsToLinesOfTheBoard(pixelsToAdd, line) {
+        for (let index = 0; index < pixelsToAdd; index += 1) {
+            let newPixel = document.createElement('div');
+            newPixel.className = 'pixel';
+            line.appendChild(newPixel);
+        }
+    }
+
+    function removeLinesFromPixelBoard(linesToRemove) {
+        let pixelBoard = document.getElementById('pixel-board');
+        for (let index = linesToRemove -1 ; index >= 0; index -= 1) {
+            pixelBoard.removeChild(pixelBoard.children[0]);        
+        }
+        removePixelsFromLinesOFTheBoard(linesToRemove)
+    }
+
+    function removePixelsFromLinesOFTheBoard(pixelsToRemove) {
+        for (let index = pixelsToRemove - 1; index >= 0; index -= 1) {
+            pixelBoard.children[index].removeChild(pixelBoard.children[index].children[0]);
+        }
     }
 
     function changeClassSelectedElement (elementId) {
