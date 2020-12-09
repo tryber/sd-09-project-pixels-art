@@ -24,18 +24,30 @@ window.onload = function() {
         }
     }
     adicionaEventos()
-
-    
+    let corSelected = '';
     function escolheACor(){
         let color = document.querySelectorAll('.color');
         for (let index = 0; index < color.length; index += 1){
-            color[index].addEventListener('click', function(){
+            color[index].addEventListener('click', function(event){
                 for(let second = 0; second < color.length; second += 1){
                     color[second].classList.remove('selected')
                 }
-                color[index].classList.toggle('selected')
+                color[index].classList.toggle('selected');
+                corSelected = event.target.id;
             })
         }
+        
     }
    escolheACor()
+
+   function pintaOPixel(){
+       let pixel = document.querySelectorAll('.pixel');
+       for(let index = 0; index < pixel.length; index += 1){
+            pixel[index].addEventListener('click', function(){
+                pixel[index].style.backgroundColor = corSelected;
+            })
+       }
+   }
+   pintaOPixel()
 }
+
