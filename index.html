@@ -9,7 +9,6 @@
         <h1 id='title'>Paleta de Cores</h1>
 
         <ul id='color-palette' class='color-palette'>
-            <li style='background-color: black;' class='color selected'>black</li>
         </ul>
 
         <div class='button-container'>
@@ -38,7 +37,7 @@
                     '#890620', '#890620', '#01baef'];
 
                 function pickStarterColors(array) {
-                const starterColors = [];
+                const starterColors = ['black'];
                 let ok;
                 let num;
                 for (let idx = 0; idx < 3; idx += 1) {
@@ -84,6 +83,7 @@
                     selectColor(target);
                     });
                 }
+                colorButtons[0].classList.add('selected');
                 constructBoard(5);
             });
         </script>

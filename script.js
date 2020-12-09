@@ -71,22 +71,7 @@ function mudaBoardPeloBotao() {
   const answer = verificaNovaBase(fieldValue);
   constructBoard(answer);
   document.querySelector('.input').value = '';
+  return ;
 }
 
 document.querySelector('.confirmButton').addEventListener('click', mudaBoardPeloBotao);
-
-function mudaPeloEnter(self) {
-  const key = self.keyCode;
-  if (key === 13) {
-    const fieldValue = document.querySelector('.input').value;
-    if (fieldValue === ''|| fieldValue < 0) {
-      document.querySelector('.input').value = '';
-      return alert('Board inválido!');
-    }
-    const answer = verificaNovaBase(fieldValue);
-    constructBoard(answer);
-    document.querySelector('.input').value = '';
-  }
-}
-
-document.querySelector('.input').addEventListener('keydown', mudaPeloEnter);
