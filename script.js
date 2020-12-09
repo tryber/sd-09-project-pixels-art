@@ -83,10 +83,7 @@ function clearButton() {
   });
 }
 
-function generateBoard() {
-  const container = document.querySelector('.button-container');
-
-  // Input
+function generateInput(container) {
   const input = document.createElement('input');
   input.type = 'number';
   input.id = 'board-size';
@@ -99,14 +96,9 @@ function generateBoard() {
       input.value = '';
     }
   });
-  input.addEventListener('mouseup', function () {
-    if (input.value < input.min) {
-      alert('Invalid value!');
-      input.value = '';
-    }
-  });
+}
 
-  // Button
+function generateButton(container) {
   const button = document.createElement('button');
   button.id = 'generate-board';
   button.innerText = 'VQV';
@@ -128,6 +120,16 @@ function generateBoard() {
       alert('Board inválido!');
     }
   });
+}
+
+function generateBoard() {
+  const container = document.querySelector('.button-container');
+
+  // Input
+  generateInput(container);
+
+  // Button
+  generateButton(container);
 }
 
 window.onload = function () {
