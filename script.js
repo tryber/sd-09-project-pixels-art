@@ -25,51 +25,52 @@ function createPixelBoard(sizeBoard) {
       divCol.className = 'pixel box';
       divRow.appendChild(divCol);
     }
-  elementHolder.appendChild(divRow)
-  };
+  elementHolder.appendChild(divRow);
+  }
 }
 createPixelBoard(5);
 
-function changeColor (){
+function changeColor() {
   const colorPaleteAll = document.querySelector('#color-palette').children;
   colorPaleteAll[0].className += ' selected';
   for (let index1 = 0; index1 < colorPaleteAll.length; index1 += 1) {
     colorPaleteAll[index1].addEventListener('click', function (event) {
       for (let index2 = 0; index2 < colorPaleteAll.length; index2 += 1) {
         colorPaleteAll[index2].className = 'color box';
-        }
+      }
       event.target.className = 'color box selected';
     });
   }
 }
 changeColor();
 
-function paintPixel () {
-  let colorPaleteAll = document.querySelector('#color-palette').children;
-  let pixelsBoardAll = document.querySelectorAll('.pixel');
-  for (item of pixelsBoardAll){
-    item.addEventListener('click', function (event) {
-      for (item of colorPaleteAll) {
-        if (item.className === 'color box selected') {
-          aa = event.target.style.backgroundColor = item.style.backgroundColor;
-        };
-      };
-    });
-  };
+function paintPixel() {
+  const colorPaleteAll = document.querySelector('#color-palette').children;
+  const pixelsBoardAll = document.querySelectorAll('.pixel');
+  for (let index1 = 0; index1 < pixelsBoardAll.length; index1 += 1){
+    pixelsBoardAll[index1].addEventListener('click', function (event) {
+      for (let index2 = 0; index2 < colorPaleteAll.length; index2 += 1) {
+        if (colorPaleteAll[index2].className === 'color box selected') {
+          event.target.style.backgroundColor = colorPaleteAll[index2].style.backgroundColor;
+        }
+      }
+    })
+  }
 }
 paintPixel();
 
-function clearButton () {
-    const elementHolder = document.querySelector('#color-palette');
-    let pixelsBoardAll = document.querySelectorAll('.pixel');
-    let newelement = document.createElement('button');
-    newelement.id = 'clear-board';
-    newelement.innerText = 'Limpar';
-    newelement.addEventListener('click',function (){
-        for (let index = 0; index < pixelsBoardAll.length; index += 1) {
-            pixelsBoardAll[index].style.backgroundColor = "white";
-        }
-    });
-    elementHolder.insertAdjacentElement("afterend", newelement);    
+function clearButton() {
+  const elementHolder = document.querySelector('#color-palette');
+  let pixelsBoardAll = document.querySelectorAll('.pixel');
+  const newelement = document.createElement('button');
+  newelement.id = 'clear-board';
+  newelement.className = 'buttonClear'
+  newelement.innerText = 'Limpar';
+  newelement.addEventListener('click', function () {
+  for (let index = 0; index < pixelsBoardAll.length; index += 1) {
+    pixelsBoardAll[index].style.backgroundColor = 'white';
+  }
+  });
+  elementHolder.insertAdjacentElement('afterend', newelement);
 }
 clearButton();

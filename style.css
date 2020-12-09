@@ -10,20 +10,14 @@ ul li a {
   text-decoration: none;
 }
 
-#clear-board{
-    margin: 10px;
-}
-
-#principal {
-  text-align: center;
-  height: 768px;
-  width: 1366px;  
-}
-
 .box {
   display: inline-block;
   height: 40px;
   width: 40px;
+}
+
+.buttonClear {
+  margin: 10px;
 }
 
 .color {
@@ -51,6 +45,12 @@ ul li a {
   border: 1px solid black;
 }
 
-.pixelBoardRow{
+.pixelBoardRow {
   margin-bottom: -4px;
+}
+
+.principal {
+  height: 768px;
+  text-align: center;
+  width: 1366px;
 }
