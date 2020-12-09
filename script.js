@@ -12,5 +12,5 @@ window.onload = function start() {
     }
   }
 
-pixelBoard(5);
-}
+  pixelBoard(5);
+};
