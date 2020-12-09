@@ -130,7 +130,7 @@ function createGenerateBoardElements() {
 
 function removeExistingBoard() {
   const pixelRows = document.querySelectorAll('.pixel-row');
-  for (index = 0; index < pixelRows.length; index += 1) {
+  for (let index = 0; index < pixelRows.length; index += 1) {
     pixelRows[index].remove();
   }
 }
@@ -181,7 +181,7 @@ function getRandomColor() {
 
 function generateRandomColors() {
   const colorDivs = document.querySelectorAll('.color');
-  for (index = 1; index < colorDivs.length; index += 1) {
+  for (let index = 1; index < colorDivs.length; index += 1) {
     colorDivs[index].style.backgroundColor = getRandomColor();
   }
 }
