@@ -59,8 +59,9 @@ function drawPixelBoard(boardSize) {
 
 function deleteBoard() {
   const pixelBoard = document.querySelector('#pixel-board');
-  let child;
-  while (child = pixelBoard.firstElementChild) {
+  // let child;
+  while (pixelBoard.firstElementChild) {
+    let child = pixelBoard.firstElementChild
     pixelBoard.removeChild(child);
   }
 }
@@ -83,12 +84,6 @@ function drawMenu() {
   clearBtn.addEventListener('click', clearPixelBoard);
   document.querySelector('.button-list').appendChild(clearBtn);
 
-  const boardSizeBtn = document.createElement('button');
-  boardSizeBtn.id = 'generate-board';
-  boardSizeBtn.innerText = 'VQV';
-  boardSizeBtn.addEventListener('click', generatePixelBoard);
-  document.querySelector('.button-list').appendChild(boardSizeBtn);
-
   const boardSizeInput = document.createElement('input');
   boardSizeInput.id = 'board-size';
   boardSizeInput.type = 'number';
@@ -96,6 +91,11 @@ function drawMenu() {
   boardSizeInput.max = '50';
   document.querySelector('.button-list').appendChild(boardSizeInput);
 
+  const boardSizeBtn = document.createElement('button');
+  boardSizeBtn.id = 'generate-board';
+  boardSizeBtn.innerText = 'VQV';
+  boardSizeBtn.addEventListener('click', generatePixelBoard);
+  document.querySelector('.button-list').appendChild(boardSizeBtn);
 }
 
 window.onload = function () {
