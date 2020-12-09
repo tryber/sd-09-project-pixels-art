@@ -1,32 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
 .black {
   border: 1px solid black;
   height: 5em;
   margin: 3px;
   width: 5em;
 }
+
 .blue {
   border: 1px solid black;
   height: 5em;
   margin: 3px;
   width: 5em;
 }
+
 #color-palette {
   display: flex;
   margin: 30px;
 }
+
 .green {
   border: 1px solid black;
   height: 5em;
   margin: 3px;
   width: 5em;
 }
+
 #pixel-board {
   height: 200px;
   width: 200px;
 }
+
 .pixel {
   background-color: white;
   border: 1px solid black;
@@ -35,6 +41,7 @@
   width: 40px;
   display: inline-block;
 }
+
 .red {
   border: 1px solid black;
   height: 5em;
