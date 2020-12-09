@@ -8,26 +8,30 @@ function setNumberOfLines() {
     let minValueOfQtty = 5;
     let maxValueOfQtty = 50;
     let inputValue = parseInt(document.querySelector('#board-size').value);
+    validator(inputValue, minValueOfQtty, maxValueOfQtty);
+}
+
+function validator(inputValue, minValueOfQtty, maxValueOfQtty) {
     if (isNaN(inputValue)) {
         alert('Board inválido!');
         return;
     }
+    if (inputValue >= 5 && inputValue <= 50) {
+        createLinesContents(inputValue);
+        return
+    } else if (inputValue < 5) {
+        createLinesContents(minValueOfQtty);
+        return;
+    }
+    createLinesContents(maxValueOfQtty);
+}
+
+function createLinesContents(qtty) {
     let sectionOfBoard = document.querySelector('#pixel-board');
     clearBoard(sectionOfBoard.children.length);
-    if (inputValue >= 5 && inputValue <= 50) {
-        for (let index = 0; index < inputValue; index += 1) {
-            sectionOfBoard.appendChild(setNumberOfPixels());
-        }
-    }else if (inputValue < 5) {
-        for (let index = 0; index < minValueOfQtty; index += 1) {
-            sectionOfBoard.appendChild(setNumberOfPixels());
-        }
-    }else {
-        for (let index = 0; index < maxValueOfQtty; index += 1) {
-            sectionOfBoard.appendChild(setNumberOfPixels());
-        }
+    for (let index = 0; index < qtty; index += 1) {
+        sectionOfBoard.appendChild(setNumberOfPixels());
     }
-    
 }
 
 function setNumberOfPixels() {
