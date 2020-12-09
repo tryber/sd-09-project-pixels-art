@@ -19,7 +19,7 @@ window.onload = function() {
 
         for (let index = 0; index < divsPixels.length; index += 1){
             divsPixels[index].addEventListener('click', function(){
-                divsPixels[index].style.backgroundColor = 'black';
+                divsPixels[index].className += ' fistBG';
             });
         }
     }
