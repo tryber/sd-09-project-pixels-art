@@ -1,12 +1,12 @@
-window.onload = function() {
+window.onload = function () {
   const colorSelected = document.querySelector('.black');
   colorSelected.classList.add('selected');
-}
+};
 
 const getColorPalette = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
-for (let index = 0; index < colors.length; index += 1){
-  let colorsPalette = document.createElement('div');
+for (let index = 0; index < colors.length; index += 1) {
+  const colorsPalette = document.createElement('div');
   colorsPalette.className = 'color ' + colors[index];
   getColorPalette.appendChild(colorsPalette);
 }
@@ -20,11 +20,11 @@ getGreenSlotOnPalette.style.backgroundColor = 'green';
 getBlueSlotOnPalette.style.backgroundColor = 'blue';
 
 function printPixelsFrame() {
-  let getPixelBoard = document.getElementById('pixel-board');
+  const getPixelBoard = document.getElementById('pixel-board');
   for (let line = 0; line < 5; line += 1) {
-    let createDivLine = document.createElement('div');
+    const createDivLine = document.createElement('div');
     for (let column = 0; column < 5; column += 1) {
-      let createDivColumns = document.createElement('div');
+      const createDivColumns = document.createElement('div');
       createDivColumns.className = 'pixel';
       createDivLine.appendChild(createDivColumns);
     }
@@ -34,20 +34,20 @@ function printPixelsFrame() {
 printPixelsFrame();
 
 function changeColorSelected() {
-  let getColors = document.querySelector('#color-palette');
-  getColors.addEventListener('click', function(event) {
-    let getSelectedColor = document.querySelector('.selected');
+  const getColors = document.querySelector('#color-palette');
+  getColors.addEventListener('click', function (event) {
+    const getSelectedColor = document.querySelector('.selected');
     getSelectedColor.classList.remove('selected');
     event.target.classList.add('selected');
-  })
+  });
 }
 changeColorSelected();
 
 function changePixelColor() {
-  let getPixels = document.getElementsByClassName('pixel');
+  const getPixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < getPixels.length; index += 1) {
-    getPixels[index].addEventListener('click', function() {
-      let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+    getPixels[index].addEventListener('click', function () {
+      const selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
       getPixels[index].style.backgroundColor = selectedColor;
     });
   }
@@ -55,12 +55,12 @@ function changePixelColor() {
 changePixelColor();
 
 function clearPixelsBoard() {
-  let getClearButton = document.querySelector('#clear-board');
-  getClearButton.addEventListener('click', function() {
-    let getPixelBoard = document.querySelectorAll('.pixel');
+  const getClearButton = document.querySelector('#clear-board');
+  getClearButton.addEventListener('click', function () {
+    const getPixelBoard = document.querySelectorAll('.pixel');
     for (let index = 0; index < getPixelBoard.length; index += 1) {
       getPixelBoard[index].style.backgroundColor = 'white';
     }
-  })
+  });
 }
 clearPixelsBoard();
