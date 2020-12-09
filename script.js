@@ -15,7 +15,7 @@ function verifiedClass(){
         itemPixel.addEventListener('click', event => {
         
             event.preventDefault()
-       
+            itemPixel.style.backgroundColor = 'black';
             if(color == 'black'){
                 itemPixel.style.backgroundColor = 'black';
         
