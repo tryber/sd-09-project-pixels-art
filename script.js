@@ -1,3 +1,1 @@
-function paintPixel () {
-    
-}
+//function paintPixel () {}
