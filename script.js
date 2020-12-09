@@ -2,8 +2,6 @@ window.onload = function () {
   const paletteColor = document.querySelector('#color-palette');
   const pixelBoard = document.querySelector('#pixel-board');
   const buttonSection = document.querySelector('#button-section');
-  const amountColors = 4;
-  const amountSquares = 25;
 
   function createDivs() {
     const div = document.createElement('div');
@@ -44,6 +42,9 @@ window.onload = function () {
     addColorSquare(palleteArray);
   }
 
+  const amountColors = 4;
+  createColorsPalette(paletteColor, amountColors);
+
   function updateBoardDimensions(board,amountSquare) {
     const boardSize = (Math.sqrt(amountSquare)) * 40;
     board.style.width = `${boardSize}px`;
@@ -81,6 +82,9 @@ window.onload = function () {
       updateBoardSize(board);
     }
   }
+  
+  const amountSquares = 25;
+  loadBoard(pixelBoard, amountSquares);
 
   function deselectColor() {
     const currentColor = document.querySelector('.selected');
@@ -93,6 +97,8 @@ window.onload = function () {
     selectedColor.className += ' selected';
   }
 
+  paletteColor.addEventListener('click', selectColor);
+
   function fillSquare(event) {
     const selectedSquare = event.target;
     if (selectedSquare !== document.querySelector('#pixel-board')) {
@@ -100,6 +106,8 @@ window.onload = function () {
       selectedSquare.style.backgroundColor = currentColor.style.backgroundColor;
     }
   }
+
+  pixelBoard.addEventListener('click', fillSquare);
 
   function createButton(section) {
     const newButton = document.createElement('button');
@@ -113,6 +121,8 @@ window.onload = function () {
     clearButton.innerText = 'Limpar';
     clearButton.id = 'clear-board';
   }
+
+  createClearButton(buttonSection);
 
   function createForm(section) {
     const newForm = document.createElement('form');
@@ -131,6 +141,10 @@ window.onload = function () {
     }
   }
 
+  const buttonClearBoard = document.querySelector('#clear-board');
+
+  buttonClearBoard.addEventListener('click', clearBoard);
+  
   function createInputSizeBoard(section) {
     const inputForm = createForm(section);
     const inputButton = createButton(inputForm);
@@ -145,9 +159,10 @@ window.onload = function () {
     inputButton.type = 'submit';
   }
 
-  const inputBoardSize = document.querySelector('#board-size');
+  createInputSizeBoard(buttonSection);
 
   function storeBoardSize() {
+    const inputBoardSize = document.querySelector('#board-size');
     if (inputBoardSize.value === '') {
      return alert('Board inválido!');
     } else if (inputBoardSize.value < 5) {
@@ -158,23 +173,8 @@ window.onload = function () {
     sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
   }
 
-  createColorsPalette(paletteColor, amountColors);
-
-  loadBoard(pixelBoard, amountSquares);
-
-  createClearButton(buttonSection);
-
-  createInputSizeBoard(buttonSection);
-
-  paletteColor.addEventListener('click', selectColor);
-
-  pixelBoard.addEventListener('click', fillSquare);
-
-  const buttonClearBoard = document.querySelector('#clear-board');
-
   const buttonGenerateBoard = document.querySelector('#generate-board');
 
-  buttonClearBoard.addEventListener('click', clearBoard);
-
   buttonGenerateBoard.addEventListener('click', storeBoardSize);
+
 };
