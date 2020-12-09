@@ -18,7 +18,13 @@
         <li class="color"></li>
         <li class="color"></li>
       </ul>
-      <button id="clear-board" class="clear-board">Limpar</button>
+      <section id="controls" class="controls">
+        <button id="clear-board" class="actionButton">Limpar</button>
+        <form method="dialog">
+          <input type="number" id="board-size" class="board-size" min="1" max="50" placeholder="Tamanho do quadro">
+          <button id="generate-board" class="actionButton">VQV</button>
+        </form>
+      </section>
       <table id="pixel-board" class="pixel-board">
       </table>
     </section>

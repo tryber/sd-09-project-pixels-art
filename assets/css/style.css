@@ -6,9 +6,12 @@ body {
   padding: 0;
 }
 
-.canvas {
+.canvas, .controls {
   align-items: center;
   display: flex;
+}
+
+.canvas {
   flex-direction: column;
 }
 
@@ -42,9 +45,14 @@ td {
   width: 39px;
 }
 
-.clear-board {
+.actionButton {
   background-color: white;
   border: 1px solid black;
-  margin-bottom: 15px;
+  margin: 0 5px 15px 0;
   padding: 8px;
+}
+
+.board-size {
+  width: 150px;
+  height: 27px;
 }

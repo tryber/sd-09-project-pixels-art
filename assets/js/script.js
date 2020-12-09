@@ -75,6 +75,27 @@ function clearCanvas() {
   }
 }
 
+const generateBoard = document.querySelector('#generate-board');
+generateBoard.addEventListener('click', function(){
+  const boardSize = document.querySelector('#board-size').value;
+  if (boardSize === '') {
+    alert('Board inválido!');
+  } else {
+    checkBoardSize(boardSize);
+  }
+})
+
+function checkBoardSize(boardSize) {
+  if (boardSize < 5) {
+    boardSize = 5;
+  } else if (boardSize > 50) {
+    boardSize = 50;
+  }
+  pixelBoard.innerHTML = '';
+  drawPixelBoard(boardSize);
+  paintPixel();  
+}
+
 window.onload = function () {
   createColor();
   drawPixelBoard(5);
