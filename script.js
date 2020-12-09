@@ -24,14 +24,10 @@ function matrix (width, height){
             let lines = document.createElement('div');
             lines.className = 'lines';
             getPixelBoard.appendChild(lines);
-
-
+    
             for(let index = 0; index < numberOfColumns; index += 1){
             let pixel = createPixel()
-            let columns = document.createElement('div');
-            columns.className = 'columns';
-            columns.appendChild(pixel)
-            lines.appendChild(columns);
+            lines.appendChild(pixel)
             };
         }
 
@@ -61,12 +57,9 @@ function firstColor(){
     }
 }
     
-
 let getColorsPaletteDiv = document.querySelector('#color-palette');
 
-getColorsPaletteDiv.addEventListener('click', recebeclick)
-
-function recebeclick(eventOrigin){
+getColorsPaletteDiv.addEventListener('click', function (eventOrigin){
 
     if (eventOrigin.target.id !== 'color-palette'){
 
@@ -74,20 +67,22 @@ function recebeclick(eventOrigin){
         let clickedColorClassName = eventOrigin.target.className;
         let clickedColor = eventOrigin.target.style.backgroundColor
         let getColorsPaletteElements = document.querySelectorAll('.color');
+        
+
 
         if (clickedColorClassNameString.includes('selected')){
-            let newClass = String(clickedColorClassName.replace('selected', ''));
+            let newClass = clickedColorClassNameString.replace('selected', '')
             eventOrigin.target.className = newClass
-        } else {        
+        } else {
             for (let index = 0; index < getColorsPaletteElements.length; index += 1){
-                if (String(getColorsPaletteElements[index].className).includes('selected')){
-                    let newClass = String(getColorsPaletteElements[index].className.replace('selected', ''));
-                    getColorsPaletteElements[index].className = newClass 
-                    }
+                if (String(getColorsPaletteElements[index].className).includes('selected')) {
+                   let newClass = String(getColorsPaletteElements[index].className.replace('selected', ''))
+                   getColorsPaletteElements[index].className = newClass;
+                }
             }
             eventOrigin.target.className += 'selected'
-            }
-        
+        }
+           return clickedColor
     } 
-    return eventOrigin.target.style.backgroundColor
 }
+)
