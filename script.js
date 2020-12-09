@@ -2,7 +2,7 @@ function loadSelected (){
     document.getElementsByClassName('color1')[0].classList.add('selected')
 }
 
-window.onload(loadSelected());
+window.onload = loadSelected();
 
 function changeSelected() {
     let selectedColor = document.getElementsByClassName('color');
