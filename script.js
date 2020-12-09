@@ -13,7 +13,7 @@ function rgbRandom() {
   const g = Math.ceil(Math.random() * 256);
   const b = Math.ceil(Math.random() * 256);
 
-  const rgb = `rgb(${r} , ${g} , ${b})`;
+  const rgb = `rgb(${r}, ${g}, ${b})`;
 
   return rgb;
 }
@@ -63,8 +63,9 @@ colorizePalette();
 function createBoard(width = 5, height = 5) {
   pixelBoard.style.width = `${width * 40}px`;
   pixelBoard.style.height = `${height * 40}px`;
-  pixelBoard.style.border = '1px solid black';
   pixelBoard.style.margin = ' 0 auto';
+
+  colors[0].className += ' selected';
 
   for (let pixelRow = 0; pixelRow < width; pixelRow += 1) {
     for (let pixelColumn = 0; pixelColumn < height; pixelColumn += 1) {
@@ -102,8 +103,8 @@ pixelBoard.addEventListener('click', function (event) {
 });
 
 btnClear.addEventListener('click', () => {
-  const td = document.querySelectorAll('#pixel-board div');
-  for (let item = 0; item < td.length; item += 1) {
-    td[item].style.backgroundColor = 'white';
+  const pixel = document.querySelectorAll('#pixel-board div');
+  for (let item = 0; item < pixel.length; item += 1) {
+    pixel[item].style.backgroundColor = 'white';
   }
 });
