@@ -74,19 +74,18 @@ function generateBoard() {
   let inputValue = document.querySelector('#board-size').value;
   const pixelBoardDiv = document.querySelector('#pixel-board');
   inputValue = checkInput(inputValue);
+
   for (let index = 0; index < inputValue; index += 1) {
     const boardLine = document.createElement('div');
     boardLine.className = 'pixel-line';
     boardLine.style.display = 'table-row';
     pixelBoardDiv.appendChild(boardLine);
-  }
-  for (let index = 0; index < inputValue; index += 1) {
-    const pixelLine = document.querySelectorAll('.pixel-line');
-    for (let index2 = 0; index2 < pixelLine.length; index2 += 1) {
+
+    for (let index2 = 0; index2 < inputValue; index2 += 1) {
       const boardColumn = document.createElement('div');
       boardColumn.className = 'pixel';
       boardColumn.style.display = 'table-cell';
-      pixelLine[index2].appendChild(boardColumn);
+      boardLine.appendChild(boardColumn);
     }
   }
 }
@@ -99,7 +98,7 @@ function generateBoardBtn() {
       alert('Board inválido!');
     } else {
       const pixelBoardDiv = document.querySelector('#pixel-board');
-      pixelBoardDiv.querySelectorAll('*').forEach(n => (n.remove()));
+      pixelBoardDiv.querySelectorAll('*').forEach((n) => n.remove());
       generateBoard();
       colorPixel();
     }
@@ -107,12 +106,12 @@ function generateBoardBtn() {
 }
 
 window.onload = function () {
-  selectColor();
-  colorPixel();
   createBtn();
-  clearBoard();
   createInput();
   createGenBoardBtn();
   generateBoard();
   generateBoardBtn();
+  selectColor();
+  colorPixel();
+  clearBoard();
 };
