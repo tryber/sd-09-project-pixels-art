@@ -1,4 +1,21 @@
+/* Tag and WildCard Styles */
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
 /* Class styles */
+.main-content {
+  background-image: url('pics/bg-image.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.9;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
