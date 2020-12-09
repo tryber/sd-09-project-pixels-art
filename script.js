@@ -1,7 +1,6 @@
 let pixelBoard = document.querySelector('#pixel-board');
 let pxColumn = document.querySelector('.pixel-column');
 function pxBoard(){
-    let line;
     for(let lineIndex = 0; lineIndex < 5; lineIndex += 1) {
         let lineContainer = document.createElement('div');
         lineContainer.className = 'pixel-line';
@@ -46,3 +45,18 @@ function paintClick() {
 }
 
 paintClick();
+
+let cleaner = document.querySelector('#clear-board');
+let pxel = document.querySelectorAll('.pixel');
+
+function clearboard() {
+    for(let index = 0; index < pxel.length; index += 1) {
+        pxel[index].style.backgroundColor = 'white';
+    }
+}
+
+function btnClick() {
+    cleaner.addEventListener('click', clearboard);
+}
+
+btnClick();
