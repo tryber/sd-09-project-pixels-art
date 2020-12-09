@@ -23,5 +23,6 @@
 }
 
 .selected {
-  border: solid 3px green;
+  height: 55px;
+  width: 55px;
 }

@@ -71,7 +71,7 @@ function clearButton() {
   button.addEventListener('click', function () {
     const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].style.backgroundColor = 'white';
+      pixels[i].style.backgroundColor = '';
     }
   });
 }
