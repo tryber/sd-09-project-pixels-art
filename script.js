@@ -1,8 +1,13 @@
 function propObjectToArray(propObject) {
   const outputArray = [];
+  const objectKeys = Object.keys(propObject);
+  for (let index = 0; index < objectKeys.length; index += 1) {
+    const key = objectKeys[index];
+    const value = propObject[key];
+    outputArray.push({ key, value });
+  }
   for (const key in propObject) {
     if (Object.prototype.hasOwnProperty.call(propObject, key)) {
-      outputArray.push({ key, value: propObject[key] });
     }
   }
   return outputArray;
