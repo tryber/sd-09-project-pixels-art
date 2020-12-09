@@ -13,7 +13,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  padding-top: 2%;
 }
 
 #color-palette {
@@ -47,4 +47,20 @@ body {
   height: 40px;
   margin-top: 2%;
   width: 40px;
+}
+
+#clear-board {
+  background-color: rgb( 12 , 81 , 120 );
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px;
+  transition: 0.5s;
+  width: 200px;
+}
+
+#clear-board:hover {
+  background-color: rgb( 4 , 45 , 68 );
 }
