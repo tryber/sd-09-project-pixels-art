@@ -1,3 +1,6 @@
+body {
+    background-color: white;
+}
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -23,3 +26,4 @@ table{
     height: 40px;
     border:1px solid black;
 }
+
