@@ -1,7 +1,6 @@
 window.onload = function () {
   createEventColorBox();
   clear();
-
 };
 
 function createEventColorBox() {
@@ -17,17 +16,6 @@ function createEventColorBox() {
         });
       }
     });
-  }
-
-  function classSelected() {
-    let newClassName = document.querySelector("#" + cor);
-    console.log(cor);
-    //for (let index = 0; index < color.length; index++) {
-    if (cor === "red") {
-      newClassName.className = "color selected";
-      console.log(newClassName);
-    }
-    //}
   }
 }
 
