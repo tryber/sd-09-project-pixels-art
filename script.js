@@ -1,4 +1,5 @@
 var color;
+var button = document.getElementById('clear')
 document.querySelectorAll('.color').forEach(item => {
     item.addEventListener('click', event => {
         verifiedClass()
@@ -32,3 +33,11 @@ function verifiedClass(){
             }
         
         })})
+
+        button.addEventListener('click', eventButton => {
+            eventButton.preventDefault()
+            document.querySelectorAll('.pixel').forEach(itemPixel => {
+                itemPixel.style.backgroundColor = 'white'
+                    
+            })
+        })
