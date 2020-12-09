@@ -31,8 +31,10 @@ function randomColorsPalette(paletteColorElements) {
 }
 
 function getNumberElementsValue(valueInputBoardSize) {
-  if ((valueInputBoardSize < 5) || (valueInputBoardSize === '')) {
+  if (valueInputBoardSize === '') {
     alert('Board inválido!');
+    valueInputBoardSize = '5';
+  } else if (valueInputBoardSize < 5) {
     valueInputBoardSize = '5';
   } else if (valueInputBoardSize > 50) {
     valueInputBoardSize = '50';
@@ -103,7 +105,8 @@ window.onload = function () {
   const paletteColorElements = document.querySelectorAll('.color');
   const buttonGenerateBoard = document.querySelector('#generate-board');
   const inputBoardSize = document.querySelector('#board-size');
-  createPixelElement(inputBoardSize.value);
+  const numberInitialOfPixels = 5;
+  createPixelElement(numberInitialOfPixels);
   buttonGenerateBoard.addEventListener('click', function () {
     const valueInputSize = getNumberElementsValue(inputBoardSize.value);
     createPixelElement(valueInputSize);
