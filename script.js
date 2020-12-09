@@ -1,3 +1,9 @@
+// Variáveis Globais
+const pixelBoard = document.querySelector('#pixel-board');
+const colorPalette = document.querySelector('#color-palette');
+let colorSelected = '';
+
+// Funções
 function createColorPalette(colorPalette) {
   const colors = ['black', 'blue', 'pink', 'purple'];
   colorSelected = '';
@@ -44,10 +50,7 @@ createPixelBoard();
 
 
 
-const pixelBoard = document.querySelector('#pixel-board');
-const colorPalette = document.querySelector('#color-palette');
-let colorSelected = '';
-
+// Estrutura
 colorSelected = createColorPalette(colorPalette);
 // console.log(colorSelected);
 
@@ -65,4 +68,3 @@ colorPalette.addEventListener('click', function (event) {
   }
   // console.log(colorSelected);
 });
-
