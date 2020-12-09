@@ -92,6 +92,12 @@ function generateBoard() {
   input.id = 'board-size';
   input.placeholder = 'Type board dimension here';
   container.appendChild(input);
+  input.addEventListener('keyup', function () {
+      if (input.value < 1) {
+          alert('Invalid value!');
+          input.value = '';
+      }
+  });
 
   // Button
   const button = document.createElement('button');
@@ -100,7 +106,7 @@ function generateBoard() {
   container.appendChild(button);
 
   button.addEventListener('click', function () {
-    if (document.getElementById('board-size').value > 0) {
+    if (document.getElementById('board-size').value !== '') {
       // Remove existing board
       const board = document.getElementById('pixel-board');
       const existingRows = document.querySelectorAll('.row');
