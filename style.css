@@ -1,25 +1,29 @@
 body {
-  width: 1366px;
-  height: 768px;
-  font-size: 16px;
   font-family: Architects, cursive, sans-serif;
+  font-size: 16px;
+  height: 768px;
+  width: 1366px;
 }
 
 ul li a {
-  text-decoration: none;
   color: cadetblue;
+  text-decoration: none;
 }
 
-#mainDiv {
-  width: 1366px;
+#clear-board{
+    margin: 10px;
+}
+
+#principal {
+  text-align: center;
   height: 768px;
-  background-color: rgb(200, 173, 226);
+  width: 1366px;  
 }
 
 .box {
-  width: 40px;
-  height: 40px;
   display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .color {
@@ -28,8 +32,8 @@ ul li a {
 }
 
 .headerElements {
-  text-align: right;
   background-color: goldenrod;
+  text-align: right;
 }
 
 .headerLinks {
@@ -48,5 +52,5 @@ ul li a {
 }
 
 .pixelBoardRow{
-    margin-bottom: -4px;
+  margin-bottom: -4px;
 }
