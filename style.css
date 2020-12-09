@@ -1,32 +1,32 @@
-#color-palette {
+  .centralized {
     margin-left: 44%;
-}
+  }
 
-#command-buttons {
+  .command-buttons {
     margin-left: 45%;
     margin-bottom: 1%;
     margin-top: 1%;
-}
+  }
 
-#title {
+  h1 {
     text-align: center;
-}
+  }
 
-.color {
+  .color {
     display: inline-block;
     border: solid 1px black;
     width: 40px;
     height: 40px;
-}
+  }
 
-#pixel-board {
+  .pixel-board-child {
     margin-left: 42%;
-}
+  }
 
-.pixel {
+  .pixel {
     width: 40px;
     height: 40px;
     display: inline-block;
     border: solid 1px black;
     background-color: white;
-}
+  }
