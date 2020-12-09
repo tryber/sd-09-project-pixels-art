@@ -1,10 +1,3 @@
-.color {
-  border: black solid 1px;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-
 .black {
   background-color: black;
   color: white;
@@ -15,23 +8,29 @@
   color: azure;
 }
 
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+#pixel-board {
+  width: 210px;
+  height: 210px;
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
 .red {
   background-color: red;
 }
 
 .yellow {
   background-color: yellow;
-}
-
-#pixel-board {
-  width: 210px;
-  height: 210px;
-  
-}
-
-.pixel {
-  border: black solid 1px;
-  width: 40px;
-  height:40px;
-  background-color: white;
 }
