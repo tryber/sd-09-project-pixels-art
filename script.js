@@ -113,7 +113,7 @@ function createGeneratorElements() {
     min: '0',
     id: 'board-size',
     size: '2',
-  });
+  };
   const sizeInput = createNewElement('input', sizeInputProperties);
   const buttonProperties = { id: 'generate-board', innerText: 'VQV' };
   const button = createNewElement('button', buttonProperties);
