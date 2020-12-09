@@ -36,7 +36,7 @@ function cleanPixelBoard () {
   const PaletaDeCores = document.querySelector('#clear-board')
   const createButton = document.createElement('button');
   PaletaDeCores.appendChild(createButton);
-  createButton.innerText = 'Clear'
+  createButton.innerText = 'Limpar'
   createButton.id = 'clear-board'
   const PixelBoard = document.querySelectorAll('.pixel')
   let clearButton = document.querySelector('#clear-board')
