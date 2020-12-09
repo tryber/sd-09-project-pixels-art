@@ -106,8 +106,31 @@ function setClearBoardEvents() {
   clearButton.addEventListener('click', clearBoard);
 }
 
+function createGeneratorElements() {
+  const sizeInputProperties = {
+    // Reference: https://www.w3schools.com/tags/att_input_min.asp
+    type: 'number',
+    min: '0',
+    id: 'board-size',
+    size: '2',
+  });
+  const sizeInput = createNewElement('input', sizeInputProperties);
+  const buttonProperties = { id: 'generate-board', innerText: 'VQV' };
+  const button = createNewElement('button', buttonProperties);
+  const containerDivProperties = { style: {
+    display: 'inline-block',
+    marginRight: '5px'
+  }};
+  const containerDiv = createNewElement('div', containerDivProperties);
+  const settingsDiv = document.querySelector('#settings');
+  containerDiv.appendChild(sizeInput);
+  containerDiv.appendChild(button);
+  settingsDiv.insertBefore(containerDiv, settingsDiv.firstElementChild);
+}
+
 createPixelBoard(5, 5);
 createClearButton();
+createGeneratorElements();
 setPixelBoardEvents();
 setColorPaletteEvents();
 setClearBoardEvents();
