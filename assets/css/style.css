@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-.canvas, .controls {
+.canvas , .controls {
   align-items: center;
   display: flex;
 }
@@ -53,6 +53,6 @@ td {
 }
 
 .board-size {
-  width: 150px;
   height: 27px;
+  width: 150px;
 }

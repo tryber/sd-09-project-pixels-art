@@ -1,12 +1,11 @@
 const pixelBoard = document.querySelector('#pixel-board');
 let selectedColor = 'rgb(0 , 0 , 0)';
 const colorBox = document.getElementsByClassName('color');
-let clearButton = document.querySelector('#clear-board');
-clearButton.addEventListener('click', clearCanvas);
+const clearButton = document.querySelector('#clear-board');
+
 
 // Função para criar a paleta de cores selecionáveis
 function createColor() {
-  //let colorBox = document.querySelectorAll('.color');
   for (let index = 0; index < colorBox.length; index += 1) {
     const randomColor = [];
     const rgbColors = 3;
@@ -49,7 +48,7 @@ for (let index = 0; index < colorBox.length; index += 1) {
         colorBox[box].classList.remove('selected');
       }
     }
-  }
+  };
 }
 
 // função para pintar o pixel clicado com a cor selecionada
@@ -58,9 +57,9 @@ function paintPixel() {
     const boardLine = pixelBoard.children[index];
     for (let pixel = 0; pixel < boardLine.children.length; pixel += 1) {
       const paintPixel = pixelBoard.children[index].children[pixel];
-      paintPixel.onclick = function() {
+      paintPixel.onclick = function () {
         paintPixel.style.backgroundColor = selectedColor;
-      }
+      };
     }
   }
 }
@@ -69,21 +68,13 @@ function clearCanvas() {
   for (let index = 0; index < pixelBoard.childElementCount; index += 1) {
     const boardLine = pixelBoard.children[index];
     for (let pixel = 0; pixel < boardLine.children.length; pixel += 1) {
-      const paintPixel = pixelBoard.children[index].children[pixel];
-      paintPixel.style.backgroundColor = 'white';
+      const paintWhitePixel = pixelBoard.children[index].children[pixel];
+      paintWhitePixel.style.backgroundColor = 'white';
     }
   }
 }
 
-const generateBoard = document.querySelector('#generate-board');
-generateBoard.addEventListener('click', function(){
-  const boardSize = document.querySelector('#board-size').value;
-  if (boardSize === '') {
-    alert('Board inválido!');
-  } else {
-    checkBoardSize(boardSize);
-  }
-})
+clearButton.addEventListener('click', clearCanvas);
 
 function checkBoardSize(boardSize) {
   if (boardSize < 5) {
@@ -93,11 +84,21 @@ function checkBoardSize(boardSize) {
   }
   pixelBoard.innerHTML = '';
   drawPixelBoard(boardSize);
-  paintPixel();  
+  paintPixel();
 }
+
+const generateBoard = document.querySelector('#generate-board');
+generateBoard.addEventListener('click', function () {
+  const boardSize = document.querySelector('#board-size').value;
+  if (boardSize === '') {
+    alert('Board inválido!');
+  } else {
+    checkBoardSize(boardSize);
+  }
+})
 
 window.onload = function () {
   createColor();
   drawPixelBoard(5);
   paintPixel();
-}
+};
