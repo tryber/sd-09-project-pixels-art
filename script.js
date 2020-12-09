@@ -13,6 +13,9 @@ window.onload = function () {
   function addColorSquare(palette, colors) {
     for (let index = 0; index < palette.length; index += 1) {
       palette[index].style.backgroundColor = colors[index];
+      if (colors[index] === 'black'){
+        palette[index].className += ' selected';
+      }
     }
   }
 
@@ -28,7 +31,7 @@ window.onload = function () {
 
   function createSquares(board, amount) {
     const squaresArray = [];
-    for (let index = 0; index < amount; index += 1){
+    for (let index = 0; index < amount; index += 1) {
       const square = board.appendChild(createDivs());
       square.className = 'pixel';
       squaresArray.push(square);
@@ -38,4 +41,4 @@ window.onload = function () {
   createColorsPalette(paletteColor, amountColors);
   createSquares(pixelBoard, amountSquares);
 
-};
+}
