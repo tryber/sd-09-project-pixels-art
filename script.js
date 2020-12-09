@@ -2,7 +2,7 @@ const blackColor = document.querySelector('#black');
 const redColor = document.querySelector('#red');
 const cyanColor = document.querySelector('#cyan');
 const yellowColor = document.querySelector('#yellow');
-let bgColor = 'black'
+let bgColor = 'black';
 
 function palletColor() {
   blackColor.style.backgroundColor = 'black';
@@ -16,7 +16,6 @@ function selectedClass(event) {
   classSelected.className = 'color';
   event.target.className = 'color selected';
   bgColor = event.target.style.backgroundColor;
-  console.log(bgColor)
 }
 
 function clickColor() {
@@ -24,22 +23,13 @@ function clickColor() {
   squade.addEventListener('click', selectedClass);
 }
 
-function paintSquare() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.addEventListener('click', changeBackgroundColor);
-}
-
 function changeBackgroundColor(event) {
   event.target.style.backgroundColor = bgColor;
 }
 
-function button() {
-  const button = document.createElement('button');
-  const buttoncontainer = document.querySelector('#button-container');
-  button.id = 'clear-board';
-  button.innerText = 'Clear';
-  button.addEventListener('click', clearPixel)
-  buttoncontainer.appendChild(button);
+function paintSquare() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.addEventListener('click', changeBackgroundColor);
 }
 
 function clearPixel() {
@@ -47,6 +37,15 @@ function clearPixel() {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
   }
+}
+
+function button() {
+  const buttonCreate = document.createElement('button');
+  const buttoncontainer = document.querySelector('#button-container');
+  buttonCreate.id = 'clear-board';
+  buttonCreate.innerText = 'Clear';
+  buttonCreate.addEventListener('click', clearPixel);
+  buttoncontainer.appendChild(buttonCreate);
 }
 
 window.onload = function () {
