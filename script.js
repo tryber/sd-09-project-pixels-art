@@ -1,34 +1,40 @@
 window.onload = function() {
-    let pixelsMatrix = 80;
+    let pixelsMatrix = 5;
     let boardLines;
     let colorPalette = document.getElementById('color-palette');
     let selectedColor = 'black';
     let buttonClear = document.getElementById('clear-board');
     let pixelBoard = document.getElementById('pixel-board');
+    let boardSizeInput = document.getElementById('board-size');
+    let buttonGenerateBoard = document.getElementById('generate-board');
 
     checkSizeBoard();
-    createBoardLine(pixelsMatrix);
-    fillPixelBoard(boardLines);
+    createBoard(pixelsMatrix);
     selectColor();
 
-    function checkSizeBoard() {
-        if (pixelsMatrix > 50) pixelsMatrix = 50;
-        if (pixelsMatrix < 5) pixelsMatrix = 5;
+    function checkSizeBoard(pixelsComparation) {
+        if (pixelsComparation > 50) return 50;
+        if (pixelsComparation < 5) return 5; 
+        return pixelsComparation;
     }
 
-    function createBoardLine(linesQuantity) {
+    function createBoard(linesQuantity) {
+        createLines(linesQuantity);
+        boardLines = document.querySelectorAll('.board-line');
+        fillPixelBoard(boardLines);
+    }
+
+    function createLines(linesQuantity) {
         for (let index = 0; index < linesQuantity; index += 1) {
             let newLine = document.createElement('div');
             newLine.className = 'board-line';
             pixelBoard.appendChild(newLine);
         }
-        boardLines = document.querySelectorAll('.board-line');
-
     }
 
-    function fillPixelBoard(boardLines) {
-        for (let index = 0; index < boardLines.length; index += 1) {
-            fillPixelBoardLine(boardLines[index]);
+    function fillPixelBoard(boardComuns) {
+        for (let index = 0; index < boardComuns.length; index += 1) {
+            fillPixelBoardLine(boardComuns[index]);
         }
     }
 
@@ -50,15 +56,14 @@ window.onload = function() {
         colorPalette.addEventListener('click', function(event) {
             let lastSelected = document.querySelector('.selected');
             let newSelection = event.target;
-            lastSelected.className = 'color';
-            newSelection.className += ' selected';
+            lastSelected.classList.remove('selected');
+            newSelection.classList.add('selected');
             selectedColor = newSelection.id;
         });
     }
 
     function paintPixelWithColorSelected() {
         let pixelBoard = document.getElementById('pixel-board');
-
         pixelBoard.addEventListener('click', function(event) {
             if (event.target.className === 'pixel') {
                 event.target.style.backgroundColor = selectedColor;
@@ -79,4 +84,30 @@ window.onload = function() {
     }
 
     clearBoard();
+
+    function destructBoard() {
+        pixelBoard = document.getElementById('pixel-board');
+        boardLines = document.querySelectorAll('.board-line');
+        for (let index = 0; index < boardLines.length; index += 1) {
+            pixelBoard.removeChild(boardLines[index]);
+        }
+    }
+
+    function gererateBoardNxN() {
+        buttonGenerateBoard.addEventListener('click', function(){
+            if (!boardSizeInput.value) alertEmptyInput();
+            else {
+                destructBoard();
+                pixelsMatrix = checkSizeBoard(boardSizeInput.value);
+                createBoard(pixelsMatrix);
+            }
+            boardSizeInput.value = pixelsMatrix;
+        })
+    }
+
+    gererateBoardNxN();
+
+    function alertEmptyInput() {
+        alert('Favor colocar um numéro válido.')
+    }
 }
