@@ -140,7 +140,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - A paleta de cores não deve conter cores repetidas.
 
-### 3 - A cor **preta** deve ser a primeira na paleta de cores.
+### 3 - A cor **preta** deve ser a primeira na paleta de cores. :heavy_check_mark
 
 ##### As seguintes verificações serão feitas:
 

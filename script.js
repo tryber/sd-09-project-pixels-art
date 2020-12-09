@@ -1,38 +1,66 @@
-window.onload = function () {
-  let search = document.querySelector('#color-palette');
-  let paletteBox = 4;
 
-  function createBoxes() {
-    for (let index = 0; index < paletteBox; index++) {
-      createBox(paletteBox[index]);
-    }
+  let searchPalette = document.querySelector('#color-palette');
+  let searchPixel = document.querySelector('#pixel-board');
+  let line = document.querySelectorAll('.line');
+  let paletteBox = 4;
+  let linhas = 5;
+
+  // cria todas as caixas da linha
+  function createBoxes(number) {
+    for (let index = 0; index < number; index++) {
+      if (number === 4) {
+        createBoxPalette(number[index]);
+      } else {
+        createBoxLine(number[index]);
+      }
+    } 
   }
 
-  function createBox(className) {
+  // cria uma caixa para palette
+  function createBoxPalette() {
     let box = document.createElement('div');
-    box.style.border = '1px solid';
-    box.style.height = '40px';
-    box.style.width = '40px'
-    box.style.margin = '0 5px 0 0';
-    box.className = 'color';
+    box.className = 'color box';
 
-    search.appendChild(box);
-    box.addEventListener('click', paintPixel)
+    searchPalette.appendChild(box);
+    box.addEventListener('click', paintPixel);
     return box;
   }
 
-  createBoxes();
+  // criando uma caixa para linha
+  function createBoxLine(pixelBoard) {
+    let line = document.createElement('div');
+    line.className = 'line'
+    searchPixel.appendChild(line);
 
-  function paintingPalette() {
-    let palette = document.querySelectorAll('div.color');
-      palette[0].className = 'color black';
-      palette[1].className = 'color green';
-      palette[2].className = 'color blue';
-      palette[3].className = 'color red';
+    for (let index = 0; index < 5; index++) {
+      let box = document.createElement('div');
+      box.className = 'pixel';
+      box.style.backgroundColor = 'white';
+      line.appendChild(box);
+      box.addEventListener('click', paintPixel);
+    }
+    return line;
   }
 
+  // pinta as caixas da paleta
+  function paintingPalette() {
+    let palette = document.querySelectorAll('div.color');
+      let colorBlack = palette[0];
+      colorBlack.style.backgroundColor = 'black';
+
+      let colorGreen = palette[1];
+      colorGreen.style.backgroundColor = 'green';
+
+      let colorRed = palette[2];
+      colorRed.style.backgroundColor = 'red';
+
+      let colorBlue = palette[3];
+      colorBlue.style.backgroundColor = 'blue';
+  }
+
+  createBoxes(paletteBox);
+  createBoxes(linhas);
   paintingPalette();
-}
 
 function paintPixel(event) {
   let targ = event.target;
