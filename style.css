@@ -1,5 +1,20 @@
-#title {
-  font-weight: 600;
+.color {
+  background-color: black;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-right: 1px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: -1px;
+  margin-top: -4px;
+  width: 40px; 
 }
 
 #color-palette {
@@ -10,24 +25,11 @@
   display: inline-block;
   height: 210px;
   margin-top: 10px;
+  max-height: 630px;
+  max-width: 630px;
   width: 210px;
 }
 
-.color {
-  background-color: black;
-  display: inline-block;
-  border: 1px solid black;
-  height: 40px;
-  margin-right: 1px;
-  width: 40px;
-  }
-
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  margin: -1px;
-  margin-top: -4px;
+#title {
+  font-weight: 600;
 }
