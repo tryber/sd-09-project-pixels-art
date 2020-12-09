@@ -36,15 +36,14 @@ function cleanPixelBoard () {
   const PaletaDeCores = document.querySelector('#clear-board')
   const createButton = document.createElement('button');
   PaletaDeCores.appendChild(createButton);
-  createButton.innerText = 'Limpar'
-  createButton.id = 'clear-board'
-  const PixelBoard = document.querySelectorAll('.pixel')
-  let clearButton = document.querySelector('#clear-board')
+  createButton.innerText = 'Limpar';
+  createButton.id = 'clear-board';
+  const PixelBoard = document.querySelectorAll('.pixel');
+  const clearButton = document.querySelector('#clear-board');
   clearButton.addEventListener('click', function() {
     for (let index = 0; index < PixelBoard.length; index += 1) {
-      PixelBoard[index].style.backgroundColor = 'white'
+      PixelBoard[index].style.backgroundColor = 'white';
     }
   })
-  console.log(document.querySelectorAll('.pixel'))
 }
 cleanPixelBoard ();
