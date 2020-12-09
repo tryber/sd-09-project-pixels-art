@@ -26,15 +26,6 @@ function pickStarterColors(array) {
   return (starterColors);
 }
 
-function setStarterColors() {
-  const starterColors = pickStarterColors(colorArray);
-  const colors = document.querySelectorAll('.color');
-  for (let idx = 1; idx < colors.length; idx += 1) {
-    colors[idx].style.backgroundColor = starterColors[idx - 1];
-    colors[idx].innerText = starterColors[idx - 1];
-  }
-}
-
 function clearBoard() {
   const allPixels = document.querySelectorAll('.pixel');
   for (let idx = 0; idx < allPixels.length; idx += 1) {
@@ -60,7 +51,7 @@ function constructBoard(baseDoQuadro) {
     const newLine = document.createElement('div');
     newLine.className = 'linha';
     newLine.style.height = '40px';
-    newLine.style.width = `${baseDoQuadro * 40}px`;
+    newLine.style.width = `${baseDoQuadro * 42}px`;
     document.querySelector('#pixel-board').appendChild(newLine);
   }
   const myLines = document.querySelectorAll('.linha');
@@ -107,3 +98,36 @@ function assignPixels() {
     });
   }
 }
+
+function verificaNovaBase(number) {
+  return number ==='' ? alert('Não pode estar em branco')
+        :number <= 5 ? 5
+        :number >=50 ? 50
+        :number;
+}
+
+
+function mudaBoardPeloBotao(){
+  let fieldValue = document.querySelector('.input').value;
+  let answer = verificaNovaBase(fieldValue);
+  if (answer !== undefined) {
+    constructBoard(answer);
+  }
+  document.querySelector('.input').value = '';
+}
+
+document.querySelector('.confirmButton').addEventListener('click',mudaBoardPeloBotao);
+
+function mudaPeloEnter(self) {
+  let key = self.keyCode;
+  if (key === 13){
+    let fieldValue = document.querySelector('.input').value;
+    let answer = verificaNovaBase(fieldValue);
+    if (answer !== undefined) {
+      constructBoard(answer);
+    }
+    document.querySelector('.input').value = '';
+  }
+}
+
+document.querySelector('.input').addEventListener('keydown', mudaPeloEnter);

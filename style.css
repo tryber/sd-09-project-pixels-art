@@ -48,7 +48,7 @@ h1 {
   text-align: center;
 }
 
-.label {
+.label, .confirmButton {
   font-size: 1.2em;
   height: auto;
   width: auto;
@@ -68,12 +68,12 @@ h1 {
 }
 
 .pixel {
-  outline: 1px solid black;
+  border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
 .selected {
-  font-size:1.8em;
+  font-size: 1.8em;
 }
