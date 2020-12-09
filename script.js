@@ -1,17 +1,3 @@
-window.onload = function () {
-  createColorPaletteElements();
-  createPixelBoard(5);
-  createControls();
-  document.querySelector('.color').className += ' selected';
-  let colorPallete = document.querySelector('#color-palette');
-  colorPallete.addEventListener('click', getPelleteColor);
-  let pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.addEventListener('click', paintPixel);
-  let clearButton = document.querySelector('#clear-board');
-  clearButton.addEventListener('click', clearPixelBoard);
-  let generateBoardButton = document.querySelector('#generate-board');
-  generateBoardButton.addEventListener('click', generateNewBoard);
-}
 
 function createColorPaletteElements() {
   let colors = generateRandomColors(3);
@@ -118,9 +104,9 @@ function generateRandomColors(numberOfColors){
   let rgbColor = ['rgb(0, 0, 0)'];
   let stringConstructor;
   for(let i = 0; i < numberOfColors; i++){
-    let red = Math.floor(Math.random() * 256);
-    let green = Math.floor(Math.random() * 256);
-    let blue = Math.floor(Math.random() * 256);
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
     stringConstructor = 'rgb(' + red +', ' + green + ', ' + blue + ')';
     if (!rgbColor.includes(stringConstructor))
     {
@@ -132,4 +118,19 @@ function generateRandomColors(numberOfColors){
 
   return rgbColor;
 
+}
+
+window.onload = function () {
+  createColorPaletteElements();
+  createPixelBoard(5);
+  createControls();
+  document.querySelector('.color').className += ' selected';
+  const colorPallete = document.querySelector('#color-palette');
+  colorPallete.addEventListener('click', getPelleteColor);
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.addEventListener('click', paintPixel);
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', clearPixelBoard);
+  const generateBoardButton = document.querySelector('#generate-board');
+  generateBoardButton.addEventListener('click', generateNewBoard);
 }
