@@ -1,20 +1,23 @@
-.color {
+#title {
+    margin-top: 30px;
+    text-align: center;
+}
+#color-palette {
+    width: 277px;
+    margin: auto;
+}
+#pixel-board {
+    height: 210px;
+    width: 210px;
+    line-height: 0;
+    margin: 0;
+}
+.pixel {
+    display: inline-block;
     border-color: black;
     border-style: solid;
+    border-width: 1px;
+    background-color: white;
     height: 40px;
     width: 40px;
-    border-width: 1px;
-    display: inline-block;
-}
-.black {
-    background-color: black;
-}
-.green {
-    background-color: green;
-}
-.pink {
-    background-color: hotpink;
-}
-.blue {
-    background-color: blue;
 }

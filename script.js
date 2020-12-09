@@ -1,18 +1,23 @@
 function coloringTheColorPalette() {
-    let colorsPalette = document.getElementsById('color-pallete');
-    for (let index = 0; index < colorsPalette.length; index += 1) {
-        if (colorsPalette[index] === colorsPalette[0]) {
-        colorsPalette.style.backgroundColor = 'blue';
-        }
-        if (colorsPalette[index] === colorsPalette[1]) {
-            colorsPalette.style.backgroundColor = 'red';
-        }
-        if (colorsPalette[index] === colorsPalette[2]) {
-            colorsPalette.style.backgroundColor = 'yellow';
-        }
-        if (colorsPalette[index] === colorsPalette[3]) {
-            colorsPalette.style.backgroundColor = 'green';
-        }
+    let colorsPalette = document.querySelectorAll('.color');
+        colorsPalette[0].style.backgroundColor = 'black';
+        colorsPalette[1].style.backgroundColor = 'yellow';
+        colorsPalette[2].style.backgroundColor = 'hotpink';
+        colorsPalette[3].style.backgroundColor = 'green';
+}
+
+function designingTheColorPalette() {
+    let designsPalette = document.querySelectorAll('.color');
+    for (let index = 0; index < designsPalette.length; index += 1) {
+        designsPalette[index].style.display = 'inline-block';
+        designsPalette[index].style.borderColor = 'black';
+        designsPalette[index].style.borderStyle = 'solid';
+        designsPalette[index].style.height = '60px';
+        designsPalette[index].style.width = '60px';
+        designsPalette[index].style.borderRadius = '10px';
+        designsPalette[index].style.margin = 'auto';
     }
 }
+
 coloringTheColorPalette();
+designingTheColorPalette();
