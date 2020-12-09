@@ -1,25 +1,15 @@
-function foo(object) {
-  if (object.key === 'style') {
-    for (let key in object.value) {
-      object.element.style[key] = object.value[key];
-    }
-  } else {
-    object.element[object.key] = object.value;
-  }
-}
-
 function createNewElement(tag, optionsObject) {
   const element = document.createElement(tag);
   for (let key in optionsObject) {
     if (Object.prototype.hasOwnProperty.call(optionsObject, key)) {
-      foo({ element, key, value: optionsObject[key] });
+      element[key] = optionsObject[key];
     }
   }
   return element;
 }
 
 function createPixelRow(numOfDivs) {
-  const row = createNewElement('div', { className: 'pixel-row', style: {backgroundColor: 'pink'} });
+  const row = createNewElement('div', { className: 'pixel-row', });
   for (let i = 0; i < numOfDivs; i += 1) {
     const div = createNewElement('div', { className: 'pixel', });
     row.appendChild(div);
@@ -99,7 +89,7 @@ function createGeneratorElements() {
     min: '0',
     size: '2',
   });
-  const button = createNewElement('button', { id: 'generate-board', innerText: 'VQV' })
+  const button = createNewElement('button', { id: 'generate-board', innerText: 'VQV' });
   // row.appendChild(button);
   // main.insertBefore(row, pixelBoard);
 }
