@@ -37,10 +37,10 @@ body {
   display: table;
 }
 
-td {
+.pixel {
   border: 1px solid black;
   display: table-cell;
-  height: 40px;
+  height: 41px;
   padding: 0;
   width: 40px;
 }

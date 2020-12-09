@@ -56,9 +56,9 @@ function paintPixel() {
   for (let index = 0; index < pixelBoard.childElementCount; index += 1) {
     const boardLine = pixelBoard.children[index];
     for (let pixel = 0; pixel < boardLine.children.length; pixel += 1) {
-      const paintPixel = pixelBoard.children[index].children[pixel];
-      paintPixel.onclick = function () {
-        paintPixel.style.backgroundColor = selectedColor;
+      const paintClickedPixel = pixelBoard.children[index].children[pixel];
+      paintClickedPixel.onclick = function () {
+        paintClickedPixel.style.backgroundColor = selectedColor;
       };
     }
   }
@@ -95,7 +95,7 @@ generateBoard.addEventListener('click', function () {
   } else {
     checkBoardSize(boardSize);
   }
-})
+});
 
 window.onload = function () {
   createColor();
