@@ -1,23 +1,36 @@
-function makePixelDiv() {
-  const div = document.createElement('div');
-  div.className = 'pixel';
-  return div;
+function foo(object) {
+  if (object.key === 'style') {
+    for (let key in object.value) {
+      object.element.style[key] = object.value[key];
+    }
+  } else {
+    object.element[object.key] = object.value;
+  }
 }
 
-function makePixelRow(numOfDivs) {
-  const row = document.createElement('div');
-  row.className = 'pixel-row';
+function createNewElement(tag, optionsObject) {
+  const element = document.createElement(tag);
+  for (let key in optionsObject) {
+    if (Object.prototype.hasOwnProperty.call(optionsObject, key)) {
+      foo({ element, key, value: optionsObject[key] });
+    }
+  }
+  return element;
+}
+
+function createPixelRow(numOfDivs) {
+  const row = createNewElement('div', { className: 'pixel-row', style: {backgroundColor: 'pink'} });
   for (let i = 0; i < numOfDivs; i += 1) {
-    const div = makePixelDiv();
+    const div = createNewElement('div', { className: 'pixel', });
     row.appendChild(div);
   }
   return row;
 }
 
-function makePixelBoard(numOfRows, numOfColumns) {
+function createPixelBoard(numOfRows, numOfColumns) {
   const board = document.querySelector('#pixel-board');
   for (let i = 0; i < numOfRows; i += 1) {
-    const row = makePixelRow(numOfColumns);
+    const row = createPixelRow(numOfColumns);
     board.appendChild(row);
   }
 }
@@ -50,16 +63,16 @@ function setPixelBoardEvents() {
   pixelBoard.addEventListener('click', paintPixel);
 }
 
-function makeClearButton() {
-  const row = document.createElement('div');
-  const button = document.createElement('button');
+function createClearButton() {
+  const settingsDiv = createNewElement('div', { id: 'settings' });
+  const buttonDiv = createNewElement('div', { display: 'inline-block' });
+  const button = createNewElement('button', { id: 'clear-board', innerText: 'Limpar' });
   const pixelBoard = document.querySelector('#pixel-board');
   const main = document.querySelector('main');
-  row.id = 'button-container';
-  button.id = 'clear-board';
-  button.innerText = 'Limpar';
-  row.appendChild(button);
-  main.insertBefore(row, pixelBoard);
+  buttonDiv.appendChild(button);
+  settingsDiv.appendChild(buttonDiv);
+  // Reference: https://developer.mozilla.org/pt-BR/docs/Web/API/Node/insertBefore
+  main.insertBefore(settingsDiv, pixelBoard);
 }
 
 function clearBoard() {
@@ -77,8 +90,23 @@ function setClearBoardEvents() {
   clearButton.addEventListener('click', clearBoard);
 }
 
-makePixelBoard(5, 5);
-makeClearButton();
+
+function createGeneratorElements() {
+  const input = createNewElement('input', {
+    type: 'text',
+    id: 'board-size',
+    // Reference: https://www.w3schools.com/tags/att_input_min.asp
+    min: '0',
+    size: '2',
+  });
+  const button = createNewElement('button', { id: 'generate-board', innerText: 'VQV' })
+  // row.appendChild(button);
+  // main.insertBefore(row, pixelBoard);
+}
+
+
+createPixelBoard(5, 5);
+createClearButton();
 setPixelBoardEvents();
 setColorPaletteEvents();
 setClearBoardEvents();
