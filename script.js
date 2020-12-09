@@ -88,10 +88,11 @@ function coloring() {
 // function clearFrames() {}
 
 window.onload = function () {
+  sessionStorage.setItem('thisColor', 'rgb(0 , 0 , 0)');
   const maxColors = 4;
   paletteGenerator(maxColors),
-    setColors(maxColors),
-    whiteFrames(5, 5),
-    selectColor(),
-    coloring();
+  setColors(maxColors),
+  whiteFrames(5, 5),
+  selectColor(),
+  coloring();
 }
