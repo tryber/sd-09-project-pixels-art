@@ -1,16 +1,16 @@
 .color {
-  position: relative;
   border: 1px solid black;
-  width: 40px;
-  height: 40px;
   float: left;
+  height: 40px;
+  position: relative;
+  width: 40px;
 }
 
 #color-palette {
-  display: block;
-  width: 210px;
-  height: 45px;
   align-items: center;
+  display: block;
+  height: 45px;
+  width: 210px;
 }
 
 #div1 {
@@ -18,27 +18,17 @@
   margin-left: 20px;
 }
 
-#div2 {
-  background-color: red;
-}
 
-#div3 {
-  background-color: green;
-}
-
-#div4 {
-  background-color: blue;
-}
 
 .pixel {
-  position: relative;
   border: 1px solid black;
   float: left;
-  width: 40px;
   height: 40px;
+  position: relative;
+  width: 40px;
 }
 
 #pixel-board {
-  width: 210px;
   height: 210px;
+  width: 210px;
 }
