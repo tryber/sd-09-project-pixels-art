@@ -45,16 +45,14 @@ function createLinesContents(qtty) {
 function validator(inputValue, minValueOfQtty, maxValueOfQtty) {
   if (isNaN(inputValue)) {
     alert('Board inválido!');
-    return null;
   }
   if (inputValue >= 5 && inputValue <= 50) {
     createLinesContents(inputValue);
-    return null;
   } else if (inputValue < 5) {
     createLinesContents(minValueOfQtty);
-    return null;
+  }else{
+      createLinesContents(maxValueOfQtty);
   }
-  createLinesContents(maxValueOfQtty);
 }
 
 function setNumberOfLines() {
@@ -80,26 +78,26 @@ function removeAllSelections(divElements) {
   const lengthOfClassList = 3;
   for (let index = 0; index < divElements.length; index += 1) {
     if (divElements[index].classList.length === lengthOfClassList) {
-        divElements[index].classList.remove(divElements[index].classList[replacePosition])
+      divElements[index].classList.remove(divElements[index].classList[replacePosition])
     }
   }
   return divElements;
 }
 
 function changeSelectedColor(event) {
-  const classSelected = 'selected';
-  if (!(event.target.className === "" || event.target.className === null)) {
-    let divElements = document.querySelectorAll('#color-palette div');
+  const classSelected = ' selected';
+  let divElements = document.querySelectorAll('#color-palette div');
+  if (!(event.target.className === '' || event.target.className === null)) {
     divElements = removeAllSelections(divElements);
-    const newTarget = event.target.className + ' ' + classSelected;
+    const newTarget = event.target.className + classSelected;
     event.target.className = newTarget;
   }
 }
 
 function changePixelColor(event) {
   if (!(event.target.className === '' || event.target.className === null)) {
-    let colorPosition = 1;
-    let selected = document.querySelector('.selected');
+    const colorPosition = 1;
+    const selected = document.querySelector('.selected');
     const getColorPos = event.target.classList[colorPosition];
     const getColorToSet = selected.classList[colorPosition];
     event.target.className = event.target.className.replace(getColorPos, getColorToSet);
