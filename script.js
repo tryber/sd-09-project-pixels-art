@@ -121,18 +121,29 @@ for (let index = 0; index < paletteColor.length; index++) {
   paletteColor[index].addEventListener('click', selectedColor);
 }
 
+/*
+8 - Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
+As seguintes verificações serão feitas:
+Ao carregar a página deve ser possível pintar os pixels de preto;
+
+Após selecionar uma outra cor na paleta, deve ser possível pintar os pixels com essa cor;
+
+Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
+*/
+
+
 
 let pixelsToColoring = document.querySelectorAll('.pixel');
 
 function coloringPixels(event) {
-  if (colorSelected === 'color black selected') {
-    event.target.style.backgroundColor = 'black';
+  if (colorSelected === 'color green selected') {
+    event.target.style.backgroundColor = 'green';
   } else if (colorSelected === 'color blue selected') {
     event.target.style.backgroundColor = 'blue';
   } else if (colorSelected === 'color red selected') {
     event.target.style.backgroundColor = 'red';
   } else {
-    event.target.style.backgroundColor = 'green';
+    event.target.style.backgroundColor = 'black';
   }
 
 }
@@ -145,14 +156,6 @@ for (let index = 0; index < pixelsToColoring.length; index += 1) {
 
 
 /*
-8 - Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
-As seguintes verificações serão feitas:
-Ao carregar a página deve ser possível pintar os pixels de preto;
-
-Após selecionar uma outra cor na paleta, deve ser possível pintar os pixels com essa cor;
-
-Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
-
 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 As seguintes verificações serão feitas:
 O botão deve ter o id denominado clear-board;
@@ -160,3 +163,5 @@ O botão deve ter o id denominado clear-board;
 O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
 O texto do botão deve ser "Limpar". */
+
+document.querySelector
