@@ -2,6 +2,12 @@ let boardSize = 5;
 
 function getValueBoard() {
   boardSize = parseInt(document.querySelector('#board-size').value, 10);
+  if (boardSize < 5) {
+    boardSize = 5;
+  }
+  if (boardSize > 50) {
+    boardSize = 50;
+  }
 }
 
 function generateBoard () {
@@ -34,9 +40,13 @@ function generateBoard () {
 
 const buttonGenerateBoard = document.querySelector('#generate-board');
 buttonGenerateBoard.addEventListener('click', function () {
-  getValueBoard();
+  if (document.querySelector('#board-size').value === '') {
+    alert('Board inválido!');
+  } else {
+    getValueBoard();
   generateBoard();
-  changeBackgroundColor();
+  changeBackgroundColor();   
+  }
 })
 
 document.querySelector('.black').classList.add('selected');
