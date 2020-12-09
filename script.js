@@ -3,6 +3,7 @@ const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
 const selectedColor = document.querySelector('.selected');
 const pixel = document.querySelectorAll('.pixel');
+const btnClear = document.querySelector('#clear-board');
 
 colors[0].style.backgroundColor = 'black';
 colors[1].style.backgroundColor = 'red';
@@ -75,3 +76,13 @@ colorPalette.addEventListener('click', function(event) {
 pixelBoard.addEventListener('click', function(event) {
   event.target.style.backgroundColor = test;
 })
+
+function clearBoard() {
+  
+}
+btnClear.addEventListener('click', () => {
+  const td = document.querySelectorAll('td');
+  for (let item = 0; item < td.length; item += 1) {
+    td[item].style.backgroundColor = 'white';
+  }
+});
