@@ -1,30 +1,30 @@
 window.onload = function () {
   let squareSide = 5;
-  let pixelBoard = document.getElementById("pixel-board");
-
-  buildBoard(pixelBoard);
+  const pixelBoard = document.getElementById("pixel-board");
 
   function createPixel(color) {
-    let pixel = document.createElement("div");
+    const pixel = document.createElement("div");
     pixel.classList.add("pixel");
     pixel.classList.add(color);
     return pixel;
   }
 
   function pixelLine() {
-    let line = document.createElement("div");
+    const line = document.createElement("div");
     line.className = "pixel-line";
     for (let index = 0; index < squareSide; index += 1) {
-      let pixel = createPixel("white");
+      const pixel = createPixel("white");
       line.appendChild(pixel);
     }
     return line;
   }
 
-  function buildBoard(pixelBoard) {
+  function buildBoard(board) {
     for (let index = 0; index < squareSide; index += 1) {
-      let line = pixelLine();
-      pixelBoard.appendChild(line);
+      const line = pixelLine();
+      board.appendChild(line);
     }
   }
+
+  buildBoard(pixelBoard);
 };
