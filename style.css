@@ -16,7 +16,7 @@ body {
   padding-top: 2%;
 }
 
-#color-palette {
+.color-palette-style {
   display: flex;
   justify-content: center;
 }
