@@ -66,6 +66,12 @@ window.onload = function() {
   btn_newMatriz.addEventListener('click', imputWidth);
   function imputWidth() {
     let num = document.querySelector('#board-size').value;
+    if (num < 5) {
+      num = 5;
+    }
+    if (num > 50) {
+      num = 50;
+    }
     createDivsRowsColumns(num);
   }
 
