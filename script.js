@@ -57,12 +57,45 @@ function drawPixelBoard(boardSize) {
   }
 }
 
+function deleteBoard() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  let child;
+  while (child = pixelBoard.firstElementChild) {
+    pixelBoard.removeChild(child);
+  }
+}
+
+function generatePixelBoard() {
+  const inputValue = document.querySelector('#board-size').value;
+  if (!inputValue) {
+    alert('Board inválido!');
+  }
+  if (inputValue) {
+    deleteBoard();
+    drawPixelBoard(inputValue);
+  }
+}
+
 function drawMenu() {
   const clearBtn = document.createElement('button');
   clearBtn.id = 'clear-board';
   clearBtn.innerText = 'Limpar';
   clearBtn.addEventListener('click', clearPixelBoard);
   document.querySelector('.button-list').appendChild(clearBtn);
+
+  const boardSizeBtn = document.createElement('button');
+  boardSizeBtn.id = 'generate-board';
+  boardSizeBtn.innerText = 'VQV';
+  boardSizeBtn.addEventListener('click', generatePixelBoard);
+  document.querySelector('.button-list').appendChild(boardSizeBtn);
+
+  const boardSizeInput = document.createElement('input');
+  boardSizeInput.id = 'board-size';
+  boardSizeInput.type = 'number';
+  boardSizeInput.min = '1';
+  boardSizeInput.max = '50';
+  document.querySelector('.button-list').appendChild(boardSizeInput);
+
 }
 
 window.onload = function () {
