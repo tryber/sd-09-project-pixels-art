@@ -22,7 +22,7 @@ header {
   border-radius: 20px;
   margin: auto;
   padding: 20px;
-  width: 60%; 
+  width: 60%;
 }
 
 .pixel {
@@ -45,7 +45,7 @@ body {
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
-  margin: auto;  
+  margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
   padding: 10px;
@@ -77,4 +77,3 @@ footer {
   text-align: center;
   width: 100%;
 }
-
