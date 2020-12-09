@@ -1,7 +1,7 @@
-let boardSize = 0;
+let boardSize = 5;
 
 function getValueBoard() {
-  boardSize = parseInt(document.querySelector('#board-size').value);
+  boardSize = parseInt(document.querySelector('#board-size').value, 10);
 }
 
 function generateBoard () {
@@ -30,7 +30,6 @@ function generateBoard () {
       }
     }
   }
-  
 }
 
 const buttonGenerateBoard = document.querySelector('#generate-board');
@@ -101,4 +100,7 @@ buttonClear.addEventListener('click', function () {
   clear();
 });
 
-window.onload = changeBackgroundColor();
+window.onload = function () {
+  generateBoard();
+  changeBackgroundColor();
+};
