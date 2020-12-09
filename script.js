@@ -15,21 +15,21 @@ function generateBoard () {
     for (let index = 1; index <= boardSize; index += 1) {
       const tr = document.createElement('tr');
       document.querySelector('#pixel-board').appendChild(tr);
-      for (index4 = 1; index4 <= boardSize; index4 += 1) {
+      for (let index4 = 1; index4 <= boardSize; index4 += 1) {
         const td = document.createElement('td');
         td.className = 'pixel';
         tr.appendChild(td);
       }
     }
   } else {
-    for ( let index5 = 0; index5 < document.querySelectorAll('.pixel').length; index5 += 1) {
-      const tr = document.querySelector('#pixel-board tr')
+    for (let index5 = 0; index5 < document.querySelectorAll('.pixel').length; index5 += 1) {
+      const tr = document.querySelector('#pixel-board tr');
       document.querySelector('#pixel-board').removeChild(tr);
     }
     for (let index6 = 1; index6 <= boardSize; index6 += 1) {
       const tr = document.createElement('tr');
       document.querySelector('#pixel-board').appendChild(tr);
-      for (index7 = 1; index7 <= boardSize; index7 += 1) {
+      for (let index7 = 1; index7 <= boardSize; index7 += 1) {
         const td = document.createElement('td');
         td.className = 'pixel';
         tr.appendChild(td);
@@ -44,10 +44,10 @@ buttonGenerateBoard.addEventListener('click', function () {
     alert('Board inválido!');
   } else {
     getValueBoard();
-  generateBoard();
-  changeBackgroundColor();   
+    generateBoard();
+    changeBackgroundColor();
   }
-})
+});
 
 document.querySelector('.black').classList.add('selected');
 
