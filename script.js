@@ -71,7 +71,6 @@ function mudaBoardPeloBotao() {
   const answer = verificaNovaBase(fieldValue);
   constructBoard(answer);
   document.querySelector('.input').value = '';
-  return ;
 }
 
 document.querySelector('.confirmButton').addEventListener('click', mudaBoardPeloBotao);

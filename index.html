@@ -7,9 +7,8 @@
     </head>
     <body>
         <h1 id='title'>Paleta de Cores</h1>
-
-        <ul id='color-palette' class='color-palette'>
-        </ul>
+        
+        <section id='color-palette' class='color-palette'></section>
 
         <div class='button-container'>
             <button class='button' id='clear-board'>Limpar</button>
@@ -25,7 +24,6 @@
         <script src='script.js'></script>
         <script>
             document.addEventListener('DOMContentLoaded', function(){
-
 
                 const colorArray = ['#2a9d8f', '#f4a261', '#c5c3c6', '#46494c', '#1985a1',
                     '#cb997e', '#ddbea9', '#e5989b', '#b5838d', '#e63946', '#a8dadc', '#457b9d',
@@ -55,7 +53,7 @@
 
                 const starterColors = pickStarterColors(colorArray);
                 for (let idx = 0 ; idx < starterColors.length; idx += 1) {
-                    const newLine = document.createElement('li');
+                    const newLine = document.createElement('div');
                     newLine.className = 'color';
                     newLine.style.backgroundColor = starterColors[idx];
                     newLine.innerText = starterColors[idx];
