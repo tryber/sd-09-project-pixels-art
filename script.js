@@ -39,7 +39,19 @@ function changeBlocks(eventoOne) {
     let getColorSelected = document.querySelector('.color.selected')
     let getColorStyle = getColorSelected.style.backgroundColor;
     eventoOne.target.style.backgroundColor = getColorStyle;
-    
+
 }
 
 allPixel.addEventListener('click', changeBlocks)
+
+let acessClearButton = document.querySelector('#clear-board');
+
+
+function buttonClear() {
+    let getNewAccess = document.querySelectorAll('.pixel');
+    for(let i = 0; i < getNewAccess.length; i += 1) {
+        getNewAccess[i].style.backgroundColor = 'white'
+    }
+}
+
+acessClearButton.addEventListener('click', buttonClear);
