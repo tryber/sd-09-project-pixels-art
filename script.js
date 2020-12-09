@@ -1,5 +1,13 @@
-createColorPaletteElements();
-createPixelBoardElements(5,5);
+window.onload = function(){
+    createColorPaletteElements();
+    createPixelBoardElements(5,5);
+    document.querySelector('.color').className += ' selected';
+    let colorPallete = document.querySelector('#color-palette');
+    colorPallete.addEventListener('click', getPelleteColor);
+    let pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.addEventListener('click', paintPixel);
+
+}
 
 function createColorPaletteElements(){
     let colors = ['rgb(0,0,0)','rgb(46, 204, 113)', 'rgb(41, 128, 185)', 'rgb(231, 76, 60)'];
@@ -31,4 +39,17 @@ function fillLineElements(x){
         line.appendChild(pixel);
     }
     return line;
+}
+
+function getPelleteColor(event){
+    if(event.target.className === 'color'){
+        document.querySelector('.selected').className = 'color';
+        event.target.className += ' selected';
+    } 
+}
+
+function paintPixel(event){
+    if(event.target.className === 'pixel'){
+        event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+    }
 }
