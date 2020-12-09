@@ -1,11 +1,13 @@
 .color {
   border: black solid 1px;
-  display: inline;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
 }
 
 .black {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .blue {
@@ -16,7 +18,20 @@
 .red {
   background-color: red;
 }
- 
+
 .yellow {
   background-color: yellow;
+}
+
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  
+}
+
+.pixel {
+  border: black solid 1px;
+  width: 40px;
+  height:40px;
+  background-color: white;
 }
