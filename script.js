@@ -51,18 +51,15 @@ window.onload = function () {
     const pixelBoard = document.getElementById('pixel-board');
     pixelBoard.addEventListener('click', function(event) {
       const selectedColor = document.querySelector('.selected');
-      console.log(selectedColor);
-      if (selectedColor.className === 'red') {
+      if (selectedColor.classList[1] === 'red') {
         colr = 'red';
-      } else if (selectedColor.className === 'blue') {
+      } else if (selectedColor.classList[1] === 'blue') {
         colr = 'blue';
-      } else if (selectedColor.className === 'green') {
+      } else if (selectedColor.classList[1] === 'green') {
         colr = 'green';
       } else {
         colr = 'black';
       }
-      console.log(colr);
-      console.log(selectedColor.className);
       event.target.style.backgroundColor = colr;
     });
   }
