@@ -9,10 +9,7 @@
         <h1 id='title'>Paleta de Cores</h1>
 
         <ul id='color-palette' class='color-palette'>
-            <li style='background-color: black;' class='color cor1 selected'>black</li>
-            <li class='color cor2'></li>
-            <li class='color cor3'></li>
-            <li class='color cor4'></li>
+            <li style='background-color: black;' class='color selected'>black</li>
         </ul>
 
         <div class='button-container'>
@@ -57,15 +54,36 @@
                 return (starterColors);
                 }
 
-                function setStarterColors() {
-                    const starterColors = pickStarterColors(colorArray);
-                    const colors = document.querySelectorAll('.color');
-                    for (let idx = 1; idx < colors.length; idx += 1) {
-                        colors[idx].style.backgroundColor = starterColors[idx - 1];
-                        colors[idx].innerText = starterColors[idx - 1];
+                const starterColors = pickStarterColors(colorArray);
+                for (let idx = 0 ; idx < starterColors.length; idx += 1) {
+                    const newLine = document.createElement('li');
+                    newLine.className = 'color';
+                    newLine.style.backgroundColor = starterColors[idx];
+                    newLine.innerText = starterColors[idx];
+                    document.querySelector('.color-palette').appendChild(newLine);
+                }
+                
+                function removeColorButtonMarks() {
+                    for (let idx = 0; idx < colorButtons.length; idx += 1) {
+                        if (colorButtons[idx].classList.contains('selected')) {
+                            colorButtons[idx].classList.toggle('selected');
+                       }
                     }
-                };
-                setStarterColors();
+                }
+
+                function selectColor(self) {
+                    removeColorButtonMarks();
+                    const selectedColor = self.target.style.backgroundColor;
+                    sessionStorage.selectedColor = selectedColor;
+                    self.target.classList.toggle('selected');
+                }
+
+                const colorButtons = document.querySelectorAll('.color')
+                for (let idx = 0; idx < colorButtons.length; idx += 1) {
+                    colorButtons[idx].addEventListener('click', function (target) {
+                    selectColor(target);
+                    });
+                }
                 constructBoard(5);
             });
         </script>

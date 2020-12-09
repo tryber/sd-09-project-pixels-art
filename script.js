@@ -20,28 +20,6 @@ function destructBoard() {
   }
 }
 
-const colorButtons = document.querySelectorAll('.color');
-function removeColorButtonMarks() {
-  for (let idx = 0; idx < colorButtons.length; idx += 1) {
-    if (colorButtons[idx].classList.contains('selected')) {
-      colorButtons[idx].classList.toggle('selected');
-    }
-  }
-}
-
-function selectColor(self) {
-  removeColorButtonMarks();
-  const selectedColor = self.target.style.backgroundColor;
-  sessionStorage.selectedColor = selectedColor;
-  self.target.classList.toggle('selected');
-}
-
-for (let idx = 0; idx < colorButtons.length; idx += 1) {
-  colorButtons[idx].addEventListener('click', function (target) {
-    selectColor(target);
-  });
-}
-
 function colorPixel(self) {
   self.target.style.backgroundColor = sessionStorage.selectedColor;
 }
@@ -80,7 +58,7 @@ function verificaNovaBase(number) {
     return 50;
   } else if (number <= 5) {
     return 5;
-  } 
+  }
   return number;
 }
 
