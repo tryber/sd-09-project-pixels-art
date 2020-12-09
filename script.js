@@ -128,9 +128,50 @@ function createGenerateBoardElements() {
   settingsDiv.insertBefore(containerDiv, settingsDiv.firstElementChild);
 }
 
+function removeExistingBoard() {
+  const pixelRows = document.querySelectorAll('.pixel-row');
+  for (index = 0; index < pixelRows.length; index += 1) {
+    pixelRows[index].remove();
+  }
+}
+
+function generateNewBoard(boardSize) {
+  if (boardSize === '') {
+    alert('Board inválido!');
+  } else {
+    removeExistingBoard();
+    createPixelBoard(boardSize, boardSize);
+  }
+}
+
+function validateBoardSize(boardSizeInput) {
+  let boardSize = boardSizeInput.value;
+  const minValue = 5;
+  const maxValue = 50;
+  if (boardSize < minValue) {
+    boardSize = minValue;
+  }
+  if (boardSize > maxValue) {
+    boardSize = maxValue;
+  }
+  boardSizeInput.value = boardSize;
+}
+
+function setGenerateBoardEvents() {
+  const boardSizeInput = document.querySelector('#board-size');
+  const generateBoardButton = document.querySelector('#generate-board');
+  boardSizeInput.addEventListener('change', function() {
+    validateBoardSize(boardSizeInput);
+  });
+  generateBoardButton.addEventListener('click', function() {
+    generateNewBoard(boardSizeInput.value);
+  });
+}
+
 createPixelBoard(5, 5);
 createClearButton();
 createGenerateBoardElements();
 setPixelBoardEvents();
 setColorPaletteEvents();
 setClearBoardEvents();
+setGenerateBoardEvents();
