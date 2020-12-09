@@ -88,15 +88,22 @@ function generateBoard() {
 
   // Input
   const input = document.createElement('input');
-  input.type = 'text';
+  input.type = 'number';
   input.id = 'board-size';
+  input.min = '1';
   input.placeholder = 'Type board dimension here';
   container.appendChild(input);
   input.addEventListener('keyup', function () {
-      if (input.value < 1) {
-          alert('Invalid value!');
-          input.value = '';
-      }
+    if (input.value < input.min) {
+      alert('Invalid value!');
+      input.value = '';
+    }
+  });
+  input.addEventListener('mouseup', function () {
+    if (input.value < input.min) {
+      alert('Invalid value!');
+      input.value = '';
+    }
   });
 
   // Button
