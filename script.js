@@ -1,30 +1,5 @@
 sessionStorage.selectedColor = 'black';
 
-const colorArray = ['#2a9d8f', '#f4a261', '#c5c3c6', '#46494c', '#1985a1',
-  '#cb997e', '#ddbea9', '#e5989b', '#b5838d', '#e63946', '#a8dadc', '#457b9d',
-  '#457b9d', '#f4f1de', '#e07a5f', '#81b29a', '#f2cc8f', '#ffd6a5', '#9bf6ff',
-  '#ffc6ff', '#d00000', '#ffba08', '#00b4d8', '#90e0ef', '#caf0f8', '#fca311',
-  '#06d6a0', '#073b4c', '#f77f00', '#fcbf49', '#b7e4c7', '#8ecae6', '#ffddd2',
-  '#ff006e', '#3a86ff', '#8338ec', '#48cae4', '#ea9ab2', '#b3dee2', '#4ecdc4',
-  '#ffe66d', '#d8572a', '#edb183', '#251605', '#0d21a1', '#e18ad4', '#f2545b',
-  '#890620', '#890620', '#01baef'];
-
-function pickStarterColors(array) {
-  const starterColors = [];
-  let ok;
-  let num;
-  for (let idx = 0; idx < 3; idx += 1) {
-    ok = false;
-    while (!ok) {
-      num = Math.floor(Math.random() * array.length);
-      if (!starterColors.includes(array[num])) {
-        starterColors.push(array[num]);
-        ok = true;
-      }
-    }
-  }
-  return (starterColors);
-}
 
 function clearBoard() {
   const allPixels = document.querySelectorAll('.pixel');
@@ -101,34 +76,40 @@ function constructBoard(baseDoQuadro) {
 }
 
 function verificaNovaBase(number) {
-  return number ==='' ? alert('Não pode estar em branco')
-        :number <= 5 ? 5
-        :number >=50 ? 50
-        :number;
+  if (number >= 50) {
+    return 50;
+  } else if (number <= 5) {
+    return 5;
+  } 
+  return number;
 }
 
-
-function mudaBoardPeloBotao(){
-  let fieldValue = document.querySelector('.input').value;
-  let answer = verificaNovaBase(fieldValue);
-  if (answer !== undefined) {
-    constructBoard(answer);
+function mudaBoardPeloBotao() {
+  const fieldValue = document.querySelector('.input').value;
+  if (fieldValue === '' || fieldValue < 0){
+    document.querySelector('.input').value = '';
+    return alert('Board inválido!');
   }
+  const answer = verificaNovaBase(fieldValue);
+  constructBoard(answer);
   document.querySelector('.input').value = '';
 }
 
-document.querySelector('.confirmButton').addEventListener('click',mudaBoardPeloBotao);
+document.querySelector('.confirmButton').addEventListener('click', mudaBoardPeloBotao);
 
 function mudaPeloEnter(self) {
-  let key = self.keyCode;
-  if (key === 13){
-    let fieldValue = document.querySelector('.input').value;
-    let answer = verificaNovaBase(fieldValue);
-    if (answer !== undefined) {
-      constructBoard(answer);
+  const key = self.keyCode;
+  if (key === 13) {
+    const fieldValue = document.querySelector('.input').value;
+    if (fieldValue ===''|| fieldValue < 0){
+      document.querySelector('.input').value = '';
+      return alert ('Board inválido!');
     }
+    const answer = verificaNovaBase(fieldValue);
+    constructBoard(answer);
     document.querySelector('.input').value = '';
   }
 }
+
 
 document.querySelector('.input').addEventListener('keydown', mudaPeloEnter);
