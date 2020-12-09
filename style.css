@@ -12,7 +12,7 @@ h1 {
   margin-left: 30px;
 }
 
-.color{
+.color {
   display: inline-block;
   border: solid 1px;
   width: 38px;
@@ -41,20 +41,23 @@ h1 {
   margin-bottom: 0px;
   width: 200px;
   height: 200px;
-  align-items: center;
-  display: flex;
+  display: table;
 }
 
 .pixel {
   border: solid 1px;
-  width: 40px;
-  height: 40px;
-
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
   background-color: white;
 }
 
-.pixels {
-  display: inline-block;
+.tr {
+  display: table-row;
+}
+.td {
+  display: table-cell;
 }
 
 #clear-board {
