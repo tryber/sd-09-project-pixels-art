@@ -45,26 +45,6 @@ function destructBoard() {
   }
 }
 
-function constructBoard(baseDoQuadro) {
-  destructBoard();
-  for (let idx = 0; idx < baseDoQuadro; idx += 1) {
-    const newLine = document.createElement('div');
-    newLine.className = 'linha';
-    newLine.style.height = '40px';
-    newLine.style.width = `${baseDoQuadro * 42}px`;
-    document.querySelector('#pixel-board').appendChild(newLine);
-  }
-  const myLines = document.querySelectorAll('.linha');
-  for (let idx = 0; idx < baseDoQuadro; idx += 1) {
-    for (let idx2 = 0; idx2 < baseDoQuadro; idx2 += 1) {
-      const newPixel = document.createElement('div');
-      newPixel.style.backgroundColor = 'white';
-      newPixel.className = 'pixel';
-      myLines[idx].appendChild(newPixel);
-    }
-  }
-}
-
 const colorButtons = document.querySelectorAll('.color');
 function removeColorButtonMarks() {
   for (let idx = 0; idx < colorButtons.length; idx += 1) {
@@ -97,6 +77,27 @@ function assignPixels() {
       colorPixel(target);
     });
   }
+}
+
+function constructBoard(baseDoQuadro) {
+  destructBoard();
+  for (let idx = 0; idx < baseDoQuadro; idx += 1) {
+    const newLine = document.createElement('div');
+    newLine.className = 'linha';
+    newLine.style.height = '40px';
+    newLine.style.width = `${baseDoQuadro * 42}px`;
+    document.querySelector('#pixel-board').appendChild(newLine);
+  }
+  const myLines = document.querySelectorAll('.linha');
+  for (let idx = 0; idx < baseDoQuadro; idx += 1) {
+    for (let idx2 = 0; idx2 < baseDoQuadro; idx2 += 1) {
+      const newPixel = document.createElement('div');
+      newPixel.style.backgroundColor = 'white';
+      newPixel.className = 'pixel';
+      myLines[idx].appendChild(newPixel);
+    }
+  }
+  assignPixels();
 }
 
 function verificaNovaBase(number) {
