@@ -1,3 +1,8 @@
+form {
+  display: inline-block;
+  margin-left: 20px;
+}
+
 .color {
   border: black solid 1px;
   display: inline-block;
@@ -17,7 +22,3 @@
   width: 40px;
 }
 
-#pixel-board {
-  height: 200px;
-  width: 200px;
-}
