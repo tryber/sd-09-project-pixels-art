@@ -52,26 +52,22 @@ function checkSize(inputValue) {
     let subDiv = document.createElement('div');
     subDiv.className = 'line-pixels';
     if (inputValue >= 5 && inputValue <= 50) {
-        for (let index = 0; index < inputValue; index += 1) {
-            let newPixel = document.createElement('div');
-            newPixel.className = 'pixel white';
-            subDiv.appendChild(newPixel);
-        }
+        subDiv = createDivs(inputValue, subDiv);
     } else if (inputValue < minValueOfQtty) {
-        for (let index = 0; index < minValueOfQtty; index += 1) {
-            let newPixel = document.createElement('div');
-            newPixel.className = 'pixel white';
-            subDiv.appendChild(newPixel);
-        }
+        subDiv = createDivs(minValueOfQtty, subDiv);
     }else {
-        for (let index = 0; index < maxValueOfQtty; index += 1) {
-            let newPixel = document.createElement('div');
-            newPixel.className = 'pixel white';
-            subDiv.appendChild(newPixel);
-        }
+        subDiv = createDivs(maxValueOfQtty, subDiv);
     }
     return subDiv;
+}
 
+function createDivs(inputValue, subDiv) {
+    for (let index = 0; index < inputValue; index += 1) {
+        let newPixel = document.createElement('div');
+        newPixel.className = 'pixel white';
+        subDiv.appendChild(newPixel);
+    }
+    return subDiv;
 }
 
 function setEvents() {
