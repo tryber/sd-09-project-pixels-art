@@ -50,8 +50,8 @@ function validator(inputValue, minValueOfQtty, maxValueOfQtty) {
     createLinesContents(inputValue);
   } else if (inputValue < 5) {
     createLinesContents(minValueOfQtty);
-  }else{
-      createLinesContents(maxValueOfQtty);
+  } else {
+    createLinesContents(maxValueOfQtty);
   }
 }
 
@@ -78,7 +78,7 @@ function removeAllSelections(divElements) {
   const lengthOfClassList = 3;
   for (let index = 0; index < divElements.length; index += 1) {
     if (divElements[index].classList.length === lengthOfClassList) {
-      divElements[index].classList.remove(divElements[index].classList[replacePosition])
+      divElements[index].classList.remove(divElements[index].classList[replacePosition]);
     }
   }
   return divElements;
@@ -92,6 +92,7 @@ function changeSelectedColor(event) {
     const newTarget = event.target.className + classSelected;
     event.target.className = newTarget;
   }
+  return divElements;
 }
 
 function changePixelColor(event) {
@@ -126,4 +127,4 @@ function setEvents() {
 window.onload = function () {
   setEvents();
   setNumberOfLines();
-}
+};
