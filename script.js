@@ -1,17 +1,41 @@
-function createNewElement(tag, optionsObject) {
-  const element = document.createElement(tag);
-  for (let key in optionsObject) {
-    if (Object.prototype.hasOwnProperty.call(optionsObject, key)) {
-      element[key] = optionsObject[key];
+function propObjectToArray(propObject) {
+  const outputArray = [];
+  for (const key in propObject) {
+    if (Object.prototype.hasOwnProperty.call(propObject, key)) {
+      outputArray.push({ key, value: propObject[key] })
     }
   }
+  return outputArray;
+}
+
+function handleProperties(element, propObject) {
+  const properties = propObjectToArray(propObject);
+  for (let propertyIndex = 0; propertyIndex < properties.length; propertyIndex += 1) {
+    const property = properties[propertyIndex];
+    if (property.key === 'style') {
+      handleProperties(element.style, property.value);
+    } else {
+      element[property.key] = property.value;
+    }
+  }
+}
+
+function createNewElement(tag, propObject) {
+  const element = document.createElement(tag);
+  handleProperties(element, propObject);
+  // This is returning that odd Code Climate issue
+  // for (const key in optionsObject) {
+  //   if (Object.prototype.hasOwnProperty.call(optionsObject, key)) {
+  //     element[key] = optionsObject[key];
+  //   }
+  // }
   return element;
 }
 
 function createPixelRow(numOfDivs) {
-  const row = createNewElement('div', { className: 'pixel-row', });
+  const row = createNewElement('div', { className: 'pixel-row' });
   for (let i = 0; i < numOfDivs; i += 1) {
-    const div = createNewElement('div', { className: 'pixel', });
+    const div = createNewElement('div', { className: 'pixel' });
     row.appendChild(div);
   }
   return row;
@@ -54,8 +78,10 @@ function setPixelBoardEvents() {
 }
 
 function createClearButton() {
-  const settingsDiv = createNewElement('div', { id: 'settings' });
-  const buttonDiv = createNewElement('div', { display: 'inline-block' });
+  const settingsDivProperties = { id: 'settings', style: { padding: '10px 5px' }};
+  const settingsDiv = createNewElement('div', settingsDivProperties);
+  const buttonDivProperties = { style: { display: 'inline-block' }};
+  const buttonDiv = createNewElement('div', buttonDivProperties);
   const button = createNewElement('button', { id: 'clear-board', innerText: 'Limpar' });
   const pixelBoard = document.querySelector('#pixel-board');
   const main = document.querySelector('main');
@@ -79,21 +105,6 @@ function setClearBoardEvents() {
   const clearButton = document.querySelector('#clear-board');
   clearButton.addEventListener('click', clearBoard);
 }
-
-
-function createGeneratorElements() {
-  const input = createNewElement('input', {
-    type: 'text',
-    id: 'board-size',
-    // Reference: https://www.w3schools.com/tags/att_input_min.asp
-    min: '0',
-    size: '2',
-  });
-  const button = createNewElement('button', { id: 'generate-board', innerText: 'VQV' });
-  // row.appendChild(button);
-  // main.insertBefore(row, pixelBoard);
-}
-
 
 createPixelBoard(5, 5);
 createClearButton();
