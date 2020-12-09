@@ -3,17 +3,10 @@ window.onload = matrix (5, 5), paintPallete(), firstColor ()
 function matrix (width, height){
 
     let getPixelBoard = document.getElementById('pixel-board');
-    let lines = document.querySelectorAll('.line')
+    let pixelBoardWidth = document.createElement('div');
+    pixelBoardWidth.className = 'pixel-board-width';
 
-    fillPixelBoard(lines)
-    
-    function fillPixelBoard(lines){
-        for (let index = 0; index < width; index += 1){
-            fillWidth(lines[index]);
-        }
-    }
 
-    //cria 1 pixel
     function createPixel (){
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
@@ -22,12 +15,17 @@ function matrix (width, height){
         pixel.style.background = 'white';
         return pixel
     }
-    function fillWidth(divLine){
 
-        for (let index = 0; index < height; index += 1){
+    for(let widthIndex = 0; widthIndex < width; widthIndex += 1){
+        for (let heightIndex = 0; heightIndex < height; heightIndex += 1){
+            pixelBoardWidth.className = 'pixel-board-width';
             let pixel = createPixel();
-            divLine.appendChild(pixel);
+            pixelBoardWidth.appendChild(pixel)
         }
+
+        getPixelBoard.appendChild(pixelBoardWidth)
+        pixelBoardWidth = document.createElement('div');
+
     }
 }
 
