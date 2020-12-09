@@ -1,12 +1,14 @@
 window.onload = function(){
     createColorPaletteElements();
     createPixelBoardElements(5,5);
+    createButtons();
     document.querySelector('.color').className += ' selected';
     let colorPallete = document.querySelector('#color-palette');
     colorPallete.addEventListener('click', getPelleteColor);
     let pixelBoard = document.querySelector('#pixel-board');
     pixelBoard.addEventListener('click', paintPixel);
-
+    let clearButton = document.querySelector('#clear-board');
+    clearButton.addEventListener('click', clearPixelBoard);
 }
 
 function createColorPaletteElements(){
@@ -29,6 +31,13 @@ function createPixelBoardElements(x, y){
 
 }
 
+function createButtons(){
+    let buttonContainer = document.querySelector('#button-container');
+    let button = document.createElement('button');
+    button.innerText = 'Limpar';
+    button.id = 'clear-board';
+    buttonContainer.appendChild(button);
+}
 function fillLineElements(x){
     let line = document.createElement('div');
     line.className = 'pixel-board-line';
@@ -51,5 +60,12 @@ function getPelleteColor(event){
 function paintPixel(event){
     if(event.target.className === 'pixel'){
         event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+    }
+}
+
+function clearPixelBoard(){
+    let pixels = document.querySelectorAll('.pixel');
+    for(let pixel of pixels){
+        pixel.style.backgroundColor = 'rgb(255,255,255)';
     }
 }

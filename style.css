@@ -1,23 +1,23 @@
-.color{
-   border: 1px solid black; 
-   display: inline-block;
-   width: 100px;
-   height: 100px;
-   margin: 20px;
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
 }
 
-#color-palette{
-    display: flex;
-    justify-content: space-around;
+#color-palette {
+  display: flex;
+  justify-content: space-around;
 }
 
-.pixel{
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border: 1px solid black;
+.pixel {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid black;
 }
 
-.pixel-board-line{
-    margin: 0;
+.pixel-board-line {
+  margin: 0;
 }
