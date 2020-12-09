@@ -8,17 +8,16 @@ function coloringTheColorPalette() {
 
 function designingTheColorPalette() {
   const designsPalette = document.querySelectorAll('.color');
-  for (let index = 0; index <   designsPalette.length; index += 1) {
-      designsPalette[index].style.display = 'inline-block';
-      designsPalette[index].style.borderColor = 'black';
-      designsPalette[index].style.borderStyle = 'solid';
-      designsPalette[index].style.borderWidth = '1px';
-      designsPalette[index].style.height = '60px';
-      designsPalette[index].style.width = '60px';
-      designsPalette[index].style.borderRadius = '10px';
-      designsPalette[index].style.margin = 'auto';
+  for (let index = 0; index < designsPalette.length; index += 1) {
+    designsPalette[index].style.display = 'inline-block';
+    designsPalette[index].style.borderColor = 'black';
+    designsPalette[index].style.borderStyle = 'solid';
+    designsPalette[index].style.borderWidth = '1px';
+    designsPalette[index].style.height = '60px';
+    designsPalette[index].style.width = '60px';
+    designsPalette[index].style.borderRadius = '10px';
+    designsPalette[index].style.margin = 'auto';
   }
 }
-
 coloringTheColorPalette();
 designingTheColorPalette();
