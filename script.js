@@ -55,4 +55,15 @@ function changeBackgroundColor() {
     });
   }
 }
+const buttonClear = document.querySelector('#clear-board');
+buttonClear.addEventListener('click', function() {
+  clear();
+});
+
+function clear() {
+  let pixel = document.querySelectorAll('.pixel');
+  for (let index3 = 0; index3 < 25; index3 +=1) {
+    pixel[index3].style.backgroundColor = 'white';
+  }
+}
 window.onload = changeBackgroundColor();
