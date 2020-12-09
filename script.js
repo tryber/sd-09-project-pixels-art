@@ -27,7 +27,6 @@ window.onload = function() {
     }
     selectedColorLoop();
   }
-  palette(3);
 
   function createBoard(size) {
     const divFather = document.querySelector('#pixel-board');
@@ -72,7 +71,6 @@ window.onload = function() {
       boxL[index].addEventListener('click', colorChange);
     }
   }
-  boxLoop();
 
   function colorChange(origin) {
     const boxColor = document.querySelector('.color.selected')
@@ -137,6 +135,10 @@ window.onload = function() {
     
     removeBoard();
     createBoard(checkNumber(sizeValor));
+    boxLoop();
   }
+  
+  palette(3);
   createBoard(5);
+  boxLoop();
 }
