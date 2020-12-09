@@ -18,6 +18,7 @@ for (let index = 0; index < initialColorOfPincel.length; index += 1) {
 }
 
 let selectColorOfPalet = document.querySelector('#color-palette');
+let palette = document.querySelector('tbody')
 
 window.onload = function() {
     selectColorOfPalet.addEventListener('click', function(event) { 
@@ -28,8 +29,16 @@ window.onload = function() {
                 colors[index].classList.remove('selected');
             }
         }
-
-        event.target.className += ' selected';
-    
+        event.target.className += ' selected';  
     });
- }
+palette.addEventListener('click', function(event) { 
+    let colors = document.querySelectorAll('.color');
+    let indexOfSelectedClass = 1;
+    for (let index = 0; index < colors.length; index += 1) { 
+        if (colors[index].classList[indexOfSelectedClass] === 'selected') {
+            event.target.style.backgroundColor = colors[index].style.backgroundColor
+        }
+    }
+});
+
+}
