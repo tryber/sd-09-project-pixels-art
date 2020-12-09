@@ -15,12 +15,11 @@ window.onload = function start() {
       paletteColor.className = 'color';
       document.getElementsByClassName('color-palette')[0].appendChild(paletteColor);
       const allPaletColors = document.querySelectorAll('.color');
-      for (let index2 = 0; index2 < allPaletColors.length; index2 += 1) {
-        if (index2 === 0) {
-          allPaletColors[index2].style.backgroundColor = color;
-        } else {
-          allPaletColors[index2].style.backgroundColor = aleatoryColor();
-        }
+      if (index === 0) {
+        allPaletColors[0].style.backgroundColor = color;
+        allPaletColors[0].className += ' selected';
+      } else {
+        allPaletColors[index].style.backgroundColor = aleatoryColor();
       }
     }
   }
