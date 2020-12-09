@@ -46,23 +46,23 @@ window.onload = function () {
   paletteBlack.addEventListener('click', changeColorToBlack);
 
   function clearPixelsButton(buttonName) {
-    let botao = document.querySelector('#clear');
-    let newButton = document.createElement('button');
-    let newButtonID = 'clear-board';
+    const botao = document.querySelector('#clear');
+    const newButton = document.createElement('button');
+    const newButtonID = 'clear-board';
     newButton.innerHTML = buttonName;
     newButton.id = newButtonID;
     botao.appendChild(newButton);
-  };
+  }
   clearPixelsButton('Limpar');
 
 
-  let clr = document.querySelectorAll('.pixel');
-  let bttn = document.querySelector('#clear-board')
-  let color = 'white';
+  const clr = document.querySelectorAll('.pixel');
+  const bttn = document.querySelector('#clear-board');
+  const color = 'white';
   function clearPixels() {
     for (let index = 0; index < clr.length; index += 1) {
       clr[index].style.backgroundColor = color;
     }
   }
   bttn.addEventListener('click', clearPixels);
-}
+};
