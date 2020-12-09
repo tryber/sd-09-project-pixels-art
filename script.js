@@ -54,8 +54,7 @@ pixels.addEventListener('click', function (event){
 btnClear.addEventListener('click',button)
 function button() {
     var clrPixel = document.querySelectorAll('.pixel');
-    console.log(clrPixel);
-    for (i in clrPixel){
+    for (let i=0; i<clrPixel.length; i++){
         clrPixel[i].style.backgroundColor = 'white';
     }
 }
