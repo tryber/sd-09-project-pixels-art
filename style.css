@@ -37,13 +37,10 @@ header {
     /* background-color: blue; */
 }
 
-.container-center {
-    margin: 20px;
-}
-
 #pixel-board {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 #pixel-board-width{
