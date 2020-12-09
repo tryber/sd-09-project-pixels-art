@@ -8,3 +8,34 @@ header {
     padding: 20px 0 ;
     background-color: gray;
 }
+
+#color-palette {
+    padding: 15px;
+    width: 400px;
+    border: 1px black solid;
+}
+
+.color {
+    margin: auto;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+#black {
+    background-color: black;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
