@@ -50,7 +50,6 @@ createPixelBoard();
 
 // Estrutura
 colorSelected = createColorPalette(colorPalette);
-// console.log(colorSelected);
 
 colorPalette.addEventListener('click', function (event) {
   const divSelect = event.target;
@@ -64,7 +63,6 @@ colorPalette.addEventListener('click', function (event) {
     divSelect.classList.add('selected');
     colorSelected = colorDiv;
   }
-  // console.log(colorSelected);
 });
 
 pixelBoard.addEventListener('click', function (event) {
