@@ -10,6 +10,15 @@ for (let index = 0; index < colors.length; index += 1){
   colorsPalette.className = 'color ' + colors[index];
   getColorPalette.appendChild(colorsPalette);
 }
+const getBlackSlotOnPalette = document.querySelector('.black');
+const getRedSlotOnPalette = document.querySelector('.red');
+const getGreenSlotOnPalette = document.querySelector('.green');
+const getBlueSlotOnPalette = document.querySelector('.blue');
+getBlackSlotOnPalette.style.backgroundColor = 'black';
+getRedSlotOnPalette.style.backgroundColor = 'red';
+getGreenSlotOnPalette.style.backgroundColor = 'green';
+getBlueSlotOnPalette.style.backgroundColor = 'blue';
+
 
 function printPixelsFrame() {
   let getPixelBoard = document.getElementById('pixel-board');
@@ -34,3 +43,14 @@ function changeColorSelected() {
   })
 }
 changeColorSelected();
+
+function changePixelColor() {
+  let getPixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < getPixels.length; index += 1) {
+    getPixels[index].addEventListener('click', function() {
+      let selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+      getPixels[index].style.backgroundColor = selectedColor;
+    });
+  }
+}
+changePixelColor();
