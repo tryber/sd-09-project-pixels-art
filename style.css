@@ -20,3 +20,21 @@ header h1 {
   height: 25px;
   display: inline-block;
 }
+
+.item1 {
+  background-color: rgb(0, 0, 0);
+}
+
+.item2 {
+  background-color: rgb(105,105,105);
+}
+
+.item3 {
+  background-color: rgb(158, 158, 158);
+}
+
+.item4 {
+  background-color: rgb(201, 201, 201);
+}
+
+
