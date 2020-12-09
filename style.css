@@ -1,4 +1,4 @@
-#color-palette{
+.color-palette{
     display: flex;
     width: 15%;
     justify-content: space-between;
@@ -8,31 +8,27 @@
     width: 40px;
     height: 40px;
 }
-#black {
+.black {
     background-color: black;
 }
-.black{
-    background-color: black !important;
-}
-#red{
+
+.red{
     background-color: red ;
 }
-.red{
-    background-color: red !important;
-}
-.colorYellow{
+.yellow{
     background-color: yellow;
 }
-.colorPurple{
+.purple{
     background-color: purple;
 }
+
 .pixel{
 background-color: white;
 border: 1px solid black;
     width: 40px;
     height: 40px;
 }
-#pixel-board{ 
+#.ixel-board{ 
     display: table; 
 }
 .tr{ 
