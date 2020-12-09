@@ -15,6 +15,29 @@ function createColorPalette() {
 
 createColorPalette();
 
+function clearBoardLines(pixelBoard) {
+  const pixelBoardLines = document.querySelectorAll('.pixel-board-line');
+
+  for (let index = 0; index < pixelBoardLines.length; index += 1) {
+    pixelBoard.removeChild(pixelBoardLines[index]);
+  }
+}
+
+function generatePixelBoardLines(number) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  number = number || 5;
+
+  clearBoardLines(pixelBoard);
+
+  for (let index = 0; index < number; index += 1) {
+    const pixelBoardLines = document.createElement('div');
+    pixelBoardLines.className = 'pixel-board-line';
+    pixelBoard.appendChild(pixelBoardLines);
+  }
+}
+
+generatePixelBoardLines();
+
 function createPixelBoard() {
   const pixelBoardLines = document.querySelectorAll('.pixel-board-line');
 
@@ -34,10 +57,11 @@ function selectColor() {
   const colors = document.querySelectorAll('.color');
 
   colorsPalette.addEventListener('click', function (event) {
+    const selectedClass = 'selected';
     colors.forEach(function (color) {
-      if (event.target.id !== 'color-palette') {
-        color.classList.remove('selected');
-        event.target.classList.add('selected');
+      if (event.target.className !== 'color-palette') {
+        color.classList.remove(selectedClass);
+        event.target.classList.add(selectedClass);
       }
     });
   });
@@ -71,3 +95,20 @@ function clearBoard() {
 }
 
 clearBoard();
+
+function controlBoardSize() {
+  const boardSizeInput = document.querySelector('#board-size');
+  const generateBoardButton = document.querySelector('#generate-board');
+
+  generateBoardButton.addEventListener('click', function () {
+    if (boardSizeInput.value === '') {
+      alert('Board inválido!');
+    } else {
+      const sizeValue = boardSizeInput.value;
+      generatePixelBoardLines(sizeValue);
+      createPixelBoard();
+    }
+  });
+}
+
+controlBoardSize();
