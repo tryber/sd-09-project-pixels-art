@@ -68,8 +68,10 @@ window.onload = function () {
   function loadBoard(board, amount) {
     if (sessionStorage.getItem('board-size') === null) {
       createSquares(board, amount);
+      clearBoard();
     } else {
       updateBoardSize(board);
+      clearBoard();
     }
   }
   const amountSquares = 25;
@@ -130,6 +132,7 @@ window.onload = function () {
     formInput.id = 'board-size';
     formInput.type = 'text';
     formInput.min = 1;
+    formInput.max = 50
     inputButton.innerText = 'VQV';
     inputButton.id = 'generate-board';
     inputButton.type = 'submit';
