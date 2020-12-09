@@ -35,3 +35,22 @@
 .black {
   background-color: black;
 }
+
+#pixel-board {
+  margin: auto;
+  text-align: center;
+}
+
+.square-div-line {
+  margin: 0;
+  line-height: 0px;
+}
+
+.pixel {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0;
+  background-color: white;
+}
