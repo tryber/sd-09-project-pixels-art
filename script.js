@@ -60,46 +60,50 @@ function createGenBoardBtn() {
   btnSection.appendChild(genBoardBtn);
 }
 
+function checkInput(value) {
+  if (value < 5) {
+    value = 5;
+  }
+  if (value > 50) {
+    value = 50;
+  }
+  return value;
+}
+
 function generateBoard() {
   let inputValue = document.querySelector('#board-size').value;
   const pixelBoardDiv = document.querySelector('#pixel-board');
-  if (inputValue < 5) {
-    inputValue = 5;
-  }
-  if (inputValue > 50) {
-    inputValue = 50;
-  }
-  for (let index = 0; index < inputValue; index +=1) {
+  inputValue = checkInput(inputValue);
+  for (let index = 0; index < inputValue; index += 1) {
     const boardLine = document.createElement('div');
     boardLine.className = 'pixel-line';
     boardLine.style.display = 'table-row';
     pixelBoardDiv.appendChild(boardLine);
   }
-  for (let index = 0; index < inputValue; index +=1) {
+  for (let index = 0; index < inputValue; index += 1) {
     const pixelLine = document.querySelectorAll('.pixel-line');
-    for (let index = 0; index < pixelLine.length; index += 1) {
+    for (let index2 = 0; index2 < pixelLine.length; index2 += 1) {
       const boardColumn = document.createElement('div');
       boardColumn.className = 'pixel';
       boardColumn.style.display = 'table-cell';
-      pixelLine[index].appendChild(boardColumn);
-
+      pixelLine[index2].appendChild(boardColumn);
     }
   }
 }
 
-function genBoardBtn() {
+function generateBoardBtn() {
   const button = document.getElementById('generate-board');
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function () {
     const inputValue = document.querySelector('#board-size').value;
     if (!inputValue) {
-      alert('Board inválido!')
+      alert('Board inválido!');
     } else {
       const pixelBoardDiv = document.querySelector('#pixel-board');
-      pixelBoardDiv.querySelectorAll('*').forEach(n => n.remove());
+      pixelBoardDiv.querySelectorAll('*').forEach(n => (n.remove()));
       generateBoard();
       colorPixel();
     }
-  })
+  });
 }
 
 window.onload = function () {
@@ -110,5 +114,5 @@ window.onload = function () {
   createInput();
   createGenBoardBtn();
   generateBoard();
-  genBoardBtn();
+  generateBoardBtn();
 };
