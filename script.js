@@ -1,3 +1,5 @@
+window.onload = generateRandomColors;
+
 function propObjectToArray(propObject) {
   const outputArray = [];
   for (const key in propObject) {
@@ -66,7 +68,7 @@ function setColorPaletteEvents() {
 function paintPixel() {
   if (event.target.className === 'pixel') {
     const selected = document.querySelector('.selected');
-    // Reference: https://stackoverflow.com/a/25991851/14759260
+    // Reference: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
     const selectedColor = window.getComputedStyle(selected).getPropertyValue('background-color');
     event.target.style.backgroundColor = selectedColor;
   }
@@ -166,6 +168,24 @@ function setGenerateBoardEvents() {
   generateBoardButton.addEventListener('click', function() {
     generateNewBoard(boardSizeInput.value);
   });
+}
+
+function getRandomValue() {
+  return Math.round(Math.random() * 255);
+}
+
+function getRandomColor() {
+  const red = getRandomValue();
+  const green = getRandomValue();
+  const blue = getRandomValue();
+  return `rgb( ${red} , ${green} , ${blue} )`;
+}
+
+function generateRandomColors() {
+  const colorDivs = document.querySelectorAll('.color');
+  for (index = 1; index < colorDivs.length; index += 1) {
+    colorDivs[index].style.backgroundColor = getRandomColor();
+  }
 }
 
 createPixelBoard(5, 5);
