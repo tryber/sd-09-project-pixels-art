@@ -20,3 +20,23 @@
 .yellow {
   background-color: yellow;
 }
+
+.white {
+  background-color: white;
+}
+
+#pixel-board {
+  background-color: whitesmoke;
+  display: table;
+}
+
+.pixel-line {
+  display: table-row;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
