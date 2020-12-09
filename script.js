@@ -1,4 +1,4 @@
-console.log(document.getElementById('color-palette'));
+// console.log(document.getElementById('color-palette'));
 
 
 // window.onload = function() {
