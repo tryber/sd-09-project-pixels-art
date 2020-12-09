@@ -17,9 +17,9 @@ function clearPixelBoard() {
 }
 
 function randomRGB() {
-  let Red = Math.floor(Math.random() * 255);
-  let Green = Math.floor(Math.random() * 255);
-  let Blue = Math.floor(Math.random() * 255);
+  const Red = Math.floor(Math.random() * 255);
+  const Green = Math.floor(Math.random() * 255);
+  const Blue = Math.floor(Math.random() * 255);
   return (`rgb(${Red}, ${Green}, ${Blue})`);
 }
 
