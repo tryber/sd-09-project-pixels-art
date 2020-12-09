@@ -59,6 +59,16 @@ function removePixelBoard() {
   }
 }
 
+function delimitSize(number) {
+  if (number < 5) {
+    size = 5;
+  } else if (number > 50) {
+    size = 50;
+  } else {
+    size = number;
+  }
+}
+
 // Estrutura
 createPixelBoard(size);
 colorSelected = createColorPalette(colorPalette);
@@ -104,12 +114,14 @@ inputBoardSize.addEventListener('input', function (event) {
 
 const buttonGenerateBoard = document.querySelector('#generate-board');
 buttonGenerateBoard.addEventListener('click', function () {
-  if (inputSize < 0) {
-    alert('Digite valores acima de 0.');
-  } else if ((inputSize === undefined) || (inputSize === '')) {
+  // if (inputSize < 0) {
+  //   alert('Digite valores acima de 0.');
+  // } else 
+  
+  if ((inputSize === undefined) || (inputSize === '')) {
     alert('Board inválido!');
   } else {
-    size = inputSize;
+    delimitSize(inputSize);
     removePixelBoard();
     createPixelBoard(size);
   }
