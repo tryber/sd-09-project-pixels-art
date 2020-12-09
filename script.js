@@ -1,6 +1,16 @@
 window.onload = function () {
   const blackPixelPalette = document.querySelector('.black');
   blackPixelPalette.className += ' selected';
+
+  // Paleta de cores aleatória
+  const colors = document.querySelectorAll('.color');
+  for (let index = 1; index < colors.length; index += 1) {
+    const rComponent = Math.ceil(Math.random() * 255);
+    const gComponent = Math.ceil(Math.random() * 255);
+    const bComponent = Math.ceil(Math.random() * 255);
+    const randomColor = `rgb(${rComponent}, ${gComponent}, ${bComponent})`;
+    colors[index].style.backgroundColor = randomColor;
+  }
 };
 
 // Pintando o pixel
