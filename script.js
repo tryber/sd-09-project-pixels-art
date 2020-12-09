@@ -7,8 +7,10 @@ const allPixels = document.querySelectorAll('.pixel');
 function selectedColor() {
     let allColors = document.querySelectorAll('.color');
     for (let i = 0; i < allColors.length; i++) {
-        allColors[i].addEventListener('click', () => {
-
+        allColors[i].addEventListener('click', (event) => {
+            for (let i = 0; i < allColors.length; i++) {
+                allColors[i].className = 'color'
+            }
             switch (allColors[i].className) {
                 case 'color':
                     allColors[i].classList.add('selected')
@@ -23,9 +25,10 @@ function coloredPixels() {
     let pixels = document.querySelectorAll('.pixel')
     let selectedColor = document.querySelector('.selected');
     for (let i = 0; i < pixels.length; i++) {
-    let colorContainer = window.getComputedStyle(document.querySelector('.selected'), null).getPropertyValue("background-color");
-    pixels[i].addEventListener('click', () => {
-    pixels[i].style.backgroundColor = colorContainer
+        pixels[i].addEventListener('click', () => {
+            let colorContainer = window.getComputedStyle(document.querySelector('.selected'), null).getPropertyValue("background-color");
+        pixels[i].style.backgroundColor = colorContainer;
+        console.log(colorContainer)
 
     })
 }
@@ -39,7 +42,7 @@ function clearColor() {
     clearButton.addEventListener('click', ()=> {
         let pixels = document.querySelectorAll('.pixel');
         for(let i = 0; i < pixels.length; i++) {
-            document.getElementsByClassName('pixel')[i].style.backgroundColor = 'white'
+            document.getElementsByClassName('pixel')[i].style.backgroundColor = 'white';
         }
     })
 
