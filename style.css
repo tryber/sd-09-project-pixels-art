@@ -6,6 +6,12 @@
   background-color: blue;
 }
 
+body {
+  background: rgb(153, 114, 252);
+  margin: 60px auto;
+  width:  70%;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -24,6 +30,7 @@
   height: 40px;
   padding: 20px;
   width: 40px;
+  margin: -2px;
 }
 
 .pixel-board {
@@ -34,4 +41,9 @@
 
 .red {
   background-color: red;
+}
+
+#title {
+  text-align: center;
+  background-color: rgb(74, 180, 251) ;
 }
