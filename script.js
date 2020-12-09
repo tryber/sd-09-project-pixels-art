@@ -21,7 +21,6 @@ function generatePalette() {
     color.className = 'color';
     color.style.backgroundColor = colorPaletteArray[randomIndex];
     colorPaletteArray.splice(randomIndex, 1); // Prevent color repetition
-    // color.style.backgroundColor = colorPaletteArray[i];
     palette.appendChild(color);
   }
 }
