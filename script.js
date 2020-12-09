@@ -1,7 +1,21 @@
+window.onload = function() {
+  const selectedColorBlack = document.getElementsByClassName('black');
+  const selectedColorYellow = document.getElementsByClassName('yellow');
+  const selectedColorRed = document.getElementsByClassName('red');
+  const selectedColorGreen = document.getElementsByClassName('green');
+
+  selectedColorBlack[0].className += ' selected';
+
+  // function selectNewColor() {
+  //   addEventListener('click' selectedColor) {
+  //     const selectedColor 
+  //   }
+  // }
+}
 // console.log(document.getElementById('color-palette'));
 
 
-// window.onload = function() {
+
 //         let basePyramid = 9;
 //         let numberOfLines = (basePyramid + 1) / 2; // 5
 //         let controlLeft = numberOfLines; // 5
