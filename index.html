@@ -60,9 +60,9 @@
                     const newLine = document.createElement('div');
 
                     if (idx === 0){
-                        newLine.className = 'color selected'
+                        newLine.className = `color cor${idx+1} selected `
                     } else {
-                    newLine.className = 'color';
+                    newLine.className = `color cor${idx+1}`;
                     }
 
                     newLine.style.backgroundColor = starterColors[idx];
