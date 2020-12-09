@@ -6,10 +6,6 @@ function propObjectToArray(propObject) {
     const value = propObject[key];
     outputArray.push({ key, value });
   }
-  for (const key in propObject) {
-    if (Object.prototype.hasOwnProperty.call(propObject, key)) {
-    }
-  }
   return outputArray;
 }
 
