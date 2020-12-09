@@ -1,22 +1,32 @@
+body {
+  text-align: center;
+  width: 90%;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
   padding: 24px;
 }
 
-.color.black {
+.black {
   background-color: black;
 }
 
-.color.blue {
+.blue {
   background-color: lightblue;
 }
 
-.color.green {
+.green {
   background-color: lightgreen;
 }
 
-.color.pink {
+.pink {
   background-color: lightpink;
 }
 
