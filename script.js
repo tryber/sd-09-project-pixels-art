@@ -1,70 +1,69 @@
-function paletteGenerator() {
-    for (let index = 0; index < 4; index += 1) {
-        const makeDiv = document.createElement('div');
-        makeDiv.className = 'color';
-        document.body.querySelector('#color-palette').appendChild(makeDiv);
-    }
+function paletteGenerator(numOfPale) {
+  for (let index = 0; index < numOfPale; index += 1) {
+  	const makeDiv = document.createElement('div');
+    makeDiv.className = 'color';
+    document.body.querySelector('#color-palette').appendChild(makeDiv);
+	}
 }
-
-function putColor() {
-    let numberOfColors = 4;
-    let colorsOfPalette = [];
-    colorsOfPalette.push('rgb(0 , 0 , 0)');
-    for (let index = 1; index < numberOfColors; index += 1) {
-        colorsOfPalette[index] = rgbGenerator();
-        if (index === (numberOfColors - 1)) {
-            if (repeatTest(colorsOfPalette) === false) {
-                index += 1;
-            } else {
-                index = 0;
-            }
+function putColor(numColors) {
+	let colorsPalette = ['rgb(0 , 0 , 0)'];
+	function rgbGenerator() {
+  	let rgb = [0, 0, 0];
+    for (let index = 0; index < 3; index += 1) {
+    	rgb[index] = (Math.floor(Math.random() * 255 + 1));
+      if (index === 2) {
+      	let colorValue = rgb.reduce((total, currentElement) => total + currentElement);
+        if (colorValue > 150 && colorValue < 700) {
+        	index += 1;
+        } else {
+					index = 0;
         }
+			}
+		}
+		return `rgb(${rgb[2]} , ${rgb[1]} , ${rgb[0]})`;
+  }
+  function repeatTest(cores) {
+  	cores.sort();
+    let repeat = false;
+    for (let i = 0; i < cores.length; i += 1) {
+    	if (cores[i] === cores[i + 1]) {
+      	repeat = true;
+      }
     }
-    return colorsOfPalette;
-
-    function rgbGenerator() {
-        let rgb = [0, 0, 0];
-        for (let index = 0; index < 3; index += 1) {
-            rgb[index] = (Math.floor(Math.random() * 255 + 1));
-            if (index === 2) {
-                let colorValue = rgb.reduce((total, currentElement) => total + currentElement);
-                if (colorValue > 150 && colorValue < 700) { // Verifica se a cor é é muito clara ou muito escura
-                    index += 1;
-                } else {
-                    index = 0;
-                }
-            }
-        }
-        return `rgb(${rgb[2]} , ${rgb[1]} , ${rgb[0]})`;
+    return repeat;
+  }
+  for (let index = 1; index < numColors; index += 1) {
+  	colorsPalette[index] = rgbGenerator();
+    if (index === (numColors - 1)) {
+    	if (repeatTest(colorsPalette) === false) {
+      	index += 1;
+      } else {
+      	index = 0;
+    	}
     }
-
-    function repeatTest(cores) {
-        cores.sort();
-        let repeat = false;
-        for (let i = 0; i < cores.length; i += 1) {
-            if (cores[i] === cores[i + 1]) {
-                repeat = true;
-            }
-        }
-        return repeat;
-    }
+  }
+  return colorsPalette;
 }
 
-function setColors() {
-    let boxNoColor = document.querySelectorAll('div .color');
-    for (let index = 0; index < boxNoColor.length; index += 1) {
-        document.querySelectorAll('div .color')[index].style.backgroundColor = putColor()[index];
-    }
+function setColors(numColors) {
+  let boxNoColor = document.querySelectorAll('div .color');
+  for (let index = 0; index < boxNoColor.length; index += 1) {
+  	document.querySelectorAll('div .color')[index].style.backgroundColor = putColor(numColors)[index];
+  }
 }
 
-function paintingFrame() {
-    for (let index = 0; index < 25; index += 1) {
-        let emptyBox = document.createElement('div');
-        emptyBox.className = 'pixel';
-        document.body.querySelector('#pixel-board').appendChild(emptyBox);
+function whiteFrames(line, column) {
+	let panel = document.body.querySelector('#pixel-board');
+  panel.style.width = `${column * 42}px`;
+  for (let lIndex = 0; lIndex < line; lIndex += 1) {
+  	for (let cIndex = 0; cIndex < column; cIndex += 1) {
+    	let emptyBox = document.createElement('div');
+      emptyBox.className = 'pixel';
+      panel.appendChild(emptyBox);
     }
+  }
 }
 
-paletteGenerator();
-setColors();
-paintingFrame();
+paletteGenerator(4);
+setColors(4);
+whiteFrames(5, 5);

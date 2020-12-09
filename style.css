@@ -23,11 +23,9 @@
 
 #pixel-board {
   display: inline-block;
-  height: 210px;
   margin-top: 10px;
   max-height: 630px;
   max-width: 630px;
-  width: 210px;
 }
 
 #title {
