@@ -110,7 +110,7 @@ function createGenerateBoardElements() {
   const sizeInputProperties = {
     // Reference: https://www.w3schools.com/tags/att_input_min.asp
     type: 'number',
-    min: '0',
+    min: '1',
     id: 'board-size',
     size: '2',
   };
