@@ -69,7 +69,7 @@ function sizeBoard() {
 
 function defineNumber() {
   let number = document.getElementById('board-size').value;
-  if (number === '' || number < 0) {
+  if (number === '') {
     alert('Board inválido!');
     number = 5;
   } else if (number < 5) {
