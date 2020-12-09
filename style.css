@@ -5,23 +5,6 @@
     width: 50px;
 }
 
-
-.black {
-    background-color: black;
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
-.blue {
-    background-color: blue;
-}
-
 .pixel {
     border: black solid 1px;
     display: table-cell;

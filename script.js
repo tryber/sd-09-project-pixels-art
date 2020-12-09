@@ -1,6 +1,5 @@
 let pixelBoard = document.querySelector('#pixel-board');
 let pxColumn = document.querySelector('.pixel-column');
-
 function pxBoard(){
     let line;
     for(let lineIndex = 0; lineIndex < 5; lineIndex += 1) {
@@ -33,3 +32,17 @@ function getSelecter() {
 }
 
 getSelecter();
+
+function bgPaint(event) {
+    let classSelector = document.querySelector('.selected');
+    event.target.style.backgroundColor = classSelector.style.backgroundColor;
+}
+
+
+
+function paintClick() {
+    const pxBoard = document.querySelector('#pixel-board');
+    pxBoard.addEventListener('click', bgPaint);
+}
+
+paintClick();
