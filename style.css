@@ -45,6 +45,17 @@
 }
 
 /* ====== CAIXA DE PIXELS ======== */
+#clear-board {
+  border: none;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ====== CAIXA DE PIXELS ======== */
 #pixel-board {
   display: flex;
   border: 1px solid black;

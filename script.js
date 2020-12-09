@@ -18,6 +18,13 @@ window.onload = function() {
     currentPixel.id = currentColorId;
   }
 
+  function handleButton() {
+    const board = document.querySelectorAll('.pixel');
+    for (let index = 0; index < board.length; index += 1) {
+      board[index].removeAttribute('id');
+    }
+  }
+
   function createPaletteColor() {
     const colorPalette = document.getElementById('color-palette');
 
@@ -25,6 +32,7 @@ window.onload = function() {
       const colorBox = document.createElement('div');
       if (index === 0) {
         colorBox.classList.add('box', 'color', 'circle', 'selected');
+        currentColorId = colorsId[index];
       } else {
         colorBox.classList.add('box', 'color', 'circle');
       }
@@ -32,6 +40,16 @@ window.onload = function() {
       colorBox.addEventListener('click', handleSelectColor);
       colorPalette.appendChild(colorBox);
     }
+  }
+
+  function createButton() {
+    const button = document.createElement('button');
+    button.id = 'clear-board';
+    button.innerText = 'Limpar';
+    button.addEventListener('click', handleButton);
+    const pixelBoard = document.getElementById('pixel-board');
+    const container = pixelBoard.parentNode;
+    container.insertBefore(button, pixelBoard);
   }
 
   function createPixelBoard() {
@@ -59,4 +77,5 @@ window.onload = function() {
 
   createPaletteColor();
   createPixelBoard();
+  createButton();
 };
