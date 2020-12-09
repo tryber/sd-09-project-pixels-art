@@ -40,8 +40,8 @@ h1 {
 
 .pixels-box {
   background-color: rgb(253, 200, 200);
-  margin-left: 15px;
-  width: 231px;
+  padding-left: 15px;
+  width: 210px;
 }
 
 .second-color {
