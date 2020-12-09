@@ -6,7 +6,7 @@ function firstSelectedFun() {
   clickSelect();
   paintPixel();
   buttonReset();
-  deletarCriar ();
+  deletarCriar();
 }
 
 // Recupera caminho das cores e adiciona classe 'selected'
@@ -109,33 +109,36 @@ function buttonReset() {
   });
 }
 
-function deletarCriar (){
-  let inputPosition = document.querySelector('#board-size')
-  let quantidadePixels = inputPosition.value
-  let vqvPosition = document.querySelector('#generate-board')
-  let pixelRowLocal = document.querySelectorAll(".pixel-row")
-  let pixelBoardLocal = document.querySelector("#pixel-board")
+function deletarCriar() {
+  let inputPosition = document.querySelector("#board-size");
+  let quantidadePixels = inputPosition.value;
+  let vqvPosition = document.querySelector("#generate-board");
+  let pixelRowLocal = document.querySelectorAll(".pixel-row");
+  let pixelBoardLocal = document.querySelector("#pixel-board");
 
-  vqvPosition.addEventListener('click', function(){
-    let quantidadePixels = inputPosition.value
+  vqvPosition.addEventListener("click", function () {
+    let quantidadePixels = inputPosition.value;
+    if (quantidadePixels == 0) {
+      window.alert("Board Inválido");
+    }
 
-    for (let count = 0; count < pixelRowLocal.length; count += 1){
-      pixelRowLocal[count].remove()
-    } 
+    for (let count = 0; count < pixelRowLocal.length; count += 1) {
+      pixelRowLocal[count].remove();
+    }
 
-    for (let count2 = 0; count2 < quantidadePixels; count2 += 1){
-      let newPixel = document.createElement("div")
-      newPixel.className = 'pixel-row'
-      pixelBoardLocal.appendChild(newPixel)
-      for (count3 = 0; count3 < quantidadePixels; count3 += 1){
-        let newPixelLocal = document.querySelectorAll('.pixel-row')[count2]
-        let newPixelLado = document.createElement("div")
-        newPixelLado.className = 'pixel'
-        newPixelLocal.appendChild(newPixelLado)
+    for (let count2 = 0; count2 < quantidadePixels; count2 += 1) {
+      let newPixel = document.createElement("div");
+      newPixel.className = "pixel-row";
+      pixelBoardLocal.appendChild(newPixel);
+      for (count3 = 0; count3 < quantidadePixels; count3 += 1) {
+        let newPixelLocal = document.querySelectorAll(".pixel-row")[count2];
+        let newPixelLado = document.createElement("div");
+        newPixelLado.className = "pixel";
+        newPixelLocal.appendChild(newPixelLado);
 
-        paintPixel()
-        buttonReset()
+        paintPixel();
+        buttonReset();
       }
-    } 
-  })
+    }
+  });
 }
