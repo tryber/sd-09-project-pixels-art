@@ -71,10 +71,6 @@ function createPixel() {
 }
 
 function createBoard(width = 5, height = 5) {
-  pixelBoard.style.width = `${width * 40}px`;
-  pixelBoard.style.height = `${height * 40}px`;
-  pixelBoard.style.margin = 'auto';
-
   colors[0].className += ' selected';
 
   for (let pixelRow = 0; pixelRow < width; pixelRow += 1) {
@@ -82,6 +78,9 @@ function createBoard(width = 5, height = 5) {
       createPixel();
     }
   }
+  pixelBoard.style.width = `${width * colors[0].offsetWidth}px`;
+  pixelBoard.style.height = `${height * colors[0].offsetWidth}px`;
+  pixelBoard.style.margin = 'auto';
 }
 createBoard(5, 5);
 
