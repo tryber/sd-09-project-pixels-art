@@ -26,6 +26,16 @@ window.onload = function start() {
 
   createPalette(4);
 
+  function createButton() {
+    let button = document.createElement('button');
+    button.innerText = 'Limpar';
+    button.className = 'clear';
+    button.id = 'clear-board'
+    document.querySelector('#button-place').appendChild(button);
+  }
+
+  createButton();
+
   function pixelBoard(matrix) {
     for (let index = 0; index < matrix; index += 1) {
       const pixelsLine = document.createElement('div');
@@ -61,15 +71,6 @@ let colors = document.querySelectorAll('.color');
 
   const onclickPixelBoard = document.getElementsByClassName('pixel-board-inside')[0];
   onclickPixelBoard.addEventListener('click', paint);
-
-  function createButton() {
-    let button = document.createElement('button');
-    button.innerText = 'Limpar cores';
-    button.className = 'clear';
-    document.getElementById('color-palette').appendChild(button);
-  }
-
-  createButton();
 
   const clear = document.querySelectorAll('.pixel');
   function cleaner() {

@@ -3,10 +3,17 @@ body {
   margin: 0;
 }
 
+#button-place {
+  height: 30px;
+  margin: 10px auto;
+  text-align: center;
+  width: max-content;
+}
+
 .clear {
   height: 100%;
   float: right;
-  margin: auto 10px;
+  margin: auto;
 }
 
 .color-palette {
