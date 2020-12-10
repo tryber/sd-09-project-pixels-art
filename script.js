@@ -16,7 +16,19 @@ function createBoardLine () {
     document.getElementById('pixel-board').appendChild(pixel)
   }
 }
+
+function paleteColor() {
+  let pink = document.querySelectorAll('.color')[1];
+  let purple = document.querySelectorAll('.color')[2];
+  let green = document.querySelectorAll('.color')[3];
+  pink.style.backgroundColor = 'rgb(255, 192, 203)';
+  purple.style.backgroundColor = 'rgb(128, 0, 128)';
+  green.style.backgroundColor = 'rgb(15, 192, 50)';
+}
+
+
 window.onload = function(){
   createPalete()
   createBoardLine()
-  }
+  paleteColor()
+}

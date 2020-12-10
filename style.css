@@ -2,8 +2,7 @@
   border: solid black 1px;
   width: 188px;
   height: 45px;
-  margin-left: 16px;
-  
+  margin-left: 16px;  
 }
 
 .color {
@@ -11,6 +10,8 @@
   height: 45px;  
   display: inline-block;
   border: solid black 1px;
+  
+  
 }
 
 .color-selected {
@@ -19,8 +20,7 @@
 }
 
 #pixel-board {
-  margin-top: 10px;
-  
+  margin-top: 10px;  
 }
 
 .pixel {
@@ -28,8 +28,7 @@
   width: 38px;
   height: 38px;
   border: 1px solid black;
-  display: inline-block;
-  
+  display: inline-block;  
 }
 
 #container {
