@@ -1,0 +1,33 @@
+.color {
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+#color-palette {
+  align-items: center;
+  display: block;
+  height: 45px;
+  width: 210px;
+}
+
+#div1 {
+  background-color: black;
+  margin-left: 20px;
+}
+
+
+
+.pixel {
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+#clear-board {
+  margin: 10px auto;
+}
