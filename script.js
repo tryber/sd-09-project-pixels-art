@@ -2,6 +2,7 @@ window.onload = function () {
   let squareSide = 5;
   const pixelBoard = document.getElementById("pixel-board");
   const colorPalette = document.getElementById("color-palette");
+  const clear = document.getElementById("clear-board");
 
   function createPixel(color) {
     const pixel = document.createElement("div");
@@ -31,7 +32,7 @@ window.onload = function () {
 
   colorPalette.addEventListener("click", colorSelect);
 
-  function colorSelect() {
+  function colorSelect(event) {
     let colors = document.getElementsByClassName("color");
     for (let index = 0; index < colors.length; index += 1) {
       colors[index].classList.remove("selected");
@@ -41,10 +42,23 @@ window.onload = function () {
 
   pixelBoard.addEventListener("click", paint);
 
-  function paint() {
+  function paint(event) {
     let newColor = document.querySelector(".selected").classList[1];
     let oldColor = event.target.classList[1];
     event.target.classList.remove(oldColor);
     event.target.classList.add(newColor);
+  }
+
+  clear.addEventListener("click", clearBoard);
+
+  function clearBoard() {
+    let pixels = document.getElementsByClassName("pixel");
+    let newColor = "white";
+    let oldColor;
+    for (let index = 0; index < pixels.length; index += 1) {
+      oldColor = pixels[index].classList[1];
+      pixels[index].classList.remove(oldColor);
+      pixels[index].classList.add(newColor);
+    }
   }
 };
