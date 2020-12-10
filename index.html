@@ -18,12 +18,14 @@
 
   <button id="clear-board">Limpar</button>
 
-  <input type="range" min="5" max="50" step="1">
-  <input id="board-size" type="text" class="inValue">
+  <input id="slideBar" type="range" min="5" max="50" step="1">
+  <input id="board-size" type="text" class="inValue" value="0">
 
-  <input id="generate-board" type="button" value="VQV">
+  <button id="generate-board">VQV</button>
 
-  <div id="pixel-board"></div>
+  <div id="pixel-board" class="board">
+    <!-- Populado pela função createBoard -->
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

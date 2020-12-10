@@ -3,12 +3,7 @@ const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('#color-palette');
 const btnClear = document.querySelector('#clear-board');
 const inBoardSize = document.querySelector('#board-size');
-const inValue = document.querySelector('.inValue');
 const btnGenerateBoard = document.querySelector('#generate-board');
-
-// Salva o valor do input do usuário
-let userInput = Number(inBoardSize.value);
-console.log(userInput);
 
 // cor inicial dos pixels de referência
 colors[0].style.backgroundColor = 'black';
@@ -44,22 +39,25 @@ function createPixel() {
 }
 
 // Cria a tabela com os pixels e adiciona a classe 'selected' ao primeiro pixel
-function createBoard(boardSize) {
-  colors[0].classList.add('selected');
-  
-  if (boardSize === 0) {
-    boardSize = 5;
+function createBoard() {
+  let userInput = Number(inBoardSize.value);
+  colors[0].classList.add('selected')
+  deleteBoard();
+
+  if (userInput === 0) {
+    userInput = 5;
   }
 
-  for (let pixelRow = 0; pixelRow < boardSize; pixelRow += 1) {
-    for (let pixelColumn = 0; pixelColumn < boardSize; pixelColumn += 1) {
+  for (let pixelRow = 0; pixelRow < userInput; pixelRow += 1) {
+    for (let pixelColumn = 0; pixelColumn < userInput; pixelColumn += 1) {
       createPixel();
     }
   }
-  pixelBoard.style.width = `${boardSize * colors[0].offsetWidth}px`;
-  pixelBoard.style.height = `${boardSize * colors[0].offsetWidth}px`;
+  pixelBoard.style.width = `${userInput * colors[0].offsetWidth}px`;
+  pixelBoard.style.height = `${userInput * colors[0].offsetWidth}px`;
   pixelBoard.style.margin = 'auto';
 }
+createBoard();
 
 // Remove a classe 'selected'
 function removeClassSelected() {
@@ -93,5 +91,17 @@ btnClear.addEventListener('click', () => {
   }
 });
 
+// Apaga a tabela atual
+function deleteBoard() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let item = 0; item < pixel.length; item += 1) {
+    if (pixel[item].parentNode) {
+      pixel[item].parentNode.removeChild(pixel[item]);
+    }
+  }
+};
+
 // Evento 'VQV', altera o tamanho da tabela
-btnGenerateBoard.addEventListener('click', createBoard(userInput));
+btnGenerateBoard.addEventListener('click', createBoard);
+
+// Evento slideBar

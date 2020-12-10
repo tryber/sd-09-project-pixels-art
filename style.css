@@ -9,7 +9,7 @@ body {
   width: 40px;
 }
 
-#pixel-board {
+.board {
   line-height: 0;
 }
 
