@@ -1,135 +1,133 @@
-window.onload = function() {
-    let pixelsMatrix = 5;
-    let boardLines;
-    let colorPalette = document.getElementById('color-palette');
-    let buttonClear = document.getElementById('clear-board');
+window.onload = function () {
+  let pixelsMatrix = 5;
+  let boardLines;
+  let colorPalette = document.getElementById('color-palette');
+  let buttonClear = document.getElementById('clear-board');
+  let pixelBoard = document.getElementById('pixel-board');
+  let boardSizeInput = document.getElementById('board-size');
+  let buttonGenerateBoard = document.getElementById('generate-board');
+  let selectedColor = 'black';
+
+  checkSizeBoard();
+  createBoard(pixelsMatrix);
+  selectColor();
+
+  function checkSizeBoard(pixelsComparation) {
+    if (pixelsComparation > 50) return 50;
+    if (pixelsComparation < 5) return 5;
+    return pixelsComparation;
+  }
+
+  function createBoard(linesQuantity) {
+    createLines(linesQuantity);
+    boardLines = document.querySelectorAll('.board-line');
+    fillPixelBoard(boardLines);
+  }
+
+  function createLines(linesQuantity) {
+    for (let index = 0; index < linesQuantity; index += 1) {
+      let newLine = document.createElement('div');
+      newLine.className = 'board-line';
+      pixelBoard.appendChild(newLine);
+    }
+  }
+
+  function fillPixelBoard(boardComuns) {
+    for (let index = 0; index < boardComuns.length; index += 1) {
+      fillPixelBoardLine(boardComuns[index]);
+    }
+  }
+
+  function fillPixelBoardLine(lineToFill) {
+    for (let index = 0; index < pixelsMatrix; index += 1) {
+      let pixel = createPixel('pixel');
+      lineToFill.appendChild(pixel);
+    }
+  }
+
+  function createPixel(className) {
+    let pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'white';
+    return pixel;
+  }
+
+  function selectColor() {
+    colorPalette.addEventListener('click', function(event) {
+      let lastSelected = document.querySelector('.selected');
+      let newSelection = event.target;
+      lastSelected.classList.remove('selected');
+      newSelection.classList.add('selected');
+      selectedColor = newSelection.style.backgroundColor;
+    });
+  }
+
+  function paintPixelWithColorSelected() {
     let pixelBoard = document.getElementById('pixel-board');
-    let boardSizeInput = document.getElementById('board-size');
-    let buttonGenerateBoard = document.getElementById('generate-board');
-    let selectedColor = 'black';
+    pixelBoard.addEventListener('click', function(event) {
+      if (event.target.className === 'pixel') {
+        event.target.style.backgroundColor = selectedColor;
+      }
+    });
+  }
 
-    checkSizeBoard();
-    createBoard(pixelsMatrix);
-    selectColor();
+  paintPixelWithColorSelected();
 
-    function checkSizeBoard(pixelsComparation) {
-        if (pixelsComparation > 50) return 50;
-        if (pixelsComparation < 5) return 5; 
-        return pixelsComparation;
+  function clearBoard() {
+    buttonClear.addEventListener('click', function() {
+      let allPixels = document.querySelectorAll('.pixel')
+      for (let index = 0; index < allPixels.length; index += 1) {
+        allPixels[index].style.backgroundColor = 'white';
+      }
+    });
+  }
+
+  clearBoard();
+
+  function destructBoard() {
+    pixelBoard = document.getElementById('pixel-board');
+    boardLines = document.querySelectorAll('.board-line');
+    for (let index = 0; index < boardLines.length; index += 1) {
+      pixelBoard.removeChild(boardLines[index]);
     }
+  }
 
-    function createBoard(linesQuantity) {
-        createLines(linesQuantity);
-        boardLines = document.querySelectorAll('.board-line');
-        fillPixelBoard(boardLines);
+  function gererateBoardNxN() {
+    buttonGenerateBoard.addEventListener('click', function(){
+      if (!boardSizeInput.value) alertEmptyInput();
+      else {
+        destructBoard();
+        pixelsMatrix = checkSizeBoard(boardSizeInput.value);
+        createBoard(pixelsMatrix);
+      }
+    })
+  }
+
+  gererateBoardNxN();
+
+  function alertEmptyInput() {
+    alert('Board inválido!')
+  }
+
+  function createColorsPalette() {
+    for (let index = 0; index < 4; index += 1) {
+      let color = document.createElement('div');
+      color.classList.add('color');
+      if (index == 0) {
+        color.style.backgroundColor = "rgb(0,0,0)";
+        color.classList.add('selected');
+      }
+      else color.style.backgroundColor = generateRandonColor();
+      colorPalette.appendChild(color);
     }
+  }
 
-    function createLines(linesQuantity) {
-        for (let index = 0; index < linesQuantity; index += 1) {
-            let newLine = document.createElement('div');
-            newLine.className = 'board-line';
-            pixelBoard.appendChild(newLine);
-        }
-    }
+  // Fonte externa para a função https://css-tricks.com/snippets/javascript/random-hex-color/
+  function generateRandonColor() {
+    let randonColor = Math.floor(Math.random()*16777215).toString(16);
+    randonColor = '#' + randonColor;
+    return randonColor;
+  }
 
-    function fillPixelBoard(boardComuns) {
-        for (let index = 0; index < boardComuns.length; index += 1) {
-            fillPixelBoardLine(boardComuns[index]);
-        }
-    }
-
-    function fillPixelBoardLine(lineToFill) {
-        for (let index = 0; index < pixelsMatrix; index += 1) {
-            let pixel = createPixel('pixel');
-            lineToFill.appendChild(pixel);
-        }
-    }
-
-    function createPixel(className) {
-        let pixel = document.createElement('div');
-        pixel.className = 'pixel';
-        pixel.style.backgroundColor = 'white';
-        return pixel;
-    }
-
-    function selectColor() {
-        colorPalette.addEventListener('click', function(event) {
-            let lastSelected = document.querySelector('.selected');
-            let newSelection = event.target;
-            lastSelected.classList.remove('selected');
-            newSelection.classList.add('selected');
-            selectedColor = newSelection.style.backgroundColor;
-        });
-    }
-
-    function paintPixelWithColorSelected() {
-        let pixelBoard = document.getElementById('pixel-board');
-        pixelBoard.addEventListener('click', function(event) {
-            if (event.target.className === 'pixel') {
-                event.target.style.backgroundColor = selectedColor;
-            }
-        }); 
-    }
-
-    paintPixelWithColorSelected();
-
-    function clearBoard() {
-        
-        buttonClear.addEventListener('click', function() {
-            let allPixels = document.querySelectorAll('.pixel')
-            for (let index = 0; index < allPixels.length; index += 1) {
-                allPixels[index].style.backgroundColor = 'white';
-            }
-        });
-    }
-
-    clearBoard();
-
-    function destructBoard() {
-        pixelBoard = document.getElementById('pixel-board');
-        boardLines = document.querySelectorAll('.board-line');
-        for (let index = 0; index < boardLines.length; index += 1) {
-            pixelBoard.removeChild(boardLines[index]);
-        }
-    }
-
-    function gererateBoardNxN() {
-        buttonGenerateBoard.addEventListener('click', function(){
-            if (!boardSizeInput.value) alertEmptyInput();
-            else {
-                destructBoard();
-                pixelsMatrix = checkSizeBoard(boardSizeInput.value);
-                createBoard(pixelsMatrix);
-            }
-            // boardSizeInput.value = pixelsMatrix;
-        })
-    }
-
-    gererateBoardNxN();
-
-    function alertEmptyInput() {
-        alert('Board inválido!')
-    }
-
-    function createColorsPalette() {
-        for (let index = 0; index < 4; index += 1) {
-            let color = document.createElement('div');
-            color.classList.add('color');
-            if (index == 0) {
-                color.style.backgroundColor = "rgb(0,0,0)";
-                color.classList.add('selected');
-            } 
-            else color.style.backgroundColor = generateRandonColor();
-            colorPalette.appendChild(color);
-        }     
-    }
-
-    // Fonte externa para a função https://css-tricks.com/snippets/javascript/random-hex-color/
-    function generateRandonColor() {
-        let randonColor = Math.floor(Math.random()*16777215).toString(16);
-        randonColor = '#' + randonColor;
-        return randonColor;
-    }
-
-    createColorsPalette();
+  createColorsPalette();
 }

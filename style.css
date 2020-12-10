@@ -15,39 +15,23 @@ body {
   width: 50px;
 }
 
-/* #black {
-  background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
-} */
-
 .board-line {
-    height: 42px;
-    width: 100%;
+  height: 42px;
+  width: 100%;
 }
 
 .pixel {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
+  margin: 0;
   width: 40px;
-  margin: 0px;
 }
 
 button {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 #board-size {
-    width: 150px;
+  width: 150px;
 }
