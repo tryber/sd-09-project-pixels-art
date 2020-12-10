@@ -50,36 +50,57 @@ function paintPixel() {
   });
 }
 
+function clearDiv() {
+  const linesBoard = document.querySelectorAll('.line-board');
+  for (let index = 0; index < linesBoard.length; index += 1) {
+    pixelBoard.removeChild(linesBoard[index]);
+  }
+}
+
+function checkInput() {
+  const inputBoardSize = document.querySelector('#board-size');
+  let result = 0;
+  if (inputBoardSize.value < 5) {
+    result = 5;
+  } else if (inputBoardSize.value > 50) {
+    result = 50;
+  }else {
+    result = inputBoardSize.value;
+  }
+  return result;
+}
+
+function creatLineBoard(inputBoardSize) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  for (let index = 1; index <= inputBoardSize; index += 1) {
+    const lineBoard = document.createElement('div');
+    lineBoard.className = 'line-board';
+    pixelBoard.appendChild(lineBoard);
+  }
+}
+
+function creatPixels(inputBoardSize) {
+  const newLines = document.querySelectorAll('.line-board');
+    for (let line = 0; line < newLines.length; line += 1) {
+      for (let count = 1; count <= inputBoardSize; count += 1) {
+        const pixel = document.createElement('div');
+        pixel.className = 'pixel';
+        newLines[line].appendChild(pixel);
+      }
+    }
+}
+
 function creatBoard() {
   const btnVqv = document.querySelector('#generate-board');
   btnVqv.addEventListener('click', function () {
     const inputBoardSize = document.querySelector('#board-size');
-    const pixelBoard = document.querySelector('#pixel-board');
     if (inputBoardSize.value === '') {
       alert('Board inválido!');
     } else {
-      if (inputBoardSize.value < 5) {
-        inputBoardSize.value = 5;
-      } else if (inputBoardSize.value > 50) {
-        inputBoardSize.value = 50;
-      }
-      const linesBoard = document.querySelectorAll('.line-board');
-      for (let index = 0; index < linesBoard.length; index += 1) {
-        pixelBoard.removeChild(linesBoard[index]);
-      }
-      for (let index = 1; index <= inputBoardSize.value; index += 1) {
-        const lineBoard = document.createElement('div');
-        lineBoard.className = 'line-board';
-        pixelBoard.appendChild(lineBoard);
-      }
-      const newLines = document.querySelectorAll('.line-board');
-        for (let line = 0; line < newLines.length; line += 1) {
-          for (let count = 1; count <= inputBoardSize.value; count += 1) {
-            const pixel = document.createElement('div');
-            pixel.className = 'pixel';
-            newLines[line].appendChild(pixel);
-          }
-        }
+      inputBoardSize.value = checkInput();
+      clearDiv();
+      creatLineBoard(inputBoardSize.value);
+      creatPixels(inputBoardSize.value);
     }
   });
 }
