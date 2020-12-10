@@ -17,7 +17,22 @@ for (let index in arrayOfColors) {
   colorPalette.appendChild(colorDiv);
 }
 
-let table = document.createElement('table');
-let tr = document.createElement('tr');
-let td = document.createElement('td');
-tr.appendChild(td);
+function tableCreate() {
+  let mainBody = document.getElementsByTagName('main')[0];
+  let tableArea = document.createElement('table');
+  tableArea.setAttribute('id', 'pixel-board');
+  let tBody = document.createElement('tbody');
+  
+  for (let index = 0; index < 5; index += 1) {
+    let tr = document.createElement('tr');
+    for (let index2 = 0; index2 < 5; index2 += 1) {
+      let td = document.createElement('td');
+      td.setAttribute('class', 'pixel');
+      tr.appendChild(td)
+    }
+    tBody.appendChild(tr);
+  }
+  tableArea.appendChild(tBody);
+  mainBody.appendChild(tableArea)
+}
+tableCreate();
