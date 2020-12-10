@@ -70,12 +70,18 @@ function destroyBoard(board) {
 }
 
 function buildNewBoard() {
-  if (newBoardSize.value === '') {
+  if (newBoardSize.value === "") {
     alert("Board inválido!");
     return;
   }
   destroyBoard(pixelBoard);
-  squareSide = parseInt(newBoardSize.value, 10);
+  if (newBoardSize.value < 5) {
+    squareSide = 5;
+  } else if (newBoardSize.value > 50) {
+    squareSide = 50;
+  } else {
+    squareSide = newBoardSize.value;
+  }
   buildBoard(pixelBoard);
 }
 
