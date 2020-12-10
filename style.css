@@ -17,27 +17,3 @@
   margin-top: -4px;
   width: 40px;
 }
-
-#color-palette {
-  max-width: 258px;
-  width: fit-content;
-}
-
-#pixel-board {
-  display: inline-block;
-  margin-top: 10px;
-  max-height: 630px;
-  max-width: 630px;
-}
-
-#title {
-  font-weight: 600;
-}
-
-#clear-palette {
-  border: 1px solid black;
-  height: 39px;
-  margin-left: -1px;
-  text-align: center;
-  width: 78px;
-}
