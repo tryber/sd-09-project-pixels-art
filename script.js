@@ -27,6 +27,7 @@ function createColorBlocks() {
     colorBlock.className = 'color';
     if (index === 0) {
       colorBlock.style.backgroundColor = 'black';
+      colorBlock.classList.add('selected');
     } else {
         switch (index) {
           case 1:
