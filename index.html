@@ -6,6 +6,8 @@
   <title>Pixel Art</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,37 +29,45 @@
         <div class="color color4"></div>
       </nav>
     </div>
-    <button id="clear-board">Limpar</button>
-    <label for="task-input">Tamanho do quadro:<br> (Mínimo: 5 / Máximo 50)</label>
-    <input type="number" id="board-size" placeholder="5" min="1">
-    <button id="generate-board">VQV</button>
-    <nav id="pixel-board" aria-label="Pixel board">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </nav>
+    <div class="board-container">
+      <div class="actions-container">
+        <div class="actions-container-wraper">
+          <button id="clear-board">Limpar</button>
+        </div>
+        <div class="actions-container-wraper">
+          <label for="task-input">Tamanho do quadro (Mínimo: 5 / Máximo 50):</label>
+        <input type="number" id="board-size" placeholder="5" min="1">
+        <button id="generate-board">VQV</button>
+        </div>
+      </div>
+      <nav id="pixel-board" aria-label="Pixel board">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </nav>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
