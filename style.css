@@ -73,10 +73,6 @@ h1 {
   max-width: max-content;
 }
 
-.selected {
-  margin-bottom: 2px;
-}
-
 .title {
   background-color: lawngreen;
   text-align: center;
