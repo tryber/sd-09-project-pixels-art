@@ -1,17 +1,12 @@
   const paletteBox = 4;
-  const linhas = 5;
 
   // cria todas as caixas da linha
   function createBoxes(number) {
     for (let index = 0; index < number; index += 1) {
-      if (number === 4) {
-        createBoxPalette(number[index]);
-      } else {
-        createBoxLine(number[index]);
-      }
+      createBoxPalette(number[index]);
+
     }
   }
-
   // cria uma caixa para palette
   function createBoxPalette() {
     const searchPalette = document.querySelector('#color-palette');
@@ -23,8 +18,22 @@
     return box;
   }
 
+  const searchPixel = document.querySelector('#pixel-board');
+  // criando linhas para o quadro
+  for (let lines = 0; lines < 5; lines++) {
+    let line = document.createElement('tr');
+    searchPixel.appendChild(line);
+  // criando colunas para as linhas
+    for (let columns = 0; columns < 5; columns++) {
+      let column = document.createElement('td');
+      column.className = 'pixel';
+      line.appendChild(column);
+      line.addEventListener('click', paintPixel);
+    }
+  }
+
   // criando uma caixa para linha
-  function createBoxLine(pixelBoard) {
+  /*function createBoxLine(pixelBoard) {
     const searchPixel = document.querySelector('#pixel-board');
     const line = document.createElement('tr');
     searchPixel.appendChild(line);
@@ -34,7 +43,7 @@
       line.appendChild(box);
       box.addEventListener('click', paintPixel);
     }
-  }
+  }*/
 
   // pinta as caixas da paleta
   function paintingPalette() {
@@ -53,7 +62,6 @@
   }
 
   createBoxes(paletteBox);
-  createBoxes(linhas);
   paintingPalette();
 
   function paintPixel(event) {
