@@ -3,8 +3,8 @@ function createEventColorBox() {
 
   box.addEventListener('click', (event) => {
     const selectedColor = document.querySelector('.selected');
-    let cor = window.getComputedStyle(selectedColor);
-    event.target.style.backgroundColor = cor.getPropertyValue('background-color');
+    const cor = window.getComputedStyle(selectedColor, null).getPropertyValue('background-color');
+    event.target.style.backgroundColor = cor;
   });
 }
 
