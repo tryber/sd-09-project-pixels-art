@@ -36,6 +36,10 @@ function biuldSquares (divLine, numberSquaresPerLine){
     //Adiciona escutador de clique no pixel board
     let pixelBoard = document.querySelector('#pixel-board')
     pixelBoard.addEventListener('click', paintPixel)
+
+    //Adiciona escutador de clique no botão
+    let button = document.querySelector('button')
+    button.addEventListener('click', clearColor)
   }
 
   function selectColor (event) {
@@ -57,6 +61,19 @@ function biuldSquares (divLine, numberSquaresPerLine){
     let divSelected = document.querySelector('.selected')
     let divSelectedStyle = getComputedStyle(divSelected)
     return divSelectedStyle.backgroundColor
+  }
+
+  function clearColor (event) {
+    let pixelBoard = document.querySelector('#pixel-board')
+    //For em linhas
+    for (let indexLine = 0; indexLine <= pixelBoard.children.length - 1; indexLine += 1) {
+      for (let indexPixel = 0; indexPixel <= pixelBoard.children[indexLine].children.length - 1; indexPixel += 1) {
+        let pixel = pixelBoard.children[indexLine].children[indexPixel];
+        let pixelStyle = getSelectedColor(pixel)
+        console.log(pixelStyle)
+        pixel.style.backgroundColor = 'white'
+      }
+    }
   }
 
 window.onload = biuldSquaresFrame() , addEvents();

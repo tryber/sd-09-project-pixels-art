@@ -46,6 +46,11 @@
   line-height: 0px;
 }
 
+button {
+  text-align: center;
+  margin: auto;
+}
+
 .pixel {
   width: 40px;
   height: 40px;
