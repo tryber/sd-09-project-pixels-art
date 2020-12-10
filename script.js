@@ -1,22 +1,47 @@
 let squareSide = 5;
-const pixelBoard = document.getElementById("pixel-board");
-const colorPalette = document.getElementById("color-palette");
-const clear = document.getElementById("clear-board");
-const newBoard = document.getElementById("generate-board");
-const newBoardSize = document.getElementById("board-size");
+const paletteSize = 4;
+const colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'purple', 'violet', 'gray', 'brown', 'gold']; 
+const pixelBoard = document.getElementById('pixel-board');
+const colorPalette = document.getElementById('color-palette');
+const clear = document.getElementById('clear-board');
+const newBoard = document.getElementById('generate-board');
+const newBoardSize = document.getElementById('board-size');
+
+function fillPalette(palette, colorOptions){
+  let colorOption;
+  let colorIndex;
+  for (let index = 0; index < colorOptions; index += 1){
+    colorOption = document.createElement('div');
+    colorOption.classList.add('color');
+    colorIndex = Math.ceil(Math.random() * 12);
+    colorOption.classList.add(colors[colorIndex]);
+    palette.appendChild(colorOption);
+  }
+}
+
+function createPalette(palette){
+  const colorOption = document.createElement('div');
+  colorOption.classList.add('color');
+  colorOption.classList.add(colors[0]);
+  colorOption.classList.add('selected');
+  palette.appendChild(colorOption);
+  fillPalette(palette, paletteSize - 1);
+}
+
+createPalette(colorPalette);
 
 function createPixel(color) {
-  const pixel = document.createElement("div");
-  pixel.classList.add("pixel");
+  const pixel = document.createElement('div');
+  pixel.classList.add('pixel');
   pixel.classList.add(color);
   return pixel;
 }
 
 function pixelLine() {
-  const line = document.createElement("div");
-  line.className = "pixel-line";
+  const line = document.createElement('div');
+  line.className = 'pixel-line';
   for (let index = 0; index < squareSide; index += 1) {
-    const pixel = createPixel("white");
+    const pixel = createPixel('white');
     line.appendChild(pixel);
   }
   return line;
@@ -32,27 +57,27 @@ function buildBoard(board) {
 buildBoard(pixelBoard);
 
 function colorSelect(event) {
-  const colors = document.getElementsByClassName("color");
+  const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].classList.remove("selected");
+    colors[index].classList.remove('selected');
   }
-  event.target.classList.add("selected");
+  event.target.classList.add('selected');
 }
 
-colorPalette.addEventListener("click", colorSelect);
+colorPalette.addEventListener('click', colorSelect);
 
 function paint(event) {
-  const newColor = document.querySelector(".selected").classList[1];
+  const newColor = document.querySelector('.selected').classList[1];
   const oldColor = event.target.classList[1];
   event.target.classList.remove(oldColor);
   event.target.classList.add(newColor);
 }
 
-pixelBoard.addEventListener("click", paint);
+pixelBoard.addEventListener('click', paint);
 
 function clearBoard() {
-  const pixels = document.getElementsByClassName("pixel");
-  const newColor = "white";
+  const pixels = document.getElementsByClassName('pixel');
+  const newColor = 'white';
   let oldColor;
   for (let index = 0; index < pixels.length; index += 1) {
     oldColor = pixels[index].classList[1];
@@ -61,7 +86,7 @@ function clearBoard() {
   }
 }
 
-clear.addEventListener("click", clearBoard);
+clear.addEventListener('click', clearBoard);
 
 function destroyBoard(board) {
   for (let index = 0; index < squareSide; index += 1) {
@@ -70,8 +95,8 @@ function destroyBoard(board) {
 }
 
 function buildNewBoard() {
-  if (newBoardSize.value === "") {
-    alert("Board inválido!");
+  if (newBoardSize.value === '') {
+    alert('Board inválido!');
     return;
   }
   destroyBoard(pixelBoard);
@@ -85,4 +110,4 @@ function buildNewBoard() {
   buildBoard(pixelBoard);
 }
 
-newBoard.addEventListener("click", buildNewBoard);
+newBoard.addEventListener('click', buildNewBoard);

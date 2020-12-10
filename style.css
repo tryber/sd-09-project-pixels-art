@@ -16,6 +16,7 @@ section {
   border: solid 1px black;
   display: inline-block;
   height: 30px;
+  margin: 2px;
   width: 30px;
 }
 
@@ -27,12 +28,44 @@ section {
   background-color: red;
 }
 
-.blue {
-  background-color: blue;
+.orange {
+  background-color: orange;
 }
 
 .yellow {
   background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.violet {
+  background-color: violet;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.gold {
+  background-color: gold;
 }
 
 .white {
