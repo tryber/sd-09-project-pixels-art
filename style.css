@@ -1,20 +1,23 @@
-/*SOURCE: https://www.treinaweb.com.br/blog/css-grid-um-guia-interativo-parte-1-containers/
-link de consulta de como manipular o grid*/
+/* SOURCE: 
+https://www.treinaweb.com.br/blog/css-grid-um-guia-interativo-parte-1-containers/
+link de consulta de como manipular o grid */
+
 .board_of_pixel {
   display: grid;
-  grid-template-columns: repeat(5, auto);;
-  padding-top: 15px;
+  grid-template-columns: repeat(5, auto);
   justify-content: center;
+  padding-top: 15px;
   width: 100%;
 }
 
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
   position: relative;
+  width: 100%;
 }
+
 .color {
   border: 1px solid black;
   border-radius: 50%;
@@ -38,8 +41,8 @@ body {
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 40px;
-  width: 40px;
   box-sizing: border-box;
-  margin-top: 1px;
+  height: 40px;
+  margin: 1px;
+  width: 40px;
 }
