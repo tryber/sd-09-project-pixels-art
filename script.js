@@ -59,6 +59,7 @@ function paletteGenerator(numColors) {
   defineColors();
 }
 
+
 function whiteFrames(line, column) {
   const panel = document.body.querySelector('#pixel-board');
   panel.style.width = `${column * 40}px`;

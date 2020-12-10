@@ -22,7 +22,6 @@ body {
 }
 
 .selected {
-	border: 2px solid black;
-	width: 41px;
 	height: 41px;
+	width: 41px;
 }
