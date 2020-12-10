@@ -4,10 +4,11 @@ window.onload = function () {
   createPixelsBoard();
   selectColor();
   paintThePixel();
+  clearPixels();
 }
 
 function createPalette() {
-  const colorPalette = document.getElementById('color-palette')
+  const colorPalette = document.getElementById('color-palette');
   const numberOfColors = 4;
 
   for (let index = 0; index < numberOfColors; index += 1) {
@@ -15,7 +16,7 @@ function createPalette() {
     color.classList.add('color');
     colorPalette.appendChild(color);
   }
-  document.querySelector('.color').classList.add('selected')
+  document.querySelector('.color').classList.add('selected');
 }
 
 function colorsOfThePalette() {
@@ -50,22 +51,30 @@ function selectColor() {
   for (let index = 0; index < selectColor.length; index += 1) {
     selectColor[index].addEventListener('click', function () {
       for (let othersIndex = 0; othersIndex < index; othersIndex += 1) {
-        selectColor[othersIndex].classList.remove('selected')
+        selectColor[othersIndex].classList.remove('selected');
       }
-      this.classList.add('selected')
+      this.classList.add('selected');
     })
   }
 }
 
-function paintThePixel() {
-  debugger;
-  const pixels = document.querySelectorAll('.pixel')
 
+function paintThePixel() {
+  const pixels = document.querySelectorAll('.pixel')
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function () {
       const selectedElement = document.querySelector('.color.selected');
-      const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color')
+      const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
       this.style.backgroundColor = currentColor;
     })
   }
+}
+
+function clearPixels() {
+  const pixels = document.querySelectorAll('.pixel')
+  document.querySelector('#clear-board').addEventListener('click', function () {
+    for (pixel in pixels) {
+      pixels[pixel].style.backgroundColor = 'white';
+    }
+  })
 }
