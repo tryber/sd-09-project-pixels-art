@@ -6,6 +6,12 @@ function coloringTheColorPalette() {
   colorsPalette[3].style.backgroundColor = 'green';
 }
 
+function selectingAndRemovingColor(event) {
+  const selectedColor = document.querySelector('.selected');
+  selectedColor.classList.remove('selected');
+  event.target.classList.add('selected')
+}
+
 function designingTheColorPalette() {
   const designsPalette = document.querySelectorAll('.color');
   for (let index = 0; index < designsPalette.length; index += 1) {
@@ -17,7 +23,11 @@ function designingTheColorPalette() {
     designsPalette[index].style.width = '60px';
     designsPalette[index].style.borderRadius = '10px';
     designsPalette[index].style.margin = 'auto';
+    designsPalette[index].addEventListener('click', selectingAndRemovingColor);
   }
+}
+
+function coloringBoard() {
 }
 
 function drawBoard() {
