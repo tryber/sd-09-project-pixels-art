@@ -1,7 +1,3 @@
-
-  let searchPalette = document.querySelector('#color-palette');
-  let searchPixel = document.querySelector('#pixel-board');
-  let line = document.querySelectorAll('.line');
   let paletteBox = 4;
   let linhas = 5;
 
@@ -18,6 +14,7 @@
 
   // cria uma caixa para palette
   function createBoxPalette() {
+    let searchPalette = document.querySelector('#color-palette');
     let box = document.createElement('div');
     box.className = 'color box';
 
@@ -28,6 +25,7 @@
 
   // criando uma caixa para linha
   function createBoxLine(pixelBoard) {
+    let searchPixel = document.querySelector('#pixel-board');
     let line = document.createElement('tr');
     
     searchPixel.appendChild(line);
@@ -65,3 +63,21 @@ function paintPixel(event) {
   
   console.log(targ);
 }
+
+window.addEventListener('load', function (event) {
+  let selected = document.querySelector('.color.box');
+  selected.style.border = '3px solid black';
+  selected.style.heigth = '60px';
+  selected.style.width = '50px';
+  return selected;
+});
+
+let deselected = document.querySelector('.color.box');
+
+function deselect() {
+  deselected.style.border = '1px solid black';
+  deselected.style.heigth = '40px';
+  deselected.style.width = '40px';
+  return deselected;
+}
+  deselected.addEventListener('click', deselect);

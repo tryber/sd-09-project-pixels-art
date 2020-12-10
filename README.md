@@ -158,7 +158,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 -  O quadro de "pixels" deve aparecer abaixo da paleta de cores.
 
-### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
+### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel. :heavy_check_mark
 
 ##### As seguintes verificações serão feitas:
 
