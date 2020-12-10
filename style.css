@@ -1,31 +1,31 @@
-#title {
+.title {
   text-align: center;
 }
 
-#color-palette {
-  width: 460px;
+.color-palette {
   margin: auto;
+  width: 460px;
 }
 
 .color {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  margin: 5px;
-  border-radius: 10%;
   border: 1px solid black;
+  border-radius: 10%;
+  display: inline-block;
+  height: 100px;
+  margin: 5px;
+  width: 100px;
 }
 
 .dark-pastel-green {
-  background-color: rgb(32 , 191 , 85 );
+  background-color: rgb(32, 191, 85);
 }
 
 .blue-sapphire {
-  background-color: rgb(11 , 79 , 108 );
+  background-color: rgb(11, 79, 108);
 }
 
 .cyan-process {
-  background-color: rgb(1 , 186 , 239 );
+  background-color: rgb(1, 186, 239);
 }
 
 .sunray {
@@ -36,26 +36,26 @@
   background-color: black;
 }
 
-#pixel-board {
+.pixel-board {
   margin: auto;
   text-align: center;
 }
 
 .square-div-line {
+  line-height: 0;
   margin: 0;
-  line-height: 0px;
 }
 
 button {
-  text-align: center;
   margin: auto;
+  text-align: center;
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
+  height: 40px;
   margin: 0;
-  background-color: white;
+  width: 40px;
 }
