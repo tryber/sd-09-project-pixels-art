@@ -9,9 +9,7 @@
   width: 45px;
   height: 45px;  
   display: inline-block;
-  border: solid black 1px;
-  
-  
+  border: solid black 1px;  
 }
 
 .selected {
@@ -21,21 +19,22 @@
 
 #pixel-board {
   margin-top: 10px;
-  min-width: 200px;
-  max-width: 400px;
+  
+  min-width: 212px;
+  max-width: 212px;
+  
 }
 
 .pixel {
   background-color: white;
   width: 40px;
-  height: 40px;
+  height: 40px;  
+  display: inline-block;
   border: 1px solid black;
-  display: inline-block;  
 }
 
-#container {
-  width: 210px;
-  margin-left: 10px;
+#container div {  
+  height: 40px;
 }
 
 

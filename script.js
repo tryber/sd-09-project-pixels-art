@@ -10,11 +10,15 @@ function createPalete () {
 }
   
 function createBoardLine () {
-  let base = [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,,1,2,3,4,2,3,4,5]
-  for (let index of base) {
-    let pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    document.getElementById('pixel-board').appendChild(pixel)
+  let base = 5
+  for (let line = 0; line < base; line += 1) {
+    let div = document.createElement('div');
+    for (let colum = 0; colum < base; colum += 1) {
+      let pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      div.appendChild(pixel);      
+    }
+    document.getElementById('pixel-board').appendChild(div)
   }
 }
 
