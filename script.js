@@ -53,18 +53,10 @@ function biuldSquaresFrame(nLines, nSquaresPerLine) {
 function updatePixelBoard() {
   console.log(`Atualizando quadro`)
   let baseNumberSquareFrame = document.querySelector('#board-size').value
+  console.log(baseNumberSquareFrame)
   if(baseNumberSquareFrame > 0) {
     document.querySelector('#pixel-board').innerHTML = ''
     biuldSquaresFrame(baseNumberSquareFrame, baseNumberSquareFrame)
-  }
-}
-
-function checkNumberValid() {
-  let baseNumberSquareFrame = document.querySelector('#board-size').value;
-  console.log('KeyDown');
-  if(baseNumberSquareFrame <= 0) {
-    baseNumberSquareFrame = 2;
-    alert('Board inválido!');
   }
 }
 
@@ -81,9 +73,6 @@ function addEvents() {
   //  Adiciona escutador de clique e de teclado no botão de atualizar tabela
   const buttonGenerateBoard = document.querySelector('#generate-board');
   buttonGenerateBoard.addEventListener('click', updatePixelBoard);
-  //  Adiciona escutador de teclado no input que tem o valor para atualiza a tabela
-  const buttonBoardSize = document.querySelector('#board-size');
-  buttonBoardSize.addEventListener('keyup', checkNumberValid);
 }
 
 window.onload = function () {
