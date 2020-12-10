@@ -51,6 +51,7 @@ function paintPixel() {
 }
 
 function clearDiv() {
+  const pixelBoard = document.querySelector('#pixel-board');
   const linesBoard = document.querySelectorAll('.line-board');
   for (let index = 0; index < linesBoard.length; index += 1) {
     pixelBoard.removeChild(linesBoard[index]);
@@ -98,6 +99,7 @@ function creatBoard() {
       alert('Board inválido!');
     } else {
       inputBoardSize.value = checkInput();
+      console.log(inputBoardSize.value);
       clearDiv();
       creatLineBoard(inputBoardSize.value);
       creatPixels(inputBoardSize.value);
