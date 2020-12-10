@@ -79,6 +79,14 @@ function updatePixelBoard() {
   }
 }
 
+function checkValidityBoardSize() {
+  let numberBoadSize = document.querySelector('#board-size').value
+  if (numberBoadSize <= 0) {
+    document.querySelector('#board-size').value = ''
+    return
+  }
+}
+
 function addEvents() {
   //  Adiciona escutador de clique na paleta de cores
   const colorPalette = document.querySelector('#color-palette');
@@ -93,7 +101,11 @@ function addEvents() {
   const buttonGenerateBoard = document.querySelector('#generate-board');
   buttonGenerateBoard.addEventListener('click', updatePixelBoard);
   //  Adiciona escutador de teclado no input
+  const inputBoadSize = document.querySelector('#board-size')
+  inputBoadSize.addEventListener('keyup', checkValidityBoardSize)
 }
+
+
 
 window.onload = function () {
   biuldSquaresFrame(5, 5);
