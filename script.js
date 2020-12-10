@@ -3,9 +3,13 @@ function paletteGenerator(numColors) {
   paletteColors.style.maxWidth = '258px';
   paletteColors.style.width = `${numColors * 43}px`;
   for (let index = 0; index < numColors; index += 1) {
-    const makeDiv = document.createElement('div');
-    makeDiv.className = 'color';
-    paletteColors.appendChild(makeDiv);
+		const makeDiv = document.createElement('div');
+		if (index === 0) {
+			makeDiv.className = 'color selected';
+		} else {
+			makeDiv.className = 'color';
+		}
+		paletteColors.appendChild(makeDiv);
   }
   function setColor() {
     const colorsPalette = ['rgb(0 , 0 , 0)'];
@@ -73,8 +77,8 @@ function whiteFrames(line, column) {
 
 function selectColor() {
   function getColor(event) {
-    const rgb = event.target.style.backgroundColor;
-    sessionStorage.setItem('thisColor', rgb);
+		document.querySelector('.selected').classList.remove('selected');
+		event.target.className = 'color selected';
   }
   const coloredPalette = document.querySelector('#color-palette');
   coloredPalette.addEventListener('click', getColor);
@@ -82,7 +86,7 @@ function selectColor() {
 
 function coloring() {
   function coloringFrame(event) {
-    const rgb = sessionStorage.getItem('thisColor');
+    const rgb = document.querySelector('.selected').style.backgroundColor;
     event.target.style.backgroundColor = rgb;
   }
   const emptyFrame = document.querySelector('#pixel-board');
@@ -90,7 +94,7 @@ function coloring() {
 }
 
 window.onload = function () {
-  paletteGenerator(4),
+	paletteGenerator(4),
   whiteFrames(5, 5),
   selectColor(),
   coloring();
