@@ -11,14 +11,12 @@ body {
   background-color: rgb(245 , 245 , 245);
   border-radius: 30px;
   color: rgb(255 , 69 , 0);
-  position: absolute;
-  left: 30%;
   padding: 50px;
-  top: 10%;
 }
 
 header {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 #color-palete {

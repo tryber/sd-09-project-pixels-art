@@ -62,7 +62,7 @@ function createBtnClear() {
   btnClear.id = 'clear-board';
   btnClear.innerText = 'Limpar';
   btnClear.style.padding = '5px';
-  const divBtnClear = document.querySelector('#button-clear');
+  const divBtnClear = document.querySelector('#forms');
   divBtnClear.appendChild(btnClear);
   const button = document.querySelector('#clear-board');
 
@@ -76,3 +76,29 @@ function createBtnClear() {
   });
 }
 createBtnClear();
+
+function definingPixelsBoard() {
+  const btnVQV = document.querySelector('#generate-board');
+
+  btnVQV.addEventListener('click', function (e) {
+    e.preventDefault();
+    const input = document.querySelector('#board-size');
+    const numberInput = Number(input.value);
+    const boardPixel = document.querySelectorAll('.pixel');
+    const divBoard = document.querySelector('#pixel-board');
+
+    if (!input) return alert('Board inválido!');
+
+    if (numberInput > 5 && numberInput <= 50) {
+      // deletando os pixels do tabuleiro
+      boardPixel.forEach(e => (e.parentNode.removeChild(e)));
+    }
+    if (boardPixel.length === 0) {
+      // criando um novo tabuleiro
+      divBoard.style.width = '100%';
+      createMatrixPixels(numberInput);
+      numberInput = '';
+    }
+  });
+}
+definingPixelsBoard();
