@@ -104,9 +104,9 @@ function definingPixelsBoard() {
 
     if (input.value === '') {
       alert('Board inválido!');
-    } 
+    }
 
-    if (numberInput > 5 && numberInput <= 50) {
+    if (numberInput > 0) {
       // deletando os pixels do tabuleiro
       boardPixel.forEach((e) => e.parentNode.removeChild(e));
       // criando um novo tabuleiro
