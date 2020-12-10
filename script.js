@@ -1,7 +1,3 @@
-window.onload = function() {
-  selectColor('.black');
-}
-
 // Cria paleta com quatro cores distintas
 function paletteColor() {
   const palette = document.querySelector('#color-palette');
@@ -31,7 +27,8 @@ function pixelFrame() {
 pixelFrame();
 
 // Seleciona a cor
-function selectColor(color) {
+function selectColor(classElement) {
+  const color = `.${classElement}`;
   const select = document.querySelector(color);
   select.classList.add('selected');
   select.style.borderRadius = '8px';
@@ -49,11 +46,34 @@ function stripSelection() {
 // Seleciona a cor ao clicar
 function clicSelectColor() {
   const colorPalette = document.querySelector('#color-palette');
-  colorPalette.addEventListener('click', function(event) {
+  colorPalette.addEventListener('click', function (event) {
     const colorSelect = event.target.classList;
-    let cor = '.' + colorSelect[1];
+    const cor = colorSelect[1];
     stripSelection();
     selectColor(cor);
   });
 }
 clicSelectColor();
+
+// Preenche cor
+function preenchimentoCor() {
+  const pixelArt = document.querySelector('#pixel-board');
+  pixelArt.addEventListener('click', function (event) {
+    const pixelSelect = event.target.classList;
+    const colorPixel = document.querySelector('.selected').classList[1];
+    if(pixelSelect[1] === undefined) {
+      pixelSelect.add(colorPixel);
+      console.log(pixelSelect[1]);
+    } else {
+      pixelSelect.remove(pixelSelect[1]);
+      pixelSelect.add(colorPixel);
+      console.log(pixelSelect[1]);
+    }
+  });
+}
+preenchimentoCor();
+
+// Seleciona cor inicial da paleta de cores
+window.onload = function () {
+  selectColor('black');
+};
