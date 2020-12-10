@@ -54,3 +54,8 @@ main #pixel-board {
   height: 40px;
   width: 40px;
 }
+
+input {
+  text-align: center;
+  width: 45px;
+}
