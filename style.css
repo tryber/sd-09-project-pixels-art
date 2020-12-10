@@ -3,14 +3,13 @@
   width: 250px;
   padding: 6px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
 }
 .black {
-    background-color: black;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+  background-color: black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
 }
 .blue {
   background-color: blue;
@@ -20,7 +19,7 @@
   border: 1px solid black;
 }
 .red {
-  background-color:red;
+  background-color: red;
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -28,7 +27,7 @@
 }
 
 .green {
-  background-color:green;
+  background-color: green;
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -39,7 +38,7 @@
   height: 40px;
   width: 40px;
   border: 1px solid black;
-  background-color: rgb(252, 248, 248);
+  background-color: rgb(255, 255, 255);
 }
 #pixel-board {
   height: 220px;
