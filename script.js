@@ -17,6 +17,9 @@ for (let index in arrayOfColors) {
   colorPalette.appendChild(colorDiv);
 }
 
+let blackElement = document.querySelector('.black');
+blackElement.classList.add('selected');
+
 function tableCreate() {
   let mainBody = document.getElementsByTagName('main')[0];
   let tableArea = document.createElement('table');
@@ -27,7 +30,7 @@ function tableCreate() {
     let tr = document.createElement('tr');
     for (let index2 = 0; index2 < 5; index2 += 1) {
       let td = document.createElement('td');
-      td.setAttribute('class', 'pixel');
+      td.setAttribute('class', 'pixel '+ 'white');
       tr.appendChild(td)
     }
     tBody.appendChild(tr);
