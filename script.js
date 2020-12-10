@@ -50,16 +50,16 @@ function clearColor() {
 }
 
 function biuldSquaresFrame(nLines, nSquaresPerLine) {
-  if(nLines < 5) {
+  if (nLines < 5) {
     nLines = 5;
   }
-  if (nLines > 50){
-    nLines = 50
+  if (nLines > 50) {
+    nLines = 50;
   }
-  if(nSquaresPerLine < 5) {
+  if (nSquaresPerLine < 5) {
     nSquaresPerLine = 5;
   }
-  if(nSquaresPerLine > 50) {
+  if (nSquaresPerLine > 50) {
     nSquaresPerLine = 50;
   }
   const lines = nLines;
@@ -68,16 +68,14 @@ function biuldSquaresFrame(nLines, nSquaresPerLine) {
 }
 
 function updatePixelBoard() {
-  console.log(`Atualizando quadro`)
-  let baseNumberSquareFrame = document.querySelector('#board-size').value
-  if (baseNumberSquareFrame === ''){
-    alert('Board inválido!')
-    return
+  const baseNumberSquareFrame = document.querySelector('#board-size').value;
+  if (baseNumberSquareFrame === '') {
+    alert('Board inválido!');
+    return;
   }
-  console.log(baseNumberSquareFrame)
-  if(baseNumberSquareFrame > 0) {
-    document.querySelector('#pixel-board').innerHTML = ''
-    biuldSquaresFrame(baseNumberSquareFrame, baseNumberSquareFrame)
+  if (baseNumberSquareFrame > 0) {
+    document.querySelector('#pixel-board').innerHTML = '';
+    biuldSquaresFrame(baseNumberSquareFrame, baseNumberSquareFrame);
   }
 }
 
