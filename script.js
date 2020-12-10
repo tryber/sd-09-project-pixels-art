@@ -30,7 +30,7 @@ function tableCreate() {
     let tr = document.createElement('tr');
     for (let index2 = 0; index2 < 5; index2 += 1) {
       let td = document.createElement('td');
-      td.setAttribute('class', 'pixel '+ 'white');
+      td.classList.add('pixel', 'white');
       tr.appendChild(td)
     }
     tBody.appendChild(tr);
