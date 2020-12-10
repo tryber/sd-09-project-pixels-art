@@ -66,6 +66,7 @@
     /*selected.style.border = '3px solid black';
     selected.style.heigth = '60px';
     selected.style.width = '50px';*/
+    selected.className = 'color box selected';
     return selected;
   });
 
