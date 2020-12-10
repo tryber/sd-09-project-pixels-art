@@ -20,14 +20,6 @@ form {
   width: 40px;
 }
 
-.column {
-  display: table-row;
-}
-
-.line {
-  display: table-cell;
-}
-
 .main-page {
   border: 1px solid black;
   margin: auto;
