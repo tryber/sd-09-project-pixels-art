@@ -78,6 +78,7 @@ body, html {
   font-size: 30px;
   font-family: 'Balsamiq Sans', cursive;
   padding: 10px;
+  overflow: auto;
 }
 
 .actions-container-wraper {
