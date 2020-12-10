@@ -27,22 +27,39 @@ function createColorBlocks() {
     colorBlock.className = 'color';
     if (index === 0) {
       colorBlock.style.backgroundColor = 'black';
-      } else {
-          switch (index) {
-            case 1:
-              colorBlock.style.backgroundColor = 'salmon';
-              break;
-            case 2:
-              colorBlock.style.backgroundColor = 'coral';
-              break;
-            case 3:
-              colorBlock.style.backgroundColor = 'crimson';
-              break;
-            default:
-              // do nothing
-          }
+    } else {
+        switch (index) {
+          case 1:
+            colorBlock.style.backgroundColor = 'salmon';
+            break;
+          case 2:
+            colorBlock.style.backgroundColor = 'coral';
+            break;
+          case 3:
+            colorBlock.style.backgroundColor = 'crimson';
+            break;
+          default:
+            // do nothing
         }
+      }
     palette.appendChild(colorBlock);
+  }
+}
+
+function createPixelBoard() {
+  const pixelBoard = document.createElement('div');
+  const main = document.querySelector('main');
+  pixelBoard.id = 'pixel-board';
+  main.appendChild(pixelBoard);
+}
+
+function createPixel() {
+  const numberOfPixels = 25;
+  for (let index = 0; index < numberOfPixels; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    const pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.appendChild(pixel);
   }
 }
 
@@ -51,4 +68,6 @@ window.onload = function () {
   createMain();
   createPalette();
   createColorBlocks();
+  createPixelBoard();
+  createPixel();
 };
