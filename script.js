@@ -102,17 +102,17 @@ function definingPixelsBoard() {
     const boardPixel = document.querySelectorAll('.pixel');
     const divBoard = document.querySelector('#pixel-board');
 
-    if (!input) return alert('Board inválido!');
+    if (input.value === '') {
+      alert('Board inválido!');
+    } 
 
     if (numberInput > 5 && numberInput <= 50) {
       // deletando os pixels do tabuleiro
       boardPixel.forEach((e) => e.parentNode.removeChild(e));
-    }
-    if (boardPixel.length === 0) {
       // criando um novo tabuleiro
       divBoard.style.width = '100%';
       createMatrixPixels(numberInput);
-      numberInput = '';
+      input.value = '';
     }
   });
 }
