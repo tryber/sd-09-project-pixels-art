@@ -51,3 +51,24 @@ function changeColor() {
   });
 }
 changeColor();
+
+function createBoard() {
+  generateBoardBt.addEventListener('click', function () {
+    pixelBoard.innerHTML = '';
+    if (boardSize.value === '') {
+      alert('Board inválido!')
+    } else {
+      for (let index = 0; index < boardSize.value; index += 1) {
+        let tr = document.createElement('div');
+        tr.className = 'tr';
+        pixelBoard.appendChild(tr);
+        for (let index = 0; index < boardSize.value; index += 1) {
+          let td = document.createElement('div');
+          td.className = 'pixel td';
+          tr.appendChild(td);
+        }
+      }
+    }
+  });
+}
+createBoard();
