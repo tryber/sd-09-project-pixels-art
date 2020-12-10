@@ -91,11 +91,10 @@ colorPalette.addEventListener('click', function (event) {
   const divSelect = event.target;
   const colorDiv = divSelect.style.backgroundColor;
 
-  for (let index = 0; index < colorPalette.children.length; index += 1) {
-    colorPalette.children[index].classList.remove('selected');
-  }
-
-  if (event.target.className) {
+  if (event.target.className !== 'color-palette') {
+    for (let index = 0; index < colorPalette.children.length; index += 1) {
+      colorPalette.children[index].classList.remove('selected');
+    }
     divSelect.classList.add('selected');
     colorSelected = colorDiv;
   }

@@ -1,40 +1,127 @@
-h1 {
+body {
+  background-color: rgba(244,244,244,1);
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+header {
+  background-color: rgba(238,37,96,1);
+  color: rgba(8,24,43,1);
+  font-family: 'Press Start 2P', cursive;
+  position: fixed;
   text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+main {
+  margin-top: 96px;
 }
 
 .block {
   background-color: white;
   border: 1px solid black;
-  display: inline-block;
 }
 
 /* Palette */
-#color-palette {
+.color-palette {
+  height: 34px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 .color {
   height: 32px;
-  margin: 4px;
+  margin: 0 8px;
   width: 32px;
+  display: inline-block;
+}
+
+.block.selected {
+  box-shadow: 0 0 8px rgba(238,37,96,1);
 }
 
 /* Buttons */
-#buttons {
-  margin-bottom: 10px;
+.buttons {
+  margin: 16px;
   text-align: center;
 }
 
+.buttons > div {
+  display: inline-block;
+}
+
+button, input {
+  outline: none;
+}
+
+button {
+  background-color: rgba(238,37,96,1);
+  border: 2px solid rgba(238,37,96,1);
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+button:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  float: right;
+}
+
+button:hover {
+  background-color: transparent;
+  color: rgba(238,37,96,1);
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"] {
+  border: 2px solid rgba(238,37,96,1);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-left: 60px;
+  margin-right: -2px;
+  padding: 8px 16px;
+}
+
 /* Pixel Board */
-#pixel-board {
+.pixel-board {
+  margin-bottom: 70px;
   text-align: center;
+  width: 100%;
 }
 
 .line-pixel {
   height: 40px;
+  margin: 0 16px;
+  width: auto;
+  white-space: nowrap;
 }
 
 .pixel {
+  display: inline-block;
   height: 40px;
+  margin: 0 auto;
+  max-width: 40px;
+  text-align: center;
   width: 40px;
+}
+
+footer {
+  background-color: rgba(8,24,43,1);
+  bottom: 0;
+  color: rgba(69,217,253,1);
+  font-size: 14px;
+  padding: 4px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
