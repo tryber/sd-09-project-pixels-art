@@ -6,7 +6,7 @@
   width: 40px;
 }
 
-#pixel-board {
+.container-pixel {
   display: table;
 }
 
