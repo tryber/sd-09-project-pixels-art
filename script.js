@@ -12,7 +12,7 @@ function paletteGenerator(numColors) {
     function rgbGenerator() {
       const rgb = [];
       for (let index = 0; index < 3; index += 1) {
-        rgb[index] = (Math.random() * 255 | 50);
+        rgb[index] = Math.random() * (255 - 50) + 50;
         if (index === 2) {
           const colorValue = rgb.reduce((total, currentElement) => total + currentElement);
           if (colorValue > 150 && colorValue < 700) {
