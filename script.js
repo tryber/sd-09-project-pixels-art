@@ -73,8 +73,8 @@ function paintThePixel() {
 function clearPixels() {
   const pixels = document.querySelectorAll('.pixel')
   document.querySelector('#clear-board').addEventListener('click', function () {
-    for (pixel in pixels) {
-      pixels[pixel].style.backgroundColor = 'white';
+    for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'white';
     }
   })
 }
