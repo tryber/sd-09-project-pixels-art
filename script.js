@@ -63,9 +63,9 @@
 
   window.addEventListener('load', function (event) {
     const selected = document.querySelector('.color.box');
-    selected.style.border = '3px solid black';
+    /*selected.style.border = '3px solid black';
     selected.style.heigth = '60px';
-    selected.style.width = '50px';
+    selected.style.width = '50px';*/
     return selected;
   });
 
