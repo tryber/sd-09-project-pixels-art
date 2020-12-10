@@ -46,7 +46,7 @@ function deleteBoard() {
       pixel[item].parentNode.removeChild(pixel[item]);
     }
   }
-};
+}
 
 // Salva a cor do pixel que estiver com a classe 'selected'
 let savedColor = 'black';
@@ -60,8 +60,10 @@ function createBoard() {
   colors[0].classList.add('selected');
   deleteBoard();
 
-  if (userInput === 0) {
+  if (userInput < 5) {
     userInput = 5;
+  } else if (userInput > 50) {
+    userInput = 50;
   }
 
   for (let pixelRow = 0; pixelRow < userInput; pixelRow += 1) {
@@ -99,19 +101,19 @@ btnClear.addEventListener('click', () => {
   for (let item = 0; item < pixel.length; item += 1) {
     pixel[item].style.backgroundColor = '#fff';
   }
-})
+});
 
 // Evento 'VQV', altera o tamanho da tabela
-btnGenerateBoard.addEventListener('click', function () {
+btnGenerateBoard.addEventListener('click', () => {
   if (inBoardSize.value === '') {
     alert('Board inválido!');
   } else {
     createBoard();
   }
-})
+});
 
 inBoardSize.addEventListener('keypress', function (tecla) {
   if (tecla.keyCode === 13) {
     createBoard();
   }
-})
+});
