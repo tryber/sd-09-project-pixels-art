@@ -4,7 +4,7 @@ function createDivColors(color) {
     divColor.className = 'color';
     divColor.style.backgroundColor = color;
 
-    const palette = document.querySelector('#color-palette');
+    const palette = document.querySelector('.palette');
     palette.appendChild(divColor);
   }
 }
@@ -14,8 +14,7 @@ createDivColors('green');
 createDivColors('blue');
 
 function createMatrixPixels(size) {
-  const boardElement = document.querySelector('#pixel-board');
-
+  const boardElement = document.querySelector('.board');
   for (let y = 1; y <= size; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
     const row = [];
     for (let x = 1; x <= size; x += 1) {
@@ -41,7 +40,7 @@ function selectingAllColors() {
     const selected = document.querySelector('.selected');
     selected.className = 'color';
 
-    if (e.target.className == 'color') {
+    if (e.target.className === 'color') {
       e.target.className = 'color selected';
     }
   });
@@ -74,6 +73,6 @@ function createBtnClear() {
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = 'white';
     }
-  })
+  });
 }
 createBtnClear();
