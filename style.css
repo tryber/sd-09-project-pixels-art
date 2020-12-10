@@ -35,28 +35,26 @@ h1 {
   background-color: blue;
 }
 
-#pixel-board {
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-bottom: 0px;
-  width: 200px;
-  height: 200px;
-  display: table;
+.boardline {
+ margin-left: 30px;
+ margin-top: 30px;
 }
 
 .pixel {
-  border: solid 1px;
-  min-height: 40px;
-  min-width: 40px;
-  max-height: 40px;
-  max-width: 40px;
+  border: solid black 1px;
   background-color: white;
+  height: 40px;
+  width: 40px;
 }
 
-.tr {
+#pixel-board {
+  display: table;
+}
+
+div {
   display: table-row;
 }
-.td {
+.td{
   display: table-cell;
 }
 

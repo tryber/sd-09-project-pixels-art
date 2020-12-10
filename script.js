@@ -12,10 +12,11 @@ function createEventColorBox() {
 
 function clear() {
   let button = document.querySelector('#clear-board');
-  let pixel = document.querySelectorAll('div .pixel');
+  let pixel = document.querySelectorAll('.pixel');
+  console.log(pixel);
 
-  button.addEventListener('click', colored);
-  function colored() {
+  button.addEventListener('click', clearBox);
+  function clearBox() {
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.backgroundColor = 'white';
     }
@@ -36,8 +37,22 @@ function classSelected() {
   });
 }
 
+function pixelBox() {
+  let table = document.querySelector('#pixel-board');
+
+  for (let index = 0; index < 5; index += 1) {
+    let row = document.createElement('div');
+    table.appendChild(row)
+    for (let j = 0; j < 5; j += 1) {
+      let cell = document.createElement('div');
+      table.appendChild(cell).classList = 'pixel td';
+    }
+  }
+}
+
 window.onload = function () {
-  classSelected();
+  pixelBox();
   createEventColorBox();
+  classSelected();
   clear();
 };
