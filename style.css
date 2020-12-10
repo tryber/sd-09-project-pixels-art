@@ -10,26 +10,17 @@ body {
   width: 40px;
 }
 
-.black {
-  background-color: black;
-}
-
-.pink {
-  background-color: pink;
-}
-
-.champagne {
-  background-color: rgb(239, 233, 174);
-}
-
-.teal {
-  background-color: teal;
-}
-
 .pixel {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
   line-height: 0;
+  margin: 0;
   width: 40px;
+}
+
+.pixel-line {
+  margin: 0;
+  height: 40px;
 }
