@@ -1,26 +1,33 @@
 body {
+  background-color: mintcream;
   margin: 0;
 }
 
+.clear {
+  height: 100%;
+  float: right;
+  margin: auto 10px;
+}
+
 .color-palette {
+  
   background-color: white;
   border-color: black;
   border-style: solid;
   border-width: 1px;
   height: 52px;
-  margin-bottom: 10px;
-  min-width: 600px;
+  margin: 0 auto 10px auto;
   padding: 10px;
   text-align: center;
+  width: max-content;
 }
 
 .color {
-  border-color: black;
+  border-color: silver;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   display: inline-block;
   height: 50px;
-  margin: 0 5px;
   width: 50px;
 }
 
@@ -43,10 +50,11 @@ h1 {
 }
 
 .pixel-board {
+  background-color: silver;
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  padding: 20px;
+  padding: 3%;
   text-align: center;
 }
 
@@ -59,6 +67,12 @@ h1 {
   height: 40px;
   margin: auto;
   max-width: max-content;
+}
+
+.selected {
+  border-color: blue;
+  border-style: double;
+  border-width: 2px;
 }
 
 .title {

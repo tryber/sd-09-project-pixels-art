@@ -42,9 +42,40 @@ window.onload = function start() {
   pixelBoard(5);
 
   function paint(coloring) {
-    coloring.target.style.backgroundColor = color;
+    let selectedColor = document.querySelector('.selected').style.backgroundColor;
+    coloring.target.style.backgroundColor = selectedColor;
   }
 
-  const onclick = document.getElementsByClassName('pixel-board-inside')[0];
-  onclick.addEventListener('click', paint);
+let colors = document.querySelectorAll('.color');
+
+  function changeColor(event) {
+    for (let index = 0; index < colors.length; index += 1) {
+      colors[index].className = 'color';
+    }
+    event.target.className = 'color selected';
+  }
+
+  document.querySelectorAll('.color').forEach(item => {
+    item.addEventListener('click', changeColor)
+  })
+
+  const onclickPixelBoard = document.getElementsByClassName('pixel-board-inside')[0];
+  onclickPixelBoard.addEventListener('click', paint);
+
+  function createButton() {
+    let button = document.createElement('button');
+    button.innerText = 'Limpar cores';
+    button.className = 'clear';
+    document.getElementById('color-palette').appendChild(button);
+  }
+
+  createButton();
+
+  const clear = document.querySelectorAll('.clear');
+  function cleaner() {
+    for (let index = 0; index < clear.length; index += 1) {
+      clear[index].style.backgroundColor = 'white';
+    }
+  }
+  document.getElementsByClassName('clear')[0].addEventListener('click', cleaner);
 };
