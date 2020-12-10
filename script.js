@@ -1,6 +1,7 @@
 window.onload = function () {
   let squareSide = 5;
   const pixelBoard = document.getElementById("pixel-board");
+  const colorPalette = document.getElementById("color-palette");
 
   function createPixel(color) {
     const pixel = document.createElement("div");
@@ -27,4 +28,14 @@ window.onload = function () {
   }
 
   buildBoard(pixelBoard);
+
+  colorPalette.addEventListener("click", colorSelect);
+
+  function colorSelect() {
+    let colors = document.getElementsByClassName("color");
+    for (let index = 0; index < colors.length; index += 1) {
+      colors[index].classList.remove("selected");
+    }
+    event.target.classList.add("selected");
+  }
 };
