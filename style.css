@@ -4,9 +4,9 @@
   padding: 35px;
 }
 
-.black {
+/*.black {
   background-color: black;
-}
+}*/
 
 .red {
   background-color: rgb(245, 81, 81);
@@ -26,19 +26,19 @@ background-color: white;
 display: table;
 }
 
-.tr {
+/*.tr {
   border: 1px solid black;
   padding: 35px;
   display: table-row;
   background-color: white
   
-}
+}*/
 
 .pixel {
   width: 40px;
   height: 40px;
   border: 1px solid black;
-  padding: 35px;
+  padding: 20px;
   display: table-cell;
   background-color: white
 }
