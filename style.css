@@ -1,0 +1,138 @@
+body {
+  background-color: #e3e3eb;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+header {
+  align-items: center;
+  background-color: #2a9d8f;
+  border-bottom: 5px solid #470097;
+  display: flex;
+  height: 9rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  color: white;
+  font-family: Ubuntu, sans-serif;
+  font-size: 5rem;
+}
+
+.article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.colorPalette {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.color {
+  border: 1px solid black;
+  height: 5rem;
+  margin: 1rem;
+  width: 5rem;
+}
+
+.board-menu {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.boardSize {
+  border: 2px solid #bababd;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  height: 3rem;
+  padding-left: 1rem;
+  width: 15rem;
+}
+
+.boardSize:focus {
+  border: 2px solid #2a9d8f;
+  outline: none;
+}
+
+.btn-generate {
+  background-color: #2a9d8f;
+  border: 2px solid #176960;
+  color: white;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  margin: 0 2rem 0 1rem;
+  padding: 0.7rem 1.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-clear {
+  background-color: rgb(228, 0, 0);
+  border: 2px solid rgb(173, 0, 0);
+  color: white;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  padding: 0.7rem 1.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pixel-frame {
+  margin-bottom: 3rem;
+}
+
+.pixelBoard {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 3rem auto;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 41px;
+  width: 41px;
+}
+
+.footer {
+  align-items: center;
+  background-color: #470097;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  height: 60px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.link-social {
+  color: white;
+  margin: 0 3rem;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.link-social:hover {
+  color: #2a9d8f;
+}
+
+.logo-trybe {
+  width: 70px;
+}

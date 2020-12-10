@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <title>Pixel Art - Project</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title" class="title">Paleta de Cores</h1>
+  </header>
+  <article class="article">
+    <section class="paleta-de-cores">
+      <div id="color-palette" class="colorPalette">
+        <div class="color selected"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </div>
+    </section>
+    <section class="board-menu">
+      <input id="board-size" class="boardSize" type="number" min="1" max="50" placeholder="Valor entre 5 e 50">
+      <button id="generate-board" class="btn-generate">VQV</button>
+      <button id="clear-board" class="btn-clear">Limpar</button>
+    </section>
+    <section class="pixel-frame">
+      <table id="pixel-board" class="pixelBoard">
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </article>
+  <footer class="footer">
+    <a class="link-social" href="https://www.betrybe.com/" target="_blank"><img src="/trybelogo.svg" alt="Logo da Trybe" class="logo-trybe"></a>
+    <a class="link-social fa fa-linkedin fa-2x" href="https://linkedin.com/in/natalianegres/" target="_blank"></a>
+    <a class="link-social fa fa-github fa-2x" href="https://github.com/negres" target="_blank"></a>
+  </footer>
+  <script src="/script.js" defer></script>
+</body>
+
+</html>
