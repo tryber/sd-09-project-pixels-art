@@ -27,7 +27,7 @@ function clearBoard() {
 }
 
 function selectedColor() {
-  const colorPalette = document.querySelector('#color-palette');  
+  const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', function (event) {
     const colorsPalette = document.querySelectorAll('.color');
     for (let index = 0; index < colorsPalette.length; index += 1) {
@@ -65,7 +65,7 @@ function checkInput() {
     result = 5;
   } else if (inputBoardSize.value > 50) {
     result = 50;
-  }else {
+  } else {
     result = inputBoardSize.value;
   }
   return result;
@@ -82,13 +82,13 @@ function creatLineBoard(inputBoardSize) {
 
 function creatPixels(inputBoardSize) {
   const newLines = document.querySelectorAll('.line-board');
-    for (let line = 0; line < newLines.length; line += 1) {
-      for (let count = 1; count <= inputBoardSize; count += 1) {
-        const pixel = document.createElement('div');
-        pixel.className = 'pixel';
-        newLines[line].appendChild(pixel);
-      }
+  for (let line = 0; line < newLines.length; line += 1) {
+    for (let count = 1; count <= inputBoardSize; count += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      newLines[line].appendChild(pixel);
     }
+  }
 }
 
 function creatBoard() {
@@ -99,7 +99,6 @@ function creatBoard() {
       alert('Board inválido!');
     } else {
       inputBoardSize.value = checkInput();
-      console.log(inputBoardSize.value);
       clearDiv();
       creatLineBoard(inputBoardSize.value);
       creatPixels(inputBoardSize.value);
