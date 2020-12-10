@@ -34,8 +34,8 @@ function drawBoard() {
   }
 }
 
-window.onload = function() {
-    coloringTheColorPalette();
-    designingTheColorPalette();
-    drawBoard();
+window.onload = function () {
+  coloringTheColorPalette();
+  designingTheColorPalette();
+  drawBoard();
 }
