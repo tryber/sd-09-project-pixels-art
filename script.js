@@ -57,16 +57,19 @@ function createBoard() {
     pixelBoard.innerHTML = '';
     if (boardSize.value === '') {
       alert('Board inválido!')
-    } else {
+    } else if (boardSize.value > 50) {
+      boardSize.value = 50;
+    } else if (boardSize.value < 5) {
+      boardSize.value = 5;
+    }
+    for (let index = 0; index < boardSize.value; index += 1) {
+      let tr = document.createElement('div');
+      tr.className = 'tr';
+      pixelBoard.appendChild(tr);
       for (let index = 0; index < boardSize.value; index += 1) {
-        let tr = document.createElement('div');
-        tr.className = 'tr';
-        pixelBoard.appendChild(tr);
-        for (let index = 0; index < boardSize.value; index += 1) {
-          let td = document.createElement('div');
-          td.className = 'pixel td';
-          tr.appendChild(td);
-        }
+        let td = document.createElement('div');
+        td.className = 'pixel td';
+        tr.appendChild(td);
       }
     }
   });
