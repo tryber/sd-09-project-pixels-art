@@ -8,24 +8,6 @@ h1 {
   display: inline-block;
 }
 
-/* Colors */
-.blue {
-  background-color: rgba(5, 68, 92, 1);
-}
-
-.pink {
-  background-color: rgba(242, 49, 127, 1);
-}
-
-.purple {
-  background-color: rgba(92, 79, 116, 1);
-}
-
-.black {
-  background-color: black;
-}
-
-
 /* Palette */
 #color-palette {
   text-align: center;
