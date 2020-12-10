@@ -1,0 +1,58 @@
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas , .controls {
+  align-items: center;
+  display: flex;
+}
+
+.canvas {
+  flex-direction: column;
+}
+
+.color-palette {
+  list-style-type: none;
+  padding: 0;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.color:first-child {
+  background-color: black;
+}
+
+.pixel-board {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: table-cell;
+  height: 41px;
+  padding: 0;
+  width: 41px;
+}
+
+.actionButton {
+  background-color: white;
+  border: 1px solid black;
+  margin: 0 5px 15px 0;
+  padding: 8px;
+}
+
+.board-size {
+  height: 27px;
+  width: 150px;
+}

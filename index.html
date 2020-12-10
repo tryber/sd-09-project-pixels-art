@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Gerônimo | Project: Pixels Art</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <main>
+    <section id="canvas" class="canvas">
+      <ul id="color-palette" class="color-palette">
+        <li class="color"></li>
+        <li class="color"></li>
+        <li class="color"></li>
+        <li class="color"></li>
+      </ul>
+      <section id="controls" class="controls">
+        <button id="clear-board" class="actionButton">Limpar</button>
+        <form method="dialog">
+          <input type="number" id="board-size" class="board-size" min="1" max="50" placeholder="Tamanho do quadro">
+          <button id="generate-board" class="actionButton">VQV</button>
+        </form>
+      </section>
+      <table id="pixel-board" class="pixel-board">
+      </table>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
