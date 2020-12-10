@@ -38,10 +38,26 @@ function createPixel() {
   pixelBoard.appendChild(lineOfPixels);
 }
 
+// Apaga a tabela atual
+function deleteBoard() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let item = 0; item < pixel.length; item += 1) {
+    if (pixel[item].parentNode) {
+      pixel[item].parentNode.removeChild(pixel[item]);
+    }
+  }
+};
+
+// Salva a cor do pixel que estiver com a classe 'selected'
+let savedColor = 'black';
+pixelBoard.addEventListener('click', function (event) {
+  event.target.style.backgroundColor = savedColor;
+});
+
 // Cria a tabela com os pixels e adiciona a classe 'selected' ao primeiro pixel
 function createBoard() {
   let userInput = Number(inBoardSize.value);
-  colors[0].classList.add('selected')
+  colors[0].classList.add('selected');
   deleteBoard();
 
   if (userInput === 0) {
@@ -77,31 +93,25 @@ colorPalette.addEventListener('click', function (event) {
   }
 });
 
-// Salva a cor do pixel que estiver com a classe 'selected'
-let savedColor = 'black';
-pixelBoard.addEventListener('click', function (event) {
-  event.target.style.backgroundColor = savedColor;
-});
-
 // Preenche os pixels com a cor branca
 btnClear.addEventListener('click', () => {
   const pixel = document.querySelectorAll('#pixel-board div');
   for (let item = 0; item < pixel.length; item += 1) {
     pixel[item].style.backgroundColor = '#fff';
   }
-});
-
-// Apaga a tabela atual
-function deleteBoard() {
-  const pixel = document.querySelectorAll('.pixel');
-  for (let item = 0; item < pixel.length; item += 1) {
-    if (pixel[item].parentNode) {
-      pixel[item].parentNode.removeChild(pixel[item]);
-    }
-  }
-};
+})
 
 // Evento 'VQV', altera o tamanho da tabela
-btnGenerateBoard.addEventListener('click', createBoard);
+btnGenerateBoard.addEventListener('click', function () {
+  if (inBoardSize.value === '') {
+    alert('Board inválido!');
+  } else {
+    createBoard();
+  }
+})
 
-// Evento slideBar
+inBoardSize.addEventListener('keypress', function (tecla) {
+  if (tecla.keyCode === 13) {
+    createBoard();
+  }
+})
