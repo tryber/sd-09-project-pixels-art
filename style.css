@@ -3,18 +3,38 @@
   margin: 0;
 }
 
-body, html {
-  height: 100%;
+/*
+
+Técnica para background full screen no link abaixo:
+
+https://css-tricks.com/perfect-full-page-background-image/
+
+*/
+html {
+  background-image: url('pics/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Class styles */
+/*
+
+Uso de Viewport lengths fez a div main content ter sempre pelo menos o tamanho da tela. Possibilitando que os boxes não de sobrepusessem.
+Link com o material consultado abaixo:
+
+https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window
+
+https://every-layout.dev/layouts/cover/
+
+*/
 .main-content {
-  background-image: url('pics/bg-image.jpg');
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  opacity: 0.9;
-  padding: 2% 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
 }
 
 .palette-container {
@@ -23,6 +43,7 @@ body, html {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  width: 50%;
 }
 
 .color-palette-options {
@@ -68,7 +89,6 @@ body, html {
   display: flex;
   flex-direction: column;
   padding: 30px;
-  margin-top: 50px;
 }
 
 .actions-container {
