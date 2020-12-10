@@ -19,6 +19,10 @@ for (let index = 0; index < initialColorOfPincel.length; index += 1) {
 
 let selectColorOfPalet = document.querySelector('#color-palette');
 let palette = document.querySelector('tbody')
+let cleanButton = document.createElement('button');
+cleanButton.id= 'clear-board';
+document.querySelector('body').appendChild(cleanButton);
+cleanButton.innerHTML = 'Limpar'
 
 window.onload = function() {
     selectColorOfPalet.addEventListener('click', function(event) { 
@@ -41,4 +45,10 @@ palette.addEventListener('click', function(event) {
     }
 });
 
+cleanButton.addEventListener('click', function(event) { 
+    let pixelsOfTheBoard = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixelsOfTheBoard.length; index +=1) {
+        pixelsOfTheBoard[index].style.backgroundColor = 'white';
+    }
+});
 }

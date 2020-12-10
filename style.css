@@ -17,6 +17,8 @@
 table{ 
     border-collapse: collapse;
     margin-left: 15px;
+    position: absolute;
+    top: 200px;
 }
 
 .pixel {
@@ -31,4 +33,11 @@ table{
     padding: 0;
   }
 
+#clear-board {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    margin-left: 20px;
 
+    
+}
