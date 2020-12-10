@@ -5,6 +5,15 @@
   display: inline-block;
 }
 
+.pixel {
+
+  border: black solid 1px;
+  padding: 35px;
+  length: 5px;
+  width: 5px;
+  display: inline-block;
+}
+
 .black {
   
   background-color: black;  
