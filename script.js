@@ -7,68 +7,36 @@ function paletteGenerator(numColors) {
     const makeDiv = document.createElement('div');
     if (index === 0) {
       makeDiv.className = 'color selected';
+      makeDiv.style.backgroundColor = 'rgb(0 , 0 , 0)';
     } else {
       makeDiv.className = 'color';
+      makeDiv.style.backgroundColor = rgbGenerator();
     }
     paletteColors.appendChild(makeDiv);
   }
-  function setColor() {
-    const colorsPalette = ['rgb(0 , 0 , 0)'];
-    function rgbGenerator() {
-      const rgb = [];
-      for (let index = 0; index < 3; index += 1) {
-        rgb[index] = Math.random() * ((255 - 50) + 50);
-        if (index === 2) {
-          const colorValue = rgb.reduce((total, currentElement) => total + currentElement);
-          if (colorValue > 150 && colorValue < 700) {
-            index += 1;
-          } else {
-            index = 0;
-          }
-        }
-      }
-      return `rgb(${rgb[0]} , ${rgb[1]} , ${rgb[2]})`;
-    }
-    function repeatTest(colored) {
-      let repeat = false;
-      for (let i = 0; i < colored.length; i += 1) {
-        if (colored[i] === colored[i + 1]) {
-          repeat = true;
-        }
-      }
-      return repeat;
-    }
-    for (let index = 1; index < numColors; index += 1) {
-      colorsPalette[index] = rgbGenerator();
-      if (index === (numColors - 1)) {
-        if (repeatTest(colorsPalette) === false) {
+  function rgbGenerator() {
+    const rgb = [];
+    for (let index = 0; index < 3; index += 1) {
+      rgb[index] = Math.random() * ((255 - 50) + 50);
+      if (index === 2) {
+        const colorValue = rgb.reduce((total, currentElement) => total + currentElement);
+        if (colorValue > 150 && colorValue < 700) {
           index += 1;
         } else {
           index = 0;
         }
       }
     }
-    return colorsPalette;
+    return `rgb(${rgb[0]} , ${rgb[1]} , ${rgb[2]})`;
   }
-  function defineColors() {
-    const boxNoColor = document.querySelectorAll('div .color');
-    for (let index = 0; index < boxNoColor.length; index += 1) {
-      document.querySelectorAll('div .color')[index].style.backgroundColor = setColor(numColors)[index];
-    }
-  }
-  defineColors();
 }
 
-
-function whiteFrames(line, column) {
+function generateFrames(num) {
   const panel = document.body.querySelector('#pixel-board');
-  panel.style.width = `${column * 40}px`;
-  panel.style.height = `${column * 40}px`;
-  panel.style.marginTop = '10px';
-  panel.style.maxHeight = '630px';
-  panel.style.maxWidth = '630px';
-  for (let lIndex = 0; lIndex < line; lIndex += 1) {
-    for (let cIndex = 0; cIndex < column; cIndex += 1) {
+  panel.style.width = `${(num * 40)}px`;
+  panel.style.marginTop = '5px';
+  for (let index = 0; index < num; index += 1) {
+    for (let indexC = 0; indexC < num; indexC += 1) {
       const emptyBox = document.createElement('div');
       emptyBox.className = 'pixel';
       panel.appendChild(emptyBox);
@@ -116,10 +84,34 @@ function clearFrames() {
   clearButton.addEventListener('click', clear);
 }
 
+function redefineSize() {
+  function setFrames() {
+    const newSize = document.getElementById('board-size').value;
+    const pixelBoard = document.getElementById('pixel-board');
+    if (newSize === '') {
+      return alert('Board inválido!');
+    }
+    if (newSize < 5) {
+      alert('Tamanho mínimo: 5');
+      newSize = '5';
+    } else if (newSize > 50) {
+      alert('Tamanho Máximo: 50');
+      newSize = '50';
+    }
+    while (pixelBoard.firstChild) {
+      pixelBoard.removeChild(pixelBoard.firstChild);
+    }
+    generateFrames(newSize);
+  }
+  const buttonVqv = document.getElementById('generate-board');
+  buttonVqv.addEventListener('click', setFrames);
+}
+
 window.onload = function () {
   paletteGenerator(4);
-  whiteFrames(5, 5);
+  generateFrames(5);
 };
 selectColor();
 coloring();
 clearFrames();
+redefineSize();
