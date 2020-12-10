@@ -28,18 +28,17 @@ function getSelectedColor() {
 
 getSelectedColor();
 
+function pixelColoring(event) {
+  const getColorSelected = document.querySelector('.selected');
+  const targetSelectedPixel = event.target;
+  targetSelectedPixel.style.backgroundColor = getColorSelected.style.backgroundColor;
+}
+
 function pixelEvents() {
   for (let index = 0; index < 25; index += 1) {
     const getPixels = document.querySelectorAll('.pixel')[index];
     getPixels.addEventListener('click', pixelColoring);
   }
-}
-
-function pixelColoring(event) {
-  let cor = 'black';
-  const getColorSelected = document.querySelector('.selected');
-  const targetSelectedPixel = event.target;
-  targetSelectedPixel.style.backgroundColor = getColorSelected.style.backgroundColor;
 }
 
 pixelEvents();
