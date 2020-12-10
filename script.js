@@ -1,5 +1,5 @@
 window.onload = function start() {
-  let color = 'rgb(0 , 0 , 0)';
+  const color = 'rgb(0 , 0 , 0)';
 
   function aleatoryColor() {
     let newColor = 'rgb(';
@@ -27,11 +27,11 @@ window.onload = function start() {
   createPalette(4);
 
   function createButton() {
-    let button = document.createElement('button');
+    const button = document.createElement('button');
     button.innerText = 'Limpar';
     button.className = 'clear';
-    button.id = 'clear-board'
-    document.querySelector('#button-place').appendChild(button);
+    button.id = 'clear-board';
+    document.querySelector('.button-place').appendChild(button);
   }
 
   createButton();
@@ -52,11 +52,11 @@ window.onload = function start() {
   pixelBoard(5);
 
   function paint(coloring) {
-    let selectedColor = document.querySelector('.selected').style.backgroundColor;
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
     coloring.target.style.backgroundColor = selectedColor;
   }
 
-let colors = document.querySelectorAll('.color');
+  const colors = document.querySelectorAll('.color');
 
   function changeColor(event) {
     for (let index = 0; index < colors.length; index += 1) {
@@ -65,9 +65,9 @@ let colors = document.querySelectorAll('.color');
     event.target.className = 'color selected';
   }
 
-  document.querySelectorAll('.color').forEach(item => {
-    item.addEventListener('click', changeColor)
-  })
+  document.querySelectorAll('.color').forEach((item) => {
+    item.addEventListener('click', changeColor);
+  });
 
   const onclickPixelBoard = document.getElementsByClassName('pixel-board-inside')[0];
   onclickPixelBoard.addEventListener('click', paint);
