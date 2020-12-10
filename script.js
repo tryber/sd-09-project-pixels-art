@@ -1,12 +1,12 @@
 // https://gist.github.com/girol/4a606d5cc6286ce1e9755faa3b7746df
-function generateColor(){
-  let hexadecimais = '0123456789ABCDEF';
+function generateColor() {
+  const hexadecimais = '0123456789ABCDEF';
   let color = '#';
 
   // Pega um número aleatório no array acima
-  for (let i = 0; i < 6; i+=1 ) {
-  //E concatena à variável cor
-      color += hexadecimais[Math.floor(Math.random() * 16)];
+  for (let i = 0; i < 6; i += 1) {
+    // E concatena à variável cor
+    color += hexadecimais[Math.floor(Math.random() * 16)];
   }
   return color;
 }
@@ -95,10 +95,10 @@ createBtnClear();
 function definingPixelsBoard() {
   const btnVQV = document.querySelector('#generate-board');
 
-  btnVQV.addEventListener('click', function (e) {
-    e.preventDefault();
+  btnVQV.addEventListener('click', function (event) {
+    event.preventDefault();
     const input = document.querySelector('#board-size');
-    const numberInput = Number(input.value);
+    let numberInput = Number(input.value);
     const boardPixel = document.querySelectorAll('.pixel');
     const divBoard = document.querySelector('#pixel-board');
 
@@ -106,7 +106,7 @@ function definingPixelsBoard() {
 
     if (numberInput > 5 && numberInput <= 50) {
       // deletando os pixels do tabuleiro
-      boardPixel.forEach(e => (e.parentNode.removeChild(e)));
+      boardPixel.forEach((e) => e.parentNode.removeChild(e));
     }
     if (boardPixel.length === 0) {
       // criando um novo tabuleiro
@@ -117,4 +117,3 @@ function definingPixelsBoard() {
   });
 }
 definingPixelsBoard();
-

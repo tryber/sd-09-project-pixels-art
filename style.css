@@ -7,10 +7,10 @@ body {
   padding: 30px;
 }
 
-#container {
-  background-color: rgb(245 , 245 , 245);
+.container {
+  background-color: whitesmoke;
   border-radius: 30px;
-  color: rgb(255 , 69 , 0);
+  color: orangered;
   padding: 50px;
 }
 
@@ -19,7 +19,7 @@ header {
   text-align: center;
 }
 
-#color-palete {
+.palete {
   margin-bottom: 30px;
 }
 
@@ -32,14 +32,14 @@ header {
 }
 
 .pixel {
-  background-color: rgb(255 , 255 , 255);
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
-#pixel-board {
+.board {
   margin-top: 10px;
   width: 210px;
 }
