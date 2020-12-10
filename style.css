@@ -5,32 +5,33 @@
 }
 
 body {
-  font-family: Montserrat , sans-serif;
   background-image: url("bk.png");
-  background-size: 1366px 798px;
   background-position: 0 -170px ;
+  background-size: 1366px 798px;
+  font-family: Montserrat , sans-serif;
 }
 
 h1 {
+  color: rgb(26 , 28 , 35);
   margin: auto;
-  width: 50%;
-  text-align: center;
   padding: 10px;
+  text-align: center;
+  width: 50%;
 }
 
 #color-palette {
   margin: auto;
-  width: 50%;
-  text-align: center;
-  margin-top: 40px;
   margin-bottom: 5px;
+  margin-top: 40px;
+  text-align: center;
+  width: 50%;
 }
 
 .color {
-  padding: 15px;
-  display: inline-block;
   border: 1px solid black;
+  display: inline-block;
   margin: 3px;
+  padding: 15px;
 }
 
 .color1 {
@@ -50,17 +51,17 @@ h1 {
 }
 
 #pixel-board {
+  height: 210px;
   margin: auto;
   width: 210px;
-  height: 210px;
 }
 
 .pixel {
   background-color: white;
-  float: left;
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
+  float: left;
+  height: 40px;
+  width: 40px;
 }
 
 .button-section{
@@ -69,15 +70,15 @@ h1 {
 }
 
 .button {
-  text-align: center;
-  color: red;
   border: 1px solid rgb(235, 72, 61);
-  border-radius: 4px;
-  width: 65px;
-  height: 19px;
   background-color: transparent;
+  border-radius: 4px;
+  color: red;
+  height: 19px;
   margin-bottom: 10px;
+  text-align: center;
   transition-duration: 0.4s;
+  width: 65px;
 }
 
 .button:hover {

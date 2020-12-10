@@ -1,7 +1,17 @@
-window.onload = document.getElementsByClassName('color1')[0].classList.add('selected');
+window.onload = function() {
+    let randomColors = document.querySelectorAll('.color');
+    for (let i = 1; i < randomColors.length; i++) {
+        let x = Math.floor(Math.random() * 256);
+        let y = Math.floor(Math.random() * 256);
+        let z = Math.floor(Math.random() * 256);
+        rgbColor = 'rgb(' + x + ' , ' + y + ' , ' + z + ')';
+        randomColors[i].style.backgroundColor = rgbColor;
+    }
+    document.getElementsByClassName('color1')[0].classList.add('selected');
+}
 
 function changeSelected() {
-    let selectedColor = document.getElementsByClassName('color');
+    const selectedColor = document.getElementsByClassName('color');
     for (i = 0; i < selectedColor.length; i++) {
         selectedColor[i].addEventListener('click', function() {
             for (i2 = 0; i2 < i; i2++) {
@@ -30,5 +40,15 @@ document.querySelector('.button').addEventListener('click',function () {
     for (let i = 0; i < canvas.length; i++){
         canvas[i].style.backgroundColor = 'white'
     }
-} ) 
+});
 
+function randomPalette(){
+    let randomColors = document.querySelectorAll('.color');
+    for (let i = 1; i < randomColors.length; i++) {
+        let x = Math.floor(Math.random() * 256);
+        let y = Math.floor(Math.random() * 256);
+        let z = Math.floor(Math.random() * 256);
+        rgbColor = 'rgb(' + x + ' , ' + y + ' , ' + z + ')';
+        randomColors[i].style.backgroundColor = rgbColor;
+    }
+}
