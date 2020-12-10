@@ -11,9 +11,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ### 🗒ANTES DE COMEÇAR A DESENVOLVER:
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-08-project-pixels-art.git`.
+  * `git clone git@github.com:tryber/sd-09-project-pixels-art.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-08-project-pixels-art`
+    * `cd sd-09-project-pixels-art`
 
 2. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
@@ -22,7 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     * Exemplo: `git checkout master`
   * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b mariazinha-meme-generator-project`
+    * Exemplo: `git checkout -b mariazinha-project-pixels-art`
 
 3. Crie na raiz do projeto os arquivos que você precisará desenvolver:
   * Verifique que você está na raiz do projeto
