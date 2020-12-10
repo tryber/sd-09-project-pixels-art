@@ -80,9 +80,9 @@ function updatePixelBoard() {
 }
 
 function checkValidityBoardSize() {
-  let numberBoadSize = document.querySelector('#board-size').value
+  let numberBoadSize = document.querySelector('#board-size').value;
   if (numberBoadSize <= 0) {
-    document.querySelector('#board-size').value = ''
+    document.querySelector('#board-size').value = '';
     return
   }
 }
@@ -103,6 +103,7 @@ function addEvents() {
   //  Adiciona escutador de teclado no input
   const inputBoadSize = document.querySelector('#board-size')
   inputBoadSize.addEventListener('keyup', checkValidityBoardSize)
+  inputBoadSize.min = "1";
 }
 
 
