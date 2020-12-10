@@ -10,11 +10,11 @@ window.onload = function () {
   function colorBlack (event) {
     let initialColor = document.getElementsByClassName('pixel')[0].style.backgroundColor;
     console.log(initialColor);
-    initialColor = 'white'
-    console.log(initialColor)
+
     event.target.initialColor = 'black';
     console.log(initialColor);
   } 
+
   function appColorBlack () {
     let pixelBoard = document.getElementById('pixel-board');
     pixelBoard.addEventListener('click', colorBlack);
