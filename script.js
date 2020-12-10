@@ -28,7 +28,6 @@
     const searchPixel = document.querySelector('#pixel-board');
     const line = document.createElement('tr');
     searchPixel.appendChild(line);
-    
     for (let index = 0; index < 5; index += 1) {
       const box = document.createElement('td');
       box.className = 'pixel';
@@ -40,16 +39,16 @@
   // pinta as caixas da paleta
   function paintingPalette() {
     const palette = document.querySelectorAll('div.color');
-    const colorBlack = palette[0];
+    let colorBlack = palette[0];
     colorBlack.style.backgroundColor = 'black';
 
-    const colorGreen = palette[1];
+    let colorGreen = palette[1];
     colorGreen.style.backgroundColor = 'green';
 
-    const colorRed = palette[2];
+    let colorRed = palette[2];
     colorRed.style.backgroundColor = 'red';
 
-    const colorBlue = palette[3];
+    let colorBlue = palette[3];
     colorBlue.style.backgroundColor = 'blue';
   }
 
@@ -58,7 +57,7 @@
   paintingPalette();
 
   function paintPixel(event) {
-    let targ = event.target;
+    const targ = event.target;
     console.log(targ);
   }
 
