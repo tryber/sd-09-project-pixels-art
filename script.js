@@ -4,9 +4,9 @@ window.onload = function () {
   createPixelBoard();
   selectedColor();
   paintPixel();
-	clearPixelBoard();
-	randomNumbers();
-	paletteRandomizer();
+  clearPixelBoard();
+  randomNumbers();
+  paletteRandomizer();
 };
 
 // criar paleta
@@ -67,7 +67,8 @@ function selectedColor() {
   const colors = document.getElementsByClassName("color");
   /**for que vai percorrer colors e adicionar eventos */
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener("click", function (event) { // o paramento event vai mostrar qual item foi acionado
+    colors[index].addEventListener("click", function (event) {
+      // o paramento event vai mostrar qual item foi acionado
       /**nesse for vamos garantir que nenhum elemento tenha a classe selected */
       for (let others = 0; others < colors.length; others += 1) {
         /**retiramos aqui a classe selected de todos os elementos */
@@ -88,7 +89,9 @@ function paintPixel() {
       /**aqui dizemos que estamos armazenando o elemento com as classes .color e .selected, pq é dele que vamos obter o background */
       const classSelected = document.querySelector(".color.selected");
       /** criamos uma variavel que vai receber o valor da propriedade backgroundColor do elemento de classe .selected */
-      const classSelectedColor = window.getComputedStyle(classSelected).getPropertyValue('background-color');
+      const classSelectedColor = window
+        .getComputedStyle(classSelected)
+        .getPropertyValue("background-color");
       /**assim como 'event.target', 'this' parece referenciar o elemento clicado */
 
       this.style.backgroundColor = classSelectedColor; // vamos trocar por event.target depois para testar
@@ -100,7 +103,7 @@ function clearPixelBoard() {
   /** armazenar as classes pixel na let pixels */
   const pixels = document.getElementsByClassName("pixel");
   /** adicionamos um evento ao bottao de classe #clear-board */
-  document.querySelector("#clear-board").addEventListener("click", function() {
+  document.querySelector("#clear-board").addEventListener("click", function () {
     /** for que vai percorrer todos os elementos .pixel */
     for (let index = 0; index < pixels.length; index += 1) {
       /** vamos trocar a propriedade de cada elemento pixel */
@@ -109,12 +112,14 @@ function clearPixelBoard() {
   });
 }
 
-function paletteRandomizer(){
+function paletteRandomizer() {
   /** cria evento no botao e chama a funcao colorizePalette novamente */
-	document.querySelector('#randomize-palette').addEventListener("click", colorizePalette)
+  document
+    .querySelector("#randomize-palette")
+    .addEventListener("click", colorizePalette);
 }
 
-function randomNumbers(){
+function randomNumbers() {
   /** funcao que gera numeros aleatorios para a funcao colorizePalette */
-	return Math.round(Math.random()*255)
+  return Math.round(Math.random() * 255);
 }
