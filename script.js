@@ -1,10 +1,3 @@
-window.onload = function () {
-  colorPalette()
-  createdPixelColumn()
-  clickPaletteColor()
-  clickPaletteColor()
-};
-
 function colorPalette() {
   const color = document.querySelectorAll('.color');
   color[0].style.backgroundColor = 'black';
@@ -55,4 +48,11 @@ function fillColor() {
       event.target.style.backgroundColor = colorSelected;
     });
   }
+}
+window.onload = function () {
+  colorPalette();
+  createdPixelColumn();
+  clickPaletteColor();
+  clickPaletteColor();
+  fillColor();
 }
