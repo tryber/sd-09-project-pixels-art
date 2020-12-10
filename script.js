@@ -38,9 +38,14 @@ function paintPixel(event) {
 }
 
 function clearColor() {
-  const pixelBoard = document.querySelectorAll('.pixel');
-  for (let index = 1; index <= pixelBoard.length - 1; index += 1) {
-    pixelBoard[index].style.backgroundColor = 'white';
+  // console.log(`Limpando cores`)
+  const linesOfPixels = document.querySelectorAll('.square-div-line');
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index <= pixels.length - 1; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+  for (let index = 0; index <= linesOfPixels.length - 1; index += 1) {
+    linesOfPixels[index].style.backgroundColor = 'white';
   }
 }
 
@@ -70,9 +75,10 @@ function addEvents() {
   //  Adiciona escutador de clique no botão
   const button = document.querySelector('#clear-board');
   button.addEventListener('click', clearColor);
-  //  Adiciona escutador de clique e de teclado no botão de atualizar tabela
+  //  Adiciona escutador de clique no botão de atualizar tabela
   const buttonGenerateBoard = document.querySelector('#generate-board');
   buttonGenerateBoard.addEventListener('click', updatePixelBoard);
+  //  Adiciona escutador de teclado no input
 }
 
 window.onload = function () {
