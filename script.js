@@ -2,8 +2,8 @@
 function verifyColorWrite(sumNumbersColors, rgbArray) {
   const colorWhiteNumber = 765;
   if (sumNumbersColors === colorWhiteNumber) {
-    rgbArray.pop();
-    rgbArray.push(Math.random() * 255);
+    rgbArray.pop();// Retirando uma cor para não ficar todos 255
+    rgbArray.push(Math.random() * 254);
   }
   return rgbArray;
 }
@@ -110,6 +110,7 @@ window.onload = function () {
   buttonGenerateBoard.addEventListener('click', function () {
     const valueInputSize = getNumberElementsValue(inputBoardSize.value);
     createPixelElement(valueInputSize);
+    selectColorPalette(paletteColorElements);
   });
   randomColorsPalette(paletteColorElements);
   selectColorPalette(paletteColorElements);
