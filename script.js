@@ -49,10 +49,31 @@ function fillColor() {
     });
   }
 }
+
+function createButtonClearAllColor() {
+  let buttonClearAllColor = document.createElement('button');
+  let containerButton = document.querySelector('.container-button')
+  buttonClearAllColor.id = 'clear-board'
+  buttonClearAllColor.innerText = 'Clear Board'
+  containerButton.appendChild(buttonClearAllColor)
+}
+
+function usingButtonClearAllColor() {
+  const pixel = document.querySelectorAll('.pixel');
+  let buttonClear = document.querySelector('#clear-board')
+  buttonClear.addEventListener('click', function () {
+    for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white'
+    }
+  })
+}
+
 window.onload = function () {
   colorPalette();
   createdPixelColumn();
   clickPaletteColor();
   clickPaletteColor();
   fillColor();
-}
+  createButtonClearAllColor();
+  usingButtonClearAllColor();
+};
