@@ -20,8 +20,8 @@ for (let index in arrayOfColors) {
 function tableCreate() {
   let mainBody = document.getElementsByTagName('main')[0];
   let tableArea = document.createElement('table');
-  tableArea.setAttribute('id', 'pixel-board');
   let tBody = document.createElement('tbody');
+  tBody.setAttribute('id', 'pixel-board');
   
   for (let index = 0; index < 5; index += 1) {
     let tr = document.createElement('tr');
