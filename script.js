@@ -1,10 +1,10 @@
 function createDivColors(color) {
   if (color !== 'white') {
-    let divColor = document.createElement('div');
+    const divColor = document.createElement('div');
     divColor.className = 'color';
     divColor.style.backgroundColor = color;
 
-    let palette = document.querySelector('#color-palette');
+    const palette = document.querySelector('#color-palette');
     palette.appendChild(divColor);
   }
 }
@@ -17,10 +17,10 @@ function createMatrixPixels(size) {
   const boardElement = document.querySelector('#pixel-board');
 
   for (let y = 1; y <= size; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
-    let row = [];
+    const row = [];
     for (let x = 1; x <= size; x += 1) {
-      let cell = {};
-      cell.element = document.createElement("div");
+      const cell = {};
+      cell.element = document.createElement('div');
       cell.element.className = 'pixel';
       boardElement.appendChild(cell.element);
       row.push(cell);
@@ -35,10 +35,10 @@ function selectingColorBlack() {
 selectingColorBlack();
 
 function selectingAllColors() {
-  let palette = document.querySelector('#color-palette');
+  const palette = document.querySelector('#color-palette');
 
   palette.addEventListener('click', function (e) {
-    let selected = document.querySelector('.selected');
+    const selected = document.querySelector('.selected');
     selected.className = 'color';
 
     if (e.target.className == 'color') {
@@ -49,28 +49,28 @@ function selectingAllColors() {
 selectingAllColors();
 
 function fillsSquarePixel() {
-  let board = document.querySelector('#pixel-board');
+  const board = document.querySelector('#pixel-board');
 
   board.addEventListener('click', function (e) {
-    let colorSelected = document.querySelector('.selected');
-    e.target.style.backgroundColor = colorSelected.style.backgroundColor
+    const colorSelected = document.querySelector('.selected');
+    e.target.style.backgroundColor = colorSelected.style.backgroundColor;
   });
 }
 fillsSquarePixel();
 
 function createBtnClear() {
-  btnClear = document.createElement('button');
+  const btnClear = document.createElement('button');
   btnClear.id = 'clear-board';
   btnClear.innerText = 'Limpar';
   btnClear.style.padding = '5px';
-  let divBtnClear = document.querySelector('#button-clear');
+  const divBtnClear = document.querySelector('#button-clear');
   divBtnClear.appendChild(btnClear);
-  let button = document.querySelector('#clear-board');
+  const button = document.querySelector('#clear-board');
 
-  button.addEventListener('click', function (e) {
-    let board = document.querySelector('#pixel-board');
+  button.addEventListener('click', function () {
+    const board = document.querySelector('#pixel-board');
     board.style.backgroundColor = 'white';
-    let pixels = document.querySelectorAll('.pixel');
+    const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = 'white';
     }

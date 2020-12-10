@@ -1,28 +1,28 @@
 body {
-    margin: 20px;
-  }
+  margin: 20px;
+}
 
 #color-palete {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .color {
   border: 1px solid black;
-  width: 50px;
-  height: 50px;
   display: inline-block;
+  height: 50px;
   margin-left: 5px;
+  width: 50px;
 }
 
 .pixel {
+  background-color: rgb(255 , 255 , 255);
   border: 1px solid black;
   display: inline-block;
-  width: 40px;
   height: 40px;
-  background-color: rgb(255, 255, 255);
+  width: 40px;
 }
 
 #pixel-board {
-    width: 210px;
-    margin-top: 10px;
+  margin-top: 10px;
+  width: 210px;
 }
