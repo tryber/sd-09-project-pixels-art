@@ -1,0 +1,33 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 768px;
+  width: 1366px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-left: 10px;
+  width: 40px;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  width: 220px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: -2px 0;
+  width: 40px;
+}
