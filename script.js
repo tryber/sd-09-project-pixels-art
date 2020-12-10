@@ -8,7 +8,6 @@ window.onload = function() {
     const currentColor = event.target;
     currentColorId = event.target.id;
     currentColor.classList.add('selected');
-    // console.log(currentColorId);
   }
 
   function handleFillPixel(event) {
@@ -73,7 +72,6 @@ window.onload = function() {
       }
     }
   }
-
 
   createPaletteColor();
   createPixelBoard();
