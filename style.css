@@ -1,16 +1,22 @@
 main {
+  background-color: salmon;
+  border-radius: 30px;
+  box-shadow: 2px 2px black;
+  margin: auto;
   padding: 5px;
+  text-align: center;
+  width: fit-content;
 }
 
 section {
-  margin-bottom: 5px;
+  margin: 25px;
 }
 
 .color {
   border: solid 1px black;
   display: inline-block;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 .black {
@@ -33,9 +39,9 @@ section {
   background-color: white;
 }
 
-#pixel-board {
-  background-color: whitesmoke;
-  display: table;
+main #pixel-board {
+  display: inline-table;
+  text-align: center;
 }
 
 .pixel-line {
