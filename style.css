@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 .container {
     display: flex;
@@ -24,10 +25,11 @@
 }
 #pixel-board {
     line-height: 0;
-    height: 210px;
-    width: 210px;
+    height: 200px;
+    width: 200px;
 }
 .pixel {
+    background-color: white;
     border: black solid 1px;
     display: inline-block;
     height: 40px;
