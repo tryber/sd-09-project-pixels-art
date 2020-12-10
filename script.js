@@ -5,6 +5,7 @@ function createDivs() {
   const div = document.createElement('div');
   return div;
 }
+
 function generateRandomColors() {
   const rgbNumberArray = [];
   let color = '';
@@ -17,16 +18,18 @@ function generateRandomColors() {
   color = `rgb(${rgbNumberArray.join(', ')})`;
   return color;
 }
+
 function addColorSquare(palette) {
   for (let index = 0; index < palette.length; index += 1) {
     if (index === 0) {
-      palette[index].style.backgroundColor = 'black';
+      palette[index].style.backgroundColor = 'rgb(0, 0, 0)';
       palette[index].className += ' selected';
     } else {
       palette[index].style.backgroundColor = generateRandomColors();
     }
   }
 }
+
 function createColorsPalette(palette, amount) {
   const palleteArray = [];
   for (let index = 0; index < amount; index += 1) {
@@ -36,27 +39,31 @@ function createColorsPalette(palette, amount) {
   }
   addColorSquare(palleteArray);
 }
+
 const amountColors = 4;
 createColorsPalette(paletteColor, amountColors);
+
 function createSquares(board, amount) {
   let column = Math.sqrt(amount);
   let line = Math.sqrt(amount);
   for (let index = 0; index < column; index += 1) {
     const squarecolumn = board.appendChild(createDivs());
     squarecolumn.className = 'pixel column';
-    squarecolumn.style.backgroundColor = 'white';
+    squarecolumn.style.backgroundColor = 'rgb(255, 255, 255)';
     for (let index = 0; index < line; index += 1) {
       const squareLine = squarecolumn.appendChild(createDivs());
       squareLine.className = 'pixel line';
-      squareLine.style.backgroundColor = 'white';
+      squareLine.style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }
 }
+
 function removeSquares(board) {
   while (board.firstChild) {
     board.removeChild(board.lastChild);
   }
 }
+
 function loadBoard(board, amount) {
   if (sessionStorage.getItem('board-size') === null) {
     createSquares(board, amount);
@@ -66,18 +73,23 @@ function loadBoard(board, amount) {
     createSquares(board, newBoardSize);
   }
 }
+
 const amountSquares = 25;
 loadBoard(pixelBoard, amountSquares);
+
 function deselectColor() {
   const currentColor = document.querySelector('.selected');
   currentColor.className = 'color';
 }
+
 function selectColor(event) {
   const selectedColor = event.target;
   deselectColor();
   selectedColor.className += ' selected';
 }
+
 paletteColor.addEventListener('click', selectColor);
+
 function fillSquare(event) {
   const selectedSquare = event.target;
   if (selectedSquare !== document.querySelector('#pixel-board')) {
@@ -85,19 +97,24 @@ function fillSquare(event) {
     selectedSquare.style.backgroundColor = currentColor.style.backgroundColor;
   }
 }
+
 pixelBoard.addEventListener('click', fillSquare);
+
 function createButton(section) {
   const newButton = document.createElement('button');
   newButton.type = 'button';
   section.appendChild(newButton);
   return newButton;
 }
+
 function createClearButton(section) {
   const clearButton = createButton(section);
   clearButton.innerText = 'Limpar';
   clearButton.id = 'clear-board';
 }
+
 createClearButton(buttonSection);
+
 function createForm(section) {
   const newForm = document.createElement('form');
   const newLabel = document.createElement('label');
@@ -107,14 +124,17 @@ function createForm(section) {
   newForm.appendChild(newInput);
   return newForm;
 }
+
 function clearBoard() {
   const squares = document.querySelectorAll('.pixel');
   for (let index = 0; index < squares.length; index += 1) {
-    squares[index].style.backgroundColor = 'white';
+    squares[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
+
 const buttonClearBoard = document.querySelector('#clear-board');
 buttonClearBoard.addEventListener('click', clearBoard);
+
 function createInputSizeBoard(section) {
   const inputForm = createForm(section);
   const inputButton = createButton(inputForm);
@@ -129,7 +149,9 @@ function createInputSizeBoard(section) {
   inputButton.id = 'generate-board';
   inputButton.type = 'input';
 }
+
 createInputSizeBoard(buttonSection);
+
 function storeBoardSize() {
   const inputBoardSize = document.querySelector('#board-size');
   if (inputBoardSize.value === '') {
@@ -140,7 +162,7 @@ function storeBoardSize() {
     inputBoardSize.value = 50;
   }
   sessionStorage.setItem('board-size', (inputBoardSize.value * inputBoardSize.value));
-  loadBoard(pixelBoard);
 }
+
 const buttonGenerateBoard = document.querySelector('#generate-board');
 buttonGenerateBoard.addEventListener('click', storeBoardSize);
