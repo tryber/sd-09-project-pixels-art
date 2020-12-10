@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+}
+
+body {
+  padding: 12px;
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
+
+.board-line {
+  height: 42px;
+  width: 100%;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+button {
+  margin: 10px 0;
+}
+
+#board-size {
+  width: 150px;
+}
