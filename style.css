@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(224, 230, 230);
+}
+
+#center{
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#center h1{
+  margin-bottom: 10px;
+}
+
+#inline-content button{
+padding: 3px;
+cursor: pointer;
+}
+#inline-content input{
+  margin-left: 55px;
+  padding: 3px;
+}
+
 .pixel{
   background-color: white;
   width: 40px;
@@ -12,7 +37,6 @@
 }
 
 #clear-board{
-  display: block;
   margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -27,7 +51,7 @@
 }
 
 table{
-  display: inline-block;
+  display: block;
   table-layout: none;
   border-collapse: collapse;
   border-spacing: 0;
