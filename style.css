@@ -33,7 +33,7 @@ h1 {
 }
 
 #pixel-board {
+  line-height: 0;
   margin: 0 auto;
   text-align: center;
-  line-height: 0;
 }
