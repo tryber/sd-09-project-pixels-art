@@ -38,4 +38,13 @@ window.onload = function () {
     }
     event.target.classList.add("selected");
   }
+
+  pixelBoard.addEventListener("click", paint);
+
+  function paint() {
+    let newColor = document.querySelector(".selected").classList[1];
+    let oldColor = event.target.classList[1];
+    event.target.classList.remove(oldColor);
+    event.target.classList.add(newColor);
+  }
 };
