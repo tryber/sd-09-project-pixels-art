@@ -1,0 +1,79 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  margin: 20px;
+  width: 100px;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: space-around;
+}
+
+header h1 {
+  color: rgb(245, 246, 250);
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+header {
+  border: 5px solid rgb(220, 221, 225);
+  border-radius: 20px;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board-line {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(53, 59, 72);
+}
+
+#controls-container {
+  border: 5px solid rgb(220, 221, 225);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+}
+
+#pixel-board {
+  padding: 30px;
+}
+
+#pixel-board .pixel-board-line {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: rgb(37, 36, 34);
+  border-top: 5px solid rgb(245, 246, 250);
+  bottom: 0;
+  color: rgb(245, 246, 250);
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  left: 0;
+  margin-top: 75px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
