@@ -9,10 +9,11 @@ window.onload = function () {
   return Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  for(let index = 0; index < colors.length; index += 1){
+  for(let index = 1; index < colors.length; index += 1){
     colors[index].style.backgroundColor = `rgb(${randomnumber(0, 255)}, ${randomnumber(0, 255)}, ${randomnumber(0, 255)})`
   }
 
+  colors[0].style.backgroundColor = 'rgb(0, 0, 0)'
   console.log(colors)
 
   addEventListener('click', changeSelectedColor)
