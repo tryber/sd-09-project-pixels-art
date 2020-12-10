@@ -126,7 +126,7 @@ header {
 
 .link-social {
   color: white;
-  margin: 0 3rem 0 3rem;
+  margin: 0 3rem;
   text-decoration: none;
   transition: 300ms;
 }
