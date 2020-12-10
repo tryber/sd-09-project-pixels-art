@@ -70,6 +70,10 @@ function biuldSquaresFrame(nLines, nSquaresPerLine) {
 function updatePixelBoard() {
   console.log(`Atualizando quadro`)
   let baseNumberSquareFrame = document.querySelector('#board-size').value
+  if (baseNumberSquareFrame === ''){
+    alert('Board inválido!')
+    return
+  }
   console.log(baseNumberSquareFrame)
   if(baseNumberSquareFrame > 0) {
     document.querySelector('#pixel-board').innerHTML = ''
