@@ -4,40 +4,29 @@ body {
   padding: 0;
 }
 
+#buttons {
+  text-align: center;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
-  height: 25px;
-  width: 25px;
-}
-
-h1 {
-  text-align: center;
+  height: 30px;
+  width: 30px;
 }
 
 #color-palette {
   text-align: center;
 }
 
-.item1 {
-  background-color: black;
-}
-
-.item2 {
-  background-color: dimgray;
-}
-
-.item3 {
-  background-color: rgb(158, 158, 158);
-}
-
-.item4 {
-  background-color: rgb(201, 201, 201);
+h1 {
+  text-align: center;
 }
 
 .pixel {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
   line-height: 0;
   width: 40px;
@@ -46,10 +35,5 @@ h1 {
 #pixel-board {
   margin: 0 auto;
   text-align: center;
-}
-
-#table {
-  display: inline-block;
-  height: 225px;
-  width: 100%;
+  line-height: 0;
 }
