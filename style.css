@@ -17,14 +17,12 @@ body {
 .pixel-board {
   align-content: center;
   display: flex;
-  height: 210px;
-  width: 210px;
 }
 
 .pixel {
   background-color: white;
   border-style: solid;
   border-width: 1px;
-  height: 42px;
-  width: 42px;
+  height: 41px;
+  width: 41px;
 }
