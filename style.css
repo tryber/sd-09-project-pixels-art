@@ -51,7 +51,7 @@ header {
 .inpus {
   align-items: center;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .boardSize {
@@ -65,7 +65,7 @@ header {
 
 .boardSize:focus {
   border: 2px solid #2a9d8f;
-  outline: none;  
+  outline: none;
 }
 
 .btn-generate {

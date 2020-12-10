@@ -99,7 +99,7 @@ function generateBoard() {
   const size = inputBoard();
   if (size) {
     const board = document.querySelectorAll('.pixel');
-    for (let index = 0; index < board.length; index +=1 ) {
+    for (let index = 0; index < board.length; index += 1) {
       board[index].remove();
     }
     createPixelsBoard(size);
