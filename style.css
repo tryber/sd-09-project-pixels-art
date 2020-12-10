@@ -1,37 +1,59 @@
 body {
+  background-attachment: local, fixed;
+  background-image: linear-gradient(to right, white, transparent, black), url(img/bg_image.jpg);
   height: 100%;
+  margin: 0;
+  max-height: 768px;
+  max-width: 1366px;
   text-align: center;
-  width: 100%;
+
+}
+
+.clear-board {
+  border: initial 1px;
+  border-radius: 6px;
+  height: 25px;
+  margin: 0 auto;
+  width: 70px;
 }
 
 .color {
   border: black solid 1px;
   display: inline-block;
-  margin: 6px;
+  margin: 0 6px;
   padding: 25px;
 }
 
-#color-palette .black {
+.color-palette .black {
   background-color: black;
 }
 
-#color-palette .blue {
+.color-palette .blue {
   background-color: blue;
 }
 
-#color-palette .red {
+.color-palette .red {
   background-color: red;
 }
 
-#color-palette .yellow {
+.color-palette .yellow {
   background-color: yellow;
 }
 
 .container {
-  background-color: rgb(204, 221, 221);
-  margin: 10px auto;
-  padding: 10px;
-  width: 50%;
+  margin: 5px auto;
+  padding: 5px;
+
+}
+
+h1 {
+  background-image: linear-gradient(to right, transparent, white 100%);
+  border-radius: 30px;
+  font-family: sans-serif;
+  height: 40px;
+  margin: 5px auto;
+  padding-right: 5px;
+  width: 250px;
 }
 
 .pixel {
@@ -46,24 +68,26 @@ body {
 
 .pixel-board {
   line-height: 0;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5px auto;
   width: 470px;
 }
 
-#pixel-board .black {
+.pixel-board .black {
   background-color: black;
 }
 
-#pixel-board .blue {
+.pixel-board .blue {
   background-color: blue;
 }
 
-#pixel-board .red {
+.pixel-board .red {
   background-color: red;
 }
 
-#pixel-board .yellow {
+.pixel-board .white {
+  background-color: white;
+}
+
+.pixel-board .yellow {
   background-color: yellow;
 }

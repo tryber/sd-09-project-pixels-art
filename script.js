@@ -1,6 +1,7 @@
 // Cria paleta com quatro cores distintas
 function paletteColor() {
   const palette = document.querySelector('#color-palette');
+  palette.classList.add('color-palette')
   const color = ['black', 'blue', 'yellow', 'red'];
   for (let index = 0; index < color.length; index += 1) {
     const divColor = document.createElement('div');
@@ -10,6 +11,33 @@ function paletteColor() {
   }
 }
 paletteColor();
+
+// Botão limpar
+function clearButton() {
+  const container = document.querySelector('.container');
+  const divOptions = document.createElement('div');
+  const button = document.createElement('button');
+  divOptions.id = 'options-select';
+  divOptions.classList.add('options-select');
+  button.id =  'clear-board';
+  button.classList.add('clear-board');
+  button.innerText = 'Limpar';
+  divOptions.appendChild(button);
+  container.appendChild(divOptions);
+}
+clearButton();
+
+// Apaga quadro
+function clearBoard() {
+  const buttonClear = document.querySelector('.clear-board');
+  buttonClear.addEventListener('click', function (event) {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].className = 'pixel white';
+    }
+  });
+}
+clearBoard();
 
 // Cria quadro com 25 pixels
 function pixelFrame() {
@@ -63,11 +91,9 @@ function preenchimentoCor() {
     const colorPixel = document.querySelector('.selected').classList[1];
     if(pixelSelect[1] === undefined) {
       pixelSelect.add(colorPixel);
-      console.log(pixelSelect[1]);
     } else {
       pixelSelect.remove(pixelSelect[1]);
       pixelSelect.add(colorPixel);
-      console.log(pixelSelect[1]);
     }
   });
 }
