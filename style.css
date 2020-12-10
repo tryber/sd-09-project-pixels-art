@@ -1,0 +1,66 @@
+html {
+  margin: 0;
+}
+
+.color {
+  border: solid;
+  border-width: 1px;
+  display: inline-block;
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.green {
+  background-color: green;
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pixel {
+  background-color: white;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
