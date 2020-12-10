@@ -21,14 +21,27 @@ function paleteColor() {
   let pink = document.querySelectorAll('.color')[1];
   let purple = document.querySelectorAll('.color')[2];
   let green = document.querySelectorAll('.color')[3];
-  pink.style.backgroundColor = 'rgb(255, 192, 203)';
-  purple.style.backgroundColor = 'rgb(128, 0, 128)';
-  green.style.backgroundColor = 'rgb(15, 192, 50)';
+  pink.style.backgroundColor = getRandomRgb();
+  purple.style.backgroundColor = getRandomRgb();
+  green.style.backgroundColor = getRandomRgb();
+  if(pink = purple || green || rgb(255, 255, 255) ) {
+    pink = getRandomRgb();
+  }
+  if(purple = green || rgb(255, 255, 255)){
+  purple = getRandomRgb()
+  }  
 }
-
+function getRandomRgb() {
+  var num = Math.round(0xffffff * Math.random());
+  var r = num >> 8;
+  var g = num >> 8 & 250;
+  var b = num & 250;
+  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+}
 
 window.onload = function(){
   createPalete()
   createBoardLine()
+  getRandomRgb()
   paleteColor()
 }
