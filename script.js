@@ -7,6 +7,7 @@ function firstSelectedFun() {
   paintPixel();
   buttonReset();
   deletarCriar();
+  randomColors();
 }
 
 // Recupera caminho das cores e adiciona classe 'selected'
@@ -88,11 +89,14 @@ function paintPixel() {
       if (colorSelected === localBlack) {
         localWhite[index].style.backgroundColor = "black";
       } else if (colorSelected === localRed) {
-        localWhite[index].style.backgroundColor = "red";
+        localWhite[index].style.backgroundColor =
+          localRed.style.backgroundColor;
       } else if (colorSelected === localBlue) {
-        localWhite[index].style.backgroundColor = "blue";
+        localWhite[index].style.backgroundColor =
+          localBlue.style.backgroundColor;
       } else if (colorSelected === localGreen) {
-        localWhite[index].style.backgroundColor = "green";
+        localWhite[index].style.backgroundColor =
+          localGreen.style.backgroundColor;
       }
     });
   }
@@ -109,6 +113,13 @@ function buttonReset() {
   });
 }
 
+function apagar() {
+  let pixelRowLocal = document.querySelectorAll(".pixel-row");
+  for (let count = 0; count < pixelRowLocal.length; count += 1) {
+    pixelRowLocal[count].remove();
+  }
+}
+
 function deletarCriar() {
   let inputPosition = document.querySelector("#board-size");
   let quantidadePixels = inputPosition.value;
@@ -120,14 +131,15 @@ function deletarCriar() {
     let quantidadePixels = inputPosition.value;
     if (quantidadePixels == 0) {
       window.alert("Board inválido!");
-    } else if (quantidadePixels < 5){
-      quantidadePixels === 5
-    } else if (quantidadePixels > 50){
-      quantidadePixels === 50
+      quantidadePixels = 5;
+    } else if (quantidadePixels < 5) {
+      quantidadePixels = 5;
+    } else if (quantidadePixels > 50) {
+      quantidadePixels = 50;
     }
 
     for (let count = 0; count < pixelRowLocal.length; count += 1) {
-      pixelRowLocal[count].remove();
+      apagar();
     }
 
     for (let count2 = 0; count2 < quantidadePixels; count2 += 1) {
@@ -145,4 +157,26 @@ function deletarCriar() {
       }
     }
   });
+}
+
+function randomColors() {
+  const localRed = document.querySelector(".red");
+  const localBlue = document.querySelector(".blue");
+  const localGreen = document.querySelector(".green");
+  let color1 = Math.ceil(Math.random() * 254);
+  let color2 = Math.ceil(Math.random() * 254);
+  let color3 = Math.ceil(Math.random() * 254);
+  let color4 = Math.ceil(Math.random() * 254);
+  let color5 = Math.ceil(Math.random() * 254);
+  let color6 = Math.ceil(Math.random() * 254);
+  let color7 = Math.ceil(Math.random() * 254);
+  let color8 = Math.ceil(Math.random() * 254);
+  let color9 = Math.ceil(Math.random() * 254);
+
+  localRed.style.backgroundColor =
+    "rgb(" + color1 + "," + color2 + "," + color3 + ")";
+  localBlue.style.backgroundColor =
+    "rgb(" + color4 + "," + color5 + "," + color6 + ")";
+  localGreen.style.backgroundColor =
+    "rgb(" + color7 + "," + color8 + "," + color9 + ")";
 }
