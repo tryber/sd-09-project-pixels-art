@@ -20,7 +20,7 @@ window.onload = function () {
 
   function createdPixelColumn() {
     for (let index = 0; index < 5; index += 1) {
-      let line = document.createElement('div');
+      const line = document.createElement('div');
       line.className = 'line';
       pixelBoard.appendChild(line);
       createdPixelLine(line);
@@ -29,26 +29,28 @@ window.onload = function () {
   createdPixelColumn();
 
   const paletteColor = document.querySelector('#color-palette').children;
-    
+
   function clickPaletteColor() {
     for (let index = 0; index < paletteColor.length; index += 1) {
       paletteColor[index].addEventListener('click', function(event) {
-      let change = document.querySelector('.selected');
-      change.className = 'color';
+        const change = document.querySelector('.selected');
+        change.className = 'color';
       event.target.className = 'color selected';
-    })}
+      }) 
+    };
   }
   clickPaletteColor();
 
   function fillColor() {
     let pixel = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixel.length; index += 1) {
-      pixel[index].addEventListener('click', function(event) {
-      let selectedClass = document.querySelector('.selected');
+      pixel[index].addEventListener('click', function (event) {
+      const selectedClass = document.querySelector('.selected');
       let colorSelected = selectedClass.style.backgroundColor;
 
       event.target.style.backgroundColor = colorSelected;
-    })}
+      }) 
+    };
   }
   fillColor();
 }

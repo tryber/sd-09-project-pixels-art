@@ -1,23 +1,23 @@
 .color {
-    border: black solid 1px;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    margin-right: 7px;
+  border: black solid 1px;
+  display: inline-block;
+  height: 40px;
+  margin-right: 7px;
+  width: 40px;
 }
 
 #pixel-board {
-    display: table;
+  display: table;
 }
 
 .line {
-    display: table-row;
+  display: table-row;
 }
 
 .pixel {
-    display: table-cell;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border: black solid 1px;
+  background-color: white;
+  border: black solid 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
 }
