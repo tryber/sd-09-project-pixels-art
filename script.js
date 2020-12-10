@@ -120,6 +120,10 @@ function deletarCriar() {
     let quantidadePixels = inputPosition.value;
     if (quantidadePixels == 0) {
       window.alert("Board inválido!");
+    } else if (quantidadePixels < 5){
+      quantidadePixels === 5
+    } else if (quantidadePixels > 50){
+      quantidadePixels === 50
     }
 
     for (let count = 0; count < pixelRowLocal.length; count += 1) {
