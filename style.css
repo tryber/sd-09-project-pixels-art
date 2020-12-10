@@ -1,6 +1,6 @@
 body {
   background-color: rgba(244, 244, 244, 1);
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Ubuntu Mono', 'monospace', sans-serif;
   margin: 0;
   overflow: auto;
   padding: 0;
@@ -40,7 +40,7 @@ main {
   width: 32px;
 }
 
-.block.selected {
+.selected {
   box-shadow: 0 0 8px rgba(238, 37, 96, 1);
 }
 
