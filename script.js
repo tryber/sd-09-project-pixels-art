@@ -76,16 +76,8 @@ function createPixelsBoard(param) {
 }
 createPixelsBoard(5);
 
-function deleteBoard() {
-  const pixelsBoard = document.querySelector('#pixel-board');
-  while(pixelsBoard.firstElementChild) {
-    const child = pixelsBoard.firstElementChild;
-    pixelsBoard.removeChild(child);
-  }
-}
-
 function validPixelSize(param) {
-  if(param > 50) {
+  if (param > 50) {
     param = 50;
   }
   if (param < 5) {
@@ -96,7 +88,7 @@ function validPixelSize(param) {
 
 function inputBoard() {
   const input = document.querySelector('#board-size').value;
-  if(input.length === 0) {
+  if (input.length === 0) {
     alert('Board inválido!');
     return false;
   }
@@ -107,7 +99,7 @@ function generateBoard() {
   const size = inputBoard();
   if (size) {
     const board = document.querySelectorAll('.pixel');
-    for (let index = 0; index < board.length; index +=1) {
+    for (let index = 0; index < board.length; index +=1 ) {
       board[index].remove();
     }
     createPixelsBoard(size);
