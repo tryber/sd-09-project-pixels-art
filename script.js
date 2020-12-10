@@ -50,6 +50,18 @@ function clearColor() {
 }
 
 function biuldSquaresFrame(nLines, nSquaresPerLine) {
+  if(nLines < 5) {
+    nLines = 5;
+  }
+  if (nLines > 50){
+    nLines = 50
+  }
+  if(nSquaresPerLine < 5) {
+    nSquaresPerLine = 5;
+  }
+  if(nSquaresPerLine > 50) {
+    nSquaresPerLine = 50;
+  }
   const lines = nLines;
   const squaresPerLine = nSquaresPerLine;
   biuldLines(lines, squaresPerLine);
