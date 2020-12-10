@@ -1,0 +1,54 @@
+.header-page {
+  margin: 32px;
+  text-align: center;
+}
+
+#color-palette {
+  padding-bottom: 32px;
+  padding-top: 32px;
+  text-align: center;
+  width: 100%;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0 auto;
+  width: 40px;
+}
+
+.black {
+  background-color: rgba(0, 0, 0, 10);
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+
+.blue {
+  background-color: rgba(25, 0, 255, 0.918);
+}
+
+.green {
+  background-color: rgb(0, 255, 21);
+}
+
+#pixel-board {
+  margin: 32px auto;
+  max-width: 210px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.buttons{
+    text-align: center;
+}
