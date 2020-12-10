@@ -1,7 +1,8 @@
 function paletteGenerator(numColors) {
   const paletteColors = document.getElementById('color-palette');
-  paletteColors.style.maxWidth = '258px';
-  paletteColors.style.width = `${numColors * 43}px`;
+  paletteColors.style.maxWidth = `${(8 * 43) + 3}px`;
+  paletteColors.style.width = `${(numColors * 43) + 3}px`;
+  paletteColors.style.height = 'fit-content';
   for (let index = 0; index < numColors; index += 1) {
     const makeDiv = document.createElement('div');
     if (index === 0) {
@@ -77,8 +78,10 @@ function whiteFrames(line, column) {
 
 function selectColor() {
   function getColor(event) {
-    document.querySelector('.selected').classList.remove('selected');
-    event.target.className = 'color selected';
+    if (event.target.className === 'color') {
+      document.querySelector('.selected').classList.remove('selected');
+      event.target.className = 'color selected';
+    }
   }
   const coloredPalette = document.querySelector('#color-palette');
   coloredPalette.addEventListener('click', getColor);
@@ -93,9 +96,26 @@ function coloring() {
   emptyFrame.addEventListener('click', coloringFrame);
 }
 
+function clearFrames() {
+  function clear() {
+    const panelToClear = document.querySelectorAll('.pixel');
+    for (let index = 0; index < panelToClear.length; index += 1) {
+      panelToClear[index].style.backgroundColor = 'white';
+    }
+  }
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.style.display = 'block';
+  clearButton.style.width = 'fit-content';
+  clearButton.style.height = 'fit-content';
+  clearButton.style.padding = '5px 10px';
+  clearButton.style.margin = '10px 0';
+  clearButton.addEventListener('click', clear);
+}
+
 window.onload = function () {
   paletteGenerator(4);
   whiteFrames(5, 5);
   selectColor();
   coloring();
+  clearFrames();
 };
