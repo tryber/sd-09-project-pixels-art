@@ -1,5 +1,5 @@
 function createColor() {
-  const colors = ['red', 'yellow', 'magenta', 'blue', 'green', 'pink', 'gray', 'purple', 'orange', 'brown'];
+  const colors = ['red', 'yellow', 'magenta', 'blue', 'green', 'pink', 'grey', 'purple', 'orange', 'brown'];
   const number = Math.ceil(Math.random() * 9);
   const color = document.createElement('div');
   color.className = `color ${colors[number]}`;
