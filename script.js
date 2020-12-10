@@ -52,3 +52,5 @@ function randomPalette(){
         randomColors[i].style.backgroundColor = rgbColor;
     }
 }
+
+document.querySelectorAll('.button')[1].addEventListener('click', randomPalette);

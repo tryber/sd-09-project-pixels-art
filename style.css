@@ -51,6 +51,7 @@ h1 {
 }
 
 #pixel-board {
+  box-shadow: 5px 10px 5px rgb(235, 72, 61);
   height: 210px;
   margin: auto;
   width: 210px;
@@ -78,7 +79,7 @@ h1 {
   margin-bottom: 10px;
   text-align: center;
   transition-duration: 0.4s;
-  width: 65px;
+  width: 63px;
 }
 
 .button:hover {
