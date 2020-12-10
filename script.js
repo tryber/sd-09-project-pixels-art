@@ -4,7 +4,7 @@ function createPalete () {
     let squareColor = document.createElement('div');
     squareColor.className = 'color';
     document.getElementById('color-palette').appendChild(squareColor)
-    let colorSelector = document.querySelectorAll(".color")[0].classList.add('color-selected');
+    let colorSelector = document.querySelectorAll(".color")[0].classList.add('selected');
   }
 }
   

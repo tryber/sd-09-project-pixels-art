@@ -14,7 +14,7 @@
   
 }
 
-.color-selected {
+.selected {
   background-color: black;
   display: inline-block;
 }
@@ -39,6 +39,3 @@
 }
 
 
-color {
-  background: rgb(15, 192, 50) ;
-}
