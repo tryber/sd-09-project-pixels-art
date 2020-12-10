@@ -1,3 +1,11 @@
+function createPalette() {
+  let colors = ['red', 'yellow', 'magenta', 'blue', 'green', 'pink', 'gray', 'purple', 'orange', 'brown'];
+  const number = Math.ceil(Math.random() * 9);
+  const color = document.createElement('div');
+  color.className = `color ${colors[number]}`;
+  return color;
+}
+
 window.onload = function () {
   const colorPalette = document.querySelector('#color-palette');
   const blackInsert = createPalette();
@@ -64,11 +72,3 @@ window.onload = function () {
     }
   });
 };
-
-function createPalette() {
-    let colors = ['red','yellow','magenta','blue','green','pink','gray','purple','orange','brown'];
-    let number = Math.ceil(Math.random() * 9);
-    const color = document.createElement('div');
-    color.className = `color ${colors[number]}`;
-    return color;
-}
