@@ -1,0 +1,60 @@
+body {
+  font-family: Architects, cursive, sans-serif;
+  font-size: 16px;
+  height: 768px;
+  width: 1366px;
+}
+
+ul li a {
+  color: cadetblue;
+  text-decoration: none;
+}
+
+.box {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.buttonClear {
+  margin: 10px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.formContent {
+  height: 50px;
+}
+
+.headerElements {
+  text-align: right;
+}
+
+.inputElement {
+  display: inline-block;
+  padding: 0 15px;
+  width: 30px;
+}
+
+.headerButton {
+  display: inline-block;
+  margin: 10px 10px 0;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.pixelBoardRow {
+  margin-bottom: -4px;
+}
+
+.principal {
+  height: 768px;
+  text-align: center;
+  width: 1366px;
+}
