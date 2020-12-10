@@ -48,13 +48,10 @@ function createSquares(board, amount) {
   let line = Math.sqrt(amount);
   for (let index = 0; index < column; index += 1) {
     const squarecolumn = board.appendChild(createDivs());
-    squarecolumn.className = 'pixel';
-    squarecolumn.style.display = 'table-row';
     squarecolumn.style.backgroundColor = 'rgb(255, 255, 255)';
     for (let index = 0; index < line; index += 1) {
       const squareLine = squarecolumn.appendChild(createDivs());
       squareLine.className = 'pixel';
-      squareLine.style.display = 'table-cell';
       squareLine.style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }

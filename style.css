@@ -15,9 +15,13 @@ form {
   background-color: white;
   border: black solid 1px;
   box-sizing: border-box;
-  display: inline-block;
+  display: table-cell;
   height: 40px;
   width: 40px;
+}
+
+.table-row {
+  display: table-row;
 }
 
 .main-page {
