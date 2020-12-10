@@ -1,74 +1,88 @@
 window.onload = function() {
-  const selectedColorBlack = document.getElementsByClassName('black');
-  const selectedColorYellow = document.getElementsByClassName('yellow');
-  const selectedColorRed = document.getElementsByClassName('red');
-  const selectedColorGreen = document.getElementsByClassName('green');
-
-  selectedColorBlack[0].className += ' selected';
-
-  // function selectNewColor() {
-  //   addEventListener('click' selectedColor) {
-  //     const selectedColor 
-  //   }
-  // }
+ createPallete();
+ colorizePallete (); 
+ createPixelBoard();
+ dancingSelected ();
+ clearBoard ();
+ colorPixel (); 
+ randomNumbers ();
 }
-// console.log(document.getElementById('color-palette'));
 
+// criar paleta de cores
+function createPallete(){
+  const colorPallete = document.getElementById('color-palette');
+  const colorsToPaint = 4
+  for (let index = 0; index < colorsToPaint; index +=1) {
+    const color = document.createElement('div');
+    color.classList.add('color');
+    colorPallete.appendChild(color);
+  }
+  document.querySelector('.color').classList.add('selected')
+}
 
+//colorit paleta de cores
+function colorizePallete () {
+  const palleteColor = document.querySelectorAll('.color');
+  palleteColor[0].style.backgroundColor = 'black';
+  palleteColor[1].style.backgroundColor = `rgb(${randomNumbers()},${randomNumbers()},${randomNumbers()})`;
+  palleteColor[2].style.backgroundColor = `rgb(${randomNumbers()},${randomNumbers()},${randomNumbers()})`;
+  palleteColor[3].style.backgroundColor = `rgb(${randomNumbers()},${randomNumbers()},${randomNumbers()})`;;
+}
 
-//         let basePyramid = 9;
-//         let numberOfLines = (basePyramid + 1) / 2; // 5
-//         let controlLeft = numberOfLines; // 5
-//         let controlRight = numberOfLines; // 5
-//         let lines = document.querySelectorAll(".line");
-      
-//         updateVisit();
-      
-//         fillTriangle(lines);
-        
-//         // Atualiza a quantidade de visitar no site, utilizando o LocalStorage
-//         function updateVisit() {
-//           if (typeof (Storage) != "undefined") {
-//             if(localStorage.count !== undefined) {
-//               let count = parseInt(localStorage.count);
-//               count+=1;
-//               localStorage.count = count;
-//               document.getElementById("count").innerHTML = count;
-//             } else {
-//               localStorage.count = 1;
-//               document.getElementById("count").innerHTML = 1;
-//             }
-//           } else {
-//             document.write("Sem suporte para Web Storage");
-//           }  
-//         }
-      
-//         // Passa por todos as linhas (div com class line) e preenche o triangulo
-//         function fillTriangle(lines) {
-//           for(let index = 0; index < lines.length; index += 1) {
-//             fillLine(lines[index]);
-//             controlRight += 1;
-//             controlLeft -= 1;
-//           }
-//         }
-      
-//         // Cria uma caixa com base nas diferentes classes
-//         function createBox(className) {
-//           let box = document.createElement("div");
-//           box.className = className;
-//           return box;
-//         }
-      
-//         // Preenche uma linha
-//         function fillLine(divLine) {
-//           for (let lineColumn = 1; lineColumn <= basePyramid; lineColumn += 1) {
-//             if(lineColumn >= controlLeft && lineColumn <= controlRight) {
-//               let box = createBox("box");
-//               divLine.appendChild(box);
-//             } else {
-//               divLine.appendChild(createBox("box-empty"));
-//             }
-//           }
-//         }
-//       }
-      
+function createPixelBoard(){
+  const pixelBoard = document.getElementById('pixel-board');
+  const numOfCol = 5;
+  for (let line = 0; line < numOfCol ; line +=1 ) {
+    const pixelLine = document.createElement('div');
+    pixelLine.classList.add('pixel-line');
+    for (let col = 0; col < numOfCol; col +=1) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      pixelLine.appendChild(pixel);
+    }
+    pixelBoard.appendChild(pixelLine);
+  }
+
+}
+
+//fazer com que a classe selected mude de acordo com o clique na paleta
+function dancingSelected () {
+  const colors = document.getElementsByClassName('color');
+  for (let index = 0 ; index < colors.length; index += 1) {
+    colors[index].addEventListener("click", function(event) {
+    for (let index2 = 0; index2 < colors.length; index2 +=1) {
+      colors[index2].classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+    })
+  }
+}
+// recomeca aqui
+
+function colorPixel () {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function () {
+      const elementSelected = document.querySelector('.color.selected');
+      const elementSelectedColor = window.getComputedStyle(elementSelected).getPropertyValue('background-color');
+      this.style.backgroundColor = elementSelectedColor;
+    })
+  }
+}
+function clearBoard () {
+  const pixels = document.getElementsByClassName('pixel');
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', function () {
+    for (let index = 0; index < pixels.length; index +=1) {
+      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+  })
+}
+function randomNumbers () {
+  return Math.round(Math.random()*255)
+}
+
+function ramdomPalette () {
+  const button = document.querySelector('random-palette');
+  button.addEventListener('click',colorizePallete()));
+}

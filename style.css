@@ -12,12 +12,6 @@
   padding: 5px;
 }
 
-.collumn {
-  width: 40px;
-  height: 50px;
-  border: 1px dotted darkgreen;
-  display: inline-block;
-}
 
 .color {
   border: 1px solid black;
@@ -28,10 +22,6 @@
   border-radius: 150px;
 
 }
-.green {
-  background-color: darkgreen;
-  background: darkgreen;
-}
 
 .line {
   width: 450px;
@@ -40,13 +30,10 @@
   display: inline-block; 
 }
 
-.red {
-  background-color: red;
-  background:red;
-}
-
 #pixel-board {
-  margin: 10px auto;
+  line-height: 0;
+  text-align: center;
+  margin-top:10px;
 }
 
 .pixel {
@@ -55,14 +42,11 @@
   height: 40px;
   border: 1px solid black;
   line-height: 0;
+  display: inline-block;
+  line-height: 0;
 }
 
 #title {
   border: 8px black;
   text-align: center;
-}
-
-.yellow {
-  background-color:yellow;
-  background:yellow;
 }
