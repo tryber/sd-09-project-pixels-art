@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Art</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="main-content">
+    <div class='palette-container'>
+      <header>
+        <h1 id="title">Paleta de Cores</h1>
+      </header>
+      <menu class="color-palette-options">
+        <li class="color-palette-item">Preto</li>
+        <li class="color-palette-item">Cor 2</li>
+        <li class="color-palette-item">Cor 3</li>
+        <li class="color-palette-item">Cor 4</li>
+      </menu>
+      <nav id="color-palette" aria-label="Paleta de cores">
+        <div class="color black"></div>
+        <div class="color color2"></div>
+        <div class="color color3"></div>
+        <div class="color color4"></div>
+      </nav>
+    </div>
+    <div class="board-container">
+      <div class="actions-container">
+        <div class="actions-container-wraper">
+          <button id="clear-board">Limpar</button>
+        </div>
+        <div class="actions-container-wraper">
+          <label for="task-input">Tamanho do quadro (Mínimo: 5 / Máximo 50):</label>
+        <input type="number" id="board-size" placeholder="5" min="1">
+        <button id="generate-board">VQV</button>
+        </div>
+      </div>
+      <nav id="pixel-board" aria-label="Pixel board">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+      </nav>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
