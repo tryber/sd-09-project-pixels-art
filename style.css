@@ -42,3 +42,9 @@ display: table;
   display: table-cell;
   background-color: white
 }
+
+.input-button{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
