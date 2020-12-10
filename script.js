@@ -82,6 +82,7 @@ function selectColor() {
     if (event.target.className === 'color') {
       document.querySelector('.selected').classList.remove('selected');
       event.target.className = 'color selected';
+      document.querySelector('#title').style.color = document.querySelector('.selected').style.backgroundColor;
     }
   }
   const coloredPalette = document.querySelector('#color-palette');
@@ -116,7 +117,7 @@ function clearFrames() {
 window.onload = function () {
   paletteGenerator(4);
   whiteFrames(5, 5);
-  selectColor();
-  coloring();
-  clearFrames();
 };
+selectColor();
+coloring();
+clearFrames();

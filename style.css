@@ -1,5 +1,5 @@
 body {
-	font-family: Roboto Mono, sans-serif;
+  font-family: Roboto Mono, sans-serif;
 }
 .color {
   background-color: black;
@@ -19,9 +19,4 @@ body {
   margin: -1px;
   margin-top: -4px;
   width: 40px;
-}
-
-.selected {
-	height: 41px;
-	width: 41px;
 }
