@@ -33,6 +33,18 @@ function coloringBoard(event) {
   event.target.style.backgroundColor = fillColor;
 }
 
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'white';
+  }
+}
+
+function addButton() {
+    const button = document.querySelector('#clear-board');
+    button.addEventListener('click', clearBoard);
+}
+
 function drawBoard() {
   const boardPixel = document.querySelector('#pixel-board');
   for (let index = 0; index < 5; index += 1) {
@@ -52,4 +64,5 @@ window.onload = () => {
   coloringTheColorPalette();
   designingTheColorPalette();
   drawBoard();
+  addButton();
 };
