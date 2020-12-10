@@ -22,7 +22,7 @@ header {
 }
 
 .background-item1 {
-  background-color: black;
+  background-color:rgb(0, 0, 0);
 }
 
 .background-item2 {
@@ -35,6 +35,10 @@ header {
 
 .background-item4 {
   background-color: rgb(217, 217, 217);
+}
+
+#buttoon {
+  text-align: center;
 }
 
 #table {
