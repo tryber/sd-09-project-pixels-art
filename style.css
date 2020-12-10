@@ -1,14 +1,13 @@
 #pixel-board {
-  /* display: flex; */
-  width: 210px;
   border: 1px solid;
+  width: 210px;
 }
 
 .box {
   border: 1px solid;
-  width: 40px;
   height: 40px;
   margin: 0 5px 0 0;
+  width: 40px;
 }
 
 .color {
@@ -16,8 +15,8 @@
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
-  background-color: white;
 }

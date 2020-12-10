@@ -1,21 +1,21 @@
-  let paletteBox = 4;
-  let linhas = 5;
+  const paletteBox = 4;
+  const linhas = 5;
 
   // cria todas as caixas da linha
   function createBoxes(number) {
-    for (let index = 0; index < number; index++) {
+    for (let index = 0; index < number; index += 1) {
       if (number === 4) {
         createBoxPalette(number[index]);
       } else {
         createBoxLine(number[index]);
       }
-    } 
+    }
   }
 
   // cria uma caixa para palette
   function createBoxPalette() {
-    let searchPalette = document.querySelector('#color-palette');
-    let box = document.createElement('div');
+    const searchPalette = document.querySelector('#color-palette');
+    const box = document.createElement('div');
     box.className = 'color box';
 
     searchPalette.appendChild(box);
@@ -25,13 +25,12 @@
 
   // criando uma caixa para linha
   function createBoxLine(pixelBoard) {
-    let searchPixel = document.querySelector('#pixel-board');
-    let line = document.createElement('tr');
-    
+    const searchPixel = document.querySelector('#pixel-board');
+    const line = document.createElement('tr');
     searchPixel.appendChild(line);
     
-    for (let index = 0; index < 5; index++) {
-      let box = document.createElement('td');
+    for (let index = 0; index < 5; index += 1) {
+      const box = document.createElement('td');
       box.className = 'pixel';
       line.appendChild(box);
       box.addEventListener('click', paintPixel);
@@ -40,44 +39,43 @@
 
   // pinta as caixas da paleta
   function paintingPalette() {
-    let palette = document.querySelectorAll('div.color');
-      let colorBlack = palette[0];
-      colorBlack.style.backgroundColor = 'black';
+    const palette = document.querySelectorAll('div.color');
+    const colorBlack = palette[0];
+    colorBlack.style.backgroundColor = 'black';
 
-      let colorGreen = palette[1];
-      colorGreen.style.backgroundColor = 'green';
+    const colorGreen = palette[1];
+    colorGreen.style.backgroundColor = 'green';
 
-      let colorRed = palette[2];
-      colorRed.style.backgroundColor = 'red';
+    const colorRed = palette[2];
+    colorRed.style.backgroundColor = 'red';
 
-      let colorBlue = palette[3];
-      colorBlue.style.backgroundColor = 'blue';
+    const colorBlue = palette[3];
+    colorBlue.style.backgroundColor = 'blue';
   }
 
   createBoxes(paletteBox);
   createBoxes(linhas);
   paintingPalette();
 
-function paintPixel(event) {
-  let targ = event.target;
-  
-  console.log(targ);
-}
+  function paintPixel(event) {
+    let targ = event.target;
+    console.log(targ);
+  }
 
-window.addEventListener('load', function (event) {
-  let selected = document.querySelector('.color.box');
-  selected.style.border = '3px solid black';
-  selected.style.heigth = '60px';
-  selected.style.width = '50px';
-  return selected;
-});
+  window.addEventListener('load', function (event) {
+    const selected = document.querySelector('.color.box');
+    selected.style.border = '3px solid black';
+    selected.style.heigth = '60px';
+    selected.style.width = '50px';
+    return selected;
+  });
 
-let deselected = document.querySelector('.color.box');
+  const deselected = document.querySelector('.color.box');
 
-function deselect() {
-  deselected.style.border = '1px solid black';
-  deselected.style.heigth = '40px';
-  deselected.style.width = '40px';
-  return deselected;
-}
+  function deselect() {
+    deselected.style.border = '1px solid black';
+    deselected.style.heigth = '40px';
+    deselected.style.width = '40px';
+    return deselected;
+  }
   deselected.addEventListener('click', deselect);
