@@ -4,7 +4,8 @@ window.onload = function() {
   createPixelBoard();
   classSelected();
   paintPixel();
-  clearPixelBoard()
+  clearPixelBoard();
+  randomPalette();
 }
 
 function createPalette() {
@@ -21,9 +22,9 @@ function createPalette() {
 function paintPalette() {
   const coloredSquare = document.querySelectorAll('.color');
   coloredSquare[0].style.backgroundColor = 'black';
-  coloredSquare[1].style.backgroundColor = 'pink';
-  coloredSquare[2].style.backgroundColor = 'rgb(239, 233, 174)';
-  coloredSquare[3].style.backgroundColor = 'teal';
+  coloredSquare[1].style.backgroundColor = `rgb(${randomNumbers()}, ${randomNumbers()}, ${randomNumbers()})`;
+  coloredSquare[2].style.backgroundColor = `rgb(${randomNumbers()}, ${randomNumbers()}, ${randomNumbers()})`;
+  coloredSquare[3].style.backgroundColor = `rgb(${randomNumbers()}, ${randomNumbers()}, ${randomNumbers()})`;
 }
 
 function createPixelBoard() {
@@ -72,4 +73,13 @@ function clearPixelBoard() {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   })
+}
+
+function randomNumbers() {
+  return Math.round(Math.random()*255);
+}
+
+function randomPalette() {
+  const button = document.querySelector('#randomize-color')
+  button.addEventListener('click', paintPalette);
 }

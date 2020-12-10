@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  text-align: center;
 }
 .color {
   border: 1px solid black;
@@ -18,6 +19,11 @@ body {
   line-height: 0;
   margin: 0;
   width: 40px;
+}
+
+#pixel-board {
+max-width: 800px;
+min-width: 200px;
 }
 
 .pixel-line {
