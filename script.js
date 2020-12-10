@@ -64,7 +64,6 @@ function whiteFrames(line, column) {
   const panel = document.body.querySelector('#pixel-board');
   panel.style.width = `${column * 40}px`;
   panel.style.height = `${column * 40}px`;
-  panel.style.display = 'inline-block';
   panel.style.marginTop = '10px';
   panel.style.maxHeight = '630px';
   panel.style.maxWidth = '630px';
@@ -92,7 +91,9 @@ function selectColor() {
 function coloring() {
   function coloringFrame(event) {
     const rgb = document.querySelector('.selected').style.backgroundColor;
-    event.target.style.backgroundColor = rgb;
+    if (event.target.className === 'pixel') {
+      event.target.style.backgroundColor = rgb;
+    }
   }
   const emptyFrame = document.querySelector('#pixel-board');
   emptyFrame.addEventListener('click', coloringFrame);
@@ -106,7 +107,8 @@ function clearFrames() {
     }
   }
   const clearButton = document.querySelector('#clear-board');
-  clearButton.style.display = 'block';
+  clearButton.style.display = 'inline-block';
+  clearButton.innerHTML = 'Limpar';
   clearButton.style.width = 'fit-content';
   clearButton.style.height = 'fit-content';
   clearButton.style.padding = '5px 10px';
