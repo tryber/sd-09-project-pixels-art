@@ -39,7 +39,7 @@ section {
   background-color: white;
 }
 
-main #pixel-board {
+.pixel-board {
   display: inline-table;
   text-align: center;
 }
