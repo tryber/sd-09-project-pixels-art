@@ -1,0 +1,25 @@
+.colorPalette {
+  margin: auto;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  padding: 35px;
+}
+
+.pixelBoard {
+  display: table;
+}
+
+.linePixel {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
