@@ -32,25 +32,25 @@ window.onload = function () {
 
   function clickPaletteColor() {
     for (let index = 0; index < paletteColor.length; index += 1) {
-      paletteColor[index].addEventListener('click', function(event) {
+      paletteColor[index].addEventListener('click', function (event) {
         const change = document.querySelector('.selected');
         change.className = 'color';
-      event.target.className = 'color selected';
-      }) 
-    };
+        event.target.className = 'color selected';
+      });
+    }
   }
   clickPaletteColor();
 
   function fillColor() {
-    let pixel = document.querySelectorAll('.pixel');
+    const pixel = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].addEventListener('click', function (event) {
-      const selectedClass = document.querySelector('.selected');
-      let colorSelected = selectedClass.style.backgroundColor;
+        const selectedClass = document.querySelector('.selected');
+        const colorSelected = selectedClass.style.backgroundColor;
 
-      event.target.style.backgroundColor = colorSelected;
-      }) 
-    };
+        event.target.style.backgroundColor = colorSelected;
+      });
+    }
   }
   fillColor();
-}
+};
