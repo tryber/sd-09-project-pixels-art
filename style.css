@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(3, 107, 82);
+  font-family: sans-serif;
+}
+
 form {
   display: inline-block;
   margin-left: 20px;
@@ -9,6 +14,33 @@ form {
   height: 100px;
   margin: 2px;
   width: 100px;
+}
+
+.main-page {
+  background-color: rgb(213, 225, 223);
+  border: 5px solid rgb(47, 193, 140);
+  border-radius: 15px;
+  margin: 1% 20%;
+  text-align: center;
+}
+
+.page-footer {
+  background-color: rgb(213, 225, 223);
+  border: 5px solid rgb(47, 193, 140);
+  border-radius: 15px;
+  color: rgb(3, 107, 82);
+  font-size: 15px;
+  margin: 1% 20%;
+  padding: 7px;
+}
+
+.page-header {
+  background-color: rgb(213, 225, 223);
+  border: 5px solid rgb(47, 193, 140);
+  border-radius: 15px;
+  color: rgb(3, 107, 82);;
+  margin: 1% 20%;
+  text-align: center;
 }
 
 .pixel {
@@ -24,18 +56,18 @@ form {
   display: table-row;
 }
 
-.main-page {
-  border: 1px solid black;
-  margin: auto;
-  text-align: center;
+#color-palette {
+  margin-top: 2%;
 }
 
-.page-header {
-  border: 1px solid black;
-  margin: auto;
-  text-align: center;
+#form-section {
+  margin-top: 1%;
 }
 
 #pixel-board {
   display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
