@@ -23,3 +23,12 @@ function paintPixel() {
     })
 }
 paintPixel();
+
+document.querySelector('.button').addEventListener('click',function () {
+    let btnClear = document.getElementById('clear-board');
+    let canvas = document.querySelectorAll('.pixel');
+    for (let i = 0; i < canvas.length; i++){
+        canvas[i].style.backgroundColor = 'white'
+    }
+} ) 
+

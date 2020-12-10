@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-body{
+body {
+  font-family: Montserrat , sans-serif;
   background-image: url("bk.png");
   background-size: 1366px 798px;
   background-position: 0 -170px ;
@@ -22,7 +23,7 @@ h1 {
   width: 50%;
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .color {
@@ -48,16 +49,38 @@ h1 {
   background-color: red;
 }
 
-#pixel-board{
+#pixel-board {
   margin: auto;
   width: 210px;
   height: 210px;
 }
 
-.pixel{
+.pixel {
   background-color: white;
   float: left;
   width: 40px;
   height: 40px;
   border: 1px solid black;
+}
+
+.button-section{
+  margin: auto;
+  width: 15%;
+}
+
+.button {
+  text-align: center;
+  color: red;
+  border: 1px solid rgb(235, 72, 61);
+  border-radius: 4px;
+  width: 65px;
+  height: 19px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: rgb(235, 72, 61);
+  color: white;
 }
