@@ -95,7 +95,7 @@ function coloring() {
 
 window.onload = function () {
   paletteGenerator(4);
-    whiteFrames(5, 5),
-    selectColor(),
-    coloring();
+  whiteFrames(5, 5);
+  selectColor();
+  coloring();
 };
