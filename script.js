@@ -31,7 +31,6 @@ function coloringBoard(event) {
   const selectedColor = document.querySelector('.selected');
   const fillColor = selectedColor.style.backgroundColor;
   event.target.style.backgroundColor = fillColor;
-  console.log(event);
 }
 
 function drawBoard() {
@@ -53,4 +52,4 @@ window.onload = () => {
   coloringTheColorPalette();
   designingTheColorPalette();
   drawBoard();
-}
+};
