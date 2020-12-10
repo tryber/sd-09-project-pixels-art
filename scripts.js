@@ -2,10 +2,8 @@ window.onload = function () {
   let button = document.querySelector('#clear-board')
   let colors = document.querySelectorAll('.color')
   let buttonborder = document.querySelector('#generate-board')
-  let border = 9;
 
   let inputborder = document.querySelector('#board-size')
-
 
   function randomnumber(min, max) {
     min = Math.ceil(0);
@@ -25,7 +23,10 @@ window.onload = function () {
   let table = document.querySelector('#tbody-board')
 
   function changeBorder() {
-    if(inputborder.value < 5){
+    if(inputborder.value == ""){
+      alert('Board inválido!')
+    }
+    else if(inputborder.value < 5){
       inputborder.value = 5
     }
     else if(inputborder.value > 50){
