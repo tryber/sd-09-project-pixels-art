@@ -145,6 +145,7 @@ function updateBoardSize() {
   }
   deletePixelBoard(board);
   createPixelBoard(board, (inputBoardSize.value * inputBoardSize.value));
+  return true;
 }
 
 // This function prevent submit of a input in form.
