@@ -54,7 +54,7 @@ function createButtonClearAllColor() {
   let buttonClearAllColor = document.createElement('button');
   let containerButton = document.querySelector('.container-button')
   buttonClearAllColor.id = 'clear-board'
-  buttonClearAllColor.innerText = 'Clear Board'
+  buttonClearAllColor.innerText = 'Limpar'
   containerButton.appendChild(buttonClearAllColor)
 }
 
@@ -63,7 +63,7 @@ function usingButtonClearAllColor() {
   let buttonClear = document.querySelector('#clear-board')
   buttonClear.addEventListener('click', function () {
     for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].style.backgroundColor = 'white'
+      pixel[index].style.backgroundColor = 'white'
     }
   })
 }
