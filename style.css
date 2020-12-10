@@ -38,7 +38,7 @@ form {
   background-color: rgb(213, 225, 223);
   border: 5px solid rgb(47, 193, 140);
   border-radius: 15px;
-  color: rgb(3, 107, 82);;
+  color: rgb(3, 107, 82);
   margin: 1% 20%;
   text-align: center;
 }
@@ -52,22 +52,19 @@ form {
   width: 40px;
 }
 
-.table-row {
-  display: table-row;
+.section-board {
+  display: table;
+  margin: 2% auto;
 }
 
-#color-palette {
-  margin-top: 2%;
-}
-
-#form-section {
+.section-form {
   margin-top: 1%;
 }
 
-#pixel-board {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2%;
+.section-palette {
   margin-top: 2%;
+}
+
+.table-row {
+  display: table-row;
 }

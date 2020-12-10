@@ -122,7 +122,7 @@ function addSizeForm(section) {
   const form = createForm(section);
   const inputButton = createButton(form);
   const formInput = form.firstChild;
-  form.id = 'board-form'
+  form.id = 'board-form';
   formInput.id = 'board-size';
   formInput.type = 'number';
   formInput.min = 1;
@@ -157,7 +157,7 @@ window.onload = function () {
   const pixelBoard = document.querySelector('#pixel-board');
   const amountColors = 4;
   const amountSquares = 25;
-  const buttonSection = document.querySelector('#form-section');
+  const buttonSection = document.querySelector('.section-form');
   createColorsPalette(paletteColor, amountColors);
   createPixelBoard(pixelBoard, amountSquares);
   createClearButton(buttonSection);
