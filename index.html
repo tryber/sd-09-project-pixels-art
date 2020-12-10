@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' href='style.css'>
+        <title>Tiago Minoru Yoneda - Project 03 - Pixel Art</title>
+    </head>
+    <body>
+        <h1 id='title'>Paleta de Cores</h1>
+
+        <section id='color-palette' class='color-palette'></section>
+
+        <div class='button-container'>
+            <button class='button' id='clear-board'>Limpar</button>
+            <label class='label' for='size_input'>Novo Tamanho:</label>
+            <input id='board-size' type='number' min='1' class='input' placeholder='insert desired size'>
+            <button id ='generate-board' class='confirmButton'>VQV</button>
+        </div>
+
+        <section class='boardHolder'>
+            <div id='pixel-board' class='pixel-board'></div>
+        </section>
+
+        <script src='script.js'></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                //Array de cores não repetidas para colocar no pallete
+                const colorArray = ['#2a9d8f', '#f4a261', '#c5c3c6', '#46494c', '#1985a1',
+                    '#cb997e', '#ddbea9', '#e5989b', '#b5838d', '#e63946', '#a8dadc', '#457b9d',
+                    '#457b9d', '#f4f1de', '#e07a5f', '#81b29a', '#f2cc8f', '#ffd6a5', '#9bf6ff',
+                    '#ffc6ff', '#d00000', '#ffba08', '#00b4d8', '#eee0ef', '#caf0f8', '#fca311',
+                    '#06d6a0', '#073b4c', '#f77f00', '#fcbf49', '#b7e4c7', '#8ecae6', '#ffddd2',
+                    '#ff006e', '#3a86ff', '#8338ec', '#48cae4', '#ea9ab2', '#b3dee2', '#4ecdc4',
+                    '#ffe66d', '#d8572a', '#edb183', '#251605', '#0d21a1', '#e18ad4', '#f2545b',
+                    '#890620', '#890620', '#01baef'];
+
+                // monta um array de tamanho 4 que vai ser a palette inicial
+                // o while ajuda a não ter repetidos
+                function pickStarterColors(array) {
+                const starterColors = ['#000000'];
+                let ok;
+                let num;
+                for (let idx = 0; idx < 3; idx += 1) {
+                    ok = false;
+                    while (!ok) {
+                        num = Math.floor(Math.random() * array.length);
+                        if (!starterColors.includes(array[num])) {
+                            starterColors.push(array[num]);
+                            ok = true;
+                        }
+                    }
+                }
+                return (starterColors);
+                }
+
+                // usar o array de cores para criar as 4 palettes iniciais, sendo que a primeira
+                //  cor é black ou #000000
+                const starterColors = pickStarterColors(colorArray);
+                for (let idx = 0 ; idx < starterColors.length; idx += 1) {
+                    const newLine = document.createElement('div');
+
+                    if (idx === 0){
+                        newLine.className = 'color selected'
+                    } else {
+                    newLine.className = 'color';
+                    }
+                    newLine.style.backgroundColor = starterColors[idx];
+                    newLine.innerText = starterColors[idx];
+                    document.querySelector('.color-palette').appendChild(newLine);
+                }
+
+                // funcao utilizada para tirar todas as class selected da palette
+                function removeColorButtonMarks() {
+                    for (let idx = 0; idx < colorButtons.length; idx += 1) {
+                        if (colorButtons[idx].classList.contains('selected')) {
+                            colorButtons[idx].classList.toggle('selected');
+                       }
+                    }
+                }
+
+                // utiliza a funcao acima para remover a class das outras palettes e deixar selected
+                //  somente nela mesma. Essa função ja grava no localStorage a cor selecionada
+                function selectColor(self) {
+                    removeColorButtonMarks();
+                    const selectedColor = self.target.style.backgroundColor;
+                    sessionStorage.selectedColor = selectedColor;
+                    self.target.classList.toggle('selected');
+                    document.querySelector('.pixel-board').style.border = `8px solid ${selectedColor}`
+                }
+
+                // coloca o evento de clicar na palette e escolher a cor.
+                const colorButtons = document.querySelectorAll('.color')
+                for (let idx = 0; idx < colorButtons.length; idx += 1) {
+                    colorButtons[idx].addEventListener('click', function (target) {
+                    selectColor(target);
+                    });
+                }
+                //constroi a board inicial de tamanho padrão 5
+                constructBoard(5);
+            });
+        </script>
+    </body>
+</html>
