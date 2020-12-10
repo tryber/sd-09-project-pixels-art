@@ -1,3 +1,4 @@
+const colorPalette = document.querySelector('#color-palette');
 const blackBox = document.querySelector('.black');
 const cyanBox = document.querySelector('.cyan');
 const blueVioletBox = document.querySelector('.blueviolet');
@@ -5,31 +6,20 @@ const greenBox = document.querySelector('.green');
 const pixelBoard = document.querySelector('#pixel-board');
 const clearBoard = document.querySelector('#clear-board');
 const pixelElement = document.querySelectorAll('.pixel');
+const boardSize = document.querySelector('#board-size');
+const generateBoardBt = document.querySelector('#generate-board');
 
 function chooseColor() {
-  cyanBox.addEventListener('click', function () {
-    cyanBox.classList.add('selected');
-    blackBox.classList.remove('selected');
-    blueVioletBox.classList.remove('selected');
-    greenBox.classList.remove('selected');
-  });
-  blackBox.addEventListener('click', function () {
-    blackBox.classList.add('selected');
-    cyanBox.classList.remove('selected');
-    blueVioletBox.classList.remove('selected');
-    greenBox.classList.remove('selected');
-  });
-  blueVioletBox.addEventListener('click', function () {
-    blueVioletBox.classList.add('selected');
-    cyanBox.classList.remove('selected');
-    blackBox.classList.remove('selected');
-    greenBox.classList.remove('selected');
-  });
-  greenBox.addEventListener('click', function () {
-    greenBox.classList.add('selected');
-    cyanBox.classList.remove('selected');
-    blueVioletBox.classList.remove('selected');
-    blackBox.classList.remove('selected');
+  colorPalette.addEventListener('click', function (event) {
+    if (event.target.classList.contains('selected')) {
+      event.target.classList.remove('selected');
+    } else {
+      const selected = document.querySelector('.selected');
+      if (selected.classList.contains('selected')) {
+        selected.classList.remove('selected');
+      }
+    }
+    event.target.classList.add('selected');
   });
 }
 chooseColor();
