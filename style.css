@@ -10,13 +10,13 @@ Técnica para background full screen no link abaixo:
 https://css-tricks.com/perfect-full-page-background-image/
 
 */
-/* html {
+html {
   background-image: url('pics/bg-image.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-} */
+}
 
 /* Class styles */
 /*
