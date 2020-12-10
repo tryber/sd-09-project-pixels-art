@@ -1,16 +1,29 @@
 // Seleciona a cor preta ao abrir o app
 function colorOnload() {
-  let black = document.getElementById('black')
+  let colorSelected = document.querySelector('#black')
 
-  return black
+  return colorSelected
 }
 
-console.log(colorOnload())
+colorOnload()
 
-// Função que pinta os quadrados
-function paintSquare() {
+// 7 - Seleciona a cor na paleta
+
+function selectColor() {
+  
+  const color = document.querySelector('#color-palette')
+  color.addEventListener('click', clickSelectedColor)
 
 }
 
-// 1 - faço a função que vai selecionar a cor preta no carregamento da página
-// 2 - crio a função que seleciona a cor 
+selectColor()
+function clickSelectedColor(event) {
+  
+  let selected = document.querySelector('.selected')
+
+  selected.classList.remove('selected')
+
+  event.target.classList.add('selected')
+  
+}
+
