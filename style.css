@@ -26,22 +26,6 @@
   cursor: pointer;
 }
 
-.black{
-  background-color: black;
-}
-
-.red{
-  background-color: red;
-}
-
-.blue{
-  background-color: blue;
-}
-
-.green{
-  background-color: green;
-}
-
 table{
   display: inline-block;
   table-layout: none;
