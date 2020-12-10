@@ -35,7 +35,7 @@
 }
 
 #pixel-board {
-  margin: auto;
+  margin: 32px auto;
   max-width: 210px;
   overflow: hidden;
   text-align: center;
@@ -47,4 +47,8 @@
   float: left;
   height: 40px;
   width: 40px;
+}
+
+.buttons{
+    text-align: center;
 }

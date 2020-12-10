@@ -1,8 +1,7 @@
-
   function createDiv(className) {
-     const divBox = document.createElement('div');
-     divBox.className = className;
-     return divBox;
+      const divBox = document.createElement('div');
+      divBox.className = className;
+      return divBox;
   }
 
   function createDivPixel() {
@@ -25,9 +24,7 @@
           searchSelected[indexColor2].classList.remove('selected');
         };
         origin.target.classList.add('selected');
-          
       });
-        
     }
   }
 
@@ -41,9 +38,19 @@
           });
       }
   }
-  
+
+  function clearPixel() {
+    let clearButton = document.querySelector('#clear-board');
+    clearButton.addEventListener('click', function() {
+        const boardPixel = document.querySelectorAll('.pixel');
+        boardPixel.forEach((item)=>{
+            item.style.backgroundColor = 'white'
+        })
+    })
+  }
   window.onload = function () {
     createDivPixel();
     cycleColorPalet();
     addColors();
+    clearPixel();
 };
