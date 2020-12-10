@@ -74,6 +74,6 @@ h1 {
 }
 
 .title {
-  background-color: lawngreen;
+  background-image: linear-gradient(to bottom, lawngreen, mintcream);
   text-align: center;
 }
