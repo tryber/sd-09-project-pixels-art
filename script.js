@@ -48,7 +48,6 @@ function paintPixel() {
     });
   }
 }
-paintPixel();
 
 function clearPixels() {
   const btnClear = document.querySelector('#clear-board');
@@ -60,3 +59,60 @@ function clearPixels() {
   }
 }
 clearPixels();
+
+function createPixelsBoard(param) {
+  const board = document.querySelector('tbody');
+  for (let indexRow = 0; indexRow < param; indexRow += 1) {
+    const tr = document.createElement('tr');
+    for (let indexCol = 0; indexCol < param; indexCol += 1) {
+      const td = document.createElement('td');
+      td.className = 'pixel';
+      tr.appendChild(td);
+    }
+    board.appendChild(tr);
+  }
+  paintPixel();
+  clearPixels();
+}
+createPixelsBoard(5);
+
+function deleteBoard() {
+  const pixelsBoard = document.querySelector('#pixel-board');
+  while(pixelsBoard.firstElementChild) {
+    const child = pixelsBoard.firstElementChild;
+    pixelsBoard.removeChild(child);
+  }
+}
+
+function validPixelSize(param) {
+  if(param > 50) {
+    param = 50;
+  }
+  if (param < 5) {
+    param = 5;
+  }
+  return param;
+}
+
+function inputBoard() {
+  const input = document.querySelector('#board-size').value;
+  if(input.length === 0) {
+    alert('Board inválido!');
+    return false;
+  }
+  return validPixelSize(input);
+}
+
+function generateBoard() {
+  const size = inputBoard();
+  if (size) {
+    const board = document.querySelectorAll('.pixel');
+    for (let index = 0; index < board.length; index +=1) {
+      board[index].remove();
+    }
+    createPixelsBoard(size);
+  }
+}
+
+const button = document.querySelector('#generate-board');
+button.addEventListener('click', generateBoard);
