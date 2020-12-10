@@ -2,9 +2,10 @@ function createPalete () {
   let palete = [1,2,3,4];
     for (let index of palete) {
     let squareColor = document.createElement('div');
+    
     squareColor.className = 'color';
     document.getElementById('color-palette').appendChild(squareColor)
-    let colorSelector = document.querySelectorAll(".color")[0].classList.add('selected');
+    
   }
 }
   
@@ -41,6 +42,7 @@ function getRandomRgb() {
 
 window.onload = function(){
   createPalete()
+  document.querySelector('#color-palette').firstElementChild.classList.add('selected')
   createBoardLine()
   getRandomRgb()
   paleteColor()
