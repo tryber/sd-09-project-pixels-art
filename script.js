@@ -9,7 +9,7 @@ function coloringTheColorPalette() {
 function selectingAndRemovingColor(event) {
   const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
-  event.target.classList.add('selected')
+  event.target.classList.add('selected');
 }
 
 function designingTheColorPalette() {
@@ -27,7 +27,11 @@ function designingTheColorPalette() {
   }
 }
 
-function coloringBoard() {
+function coloringBoard(event) {
+  const selectedColor = document.querySelector('.selected');
+  const fillColor = selectedColor.style.backgroundColor;
+  event.target.style.backgroundColor = fillColor;
+  console.log(event);
 }
 
 function drawBoard() {
@@ -38,6 +42,7 @@ function drawBoard() {
     boardPixel.appendChild(linePixel);
     for (let pxindex = 0; pxindex < 5; pxindex += 1) {
       const pixel = document.createElement('div');
+      pixel.addEventListener('click', coloringBoard);
       pixel.className = 'pixel';
       linePixel.appendChild(pixel);
     }
