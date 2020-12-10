@@ -19,5 +19,21 @@ function designingTheColorPalette() {
     designsPalette[index].style.margin = 'auto';
   }
 }
+
+function drawBoard() {
+  const boardPixel = document.querySelector('#pixel-board');
+  for (let index = 0; index < 5; index += 1) {
+    const linePixel = document.createElement('div');
+    linePixel.className = 'line-pixel';
+    boardPixel.appendChild(linePixel);
+    for (let pxindex = 0; pxindex < 5; pxindex += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      linePixel.appendChild(pixel);
+    }
+  }
+}
+
 coloringTheColorPalette();
 designingTheColorPalette();
+drawBoard();

@@ -1,3 +1,9 @@
+body {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   margin-top: 30px;
   text-align: center;
@@ -9,18 +15,16 @@
 }
 
 .pixel-board {
+  align-content: center;
+  display: flex;
   height: 210px;
-  line-height: 0;
-  margin: 0;
   width: 210px;
 }
 
 .pixel {
   background-color: white;
-  border-color: black;
   border-style: solid;
   border-width: 1px;
-  display: inline-block;
   height: 40px;
   width: 40px;
 }
