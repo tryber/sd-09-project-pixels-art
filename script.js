@@ -1,3 +1,17 @@
+// https://gist.github.com/girol/4a606d5cc6286ce1e9755faa3b7746df
+function generateColor(){
+  let hexadecimais = '0123456789ABCDEF';
+  let color = '#';
+
+  // Pega um número aleatório no array acima
+  for (let i = 0; i < 6; i+=1 ) {
+  //E concatena à variável cor
+      color += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+generateColor();
+
 function createDivColors(color) {
   if (color !== 'white') {
     const divColor = document.createElement('div');
@@ -9,13 +23,14 @@ function createDivColors(color) {
   }
 }
 createDivColors('black');
-createDivColors('orange');
-createDivColors('green');
-createDivColors('blue');
+createDivColors(generateColor());
+createDivColors(generateColor());
+createDivColors(generateColor());
 
 function createMatrixPixels(size) {
+  // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
   const boardElement = document.querySelector('.board');
-  for (let y = 1; y <= size; y += 1) { // https://stackoverflow.com/questions/57836901/creating-chessboard-with-javascript
+  for (let y = 1; y <= size; y += 1) {
     const row = [];
     for (let x = 1; x <= size; x += 1) {
       const cell = {};
@@ -102,3 +117,4 @@ function definingPixelsBoard() {
   });
 }
 definingPixelsBoard();
+
