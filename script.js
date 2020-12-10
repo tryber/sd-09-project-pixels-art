@@ -119,7 +119,7 @@ function deletarCriar() {
   vqvPosition.addEventListener("click", function () {
     let quantidadePixels = inputPosition.value;
     if (quantidadePixels == 0) {
-      window.alert("Board Inválido");
+      window.alert("Board inválido!");
     }
 
     for (let count = 0; count < pixelRowLocal.length; count += 1) {
