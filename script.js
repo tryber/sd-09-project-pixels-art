@@ -1,7 +1,7 @@
   function createDiv(className) {
-      const divBox = document.createElement('div');
-      divBox.className = className;
-      return divBox;
+    const divBox = document.createElement('div');
+    divBox.className = className;
+    return divBox;
   }
 
   function createDivPixel() {
@@ -16,26 +16,26 @@
   }
 
   function cycleColorPalet() {
-    const selectColorPalette = document.getElementsByClassName('color');
-    const searchSelected = document.getElementsByClassName('selected');
-    for (let indexColor = 0; indexColor < selectColorPalette.length; indexColor += 1) {
-      selectColorPalette[indexColor].addEventListener('click', function(origin) {
+   const selectColorPalette = document.getElementsByClassName('color');
+   const searchSelected = document.getElementsByClassName('selected');
+   for (let indexColor = 0; indexColor < selectColorPalette.length; indexColor += 1) {
+     selectColorPalette[indexColor].addEventListener('click', function (origin) {
         for (let indexColor2 = 0; indexColor2 < searchSelected.length; indexColor += 1) {
           searchSelected[indexColor2].classList.remove('selected');
-        };
+        }
         origin.target.classList.add('selected');
       });
     }
   }
 
-   function addColors() {
-    const clickPixel = document.getElementsByClassName('pixel');
-    for (let indexClick = 0; indexClick < clickPixel.length; indexClick += 1){
-        clickPixel[indexClick].addEventListener('click', function(event) {
-            const returnColor = window.getComputedStyle(document.querySelector('.color.selected'));
-            const colorPix = returnColor.backgroundColor;
-            event.target.style.backgroundColor = colorPix;
-          });
+  function addColors() {
+  const clickPixel = document.getElementsByClassName('pixel');
+  for (let indexClick = 0; indexClick < clickPixel.length; indexClick += 1){
+    clickPixel[indexClick].addEventListener('click', function(event) {
+      const returnColor = window.getComputedStyle(document.querySelector('.color.selected'));
+      const colorPix = returnColor.backgroundColor;
+      event.target.style.backgroundColor = colorPix;
+       });
       }
   }
 
