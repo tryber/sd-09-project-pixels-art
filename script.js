@@ -44,10 +44,23 @@ function clearColor() {
   }
 }
 
-function biuldSquaresFrame() {
-  const lines = 5;
-  const squaresPerLine = 5;
+function biuldSquaresFrame(nLines, nSquaresPerLine) {
+  const lines = nLines;
+  const squaresPerLine = nSquaresPerLine;
   biuldLines(lines, squaresPerLine);
+}
+
+function updatePixelBoard() {
+  console.log(`Atualizando quadro`)
+  document.querySelector('#pixel-board').innerHTML = ''
+  let baseNumberSquareFrame = document.querySelector('#board-size').value
+  if(baseNumberSquareFrame === '') {
+    alert('Board inválido!')
+    return
+  }
+  if(baseNumberSquareFrame > 0) {
+    biuldSquaresFrame(baseNumberSquareFrame, baseNumberSquareFrame)
+  }
 }
 
 function addEvents() {
@@ -58,11 +71,14 @@ function addEvents() {
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.addEventListener('click', paintPixel);
   //  Adiciona escutador de clique no botão
-  const button = document.querySelector('button');
+  const button = document.querySelector('#clear-board');
   button.addEventListener('click', clearColor);
+  //  Adiciona escutador de clique no botão de atualizar tabela
+  const buttonGenerateBoard = document.querySelector('#generate-board');
+  buttonGenerateBoard.addEventListener('click', updatePixelBoard);
 }
 
 window.onload = function () {
-  biuldSquaresFrame();
+  biuldSquaresFrame(5, 5);
   addEvents();
 };
