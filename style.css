@@ -19,19 +19,19 @@ h1 {
   height: 38px;
 }
 
-#black {
+.black {
   background-color: black;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
@@ -54,7 +54,7 @@ h1 {
 div {
   display: table-row;
 }
-.td{
+.td {
   display: table-cell;
 }
 
