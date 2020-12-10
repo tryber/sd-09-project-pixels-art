@@ -8,18 +8,14 @@ window.onload = function () {
   const buttonGenerateBoard = document.getElementById('generate-board');
   let selectedColor = 'black';
 
+  // Checa o tamanho do board
   function checkSizeBoard(pixelsComparation) {
     if (pixelsComparation > 50) return 50;
     if (pixelsComparation < 5) return 5;
     return pixelsComparation;
   }
 
-  function createBoard(linesQuantity) {
-    createLines(linesQuantity);
-    boardLines = document.querySelectorAll('.board-line');
-    fillPixelBoard(boardLines);
-  }
-
+  // Cria linhas para preencher com pixels
   function createLines(linesQuantity) {
     for (let index = 0; index < linesQuantity; index += 1) {
       const newLine = document.createElement('div');
@@ -28,19 +24,21 @@ window.onload = function () {
     }
   }
 
-  function fillPixelBoard(boardComuns) {
-    for (let index = 0; index < boardComuns.length; index += 1) {
-      fillPixelBoardLine(boardComuns[index]);
+  // Preenche o quadro
+  function fillPixelBoard(boardColumns) {
+    for (let index = 0; index < boardColumns.length; index += 1) {
+      fillPixelBoardLine(boardColumns[index]);
     }
   }
 
-  function fillPixelBoardLine(lineToFill) {
-    for (let index = 0; index < pixelsMatrix; index += 1) {
-      const pixel = createPixel('pixel');
-      lineToFill.appendChild(pixel);
-    }
+  // Cria o quadro
+  function createBoard(linesQuantity) {
+    createLines(linesQuantity);
+    boardLines = document.querySelectorAll('.board-line');
+    fillPixelBoard(boardLines);
   }
 
+  // Cria  pixel
   function createPixel() {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
@@ -48,6 +46,15 @@ window.onload = function () {
     return pixel;
   }
 
+  // Preenche a linha do quadro
+  function fillPixelBoardLine(lineToFill) {
+    for (let index = 0; index < pixelsMatrix; index += 1) {
+      const pixel = createPixel('pixel');
+      lineToFill.appendChild(pixel);
+    }
+  }
+
+  // Seleciona a cor dentro da paleta de cores
   function selectColor() {
     colorPalette.addEventListener('click', function (event) {
       const lastSelected = document.querySelector('.selected');
@@ -58,6 +65,7 @@ window.onload = function () {
     });
   }
 
+  // Pinta o pixel com a cor selecionada
   function paintPixelWithColorSelected() {
     pixelBoard.addEventListener('click', function(event) {
       if (event.target.className === 'pixel') {
@@ -66,6 +74,7 @@ window.onload = function () {
     });
   }
 
+  // Limpa o quadro
   function clearBoard() {
     buttonClear.addEventListener('click', function() {
       const allPixels = document.querySelectorAll('.pixel');
@@ -75,6 +84,7 @@ window.onload = function () {
     });
   }
 
+  // Destroi o quadro para criar outro
   function destructBoard() {
     pixelBoard = document.getElementById('pixel-board');
     boardLines = document.querySelectorAll('.board-line');
@@ -83,6 +93,12 @@ window.onload = function () {
     }
   }
 
+  // Alerta de valor invalido no input
+  function alertEmptyInput() {
+    alert('Board inválido!');
+  }
+
+  // Gera o board
   function gererateBoardNxN() {
     buttonGenerateBoard.addEventListener('click', function () {
       if (!boardSizeInput.value) alertEmptyInput();
@@ -94,10 +110,15 @@ window.onload = function () {
     });
   }
 
-  function alertEmptyInput() {
-    alert('Board inválido!');
+  // Gera com randomica
+  // Fonte externa para a função https://css-tricks.com/snippets/javascript/random-hex-color/
+  function generateRandonColor() {
+    let randonColor = Math.floor(Math.random()*16777215).toString(16);
+    randonColor = '#' + randonColor;
+    return randonColor;
   }
 
+  // Cria paleta de cores
   function createColorsPalette() {
     for (let index = 0; index < 4; index += 1) {
       const color = document.createElement('div');
@@ -109,13 +130,6 @@ window.onload = function () {
       else color.style.backgroundColor = generateRandonColor();
       colorPalette.appendChild(color);
     }
-  }
-
-  // Fonte externa para a função https://css-tricks.com/snippets/javascript/random-hex-color/
-  function generateRandonColor() {
-    let randonColor = Math.floor(Math.random()*16777215).toString(16);
-    randonColor = '#' + randonColor;
-    return randonColor;
   }
 
   checkSizeBoard();
