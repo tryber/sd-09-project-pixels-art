@@ -19,15 +19,37 @@ function createPalette() {
   main.appendChild(palette);
 }
 
-function createColorBlock() {
-  let colorBlock = document.createElement('div');
-  colorBlock.className = 'color';
-  let palette = document.querySelector('#color-palette');
-  palette.appendChild(colorBlock);
+function createColorBlocks() {
+  let numberOfColors = 4;
+  for (let index = 0; index < numberOfColors; index += 1) {
+    let colorBlock = document.createElement('div');
+    colorBlock.className = 'color';
+    let palette = document.querySelector('#color-palette');
+    palette.appendChild(colorBlock);
+  }
 }
+
+function colorPick(index) {
+  if (index === 0) {
+    colorBlock.style.backgroundColor = 'black';
+  } else {
+    switch (index) {
+      case 1:
+        colorBlock.style.backgroundColor = 'salmon';
+        break;
+      case 2:
+        colorBlock.style.backgroundColor = 'coral';
+        break;
+      case 3:
+        colorBlock.style.backgroundColor = 'crimson';
+    }
+     
+  }
+}
+
 window.onload = function() {
   createHeader();
   createMain();
   createPalette();
-  createColorBlock();
+  createColorBlocks();
 }
