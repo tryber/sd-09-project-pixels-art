@@ -1,3 +1,18 @@
+function rgbGenerator() {
+  const rgb = [];
+  for (let index = 0; index < 3; index += 1) {
+    rgb[index] = Math.random() * ((255 - 50) + 50);
+    if (index === 2) {
+      const colorValue = rgb.reduce((total, currentElement) => total + currentElement);
+      if (colorValue > 150 && colorValue < 700) {
+        index += 1;
+      } else {
+        index = 0;
+      }
+    }
+  }
+  return `rgb(${rgb[0]} , ${rgb[1]} , ${rgb[2]})`;
+}
 function paletteGenerator(numColors) {
   const paletteColors = document.getElementById('color-palette');
   paletteColors.style.maxWidth = `${(8 * 43) + 3}px`;
@@ -13,21 +28,6 @@ function paletteGenerator(numColors) {
       makeDiv.style.backgroundColor = rgbGenerator();
     }
     paletteColors.appendChild(makeDiv);
-  }
-  function rgbGenerator() {
-    const rgb = [];
-    for (let index = 0; index < 3; index += 1) {
-      rgb[index] = Math.random() * ((255 - 50) + 50);
-      if (index === 2) {
-        const colorValue = rgb.reduce((total, currentElement) => total + currentElement);
-        if (colorValue > 150 && colorValue < 700) {
-          index += 1;
-        } else {
-          index = 0;
-        }
-      }
-    }
-    return `rgb(${rgb[0]} , ${rgb[1]} , ${rgb[2]})`;
   }
 }
 
@@ -86,7 +86,7 @@ function clearFrames() {
 
 function redefineSize() {
   function setFrames() {
-    const newSize = document.getElementById('board-size').value;
+    let newSize = document.getElementById('board-size').value;
     const pixelBoard = document.getElementById('pixel-board');
     if (newSize === '') {
       return alert('Board inválido!');
@@ -101,7 +101,7 @@ function redefineSize() {
     while (pixelBoard.firstChild) {
       pixelBoard.removeChild(pixelBoard.firstChild);
     }
-    generateFrames(newSize);
+    return generateFrames(newSize);
   }
   const buttonVqv = document.getElementById('generate-board');
   buttonVqv.addEventListener('click', setFrames);
