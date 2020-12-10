@@ -67,7 +67,7 @@ window.onload = function () {
 
   // Pinta o pixel com a cor selecionada
   function paintPixelWithColorSelected() {
-    pixelBoard.addEventListener('click', function(event) {
+    pixelBoard.addEventListener('click', function (event) {
       if (event.target.className === 'pixel') {
         event.target.style.backgroundColor = selectedColor;
       }
@@ -76,7 +76,7 @@ window.onload = function () {
 
   // Limpa o quadro
   function clearBoard() {
-    buttonClear.addEventListener('click', function() {
+    buttonClear.addEventListener('click', function () {
       const allPixels = document.querySelectorAll('.pixel');
       for (let index = 0; index < allPixels.length; index += 1) {
         allPixels[index].style.backgroundColor = 'white';
