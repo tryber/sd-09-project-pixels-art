@@ -71,7 +71,7 @@ let colors = document.querySelectorAll('.color');
 
   createButton();
 
-  const clear = document.querySelectorAll('.clear');
+  const clear = document.querySelectorAll('.pixel');
   function cleaner() {
     for (let index = 0; index < clear.length; index += 1) {
       clear[index].style.backgroundColor = 'white';

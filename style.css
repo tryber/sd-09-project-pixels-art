@@ -23,9 +23,9 @@ body {
 }
 
 .color {
-  border-color: silver;
+  border-color: black;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   display: inline-block;
   height: 50px;
   width: 50px;
