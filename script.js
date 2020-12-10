@@ -1,6 +1,5 @@
 window.onload = function () {
     let DivDad = document.querySelector('#pixel-board');
-    console.log(DivDad)
   function addlines () {
       for (let index = 1; index <= 5; index += 1) {
           let divLine = document.createElement('div');
@@ -10,7 +9,17 @@ window.onload = function () {
               divLine.appendChild(pixel);
           }
           DivDad.appendChild(divLine)
+          
       }
   }
   addlines()
 }
+let blackPixel = document.querySelector('.black')
+let pixel = document.querySelector('.pixel');
+
+function changePixelToBlack () {
+    pixel.style.backgroundColor = 'black';
+}
+
+blackPixel.addEventListener('click',)
+pixel.addEventListener('click', changePixelToBlack)
