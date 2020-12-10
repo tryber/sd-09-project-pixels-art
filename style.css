@@ -1,0 +1,47 @@
+body {
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 10px;
+  text-align: center;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 20px 35px;
+}
+
+.clear-board {
+  background-color: ivory;
+  margin: 0 645px 30px;
+  padding: 10px;
+}
+
+.table {
+  display: table;
+  margin: auto;
+}
+
+.tr {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
