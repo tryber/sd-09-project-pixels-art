@@ -16,22 +16,6 @@ body {
   width: 40px;
 }
 
-.colorBlack {
-  background-color: black;
-}
-
-.colorRed {
-  background-color: red;
-}
-
-.colorGreen {
-  background-color: green;
-}
-
-.colorYellow {
-  background-color: yellow;
-}
-
 .pixel-board {
   border: 1px solid black;
   margin: 10px;

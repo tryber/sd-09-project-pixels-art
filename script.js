@@ -1,8 +1,4 @@
-//pega o quadrado de pixel:
-
 const pixelBoard = document.getElementById('pixel-board');
-
-//cria os 25 pixels:
 
 function makeLinePixels() {
   for (let index = 0; index <= 24; index += 1) {
@@ -12,11 +8,7 @@ function makeLinePixels() {
   }
 }
 
-//esta chamando a função acima:
-
 makeLinePixels();
-
-//mudar cor da paleta:
 
 function changeSelectedColor(event) {
   const getOldSelectedColor = document.querySelector('.selected');
@@ -36,9 +28,6 @@ function getSelectedColor() {
 
 getSelectedColor();
 
-//adicionar eventos ao quadrado:
-
-
 function pixelEvents() {
   for (let index = 0; index < 25; index += 1) {
     const getPixels = document.querySelectorAll('.pixel')[index];
@@ -48,35 +37,12 @@ function pixelEvents() {
 
 function pixelColoring(event) {
   let cor = 'black';
-  const getColorSelected = document.querySelector('.selected'); 
-
-  const getClassColorsBlack = document.querySelector('.colorBlack');
-  const getClassColorsRed = document.querySelector('.colorRed');
-  const getClassColorsGreen= document.querySelector('.colorGreen');
-  const getClassColorsYellow = document.querySelector('.colorYellow');
-
+  const getColorSelected = document.querySelector('.selected');
   const targetSelectedPixel = event.target;
-
-  for (let index = 0; index < 4; index += 1){
-    if (getColorSelected === getClassColorsBlack) {
-      cor = 'black';
-    } else if (getColorSelected === getClassColorsRed) {
-      cor = 'red';
-    } else if (getColorSelected === getClassColorsGreen) {
-      cor = 'green';
-    } else if (getColorSelected === getClassColorsYellow){
-      cor = 'yellow';
-    }
-  }
-
-  targetSelectedPixel.style.backgroundColor = cor;
+  targetSelectedPixel.style.backgroundColor = getColorSelected.style.backgroundColor;
 }
 
 pixelEvents();
-
-//colorir quadrados:
-
-//limpa todos os quadrados:
 
 function clearAllPixels() {
   for (let index = 0; index < 25; index += 1) {
