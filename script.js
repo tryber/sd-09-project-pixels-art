@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     function colorPalette() {
         let color = document.querySelectorAll('.color')
         color[0].style.backgroundColor = 'black'
@@ -52,4 +52,3 @@ window.onload = function() {
     }
     fillColor();
 }
-    
