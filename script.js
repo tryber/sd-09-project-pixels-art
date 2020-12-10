@@ -60,7 +60,7 @@ function theColors() {
   document.querySelectorAll('.color').forEach((item) => {
     item.addEventListener('click', changeColor);
   });
-};
+}
 
 function clearning() {
   const onclickPixelBoard = document.getElementsByClassName('pixel-board-inside')[0];
@@ -72,7 +72,7 @@ function clearning() {
     }
   }
   document.getElementsByClassName('clear')[0].addEventListener('click', cleaner);
-};
+}
 
 window.onload = function start() {
   createPalette(4);
