@@ -106,9 +106,26 @@ function addEvents() {
   inputBoadSize.min = "1";
 }
 
+function createRGBColor() {
+  let red = Math.round((Math.random() * 255));
+  let green = Math.round((Math.random() * 255));
+  let blue = Math.round((Math.random() * 255));
+  return `rgb(${red}, ${green}, ${blue})`
+}
+
+function paintPaletteColor() {
+  let palette = document.querySelectorAll('.color')
+  for (let index = 1; index <= palette.length - 1; index += 1) {
+    console.log(`Pintando ${index}`)
+    palette[index].style.backgroundColor = createRGBColor()
+    console.log(createRGBColor())
+  }
+}
+
 
 
 window.onload = function () {
   biuldSquaresFrame(5, 5);
   addEvents();
+  paintPaletteColor();
 };
