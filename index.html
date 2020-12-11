@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Paleta de Cores</title>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-  <header>
-    <h1 id="title">Paleta de Cores</h1>
-  </header>
-  <main>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PaletaDeCores</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Paleta de Cores</h1>
+    </header>
     <div id="color-palette">
+      <!--vamos criar as divs aqui com a funcao createPalette() e colorir com a funcao colorizePalette-->
     </div>
-    <button id='random-palette'>Mudar Cores</button>
-    <div id="pixel-board"></div>
-  </main>
-  <button id='clear-board'>Limpar</button>
-  
-  <script src="script.js"></script>
-</body>
+    <button id="clear-board">Reiniciar</button>
+    <button id="randomize-palette">Trocar Cores</button>
+    <!-- <input id="boardsize" type="text" placeholder="boardSize (5 - 50)"> -->
+    <!-- <input type="submit" value="Enviar" id="submit-size"> -->
+    <div id="pixel-board">
+      <!--vamos criar aqui o quadro de pixels com a funcao createPixelBoard()-->
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
 </html>
