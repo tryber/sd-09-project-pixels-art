@@ -1,0 +1,29 @@
+body {
+  font-family: Roboto Mono, sans-serif;
+  margin-top: 3%;
+}
+
+.color {
+  background-color: black;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 1px;
+  vertical-align: top;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: -1px;
+  vertical-align: top;
+  width: 40px;
+}
+
+.center {
+  margin: 7px auto;
+  text-align: center;
+}

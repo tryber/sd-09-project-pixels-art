@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Vinicius Palenske" />
+    <meta
+      name="description"
+      content="Este projeto tem como objetivo por em prática todo o conhecimento transmitido pela Trybe a respeito de criação de sites em HTML, estilização em CSS e manipulação através de Javascript"
+    />
+    <title>Project: Pixels-Art &#127912;</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <header class="center">
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <body>
+    <main class="center">
+      <section>
+        <div id="color-palette" class="center"></div>
+        <div class="center">
+          <form id="painting-mode">
+            <input type="radio" name="op" value="click" checked>Click
+            <input type="radio" name="op" value="mouseover">MouseOver
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="panel-function" class="center">
+          <input id="board-size" type="number" max="50" min="1"/>
+          <button id="generate-board">VQV</button>
+          <button id="clear-board"></button>
+        </div>
+      </section>
+      <section>
+        <div id="pixel-board" class="center"></div>
+      </section>
+    </main>
+  </body>
+</html>
