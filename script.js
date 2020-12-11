@@ -10,12 +10,14 @@ const newBoardSize = document.getElementById('board-size');
 function fillPalette(palette, colorOptions) {
   let colorOption;
   let colorIndex;
+  let colorChosen = colors;
   for (let index = 0; index < colorOptions; index += 1) {
     colorOption = document.createElement('div');
     colorOption.classList.add('color');
-    colorIndex = Math.ceil(Math.random() * 12);
-    colorOption.classList.add(colors[colorIndex]);
+    colorIndex = Math.ceil(Math.random() * (12 - index));
+    colorOption.classList.add(colorChosen[colorIndex]);
     palette.appendChild(colorOption);
+    colorChosen.splice(colorIndex, 1);
   }
 }
 
