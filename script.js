@@ -62,10 +62,10 @@ clearBoard();
 function checkBoardSize(boardSize) {
   if (boardSize.value === '') { alert('Board inválido!'); }
 
-  if (boardSize.value < '5') {
-    boardSize.value = '5';
-  } else if (boardSize.value > '50') {
-    boardSize.value = '50';
+  if (boardSize.value < 5) {
+    boardSize.value = 5;
+  } else if (boardSize.value > 50) {
+    boardSize.value = 50;
   }
 }
 
