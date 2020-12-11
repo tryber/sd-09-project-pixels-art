@@ -37,6 +37,9 @@ function createPixelBoard() {
   const inputPixelsQuantity = makeFactory.InputPixelsQuantity
   buttonAddPixels.addEventListener('click', function () {
     let valueSizeBoard = inputPixelsQuantity.value
+     if (valueSizeBoard === ''){
+       window.alert('Board inválido!')
+     }
      if(valueSizeBoard < 5) {
        valueSizeBoard = 5
      }
