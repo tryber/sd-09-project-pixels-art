@@ -1,7 +1,10 @@
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPaletteOne = document.querySelector('#color-one').style.backgroundColor = 'black';
+document.querySelector('#color-one').className = 'color selected'
 const numberPixel = document.querySelector('#board-size');
 const generateBoard = document.querySelector('#generate-board');
+const paletteColor = document.querySelector('#color-palette');
+let minNumber = 5
 
 function colorRandom() {
   let random = 'rgb('
@@ -28,50 +31,67 @@ function maxPixel() {
   }
   createdPixelColumn(number)
 }
+maxPixel()
 
 
-function createdPixelLine(line, number) {
+
+function createdPixelLine(number, line) {
   for (let index = 0; index < number; index += 1) {
-    const createdElement = document.createElement('div');
-    createdElement.className = 'pixel';
-    line.appendChild(createdElement);
+    let createdPixel = document.createElement('div');
+    createdPixel.className = 'pixel';
+    line.appendChild(createdPixel);
   }
+  minNumber = number;
 }
 
 function createdPixelColumn(number) {
-  console.log(number)
   for (let index = 0; index < number; index += 1) {
     const line = document.createElement('div');
-    pixelBoard.appendChild(line, number);
+    createdPixelLine(number, line);
     line.className = 'line';
-    createdPixelLine(line);
+    pixelBoard.appendChild(line);
   }
 }
 
-const paletteColor = document.querySelector('#color-palette').children;
+function numberBoard() {
+  generateBoard.addEventListener('click', clearBoard)
+}
+numberBoard()
 
-function clickPaletteColor() {
-  for (let index = 0; index < paletteColor.length; index += 1) {
-    paletteColor[index].addEventListener('click', function (event) {
-      const change = document.querySelector('.selected');
-      change.className = 'color';
-      event.target.className = 'color selected';
-    });
+function clearBoard() {
+  if (numberPixel.value === '') {
+    alert('Board inválido!')
+  } else {
+    let clearPixel = document.querySelectorAll('.line')
+    for (let index = 0; index < minNumber; index += 1) {
+      pixelBoard.removeChild(clearPixel[index])
+    }
+    maxPixel()
   }
 }
 
+
+
+function clickPaletteColor(event) {
+  document.querySelector('#color-one').className = 'color'
+  document.querySelector('#color-two').className = 'color'
+  document.querySelector('#color-three').className = 'color'
+  document.querySelector('#color-four').className = 'color'
+  event.target.className = 'color selected'
+}
+
+function clickBoard() {
+  paletteColor.addEventListener('click', clickPaletteColor);
+}
+clickBoard()
 
 function fillColor() {
-  const pixel = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].addEventListener('click', function (event) {
-      const selectedClass = document.querySelector('.selected');
-      const colorSelected = selectedClass.style.backgroundColor;
-
-      event.target.style.backgroundColor = colorSelected;
-    });
-  }
+  pixelBoard.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+  })
 }
+fillColor()
+
 
 function createButtonClearAllColor() {
   let buttonClearAllColor = document.createElement('button');
@@ -80,13 +100,15 @@ function createButtonClearAllColor() {
   buttonClearAllColor.innerText = 'Limpar'
   containerButton.appendChild(buttonClearAllColor)
 }
+createButtonClearAllColor()
 
 function usingButtonClearAllColor() {
-  const pixel = document.querySelectorAll('.pixel');
   let buttonClear = document.querySelector('#clear-board')
   buttonClear.addEventListener('click', function () {
+    const pixel = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.backgroundColor = 'white'
     }
   })
 }
+usingButtonClearAllColor()
