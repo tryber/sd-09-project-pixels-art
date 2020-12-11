@@ -1,6 +1,6 @@
 let squareSide = 5;
 const paletteSize = 4;
-const colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'purple', 'violet', 'gray', 'brown', 'gold'];
+const colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'purple', 'violet', 'gray', 'brown', 'gold', 'silver'];
 const pixelBoard = document.getElementById('pixel-board');
 const colorPalette = document.getElementById('color-palette');
 const clear = document.getElementById('clear-board');
@@ -13,7 +13,7 @@ function fillPalette(palette, colorOptions) {
   for (let index = 0; index < colorOptions; index += 1) {
     colorOption = document.createElement('div');
     colorOption.classList.add('color');
-    colorIndex = Math.ceil(Math.random() * 11);
+    colorIndex = Math.ceil(Math.random() * 12);
     colorOption.classList.add(colors[colorIndex]);
     palette.appendChild(colorOption);
   }
