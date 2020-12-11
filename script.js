@@ -36,8 +36,10 @@ function createPixelBoard() {
   const buttonAddPixels = makeFactory.ButtonAddPixels
   const inputPixelsQuantity = makeFactory.InputPixelsQuantity
   buttonAddPixels.addEventListener('click', function () {
-    const valueSizeBoard = inputPixelsQuantity.value
-     console.log('hello')
+    let valueSizeBoard = inputPixelsQuantity.value
+     if(valueSizeBoard < 5) {
+       valueSizeBoard = 5
+     }
     myBoard.innerHTML = null
     for( let i = 0; i < valueSizeBoard; i += 1) {
       for ( let j = 0; j < valueSizeBoard; j += 1){
