@@ -1,0 +1,32 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 75px;
+  margin: 3px;
+  width: 75px;
+}
+
+.pixel {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: -4px;
+  width: 40px;
+}
+
+.black-box {
+  background-color: black;
+}
+
+.green-box {
+  background-color: rgb(13, 187, 129);
+}
+
+.yellow-box {
+  background-color: rgb(248, 248, 3);
+}
+
+.orange-box {
+  background-color: rgb(253, 167, 6);
+}
