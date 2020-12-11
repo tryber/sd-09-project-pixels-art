@@ -80,10 +80,9 @@ function updatePixelBoard() {
 }
 
 function checkValidityBoardSize() {
-  let numberBoadSize = document.querySelector('#board-size').value;
+  const numberBoadSize = document.querySelector('#board-size').value;
   if (numberBoadSize <= 0) {
     document.querySelector('#board-size').value = '';
-    return
   }
 }
 
@@ -101,28 +100,24 @@ function addEvents() {
   const buttonGenerateBoard = document.querySelector('#generate-board');
   buttonGenerateBoard.addEventListener('click', updatePixelBoard);
   //  Adiciona escutador de teclado no input
-  const inputBoadSize = document.querySelector('#board-size')
-  inputBoadSize.addEventListener('keyup', checkValidityBoardSize)
-  inputBoadSize.min = "1";
+  const inputBoadSize = document.querySelector('#board-size');
+  inputBoadSize.addEventListener('keyup', checkValidityBoardSize);
+  inputBoadSize.min = '1';
 }
 
 function createRGBColor() {
-  let red = Math.round((Math.random() * 255));
-  let green = Math.round((Math.random() * 255));
-  let blue = Math.round((Math.random() * 255));
-  return `rgb(${red}, ${green}, ${blue})`
+  const red = Math.round((Math.random() * 255));
+  const green = Math.round((Math.random() * 255));
+  const blue = Math.round((Math.random() * 255));
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function paintPaletteColor() {
-  let palette = document.querySelectorAll('.color')
+  const palette = document.querySelectorAll('.color');
   for (let index = 1; index <= palette.length - 1; index += 1) {
-    console.log(`Pintando ${index}`)
-    palette[index].style.backgroundColor = createRGBColor()
-    console.log(createRGBColor())
+    palette[index].style.backgroundColor = createRGBColor();
   }
 }
-
-
 
 window.onload = function () {
   biuldSquaresFrame(5, 5);
