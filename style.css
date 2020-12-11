@@ -40,6 +40,25 @@ header {
 }
 
 .board {
-  margin-top: 10px;
+  margin: 10px;
   width: 210px;
+}
+
+.matrix-size {
+  background-color: black;
+  border-radius: 2px;
+  color: aliceblue;
+  margin-bottom: 10px;
+  padding: 7px;
+  width: 100px;
+}
+
+#board-size {
+  width: 100px;
+}
+
+#clear-board {
+  background-color: rgb(219 , 0 , 0);
+  border-radius: 10px;
+  color: white;
 }
