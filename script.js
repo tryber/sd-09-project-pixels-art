@@ -40,6 +40,9 @@ function createPixelBoard() {
      if(valueSizeBoard < 5) {
        valueSizeBoard = 5
      }
+     if(valueSizeBoard > 50) {
+      valueSizeBoard = 50
+    }
     myBoard.innerHTML = null
     for( let i = 0; i < valueSizeBoard; i += 1) {
       for ( let j = 0; j < valueSizeBoard; j += 1){
