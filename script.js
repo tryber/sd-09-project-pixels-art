@@ -1,7 +1,8 @@
-let color1 = document.getElementsByClassName('first-color')[0];
-let color2 = document.getElementsByClassName('second-color')[0];
-let color3 = document.getElementsByClassName('third-color')[0];
-let color4 = document.getElementsByClassName('fourth-color')[0];
+const color1 = document.getElementsByClassName('first-color')[0].classList.add('selected');
+const color2 = document.getElementsByClassName('second-color')[0];
+const color3 = document.getElementsByClassName('third-color')[0];
+const color4 = document.getElementsByClassName('fourth-color')[0];
+
 
 /*color1.addEventListener("click",selectingColor)
 color2.addEventListener("click",selectingColor)
