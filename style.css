@@ -1,0 +1,38 @@
+.color {
+  border: 1px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.color:first-child {
+  background-color: black;
+}
+
+.color:nth-child( 2 ) {
+  background-color: red;
+}
+
+.color:nth-child( 3 ) {
+  background-color: green;
+}
+
+.color:nth-child( 4 ) {
+  background-color: purple;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.pixel-row {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
