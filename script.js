@@ -1,10 +1,10 @@
 const table = document.createElement('table');
 
-function createPixelBoard() {
-  const height = 5;
-  const width = 5;
-  const pixelBoard = document.querySelector('#pixel-board');
+function createPixelBoard(boardSize) {
+  const height = boardSize === undefined ? 5 : boardSize;
+  const width = boardSize === undefined ? 5 : boardSize;
 
+  const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.append(table);
 
   for (let index = 0; index < height; index += 1) {
@@ -59,6 +59,16 @@ function clearBoard() {
 }
 clearBoard();
 
+function checkBoardSize(boardSize) {
+  if (boardSize.value === '') { alert('Board inválido!'); }
+
+  if (boardSize.value < '5') {
+    boardSize.value = '5';
+  } else if (boardSize.value > '50') {
+    boardSize.value = '50';
+  }
+}
+
 function generateNewBoard() {
   function clearPixelBoard() {
     const board = document.querySelector('#pixel-board table');
@@ -72,20 +82,10 @@ function generateNewBoard() {
   const generateBoard = document.querySelector('#generate-board');
   generateBoard.addEventListener('click', () => {
     clearPixelBoard();
-    const boardSize = document.querySelector('#board-size').value;
-    if (boardSize === '') { alert('Board inválido!'); }
 
-    for (let index = 0; index < boardSize; index += 1) {
-      const row = document.createElement('tr');
-      table.appendChild(row);
-
-      for (let pixelIndex = 0; pixelIndex < boardSize; pixelIndex += 1) {
-        const pixel = document.createElement('td');
-        pixel.className = 'pixel';
-        pixel.style.backgroundColor = 'white';
-        row.appendChild(pixel);
-      }
-    }
+    const boardSize = document.querySelector('#board-size');
+    checkBoardSize(boardSize);
+    createPixelBoard(boardSize.value);
   });
 }
 generateNewBoard();
