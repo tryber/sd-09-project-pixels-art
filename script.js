@@ -75,6 +75,7 @@ fillsSquarePixel();
 function createBtnClear() {
   const btnClear = document.createElement('button');
   btnClear.id = 'clear-board';
+  btnClear.className = 'red';
   btnClear.innerText = 'Limpar';
   btnClear.style.padding = '5px';
   const divBtnClear = document.querySelector('#forms');
@@ -94,8 +95,8 @@ createBtnClear();
 
 
 function inputCondictions(number) {
-  if(number < 5) return number = 5;
-  if(number > 50) return number = 50;
+  if (number < 5) return 5;
+  if (number > 50) return 50;
   return number;
 }
 
@@ -105,7 +106,7 @@ function definingPixelsBoard() {
   btnVQV.addEventListener('click', function (event) {
     event.preventDefault();
     const input = document.querySelector('#board-size');
-    let numberInput = Number(input.value);
+    const numberInput = Number(input.value);
     const boardPixel = document.querySelectorAll('.pixel');
     const divBoard = document.querySelector('#pixel-board');
 
@@ -114,7 +115,7 @@ function definingPixelsBoard() {
     }
 
     if (numberInput > 0) {
-      let filtered = inputCondictions(numberInput);
+      const filtered = inputCondictions(numberInput);
       // deletando os pixels do tabuleiro
       boardPixel.forEach((e) => e.parentNode.removeChild(e));
       // criando um novo tabuleiro

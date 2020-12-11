@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(188 , 190 , 190);
+  background-color: rgb(188, 190, 190);
   font-family: Calibri, sans-serif;
   font-size: 1.3em;
   line-height: 1.4em;
@@ -53,12 +53,12 @@ header {
   width: 220px;
 }
 
-#board-size {
+.matrix-size input {
   width: 100px;
 }
 
-#clear-board {
-  background-color: rgb(219 , 0 , 0);
+.red {
+  background-color: rgb(219, 0, 0);
   border-radius: 10px;
   color: white;
 }
