@@ -1,0 +1,23 @@
+.color {
+  border: black solid 1px;
+  display: inline-block;
+  height: 40px;
+  margin-right: 7px;
+  width: 40px;
+}
+
+.container-pixel {
+  display: table;
+}
+
+.line {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
