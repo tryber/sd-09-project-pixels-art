@@ -1,0 +1,61 @@
+.title {
+  text-align: center;
+}
+
+.color-palette {
+  margin: auto;
+  width: 460px;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 10%;
+  display: inline-block;
+  height: 100px;
+  margin: 5px;
+  width: 100px;
+}
+
+.dark-pastel-green {
+  background-color: rgb(32, 191, 85);
+}
+
+.blue-sapphire {
+  background-color: rgb(11, 79, 108);
+}
+
+.cyan-process {
+  background-color: rgb(1, 186, 239);
+}
+
+.sunray {
+  background-color: rgb(237, 180, 88);
+}
+
+.black {
+  background-color: black;
+}
+
+.pixel-board {
+  margin: auto;
+  text-align: center;
+}
+
+.square-div-line {
+  line-height: 0;
+  margin: 0;
+}
+
+button {
+  margin: auto;
+  text-align: center;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
