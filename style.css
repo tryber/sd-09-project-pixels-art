@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(188, 190, 190);
+  font-family: Calibri, sans-serif;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 30px;
+}
+
+.container {
+  background-color: whitesmoke;
+  border-radius: 30px;
+  color: orangered;
+  padding: 50px;
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.palete {
+  margin-bottom: 30px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  margin-left: 5px;
+  width: 50px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.board {
+  margin: 10px;
+  width: 210px;
+}
+
+.matrix-size {
+  background-color: black;
+  border-radius: 2px;
+  color: aliceblue;
+  margin-bottom: 10px;
+  padding: 7px;
+  width: 220px;
+}
+
+.matrix-size input {
+  width: 100px;
+}
+
+.red {
+  background-color: rgb(219, 0, 0);
+  border-radius: 10px;
+  color: white;
+}
