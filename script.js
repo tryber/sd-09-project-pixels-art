@@ -52,7 +52,7 @@ function printPixelsFrame(n) {
   }
   changePixelColor();
 }
-printPixelsFrame(0);
+printPixelsFrame(5);
 
 function changeColorSelected() {
   const getColors = document.querySelector('#color-palette');
