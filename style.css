@@ -10,6 +10,10 @@
   width: 60px;
 }
 
+.color-white {
+  background-color: white;
+}
+
 .container {
   padding-left: 550px;
 }
@@ -41,7 +45,7 @@ h1 {
 .pixels-box {
   background-color: rgb(253, 200, 200);
   height: 260px;
-  width: 260px;  
+  width: 260px;
 }
 
 .second-color {

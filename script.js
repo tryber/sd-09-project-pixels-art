@@ -13,12 +13,17 @@ color4.addEventListener("click",selectingColor)*/
 //color1.classList.add("selected");  
 //console.log(color1);
 
+//function paintPixel() {}
+function clearBoard() {
+  document.getElementsByClassName('pixel').classList.add('color-white');
+}
 
-
-function paintPixel () {    
+function testEvent() {    
   let textToPrint = document.getElementById('teste');
   textToPrint.innerText = 'Hora da verdade. Acho que funcionou!';
 }
 
 let clickButton = document.getElementById('clear-board');
-clickButton.addEventListener('click', paintPixel)
+clickButton.addEventListener('click', testEvent);
+clickButton.addEventListener('click', clearBoard);
+
