@@ -27,7 +27,7 @@ function generateColor() {
 }
 
 function createBox() {
-  let color = generateColor();
+  const color = generateColor();
   const coloredBox = document.createElement('div');
   coloredBox.style.backgroundColor = color;
   coloredBox.className = 'color';
