@@ -1,0 +1,59 @@
+#title {
+    color: lime;
+}
+
+#color-palette {
+    background-color: lightgray;
+    display: inline-block;
+    padding-left: 1px;
+}
+
+.black {
+    background-color: black;
+    border: black solid 1px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.yellow {
+    background-color: yellow;
+    border: black solid 1px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.red {
+    background-color: red;
+    border: black solid 1px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.blue {
+    background-color: blue;
+    border: black solid 1px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.pixel {
+    border: black solid 1px;
+    background-color: white;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
