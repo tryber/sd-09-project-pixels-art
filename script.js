@@ -95,8 +95,8 @@ function getRandomColor() {
   const colorPalette = document.querySelector('#color-palette');
 
   for (let index = 1; index <= 3; index += 1) {
-    const rgbNumber = `${randomNumber()}, ${randomNumber()}, ${randomNumber()}`;
-    colorPalette.children[index].style.backgroundColor = `rgb(${rgbNumber})`;
+    const rgbNumber = `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
+    colorPalette.children[index].style.backgroundColor = rgbNumber;
   }
 }
 getRandomColor();
