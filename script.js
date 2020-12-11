@@ -22,12 +22,12 @@ function chooseColor() {
 chooseColor();
 
 function generateColor() {
-  const color = `rgb(${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)})`
+  const color = `rgb(${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)})`;
   return color;
 }
 
 function createBox() {
-  color = generateColor();
+  let color = generateColor();
   const coloredBox = document.createElement('div');
   coloredBox.style.backgroundColor = color;
   coloredBox.className = 'color';
@@ -38,9 +38,9 @@ createBox();
 createBox();
 
 function changeColor() {
-  let boxOne = document.getElementsByClassName('color')[1];
-  let boxTwo = document.getElementsByClassName('color')[2];
-  let boxThree = document.getElementsByClassName('color')[3];
+  const boxOne = document.getElementsByClassName('color')[1];
+  const boxTwo = document.getElementsByClassName('color')[2];
+  const boxThree = document.getElementsByClassName('color')[3];
   blackBox.style.backgroundColor = 'black';
   pixelBoard.addEventListener('click', function (event) {
     if (blackBox.classList.contains('selected')) {
@@ -52,7 +52,7 @@ function changeColor() {
     } else if (boxThree.classList.contains('selected')) {
       event.target.style.backgroundColor = boxThree.style.backgroundColor;
     }
-  });  
+  });
 }
 changeColor();
 
