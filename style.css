@@ -41,6 +41,7 @@ h1 {
 .pixels-box {
   background-color: rgb(253, 200, 200);
   width: 260px;
+  height: 260px;
 }
 
 .second-color {
