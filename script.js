@@ -1,25 +1,25 @@
 let squareSide = 5;
 const paletteSize = 4;
-const colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'purple', 'violet', 'gray', 'brown', 'gold']; 
+const colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'purple', 'violet', 'gray', 'brown', 'gold'];
 const pixelBoard = document.getElementById('pixel-board');
 const colorPalette = document.getElementById('color-palette');
 const clear = document.getElementById('clear-board');
 const newBoard = document.getElementById('generate-board');
 const newBoardSize = document.getElementById('board-size');
 
-function fillPalette(palette, colorOptions){
+function fillPalette(palette, colorOptions) {
   let colorOption;
   let colorIndex;
-  for (let index = 0; index < colorOptions; index += 1){
+  for (let index = 0; index < colorOptions; index += 1) {
     colorOption = document.createElement('div');
     colorOption.classList.add('color');
-    colorIndex = Math.ceil(Math.random() * 12);
+    colorIndex = Math.ceil(Math.random() * 11);
     colorOption.classList.add(colors[colorIndex]);
     palette.appendChild(colorOption);
   }
 }
 
-function createPalette(palette){
+function createPalette(palette) {
   const colorOption = document.createElement('div');
   colorOption.classList.add('color');
   colorOption.classList.add(colors[0]);
@@ -57,9 +57,9 @@ function buildBoard(board) {
 buildBoard(pixelBoard);
 
 function colorSelect(event) {
-  const colors = document.getElementsByClassName('color');
-  for (let index = 0; index < colors.length; index += 1) {
-    colors[index].classList.remove('selected');
+  const colorOptions = document.getElementsByClassName('color');
+  for (let index = 0; index < colorOptions.length; index += 1) {
+    colorOptions[index].classList.remove('selected');
   }
   event.target.classList.add('selected');
 }
