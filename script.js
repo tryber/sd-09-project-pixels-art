@@ -1,11 +1,11 @@
 window.addEventListener("load", main)
 
-
 function main() {
   // verify if started color starts with black
   console.log(document.getElementsByClassName("selected"))
   selectedColor()
-  paintPixel()
+  paintPixels()
+  clearBoard()
   loadMsg()
 }
 
@@ -13,24 +13,36 @@ function factory() {
   const palleteOptions = document.getElementsByClassName("color")
   const paint = document.querySelector(".selected")
   const myPixels = document.getElementsByClassName("pixel")
+  const clearBoardButton = document.getElementById("clear-board")
   return {
     MyPallete: palleteOptions,
     Paint: paint,
-    MyPixels: myPixels
+    MyPixels: myPixels,
+    ClearBoardButton: clearBoardButton,
   }
 }
+function clearBoard() {
+   const makeFactory = factory()
+   const clearBoardButton = makeFactory.ClearBoardButton
+   const myPixels = makeFactory.MyPixels
+   clearBoardButton.addEventListener('click', function(){
+     console.log(myPixels)
+     for ( let i = 0; i < myPixels.length; i += 1) {
+       myPixels[i].style.backgroundColor = "white"
+     }
+   })
+}
 
-function paintPixel() {
+function paintPixels() {
   const makeFactory = factory()
   const myPixels = makeFactory.MyPixels
   for ( let i = 0; i < myPixels.length; i += 1) {
     myPixels[i].addEventListener("click", function() {
-
-      colorizePixels(i)
+      colorizePixel(i)
     })
   }
 }
-function colorizePixels(index){
+function colorizePixel(index){
   const makeFactory = factory()
   const paint = makeFactory.Paint
   const myPixels = makeFactory.MyPixels

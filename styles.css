@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin-bottom: 40px;
 }
 
 div.color {
@@ -48,4 +47,8 @@ div {
   flex-wrap: wrap;
   max-width: calc(40px * 6);
   max-height: calc(40px * 6);
+}
+
+.options {
+  margin: 20px 0;
 }
