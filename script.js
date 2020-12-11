@@ -89,3 +89,14 @@ function generateNewBoard() {
   });
 }
 generateNewBoard();
+
+function getRandomColor() {
+  const randomNumber = () => Math.ceil(Math.random() * (255 - 0));
+  const colorPalette = document.querySelector('#color-palette');
+
+  for (let index = 1; index <= 3; index += 1) {
+    const rgbNumber = `${randomNumber()}, ${randomNumber()}, ${randomNumber()}`;
+    colorPalette.children[index].style.backgroundColor = `rgb(${rgbNumber})`;
+  }
+}
+getRandomColor();
