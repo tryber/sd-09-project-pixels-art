@@ -29,7 +29,7 @@ const createInput = document.createElement('input');
 createInput.setAttribute('type', 'number');
 createInput.id = 'board-size';
 getDivButton.appendChild(createInput);
-document.getElementById('board-size').min = '5';
+document.getElementById('board-size').min = '1';
 document.getElementById('board-size').max = '50';
 
 const createInputButton = document.createElement('button');
