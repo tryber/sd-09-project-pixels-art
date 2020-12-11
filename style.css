@@ -9,8 +9,8 @@ body {
   display: inline-block;
   height: 40px;
   margin: 1px;
-  width: 40px;
   vertical-align: top;
+  width: 40px;
 }
 
 .pixel {
@@ -19,8 +19,8 @@ body {
   display: inline-block;
   height: 40px;
   margin: -1px;
-  width: 40px;
   vertical-align: top;
+  width: 40px;
 }
 
 .center {
