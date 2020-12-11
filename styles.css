@@ -1,0 +1,59 @@
+/* style of challenge 2 */
+#color-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+div.color {
+   width: 25px;
+   height: 25px;
+   border: 1px solid black;
+}
+
+/* style of challenge 3 */
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+/* style of challenge 4 */
+/* style of challenge 5 */
+
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+#pixel-board {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: red;
+  width: calc(42px * 5);
+  height: calc(40px * 5);
+}
+
+.options {
+  margin: 20px 0;
+}
