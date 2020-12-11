@@ -1,6 +1,10 @@
 window.onload = function () {
   const colorSelected = document.querySelector('.black');
   colorSelected.classList.add('selected');
+
+  randomizeColor1();
+  randomizeColor2();
+  randomizeColor3();
 };
 
 const getColorPalette = document.getElementById('color-palette');
@@ -15,9 +19,9 @@ const getRedSlotOnPalette = document.querySelector('.color1');
 const getGreenSlotOnPalette = document.querySelector('.color2');
 const getBlueSlotOnPalette = document.querySelector('.color3');
 getBlackSlotOnPalette.style.backgroundColor = 'black';
-getRedSlotOnPalette.style.backgroundColor = 'red';
-getGreenSlotOnPalette.style.backgroundColor = 'green';
-getBlueSlotOnPalette.style.backgroundColor = 'blue';
+//getRedSlotOnPalette.style.backgroundColor = 'red';
+//getGreenSlotOnPalette.style.backgroundColor = 'green';
+//getBlueSlotOnPalette.style.backgroundColor = 'blue';
 
 const getPixelBoardContainer = document.querySelector('.pixel-board-container');
 const createPixelBoard = document.createElement('div')
@@ -113,4 +117,37 @@ function limitBoardSize(boardSize) {
     boardSize = 50;
     printPixelsFrame(boardSize);
   }
+}
+
+function randomizeColor1() {
+  const getRedSlotOnPalette = document.querySelector('.color1');
+  
+  const randomColor = [];
+  for (let index = 0; index < 3 ; index += 1) {
+    randomColor.push(parseInt(Math.random() * 255));
+  }
+  
+  getRedSlotOnPalette.style.backgroundColor = 'rgb( ' + randomColor[0] + ' , ' + randomColor[1] + ' , ' + randomColor[2] + ' )';
+}
+
+function randomizeColor2() {
+  const getGreenSlotOnPalette = document.querySelector('.color2');
+  
+  const randomColor = [];
+  for (let index = 0; index < 3 ; index += 1) {
+    randomColor.push(parseInt(Math.random() * 255));
+  }
+  
+  getGreenSlotOnPalette.style.backgroundColor = 'rgb( ' + randomColor[0] + ' , ' + randomColor[1] + ' , ' + randomColor[2] + ' )';
+}
+
+function randomizeColor3() {
+  const getBlueSlotOnPalette = document.querySelector('.color3');
+  
+  const randomColor = [];
+  for (let index = 0; index < 3 ; index += 1) {
+    randomColor.push(parseInt(Math.random() * 255));
+  }
+  
+  getBlueSlotOnPalette.style.backgroundColor = 'rgb( ' + randomColor[0] + ' , ' + randomColor[1] + ' , ' + randomColor[2] + ' )';
 }
