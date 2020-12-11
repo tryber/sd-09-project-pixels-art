@@ -11,7 +11,7 @@ function createPalette() {
   document.querySelector('.color').classList.add('selected');
 }
 function randomNumbers() {
-  return Math.round(Math.random()*255)
+  return Math.round(Math.random()*255);
 }
 function colorizePalette() {
   const paletteColor = document.querySelectorAll('.color');
@@ -64,7 +64,7 @@ function clearPixelBoard() {
   });
 }
 function paletteRandomizer() {
-  document.querySelector('#randomize-palette').addEventListener('click', colorizePalette)
+  document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
 }
 createPalette();
 colorizePalette();
