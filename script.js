@@ -1,26 +1,49 @@
+const pixelBoard = document.querySelector('#pixel-board');
+const colorPaletteOne = document.querySelector('#color-one').style.backgroundColor = 'black';
+const numberPixel = document.querySelector('#board-size');
+const generateBoard = document.querySelector('#generate-board');
+
+function colorRandom() {
+  let random = 'rgb('
+  random += `${Math.ceil(Math.random() * 255)}, `;
+  random += `${Math.ceil(Math.random() * 255)}, `;
+  random += `${Math.ceil(Math.random() * 255)}) `;
+  return random;
+}
+colorRandom()
+
 function colorPalette() {
-  const color = document.querySelectorAll('.color');
-  color[0].style.backgroundColor = 'black';
-  color[1].style.backgroundColor = 'steelblue';
-  color[2].style.backgroundColor = 'red';
-  color[3].style.backgroundColor = 'yellow';
+  document.querySelector('#color-two').style.backgroundColor = colorRandom();
+  document.querySelector('#color-three').style.backgroundColor = colorRandom();
+  document.querySelector('#color-four').style.backgroundColor = colorRandom();
+}
+colorPalette()
+
+function maxPixel() {
+  let number = numberPixel.value
+  if (number < 5) {
+    number = 5;
+  } else if (number > 50) {
+    number = 50
+  }
+  createdPixelColumn(number)
 }
 
-const pixelBoard = document.querySelector('#pixel-board');
 
-function createdPixelLine(line) {
-  for (let index = 0; index < 5; index += 1) {
+function createdPixelLine(line, number) {
+  for (let index = 0; index < number; index += 1) {
     const createdElement = document.createElement('div');
     createdElement.className = 'pixel';
     line.appendChild(createdElement);
   }
 }
 
-function createdPixelColumn() {
-  for (let index = 0; index < 5; index += 1) {
+function createdPixelColumn(number) {
+  console.log(number)
+  for (let index = 0; index < number; index += 1) {
     const line = document.createElement('div');
+    pixelBoard.appendChild(line, number);
     line.className = 'line';
-    pixelBoard.appendChild(line);
     createdPixelLine(line);
   }
 }
@@ -67,13 +90,3 @@ function usingButtonClearAllColor() {
     }
   })
 }
-
-window.onload = function () {
-  colorPalette();
-  createdPixelColumn();
-  clickPaletteColor();
-  clickPaletteColor();
-  fillColor();
-  createButtonClearAllColor();
-  usingButtonClearAllColor();
-};
