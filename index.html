@@ -17,16 +17,30 @@
     />
     <script src="script.js" defer></script>
   </head>
-  <header>
+  <header class="center">
     <h1 id="title">Paleta de Cores</h1>
   </header>
   <body>
-    <div id="color-palette"></div>
-    <div class="panel-function">
-      <input id="board-size" type="number" max="50" min="1" style="width: 35px;"/>
-      <button id="generate-board">VQV</button>
-      <button id="clear-board"></button>
-    </div>
-    <div id="pixel-board"></div>
+    <main class="center">
+      <section>
+        <div id="color-palette" class="center"></div>
+        <div class="center">
+          <form id="painting-mode">
+            <input type="radio" name="op" value="click" checked>Click
+            <input type="radio" name="op" value="mouseover">MouseOver
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="panel-function" class="center">
+          <input id="board-size" value="5" type="number" max="50" min="1"/>
+          <button id="generate-board">VQV</button>
+          <button id="clear-board"></button>
+        </div>
+      </section>
+      <section>
+        <div id="pixel-board" class="center"></div>
+      </section>
+    </main>
   </body>
 </html>

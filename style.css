@@ -1,5 +1,6 @@
 body {
   font-family: Roboto Mono, sans-serif;
+  margin-top: 3%;
 }
 
 .color {
@@ -7,9 +8,9 @@ body {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
-  margin-right: 1px;
-  margin-top: -3px;
+  margin: 1px;
   width: 40px;
+  vertical-align: top;
 }
 
 .pixel {
@@ -18,6 +19,11 @@ body {
   display: inline-block;
   height: 40px;
   margin: -1px;
-  margin-top: -4px;
   width: 40px;
+  vertical-align: top;
+}
+
+.center {
+  margin: 7px auto;
+  text-align: center;
 }
