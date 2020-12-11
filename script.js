@@ -15,7 +15,7 @@ color4.addEventListener("click",selectingColor)*/
 
 //function paintPixel() {}
 function clearBoard() {
-  document.getElementsByClassName('pixel').classList.add('color-white');
+  document.getElementsByClassName('pixel')[0].classList.add('color-white');
 }
 
 function testEvent() {    
