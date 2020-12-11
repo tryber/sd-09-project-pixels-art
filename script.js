@@ -92,6 +92,13 @@ function createBtnClear() {
 }
 createBtnClear();
 
+
+function inputCondictions(number) {
+  if(number < 5) return number = 5;
+  if(number > 50) return number = 50;
+  return number;
+}
+
 function definingPixelsBoard() {
   const btnVQV = document.querySelector('#generate-board');
 
@@ -107,11 +114,12 @@ function definingPixelsBoard() {
     }
 
     if (numberInput > 0) {
+      let filtered = inputCondictions(numberInput);
       // deletando os pixels do tabuleiro
       boardPixel.forEach((e) => e.parentNode.removeChild(e));
       // criando um novo tabuleiro
       divBoard.style.width = '100%';
-      createMatrixPixels(numberInput);
+      createMatrixPixels(filtered);
       input.value = '';
     }
   });
