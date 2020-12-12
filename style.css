@@ -1,4 +1,4 @@
-#color-palette .color {
+.color-palette .color {
   display: inline-block;
   border: 1px solid black;
   width: 50px;
@@ -20,4 +20,8 @@
 
 .color-yellow {
   background-color: yellow;
+}
+
+.pixel-board .pixel {
+  background-color: white;
 }
