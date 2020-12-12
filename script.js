@@ -81,7 +81,7 @@ function paintPixel() {
       for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function (event) {
           event.target.style.backgroundColor = sessionStorage.color;
-      });
+    });
   }
 }
 paintPixel();
