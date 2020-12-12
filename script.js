@@ -75,16 +75,18 @@ function boardSize(){
         if (size === ''){
             alert('Board inválido!');
         }else if (size > 50){
-            size = 50;
-            for(let index = 0; index < 50; index += 1){
+            for (let index = 0; index < pixelArray.length; index += 1){
+                pixelArray[index].parentNode.removeChild(pixelArray[index]);
+            }
+            for(let index = 0; index < 2500; index += 1){
                 let pixel = document.createElement('div');
                 pixel.className = 'pixel';
                 pixel.style.backgroundColor = 'white';
                 pixelBoard.appendChild(pixel);
             }
-            pixelBoard.style.width = `${size * 42}px`;
-            pixelBoard.style.height = `${size * 42}px`;
-        } else if (size > 5){
+            pixelBoard.style.width = `${50 * 42}px`;
+            pixelBoard.style.height = `${50 * 42}px`;
+        } else if (size => 5){
             for (let index = 0; index < pixelArray.length; index += 1){
                 pixelArray[index].parentNode.removeChild(pixelArray[index]);
             }
