@@ -59,33 +59,42 @@ function pixelWhiteColor() {
 }
 pixelWhiteColor();
 
-/* function selectedColor(){
-  let geSelectedColors = document.getElementsByClassName('color selected');
-  let myColors = document.querySelector('.color');
-
-  myColors.addEventListener('click', function(event){
-  if (geSelectedColors === 0) {
-      event.target.className = 'color selected';
-  } else {
-      event.target.className = 'color';
-    }
-  })
-
-}
-selectedColor();*/
-
-/* function clearColor() {
-    // console.log(`Limpando cores`)
-    const linesOfPixels = document.querySelectorAll('.square-div-line');
-    const pixels = document.querySelectorAll('.pixel');
-    for (let index = 0; index <= pixels.length - 1; index += 1) {
-      pixels[index].style.backgroundColor = 'white';
-    }
-    for (let index = 0; index <= linesOfPixels.length - 1; index += 1) {
-      linesOfPixels[index].style.backgroundColor = 'white';
-    }
+function selectColorPalette() {
+  const colors = document.querySelectorAll('.color');
+  for (let index = 0; index < colors.length; index += 1) {
+  colors[index].addEventListener('click', function (event) {
+  let element = colors[0];
+  while (element) {
+  if (element.className === 'color selected') {
+  element.classList.remove('selected');
   }
-    const button = document.querySelector('#clear-board');
-    button.addEventListener('click', clearColor);
+  element = element.nextElementSibling;
+  }
+  event.target.classList.add('selected');
+  sessionStorage.setItem('color', colors[index].style.backgroundColor);
+  });
+ }
+}
+  selectColorPalette();
 
-clearColor();*/
+function paintPixel() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+  pixels[index].addEventListener('click', function (event) {
+  event.target.style.backgroundColor = sessionStorage.color;
+  });
+ }
+}
+  
+function clearPixels() {
+  const btnClear = document.querySelector('#clear-board');
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+  btnClear.addEventListener('click', function () {
+  pixels[index].style.backgroundColor = 'white';
+  });
+ }
+}
+
+paintPixel();
+clearPixels();
