@@ -35,21 +35,26 @@ function addPixels(){
     //este bloco de códigos será executado quando for 
     // digitado números entre 6 e 9
     //console.log(qntPixels)
-    alert(qntPixels.value)
-  
-  } else if (qntPixels.value < 5){
-    qntPixels.value === 5
-
-  } else if (qntPixels.value > 50 === 50){
-    qntPixels.value === 50
-
+   // alert(qntPixels.value)
   }else{
     //este bloco de códigos será executado caso o número
     //digitado seja menor que 6 e maior que 9
-    alert("A quantidade de pixels não é adequada")
-console.log(addPixels([]));
+    //alert("A quantidade de pixels não é adequada")
+  } 
 }
 
 document.getElementById('generate-board').addEventListener('click', addPixels)
 
+function invalidPixels(){
+  
 }
+
+function cincoCinquenta(){
+  let menorMaiorPixels = document.getElementById("board-size")
+  if(menorMaiorPixels.value < 5 && 5===5){
+    alert("A quantidade de pixels modificada")
+  } else if(menorMaiorPixels.value > 50 && 50 ===50 ){
+    alert("A quantidade de pixels modificada")
+  }
+}
+document.getElementById('generate-board').addEventListener('click', cincoCinquenta)
