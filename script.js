@@ -66,6 +66,8 @@ function clearBoard(){
 
 clearBoard();
 
+
+/*
 function boardSize(){
     let sizeBtn = document.querySelector('#generate-board');
     sizeBtn.addEventListener('click', function(){
@@ -99,6 +101,59 @@ function boardSize(){
             }
             pixelBoard.style.width = `${size * 42}px`;
             pixelBoard.style.height = `${size * 42}px`;
+        }
+    });
+};
+
+boardSize();
+*/
+
+function boardSize(){
+    let sizeBtn = document.querySelector('#generate-board');
+    sizeBtn.addEventListener('click', function(){
+        let pixelBoard = document.querySelector('#pixel-board');
+        let pixelArray = document.querySelectorAll('.pixel');        
+        let size = document.querySelector('#board-size').value;
+
+        if (size === ''){
+            alert('Board inválido!');
+        } else if (size < 5) {
+            for (let index = 0; index < pixelArray.length; index += 1){
+                pixelArray[index].parentNode.removeChild(pixelArray[index]);
+            }
+            for(let index = 0; index < 25; index += 1){
+                let pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.style.backgroundColor = 'white';
+                pixelBoard.appendChild(pixel);
+            }
+            pixelBoard.style.width = `${5 * 42}px`;
+            pixelBoard.style.height = `${5 * 42}px`;
+        } else if (size < 51){
+            for (let index = 0; index < pixelArray.length; index += 1){
+                pixelArray[index].parentNode.removeChild(pixelArray[index]);
+            }
+            let n = size * size;
+            for (let index = 0; index < n; index += 1){
+                let pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.style.backgroundColor = 'white';
+                pixelBoard.appendChild(pixel);
+            }
+            pixelBoard.style.width = `${size * 42}px`;
+            pixelBoard.style.height = `${size * 42}px`;
+        } else {
+            for (let index = 0; index < pixelArray.length; index += 1){
+                pixelArray[index].parentNode.removeChild(pixelArray[index]);
+            }
+            for (let index = 0; index < 2500; index += 1){
+                let pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                pixel.style.backgroundColor = 'white';
+                pixelBoard.appendChild(pixel);
+            }
+            pixelBoard.style.width = `${50 * 42}px`;
+            pixelBoard.style.height = `${50 * 42}px`;
         }
     });
 };
