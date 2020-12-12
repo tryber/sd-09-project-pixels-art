@@ -16,4 +16,10 @@ window.onload = function() {
             event.target.style.backgroundColor = color; 
         });  
     }
+    let button = document.querySelector('#clear-board');
+    button.addEventListener('click', function (event) {
+        for (let x = 0; x < pixels.length; x += 1) {
+        pixels[x].style.backgroundColor ='rgb(255, 255, 255)';
+        }
+    });
 }
