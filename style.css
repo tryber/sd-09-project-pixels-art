@@ -1,0 +1,57 @@
+html {
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: lightblue;
+  font-family: Courier New, Courier, monospace;
+  font-size: 5px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: aquamarine;
+  height: 100px;
+}
+
+.title {
+  color: blue;
+}
+
+main {
+  background-color: darkgrey;
+  height: 550px;
+  width: 100%;
+}
+
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 50px;
+  margin-top: 50px;
+  width: 50px;
+}
+
+.pixel-board {
+  background-color: transparent;
+  display: inline-block;
+  height: 224px;
+  width: 230px;
+}
+
+.pixel {
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+footer {
+  background-color: indianred;
+  height: 106px;
+}
