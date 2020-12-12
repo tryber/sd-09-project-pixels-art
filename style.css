@@ -1,6 +1,5 @@
 html {
-
-  background-color: aquamarine;
+  background-color:aquamarine;
   margin: 0;
   padding: 0;
 }
@@ -8,7 +7,7 @@ html {
 body {
   box-sizing: border-box;
   color: lightblue;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Courier New, Courier, monospace;
   font-size: 5px;
   margin: 0;
   padding: 0;
@@ -20,7 +19,7 @@ header {
   height: 100px;
 }
 
-#title {
+.title {
   color: blue;
 }
 
@@ -38,7 +37,7 @@ main {
   width: 50px;
 }
 
-#pixel-board {
+.pixel-board {
   background-color: transparent;
   display: inline-block;
   height: 224px;
