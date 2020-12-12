@@ -1,9 +1,9 @@
 .color-palette .color {
-  display: inline-block;
   border: 1px solid black;
-  width: 50px;
+  display: inline-block;
   height: 50px;
   list-style: none;
+  width: 50px;
 }
 
 .color-black {
@@ -24,10 +24,10 @@
 
 .pixel-board .pixel {
   background-color: white;
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
+  height: 40px;
   padding: 0;
+  width: 40px;
 }
 
 .pixel-board {
