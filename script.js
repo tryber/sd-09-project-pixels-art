@@ -50,13 +50,13 @@ function invalidPixels(){
 }
 
 function cincoCinquenta(){
-  let menorMaiorPixels = document.getElementById("board-size")
-  if(menorMaiorPixels.value < 5 ){
+  let menorMaiorPixels = Number(document.getElementById("board-size").value)
+  if(menorMaiorPixels < 5 ){
     menorMaiorPixels = 5
-    alert("A quantidade de pixels modificada")
-  } else if(menorMaiorPixels.value > 50){
+    //alert("A quantidade de pixels modificada")
+  } else if(menorMaiorPixels > 50){
     menorMaiorPixels = 50
-    alert("A quantidade de pixels modificada")
+   // alert("A quantidade de pixels modificada")
   }
 }
 document.getElementById('generate-board').addEventListener('click', cincoCinquenta)
