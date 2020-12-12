@@ -1,6 +1,6 @@
 //ME ESFORCEI E VOU CONSEGUIR
 addColors();
-
+addPixels();
 
     function addColors(){
 
@@ -34,4 +34,17 @@ getColor1.appendChild(colorOne)
 getColor2.appendChild(colorTwo)
 getColor3.appendChild(colorThree)
 getColor4.appendChild(colorFour)
+};
+    function addPixels(){
+
+        let getPixelBoard = document.querySelector("#pixel-board");
+
+        for (let index = 1; index <= 25; index += 1){
+
+            let pixel = document.createElement('div');
+            pixel.innerHTML = "Vivo?"
+            pixel.className = 'pixel'    
+
+            getPixelBoard.appendChild(pixel);
+        }
 };
