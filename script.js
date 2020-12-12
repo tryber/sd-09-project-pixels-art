@@ -65,10 +65,10 @@ function selectColorPalette() {
       let element = colors[0];
       while (element) {
         if (element.className === 'color selected') {
-        element.classList.remove('selected');
-      }
+          element.classList.remove('selected');
+        }
         element = element.nextElementSibling;
-      }
+  }
       event.target.classList.add('selected');
       sessionStorage.setItem('color', colors[index].style.backgroundColor);
     });
@@ -78,10 +78,10 @@ selectColorPalette();
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-        pixels[index].addEventListener('click', function (event) {
-      event.target.style.backgroundColor = sessionStorage.color;
-    });
-      }
+      for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function (event) {
+          event.target.style.backgroundColor = sessionStorage.color;
+      });
+  }
 }
 paintPixel();
