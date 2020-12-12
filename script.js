@@ -33,11 +33,6 @@ function paintDiv() {
 paintDiv();
 
 function cleanPixelBoard () {
-  const PaletaDeCores = document.querySelector('#clear-board')
-  const createButton = document.createElement('button');
-  PaletaDeCores.appendChild(createButton);
-  createButton.innerText = 'Limpar';
-  createButton.id = 'clear-board';
   const PixelBoard = document.querySelectorAll('.pixel');
   const clearButton = document.querySelector('#clear-board');
   clearButton.addEventListener('click', function() {
@@ -47,3 +42,5 @@ function cleanPixelBoard () {
   })
 }
 cleanPixelBoard ();
+
+
