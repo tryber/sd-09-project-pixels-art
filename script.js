@@ -54,7 +54,7 @@ function pixelWhiteColor() {
   for (let index = 0; index < getPixel.length; index += 1) {
     const addWhiteColor = getPixel[index];
     addWhiteColor.style.background = 'rgb(255, 255, 255)';
-  }
+  };
 }
 pixelWhiteColor();
 
@@ -68,7 +68,7 @@ function selectColorPalette() {
           element.classList.remove('selected');
         }
         element = element.nextElementSibling;
-  }
+  };
       event.target.classList.add('selected');
       sessionStorage.setItem('color', colors[index].style.backgroundColor);
     });
