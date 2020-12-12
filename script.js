@@ -31,31 +31,29 @@ function addColors() {
   getColor4.appendChild(colorFour);
 }
 
-function addPixels (){
+function addPixels() {
+  const getPixelBoard = document.querySelector('#pixel-board');
 
-      const getPixelBoard = document.querySelector("#pixel-board");
-
-    for (let index = 1; index <= 25; index += 1){
-
-        let pixel = document.createElement('div');
-        pixel.innerHTML = "Vivo?";
-        pixel.className = 'pixel';
-        getPixelBoard.appendChild(pixel);
-    }
+  for (let index = 1; index <= 25; index += 1) {
+    let pixel = document.createElement('div');
+    pixel.innerHTML = 'Vivo?';
+    pixel.className = 'pixel';
+    getPixelBoard.appendChild(pixel);
+  }
 }
 
-function pixelWhiteColor (){
-    const getPixel = document.querySelectorAll("#pixel-board>.pixel");
-    for (let index = 0; index < getPixel.length; index += 1){
-        let addWhiteColor = getPixel[index];
-        addWhiteColor.style.background = 'rgb(255, 255, 255)';
-    }
+function pixelWhiteColor() {
+  const getPixel = document.querySelectorAll('#pixel-board>.pixel');
+  for (let index = 0; index < getPixel.length; index += 1) {
+    let addWhiteColor = getPixel[index];
+    addWhiteColor.style.background = "rgb(255, 255, 255)";
+  }
 }
 
-window.onload = function (){
-    alert('Carrego')
-    pixelWhiteColor();
-}
+window.onload = function () {
+  alert('Carrego');
+  pixelWhiteColor();
+};
 
 addColors();
 addPixels();
