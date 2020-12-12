@@ -14,19 +14,6 @@ function fillColorPalette() {
 }
 fillColorPalette();
 
-function readPixelBoardDimension() {
-  const input = document.querySelector('#board-size');
-  const generatorButton = document.querySelector('#generate-board');
-  generatorButton.addEventListener('click', function () {
-    inputValue = input.value;
-    if (inputValue === '') {
-      alert('Board inválido!');
-    }
-    generateBoard();
-    cleanPixelBoard ();
-  });
-}
-readPixelBoardDimension();
 
 function generateBoard() {
   for (let index = 0; index < inputValue; index += 1) {
@@ -42,6 +29,20 @@ function generateBoard() {
   }
 }
 
+function readPixelBoardDimension() {
+  const input = document.querySelector('#board-size');
+  const generatorButton = document.querySelector('#generate-board');
+  generatorButton.addEventListener('click', function () {
+    generateBoard();
+    inputValue = input.value;
+    if (inputValue === '') {
+      alert('Board inválido!');
+    }
+    generateBoard();
+    cleanPixelBoard ();
+  });
+}
+readPixelBoardDimension();
 
 const colorPalette = document.querySelector('#color-palette');
 function selectedAssigns() {
@@ -73,5 +74,5 @@ function cleanPixelBoard () {
     }
   })
 }
-
+cleanPixelBoard ()
 
