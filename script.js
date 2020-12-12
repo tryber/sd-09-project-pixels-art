@@ -48,3 +48,16 @@ getColor4.appendChild(colorFour)
             getPixelBoard.appendChild(pixel);
         }
 };
+
+function pixelWhiteColor(){
+    const getPixel = document.querySelectorAll("#pixel-board>.pixel");
+    for (let index = 0; index < getPixel.length; index += 1){
+        let addWhiteColor = getPixel[index]
+        addWhiteColor.style.background = 'rgb(255, 255, 255)'
+    }
+}
+window.onload = function (){
+    alert('Carrego')
+    pixelWhiteColor();
+}
+
