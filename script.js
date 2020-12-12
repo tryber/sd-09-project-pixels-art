@@ -51,9 +51,11 @@ function invalidPixels(){
 
 function cincoCinquenta(){
   let menorMaiorPixels = document.getElementById("board-size")
-  if(menorMaiorPixels.value < 5 && 5===5){
+  if(menorMaiorPixels.value < 5 ){
+    menorMaiorPixels = 5
     alert("A quantidade de pixels modificada")
-  } else if(menorMaiorPixels.value > 50 && 50 ===50 ){
+  } else if(menorMaiorPixels.value > 50){
+    menorMaiorPixels = 50
     alert("A quantidade de pixels modificada")
   }
 }
