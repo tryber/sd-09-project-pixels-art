@@ -35,20 +35,20 @@
 }
 
 .pixel-board{
-    margin-top: 2%;
-    margin-left: 2%;
     border: 1px solid black;
-    padding: 5px;
     display: inline-block;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 5px;
 }
 
 .pixel{
+    background-color: white;
+    border: 1px solid black;
     display: inline-block;
     height: 40px;
-    width: 40px;
-    border: 1px solid black;
-    background-color: white;
     padding: 1px;
+    width: 40px;
 }
 
 .fistBG{
