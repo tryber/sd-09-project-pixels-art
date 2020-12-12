@@ -71,7 +71,7 @@ function selectColorPalette() {
       }
       event.target.classList.add('selected');
       sessionStorage.setItem('color', colors[index].style.backgroundColor);
-    })
+    });
   }
 }
 selectColorPalette();
