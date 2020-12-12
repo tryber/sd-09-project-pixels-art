@@ -87,12 +87,12 @@ function paintPixel() {
 paintPixel();
 
 function clearPixels() {
-    const btnClear = document.querySelector('#clear-board');
-    const pixels = document.querySelectorAll('.pixel');
-    for (let index = 0; index < pixels.length; index += 1) {
+  const btnClear = document.querySelector('#clear-board');
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
       btnClear.addEventListener('click', function () {
         pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
       });
     }
-  }
+}
 clearPixels();
