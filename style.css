@@ -1,10 +1,16 @@
-body {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 8px;
-  box-sizing: border-box;
-  color: royalblue;
+html {
   margin: 0;
   padding: 0;
+  background-color: aquamarine;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 5px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: lightblue;
 }
 
 header {
@@ -17,11 +23,9 @@ header {
 }
 
 main {
-  background-color: darkolivegreen;
-  height: 330px;
-  width: 31%;
-  margin-left: 25%;
-  margin-right: 20%;
+  background-color: darkgrey;
+  height: 550px;
+  width: 100%;
 }
 
 .color {
@@ -48,5 +52,5 @@ main {
 
 footer {
   background-color: indianred;
-  height: 100px;
+  height: 106px;
 }
