@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 ;
+    background-color: #043565;
+}
+
+#main-content {
+    background-color: #5158BB;
+}
+
+#color-palette {
+    text-align: center;
+    padding: 15px;
+}
+
+.color {
+    margin: auto;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: 1px black solid;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 8px 2px 13px 1px rgba(0,0,0,0.44);
+}
+
+#size-content {
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#board-size {
+    display: inline-block;
+    width: 100px;
+    height: 20px;    
+}
+
+#generate-board {
+    font-size: 15px;
+    display: inline-block;
+    width: 100px;
+    height: 22px;
+    margin-right: 30px;
+}
+
+#clear-board {
+    font-size: 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 100px;
+    height: 40px;
+}
+
+#pixel-board {
+    width: 210px;
+    height: 210px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 300px;
+    box-shadow: 8px 2px 13px 1px rgba(0,0,0,0.44);
+}
+
+.pixel {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #02394A;
+}
