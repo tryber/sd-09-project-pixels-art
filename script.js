@@ -10,7 +10,7 @@ function addColors() {
   const colorFour = document.createElement('div');
 
   colorOne.className = 'color selected';
-  colorOne.style.background = 'black';
+  colorOne.style.background = 'rgb(0, 0, 0)';
   colorTwo.className = 'color';
   colorThree.className = 'color';
   colorFour.className = 'color';
@@ -90,9 +90,9 @@ function clearPixels() {
   const btnClear = document.querySelector('#clear-board');
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
-      btnClear.addEventListener('click', function () {
+    btnClear.addEventListener('click', function () {
         pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
       });
-    }
+  }
 }
 clearPixels();
