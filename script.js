@@ -10,7 +10,7 @@ const newBoardSize = document.getElementById('board-size');
 function fillPalette(palette, colorOptions) {
   let colorOption;
   let colorIndex;
-  let colorChosen = colors;
+  const colorChosen = colors;
   for (let index = 0; index < colorOptions; index += 1) {
     colorOption = document.createElement('div');
     colorOption.classList.add('color');
