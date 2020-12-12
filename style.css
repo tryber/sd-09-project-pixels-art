@@ -1,16 +1,18 @@
 html {
+
+  background-color: aquamarine;
   margin: 0;
   padding: 0;
-  background-color: aquamarine;
 }
+
 body {
+  color: lightblue;
+  box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
   font-size: 5px;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
-  color: lightblue;
 }
 
 header {
@@ -38,9 +40,9 @@ main {
 
 #pixel-board {
   background-color: transparent;
+  display: inline-block;
   height: 224px;
   width: 230px;
-  display: inline-block;
 }
 
 .pixel {
