@@ -9,7 +9,7 @@ function addColors() {
   const colorThree = document.createElement('div');
   const colorFour = document.createElement('div');
 
-  colorOne.className = 'color';
+  colorOne.className = 'color selected';
   colorOne.style.background = 'black';
   colorTwo.className = 'color';
   colorThree.className = 'color';
