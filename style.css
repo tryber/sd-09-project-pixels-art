@@ -6,8 +6,8 @@ html {
 }
 
 body {
-  color: lightblue;
   box-sizing: border-box;
+  color: lightblue;
   font-family: 'Courier New', Courier, monospace;
   font-size: 5px;
   margin: 0;
