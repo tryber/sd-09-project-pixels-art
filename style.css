@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(253, 251, 251);
+}
+
+main {
+  background-color: rgb(108, 200, 202);
+  border-radius: 30px;
+  box-shadow: 2px 2px black;
+  margin: auto;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: 3em;
+  width: fit-content;
+}
+
+header {
+  background-color: rgb(82, 183, 136);
+  font-family: Texturina, serif;
+  font-weight: 600;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+p {
+  bottom: 30%;
+  color: rgb(108, 200, 202);
+  display: inline-block;
+  font-size: xx-large;
+  font-weight: 600;
+  margin: auto;
+  margin-left: 1%;
+  position: relative;
+  text-align: left;
+  text-shadow: 1.5px 1.5px black;
+}
+
+h1 {
+  color: silver;
+  font-family: Dancing Script, cursive;
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 1.2px 1.2px black;
+  top: 10px;
+}
+
+.logo {
+  height: 50px;
+  position: relative;
+}
+
+section {
+  margin: 25px;
+}
+
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 30px;
+  margin: 2px;
+  width: 30px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.violet {
+  background-color: violet;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.silver {
+  background-color: silver;
+}
+
+.white {
+  background-color: white;
+}
+
+.pixel-board {
+  display: inline-table;
+  text-align: center;
+}
+
+.pixel-line {
+  display: table-row;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+input {
+  text-align: center;
+  width: 45px;
+}

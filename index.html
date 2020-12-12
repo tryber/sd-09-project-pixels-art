@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Pixels Art</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Texturina:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="assets/trybe.png" alt="Nova Logo da Trybe" class="logo" />
+      <p>Projeto 03 | Pixel Art</p>
+    </header>
+    <main>
+      <h1 id="title">Paleta de Cores</h1>
+      <section id="color-palette"></section>
+      <section>
+        <label for="board-size"> Tamanho do Quadro: </label>
+        <input type="number" name="board-size" id="board-size" min="1" />
+        <button id="generate-board">VQV</button>
+        <button id="clear-board">Limpar</button>
+      </section>
+      <section id="pixel-board" class="pixel-board"></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
