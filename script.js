@@ -4,6 +4,7 @@ function getColorClassName(colorElement) {
       return className;
     }
   }
+  return '';
 }
 
 function getColorsClass(classList) {

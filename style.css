@@ -25,6 +25,7 @@
 .pixel-board .pixel {
   background-color: white;
   border: 1px solid black;
+  box-sizing: border-box;
   height: 40px;
   padding: 0;
   width: 40px;
