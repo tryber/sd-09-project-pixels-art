@@ -37,9 +37,11 @@ function addPixels(){
     //console.log(qntPixels)
     alert(qntPixels.value)
   
-  } else if (qntPixels.value < 5 === 5){
+  } else if (qntPixels.value < 5){
+    qntPixels.value === 5
 
   } else if (qntPixels.value > 50 === 50){
+    qntPixels.value === 50
 
   }else{
     //este bloco de códigos será executado caso o número
