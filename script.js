@@ -48,12 +48,23 @@ function handlePixelSelected(clickEvent) {
   clickedElement.classList.add(colorClassName);
 }
 
+function handleClearBoard() {
+  const pixels = document.querySelectorAll('#pixel-board .pixel');
+  for (const pixel of pixels) {
+    const colorsToRemove = getColorsClass(pixel.classList);
+    if (colorsToRemove.length) {
+      pixel.classList.remove(colorsToRemove);
+    }
+  }
+}
+
 window.onload = () => {
   const colorPalette = document.getElementById('color-palette');
-
   colorPalette.addEventListener('click', handleColorSelected);
 
   const pixelBoard = document.getElementById('pixel-board');
-
   pixelBoard.addEventListener('click', handlePixelSelected);
+
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', handleClearBoard);
 }
