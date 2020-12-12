@@ -7,26 +7,25 @@
 }
 
 .color-black {
-  background-color: black;
+  background-color: black !important;
 }
 
 .color-red {
-  background-color: red;
+  background-color: red !important;
 }
 
 .color-blue {
-  background-color: blue;
+  background-color: blue !important;
 }
 
 .color-yellow {
-  background-color: yellow;
+  background-color: yellow !important;
 }
 
 .pixel-board .pixel {
   background-color: white;
   width: 40px;
   height: 40px;
-
   border: 1px solid black;
 }
 
