@@ -11,6 +11,7 @@ window.onload = function() {
             divPai.appendChild(lineDiv)
         }
     }
+    
     addTabela()
     function adicionaEventos(){
         let divsPixels = document.querySelectorAll('.pixel');
@@ -59,5 +60,10 @@ window.onload = function() {
        })      
    }
    clearBoard()
+
+    let botColor = document.querySelector('#buttonColor');
+    botColor.addEventListener('change', function(){
+        corSelected = botColor.value
+    })
 }
 

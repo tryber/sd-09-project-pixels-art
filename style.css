@@ -50,6 +50,10 @@
     padding: 1px;
     width: 40px;
 }
+.paletaInput{
+    height: 60px;
+    width: 60px;
+}
 
 .fistBG{
     background-color: black;
