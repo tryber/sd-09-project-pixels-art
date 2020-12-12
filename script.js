@@ -78,7 +78,7 @@ selectColorPalette();
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
-      for (let index = 0; index < pixels.length; index += 1) {
+  for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function (event) {
           event.target.style.backgroundColor = sessionStorage.color;
     });
