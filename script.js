@@ -33,10 +33,15 @@ function readPixelBoardDimension() {
   const input = document.querySelector('#board-size');
   const generatorButton = document.querySelector('#generate-board');
   generatorButton.addEventListener('click', function () {
-    generateBoard();
+    deleteBorad();
     inputValue = input.value;
     if (inputValue === '') {
       alert('Board inválido!');
+    }
+    if (inputValue < 5) {
+      inputValue = 5
+    } else if (inputValue > 50) {
+      inputValue = 50;
     }
     generateBoard();
     cleanPixelBoard ();
@@ -76,3 +81,11 @@ function cleanPixelBoard () {
 }
 cleanPixelBoard ()
 
+function deleteBorad() {
+  const divPai = document.querySelector('#pixel-board');
+  const divColuna = document.querySelectorAll('.coluna')
+  for (let index = 0; index < divColuna.length; index += 1) {
+    divPai.removeChild(divColuna[index])
+    console.log(divColuna)
+  }
+}
