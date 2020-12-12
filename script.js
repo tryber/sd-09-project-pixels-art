@@ -1,3 +1,6 @@
+let inputValue = 5;
+generateBoard()
+
 function fillColorPalette() {
   const divColor = document.getElementsByClassName('color');
   divColor[0].style.backgroundColor = 'black';
@@ -16,7 +19,6 @@ function readPixelBoardDimension() {
   const generatorButton = document.querySelector('#generate-board');
   generatorButton.addEventListener('click', function () {
     inputValue = input.value;
-    console.log(inputValue)
     if (inputValue === '') {
       alert('Board inválido!');
     }
