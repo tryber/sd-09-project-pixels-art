@@ -24,7 +24,6 @@ addColors();
 
 function addPixels() {
   const getPixelBoard = document.querySelector('#pixel-board');
-
   for (let index = 1; index <= 25; index += 1) {
   const pixel = document.createElement('div');
   pixel.innerHTML = 'Vivo?';
@@ -73,9 +72,9 @@ function selectColorPalette() {
   event.target.classList.add('selected');
   sessionStorage.setItem('color', colors[index].style.backgroundColor);
   });
- }
 }
-  selectColorPalette();
+}
+selectColorPalette();
 
 function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
@@ -83,18 +82,6 @@ function paintPixel() {
   pixels[index].addEventListener('click', function (event) {
   event.target.style.backgroundColor = sessionStorage.color;
   });
- }
 }
-  
-function clearPixels() {
-  const btnClear = document.querySelector('#clear-board');
-  const pixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-  btnClear.addEventListener('click', function () {
-  pixels[index].style.backgroundColor = 'white';
-  });
- }
 }
-
 paintPixel();
-clearPixels();
