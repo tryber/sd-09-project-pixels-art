@@ -72,7 +72,9 @@ function boardSize(){
         let pixelBoard = document.querySelector('#pixel-board');
         let pixelArray = document.querySelectorAll('.pixel');        
         let size = document.querySelector('#board-size').value;
-        if (size < 5 || size > 50){
+        if (size === ''){
+            alert('Board inválido!');
+        }else if (size < 5 || size > 50){
             alert('Valores válidos entre 5 e 50')
         } else {
             for (let index = 0; index < pixelArray.length; index += 1){
