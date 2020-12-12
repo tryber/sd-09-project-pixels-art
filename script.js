@@ -80,7 +80,7 @@ function paintPixel() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function (event) {
-          event.target.style.backgroundColor = sessionStorage.color;
+      event.target.style.backgroundColor = sessionStorage.color;
     });
   }
 }
@@ -91,7 +91,7 @@ function clearPixels() {
     const pixels = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixels.length; index += 1) {
       btnClear.addEventListener('click', function () {
-        pixels[index].style.backgroundColor = 'white';
+        pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
       });
     }
   }
