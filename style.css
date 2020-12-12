@@ -1,0 +1,32 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 52.4px;
+  width: 52.4px;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.white {
+  background-color: white;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
