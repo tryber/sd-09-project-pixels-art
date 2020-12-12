@@ -40,8 +40,8 @@ window.onload = function() {
     }
    escolheACor()
 
+   let pixel = document.querySelectorAll('.pixel');
    function pintaOPixel(){
-       let pixel = document.querySelectorAll('.pixel');
        for(let index = 0; index < pixel.length; index += 1){
             pixel[index].addEventListener('click', function(){
                 pixel[index].style.backgroundColor = corSelected;
@@ -49,5 +49,15 @@ window.onload = function() {
        }
    }
    pintaOPixel()
+
+   function clearBoard() {
+       let botaoClear = document.querySelector('#clear-board');
+       botaoClear.addEventListener('click', function(){
+        for(let index = 0; index < pixel.length; index += 1){
+            pixel[index].style.backgroundColor = 'white'
+        }
+       })      
+   }
+   clearBoard()
 }
 
