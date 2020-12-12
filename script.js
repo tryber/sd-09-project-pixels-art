@@ -11,6 +11,36 @@ function fillColorPalette() {
 }
 fillColorPalette();
 
+function readPixelBoardDimension() {
+  const input = document.querySelector('#board-size');
+  const generatorButton = document.querySelector('#generate-board');
+  generatorButton.addEventListener('click', function () {
+    inputValue = input.value;
+    console.log(inputValue)
+    if (inputValue === '') {
+      alert('Board inválido!');
+    }
+    generateBoard();
+    cleanPixelBoard ();
+  });
+}
+readPixelBoardDimension();
+
+function generateBoard() {
+  for (let index = 0; index < inputValue; index += 1) {
+    const divPai = document.querySelector('#pixel-board');
+    const divColuna = document.createElement('div');
+    divPai.appendChild(divColuna);
+    divColuna.classList = 'coluna';
+    for (let index2 = 0; index2 < inputValue; index2 += 1) {
+      const divPixel = document.createElement('div')
+      divColuna.appendChild(divPixel)
+      divPixel.classList = 'pixel'
+    }
+  }
+}
+
+
 const colorPalette = document.querySelector('#color-palette');
 function selectedAssigns() {
   colorPalette.addEventListener('click', function (event) {
@@ -41,6 +71,5 @@ function cleanPixelBoard () {
     }
   })
 }
-cleanPixelBoard ();
 
 

@@ -33,3 +33,7 @@
 .coluna {
   display: table-row;
 }
+
+#board-size {
+  width: 50px;
+}
