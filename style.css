@@ -1,0 +1,60 @@
+.black{
+    background-color: black;
+    border: 1px solid black;
+    color: black;
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+}
+
+.red{
+    background-color: red;
+    border: 1px solid black;
+    color: red;
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+}
+
+.blue{
+    background-color: blue;
+    border: 1px solid black;
+    color: blue;
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+}
+
+.green{
+    background-color: green;
+    border: 1px solid black;
+    color: green;
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+}
+
+.pixel-board{
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 5px;
+}
+
+.pixel{
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    height: 40px;
+    padding: 1px;
+    width: 40px;
+}
+.paletaInput{
+    height: 60px;
+    width: 60px;
+}
+
+.fistBG{
+    background-color: black;
+}
