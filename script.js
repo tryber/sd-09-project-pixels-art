@@ -1,19 +1,20 @@
 function getColorClassName(colorElement) {
-  for ( const className of colorElement.classList) {
+  let color = ''
+  colorElement.classList.forEach(className => {
     if (className.includes('color-')) {
-      return className;
+      color = className;
     }
-  }
-  return '';
+  })
+  return color;
 }
 
 function getColorsClass(classList) {
   const colors = [];
-  for(const color of classList) {
+  classList.forEach(color => {
     if (color.includes('color-')) {
       colors.push(color);
     }
-  }
+  })
   return colors;
 }
 
@@ -39,7 +40,7 @@ function handleColorSelected(clickEvent) {
 function handlePixelSelected(clickEvent) {
   const clickedElement = clickEvent.target;
   const isPixelElement = clickedElement.classList.contains('pixel');
-  if (! isPixelElement) return;
+  if (!isPixelElement) return;
   const colorSelected = document.querySelector('#color-palette .selected');
   const colorClassName = getColorClassName(colorSelected);
   const colorsToRemove = getColorsClass(clickedElement.classList);
@@ -51,12 +52,12 @@ function handlePixelSelected(clickEvent) {
 
 function handleClearBoard() {
   const pixels = document.querySelectorAll('#pixel-board .pixel');
-  for (const pixel of pixels) {
+  pixels.forEach(pixel => {
     const colorsToRemove = getColorsClass(pixel.classList);
     if (colorsToRemove.length) {
       pixel.classList.remove(colorsToRemove);
     }
-  }
+  })
 }
 
 window.onload = () => {
@@ -68,4 +69,4 @@ window.onload = () => {
 
   const clearButton = document.getElementById('clear-board');
   clearButton.addEventListener('click', handleClearBoard);
-}
+};
