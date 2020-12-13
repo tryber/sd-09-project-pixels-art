@@ -65,30 +65,48 @@ function clearPixelBoard() {
   }
 }
 
-function addPixelsToLinesOfTheBoard(pixelsToAdd, line) {
+function addPixelsToLinesOfTheBoard(pixelsToAdd, row) {
   for (let index = 0; index < pixelsToAdd; index += 1) {
-    const newPixel = document.createElement('div');
+    const newPixel = row.insertCell(index);
     newPixel.className = 'pixel';
     newPixel.style.backgroundColor = 'white';
-    line.appendChild(newPixel);
   }
 }
 
 function addLinesToPixelBoard(boardSize) {
   const pixelBoardSelected = document.getElementById('pixel-board');
   for (let index = 0; index < boardSize; index += 1) {
-    const newLine = document.createElement('div');
-    newLine.className = 'pixel-board-child';
-    addPixelsToLinesOfTheBoard(boardSize, newLine);
-    pixelBoardSelected.appendChild(newLine);
+    const newRow = pixelBoardSelected.insertRow(index);
+    addPixelsToLinesOfTheBoard(boardSize, newRow);
   }
 }
 
 function removeLinesFromPixelBoard(linesToRemove) {
   const pixelBoardSelected = document.getElementById('pixel-board');
   for (let index = linesToRemove - 1; index >= 0; index -= 1) {
-    pixelBoardSelected.removeChild(pixelBoardSelected.children[0]);
+    pixelBoardSelected.deleteRow(index);
   }
+}
+
+function changePixelBoardAlignment(currentBoardSize) {
+  const pixelBoard = document.getElementById('pixel-board');
+  let marginPercent = 44;
+  if (currentBoardSize === 5) {
+    pixelBoard.style.marginLeft = '44%';
+    return null;
+  }
+  if (currentBoardSize === 50) {
+    pixelBoard.style.marginLeft = '10%';
+    return null;
+  }
+  for (let index = 0; index <= currentBoardSize; index += 1) {
+    if (marginPercent === 1) {
+      break;
+    }
+    marginPercent -= 1;    
+  }
+  marginPercent += '%';
+  pixelBoard.style.marginLeft = marginPercent;
 }
 
 function designNewBoard(boardSize, currentBoardSize) {
@@ -107,13 +125,14 @@ function designNewBoard(boardSize, currentBoardSize) {
   removeLinesFromPixelBoard(currentBoardSize);
   addLinesToPixelBoard(boardSize);
   currentBoardSize = boardSize;
+  changePixelBoardAlignment(currentBoardSize);
   return 2;
 }
 
 function createCustomPixelBoarder() {
   numbersInputValidator();
-  const currentPixelBoard = document.querySelectorAll('.pixel-board-child');
-  const currentPixelBoardLength = currentPixelBoard.length;
+  const currentPixelBoard = document.querySelector('#pixel-board').children;
+  const currentPixelBoardLength = currentPixelBoard[0].children.length;
   let boardSizeValue = document.getElementById('board-size').value;
   boardSizeValue = parseInt(boardSizeValue, 10);
   designNewBoard(boardSizeValue, currentPixelBoardLength);
