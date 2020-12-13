@@ -1,6 +1,8 @@
 table{
-  border-collapse:collapse;
-  border-spacing:0;
+  border: solid 1px black;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-block;
 }
 
 .centralized {
@@ -31,15 +33,10 @@ h1 {
   display: inline-block;
   height: 40px;
   margin: 0;
-  outline: 0;
   padding: 0;
   width: 40px;
 }
 
-#pixel-board {
-  border: solid 1px black;
-  display: inline-block;
-}
 .centralized {
   margin-left: 44%;
 }

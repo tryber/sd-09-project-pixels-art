@@ -103,10 +103,11 @@ function changePixelBoardAlignment(currentBoardSize) {
     if (marginPercent === 1) {
       break;
     }
-    marginPercent -= 1;    
+    marginPercent -= 1;
   }
   marginPercent += '%';
   pixelBoard.style.marginLeft = marginPercent;
+  return 0;
 }
 
 function designNewBoard(boardSize, currentBoardSize) {
