@@ -1,65 +1,53 @@
-#cabecalho {
-  background-color: rgb(72 ,164 ,107);
-  text-align: center;
-  display: block;
-  
-}
-#title {
-font-family: Shadows Into Light, Arial, Helvetica;
-}
-
-#nav li {
-    font-family: Nunito, Arial, Helvetica;
-    width: 20%;
-    padding-right: 5px;
-    font-family: Nunito, Arial, Helvetica;
-    position: relative;
-    left: 70%;
-}  
-
-#color-palette {
-border: 3px;
-border-color:black ;
-border: black 1px solid;
-
-
-
-}
-.black {
-background-color: black;
-border: black 1px solid;
-width: 40px;
-height: 40px;
-padding: 1px;
-}
-
-.red{
-background-color:red ;
-border: black 1px solid;
-width: 40px;
-height: 40px;
-padding: 1px;
-}
-.blue{
-    background-color:blue ;
-    border: black 1px solid;
-    width: 40px;
-    height: 40px;
-    padding: 1px;
-}
-.yellow{
-  background-color:yellow;
-  border: black 1px solid;
-  width: 40px;
-  height: 40px;
-  
-}
-
-
-
-.pixel{
-    border: black 1px solid;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    }
+        #cabecalho {
+          background-color: rgb(72, 164, 107);
+          text-align: center;
+          display: block;
+        }
+        
+        #title {
+          font-family: Shadows Into Light, Arial, Helvetica;
+        }
+        
+        #color-palette {
+          border: 3px;
+          border-color: black;
+          border: black 1px solid;
+        }
+        
+        .black {
+          background-color: black;
+          border: black 1px solid;
+          width: 40px;
+          height: 40px;
+          padding: 1px;
+        }
+        
+        .red {
+          background-color: red;
+          border: black 1px solid;
+          width: 40px;
+          height: 40px;
+          padding: 1px;
+        }
+        
+        .blue {
+          background-color: blue;
+          border: black 1px solid;
+          width: 40px;
+          height: 40px;
+          padding: 1px;
+        }
+        
+        .yellow {
+          background-color: yellow;
+          border: black 1px solid;
+          width: 40px;
+          height: 40px;
+        }
+        
+        .pixel {
+          border: black 1px solid;
+          width: 40px;
+          height: 40px;
+          background-color: white;
+        }
