@@ -1,4 +1,4 @@
-table{
+table {
   border: solid 1px black;
   border-collapse: collapse;
   border-spacing: 0;
@@ -37,6 +37,3 @@ h1 {
   width: 40px;
 }
 
-.centralized {
-  margin-left: 44%;
-}
