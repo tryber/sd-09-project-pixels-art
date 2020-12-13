@@ -12,17 +12,14 @@
   border: solid black 1px;  
 }
 
-.selected {
+.black {
   background-color: black;
-  display: inline-block;
 }
 
 #pixel-board {
-  margin-top: 10px;
-  
+  margin-top: 10px;  
   min-width: 212px;
-  max-width: 212px;
-  
+  max-width: 212px;  
 }
 
 .pixel {
