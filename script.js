@@ -3,7 +3,7 @@ function pxBoard() {
   for (let lineIndex = 0; lineIndex < 5; lineIndex += 1) {
     const lineContainer = document.createElement('div');
     lineContainer.className = 'pixel-line';
-    for(let columnIndex = 0; columnIndex < 5; columnIndex += 1) {
+    for (let columnIndex = 0; columnIndex < 5; columnIndex += 1) {
       const pxColumn = document.createElement('div');
       pxColumn.className = 'pixel';
       lineContainer.appendChild(pxColumn);
@@ -32,7 +32,7 @@ function getSelecter() {
 getSelecter();
 
 function bgPaint(event) {
-  let classSelector = document.querySelector('.selected');
+  const classSelector = document.querySelector('.selected');
   event.target.style.backgroundColor = classSelector.style.backgroundColor;
 }
 
