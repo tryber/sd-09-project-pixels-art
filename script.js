@@ -75,7 +75,7 @@ function paletteRandomizer() {
 }
 
 function inputValue() {
-  let input = parseInt(document.getElementById('board-size').value);
+  let input = parseInt(document.getElementById('board-size').value, 10);
   if (input < 5) {
     input = 5;
   } else if (input > 50) {
