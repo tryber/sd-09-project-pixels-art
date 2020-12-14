@@ -20,13 +20,16 @@ function colorizePalette() {
   paletteColor[2].style.backgroundColor = `rgb(${randomNumbers()} , ${randomNumbers()} , ${randomNumbers()})`;
   paletteColor[3].style.backgroundColor = `rgb(${randomNumbers()} , ${randomNumbers()} , ${randomNumbers()})`;
 }
-function createPixelBoard() {
+
+
+
+function createPixelBoard(imputNumber = 5) {
+   deleteBoard()
   const pixelBoard = document.getElementById('pixel-board');
-  const numOfCol = 5;
-  for (let line = 0; line < numOfCol; line += 1) {
+    for (let line = 0; line < imputNumber; line += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.classList.add('pixel-line');
-    for (let col = 0; col < numOfCol; col += 1) {
+    for (let col = 0; col < imputNumber; col += 1) {
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
       pixelLine.appendChild(pixel);
@@ -66,6 +69,19 @@ function clearPixelBoard() {
 function paletteRandomizer() {
   document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
 }
+function newSize () {
+  let imputNumber = parseInt(document.getElementById('boardSize').value);
+  const button = document.getElementById('vqv');
+  button.addEventListener('click',createPixelBoard(imputNumber))
+}
+function deleteBoard() {
+  let line = document.querySelector('#pixel-board').children
+  let linelength = line.length;
+  for (let index = 0; index < linelength; index += 1) {
+    line[0].remove();
+  }
+}
+
 createPalette();
 colorizePalette();
 createPixelBoard();
