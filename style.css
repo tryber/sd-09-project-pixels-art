@@ -1,4 +1,4 @@
-/* SOURCE: 
+/* SOURCE:
 https://www.treinaweb.com.br/blog/css-grid-um-guia-interativo-parte-1-containers/
 link de consulta de como manipular o grid */
 
@@ -6,7 +6,7 @@ link de consulta de como manipular o grid */
   display: grid;
   grid-template-columns: repeat(5, auto);
   justify-content: center;
-  padding-top: 15px;
+  margin-top: 15px;
   width: 100%;
 }
 
@@ -45,4 +45,8 @@ body {
   height: 40px;
   margin: 1px;
   width: 40px;
+}
+
+.buttons {
+  text-align: center;
 }
