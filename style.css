@@ -49,10 +49,6 @@
 #clear-board {
   margin-left: 100px;
 }
-.button {
-  width: 250px;
-  height: 15px;
-}
 .selected {
   border: 3px solid black;
 }
