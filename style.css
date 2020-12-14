@@ -1,25 +1,25 @@
 #color-palette {
   border: solid black 1px;
-  width: 188px;
   height: 45px;
   margin-left: 16px;
+  width: 188px;
 }
 
 .color {
-  width: 45px;
-  height: 45px;
-  display: inline-block;
   border: solid black 1px;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
 }
 
 .black {
   background-color: black;
 }
 
-#pixel-board {
+#pixel-board {  
+  margin-left: 5px;
   margin-top: 30px;
   width: auto;
-  margin-left: 5px;
 }
 
 .pixel {
@@ -27,7 +27,7 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  border: 1px solid black;  
+  border: 1px solid black;
 }
 
 #container div {
@@ -38,23 +38,21 @@
   border-radius: 50px;
 }
 button  {
-  background-color: white;  
+  background-color: white;
 }
 
 #generate-board {
-position: relative;
-left: 140px;
-bottom: 21px;
-border-radius: 50px;
+  border-radius: 50px;
+  bottom: 21px;
+  left: 140px;
+  position: relative;
 }
 
 #board-size {
-position: relative;
-left: 58px;
-bottom: 42px;
-border-radius: 50px;
-min-width: 81px;
-min-height: 21px;
+  border-radius: 50px;
+  bottom: 42px;
+  left: 58px;
+  min-width: 81px;
+  min-height: 21px;
+  position: relative;
 }
-
-
