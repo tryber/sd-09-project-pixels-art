@@ -1,4 +1,4 @@
-div{
+div {
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
@@ -22,7 +22,7 @@ div{
   background-color: rgb(173, 27, 173);
 }
 
-table{
+table {
   background-color: white;
   border: 1px solid black;
   border-collapse: collapse;
@@ -38,7 +38,7 @@ table{
   width: 40px;
 }
 
-.input-button{
+.input-button {
   margin-bottom: 15px;
   margin-top: 5px;
 }
