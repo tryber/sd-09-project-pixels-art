@@ -18,20 +18,17 @@
     background-color: green;
 }
 .pixel {
+    display: inline-block;
+    position: relative;
     border: 1px solid black;
     width: 38px;
     height: 38px;
-	color: white;
-	float: left;
-	color:rgb(255 , 255 , 255);
+    color: white;
+    margin: -2px;
 }
 #pixel-board {
-    width: 216px;
-    height: 216px;
-	width: 210px;
-    height: 210px;
-	margin: 0;
-	line-height: 0;
-	display: flex; 
-    flex-wrap: wrap;
+    display: inline-block;
+    position: absolute;
+    height: 200px;
+    width: 200px;
 }
