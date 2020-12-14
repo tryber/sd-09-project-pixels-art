@@ -1,3 +1,13 @@
+window.onload = function() {
+  createPalette();
+  paintPalette();
+  createPixelBoard();
+  classSelected();
+  paintPixel();
+  clearPixelBoard();
+  randomPalette();
+}
+
 function createPalette() {
   const colorPalette = document.getElementById('color-palette');
   const numberOfColors = 4;
@@ -38,7 +48,7 @@ function getInputValue() {
 function deleteBoard() {
   let lines = document.getElementById('pixel-board').children;
   const boardSize = lines.length;
-  for (let i = 0; i < boardSize; i++) {
+  for (let i = 0; i < boardSize; i += 1) {
     lines[0].remove();
   }
 }
@@ -106,14 +116,4 @@ function newBoard() {
   deleteBoard();
   createPixelBoard(input);
   paintPixel();
-}
-
-window.onload = function() {
-  createPalette();
-  paintPalette();
-  createPixelBoard();
-  classSelected();
-  paintPixel();
-  clearPixelBoard();
-  randomPalette();
 }
