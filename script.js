@@ -61,24 +61,45 @@ function resetButton() {
 
 resetButton();
 
-// Step 10 - Make the pixels board size be set by user
+// Step 10 & 11 - Make the pixels board size be set by user
 function verifyInputValue() {
-  const inputValue = Number(document.querySelector('input').value);
+  let inputValue = Number(document.querySelector('input').value);
   if (inputValue === 0) {
     return alert('Board inválido!');
+  }
+  if (inputValue < 5) {
+    alert('ATENÇÃO! MENOR VALOR É 5!');
+    return inputValue = 5;
+  }
+  if (inputValue > 50) {
+    alert('ATENÇÃO! MAIOR VALOR É 50!');
+    return inputValue = 50;
   }
   return inputValue;
 }
 
 function setNewPixelBoard() {
   const generateButton = document.querySelector('#generate-board');
+  const inputLine = document.querySelector('input');
   generateButton.addEventListener('click', () => {
     document.querySelector('#pixel-board').remove();
-    const input = verifyInputValue();
+    let input = verifyInputValue();
     const newPixelBoard = setNewMatrix(input);
     document.body.insertBefore(newPixelBoard, document.body.childNodes[7]);
     changePixelColor();
     resetButton();
+    inputLine.value = '';
+  });
+  inputLine.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      document.querySelector('#pixel-board').remove();
+      let input = verifyInputValue();
+      const newPixelBoard = setNewMatrix(input);
+      document.body.insertBefore(newPixelBoard, document.body.childNodes[7]);
+      changePixelColor();
+      resetButton();
+      document.querySelector('input').value = '';
+    }
   });
 }
 
