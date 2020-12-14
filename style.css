@@ -1,19 +1,14 @@
-#table { 
-  display: table; 
-}
-.table-row { 
-  display: table-row;
-
-}
-.pixel { 
-  display: table-cell; 
-  width: 40px;
-  height: 40px;
-  border: black solid 1px;
-}
-
 #clear-board {
   margin: 5px 0;
+}
+
+#pixel-board {
+  width: auto;
+  height: auto;
+}
+
+#table {
+  display: table;
 }
 
 .color {
@@ -21,4 +16,16 @@
   display: inline-block;
   height: 35px;
   width: 35px;
+}
+
+.pixel {
+  border: black solid 1px;
+  background-color: white;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.table-row {
+  display: table-row;
 }
