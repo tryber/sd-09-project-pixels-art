@@ -21,16 +21,14 @@ function colorizePalette() {
   paletteColor[3].style.backgroundColor = `rgb(${randomNumbers()} , ${randomNumbers()} , ${randomNumbers()})`;
 }
 
-
-
 function createPixelBoard(imputNumber = 5) {
   if (!imputNumber) {
     alert ('Board inválido!');
     return
   } else if (imputNumber < 5) {
-  imputNumber = 5;
+    imputNumber = 5;
   } else if (imputNumber > 50) {
-  imputNumber = 50;
+    imputNumber = 50;
   }
   deleteBoard()
   const pixelBoard = document.getElementById('pixel-board');
@@ -44,6 +42,7 @@ function createPixelBoard(imputNumber = 5) {
     }
     pixelBoard.appendChild(pixelLine);
   }
+  paintPixel();
 }
 function selectedColor() {
   const colors = document.getElementsByClassName('color');
