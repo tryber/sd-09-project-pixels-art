@@ -24,7 +24,7 @@ body {
   width: 30px;
 }
 
-#color-palette {
+.palette {
   margin-bottom: 30px;
   text-align: center;
 }
@@ -43,7 +43,7 @@ h1 {
   width: 40px;
 }
 
-#pixel-board {
+.board {
   line-height: 0;
   margin: 0 auto;
   text-align: center;
