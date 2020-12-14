@@ -18,8 +18,8 @@
 
 #pixel-board {
   margin-top: 30px;
-  min-width: 210px;
-  max-width: 210px;
+  width: auto;
+  margin-left: 5px;
 }
 
 .pixel {
@@ -27,16 +27,34 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid black;  
 }
 
 #container div {
-  height: 40px;  
+  height: 40px;
 }
 
 #clear-board {
   border-radius: 50px;
 }
-button {
-  background-color: white;
+button  {
+  background-color: white;  
 }
+
+#generate-board {
+position: relative;
+left: 140px;
+bottom: 21px;
+border-radius: 50px;
+}
+
+#board-size {
+position: relative;
+left: 58px;
+bottom: 42px;
+border-radius: 50px;
+min-width: 81px;
+min-height: 21px;
+}
+
+

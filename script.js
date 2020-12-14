@@ -76,6 +76,32 @@ function setPixelBoardColor(event) {
   let pixelColor = event.target;
   pixelColor.style.backgroundColor = setChoosedColor();
 }
+// create and append buttom board size
+function buttonSize () {
+  let append = document.getElementById('color-palette');  
+  let divButton = document.createElement('div');  
+  append.appendChild(divButton);  
+  let button = document.createElement('button')
+  button.innerText = 'VQV';
+  button.id = 'generate-board';
+  append.appendChild(button)  
+}
+
+//create and append buttom choose size
+function chooseSize () {
+  let append = document.getElementById('color-palette');
+  let divButton = document.createElement('div');  
+  append.appendChild(divButton);  
+  let button = document.createElement('button')
+  button.innerText = '';
+  button.id = 'board-size';
+  append.appendChild(button)
+}
+function VQV(){
+  document.getElementById('generate-board')
+  alert('Board inválido!')
+}
+
 // function to append all listeners
 function listenersOnClick() {  
   let colorPalette = document.querySelector('#color-palette');
@@ -84,7 +110,15 @@ function listenersOnClick() {
   pixelBoard.addEventListener('click', setPixelBoardColor);
   let buttonClearPixel = document.querySelector('#clear-board');
   buttonClearPixel.addEventListener('click', clear)
+  let buttonBoardSize = document.querySelector('#generate-board');
+  buttonBoardSize.addEventListener('click', VQV)
+  let buttonChooseSize = document.querySelector('#board-size');
+  buttonChooseSize.addEventListener('click', console.log('aguardando função'))
 }
+
+
+
+
 
 window.onload = function(){  
   createPalette()
@@ -95,12 +129,8 @@ window.onload = function(){
   paletteColors()
   setChoosedColor()
   buttonClear()
+  buttonSize ()
+  chooseSize ()  
   listenersOnClick()  
 }
-
 // criar botão para aumentar a board
-
-
-
-
-
