@@ -72,7 +72,7 @@ function novoBoard(){
   // armazena o valor de input com a funcao getInputalue
   let input = getInputValue(); //parseInt(document.querySelector('input').value) 
   if(!input){ // length = 0
-    alert('Board Inválido!');
+    alert('Board inválido!');
     return; // esse retorno sai da funcao
   }
   deletePixels();
