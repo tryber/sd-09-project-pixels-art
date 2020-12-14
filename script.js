@@ -62,7 +62,7 @@ function buttonClear() {
 function clear() {
   let clearPixel = document.querySelectorAll('.pixel');
   for(let index = 0; index < clearPixel.length; index += 1){
-   clearPixel[index].removeAttribute('style');
+   clearPixel[index].setAttribute("style", "backgroundColor = rgb(255 , 255 , 255)" );
   }
 }
 // created "class mover" to choose colors

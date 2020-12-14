@@ -9,7 +9,7 @@
   width: 45px;
   height: 45px;
   display: inline-block;
-  border: solid black 1px;  
+  border: solid black 1px;
 }
 
 .black {
@@ -31,11 +31,11 @@
 }
 
 #container div {
-  height: 40px;
+  height: 40px;  
 }
 
 #clear-board {
-  border-radius: 50px;  
+  border-radius: 50px;
 }
 button {
   background-color: white;
