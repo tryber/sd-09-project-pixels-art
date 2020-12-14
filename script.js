@@ -14,53 +14,7 @@ function setPalletColors() {
 setPalletColors();
 
 // Step 4 & 5
-function createPixel(className) {
-  const pixel = document.createElement('div');
-  pixel.className = className;
-  return pixel;
-}
-
-function createPixelBoard(idName) {
-  const pixelBoard = document.createElement('div');
-  pixelBoard.id = idName;
-  return document.body.appendChild(pixelBoard);
-}
-
-createPixelBoard('pixel-board');
-
-function setNewMatrix() {
-  const myButton = document.querySelector('#generate-board');
-  const inputNumber = document.querySelector('#board-size');
-  myButton.addEventListener('click', () => {
-    const maxNumberOfPixels = Number(inputNumber.value**2);
-    removePixelBoard(maxNumberOfPixels);
-    fillPixelBoard(maxNumberOfPixels);
-    changePixelColor();
-    selectColor();
-    resetButton();
-  });
-}
-
-setNewMatrix();
-
-function fillPixelBoard(maxNumberOfPixels) {
-  const pixelBoard = document.querySelector('#pixel-board');
-  for (let pixelIndex = 0; pixelIndex < maxNumberOfPixels; pixelIndex += 1) {
-    pixelBoard.appendChild(createPixel('pixel'));
-  }
-}
-
-function removePixelBoard(maxNumberOfPixels) {
-  const pixel = document.querySelectorAll('.pixel')
-  if (pixel.length > maxNumberOfPixels) {
-    maxNumberOfPixels = pixel.length
-  }
-  for (let pixelIndex = 0; pixelIndex < maxNumberOfPixels; pixelIndex += 1) {
-    if (pixel[pixelIndex]) {
-      pixel[pixelIndex].remove();
-    }
-  }
-}
+// Steps done in index.html and style.css documents
 
 // Step 6 & 7
 function selectColor() {
@@ -75,6 +29,8 @@ function selectColor() {
   }
 }
 
+selectColor();
+
 // Step 8
 function changePixelColor() {
   const myPixelArray = document.querySelectorAll('.pixel');
@@ -85,6 +41,8 @@ function changePixelColor() {
     });
   }
 }
+
+changePixelColor();
 
 // Step 9
 function resetColors(pixelArray) {
@@ -100,3 +58,5 @@ function resetButton() {
     resetColors(pixelArray);
   });
 }
+
+resetButton();

@@ -1,3 +1,17 @@
+#table { 
+  display: table; 
+}
+.table-row { 
+  display: table-row;
+
+}
+.pixel { 
+  display: table-cell; 
+  width: 40px;
+  height: 40px;
+  border: black solid 1px;
+}
+
 #clear-board {
   margin: 5px 0;
 }
@@ -7,18 +21,4 @@
   display: inline-block;
   height: 35px;
   width: 35px;
-}
-
-#pixel-board {
-  line-height: 10px;
-  margin-top: 5px;
-  width: 250px;
-}
-
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
 }
