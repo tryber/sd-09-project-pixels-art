@@ -21,6 +21,25 @@ function colorizePalette() {
   paletteColor[3].style.backgroundColor = `rgb(${randomNumbers()} , ${randomNumbers()} , ${randomNumbers()})`;
 }
 
+function deleteBoard() {
+  const line = document.querySelector('#pixel-board').children;
+  const linelength = line.length;
+  for (let index = 0; index < linelength; index += 1) {
+    line[0].remove();
+  }
+}
+
+function paintPixel() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function () {
+      const classSelected = document.querySelector('.color.selected');
+      const classSelectedColor = window.getComputedStyle(classSelected).getPropertyValue('background-color');
+      this.style.backgroundColor = classSelectedColor;
+    });
+  }
+}
+
 function createPixelBoard(imputNumber = 5) {
   if (!imputNumber) {
     alert('Board inválido!');
@@ -55,16 +74,6 @@ function selectedColor() {
     });
   }
 }
-function paintPixel() {
-  const pixels = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', function () {
-      const classSelected = document.querySelector('.color.selected');
-      const classSelectedColor = window.getComputedStyle(classSelected).getPropertyValue('background-color');
-      this.style.backgroundColor = classSelectedColor;
-    });
-  }
-}
 
 function clearPixelBoard() {
   const pixels = document.getElementsByClassName('pixel');
@@ -79,18 +88,10 @@ function paletteRandomizer() {
   document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
 }
 
-function newSize () {
-  let imputNumber = parseInt(document.getElementById('board-size').value);
+function newSize() {
+  const imputNumber = parseInt(document.getElementById('board-size').value);
   const button = document.getElementById('generate-board');
-  button.addEventListener('click',createPixelBoard(imputNumber))
-}
-
-function deleteBoard() {
-  let line = document.querySelector('#pixel-board').children
-  let linelength = line.length;
-  for (let index = 0; index < linelength; index += 1) {
-    line[0].remove();
-  }
+  button.addEventListener('click', createPixelBoard(imputNumber));
 }
 
 createPalette();
