@@ -84,15 +84,15 @@ function inputValue() {
 }
 
 function removeBoard() {
-  let lines = document.querySelector('#pixel-board').children;
-  let lineLength = lines.length;
+  const lines = document.querySelector('#pixel-board').children;
+  const lineLength = lines.length;
   for (let index = 0; index < lineLength; index += 1) {
     lines[0].remove();
   }
 }
 
 function newBoard() {
-  let input = inputValue();
+  const input = inputValue();
   if (!input) {
     alert('Board inválido!');
     return;
