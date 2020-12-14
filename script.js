@@ -29,19 +29,19 @@ function createColorBlocks() {
       colorBlock.style.backgroundColor = 'black';
       colorBlock.classList.add('selected');
     } else {
-        switch (index) {
-          case 1:
-            colorBlock.style.backgroundColor = 'salmon';
-            break;
-          case 2:
-            colorBlock.style.backgroundColor = 'coral';
-            break;
-          case 3:
-            colorBlock.style.backgroundColor = 'crimson';
-            break;
-          default:
-            // do nothing
-        }
+      switch (index) {
+        case 1:
+          colorBlock.style.backgroundColor = 'salmon';
+          break;
+        case 2:
+          colorBlock.style.backgroundColor = 'coral';
+          break;
+        case 3:
+          colorBlock.style.backgroundColor = 'crimson';
+          break;
+        default:
+          // do nothing
+      }
       }
     palette.appendChild(colorBlock);
   }
@@ -65,19 +65,18 @@ function createPixel() {
 }
 
 function colorSelect(evt) {
-  let  evtId = evt.target.id;
+  const evtId = evt.target.id;
   if (evtId !== 'color-palette') {
-  const pastSelected = document.querySelector('.selected');
-  pastSelected.className = 'color'; 
-  evt.target.className = 'color selected';
+    const pastSelected = document.querySelector('.selected');
+    pastSelected.className = 'color';
+    evt.target.className = 'color selected';
   }
 }
 
 function paint(evt) {
   const pastSelected = document.querySelector('.selected');
-  let evtColor = evt.target;
+  const evtColor = evt.target;
   evtColor.style.backgroundColor = pastSelected.style.backgroundColor;
-
 }
 
 window.onload = function () {
