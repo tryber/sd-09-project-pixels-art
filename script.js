@@ -54,7 +54,7 @@ function buttonClear() {
   let divButton = document.createElement('div');  
   append.appendChild(divButton);  
   let button = document.createElement('button')
-  button.innerText = 'Clear Board';
+  button.innerText = 'Limpar';
   button.id = 'clear-board'
   append.appendChild(button)
 }
