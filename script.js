@@ -60,3 +60,52 @@ function resetButton() {
 }
 
 resetButton();
+
+// Step 10 - Make the pixels board size be set by user
+function verifyInputValue() {
+  const inputValue = Number(document.querySelector('input').value);
+  if (inputValue === 0) {
+    return alert('Board inválido!');
+  }
+  return inputValue;
+}
+
+function setNewPixelBoard() {
+  const generateButton = document.querySelector('#generate-board');
+  generateButton.addEventListener('click', () => {
+    document.querySelector('#pixel-board').remove();
+    const input = verifyInputValue();
+    const newPixelBoard = setNewMatrix(input);
+    document.body.insertBefore(newPixelBoard, document.body.childNodes[7]);
+    changePixelColor();
+    resetButton();
+  });
+}
+
+setNewPixelBoard();
+
+function setNewPixel() {
+  const newPixel = document.createElement('div');
+  newPixel.className = 'pixel';
+  return newPixel;
+}
+
+function setNewMatrixRow(inputValue) {
+  const newMatrixRow = document.createElement('div');
+  newMatrixRow.className = 'table-row';
+  for (let element = 0; element < inputValue; element += 1) {
+    const newPixel = setNewPixel();
+    newMatrixRow.appendChild(newPixel);
+  }
+  return newMatrixRow;
+}
+
+function setNewMatrix(inputValue) {
+  const newMatrix = document.createElement('div');
+  newMatrix.id = 'pixel-board';
+  for (let element = 0; element < inputValue; element += 1) {
+    const newMatrixRow = setNewMatrixRow(inputValue);
+    newMatrix.appendChild(newMatrixRow);
+  }
+  return newMatrix;
+}
