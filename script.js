@@ -11,7 +11,7 @@ function createPalette() {
 }
 
 function randomNumbers() {
-	return Math.round(Math.random() * 255);
+  return Math.round(Math.random() * 255);
 }
 
 function colorizePalette() {
@@ -40,24 +40,13 @@ function createPixelBoard(num) {
 createPixelBoard(5);
 
 function getInputValue() {
-  let input = parseInt(document.querySelector('input').value);
+  let input = parseInt(document.querySelector('input').value, 10);
   if (input < 5) {
     input = 5;
   } else if (input > 50) {
     input = 50;
   }
   return input;
-}
-
-function novoBoard() {
-  let input = getInputValue();
-  if (!input) {
-    alert('Board inválido!');
-    return;
-  }
-  deletePixels();
-  createPixelBoard(input);
-  paintPixel();
 }
 
 function selectedColor() {
@@ -85,7 +74,7 @@ function paintPixel() {
 
 function clearPixelBoard() {
   const pixels = document.getElementsByClassName('pixel');
-  document.querySelector('#clear-board').addEventListener('click', function() {
+  document.querySelector('#clear-board').addEventListener('click', function () {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'white';
     }
@@ -97,11 +86,22 @@ function paletteRandomizer() {
 }
 
 function deletePixels() {
-  let lines = document.querySelector('#pixel-board').children;
-  let lineLength = lines.length;
+  const lines = document.querySelector('#pixel-board').children;
+  const lineLength = lines.length;
   for (let i = 0; i < lineLength; i += 1) {
     lines[0].remove();
   }
+}
+
+function novoBoard() {
+  const input = getInputValue();
+  if (!input) {
+    alert('Board inválido!');
+    return;
+  }
+  deletePixels();
+  createPixelBoard(input);
+  paintPixel();
 }
 
 window.onload = function () {
@@ -110,7 +110,7 @@ window.onload = function () {
   createPixelBoard();
   selectedColor();
   paintPixel();
-	clearPixelBoard();
-	randomNumbers();
-	paletteRandomizer();
+  clearPixelBoard();
+  randomNumbers();
+  paletteRandomizer();
 };
