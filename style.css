@@ -57,8 +57,9 @@
 
 /* ====== CAIXA DE PIXELS ======== */
 #pixel-board {
-  display: flex;
-  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px;
+  border: 1px solid black;
   margin-top: 20px;
 }
 

@@ -52,24 +52,14 @@ window.onload = function() {
   }
 
   function createPixelBoard() {
-    const boardSize = 5;
-    const colorPalette = document.getElementById('pixel-board');
+    const boardSize = 25;
+    const board = document.getElementById('pixel-board');
 
     for (let index = 0; index < boardSize; index += 1) {
-      const row = document.createElement('div');
-      row.className = 'row';
-      colorPalette.appendChild(row);
-    }
-
-    const boardRow = document.getElementsByClassName('row');
-
-    for (let indexWidth = 0; indexWidth < boardRow.length; indexWidth += 1) {
-      for (let indexHeight = 0; indexHeight < boardRow.length; indexHeight += 1) {
-        const pixel = document.createElement('div');
-        pixel.classList.add('box', 'pixel');
-        pixel.addEventListener('click', handleFillPixel);
-        boardRow[indexWidth].appendChild(pixel);
-      }
+      const pixel = document.createElement('div');
+      pixel.classList.add('box', 'pixel');
+      pixel.addEventListener('click', handleFillPixel);
+      board.appendChild(pixel);
     }
   }
 
