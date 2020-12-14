@@ -1,13 +1,3 @@
-window.onload = function () {
-  createPalette();
-  colorizePalette();
-  createPixelBoard();
-  selectedElement();
-  colorPixel();
-  clearBoard();
-  paletteRandomizer();
-};
-
 function createPalette() {
   const colorPalette = document.getElementById('color-palette');
   const numOfColors = 4;
@@ -31,9 +21,9 @@ function colorizePalette() {
   paletteColor[3].style.backgroundColor = `rgb(${randomNumbers()}, ${randomNumbers()}, ${randomNumbers()})`;
 }
 
-function createPixelBoard() {
+function createPixelBoard(num) {
   const pixelBoard = document.getElementById('pixel-board');
-  const numOfColumns = 5;
+  const numOfColumns = num;
   for (let row = 0; row < numOfColumns; row += 1) {
     const pixelRow = document.createElement('div');
     pixelRow.classList.add('pixel-row');
@@ -44,7 +34,7 @@ function createPixelBoard() {
     }
     pixelBoard.appendChild(pixelRow);
   }
-}
+} createPixelBoard(5);
 
 function selectedElement() {
   const colors = document.getElementsByClassName('color');
@@ -54,7 +44,7 @@ function selectedElement() {
         colors[index2].classList.remove('selected');
       }
       this.classList.add('selected');
-    })
+    });
   }
 }
 
@@ -83,3 +73,40 @@ function paletteRandomizer() {
   const button = document.querySelector('#randomize-colors');
   button.addEventListener('click', colorizePalette);
 }
+
+function inputValue() {
+  let input = parseInt(document.getElementById('board-size').value);
+  if (input < 5) {
+    input = 5;
+  } else if (input > 50) {
+    input = 50;
+  } return input; 
+}
+
+function removeBoard() {
+  let lines = document.querySelector('#pixel-board').children;
+  let lineLength = lines.length;
+  for (let index = 0; index < lineLength; index += 1) {
+    lines[0].remove();
+  }
+}
+
+function newBoard() {
+  let input = inputValue();
+  if (!input) {
+    alert('Board inválido!');
+  } return;
+  removeBoard();
+  createPixelBoard(input);
+  colorPixel();
+}
+
+window.onload = function () {
+  createPalette();
+  colorizePalette();
+  createPixelBoard();
+  selectedElement();
+  colorPixel();
+  clearBoard();
+  paletteRandomizer();
+};

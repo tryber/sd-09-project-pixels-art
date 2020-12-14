@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Color Palette Project</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -17,7 +19,8 @@
     <div id='buttons'>
       <button id='clear-board'>Limpar</button>
       <button id='randomize-colors'>Randomize colors</button>
-      <input type='text'>
+      <input id='board-size' placeholder='Valor entre 5 e 50'>
+      <button id='generate-board' onclick='newBoard()'>VQV</button>
     </div>
 
     <div id='pixel-board'>
