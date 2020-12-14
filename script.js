@@ -95,7 +95,8 @@ function newBoard() {
   let input = inputValue();
   if (!input) {
     alert('Board inválido!');
-  } return;
+    return;
+  }
   removeBoard();
   createPixelBoard(input);
   colorPixel();
