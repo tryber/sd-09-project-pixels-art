@@ -48,7 +48,4 @@
 }
 #clear-board {
   margin-left: 100px;
-}
-.selected {
-  border: 3px solid black;
-}
+};
