@@ -1,5 +1,4 @@
 let pixelBoard = document.querySelector('#pixel-board');
-let pxColumn = document.querySelector('.pixel-column');
 function pxBoard(){
     for(let lineIndex = 0; lineIndex < 5; lineIndex += 1) {
         let lineContainer = document.createElement('div');
