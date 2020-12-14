@@ -1,6 +1,5 @@
 const reedColors = document.querySelectorAll('#color-palette>div');
 const boardOfPixel = document.querySelector('#pixel-board');
-const divPixels = document.createElement('div');
 
 // Classifica as cores da paleta
 function coloPalette() {
@@ -90,28 +89,40 @@ function colorThree() {
 }
 colorThree();
 
-function selectedDesactivate() {
-  let select = document.querySelector('#color-palette');
-  select.addEventListener('click', function(event) {
+function selectedActivate() {
+  const select = document.querySelector('#color-palette');
+
+    select.addEventListener('click', function (event) {
       if (event.target.className === 'color') {
-      console.log(event.target.className = 'color selected');
-      } else if (event.target.className === 'color selected'){
-      console.log(event.target.className = 'color');
+        event.target.className = 'color selected';
       }
     });
 }
 
+//SOURCE:
+//https://clubmate.fi/remove-a-class-name-from-multiple-elements-with-pure-javascript
+
+  function selectedDesactivate() {
+    const pix = document.querySelectorAll('.color');
+    const select = document.querySelector('#color-palette');
+    select.addEventListener('click', function () {
+      for (let index = 0; index < pix.length; index += 1) {
+        pix[index].classList.remove('selected');
+      }
+    });
+  }
+
 function clearBoard() {
   const button = document.createElement('button');
   button.id = 'clear-board';
-  button.innerHTML = 'Limpar quadro de pixel'
+  button.innerHTML = 'Limpar quadro de pixel';
   const buttonsSection = document.querySelector('#buttons');
   buttonsSection.appendChild(button);
-  const pixelBoard = document.querySelectorAll('.pixel')
+  const pixelBoard = document.querySelectorAll('.pixel');
 
   button.addEventListener('click', function () {
     for (let index = 0; index < pixelBoard.length; index += 1) {
-      let colorsBoard = pixelBoard[index];
+      const colorsBoard = pixelBoard[index];
       colorsBoard.style.backgroundColor = 'white';
     }
   });
@@ -127,4 +138,5 @@ window.onload = function () {
   colorThree();
   selectedDesactivate();
   clearBoard();
+  selectedActivate();
 };
