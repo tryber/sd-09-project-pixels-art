@@ -3,7 +3,7 @@
     height: 100px;
     width: 100px;
     top: 1px;
-    border-style: 1px solid black;
+    border: 1px solid black;
 }
 .black {
     background-color: black;
