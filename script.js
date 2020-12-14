@@ -24,9 +24,17 @@ function colorizePalette() {
 
 
 function createPixelBoard(imputNumber = 5) {
-   deleteBoard()
+  if (!imputNumber) {
+    alert ('Board inválido!');
+    return
+  } else if (imputNumber < 5) {
+  imputNumber = 5;
+  } else if (imputNumber > 50) {
+  imputNumber = 50;
+  }
+  deleteBoard()
   const pixelBoard = document.getElementById('pixel-board');
-    for (let line = 0; line < imputNumber; line += 1) {
+  for (let line = 0; line < imputNumber; line += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.classList.add('pixel-line');
     for (let col = 0; col < imputNumber; col += 1) {
@@ -70,8 +78,8 @@ function paletteRandomizer() {
   document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
 }
 function newSize () {
-  let imputNumber = parseInt(document.getElementById('boardSize').value);
-  const button = document.getElementById('vqv');
+  let imputNumber = parseInt(document.getElementById('board-size').value);
+  const button = document.getElementById('generate-board');
   button.addEventListener('click',createPixelBoard(imputNumber))
 }
 function deleteBoard() {
