@@ -78,7 +78,7 @@ function paintPixel() {
     pixels[index].addEventListener('click', function (event) {
       const classSelected = document.querySelector('.color.selected');
       const classSelectedColor = window.getComputedStyle(classSelected).getPropertyValue('background-color');
-      event.target.style.backgroundColor = classSelectedColor; 
+      event.target.style.backgroundColor = classSelectedColor;
     });
   }
 }
@@ -93,13 +93,13 @@ function clearPixelBoard() {
 }
 
 function paletteRandomizer() {
-  document.querySelector('#randomize-palette').addEventListener('click', colorizePalette)
+  document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
 }
 
-function deletePixels() { 
-  let lines = document.querySelector('#pixel-board').children
+function deletePixels() {
+  let lines = document.querySelector('#pixel-board').children;
   let lineLength = lines.length;
-  for (let i = 0; i < lineLength; i += 1){
+  for (let i = 0; i < lineLength; i += 1) {
     lines[0].remove();
   }
 }
