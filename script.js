@@ -6,7 +6,7 @@ let blackEvent = document.querySelector('.selected').style.backgroundColor;
 const clickWhite = document.querySelector('#clear-board');
 // const whiteColor = document.querySelector('.whiteColor');
 
-pixelBoard.addEventListener('click', function(event) {
+pixelBoard.addEventListener('click', function (event) {
   // console.log(event.target);
   event.target.style.backgroundColor = blackEvent;
   // console.log(blackEvent);
@@ -15,16 +15,16 @@ pixelBoard.addEventListener('click', function(event) {
 function removeClassPrevious() {
   const removeColorSelectClass = document.querySelector('.selected');
   removeColorSelectClass.classList.remove('selected');
-} 
+}
 
-colorPalette.addEventListener('click', function(event) {
+colorPalette.addEventListener('click', function (event) {
   removeClassPrevious();
   // console.log(event.target);
   blackEvent = event.target.style.backgroundColor;
   event.target.classList.add('selected');
 });
 
-clickWhite.addEventListener('click', function() {
+clickWhite.addEventListener('click', function () {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
