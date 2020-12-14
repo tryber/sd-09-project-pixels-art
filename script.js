@@ -64,7 +64,7 @@ function clearBoard() {
   const button = document.getElementById('clear-board');
   button.addEventListener('click', function () {
     for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = 'white';
+      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   });
 }
