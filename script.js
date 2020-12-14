@@ -1,6 +1,6 @@
 //colorir
 let colorPalette = document.getElementById("color-palette")
-let pixelBoard = document.getElementById("table")
+let pixelBoard = document.getElementById("pixel-board")
 let blackEvent = document.querySelector('.selected').style.backgroundColor
 //botão + apagar/ pintar de branco
 let clickWhite = document.querySelector('#clear-board')
@@ -28,19 +28,32 @@ clickWhite.addEventListener("click", function(event){
   }
 
 })
+function removePixel(){
+  let pixelsBoard = document.getElementById('pixel-board');
+  let pixelBoardChildren = pixelsBoard.children;
+  //let length = pixelBoardChildren[0].length;
+  let rowNumbers = Number(pixelBoardChildren[0].children.length);
+  
+  for (let index=rowNumbers-1; index >=0; index -= 1) {
+    pixelBoard.deleteRow(index);
+  }
+}
 
 function addPixels(){
-  let qntPixels = document.getElementById("board-size")
-  if(qntPixels.value > 5 && qntPixels.value < 10){
-    //este bloco de códigos será executado quando for 
-    // digitado números entre 6 e 9
-    //console.log(qntPixels)
-   // alert(qntPixels.value)
-  }else{
-    //este bloco de códigos será executado caso o número
-    //digitado seja menor que 6 e maior que 9
-    //alert("A quantidade de pixels não é adequada")
-  } 
+  let qntPixels = document.getElementById('board-size').value;
+  let qntNumbers = Number(qntPixels);
+  let pixelsBoard = document.getElementById('pixel-board');
+
+  removePixel();
+  for(let index=0; index < qntNumbers; index += 1){
+    let newRow = pixelsBoard.insertRow(index);
+    for(let aux=0; aux < qntNumbers; aux += 1){
+      let newPixel = newRow.insertCell(aux);
+      newPixel.className = 'pixel';
+      newPixel.style.backgroundColor = 'white';
+    }
+  }
+  
 }
 
 document.getElementById('generate-board').addEventListener('click', addPixels)
@@ -60,4 +73,7 @@ function cincoCinquenta(){
    // alert("A quantidade de pixels modificada")
   }
 }
-document.getElementById('generate-board').addEventListener('click', cincoCinquenta)
+
+document.getElementById('board-size').addEventListener('change', cincoCinquenta)
+
+//change: executa quando o usuário tira o foco, ou seja, "desclica".
