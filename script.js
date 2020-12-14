@@ -80,7 +80,7 @@ function inputValue() {
     input = 5;
   } else if (input > 50) {
     input = 50;
-  } return input; 
+  } return input;
 }
 
 function removeBoard() {

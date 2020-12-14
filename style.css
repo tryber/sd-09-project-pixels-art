@@ -8,13 +8,13 @@ body {
   background-color: white;
   border: none;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-family: Montserrat, sans-serif;
   margin-bottom: 30px;
   padding: 15px 32px;
+  size: 40px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  size: 40px;
 }
 
 .color {
@@ -25,13 +25,13 @@ body {
 }
 
 #color-palette {
-  text-align: center;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 h1 {
+  font-family: Montserrat, sans-serif;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .pixel {
