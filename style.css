@@ -1,7 +1,7 @@
 body {
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
   text-align: center;
 }
 .color {
@@ -27,6 +27,6 @@ min-width: 200px;
 }
 
 .pixel-line {
-  margin: 0;
   height: 40px;
+  margin: 0;
 }
