@@ -48,7 +48,7 @@ body {
 }
 
 .buttons:focus {
-  outline: none;
+  outline: #555;
 }
 
 .color {
@@ -99,6 +99,10 @@ header {
   padding: 10px 15px;
   text-align: center;
   width: 150px;
+}
+
+.input:focus {
+  outline: #555;
 }
 
 .menu {
