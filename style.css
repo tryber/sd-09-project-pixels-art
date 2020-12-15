@@ -1,0 +1,113 @@
+header {
+    display: inline-block;
+    width: fit-content;
+    border: #7fc8f8 2px solid;
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 10px grey;
+}
+
+body {
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: Helvetica, sans-serif;
+
+}
+
+#main-content{
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#color-palette {
+    display: inline-block;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.color {
+    display: inline-block;
+    margin: 2px;
+    border: black solid 1.3px;
+    box-shadow: 1px 1px 1px black;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+.color.black {
+    /* background-color: black;      */
+
+}
+
+.color.red {
+    /* background-color: red; */
+
+}
+
+.color.green {
+    /* background-color: green; */
+
+}
+
+.color.blue {
+    /* background-color: blue; */
+}
+
+#button-clear-board{
+    display: inline-block;
+    width: fit-content;
+    margin: 15px;
+
+}
+
+#go-button{
+    align-self: center;
+    text-align: center;
+    position: relative;
+
+}
+
+#clear-board{
+    cursor: pointer;
+}
+
+#input-colunas-e-linhas{
+    display: inline-block;
+    margin-left: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+#linhas, #colunas {
+    width: 50px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 14px;
+    
+}
+
+#pixel-board {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    height: auto;
+}
+
+.pixel {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#sub-header {
+    display: inline-block;
+    width: fit-content;
+}
