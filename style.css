@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 1366px;
   margin: 0 auto;
 }
 
@@ -34,7 +34,6 @@ body {
 }
 
 .selected {
-  /* box-shadow: 6px 6px 6px 6px #ccc; */
   box-shadow: 0 8px 6px -2px gray;
 }
 
@@ -81,12 +80,7 @@ body {
   cursor: pointer;
   box-shadow: 5px 5px 10px grey;
 }
-/* 
-#generate-board {
-  padding: 0 10px;
-} */
 
-/* ====== CAIXA DE PIXELS ======== */
 #clear-board {
   margin: 20px 0;
 }
