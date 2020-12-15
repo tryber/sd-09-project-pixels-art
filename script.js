@@ -23,7 +23,6 @@ function createPixelBoard(num) {
     pixelBoard.appendChild(pixelLine);
   }
 }
-createPixelBoard(5);
 
 function getInputValue() {
   let input = parseInt(document.querySelector('input').value);
@@ -111,7 +110,7 @@ function newBoard() {
 window.onload = function() {
   createPalette();
   paintPalette();
-  createPixelBoard();
+  createPixelBoard(5);
   classSelected();
   paintPixel();
   clearPixelBoard();

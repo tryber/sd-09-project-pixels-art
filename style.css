@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(253, 192, 192);
   border: 0;
   margin: 0;
   padding: 0;
@@ -9,6 +10,20 @@ body {
   display: inline-block;
   height: 40px;
   width: 40px;
+}
+
+#central-background {
+  background-image: url('background.jpg');
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 50px;
+  text-align: center;
+  width: 900px;
+}
+
+h1 {
+  font-family: monospace;
 }
 
 .pixel {
@@ -22,8 +37,8 @@ body {
 }
 
 #pixel-board {
-max-width: 800px;
 min-width: 200px;
+text-align: center;
 }
 
 .pixel-line {
