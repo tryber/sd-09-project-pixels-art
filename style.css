@@ -28,7 +28,7 @@ body {
 
 .buttons {
   background-color: white;
-  border: 2px solid #555555;
+  border: 2px solid #555;
   border-radius: 4px;
   color: black;
   cursor: pointer;
@@ -41,8 +41,8 @@ body {
 }
 
 .buttons:hover {
-  background-color: #555555;
-  border: 2px solid #555555;
+  background-color: #555;
+  border: 2px solid #555;
   border-radius: 4px;
   color: white;
   transition-duration: 500ms;
@@ -57,7 +57,7 @@ body {
 }
 
 footer {
-  background-color:#555555;
+  background-color: #555;
   color: white;
   margin-top: 30px;
   padding: 15px;
@@ -71,21 +71,21 @@ footer p {
 
 h1 {
   font-family: Montserrat, sans-serif;
+  font-size: 45px;
   margin-bottom: 30px;
   margin-top: 0;
-  font-size: 45px;
   padding: 20px;
   text-align: center;
 }
 
 header {
-  background-color: #555555;
+  background-color: #555;
   color: white;
 }
 
 .input {
   background-color: white;
-  border: 2px solid #555555;
+  border: 2px solid #555;
   border-radius: 4px;
   color: black;
   cursor: pointer;
