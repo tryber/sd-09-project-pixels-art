@@ -12,8 +12,8 @@ body {
   width: 40px;
 }
 
-#central-background {
-  background-image: url('background.jpg');
+.central-background {
+  background-color: rgb(1, 12, 58);
   border-radius: 20px;
   margin: 0 auto;
   max-width: 100%;

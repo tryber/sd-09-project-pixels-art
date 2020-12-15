@@ -25,7 +25,7 @@ function createPixelBoard(num) {
 }
 
 function getInputValue() {
-  let input = parseInt(document.querySelector('input').value);
+  let input = parseInt(document.querySelector('input').value, 10);
   if (input < 5 && input > 0){
     input = 5;
   } else if (input > 50) {
