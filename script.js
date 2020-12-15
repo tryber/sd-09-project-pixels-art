@@ -102,6 +102,9 @@ function newBoard() {
   colorPixel();
 }
 
+const vqv = document.querySelector('#generate-board');
+vqv.addEventListener('click', newBoard);
+
 window.onload = function () {
   createPalette();
   colorizePalette();
