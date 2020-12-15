@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Palette Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id='title'>Paleta de Cores</h1>
+  </header>
+
+  <main>
+    <div class='palette' id='color-palette'>
+    </div>
+
+    <div class='menu'>
+      <button class='buttons' id='clear-board'>Limpar</button>
+      <button class='buttons' id='randomize-colors'>Randomize colors</button>
+      <input class='input' type='number' min='1' max ='50' id='board-size' placeholder='Valor entre 5 e 50'>
+      <button class='buttons' id='generate-board'>VQV</button>
+    </div>
+
+    <div class='board' id='pixel-board'>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </main>
+
+  <footer>
+    <div class='links'><a href='https://www.betrybe.com/' target="_blank">Trybe</a><a href='https://github.com/fernandacajueiro' target="_blank">GitHub</a><a href='https://www.linkedin.com/in/fernandacajueiro/' target="_blank">LinkedIn</a></div>
+    <p>Projeto desenvolvido por Fernanda Cajueiro durante o curso de desenvolvimento de software na Trybe, em dezembro de 2020. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
