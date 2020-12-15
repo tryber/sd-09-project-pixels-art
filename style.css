@@ -1,12 +1,12 @@
 a {
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 10px;
   text-decoration: underline;
 }
 
 a:visited {
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 10px;
   text-decoration: underline;
 }
@@ -14,7 +14,7 @@ a:visited {
 .board {
   line-height: 0;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -35,7 +35,6 @@ body {
   font-family: Montserrat, sans-serif;
   margin-bottom: 30px;
   margin-right: 5px;
-  outline: none;
   padding: 10px 15px;
   text-align: center;
 }
@@ -46,6 +45,10 @@ body {
   border-radius: 4px;
   color: white;
   transition-duration: 500ms;
+}
+
+.buttons:focus {
+  outline: none;
 }
 
 .color {
