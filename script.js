@@ -66,7 +66,9 @@ function paintPixel() {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function (event) {
       const classSelected = document.querySelector('.color.selected');
-      const classSelectedColor = window.getComputedStyle(classSelected).getPropertyValue('background-color');
+      const classSelectedColor = window
+        .getComputedStyle(classSelected)
+        .getPropertyValue('background-color');
       event.target.style.backgroundColor = classSelectedColor;
     });
   }
@@ -82,7 +84,9 @@ function clearPixelBoard() {
 }
 
 function paletteRandomizer() {
-  document.querySelector('#randomize-palette').addEventListener('click', colorizePalette);
+  document
+    .querySelector('#randomize-palette')
+    .addEventListener('click', colorizePalette);
 }
 
 function deletePixels() {
