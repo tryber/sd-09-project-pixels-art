@@ -22,6 +22,11 @@ body {
   animation: slide-top 0.5s ease-in both;
 }
 
+#clear-board {
+  display: block;
+  margin: 0.5em auto;
+}
+
 #pixel-board {
   display: inline-block;
   height: 210px;

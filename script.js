@@ -79,6 +79,24 @@ function paint(evt) {
   evtColor.style.backgroundColor = pastSelected.style.backgroundColor;
 }
 
+function createClearButton() {
+  // Used insertBefore documentation https://developer.mozilla.org/pt-BR/docs/Web/API/Node/insertBefore
+  const pixelBoard = document.querySelector('#pixel-board');
+  const clearButton = document.createElement('button');
+  clearButton.id = 'clear-board';
+  clearButton.innerText = 'Limpar';
+  const main = pixelBoard.parentElement;
+  main.insertBefore(clearButton, pixelBoard);
+}
+
+function clear() {
+  const pixel = document.querySelectorAll('.pixel');
+  const numberOfPixels = 25;
+  for (index = 0; index < numberOfPixels; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
+
 window.onload = function () {
   createHeader();
   createMain();
@@ -90,4 +108,7 @@ window.onload = function () {
   palette.addEventListener('click', colorSelect);
   const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.addEventListener('click', paint);
+  createClearButton();
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', clear);
 };
