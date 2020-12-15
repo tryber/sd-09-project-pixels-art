@@ -20,15 +20,15 @@ function randomColors() {
 }
 
 function setRandomNumber() {
-  let randomNumber = parseInt(Math.random()*1000);
+  let randomNumber = parseInt(Math.random() * 1000, 10);
   while (randomNumber > 255) {
     randomNumber = Math.random() * 1000;
-      if (randomNumber < 255) {
-        break;
-      }
+    if (randomNumber <= 255) {
+      break;
     }
+  }
   return randomNumber;
-};
+}
 
 // Step 4 & 5
 // Steps done in index.html and style.css documents
@@ -86,11 +86,13 @@ function verifyInputValue() {
   }
   if (inputValue < 5) {
     alert('ATENÇÃO! MENOR VALOR É 5!');
-    return inputValue = 5;
+    inputValue = 5;
+    return
   }
   if (inputValue > 50) {
     alert('ATENÇÃO! MAIOR VALOR É 50!');
-    return inputValue = 50;
+    inputValue = 50;
+    return
   }
   return inputValue;
 }
@@ -100,7 +102,7 @@ function setNewPixelBoard() {
   const inputLine = document.querySelector('input');
   generateButton.addEventListener('click', () => {
     document.querySelector('#pixel-board').remove();
-    let input = verifyInputValue();
+    const input = verifyInputValue();
     const newPixelBoard = setNewMatrix(input);
     document.body.insertBefore(newPixelBoard, document.body.childNodes[7]);
     changePixelColor();
@@ -110,7 +112,7 @@ function setNewPixelBoard() {
   inputLine.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
       document.querySelector('#pixel-board').remove();
-      let input = verifyInputValue();
+      const input = verifyInputValue();
       const newPixelBoard = setNewMatrix(input);
       document.body.insertBefore(newPixelBoard, document.body.childNodes[7]);
       changePixelColor();
