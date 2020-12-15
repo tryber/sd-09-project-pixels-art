@@ -1,0 +1,31 @@
+#clear-board {
+  margin: 5px 0;
+}
+
+#pixel-board {
+  height: auto;
+  width: auto;
+}
+
+#table {
+  display: table;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.table-row {
+  display: table-row;
+}
