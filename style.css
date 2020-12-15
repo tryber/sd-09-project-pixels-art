@@ -1,0 +1,32 @@
+.container-center {
+    display: inline-block ;
+    
+}
+
+
+.color {
+    width : 50px ;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid black
+
+}
+
+.preta {
+    background-color: black;
+    
+}
+
+.azul {
+    background-color: blue ;
+    display: inline-block;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.vermelho {
+    background-color: red;
+   
+}
