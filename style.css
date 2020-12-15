@@ -7,18 +7,28 @@
   height: 70px;
   margin-left: 15px;
   width: 70px ;
-
-
 }
-#preta {
+.preta {
   background-color: black;
 }
-#azul {
+.azul {
   background-color: blue;
 }
-#amarelo {
+.amarelo {
   background-color: yellow;
 }
-#vermelho {
+.vermelho {
   background-color: red;
+}
+
+#pixel-board{
+  
+}
+
+.pixel {
+  border: 1px solid black ;
+  height:50px;
+  margin-top: 20px;
+  width: 50px;
+  display: inline-block
 }
