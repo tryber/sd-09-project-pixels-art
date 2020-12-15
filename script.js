@@ -87,12 +87,12 @@ function verifyInputValue() {
   if (inputValue < 5) {
     alert('ATENÇÃO! MENOR VALOR É 5!');
     inputValue = 5;
-    return
+    return inputValue;
   }
   if (inputValue > 50) {
     alert('ATENÇÃO! MAIOR VALOR É 50!');
     inputValue = 50;
-    return
+    return inputValue;
   }
   return inputValue;
 }
