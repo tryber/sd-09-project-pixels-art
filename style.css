@@ -12,20 +12,20 @@
     
 }
 
-#preta {
+.preta {
     background-color: black;
 
 }
 
-#azul {
+.azul {
     background-color: blue;
     display: inline-block;
 }
 
-#amarelo {
+.amarelo {
     background-color: yellow;
 }
 
-#vermelho {
+.vermelho {
     background-color: red;
     }
