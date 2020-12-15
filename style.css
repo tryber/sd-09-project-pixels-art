@@ -4,9 +4,8 @@
 .color {
   border: 1px solid black;
   display: inline-block;
-  height: 70px;
-  margin-left: 15px;
-  width: 70px ;
+  height: 40px;
+  width: 40px ;
 }
 .preta {
   background-color: black;
@@ -27,8 +26,8 @@
 
 .pixel {
   border: 1px solid black ;
-  height:50px;
-  margin-top: 20px;
-  width: 50px;
-  display: inline-block
+  height:40px;
+  width: 40px;
+  display: table-cell;
+;
 }
