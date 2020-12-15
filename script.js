@@ -11,9 +11,7 @@ window.onload = function() {
   }
 
   function handleFillPixel(event) {
-    const selectedColor = document.querySelector('.selected');
     const currentPixel = event.target;
-    console.log(currentPixel);
     currentPixel.id = currentColorId;
   }
 
@@ -41,19 +39,68 @@ window.onload = function() {
     }
   }
 
-  function createButton() {
+  function createInputContainer() {
+    const inputContainer = document.createElement('div');
+    inputContainer.id = 'input-container';
+    const clearButton = document.getElementById('clear-board');
+    const container = document.querySelector('#container');
+    container.insertBefore(inputContainer, clearButton);
+  }
+
+  function createInput() {
+    const createInput = document.createElement('input');
+    const inputContainer = document.getElementById('input-container');
+    createInput.id = 'board-size';
+    createInput.setAttribute('placeholder', 'Board size');
+    inputContainer.appendChild(createInput);
+  }
+
+  function handleGenerateBoard() {
+    const oldPixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < oldPixels.length; index += 1) {
+      oldPixels[index].parentNode.removeChild(oldPixels[index]);
+    }
+
+    const input = document.querySelector('#board-size');
+    const inputValue = input.value;
+    createPixelBoard(inputValue);
+  }
+
+  function createInputSizeButton() {
+    const createButton = document.createElement('button');
+    const inputContainer = document.getElementById('input-container');
+    createButton.id = 'generate-board';
+    createButton.className = 'btn';
+    createButton.innerText = 'VQV';
+    createButton.addEventListener('click', handleGenerateBoard);
+    inputContainer.appendChild(createButton);
+  }
+
+  function createClearButton() {
     const button = document.createElement('button');
     button.id = 'clear-board';
-    button.innerText = 'Limpar';
+    button.className = 'btn';
+    button.innerText = 'LIMPAR';
     button.addEventListener('click', handleButton);
     const pixelBoard = document.getElementById('pixel-board');
     const container = pixelBoard.parentNode;
     container.insertBefore(button, pixelBoard);
   }
 
-  function createPixelBoard() {
-    const boardSize = 25;
+  function createPixelBoard(inputValue) {
     const board = document.getElementById('pixel-board');
+    let boardSize;
+    if (inputValue === '') {
+      alert('Board inválido!');
+    }
+    if (inputValue < 5) {
+      minValue = 5;
+      // boardSize = minValue * minValue;
+      inputValue = minValue;
+    }
+    boardSize = inputValue * inputValue;
+
+    board.style.gridTemplateColumns = `repeat(${inputValue}, 40px)`;
 
     for (let index = 0; index < boardSize; index += 1) {
       const pixel = document.createElement('div');
@@ -61,9 +108,13 @@ window.onload = function() {
       pixel.addEventListener('click', handleFillPixel);
       board.appendChild(pixel);
     }
+    
   }
 
   createPaletteColor();
-  createPixelBoard();
-  createButton();
+  createPixelBoard(5);
+  createClearButton();
+  createInputContainer();
+  createInput();
+  createInputSizeButton();
 };

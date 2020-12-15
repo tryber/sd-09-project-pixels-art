@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
 .box {
   border: 1px solid black;
   width: 40px;
@@ -20,12 +24,18 @@
 /* ====== PALETA DE CORES ======== */
 #color-palette {
   display: flex;
+  margin-bottom: 20px;
   /* border: 1px solid black; */
 }
 
 .circle {
   border-radius: 50%;
   margin: 5px;
+}
+
+.selected {
+  /* box-shadow: 6px 6px 6px 6px #ccc; */
+  box-shadow: 0 8px 6px -2px gray;
 }
 
 #black {
@@ -44,23 +54,48 @@
   background-color: rgb(4, 144, 21);
 }
 
-/* ====== CAIXA DE PIXELS ======== */
-#clear-board {
+/* ====== CONTAINER DE INPUT ======== */
+#input-container {
+  display: flex;
+}
+
+.btn {
   border: none;
-  padding: 10px;
-  margin: 20px 0;
+  padding: 0 20px;
+  height: 48px;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+#board-size {
+  width: 110px;
+  height: 48px;
+  padding: 12px 20px;
+  margin-right: 5px;
+  border: 1px solid rgb(204 , 204 , 204);
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px grey;
+}
+/* 
+#generate-board {
+  padding: 0 10px;
+} */
+
+/* ====== CAIXA DE PIXELS ======== */
+#clear-board {
+  margin: 20px 0;
 }
 
 /* ====== CAIXA DE PIXELS ======== */
 #pixel-board {
   display: grid;
-  grid-template-columns: 40px 40px 40px 40px 40px;
   border: 1px solid black;
-  margin-top: 20px;
+  box-shadow: 5px 5px 10px grey;
 }
 
 .pixel {
