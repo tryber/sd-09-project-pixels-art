@@ -5,6 +5,7 @@ body {
   padding: 0;
   text-align: center;
 }
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -37,8 +38,8 @@ h1 {
 }
 
 #pixel-board {
-min-width: 200px;
-text-align: center;
+  min-width: 200px;
+  text-align: center;
 }
 
 .pixel-line {
