@@ -1,24 +1,23 @@
 .container-center {
-    display: inline-block ;
-    
+    display: inline-block;
 }
 
 
 .color {
-    width : 50px ;
-    height: 50px;
+    border: 1px solid black;
     display: inline-block;
-    border: 1px solid black
-
+    height: 50px;
+    width : 50px ;
+    
 }
 
 .preta {
     background-color: black;
-    
+
 }
 
 .azul {
-    background-color: blue ;
+    background-color: blue;
     display: inline-block;
 }
 
@@ -28,5 +27,4 @@
 
 .vermelho {
     background-color: red;
-   
-}
+    }
