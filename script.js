@@ -6,12 +6,29 @@ function setPalletColors() {
   const color4 = document.querySelector('#color-palette').lastElementChild;
 
   color1.style.background = 'black';
-  color2.style.background = 'darkorange';
-  color3.style.background = 'darkviolet';
-  color4.style.background = 'deepskyblue';
+  color2.style.background = randomColors();
+  color3.style.background = randomColors();
+  color4.style.background = randomColors();
 }
 
 setPalletColors();
+
+// Step 12 - random colors
+function randomColors() {
+  const randomColor = `rgb(${setRandomNumber()} ,${setRandomNumber()},${setRandomNumber()})`;
+  return randomColor;
+}
+
+function setRandomNumber() {
+  let randomNumber = parseInt(Math.random()*1000);
+  while (randomNumber > 255) {
+    randomNumber = Math.random() * 1000;
+      if (randomNumber < 255) {
+        break;
+      }
+    }
+  return randomNumber;
+};
 
 // Step 4 & 5
 // Steps done in index.html and style.css documents
