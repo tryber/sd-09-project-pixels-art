@@ -6,8 +6,9 @@
 .color {
     border: 1px solid black;
     display: inline-block;
-    height: 50px;
-    width : 50px ;
+    height: 70px;
+    width : 70px ;
+    margin-left: 15px;
     
 }
 
