@@ -12,19 +12,24 @@
     
 }
 
-.preta {
+#preta {
     background-color: black;
 
 }
 
-.azul {
+#azul {
     background-color: blue;
 }
 
-.amarelo {
+#amarelo {
     background-color: yellow;
 }
 
-.vermelho {
+#vermelho {
     background-color: red;
     }
+
+#color-palete {
+    border: 2px solid black;
+    display: inline-block;
+}
