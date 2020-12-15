@@ -1,5 +1,6 @@
 window.onload = function () {
 };
+
 function createPalette() {
   const colorPalette = document.getElementById('color-palette');
   const numOfColors = 4;
@@ -10,9 +11,11 @@ function createPalette() {
   }
   document.querySelector('.color').classList.add('selected');
 }
+
 function randomNumbers() {
   return Math.round(Math.random() * 255);
 }
+
 function colorizePalette() {
   const paletteColor = document.querySelectorAll('.color');
   paletteColor[0].style.backgroundColor = 'black';
@@ -63,12 +66,13 @@ function createPixelBoard(imputNumber = 5) {
   }
   paintPixel();
 }
+
 function selectedColor() {
   const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', function (event) {
-      for (let others = 0; others < colors.length; others += 1) {
-        colors[others].classList.remove('selected');
+      for (let index2 = 0; index2 < colors.length; index2 += 1) {
+        colors[index2].classList.remove('selected');
       }
       event.target.classList.add('selected');
     });
@@ -89,7 +93,7 @@ function paletteRandomizer() {
 }
 
 function newSize() {
-  const imputNumber = parseInt(document.getElementById('board-size').value);
+  const imputNumber = parseInt(document.getElementById('board-size').value,10);
   const button = document.getElementById('generate-board');
   button.addEventListener('click', createPixelBoard(imputNumber));
 }

@@ -2,9 +2,14 @@
   background-color: black;
 }
 
-#buttons-session {
+#board-size {
+  width: 200px
+}
+
+.button {
   margin: 10px auto;
-  max-width: 250px;
+  display: block;
+  max-width: 600px;
 }
 
 #clear-board {
@@ -13,11 +18,10 @@
 }
 
 #color-palette {
-  border: 3px solid darkgreen;
   height: auto;
   margin: 0 auto;
   max-width: 250px;
-  padding: 5px;
+  padding: 16px;
   text-align: center;
 }
 
@@ -26,6 +30,7 @@
   border-radius: 150px;
   display: inline-block;
   height: 45px;
+  margin-left: 5px;
   text-align: center;
   width: 45px;
 }
@@ -44,7 +49,7 @@
 }
 
 .pixel {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
   height: 40px;
@@ -57,7 +62,13 @@
   margin: 3px;
 }
 
+section {
+  margin-top:0;
+  text-align:center
+}
+
 #title {
-  border: 8px black;
+  background-color: grey;
+  margin: 0%;
   text-align: center;
 }
