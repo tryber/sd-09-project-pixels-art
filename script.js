@@ -93,7 +93,7 @@ function deletePixels() {
   }
 }
 
-function novoBoard() {
+function newBoard() {
   const input = getInputValue();
   if (!input) {
     alert('Board inválido!');
@@ -103,6 +103,9 @@ function novoBoard() {
   createPixelBoard(input);
   paintPixel();
 }
+
+const vqv = document.querySelector('#generate-board');
+vqv.addEventListener('click', newBoard);
 
 window.onload = function () {
   createPalette();
