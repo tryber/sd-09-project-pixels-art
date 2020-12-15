@@ -1,13 +1,3 @@
-window.onload = function() {
-  createPalette();
-  paintPalette();
-  createPixelBoard();
-  classSelected();
-  paintPixel();
-  clearPixelBoard();
-  randomPalette();
-}
-
 function createPalette() {
   const colorPalette = document.getElementById('color-palette');
   const numberOfColors = 4;
@@ -116,4 +106,14 @@ function newBoard() {
   deleteBoard();
   createPixelBoard(input);
   paintPixel();
+}
+
+window.onload = function() {
+  createPalette();
+  paintPalette();
+  createPixelBoard();
+  classSelected();
+  paintPixel();
+  clearPixelBoard();
+  randomPalette();
 }
