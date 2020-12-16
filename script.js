@@ -43,9 +43,9 @@ function bgPaint(event) {
 pixelBoard.addEventListener('click', bgPaint);
 
 const cleaner = document.querySelector('#clear-board');
-const pxel = document.querySelectorAll('.pixel');
 
 function clearboard() {
+  const pxel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pxel.length; index += 1) {
     pxel[index].style.backgroundColor = 'white';
   }
