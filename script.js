@@ -1,9 +1,13 @@
 const pixelBoard = document.querySelector('#pixel-board');
+const boardSize = document.querySelector('#board-size');
+const vqv = document.querySelector('#generate-board');
+let number = 5;
 function pxBoard() {
-  for (let lineIndex = 0; lineIndex < 5; lineIndex += 1) {
+  pixelBoard.innerHTML = '';
+  for (let lineIndex = 0; lineIndex < number; lineIndex += 1) {
     const lineContainer = document.createElement('div');
     lineContainer.className = 'pixel-line';
-    for (let columnIndex = 0; columnIndex < 5; columnIndex += 1) {
+    for (let columnIndex = 0; columnIndex < number; columnIndex += 1) {
       const pxColumn = document.createElement('div');
       pxColumn.className = 'pixel';
       lineContainer.appendChild(pxColumn);
@@ -52,3 +56,13 @@ function btnClick() {
 }
 
 btnClick();
+
+function boardGrowther() {
+  if (boardSize.value === '') window.alert('Board inválido!');
+  if (boardSize.value < 5) boardSize.value = 5;
+  if (boardSize.value > 50) boardSize.value = 50;
+  number = boardSize.value;
+  pxBoard();
+}
+
+vqv.addEventListener('click', boardGrowther);
