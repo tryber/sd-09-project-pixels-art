@@ -54,8 +54,8 @@ pixelBoard.addEventListener('click', function (event) {
     selectedPixel.style.background = selectedColor;
   }
 });
-const buttonClearAll = document.querySelector('#clear-all');
-buttonClearAll.addEventListener('click', function(){
+const buttonClearAll = document.querySelector('#clear-board');
+buttonClearAll.addEventListener('click', function (){
   const whiteColor = '#fff';
   const pixelsBoard = document.getElementsByClassName('pixel');
   for (let element = 0; element < pixelsBoard.length; element += 1) {
