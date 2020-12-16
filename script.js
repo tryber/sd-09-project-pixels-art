@@ -47,6 +47,12 @@ function createColorBlocks() {
   }
 }
 
+function paint(evt) {
+  const pastSelected = document.querySelector('.selected');
+  const evtColor = evt.target;
+  evtColor.style.backgroundColor = pastSelected.style.backgroundColor;
+}
+
 function createPixelBoard(pixelside) {
   const pixelBoard = document.createElement('div');
   const main = document.querySelector('main');
@@ -76,12 +82,6 @@ function colorSelect(evt) {
   }
 }
 
-function paint(evt) {
-  const pastSelected = document.querySelector('.selected');
-  const evtColor = evt.target;
-  evtColor.style.backgroundColor = pastSelected.style.backgroundColor;
-}
-
 function createClearButton() {
   // Used insertBefore documentation https://developer.mozilla.org/pt-BR/docs/Web/API/Node/insertBefore
   const pixelBoard = document.querySelector('#pixel-board');
@@ -105,12 +105,12 @@ function createPixelBoardSize() {
   const sizeButton = document.createElement('input');
   sizeButton.type = 'submit';
   sizeButton.id = 'generate-board';
+  sizeButton.name = 'VQV';
   sizeButton.value = 'VQV';
   const sizeInput = document.createElement('input');
   sizeInput.id = 'board-size';
   sizeInput.type = 'number';
-  sizeInput.min = '5';
-  sizeInput.max = '50';
+  sizeInput.min = '1';
   const sizeDiv = document.createElement('div');
   sizeDiv.id = 'size-container';
   sizeDiv.appendChild(sizeInput);
@@ -118,24 +118,38 @@ function createPixelBoardSize() {
   main.insertBefore(sizeDiv, pixelBoard);
 }
 
+function recreatePixelBoard(userInputSize) {
+  const pixelBoard = document.querySelector('#pixel-board');
+  const numberOfPixels = userInputSize * userInputSize;
+  const pixelbordersize = userInputSize * 2;
+  const pixelside = (userInputSize * 40) + pixelbordersize;
+  pixelBoard.remove();
+  createPixelBoard(pixelside);
+  createPixel(numberOfPixels);
+}
+
 function boardSize() {
   const sizeInput = document.querySelector('#board-size');
-  const pixelBoard = document.querySelector('#pixel-board');
-  if (sizeInput.validity.rangeUnderflow || sizeInput.validity.rangeOverflow || sizeInput.value === '') {
-    alert('Board inválido!');
+  let userInputSize = sizeInput.value;
+  if (userInputSize === '' || userInputSize <= 0) {
+    return alert('Board inválido!');
+  } else if (userInputSize < 5 && userInputSize > 0) {
+    userInputSize = 5;
+    console.log(userInputSize);
+    return recreatePixelBoard(userInputSize);
+  } else if (userInputSize > 50) {
+    userInputSize = 50;
+    console.log(userInputSize);
+    return recreatePixelBoard(userInputSize);
   } else {
-    let numberOfPixels = sizeInput.value * sizeInput.value;
-    let pixelbordersize = sizeInput.value * 2;
-    let pixelside = (sizeInput.value * 40) + pixelbordersize;
-    pixelBoard.remove();
-    createPixelBoard(pixelside);
-    createPixel(numberOfPixels);
+    console.log(userInputSize);
+    return recreatePixelBoard(userInputSize);
   }
 }
 
 window.onload = function () {
-  let numberOfPixels = 25;
-  let pixelside = 210;
+  const numberOfPixels = 25;
+  const pixelside = 210;
   createHeader();
   createMain();
   createPalette();
@@ -145,7 +159,6 @@ window.onload = function () {
   createPixelBoardSize();
   const palette = document.querySelector('#color-palette');
   palette.addEventListener('click', colorSelect);
-  const pixelBoard = document.querySelector('#pixel-board');
   createClearButton();
   const clearButton = document.querySelector('#clear-board');
   clearButton.addEventListener('click', clear);
