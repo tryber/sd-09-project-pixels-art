@@ -11,7 +11,6 @@ function createDiv(nameOfTheClass) {
   }
   return myDiv;
 }
-// Função inspirada na função de construção de DIV do prof Lucas na pagina de alg do triangulo.
 function insertPixel(columnOfTheTable, lineOfTheLoop) {
   for (let index = 0; index < columnOfTheTable; index += 1) {
     const lineOfPixelBoard = document.querySelectorAll('.line')[lineOfTheLoop];
@@ -24,14 +23,12 @@ function insertLine(lineOfTheTable) {
     insertPixel(numberOfLinesAndColumns, line);
   }
 }
-// fim das funções de renderização do pixel-board
 window.onload = function () {
   insertLine(numberOfLinesAndColumns);
 };
 const colorPalette = document.querySelector('#color-palette');
 const pixelBoard = document.querySelector('#pixel-board');
 let selectedColor = document.getElementsByClassName('selected')[0].innerText;
-// inicio das funções de remoção/inserção da classe selected e armazenamento da cor selecionada
 function clearTheSelection() {
   const selectedDiv = document.getElementsByClassName('selected')[0];
   if (selectedDiv) {
@@ -50,8 +47,6 @@ colorPalette.addEventListener('click', function (event) {
     insertSelectedClassAndReturnColor();
   }
 });
-// fim das funções de remoção/inserção da classe selected e armazenamento da cor selecionada
-// inicio das funções de pintura da pixel-board
 pixelBoard.addEventListener('click', function (event) {
   const selectedId = event.target.id;
   if (selectedId !== 'pixel-board') {
@@ -59,7 +54,14 @@ pixelBoard.addEventListener('click', function (event) {
     selectedPixel.style.background = selectedColor;
   }
 });
-// fim das funções de pintura da pixel-board
+const buttonClearAll = document.querySelector('#clear-all');
+buttonClearAll.addEventListener('click', function(){
+  const whiteColor = '#fff';
+  const pixelsBoard = document.getElementsByClassName('pixel');
+  for (let element = 0; element < pixelsBoard.length; element += 1) {
+    pixelsBoard[element].style.background = whiteColor;
+  }
+});
 // inicio da função que colore randomicamente a paleta de cores
 // function (){
 //   document.getElementById("box2").style.color = "rgb(x,x,x)";
