@@ -22,26 +22,15 @@ function createPalette() {
 function createColorBlocks() {
   const numberOfColors = 4;
   for (let index = 0; index < numberOfColors; index += 1) {
-    const colorBlock = document.createElement('div');
     const palette = document.querySelector('#color-palette');
+    const colorBlock = document.createElement('div');
     colorBlock.className = 'color';
     if (index === 0) {
       colorBlock.style.backgroundColor = 'black';
       colorBlock.classList.add('selected');
     } else {
-      switch (index) {
-        case 1:
-          colorBlock.style.backgroundColor = 'salmon';
-          break;
-        case 2:
-          colorBlock.style.backgroundColor = 'coral';
-          break;
-        case 3:
-          colorBlock.style.backgroundColor = 'crimson';
-          break;
-        default:
-          // do nothing
-      }
+      // Utilizei a solução de Henrique Brito para gerar aleatoriamente cores
+        colorBlock.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)})`;
     }
     palette.appendChild(colorBlock);
   }
@@ -105,8 +94,8 @@ function createPixelBoardSize() {
   const sizeButton = document.createElement('input');
   sizeButton.type = 'submit';
   sizeButton.id = 'generate-board';
-  sizeButton.name = 'VQV';
   sizeButton.value = 'VQV';
+  sizeButton.innerHTML = 'VQV';
   const sizeInput = document.createElement('input');
   sizeInput.id = 'board-size';
   sizeInput.type = 'number';
@@ -135,15 +124,12 @@ function boardSize() {
     return alert('Board inválido!');
   } else if (userInputSize < 5 && userInputSize > 0) {
     userInputSize = 5;
-    console.log(userInputSize);
     return recreatePixelBoard(userInputSize);
   } else if (userInputSize > 50) {
     userInputSize = 50;
-    console.log(userInputSize);
     return recreatePixelBoard(userInputSize);
   } else {
-    console.log(userInputSize);
-    return recreatePixelBoard(userInputSize);
+    recreatePixelBoard(userInputSize);
   }
 }
 

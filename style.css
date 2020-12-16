@@ -34,10 +34,11 @@ body {
 /* Used Animista website for the side up animation */
 
 @keyframes slide-top {
-0% {
+  0% {
     transform: translateY(0);
   }
-100% {
+
+  100% {
     transform: translateY(-10px);
   }
 }
