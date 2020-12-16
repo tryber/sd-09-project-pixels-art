@@ -25,12 +25,10 @@ const paleta = document.getElementsByClassName('color');
 function transferSelected(originaryEvent) {
 
     for(let i = 0; i < paleta.length; i += 1) {
-        if (paleta[i].classList[2] === 'selected') {
-            paleta[i].classList.remove('selected')
-        } else if (originaryEvent.target === paleta[i] && paleta[i].classList[2] != 'selected') {
+        
+        paleta[i].classList.remove('selected')
+        if (originaryEvent.target === paleta[i] && paleta[i].classList[2] != 'selected') {
             document.getElementsByClassName('color')[i].className += ' selected';
-        } else {
-
         }
     }
 }
