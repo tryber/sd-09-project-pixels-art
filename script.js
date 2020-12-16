@@ -1,38 +1,45 @@
-const colorsId = ['black', 'red', 'yellow', 'green'];
-let currentColorId;
+let currentColor;
+
+function generateColors() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  const color = `rgb(${red} , ${green} , ${blue})`;
+  return color;
+}
 
 function handleSelectColor(event) {
   const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
-  const currentColor = event.target;
-  currentColorId = event.target.id;
-  currentColor.classList.add('selected');
+  const currentColorElement = event.target;
+  currentColor = event.target.style.backgroundColor;
+  currentColorElement.classList.add('selected');
 }
 
 function handleFillPixel(event) {
   const currentPixel = event.target;
-  currentPixel.id = currentColorId;
+  currentPixel.style.backgroundColor = currentColor;
 }
 
 function handleButton() {
   const board = document.querySelectorAll('.pixel');
   for (let index = 0; index < board.length; index += 1) {
-    board[index].removeAttribute('id');
+    board[index].style.backgroundColor = 'white';
   }
 }
 
 function createPaletteColor() {
   const colorPalette = document.getElementById('color-palette');
-  
-  for (let index = 0; index < colorsId.length; index += 1) {
+  for (let index = 0; index < 4; index += 1) {
     const colorBox = document.createElement('div');
     if (index === 0) {
       colorBox.classList.add('box', 'color', 'circle', 'selected');
-      currentColorId = colorsId[index];
+      colorBox.style.backgroundColor = 'rgb(0 , 0 , 0)';
+      currentColor = 'rgb(0 , 0 , 0)';
     } else {
       colorBox.classList.add('box', 'color', 'circle');
+      colorBox.style.backgroundColor = generateColors();
     }
-    colorBox.id = colorsId[index];
     colorBox.addEventListener('click', handleSelectColor);
     colorPalette.appendChild(colorBox);
   }
@@ -47,11 +54,11 @@ function createInputContainer() {
 }
 
 function createInput() {
-  const createInput = document.createElement('input');
+  const createInputElement = document.createElement('input');
   const inputContainer = document.getElementById('input-container');
-  createInput.id = 'board-size';
-  createInput.setAttribute('placeholder', 'Board size');
-  inputContainer.appendChild(createInput);
+  createInputElement.id = 'board-size';
+  createInputElement.setAttribute('placeholder', 'Board size');
+  inputContainer.appendChild(createInputElement);
 }
 
 function handleGenerateBoard() {
@@ -59,7 +66,6 @@ function handleGenerateBoard() {
   for (let index = 0; index < oldPixels.length; index += 1) {
     oldPixels[index].parentNode.removeChild(oldPixels[index]);
   }
-  
   const input = document.querySelector('#board-size');
   const inputValue = input.value;
   createPixelBoard(inputValue);
@@ -88,8 +94,6 @@ function createClearButton() {
 
 function createPixelBoard(inputValue) {
   const board = document.getElementById('pixel-board');
-  let boardSize;
-  
   if (inputValue === '') {
     alert('Board inválido!');
   }
@@ -101,10 +105,8 @@ function createPixelBoard(inputValue) {
     const maxValue = 50;
     inputValue = maxValue;
   }
-  boardSize = inputValue * inputValue;
-  
+  const boardSize = inputValue * inputValue;
   board.style.gridTemplateColumns = `repeat(${inputValue}, 40px)`;
-  
   for (let index = 0; index < boardSize; index += 1) {
     const pixel = document.createElement('div');
     pixel.classList.add('box', 'pixel');
@@ -114,6 +116,7 @@ function createPixelBoard(inputValue) {
 }
 
 window.onload = function() {
+  generateColors();
   createPaletteColor();
   createPixelBoard(5);
   createClearButton();

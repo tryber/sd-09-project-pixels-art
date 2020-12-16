@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: 'Oxygen', sans-serif;
+  font-family: Oxygen, sans-serif;
 }
 
 .box {
@@ -25,7 +25,6 @@ body {
 #color-palette {
   display: flex;
   margin-bottom: 20px;
-  /* border: 1px solid black; */
 }
 
 .circle {
@@ -35,22 +34,6 @@ body {
 
 .selected {
   box-shadow: 0 8px 6px -2px gray;
-}
-
-#black {
-  background-color: rgb(0, 0, 0);
-}
-
-#red {
-  background-color: rgb(201, 0, 0);
-}
-
-#yellow {
-  background-color: rgb(216, 175, 3);
-}
-
-#green {
-  background-color: rgb(4, 144, 21);
 }
 
 /* ====== CONTAINER DE INPUT ======== */
@@ -64,9 +47,11 @@ body {
   height: 48px;
   text-align: center;
   font-size: 16px;
+  color: white;
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 5px 5px 10px grey;
+  outline: none;
 }
 
 #board-size {
@@ -81,8 +66,13 @@ body {
   box-shadow: 5px 5px 10px grey;
 }
 
+#generate-board {
+  background-color: rgb(0, 140, 186);
+}
+
 #clear-board {
   margin: 20px 0;
+  background-color: rgb(244, 67, 54);
 }
 
 /* ====== CAIXA DE PIXELS ======== */
