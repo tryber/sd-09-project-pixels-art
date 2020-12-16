@@ -58,7 +58,33 @@ function createInput() {
   const inputContainer = document.getElementById('input-container');
   createInputElement.id = 'board-size';
   createInputElement.setAttribute('placeholder', 'Board size');
+  createInputElement.setAttribute('type', 'number');
+  createInputElement.setAttribute('min', '1');
+  createInputElement.setAttribute('max', '50');
   inputContainer.appendChild(createInputElement);
+}
+
+function createPixelBoard(inputValue) {
+  const board = document.getElementById('pixel-board');
+  if (inputValue === '') {
+    alert('Board inválido!');
+  }
+  if (inputValue < 5) {
+    const minValue = 5;
+    inputValue = minValue;
+  }
+  if (inputValue > 50) {
+    const maxValue = 50;
+    inputValue = maxValue;
+  }
+  const boardSize = inputValue * inputValue;
+  board.style.gridTemplateColumns = `repeat(${inputValue}, 40px)`;
+  for (let index = 0; index < boardSize; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.classList.add('box', 'pixel');
+    pixel.addEventListener('click', handleFillPixel);
+    board.appendChild(pixel);
+  }
 }
 
 function handleGenerateBoard() {
@@ -85,37 +111,14 @@ function createClearButton() {
   const button = document.createElement('button');
   button.id = 'clear-board';
   button.className = 'btn';
-  button.innerText = 'LIMPAR';
+  button.innerText = 'Limpar';
   button.addEventListener('click', handleButton);
   const pixelBoard = document.getElementById('pixel-board');
   const container = pixelBoard.parentNode;
   container.insertBefore(button, pixelBoard);
 }
 
-function createPixelBoard(inputValue) {
-  const board = document.getElementById('pixel-board');
-  if (inputValue === '') {
-    alert('Board inválido!');
-  }
-  if (inputValue < 5) {
-    const minValue = 5;
-    inputValue = minValue;
-  }
-  if (inputValue > 50) {
-    const maxValue = 50;
-    inputValue = maxValue;
-  }
-  const boardSize = inputValue * inputValue;
-  board.style.gridTemplateColumns = `repeat(${inputValue}, 40px)`;
-  for (let index = 0; index < boardSize; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.classList.add('box', 'pixel');
-    pixel.addEventListener('click', handleFillPixel);
-    board.appendChild(pixel);
-  }
-}
-
-window.onload = function() {
+window.onload = function () {
   generateColors();
   createPaletteColor();
   createPixelBoard(5);
