@@ -98,6 +98,7 @@ function createClearButton(section) {
   const clearButton = createButton(section);
   clearButton.innerText = 'Limpar';
   clearButton.id = 'clear-board';
+  clearButton.className = 'red-button';
 }
 
 // This function create the elements form and childs.
@@ -129,6 +130,7 @@ function addSizeForm(section) {
   formInput.max = 50;
   inputButton.innerText = 'VQV';
   inputButton.id = 'generate-board';
+  inputButton.className = 'green-button';
   inputButton.type = 'button';
 }
 
@@ -153,6 +155,7 @@ function preventSubmit(event) {
   event.preventDefault();
 }
 
+// Function and Event Listeners call.
 window.onload = function () {
   const paletteColor = document.querySelector('#color-palette');
   const pixelBoard = document.querySelector('#pixel-board');
