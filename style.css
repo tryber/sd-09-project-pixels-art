@@ -11,7 +11,6 @@ body {
 }
 
 .pixel {
-  background-color: white;
   border: solid black 1px;
   display: inline-block;
   height: 40px;
@@ -29,15 +28,16 @@ body {
 
 #pixel-board {
   display: inline-block;
-  height: 210px;
   line-height: 1px;
-  padding: 0;
-  width: 210px;
 }
 
 /* Used Animista website for the side up animation */
 
 @keyframes slide-top {
-  0% {transform: translateY(0);}
-  100% {transform: translateY(-10px);}
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
