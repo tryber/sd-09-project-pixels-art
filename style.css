@@ -1,0 +1,100 @@
+.black {
+  background-color: black;
+}
+
+body {
+  background-color: rgb(11, 30, 30);
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+.cyan {
+  background-color: rgb(65, 234, 212);
+}
+
+.center-button {
+  background-color: black;
+  border: 0;
+  color: white;
+  height: 25px;
+  margin: auto;
+  width: 100px;
+}
+
+.center-input {
+  margin-left: 45%;
+  text-align: center;
+}
+
+.style-board {
+  background-color: black;
+  border: 0;
+  color: white;
+  display: block;
+  height: 35px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  opacity: 1;
+  transition: 1s;
+  width: 100px;
+}
+
+.style-board:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.style-palette {
+  padding: 10px;
+  text-align: center;
+}
+
+.line-pixels {
+  margin: -5px;
+}
+
+.pink {
+  background-color: rgb(255, 32, 110);
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.pixel:hover {
+  cursor: pointer;
+}
+
+.style-pixel-board {
+  text-align: center;
+}
+
+.title-style {
+  color: white;
+  text-align: center;
+}
+
+.white {
+  background-color: white;
+}
+
+.yellow {
+  background-color: rgb(251, 255, 18);
+}
