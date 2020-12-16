@@ -1,0 +1,83 @@
+body {
+  background-color: rgb(3, 107, 82);
+  font-family: sans-serif;
+}
+
+form {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.color {
+  border: black solid 1px;
+  border-radius: 20%;
+  display: inline-block;
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}
+
+.main-page {
+  background-color: rgb(213, 225, 223);
+  border: 5px solid rgb(47, 193, 140);
+  border-radius: 15px;
+  margin: 2% 20%;
+  text-align: center;
+}
+
+.page-footer {
+  background-color: rgb(213, 225, 223);
+  border: 5px solid rgb(47, 193, 140);
+  border-radius: 15px;
+  color: rgb(3, 107, 82);
+  font-size: 15px;
+  margin: 1% 20%;
+  padding: 7px;
+  text-align: center;
+}
+
+.page-header {
+  color: rgb(3, 107, 82);
+  margin: 1% 20%;
+  text-align: center;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  box-sizing: border-box;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.section-board {
+  display: table;
+  margin: 2% auto;
+}
+
+.section-form {
+  margin-top: 1%;
+}
+
+.section-palette {
+  margin-top: 2%;
+}
+
+.table-row {
+  display: table-row;
+}
+
+button {
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.green-button {
+  background-color: green;
+}
+
+.red-button {
+  background-color: red;
+}
