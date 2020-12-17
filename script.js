@@ -4,6 +4,7 @@ window.onload = function() {
   createPixelsBoard();
   selectColor();
   paintThePixel();
+  clearPixels();
   generateButton();
 }
 
@@ -61,7 +62,7 @@ function clearPixels() {
 }
 
 function createPixelsBoard() {
-  const pixelBoard = document.querySelector('#pixel-board');
+  let pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.innerHTML = '';
 
   let inputBoardSize = document.querySelector('#board-size').value;
