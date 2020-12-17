@@ -67,5 +67,4 @@ window.onload = function () {
   clickColor();
   paintSquare();
   button();
-
 };
