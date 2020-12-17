@@ -8,7 +8,7 @@ function randomColors() {
   rgbColor += Math.random() * 255;
   rgbColor += ', ';
   rgbColor += Math.random() * 255;
-  rgbColor += ')'
+  rgbColor += ')';
   return rgbColor;
 }
 
