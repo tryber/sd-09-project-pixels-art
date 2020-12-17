@@ -1,7 +1,7 @@
 function createPalette() {
   const colorPalette = document.getElementById('color-palette');
   const numberOfColors = 4;
-  
+
   for (let index = 0; index < numberOfColors; index += 1) {
     const color = document.createElement('div');
     color.classList.add('color');
@@ -12,7 +12,7 @@ function createPalette() {
 createPalette();
 
 function colorsOfThePalette() {
-  let paletteElements = document.getElementsByClassName('color');
+  const paletteElements = document.getElementsByClassName('color');
   paletteElements[0].style.backgroundColor = 'black';
   paletteElements[1].style.backgroundColor = 'rgb(196, 77, 88)';
   paletteElements[2].style.backgroundColor = 'rgb(199, 244, 100)';
@@ -21,20 +21,20 @@ function colorsOfThePalette() {
 colorsOfThePalette();
 
 function selectColor() {
-  let selectColor = document.querySelectorAll('.color')
-  for (let index = 0; index < selectColor.length; index += 1) {
-    selectColor[index].addEventListener('click', function () {
-      for (let othersIndex = 0; othersIndex < selectColor.length; othersIndex += 1) {
-        selectColor[othersIndex].classList.remove('selected');
+  const selectedColor = document.querySelectorAll('.color');
+  for (let index = 0; index < selectedColor.length; index += 1) {
+    selectedColor[index].addEventListener('click', function () {
+      for (let othersIndex = 0; othersIndex < selectedColor.length; othersIndex += 1) {
+        selectedColor[othersIndex].classList.remove('selected');
       }
       this.classList.add('selected');
-    })
+    });
   }
 }
 selectColor();
 
 function createPixelsBoard() {
-  let pixelBoard = document.querySelector('#pixel-board');
+  const pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.innerHTML = '';
 
   let pixelColumn = document.querySelector('#board-size').value;
@@ -54,13 +54,13 @@ function createPixelsBoard() {
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
 
-      pixel.addEventListener('click', function() {
+      pixel.addEventListener('click', function () {
         const selectedElement = document.querySelector('.color.selected');
         const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
         this.style.backgroundColor = currentColor;
-      })
+      });
       pixelLine.appendChild(pixel);
-    };
+    }
     pixelBoard.appendChild(pixelLine);
   }
 }
