@@ -6,9 +6,9 @@ let number = 5;
 
 function randomColors() {
   for (let index = 1; index < color.length; index += 1) {
-    const randomColor = parseInt(Math.random() * 255);
-    const randomColorDois = parseInt(Math.random() * 255);
-    const randomColorTres = parseInt(Math.random() * 255);
+    const randomColor = parseInt(Math.random() * 255, 10);
+    const randomColorDois = parseInt(Math.random() * 255, 10);
+    const randomColorTres = parseInt(Math.random() * 255, 10);
     color[index].style.backgroundColor = `rgb(${randomColor}, ${randomColorDois}, ${randomColorTres})`;
   }
 }
@@ -79,4 +79,3 @@ function boardGrowther() {
 }
 
 vqv.addEventListener('click', boardGrowther);
-
