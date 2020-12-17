@@ -1,0 +1,34 @@
+.color{
+    display: inline-block;
+    border: black solid 1px;
+    width: 50px;
+    height: 50px
+}
+
+#preto{
+    background-color: black;
+}
+
+#azul{
+    background-color: blue;
+}
+
+#verde{
+    background-color: green;
+}
+
+#vermelho{
+    background-color: red;
+}
+#pixel-board {
+    border: black solid 1px;
+    display: table;
+    margin: 10px auto;
+  }
+  
+  .pixel{
+      border: black solid 1px;
+      height: 40px;
+  width: 40px;
+  background-color: white;
+}
