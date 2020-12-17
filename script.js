@@ -1,10 +1,8 @@
-window.onload = function () {
+window.onload = function() {
   createPalette();
   colorsOfThePalette();
   createPixelsBoard();
   selectColor();
-  clearPixels();
-  generateButton();
 }
 
 function createPalette() {
@@ -40,26 +38,26 @@ function selectColor() {
 }
 
 function clearPixels() {
-  const pixels = document.querySelectorAll('.pixel')
-  document.querySelector('#clear-board').addEventListener('click', function () {
-    for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
-    }
-  })
+  const pixels = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+  }
 }
+
+document.querySelector('#clear-board').addEventListener('click', clearPixels);
 
 function createPixelsBoard() {
   let pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.innerHTML = '';
 
-  let inputBoardSize = document.querySelector('#board-size').value;
-  let pixelColumn = 5;
-
-  if (inputBoardSize >= 5 && inputBoardSize <= 50) {
-    pixelColumn = inputBoardSize;
-  } else if (inputBoardSize > 50) {
+  let pixelColumn = document.querySelector('#board-size').value;
+  if (pixelColumn < 5) {
+    pixelColumn = 5;
+  } else if (pixelColumn > 50) {
     pixelColumn = 50;
   }
+
+  document.querySelector('#board-size').value = pixelColumn;
 
   for (let indexLine = 0; indexLine < pixelColumn; indexLine += 1) {
     const pixelLine = document.createElement('div');
@@ -68,7 +66,8 @@ function createPixelsBoard() {
     for (let indexColumn = 0; indexColumn < pixelColumn; indexColumn += 1) {
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
-      pixel.addEventListener('click', function () {
+
+      pixel.addEventListener('click', function() {
         const selectedElement = document.querySelector('.color.selected');
         const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
         this.style.backgroundColor = currentColor;
@@ -79,6 +78,4 @@ function createPixelsBoard() {
   }
 }
 
-function generateButton() {
-  document.querySelector('#generate-board').addEventListener('click', createPixelsBoard)
-}
+document.querySelector('#generate-board').addEventListener('click', createPixelsBoard);
