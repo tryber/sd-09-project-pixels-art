@@ -1,7 +1,20 @@
 const pixelBoard = document.querySelector('#pixel-board');
 const boardSize = document.querySelector('#board-size');
 const vqv = document.querySelector('#generate-board');
+const color = document.querySelectorAll('.color');
 let number = 5;
+
+function randomColors() {
+  for (let index = 1; index < color.length; index += 1) {
+    const randomColor = parseInt(Math.random() * 255);
+    const randomColorDois = parseInt(Math.random() * 255);
+    const randomColorTres = parseInt(Math.random() * 255);
+    color[index].style.backgroundColor = `rgb(${randomColor}, ${randomColorDois}, ${randomColorTres})`;
+  }
+}
+
+randomColors();
+
 function pxBoard() {
   pixelBoard.innerHTML = '';
   for (let lineIndex = 0; lineIndex < number; lineIndex += 1) {
@@ -66,3 +79,4 @@ function boardGrowther() {
 }
 
 vqv.addEventListener('click', boardGrowther);
+
