@@ -12,35 +12,95 @@ colorOnload()
 function selectColor() {
   
   const color = document.querySelector('#color-palette')
+
   color.addEventListener('click', clickSelectedColor)
 
+ /* const color = document.querySelectorAll('.color')
+ 
+  for(index = 0; index < color.length; index += 1) {
+  
+    color[index].addEventListener('click', function(event){
+      let selected = document.querySelector('.selected')
+
+      selected.classList.remove('selected')
+    
+      event.target.classList.add('selected')
+    })
+  }*/
 }
 
 selectColor()
+
+
+ 
 function clickSelectedColor(event) {
   
-  let selected = document.querySelector('.selected')
+ let selected = document.querySelector('.selected')
 
   selected.classList.remove('selected')
 
   event.target.classList.add('selected')
-  
+
+
+
+
+
+  //----------------------------------------------------
+
+
 }
+
+function setColor() {
+  const colorBlack = document.querySelector('#black')
+  const colorRed = document.querySelector('#red')
+  const colorBlue = document.querySelector('#blue')
+  const colorGreen = document.querySelector('#green')
+
+  colorBlack.style.backgroundColor = 'black'
+  colorRed.style.backgroundColor = 'red'
+  colorBlue.style.backgroundColor = 'blue'
+  colorGreen.style.backgroundColor = 'green'
+}
+
+setColor()
 
 // 8 - Pintar pixel
 
 function selectPixel() {
 
-  const pixels = document.querySelectorAll('.tr')
+  let pixels = document.querySelectorAll('.tr')
+
   
+
   for (index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function(event) {
 
-      event.target.classList.add('selected')
+      const selectedColor = document.querySelector('.selected') 
+      let pixelBg = selectedColor.id//.style.backgroundColor;
 
-      const selected = document.querySelector('.selected')
+      event.target.style.backgroundColor = pixelBg
 
-      let bgColor = selected.style.backgroundColor;
+     /* if (event.target.style.backgroundColor === pixelBg) {
+        event.target.style.backgroundColor = 'white';
+        
+      } else {
+        
+        event.target.style.backgroundColor = pixelBg;
+      }
+    */
+
+    })
+  }
+
+
+ /* 
+  for (index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function(event) {
+
+      const selectedPixel = document.querySelector('.selected')
+      
+
+      let bgColor = selectedPixel.style.backgroundColor;
 
       if (event.target.style.backgroundColor === bgColor) {
         event.target.style.backgroundColor = 'black'
@@ -49,10 +109,7 @@ function selectPixel() {
       }
     })
   }
-  
+  */
+
 }
-
-selectPixel()
-
-
-
+selectPixel( )
