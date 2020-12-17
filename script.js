@@ -27,15 +27,15 @@ function insertLine(lineOfTheTable) {
 function generateARandomColor() {
   let myHex = '#';
   while (myHex.length < 6) {
-    let randomNumber = (Math.ceil(Math.random() * 255));
-    myHex = myHex + randomNumber.toString(16).padStart(2, '0');
+    const randomNumber = (Math.ceil(Math.random() * 255));
+    myHex += randomNumber.toString(16).padStart(2, '0');
   }
   return myHex;
 }
 function randomColors() {
   const myColorBoxes = document.querySelectorAll('.color');
   for (let index = 1; index < myColorBoxes.length; index += 1) {
-    let myHexColor = generateARandomColor();
+    const myHexColor = generateARandomColor();
     myColorBoxes[index].style.background = myHexColor;
     myColorBoxes[index].innerText = myHexColor;
   }
