@@ -9,8 +9,9 @@ h1 {
   border: 1px solid black;
   cursor: pointer;
   display: inline-block;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .color:hover {

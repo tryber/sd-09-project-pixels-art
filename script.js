@@ -4,9 +4,12 @@ let bgColor = 'black';
 function randomColors() {
   let rgbColor = 'rgb(';
   rgbColor += Math.random() * 255;
+  rgbColor += ', ';
   rgbColor += Math.random() * 255;
+  rgbColor += ', ';
   rgbColor += Math.random() * 255;
-  return rgbColor += ')';
+  rgbColor += ')'
+  return rgbColor;
 }
 
 function palletColor() {
@@ -14,14 +17,6 @@ function palletColor() {
   document.querySelector('#colorRandom1').style.backgroundColor = randomColors();
   document.querySelector('#colorRandom2').style.backgroundColor = randomColors();
   document.querySelector('#colorRandom3').style.backgroundColor = randomColors();
-}
-
-function makingSquares() {
-  for (let index = 0; index < 25; index += 1) {
-    const creatSquare = document.createElement('div');
-    creatSquare.classList.add('pixel');
-    pixelBoard.appendChild(creatSquare);
-  }
 }
 
 function selectedClass(event) {
@@ -62,7 +57,6 @@ function button() {
 
 window.onload = function () {
   palletColor();
-  makingSquares();
   clickColor();
   paintSquare();
   button();
