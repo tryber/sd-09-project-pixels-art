@@ -1,10 +1,10 @@
-window.onload = function () {
+window.onload = function() {
   createPalette();
   colorsOfThePalette();
   createPixelsBoard();
   selectColor();
   paintThePixel();
-  clearPixels();
+  generateButton();
 }
 
 function createPalette() {
@@ -27,30 +27,11 @@ function colorsOfThePalette() {
   paletteElements[3].style.backgroundColor = 'rgb(78, 170, 198)';
 }
 
-function createPixelsBoard() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  const pixelColumn = 5;
-
-  for (let indexLine = 0; indexLine < pixelColumn; indexLine += 1) {
-    const pixelLine = document.createElement('div');
-    pixelLine.classList.add('pixel-line');
-
-    for (let indexColumn = 0; indexColumn < pixelColumn; indexColumn += 1) {
-      const pixel = document.createElement('div');
-      pixel.classList.add('pixel');
-      pixelLine.appendChild(pixel);
-
-    };
-    pixelBoard.appendChild(pixelLine);
-  }
-
-}
-
 function selectColor() {
   let selectColor = document.querySelectorAll('.color')
   for (let index = 0; index < selectColor.length; index += 1) {
     selectColor[index].addEventListener('click', function () {
-      for (let othersIndex = 0; othersIndex < index; othersIndex += 1) {
+      for (let othersIndex = 0; othersIndex < selectColor.length; othersIndex += 1) {
         selectColor[othersIndex].classList.remove('selected');
       }
       this.classList.add('selected');
@@ -58,14 +39,14 @@ function selectColor() {
   }
 }
 
-
 function paintThePixel() {
-  const pixels = document.querySelectorAll('.pixel')
+  const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function () {
       const selectedElement = document.querySelector('.color.selected');
       const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
       this.style.backgroundColor = currentColor;
+      alert('pintouuu')
     })
   }
 }
@@ -77,4 +58,33 @@ function clearPixels() {
       pixels[index].style.backgroundColor = 'white';
     }
   })
+}
+
+function createPixelsBoard() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.innerHTML = '';
+
+  let inputBoardSize = document.querySelector('#board-size').value;
+  let pixelColumn = 5;
+
+  if (inputBoardSize >= 5 && inputBoardSize <= 50) {
+    pixelColumn = inputBoardSize
+  }
+
+  for (let indexLine = 0; indexLine < pixelColumn; indexLine += 1) {
+    const pixelLine = document.createElement('div');
+    pixelLine.classList.add('pixel-line');
+
+    for (let indexColumn = 0; indexColumn < pixelColumn; indexColumn += 1) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      pixelLine.appendChild(pixel);
+    };
+    
+    pixelBoard.appendChild(pixelLine);
+  }
+}
+
+function generateButton() {
+  document.querySelector('#generate-board').addEventListener('click', createPixelsBoard)
 }
