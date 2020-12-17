@@ -27,3 +27,32 @@ function clickSelectedColor(event) {
   
 }
 
+// 8 - Pintar pixel
+
+function selectPixel() {
+
+  const pixels = document.querySelectorAll('.tr')
+  
+  for (index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', function(event) {
+
+      event.target.classList.add('selected')
+
+      const selected = document.querySelector('.selected')
+
+      let bgColor = selected.style.backgroundColor;
+
+      if (event.target.style.backgroundColor === bgColor) {
+        event.target.style.backgroundColor = 'black'
+      } else {
+        event.target.style.backgroundColor = bgColor
+      }
+    })
+  }
+  
+}
+
+selectPixel()
+
+
+
