@@ -5,13 +5,13 @@ h1 {
   text-align: center;
 }
 
-.color , .pixel {
+.color,
+.pixel {
   border: 1px solid black;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
-  margin-right: -4px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
 }
 
 .color:hover {
