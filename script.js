@@ -1,5 +1,6 @@
 const myPixelBoard = document.querySelector('#pixel-board');
-const numberOfLinesAndColumns = 5;
+let inputBoardSize = document.querySelector('#board-size');
+let numberOfLinesAndColumns = inputBoardSize.value;
 let numberOfPixels = 0;
 // inicio das funções de renderização do pixel-board
 function createDiv(nameOfTheClass) {
@@ -24,8 +25,10 @@ function insertLine(lineOfTheTable) {
   }
 }
 window.onload = function () {
+  numberOfLinesAndColumns = 5;
   insertLine(numberOfLinesAndColumns);
 };
+// inicio das funções de renderização do pixel-board
 const colorPalette = document.querySelector('#color-palette');
 const pixelBoard = document.querySelector('#pixel-board');
 let selectedColor = document.getElementsByClassName('selected')[0].innerText;
@@ -55,16 +58,31 @@ pixelBoard.addEventListener('click', function (event) {
   }
 });
 const buttonClearAll = document.querySelector('#clear-board');
-buttonClearAll.addEventListener('click', function (){
+buttonClearAll.addEventListener('click', function () {
   const whiteColor = '#fff';
   const pixelsBoard = document.getElementsByClassName('pixel');
   for (let element = 0; element < pixelsBoard.length; element += 1) {
     pixelsBoard[element].style.background = whiteColor;
   }
 });
-// inicio da função que colore randomicamente a paleta de cores
-// function (){
-//   document.getElementById("box2").style.color = "rgb(x,x,x)";
-//   document.getElementById("box2").style.backgroundColor = "rgb(x,x,x)";
-// }
-// fim da função que colore randomicamente a paleta de cores
+const buttonGenerateCustomPixelBoard = document.querySelector('#generate-board');
+buttonGenerateCustomPixelBoard.addEventListener('click', function () {
+  let linesOfBoard = document.getElementsByClassName('line');
+  numberOfPixels = 0;
+  numberOfLinesAndColumns = inputBoardSize.value;
+  if (numberOfLinesAndColumns === '') {
+    alert('Board inválido!');
+  }
+  if (parseInt(inputBoardSize.min) > numberOfLinesAndColumns) {
+    numberOfLinesAndColumns = 5;
+    alert('Você escolheu um numero muito baixo!!\nMudamos para 5.');
+  }
+  if (parseInt(inputBoardSize.max) < numberOfLinesAndColumns) {
+    numberOfLinesAndColumns = 50;
+    alert('Você escolheu um numero muito alto!!\nMudamos para 50.');
+  }
+  while (linesOfBoard.length > 0) {
+    linesOfBoard[0].remove();
+  }
+  insertLine(numberOfLinesAndColumns);
+})
