@@ -1,5 +1,4 @@
 const pixelBoard = document.querySelector('#pixel-board');
-console.log(pixelBoard)
 let bgColor = 'black';
 
 function randomColors() {
@@ -21,6 +20,9 @@ function makingSquares() {
   for (let index = 0; index < 25; index += 1) {
     const creatSquare = document.createElement('div');
     creatSquare.classList.add('pixel');
+    creatSquare.style.height = '40px';
+    creatSquare.style.width = '40px';
+    creatSquare.style.marginRight = '-4px'
     pixelBoard.appendChild(creatSquare);
   }
 }
