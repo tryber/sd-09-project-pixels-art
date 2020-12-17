@@ -1,9 +1,8 @@
-window.onload = function() {
+window.onload = function () {
   createPalette();
   colorsOfThePalette();
   createPixelsBoard();
   selectColor();
-  paintThePixel();
   clearPixels();
   generateButton();
 }
@@ -40,23 +39,11 @@ function selectColor() {
   }
 }
 
-function paintThePixel() {
-  const pixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', function () {
-      const selectedElement = document.querySelector('.color.selected');
-      const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
-      this.style.backgroundColor = currentColor;
-      alert('pintouuu')
-    })
-  }
-}
-
 function clearPixels() {
   const pixels = document.querySelectorAll('.pixel')
   document.querySelector('#clear-board').addEventListener('click', function () {
     for (let index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = 'white';
+      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   })
 }
@@ -69,7 +56,9 @@ function createPixelsBoard() {
   let pixelColumn = 5;
 
   if (inputBoardSize >= 5 && inputBoardSize <= 50) {
-    pixelColumn = inputBoardSize
+    pixelColumn = inputBoardSize;
+  } else if (inputBoardSize > 50) {
+    pixelColumn = 50;
   }
 
   for (let indexLine = 0; indexLine < pixelColumn; indexLine += 1) {
@@ -79,9 +68,13 @@ function createPixelsBoard() {
     for (let indexColumn = 0; indexColumn < pixelColumn; indexColumn += 1) {
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
+      pixel.addEventListener('click', function () {
+        const selectedElement = document.querySelector('.color.selected');
+        const currentColor = window.getComputedStyle(selectedElement).getPropertyValue('background-color');
+        this.style.backgroundColor = currentColor;
+      })
       pixelLine.appendChild(pixel);
     };
-    
     pixelBoard.appendChild(pixelLine);
   }
 }
