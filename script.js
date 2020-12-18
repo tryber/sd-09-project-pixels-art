@@ -1,28 +1,10 @@
 // colorir
 const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
-let blackEvent = document.querySelector('.selected').style.backgroundColor;
+let blackEvent = document.querySelector('.selected');
 // botão + apagar/ pintar de branco
 const clickWhite = document.querySelector('#clear-board');
 // const whiteColor = document.querySelector('.whiteColor');
-
-
-
-  function corAleatoria(){
-    let aleatoria = document.querySelectorAll('.aleatorio');
-
-    for (let index = 0; index < aleatoria.length; index += 1) {
-    const r = parseInt((Math.random()* 225, 10));
-    const g = parseInt((Math.random()* 255, 10));
-    const b = parseInt((Math.random()* 255, 10));
-
-    aleatoria[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-
-    }
-  
-  }
-  corAleatoria()
-
 
 
 pixelBoard.addEventListener('click', function (event) {
@@ -95,6 +77,21 @@ function addPixels() {
   return 0;
 }
 
+ function corAleatoria(){
+    let aleatoria = document.querySelectorAll('.aleatorio');
+
+    for (let index = 0; index < aleatoria.length; index += 1) {
+    const r = parseInt(Math.random()* 225, 10);
+    const g = parseInt(Math.random()* 255, 10);
+    const b = parseInt(Math.random()* 255, 10);
+
+    aleatoria[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    }
+  
+  }
+  corAleatoria()
 document.getElementById('generate-board').addEventListener('click', addPixels);
 document.getElementById('board-size').addEventListener('change', validBoardSize);
 // change: executa quando o usuário tira o foco, ou seja, "desclica".
+//Projeto realizado com ajuda dos colegas da turma 8 e 9
