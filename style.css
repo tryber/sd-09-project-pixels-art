@@ -1,0 +1,44 @@
+div {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 35px;
+}
+
+.red {
+  background-color: rgb(245, 81, 81);
+}
+
+.green {
+  background-color: rgb(7, 110, 7);
+}
+
+.purple {
+  background-color: rgb(173, 27, 173);
+}
+
+table {
+  background-color: white;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-block;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.input-button {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}

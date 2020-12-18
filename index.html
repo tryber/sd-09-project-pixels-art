@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Paleta de Cores</title>
+  </head>
+  <body>
+    <h1 id="title">Paleta de Cores</h1>
+    <div id="color-palette">
+      <div class="color black selected" style="background-color: black;"></div>
+      <div class="color red aleatorio" style="background-color: red;" ></div>
+      <div class="color green aleatorio" style="background-color: green;"></div>
+      <div class="color purple aleatorio" style="background-color: purple;"></div>
+    </div>
+
+    <p>
+      Por favor, adicione um número entre <strong>0</strong> e
+      <strong>50</strong>!
+    </p>
+    <div class="input-button">
+      <input id="board-size" type="number" min="1" max="50"/>
+      <button id="generate-board">VQV</button>
+      <button id="clear-board">Limpar</button>
+    </div>
+
+    <table id="pixel-board">
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+      <tr>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+        <td class="pixel"></td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
