@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
 
+body {
+  background-color: #2f3542;
+}
+
 main {
   width: 100%;
   margin: 20vh auto;
@@ -28,4 +32,10 @@ div .pixel {
 
 .pixel-line {
   height: 40px;
+}
+
+h1 {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 40px;
+  color: #eccc68;
 }
