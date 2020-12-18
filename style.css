@@ -1,7 +1,6 @@
 
 body {  
-  width: 1366px;
-  height: 768px;
+  margin: 0%; 
 }
 #color-palette {
   border: solid black 1px;
