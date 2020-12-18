@@ -1,3 +1,9 @@
+main {
+  width: 100%;
+  margin: 20vh auto;
+  text-align: center;
+}
+
 div .color-palette {
   display: block;
 }
@@ -21,3 +27,5 @@ div .pixel {
 .pixel-line {
   height: 40px;
 }
+
+
