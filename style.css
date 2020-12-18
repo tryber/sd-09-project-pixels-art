@@ -1,0 +1,18 @@
+header {
+    text-align: center;
+}
+
+#color-palette {
+    text-align: center;
+}
+
+.box {
+    border: 1px solid;
+    height: 40px;
+    margin: 0 5px 0 0;
+    width: 40px;
+}
+
+.color {
+    display: inline-block;
+}
