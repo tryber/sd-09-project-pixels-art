@@ -1,7 +1,7 @@
 .color-palette {
-  border: 1px black solid;
-  margin-left: 16px;
+  border: black 1px solid;
   height: 47px;
+  margin-left: 16px;  
   width: 188px;
 }
 

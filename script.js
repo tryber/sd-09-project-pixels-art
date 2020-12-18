@@ -1,6 +1,6 @@
 // creating squares for palette
 function createPalette() {
-  const palette = 4
+  const palette = 4;
   for (let index = 0; index < palette; index += 1) {
     const squareColor = document.createElement('div');
     squareColor.className = 'color';
@@ -35,7 +35,7 @@ function VQV() {
   if (inputSize > 50) {
     document.getElementById('board-size').value = 50;
   }
-  base = document.querySelector('#board-size').value
+  base = document.querySelector('#board-size').value;
   createBoardLine();
 }
 // creating random rgb to set on palette
@@ -130,7 +130,7 @@ function listenersOnClick() {
   buttonBoardSize.addEventListener('click', VQV);
 }
 // invoke assigned functions when open page
-window.onload = function() {
+window.onload = function () {
   createPalette();
   document.querySelector('#color-palette').firstElementChild.classList.add('selected'); // aply class selected to first child
   document.querySelector('#color-palette').firstElementChild.classList.add('black'); //  aply class black to first child start with bg black
@@ -139,7 +139,7 @@ window.onload = function() {
   paletteColors();
   setChoosedColor();
   buttonClear();
-  chooseSize ();
-  buttonSize ();
+  chooseSize();
+  buttonSize();
   listenersOnClick();
-}
+};
