@@ -116,9 +116,7 @@ function VQV() {
   }else if(inputSize < 5) {
     alert('choose a number between 5 and 50');
   }else if (inputSize > 50) {
-    document.getElementById('board-size').onclick = function() {
-      this.value = '50';
-    }
+    document.getElementById('board-size').value = 50
   } else {   
     for (let line = 0; line < inputSize; line += 1) {
       let div = document.createElement('div');
