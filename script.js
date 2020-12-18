@@ -1,7 +1,7 @@
 // creating squares for palette
 function createPalette() {
-  const palette = [1, 2, 3, 4];
-  for (const _index of palette) {
+  const palette = 4
+  for (let index = 0; index < palette; index += 1) {
     const squareColor = document.createElement('div');
     squareColor.className = 'color';
     document.getElementById('color-palette').appendChild(squareColor);
@@ -26,11 +26,17 @@ function createBoardLine() {
 function VQV() {
   document.getElementById('generate-board');
   const inputSize = document.getElementById('board-size').value;
-  if(inputSize === '') {  alert("Board inválido!");  }
-  if(inputSize < 5) {  document.getElementById('board-size').value = 5;  }
-  if(inputSize > 50) {  document.getElementById('board-size').value = 50; }
+  if (inputSize === '') {
+    alert('Board inválido!');
+  }
+  if (inputSize < 5) {
+    document.getElementById('board-size').value = 5;
+  }
+  if (inputSize > 50) {
+    document.getElementById('board-size').value = 50;
+  }
   base = document.querySelector('#board-size').value
-  createBoardLine()
+  createBoardLine();
 }
 // creating random rgb to set on palette
 function getRandomRgb() {
@@ -44,12 +50,16 @@ function getRandomRgb() {
 function paletteColors() {
   let color1 = document.querySelectorAll('.color')[1];
   let color2 = document.querySelectorAll('.color')[2];
-  let color3 = document.querySelectorAll('.color')[3];
+  const color3 = document.querySelectorAll('.color')[3];
   color1.style.backgroundColor = getRandomRgb();
   color2.style.backgroundColor = getRandomRgb();
   color3.style.backgroundColor = getRandomRgb();
-  if(color1 = color2 || color3 || rgb(255, 255, 255)) { color1 = getRandomRgb();  }
-  if(color2 = color3 || rgb(255, 255, 255)) { color2 = getRandomRgb();  }
+  if (color1 = color2 || color3 || rgb(255, 255, 255)) {
+    color1 = getRandomRgb();
+  }
+  if (color2 = color3 || rgb(255, 255, 255)) {
+    color2 = getRandomRgb();
+  }
 }
 // class add and remover to setup class and get choosed color
 function choosePaletteColor(event) {
@@ -60,7 +70,7 @@ function choosePaletteColor(event) {
 function buttonClear() {
   const append = document.getElementById('color-palette');
   const divButton = document.createElement('div');
-  append.appendChild(divButton);  
+  append.appendChild(divButton);
   const button = document.createElement('button');
   button.innerText = 'Limpar';
   button.id = 'clear-board';
@@ -91,7 +101,7 @@ function chooseSize() {
   const divButton = document.createElement('div');
   append.appendChild(divButton);
   const inputNumber = document.createElement('input');
-  inputNumber.setAttribute('type', 'number')
+  inputNumber.setAttribute('type', 'number');
   inputNumber.setAttribute('min', 1);
   inputNumber.id = 'board-size';
   inputNumber.classList = 'allButtons';
@@ -99,7 +109,7 @@ function chooseSize() {
 }
 // create and append buttom board size
 function buttonSize() {
-  const append = document.getElementById('color-palette');  
+  const append = document.getElementById('color-palette');
   const divButton = document.createElement('div');
   append.appendChild(divButton);
   const button = document.createElement('button');
@@ -112,10 +122,10 @@ function buttonSize() {
 function listenersOnClick() {
   const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', choosePaletteColor);
-  const pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.addEventListener('click', setPixelBoardColor);
+  const pixelBoardChooser = document.querySelector('#pixel-board');
+  pixelBoardChooser.addEventListener('click', setPixelBoardColor);
   const buttonClearPixel = document.querySelector('#clear-board');
-  buttonClearPixel.addEventListener('click', clear); 
+  buttonClearPixel.addEventListener('click', clear);
   const buttonBoardSize = document.querySelector('#generate-board');
   buttonBoardSize.addEventListener('click', VQV);
 }
@@ -128,7 +138,7 @@ window.onload = function() {
   getRandomRgb();
   paletteColors();
   setChoosedColor();
-  buttonClear();  
+  buttonClear();
   chooseSize ();
   buttonSize ();
   listenersOnClick();

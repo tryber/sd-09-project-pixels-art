@@ -1,22 +1,26 @@
 .color-palette {
-  border: solid black 1px;
+  border: 1px black solid;
   margin-left: 16px;
   height: 47px;
   width: 188px;
 }
+
 .color {
   border: solid black 1px;
   display: inline-block;
   height: 45px;
   width: 45px;
 }
+
 .black {
   background-color: black;
 }
-.pixel-board {  
+
+.pixel-board {
   margin-left: 5px;
   margin-top: 30px;
 }
+
 .pixel {
   background-color: white;
   border: 1px solid black;
@@ -24,12 +28,15 @@
   height: 40px;
   width: 40px;
 }
+
 .container div {
   height: 40px;
 }
+
 button {
   background-color: white;
 }
+
 .allButtons {
   border-radius: 50px;
   display: block;
