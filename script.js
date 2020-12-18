@@ -20,6 +20,10 @@ function createBoardLine() {
     document.getElementById('pixel-board').appendChild(div);
   }
 }
+// function get input and set new board size
+function setupBoardSize () {
+  
+}
 // creating random rgb to set on palette
 function getRandomRgb() {
   let num = Math.round(0xffffff * Math.random());
@@ -56,6 +60,7 @@ function buttonClear() {
   let button = document.createElement('button');
   button.innerText = 'Limpar';
   button.id = 'clear-board';
+  button.classList = 'allButtons';
   append.appendChild(button);
 }
 // add function clear to button
@@ -76,6 +81,18 @@ function setPixelBoardColor(event) {
   let pixelColor = event.target;
   pixelColor.style.backgroundColor = setChoosedColor();
 }
+
+// create and append buttom choose size
+function chooseSize() {
+  let append = document.getElementById('color-palette');
+  let divButton = document.createElement('div');
+  append.appendChild(divButton);
+  let inputNumber = document.createElement('input');
+  inputNumber.setAttribute('type', 'number')
+  inputNumber.id = 'board-size';
+  inputNumber.classList = 'allButtons';
+  append.appendChild(inputNumber);
+}
 // create and append buttom board size
 function buttonSize() {
   let append = document.getElementById('color-palette');  
@@ -84,22 +101,27 @@ function buttonSize() {
   let button = document.createElement('button');
   button.innerText = 'VQV';
   button.id = 'generate-board';
+  button.classList = 'allButtons';
   append.appendChild(button);
 }
-// create and append buttom choose size
-function chooseSize() {
-  let append = document.getElementById('color-palette');
-  let divButton = document.createElement('div');
-  append.appendChild(divButton);
-  let button = document.createElement('button');
-  button.innerText = '';
-  button.id = 'board-size';
-  append.appendChild(button);
-}
-// create function to set limits on size or alert when over extend 
+// create function to set limits on size or alert when lower or highter than choosed param 
 function VQV() {
   document.getElementById('generate-board');
-  alert('Board inválido!');
+  let inputSize = document.getElementById('board-size').value;
+  if(inputSize < 5 || inputSize > 50 || inputSize === '') {
+    alert("Board inválido!");
+  } else {  
+    let base = document.getElementById('board-size').value;
+    for (let line = 0; line < base; line += 1) {
+      let div = document.createElement('div');
+      for (let colum = 0; colum < base; colum += 1) {
+        let pixel = document.createElement('div');
+        pixel.className = 'pixel';
+        div.appendChild(pixel);
+      }
+      document.getElementById('pixel-board').appendChild(div);
+    }
+  }
 }
 // function to append all listeners
 function listenersOnClick() {
@@ -108,11 +130,9 @@ function listenersOnClick() {
   let pixelBoard = document.querySelector('#pixel-board');
   pixelBoard.addEventListener('click', setPixelBoardColor);
   let buttonClearPixel = document.querySelector('#clear-board');
-  buttonClearPixel.addEventListener('click', clear);
+  buttonClearPixel.addEventListener('click', clear); 
   let buttonBoardSize = document.querySelector('#generate-board');
   buttonBoardSize.addEventListener('click', VQV);
-  let buttonChooseSize = document.querySelector('#board-size');
-  buttonChooseSize.addEventListener('click', console.log('aguardando função'));
 }
 // invoke assigned functions when open page
 window.onload = function() {
@@ -123,8 +143,8 @@ window.onload = function() {
   getRandomRgb();
   paletteColors();
   setChoosedColor();
-  buttonClear();
-  buttonSize ();
+  buttonClear();  
   chooseSize ();
+  buttonSize ();
   listenersOnClick();
 }
