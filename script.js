@@ -20,10 +20,6 @@ function createBoardLine() {
     document.getElementById('pixel-board').appendChild(div);
   }
 }
-// function get input and set new board size
-function setupBoardSize () {
-  
-}
 // creating random rgb to set on palette
 function getRandomRgb() {
   let num = Math.round(0xffffff * Math.random());
@@ -81,7 +77,6 @@ function setPixelBoardColor(event) {
   let pixelColor = event.target;
   pixelColor.style.backgroundColor = setChoosedColor();
 }
-
 // create and append buttom choose size
 function chooseSize() {
   let append = document.getElementById('color-palette');
@@ -89,6 +84,7 @@ function chooseSize() {
   append.appendChild(divButton);
   let inputNumber = document.createElement('input');
   inputNumber.setAttribute('type', 'number')
+  
   inputNumber.id = 'board-size';
   inputNumber.classList = 'allButtons';
   append.appendChild(inputNumber);
@@ -104,17 +100,29 @@ function buttonSize() {
   button.classList = 'allButtons';
   append.appendChild(button);
 }
-// create function to set limits on size or alert when lower or highter than choosed param 
+// create function to set limits on size or alert when lower or highter than choosed param
+// this function set board size too
+function changeInput() {
+  let changeInput = document.getElementById('board-size').value
+  changeInput = function() {
+    this.value = '50'
+  }
+}
 function VQV() {
   document.getElementById('generate-board');
   let inputSize = document.getElementById('board-size').value;
-  if(inputSize < 5 || inputSize > 50 || inputSize === '') {
+  if(inputSize === '') {
     alert("Board inválido!");
-  } else {  
-    let base = document.getElementById('board-size').value;
-    for (let line = 0; line < base; line += 1) {
+  }else if(inputSize < 5) {
+    alert('choose a number between 5 and 50');
+  }else if (inputSize > 50) {
+    document.getElementById('board-size').onclick = function() {
+      this.value = '50';
+    }
+  } else {   
+    for (let line = 0; line < inputSize; line += 1) {
       let div = document.createElement('div');
-      for (let colum = 0; colum < base; colum += 1) {
+      for (let colum = 0; colum < inputSize; colum += 1) {
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
         div.appendChild(pixel);
