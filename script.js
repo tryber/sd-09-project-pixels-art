@@ -34,10 +34,11 @@ function selectColor() {
 selectColor();
 
 function createPixelsBoard() {
+  let pixelColumn = document.querySelector('#board-size').value;
   const pixelBoard = document.querySelector('#pixel-board');
+
   pixelBoard.innerHTML = '';
 
-  let pixelColumn = document.querySelector('#board-size').value;
   if (pixelColumn < 5) {
     pixelColumn = 5;
   } else if (pixelColumn > 50) {
