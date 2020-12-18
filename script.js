@@ -1,6 +1,6 @@
 // colorir
 const colorPalette = document.getElementById('color-palette');
-const pixelBoard = document.getElementById('pixel-board').style.backgroundColor;
+const pixelBoard = document.getElementById('pixel-board');
 let blackEvent = document.querySelector('.selected');
 // botão + apagar/ pintar de branco
 const clickWhite = document.querySelector('#clear-board');
