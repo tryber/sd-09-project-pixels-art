@@ -6,6 +6,25 @@ let blackEvent = document.querySelector('.selected').style.backgroundColor;
 const clickWhite = document.querySelector('#clear-board');
 // const whiteColor = document.querySelector('.whiteColor');
 
+
+
+  function corAleatoria(){
+    let aleatoria = document.querySelectorAll('.aleatorio');
+
+    for (let index = 0; index < aleatoria.length; index += 1) {
+    const r = parseInt((Math.random()* 225, 10));
+    const g = parseInt((Math.random()* 255, 10));
+    const b = parseInt((Math.random()* 255, 10));
+
+    aleatoria[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    }
+  
+  }
+  corAleatoria()
+
+
+
 pixelBoard.addEventListener('click', function (event) {
   // console.log(event.target);
   event.target.style.backgroundColor = blackEvent;
