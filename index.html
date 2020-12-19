@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Pixel Art</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 id="title">Paleta de Cores</h1>
+    <nav id="color-palette" class="color-palette-style">
+      <div class="color selected"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </nav>
+    <div class="box-input">
+      <input type="number" min="1" max="50" id="board-size" placeholder="Quantidade de pixels">
+      <button id="generate-board" class="btn blue">VQV</button>
+      <button id="clear-board" class="btn red">Limpar</button>
+    </div>
+  </header>
+  <main class="main-container">
+    <section id="pixel-board" class="pixel-board-style"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
