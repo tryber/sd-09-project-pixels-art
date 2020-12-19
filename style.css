@@ -1,0 +1,55 @@
+.color {
+    border: solid black 1px;
+    display:inline-block;
+}
+#black {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+#green {
+    background-color: green;
+    width: 50px;
+    height: 50px;
+}
+#yellow {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+}
+#blue {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+#pixel-board {
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+}
+.row {
+    display:table-row;
+}
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display:table-cell;
+    border: solid black 1px;
+}
+#title {
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    background-image: url('bgheader.png');
+    padding: 15px;
+    text-align: center;
+}
+main {
+    text-align: center;
+}
+#clear-board {
+    padding: 5px;
+    background-color: rgb(121, 233, 121);
+    margin: 15px;
+    color: forestgreen;
+}
