@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: #f5f6fa;
+    font-family: sans-serif;
+  }
+  
+  main {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    height: 1000px;
+  }
+  
+  h1 {
+    padding: 20px;
+  }
+  
+  
+  .color {
+    width: 15px;
+    height: 15px;
+    border: solid 1px black;
+    padding: 10px;
+    margin: 15px;
+    display: inline-block;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.6s;
+    filter: grayscale(38%);
+    transform: rotate(180deg);
+    
+  }
+  
+  .color:nth-child(2) {
+    background-color: #EA2027;
+  }
+  
+  .color:nth-child(3) {
+    background-color: #2ed573;
+  }
+  
+  .color:nth-child(4) {
+    background-color: #40407a;
+  }
+  
+  .color:nth-child(5) {
+    background-color: #fbc531;
+  }
+  
+  .color:nth-child(6) {
+    background-color: #341f97;
+  }
+  
+  .color:nth-child(7) {
+    background-color: #48dbfb;
+  }
+  
+  .color:nth-child(7) {
+    background-color: #ff3f34;
+  }
+  
+  .color:nth-child(8) {
+    background-color: #fa8231;
+  }
+  
+  .color:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+    filter: grayscale(0%);
+    border: none;
+  }
+
+  #pixel-board {
+      margin: auto;
+      display: inline-block;
+      margin-top: 20px;
+      width: 420px;
+  }
+
+  .pixel {
+      background-color: white;
+      width: 40px;
+      height: 40px;
+      display: block;
+      border: 1px solid black;
+      float: left;
+      margin: auto;
+      padding: 20px;
+  }
+  
+  button {
+      outline: none;
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 8px 12px;
+      font-weight: 600;
+      border-radius: 2px;
+      transition: 0.6s;
+      cursor: pointer;
+      font-size: 15px;
+  }
+
+
+  button:hover {
+      background-color: red;
+  }
+  /* 
+  
+  @keyframes blockRotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(180deg);}
+  }
+  
+  
+  transform: rotate(315deg)
+   */
+  

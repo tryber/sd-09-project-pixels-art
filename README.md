@@ -152,7 +152,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
 
-- O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada `pixel`;
+- O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada ``;
 
 - A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
 
