@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
   background-color: rgb(241, 242, 246);
@@ -39,9 +39,9 @@ div .pixel {
 }
 
 h1 {
-  font-family: 'Bungee Outline', cursive;
-  font-size: 40px;
-  color: rgb(55, 66, 250);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  color: rgb(30, 144, 255);
 }
 
 .selected {
