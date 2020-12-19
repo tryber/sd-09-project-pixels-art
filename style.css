@@ -1,9 +1,14 @@
 header {
     text-align: center;
+    background-color: blueviolet;
+    height: 100px;
+    padding-top: 25px;
+    margin-bottom: 30px;
 }
 
 #color-palette {
     text-align: center;
+    
 }
 
 .box {

@@ -1,6 +1,7 @@
 const boxPallet = document.querySelector('#color-palette');
 const divPixels = document.querySelector('#pixel-boards')
 
+
 //cria a caixa tabela da paleta
 const palletColors = 4;
 function boxPalletCollors() {
@@ -10,12 +11,23 @@ function boxPalletCollors() {
         boxPallet.appendChild(boxCollors);
     }
 }
+boxPalletCollors()
+
 //adiciona cor classe de cor fixa ao primeiro filho
-function firstPallet() {
+function firstPalletBlack() {
     const firstCollor = document.querySelector('.color');
     firstCollor.style.backgroundColor = 'black';
 }
+firstPalletBlack()
 
-
-boxPalletCollors()
-firstPallet()
+//coloca cores aleatorias as paletas 
+const colorDaClasse = document.querySelectorAll('.color');
+function randonColor() {
+    for (let index = 1; index < colorDaClasse.length; index += 1) {
+        const randonFirstColor = parseInt(Math.random() * 255, 10);
+        const randonSecondColor = parseInt(Math.random() * 255, 10);
+        const randonThirdColor = parseInt(Math.random() * 255, 10);
+        colorDaClasse[index].style.backgroundColor = `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
+    }
+}
+randonColor()
