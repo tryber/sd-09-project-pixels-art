@@ -22,6 +22,7 @@ div .color-palette {
   margin: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  position: relative;
 }
 
 div .pixel {
@@ -43,4 +44,7 @@ h1 {
   color: #eccc68;
 }
 
-
+.selected {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px;
+}
