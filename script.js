@@ -5,6 +5,7 @@ for (let key = 0; key < 4; key += 1) {
   let linhaItens = linha[key];
   let colunaPallete = document.createElement('th');
   colunaPallete.className = linhaItens;
+  
   colorPallette.appendChild(colunaPallete);
 }
 
@@ -16,7 +17,7 @@ paletta.appendChild(linhaPaleta);
 
 for (let key = 0; key < 5; key += 1) {
   let linhasPixel = document.querySelector('#pixelBoard');
-  let pixelIndivid = document.createElement('th');
+  let pixelIndivid = document.createElement('td');
   pixelIndivid.className = 'pixel';
   linhasPixel.appendChild(pixelIndivid);
 }
@@ -29,7 +30,7 @@ paletta1.appendChild(linhaPaleta1);
 let linhasPixel1 = document.querySelector('#pixelBoard1');
 for (let key = 0; key < 5; key += 1) {
   //linhaPaleta.innerHTML=[key];
-  let pixelIndivid1 = document.createElement('th');
+  let pixelIndivid1 = document.createElement('td');
   pixelIndivid1.className = 'pixel';
   linhasPixel1.appendChild(pixelIndivid1)
 }
@@ -42,7 +43,7 @@ paletta2.appendChild(linhaPaleta2);
 let linhasPixel2 = document.querySelector('#pixelBoard2');
 for (let key = 0; key < 5; key += 1) {
   //linhaPaleta.innerHTML=[key];
-  let pixelIndivid2 = document.createElement('th');
+  let pixelIndivid2 = document.createElement('td');
   pixelIndivid2.className = 'pixel';
   linhasPixel2.appendChild(pixelIndivid2)
 }
@@ -55,7 +56,7 @@ paletta3.appendChild(linhaPaleta3);
 let linhasPixel3 = document.querySelector('#pixelBoard3');
 for (let key = 0; key < 5; key += 1) {
   //linhaPaleta.innerHTML=[key];
-  let pixelIndivid3 = document.createElement('th');
+  let pixelIndivid3 = document.createElement('td');
   pixelIndivid3.className = 'pixel';
   linhasPixel3.appendChild(pixelIndivid3)
 }
@@ -67,17 +68,71 @@ paletta4.appendChild(linhaPaleta4);
 let linhasPixel4 = document.querySelector('#pixelBoard4');
 for (let key = 0; key < 5; key += 1) {
   //linhaPaleta.innerHTML=[key];
-  let pixelIndivid4 = document.createElement('th');
+  let pixelIndivid4 = document.createElement('td');
   pixelIndivid4.className = 'pixel';
   linhasPixel4.appendChild(pixelIndivid4)
 }
 
 
-// for (let key =0; key<5; key+=1){
-//     let linhaPaleta = document.createElement('th');
-//      linhaPaleta.innerHTML=pixelQuadro[key];
-//     linhaPaleta.className = 'pixel';
+const corBlack = document.querySelector('.black');
+corBlack.addEventListener('click',getColor1);
 
-//   paletta.appendChild(linhaPaleta);
-//  }
-//  }
+const corRed = document.querySelector('.red');
+corRed.addEventListener('click',getColor2);
+
+const corBlue = document.querySelector('.blue');
+corBlue.addEventListener('click',getColor3);
+
+const corYellow = document.querySelector('.yellow');
+corYellow.addEventListener('click',getColor4);
+
+
+
+
+
+
+
+function getColor1(){
+  
+  colorSelected = 'black';
+  let bloco = document.querySelector('.pixel');
+
+  bloco.addEventListener('click', pintar0)
+  
+  
+ 
+}
+function pintar(){
+  bloco.style.backgroundColor = colorDest;
+ }
+
+
+function getColor2(){
+  colorSelected = 'red';
+  
+  
+  
+}
+function getColor3(){
+  
+  colorSelected = 'blue';
+}
+function getColor4(){
+  colorSelected = 'yellow';
+  
+  
+
+}
+
+
+
+windows.onload = colorDest;
+
+function colorDest(){
+  
+  var colorSelected = 'black';
+} 
+
+
+
+
