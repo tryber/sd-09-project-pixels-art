@@ -37,12 +37,12 @@ removeAllChildFromPixelBoard();
 function getInputValue() {
   let inputPixels = document.querySelector('#board-size').value;
   inputPixels = parseInt(inputPixels);
-    if (inputPixels < 5) {
+    if (inputPixels > input.min && inputPixels < 5) {
       inputPixels = 5;
     } else if (inputPixels > 50) {
       inputPixels = 50;
-    } else if (inputPixels < 0 || isNaN(inputPixels)) {
-      alert('Board inválido!');
+    } else if (inputPixels < input.min || isNaN(inputPixels)) {
+      inputPixels = false;
     }
   return inputPixels;
 }
@@ -165,13 +165,17 @@ function clearBoard() {
 
 function generateUserBoard() {
   const inputNumber = getInputValue();
-  removeAllChildFromPixelBoard();
-  GeneratePixelBoard(inputNumber);
-  clearBoard();
-  blackColor();
-  colorOne();
-  colorTwo();
-  colorThree();
+  if (inputNumber === false) {
+    alert('Board inválido!');
+  } else {
+    removeAllChildFromPixelBoard();
+    GeneratePixelBoard(inputNumber);
+    clearBoard();
+    blackColor();
+    colorOne();
+    colorTwo();
+    colorThree();
+  }
 }
 
 buttonPixel.addEventListener('click', generateUserBoard);
