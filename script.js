@@ -14,7 +14,7 @@ sectionsOfButtons.appendChild(buttonPixel);
 const button = document.createElement('button');
 button.id = 'clear-board';
 button.className = 'button';
-button.innerHTML = 'Clear Board';
+button.innerHTML = 'Limpar';
 const buttonsSection = document.querySelector('#buttons');
 buttonsSection.appendChild(button);
 
@@ -37,7 +37,7 @@ removeAllChildFromPixelBoard();
 function getInputValue() {
   let inputPixels = document.querySelector('#board-size').value;
   inputPixels = parseInt(inputPixels);
-  if (inputPixels.innerHTML < 0 || isNaN(inputPixels)) {
+  if (inputPixels < 0 || isNaN(inputPixels)) {
       alert('Board inválido!');
     } else if (inputPixels < 5) {
       inputPixels = 5;
