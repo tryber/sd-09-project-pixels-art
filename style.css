@@ -41,7 +41,7 @@ div .pixel {
 h1 {
   font-family: 'Bungee Outline', cursive;
   font-size: 40px;
-  color: #eccc68;
+  color: rgb(55, 66, 250);
 }
 
 .selected {
