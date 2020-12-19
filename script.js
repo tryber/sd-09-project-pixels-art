@@ -1,5 +1,4 @@
 const boxPallet = document.querySelector('#color-palette');
-const divPixels = document.querySelector('#pixel-boards')
 
 
 //cria a caixa tabela da paleta
@@ -20,7 +19,7 @@ function firstPalletBlack() {
 }
 firstPalletBlack()
 
-//coloca cores aleatorias as paletas 
+//coloca cores aleatorias as paletas
 const colorDaClasse = document.querySelectorAll('.color');
 function randonColor() {
     for (let index = 1; index < colorDaClasse.length; index += 1) {
@@ -31,3 +30,13 @@ function randonColor() {
     }
 }
 randonColor()
+
+//insere linhas e tabelas 
+
+
+
+
+//random color carregando a pagina
+window.onload = function() {
+    randonColor()
+}
