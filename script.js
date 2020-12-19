@@ -11,8 +11,12 @@ buttonPixel.className = 'button';
 const sectionsOfButtons = document.querySelector('#buttons');
 sectionsOfButtons.appendChild(input);
 sectionsOfButtons.appendChild(buttonPixel);
-const buttonGeratePixel = document.querySelector('#generate-board');
-
+const button = document.createElement('button');
+button.id = 'clear-board';
+button.className = 'button';
+button.innerHTML = 'Clear Board';
+const buttonsSection = document.querySelector('#buttons');
+buttonsSection.appendChild(button);
 
 // Classifica as cores da paleta
 function coloPalette() {
@@ -22,30 +26,30 @@ function coloPalette() {
 }
 
 function removeAllChildFromPixelBoard() {
-    const pix = document.querySelector('#pixel-board');
-    while (pix.hasChildNodes()) {
-      pix.removeChild(pix.firstChild);
-    }
+  const pix = document.querySelector('#pixel-board');
+  while (pix.hasChildNodes()) {
+    pix.removeChild(pix.firstChild);
+  }
 }
 removeAllChildFromPixelBoard();
 
 
 function getInputValue() {
-    let inputPixels = document.querySelector('#board-size').value;
-    inputPixels = parseInt(inputPixels);
-    if (inputPixels.innerHTML < 0 || isNaN(inputPixels)) {
+  let inputPixels = document.querySelector('#board-size').value;
+  inputPixels = parseInt(inputPixels);
+  if (inputPixels.innerHTML < 0 || isNaN(inputPixels)) {
       alert('Board inválido!');
     } else if (inputPixels < 5) {
       inputPixels = 5;
     } else if (inputPixels > 50) {
       inputPixels = 50;
     }
-    return inputPixels;
+  return inputPixels;
 }
 
 // Cria a tabela de pixels
 function GeneratePixelBoard(number) {
-  let pixels = number * number
+  const pixels = number * number;
   for (let index = 0; index < pixels; index += 1) {
     const divPixel = document.createElement('div');
     divPixel.className = 'pixel';
@@ -129,11 +133,11 @@ colorThree();
 
 function selectedActivate() {
   const select = document.querySelector('#color-palette');
-    select.addEventListener('click', function (event) {
-      if (event.target.className === 'color') {
-        event.target.className = 'color selected';
-      }
-    });
+  select.addEventListener('click', function (event) {
+    if (event.target.className === 'color') {
+      event.target.className = 'color selected';
+    }
+  });
 }
 
 // SOURCE:
@@ -150,14 +154,7 @@ function selectedDesactivate() {
 }
 
 function clearBoard() {
-  const button = document.createElement('button');
-  button.id = 'clear-board';
-  button.className = 'button'
-  button.innerHTML = 'Clear Board';
-  const buttonsSection = document.querySelector('#buttons');
-  buttonsSection.appendChild(button);
   const pixelBoard = document.querySelectorAll('.pixel');
-
   button.addEventListener('click', function () {
     for (let index = 0; index < pixelBoard.length; index += 1) {
       const colorsBoard = pixelBoard[index];
@@ -167,14 +164,16 @@ function clearBoard() {
 }
 
 function generateUserBoard() {
-  let input = getInputValue();
+  const inputNumber = getInputValue();
   removeAllChildFromPixelBoard();
-  GeneratePixelBoard(input);
+  GeneratePixelBoard(inputNumber);
+  clearBoard();
   blackColor();
   colorOne();
   colorTwo();
   colorThree();
 }
+
 buttonPixel.addEventListener('click', generateUserBoard);
 
 window.onload = function () {
