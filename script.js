@@ -1,6 +1,6 @@
 // Selecionar Cor
-function colorSelected () {
-  let colorSelected = document.querySelector("#color-palette")
+function colorSelected() {
+  const colorSelected = document.querySelector("#color-palette")
 
   colorSelected.addEventListener('click', function(event) {
     // Remover ".selected" anterior
@@ -10,7 +10,7 @@ function colorSelected () {
     // Colocar o ".selected" na cor clicada
     let newSelected = event.target
     newSelected.classList.add("selected")
-  
+
   })
 }
 
