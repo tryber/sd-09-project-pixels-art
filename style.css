@@ -1,6 +1,5 @@
 #color1 {
   background-color: black;
-  
 }
 
 #color2 {
@@ -13,6 +12,10 @@
 
 #color4 {
   background-color: blue;
+}
+
+.selected {
+  border: yellow solid 3px;
 }
 
 .color {
