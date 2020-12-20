@@ -22,6 +22,7 @@ body {
 }
 
 #pixel-board {
+  display: table;
   margin: 0 auto;
 }
 
@@ -53,10 +54,6 @@ body {
 .green {
   background-color: green;
   border: 1px solid black;
-}
-
-#pixel-board {
-  display: table;
 }
 
 .pixel-row {
@@ -126,4 +123,3 @@ footer {
   position: relative;
   top: 5px;
 }
-
