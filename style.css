@@ -8,8 +8,8 @@ header {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    display: inline-block;
-    margin-top: 0px;
+    display: inline-table;
+    margin-top: 20px;
     padding-top: 20px;
 }
 
