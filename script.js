@@ -12,32 +12,31 @@ function colorSelected() {
     newSelected.classList.add('selected');
   });
 }
-
-colorSelected()
+colorSelected();
 
 // Pintar Pixel
 function paintPixel() {
-  const selectedPixel = document.querySelector('#pixel-board')
-  
-  selectedPixel.addEventListener('click', function(event) {
-    const selectedColor = document.querySelector('.selected').classList[1]
+  const selectedPixel = document.querySelector('#pixel-board');
 
-    const pixel = event.target
-    pixel.className = `pixel ${selectedColor}`
-  })
+  selectedPixel.addEventListener('click', function (event) {
+    const selectedColor = document.querySelector('.selected').classList[1];
+
+    const pixel = event.target;
+    pixel.className = `pixel ${selectedColor}`;
+  });
 }
-paintPixel()
+paintPixel();
 
 // Limpar Painel
 function clear() {
-  const buttonClear = document.querySelector('#clear-board')
-  
+  const buttonClear = document.querySelector('#clear-board');
+
   buttonClear.addEventListener('click', function () {
-    let clearPixel = document.querySelectorAll('.pixel')
+    let clearPixel = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < clearPixel.length; index += 1) {
       clearPixel[index].className = '.pixel'
     }
   });
 }
-clear()
+clear();
