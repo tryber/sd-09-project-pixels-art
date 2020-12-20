@@ -32,6 +32,7 @@
 color-palette {
   height: 50px;
   width: 2800px;
+  border: black solid 1px;
 }
 
 td {
