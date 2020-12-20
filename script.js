@@ -1,5 +1,5 @@
 const boxPallet = document.querySelector('#color-palette');
-const pixels = document.querySelectorAll('.pixel');
+
 
 //cria a caixa tabela da paleta
 const palletColors = 4;
@@ -55,6 +55,7 @@ function listerner(evnt) {
 }
 
 function clear() {
+    const pixels = document.querySelectorAll('.pixel');
     pixels.style.backgroundColor = 'white';
 }
 
