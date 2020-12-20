@@ -32,10 +32,10 @@ function clear() {
   const buttonClear = document.querySelector('#clear-board');
 
   buttonClear.addEventListener('click', function () {
-    let clearPixel = document.querySelectorAll('.pixel');
+    const clearPixel = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < clearPixel.length; index += 1) {
-      clearPixel[index].className = '.pixel'
+      clearPixel[index].className = '.pixel';
     }
   });
 }
