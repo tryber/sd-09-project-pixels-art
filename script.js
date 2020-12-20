@@ -31,10 +31,16 @@ function randonColor() {
 }
 randonColor()
 
-//insere linhas e tabelas 
-
-
-
+//insere class ao box pixels
+function pixelsBox() {
+    let linePixels = document.querySelectorAll('tr')
+    let colPixels = document.querySelectorAll('td')
+    for (let index = 0; index < colPixels.length; index += 1) {
+        let pixels = colPixels[index]
+        pixels.className = 'pixel'
+    }
+}
+pixelsBox()
 
 //random color carregando a pagina
 window.onload = function() {

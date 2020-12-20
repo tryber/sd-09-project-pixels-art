@@ -5,10 +5,20 @@ header {
     padding-top: 25px;
     margin-bottom: 30px;
 }
+table {
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: black;
+    margin-top: 20px;
+}
 
 #color-palette {
     text-align: center;
     
+}
+#pixel-board {
+    text-align: center;
 }
 
 .box {
@@ -16,8 +26,22 @@ header {
     height: 40px;
     margin: 0 5px 0 0;
     width: 40px;
+    border-radius: 30px;
 }
 
 .color {
     display: inline-block;
+}
+
+.pixel {
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.line {
+    padding: 0;
 }
