@@ -6,7 +6,7 @@ body {
 
 main {
   width: 100%;
-  margin: 20vh auto;
+  margin: 10vh auto;
   text-align: center;
 }
 
@@ -38,13 +38,45 @@ div .pixel {
   height: 40px;
 }
 
-h1 {
+h1,
+.commands button,
+.commands input {
   font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
   font-size: 30px;
   color: rgb(30, 144, 255);
 }
 
-.selected {
+.selected,
+.commands button:active {
   transform: translate(2px, 2px);
   box-shadow: 0px 0px 0px 0px;
+}
+
+.commands input {
+  display: block;
+  margin: 0 auto;
+  width: 16vw;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 20px;
+  border: 2px solid black;
+}
+
+.commands button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 16px;
+  background-color: rgb(123, 237, 159);
+  border: 2px solid black;
+  outline: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.commands-btns button:nth-child(2) {
+  background-color: rgb(255, 71, 87);
 }
