@@ -12,24 +12,24 @@ function boxPalletCollors() {
 }
 boxPalletCollors();
 
-//adiciona cor classe de cor fixa ao primeiro filho
-function firstPalletBlack() {
-    const firstCollor = document.querySelector('.color');
-    firstCollor.style.backgroundColor = 'black';
-}
-firstPalletBlack();
-
 //coloca cores aleatorias as paletas
-const colorDaClasse = document.querySelectorAll('.color');
 function randonColor() {
-    for (let index = 1; index < colorDaClasse.length; index += 1) {
-        const randonFirstColor = parseInt(Math.random() * 255, 10);
-        const randonSecondColor = parseInt(Math.random() * 255, 10);
-        const randonThirdColor = parseInt(Math.random() * 255, 10);
-        colorDaClasse[index].style.backgroundColor = `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
-    }
+    const randonFirstColor = parseInt(Math.random() * 255, 10);
+    const randonSecondColor = parseInt(Math.random() * 255, 10);
+    const randonThirdColor = parseInt(Math.random() * 255, 10);
+    return `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`
 }
-randonColor();
+
+function coresRandon() {
+    let color1 = document.querySelectorAll('.color')[0].classList.add('color1');
+    let color2 = document.querySelectorAll('.color')[1].classList.add('color2');
+    let color3 = document.querySelectorAll('.color')[2].classList.add('color3');
+    let color4 = document.querySelectorAll('.color')[3].classList.add('color4');
+    document.querySelector('.color1').style.backgroundColor = 'black';
+    document.querySelector('.color2').style.backgroundColor = randonColor();
+    document.querySelector('.color3').style.backgroundColor = randonColor();
+    document.querySelector('.color4').style.backgroundColor = randonColor();
+}
 
 //criar a tablec
 function table() {
@@ -51,7 +51,7 @@ table();
 
 //random color carregando a pagina
 window.onload = function() {
-    randonColor();
+    coresRandon()
 }
 
 //
