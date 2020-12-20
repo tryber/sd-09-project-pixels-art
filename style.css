@@ -21,12 +21,12 @@
 }
 
 .pixel {
-  background-color: white;
   height: 40px;
   width: 40px;
 }
 
 td {
+  background-color: white;
   border: black solid 1px;
   height: 40px;
   width: 40px;
