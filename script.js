@@ -35,7 +35,7 @@ function clear() {
     const clearPixel = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < clearPixel.length; index += 1) {
-      clearPixel[index].className = '.pixel';
+      clearPixel[index].className = '.pixel .white';
     }
   });
 }
