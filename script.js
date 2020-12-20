@@ -1,5 +1,5 @@
 const boxPallet = document.querySelector('#color-palette');
-
+const pixels = document.querySelectorAll('.pixel');
 
 //cria a caixa tabela da paleta
 const palletColors = 4;
@@ -49,9 +49,19 @@ function table() {
 }
 table();
 
+//escutador de eventos
+function listerner(evnt) {
+    
+}
+
+function clear() {
+    pixels.style.backgroundColor = 'white';
+}
+
 //random color carregando a pagina
 window.onload = function() {
-    coresRandon()
+    coresRandon();
+    clear();
 }
 
 //
