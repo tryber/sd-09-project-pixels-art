@@ -1,73 +1,71 @@
-window.onload = function(){
-    criarPaleta()
-    criarCoresPaleta()
-    criarTabela()
-    selecionarCores()
-    pintarPixel()
+window.onload = function() {
+  criarPaleta()
+  criarCoresPaleta()
+  criarTabela()
+  selecionarCores()
+  pintarPixel()
 }
-
 
 // Criando paleta de Cores
 function criarPaleta() {
-    let paleta = document.getElementById("color-palette")
+  let paleta = document.getElementById("color-palette")
 
-    for (let indexPaleta = 0; indexPaleta < 4; indexPaleta +=1) {
-      let pixelPaleta = document.createElement('td')
-    
-      paleta.appendChild(pixelPaleta)
-      pixelPaleta.className = "color"
-    }
+  for (let indexPaleta = 0; indexPaleta < 4; indexPaleta +=1) {
+    let pixelPaleta = document.createElement('td')
+
+    paleta.appendChild(pixelPaleta)
+    pixelPaleta.classList.add("color")
+  }
 }
 
 // Atribuindo Cores a paleta
 function criarCoresPaleta() {
 
-    let atribuirCor = document.querySelectorAll(".color")
-    
-    let cor1 = document.querySelectorAll(".color")[0].style.backgroundColor = "black"
-    let cor2 = document.querySelectorAll(".color")[1].style.backgroundColor = "red"
-    let cor3 = document.querySelectorAll(".color")[2].style.backgroundColor = "green"
-    let cor4 = document.querySelectorAll(".color")[3].style.backgroundColor = "blue"
+  let atribuirCor = document.querySelectorAll(".color")
+  
+  let cor1 = document.querySelectorAll(".color")[0].style.backgroundColor = "black"
+  let cor2 = document.querySelectorAll(".color")[1].style.backgroundColor = "red"
+  let cor3 = document.querySelectorAll(".color")[2].style.backgroundColor = "green"
+  let cor4 = document.querySelectorAll(".color")[3].style.backgroundColor = "blue"
 
-    let cor1Class = document.querySelectorAll(".color")[0].classList.add('.selected')
+  let corSelected = document.querySelectorAll(".color")[0].classList.add(".selected")
 }
 
 // Criando a Tabela - Ok
 function criarTabela() {
-    const tabela = document.getElementById("pixel-board");
+  const tabela = document.getElementById("pixel-board");
     
-    // Criando Linhas
-    for(let indexLinha = 0; indexLinha < 5; indexLinha += 1) {
-        const tr = document.createElement('tr')
-        tabela.appendChild(tr)
-        //Criando Colunas
-        for(let indexColun = 0; indexColun < 5; indexColun += 1){
-            const td = document.createElement('td')
-            tr.appendChild(td)
-            td.className = 'pixel'
-        }
+  // Criando Linhas
+  for(let indexLinha = 0; indexLinha < 5; indexLinha += 1) {
+    const tr = document.createElement('tr')
+    tabela.appendChild(tr)
+  //Criando Colunas
+    for(let indexColun = 0; indexColun < 5; indexColun += 1){
+      const td = document.createElement('td')
+      tr.appendChild(td)
+      td.class = 'pixel'
     }
+  }
 }
 
 
-// Selecionador de Cores - Ok
+// Selecionador de Cores 
 function selecionarCores() {
-  let paletaBlack = document.getElementsByClassName('.selected')[0]
-  
-  let paletaTotal = document.getElementById("color-palette")
-  
-  let corClicada = paletaBlack.style.backgroundColor
 
-  paletaTotal.addEventListener('click', function(event){
-    if(event.target.className !== ""){
-        let corClicada = event.target.style.backgroundColor
+  let paletaDeCores = document.getElementById("color-palette")
+
+  paletaDeCores.addEventListener("click", function(event) {
+    if(event.target.className === "color") {
+      //apagar selected anterior
+      let colorBlack = document.getElementsByClassName(".selected")[0]
+      colorBlack.classList.remove(".selected")
+
+      //criar novo selected
+      event.target.classList.add(".selected")
     }
-        
-    console.log(event.target.className)
-    console.log(event.target.className === "")
-    console.log(corClicada)
-  }) 
 
+  console.log(event.target.className === "color")
+  })
 }
 
 

@@ -1,19 +1,18 @@
-#color-palette {
-  height: 50px;
-  width: 280px;
-}
-
 .color {
   height: 50px;
   width: 50px;
   background-color: white;
-
 }
 
-.selected {
+.color .selected {
   height: 50px;
   width: 50px;
   border: yellow solid 5px;
+}
+
+color-palette {
+  height: 50px;
+  width: 280px;
 }
 
 td {
