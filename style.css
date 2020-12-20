@@ -3,35 +3,17 @@
   width: 280px;
 }
 
-#color1{
-    background-color: black;
-}
-
-#color2{
-    background-color: red;
-}
-
-#color3{
-    background-color: blue;
-}
-
-#color4{
-    background-color: green;
-}
-
 .color {
   height: 50px;
   width: 50px;
   background-color: white;
-  border: black solid 1px;
+
 }
 
-.pixel {
-  display: contents
-  width: 40px;
-  height: 40px;
-  border-color: black;
-  border-width: 1px;
+.selected {
+  height: 50px;
+  width: 50px;
+  border: yellow solid 5px;
 }
 
 td {
