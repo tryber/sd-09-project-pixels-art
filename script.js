@@ -10,14 +10,14 @@ function boxPalletCollors() {
         boxPallet.appendChild(boxCollors);
     }
 }
-boxPalletCollors()
+boxPalletCollors();
 
 //adiciona cor classe de cor fixa ao primeiro filho
 function firstPalletBlack() {
     const firstCollor = document.querySelector('.color');
     firstCollor.style.backgroundColor = 'black';
 }
-firstPalletBlack()
+firstPalletBlack();
 
 //coloca cores aleatorias as paletas
 const colorDaClasse = document.querySelectorAll('.color');
@@ -29,15 +29,14 @@ function randonColor() {
         colorDaClasse[index].style.backgroundColor = `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
     }
 }
-randonColor()
+randonColor();
 
-//criar a table
+//criar a tablec
 function table() {
     let numLines = [1, 2, 3, 4, 5];
     let tabela = document.createElement('table');
     let boardPixel = document.querySelector('#pixel-board');
     boardPixel.appendChild(tabela);
-    
     for (let index = 0; index < numLines.length; index++) {
         let lines = document.createElement('tr')
         tabela.appendChild(lines)
@@ -48,11 +47,11 @@ function table() {
         }
     }
 }
-table()
+table();
 
 //random color carregando a pagina
 window.onload = function() {
-    randonColor()
+    randonColor();
 }
 
 //

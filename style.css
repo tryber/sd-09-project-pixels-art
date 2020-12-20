@@ -1,32 +1,33 @@
 header {
-    text-align: center;
     background-color: blueviolet;
     height: 100px;
-    padding-top: 25px;
     margin-bottom: 30px;
+    padding-top: 25px;
+    text-align: center;
 }
 table {
-    display: inline-block;
     border-collapse: collapse;
     border-spacing: 0;
-    border-color: black;
-    margin-top: 20px;
+    display: inline-block;
+    margin-top: 0px;
+    padding-top: 20px;
 }
 
-#color-palette {
+div {
     text-align: center;
     
 }
-#pixel-board {
+section {
     text-align: center;
 }
 
 .box {
     border: 1px solid;
-    height: 40px;
-    margin: 0 5px 0 0;
-    width: 40px;
     border-radius: 30px;
+    height: 40px;    
+    margin: 0 5px 0 0;
+    margin-right: 30px;
+    width: 40px;
 }
 
 .color {
@@ -35,11 +36,11 @@ table {
 
 .pixel {
   border: solid black 1px;
+  box-sizing: border-box;
   display: inline-block;
   height: 40px;
-  width: 40px;
   padding: 0;
-  box-sizing: border-box;
+  width: 40px;
 }
 
 .line {
