@@ -1,27 +1,23 @@
-#color1 {
-  background-color: black;
-}
-
-#color2 {
-  background-color: red;
-}
-
-#color3 {
-  background-color: green;
-}
-
-#color4 {
-  background-color: blue;
-}
-
-.selected {
-  border: yellow solid 3px;
-}
-
 .color {
   height: 50px;
   width: 50px;
   border: black solid 1px;
+}
+
+.color1 {
+  background-color: black;
+}
+
+.color2 {
+  background-color: red;
+}
+
+.color3 {
+  background-color: green;
+}
+
+.color4 {
+  background-color: blue;
 }
 
 .pixel {
@@ -29,10 +25,13 @@
   width: 40px;
 }
 
+.selected {
+  border: yellow solid 3px;
+}
 
 color-palette {
   height: 50px;
-  width: 280px;
+  width: 2800px;
 }
 
 td {

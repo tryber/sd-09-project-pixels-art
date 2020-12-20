@@ -16,5 +16,23 @@ function colorSelected() {
 
 colorSelected()
 
+// Pintar Pixel
+function paintPixel() {
+  const color1 = "black"
+  const color2 = "red"
+  const color3 = "green"
+  const color4 = "blue"
+
+  
+
+  let selectedPixel = document.querySelector("#pixel-board")
+  selectedPixel.addEventListener('click', function(event) {
+    let selectedColor = document.querySelector('.selected').classList[1]
+    
+    let pixel = event.target
+    pixel.className = `pixel ${selectedColor}`
+  })
+}
+paintPixel()
 
 
