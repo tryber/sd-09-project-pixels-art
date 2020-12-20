@@ -1,34 +1,43 @@
 // Selecionar Cor
 function colorSelected() {
-  const colorOfpalette = document.querySelector('#color-palette')
+  const colorOfpalette = document.querySelector('#color-palette');
 
-  colorOfpalette.addEventListener('click', function(event) {
+  colorOfpalette.addEventListener('click', function (event) {
     // Remover ".selected" anterior
-    let initialColor = document.querySelector('.selected');
+    const initialColor = document.querySelector('.selected');
     initialColor.classList.remove('selected');
 
     // Colocar o ".selected" na cor clicada
-    let newSelected = event.target;
+    const newSelected = event.target;
     newSelected.classList.add('selected');
-
-  })
+  });
 }
 
 colorSelected()
 
 // Pintar Pixel
 function paintPixel() {
-  const color1 = 'black';
-  const color2 = 'red';
-  const color3 = 'green';
-  const color4 = 'blue';
-
-  let selectedPixel = document.querySelector('#pixel-board')
+  const selectedPixel = document.querySelector('#pixel-board')
+  
   selectedPixel.addEventListener('click', function(event) {
-    let selectedColor = document.querySelector('.selected').classList[1]
+    const selectedColor = document.querySelector('.selected').classList[1]
 
-    let pixel = event.target
+    const pixel = event.target
     pixel.className = `pixel ${selectedColor}`
   })
 }
 paintPixel()
+
+// Limpar Painel
+function clear() {
+  const buttonClear = document.querySelector('#clear-board')
+  
+  buttonClear.addEventListener('click', function () {
+    let clearPixel = document.querySelectorAll('.pixel')
+
+    for (let index = 0; index < clearPixel.length; index += 1) {
+      clearPixel[index].className = '.pixel'
+    }
+  });
+}
+clear()

@@ -1,7 +1,7 @@
 .color {
+  border: black solid 1px;
   height: 50px;
   width: 50px;
-  border: black solid 1px;
 }
 
 .color1 {
@@ -25,19 +25,16 @@
   width: 40px;
 }
 
-.selected {
-  border: yellow solid 3px;
-}
 
 color-palette {
+  border: black solid 1px;
   height: 50px;
   width: 2800px;
-  border: black solid 1px;
 }
 
 td {
-  width: 40px;
-  height: 40px;
   background-color: white;
   border: black solid 1px;
+  height: 40px;
+  width: 40px;
 }
