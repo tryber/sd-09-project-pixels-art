@@ -7,11 +7,12 @@
 }
 
 .pixel {
+  background-color: rgb(255, 255, 255);
   border: solid 1px black;
   display: inline-block;
-  height: 50px;
+  height: 40px;
+  width: 40px;
   margin: 2px;
-  width: 50px;
 }
 
 button , input {

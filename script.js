@@ -1,7 +1,7 @@
 function generatePixelFrame(size) {
   const pixelBoard = document.getElementById('pixel-board');
   for (let i = 0; i < size; i += 1) {
-    for (let i = 0; i < size; i += 1) {
+    for (let j = 0; j < size; j += 1) {
       const row = document.createElement('div');
       row.className = 'pixel';
       pixelBoard.appendChild(row);
@@ -13,4 +13,4 @@ function generatePixelFrame(size) {
 
 window.onload = function () {
   generatePixelFrame(5);
-}
+};
