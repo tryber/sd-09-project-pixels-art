@@ -6,6 +6,14 @@
   width: 50px;
 }
 
+.pixel {
+  border: solid 1px black;
+  display: inline-block;
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
+
 button , input {
   margin-right: 3px;
 }
