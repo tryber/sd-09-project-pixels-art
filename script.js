@@ -67,7 +67,6 @@ function selecionarCores() {
     console.log(event.target.className === "")
     console.log(corClicada)
   }) 
-   dsds
 
 }
 
