@@ -1,8 +1,8 @@
 window.onload = function () {
   function Aocarregar() {
-  const primeiraCorSelecionada = document.getElementsByClassName('color')[0];
-  primeiraCorSelecionada.classList.add('selected');
-}
+    const primeiraCorSelecionada = document.getElementsByClassName('color')[0];
+    primeiraCorSelecionada.classList.add('selected');
+  }
   const corNova = document.querySelectorAll('.color');
   for (let i = 0; i < corNova.length; i += 1) {
     corNova[i].addEventListener('click', function () {
@@ -19,7 +19,7 @@ window.onload = function () {
         const corBg = corSelecionada.backgroundColor;
         event.target.style.backgroundColor = corBg;
       });
-  }
+    }
   }
   Aocarregar();
   pintandoPixel();

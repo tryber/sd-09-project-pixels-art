@@ -1,38 +1,31 @@
 .container-center {
-  
   display: inline-block;
-
 }
-.color {
 
+.color {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
-
 }
+
 .preta {
-
   background-color: black;
-
 }
+
 .azul {
-
   background-color: blue;
-
 }
+
 .amarelo {
-
-  background-color: yellow;
-
+ background-color: yellow;
 }
+
 .vermelho {
-
-  background-color: red;
-
+ background-color: red;
 }
-.pixel {
 
+.pixel {
   background-color: white;
   border: 1px solid black;
   display: table-cell;
