@@ -1,14 +1,30 @@
+#color1 {
+  background-color: black;
+  
+}
+
+#color2 {
+  background-color: red;
+}
+
+#color3 {
+  background-color: green;
+}
+
+#color4 {
+  background-color: blue;
+}
+
 .color {
   height: 50px;
   width: 50px;
-  background-color: white;
 }
 
-.color .selected {
-  height: 50px;
-  width: 50px;
-  border: yellow solid 5px;
+.pixel {
+  height: 40px;
+  width: 40px;
 }
+
 
 color-palette {
   height: 50px;
