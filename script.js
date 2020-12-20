@@ -31,18 +31,28 @@ function randonColor() {
 }
 randonColor()
 
-//insere class ao box pixels
-function pixelsBox() {
-    let linePixels = document.querySelectorAll('tr')
-    let colPixels = document.querySelectorAll('td')
-    for (let index = 0; index < colPixels.length; index += 1) {
-        let pixels = colPixels[index]
-        pixels.className = 'pixel'
+//criar a table
+function table() {
+    let numLines = [1, 2, 3, 4, 5];
+    let tabela = document.createElement('table');
+    let boardPixel = document.querySelector('#pixel-board');
+    boardPixel.appendChild(tabela);
+    
+    for (let index = 0; index < numLines.length; index++) {
+        let lines = document.createElement('tr')
+        tabela.appendChild(lines)
+        for (let index = 0; index < numLines.length; index++) {
+            let col = document.createElement('td')
+            col.className = 'pixel'
+            lines.appendChild(col)
+        }
     }
 }
-pixelsBox()
+table()
 
 //random color carregando a pagina
 window.onload = function() {
     randonColor()
 }
+
+//
