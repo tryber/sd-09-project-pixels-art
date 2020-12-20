@@ -1,0 +1,37 @@
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
+
+button , input {
+  margin-right: 3px;
+}
+
+.center {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px 7px black;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
