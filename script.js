@@ -11,6 +11,18 @@ function generatePixelFrame(size) {
   }
 }
 
+function selectColor() {
+  const colorPalette = document.getElementById('color-palette');
+  const currentSelectedPixel = document.getElementsByClassName('selected');
+  colorPalette.addEventListener('click', function (selectedPixel) {
+    if(selectedPixel.target.className !== 'center') {
+      currentSelectedPixel[0].classList.remove('selected');
+      selectedPixel.target.classList.add('selected');
+    }
+  })
+}
+
 window.onload = function () {
   generatePixelFrame(5);
+  selectColor()
 };
