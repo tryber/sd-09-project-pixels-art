@@ -15,8 +15,8 @@ table {
 
 div {
     text-align: center;
-    
 }
+
 section {
     text-align: center;
 }
@@ -24,7 +24,7 @@ section {
 .box {
     border: 1px solid;
     border-radius: 30px;
-    height: 40px;    
+    height: 40px;
     margin: 0 5px 0 0;
     margin-right: 30px;
     width: 40px;
