@@ -19,11 +19,22 @@ button.innerHTML = 'Limpar';
 const buttonsSection = document.querySelector('#buttons');
 buttonsSection.appendChild(button);
 
+function colorRandomPalette() {
+  const allColors = []  
+  for (let index = 0; index < 3; index += 1 ) {
+    let colorRandom = Math.floor(Math.random() * 255) + 1;
+    allColors.push(colorRandom);
+  }
+  const cors = allColors.toString();
+  result = `rgb(${cors})`;
+  return result;
+}
+
 // Classifica as cores da paleta
 function coloPalette() {
-  reedColors[1].style.backgroundColor = 'red';
-  reedColors[2].style.backgroundColor = 'green';
-  reedColors[3].style.backgroundColor = 'blue';
+  reedColors[1].style.backgroundColor = colorRandomPalette();
+  reedColors[2].style.backgroundColor = colorRandomPalette();
+  reedColors[3].style.backgroundColor = colorRandomPalette();
 }
 
 function removeAllChildFromPixelBoard() {
@@ -34,10 +45,9 @@ function removeAllChildFromPixelBoard() {
 }
 removeAllChildFromPixelBoard();
 
-
 function getInputValue() {
   let inputPixels = document.querySelector('#board-size').value;
-  inputPixels = parseInt(inputPixels);
+  inputPixels = parseInt(inputPixels, 10);
   if (inputPixels < 5) {
     inputPixels = 5;
   } else if (inputPixels > 50) {

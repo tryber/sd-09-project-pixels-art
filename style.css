@@ -3,7 +3,7 @@ https://www.treinaweb.com.br/blog/css-grid-um-guia-interativo-parte-1-containers
 link de consulta de como manipular o grid */
 
 h1 {
-  color: rgb(43 , 41 , 41);
+  color: rgb(43, 41, 41);
   font-size: 30px;
 }
 
@@ -15,7 +15,7 @@ h1 {
 }
 
 body {
-  background: rgb(101 , 42 , 139);
+  background: rgb(102, 61, 129); 
   font-family: Georgia, Times New Roman, Times, serif;
   height: 100%;
   margin: 0;
@@ -58,7 +58,7 @@ body {
 }
 
 .main-section {
-  background: radial-gradient(circle , #eeaeca 0% , #94bbe9 100%);
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
   border: 10px solid #d472b7;
   border-radius: 5%;
   bottom: 0;
