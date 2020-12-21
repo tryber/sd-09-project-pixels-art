@@ -58,7 +58,7 @@ body {
 }
 
 .main-section {
-  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgba(148 ,187 ,233 , 1) 100%);
+  background: radial-gradient(circle , #eeaeca 0% , #94bbe9 100%);
   border: 10px solid #d472b7;
   border-radius: 5%;
   bottom: 0;
@@ -73,9 +73,9 @@ body {
 }
 
 .button {
-  margin: 3px;
   border: 3px solid #d472b7;
   border-radius: 5px;
+  margin: 3px;
 }
 
 .button:hover {

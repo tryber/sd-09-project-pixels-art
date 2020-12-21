@@ -1,8 +1,9 @@
 const reedColors = document.querySelectorAll('#color-palette>div');
 const boardOfPixel = document.querySelector('#pixel-board');
 const input = document.createElement('input');
-input.min = 1;
 input.id = 'board-size';
+input.type = 'number';
+input.min = 1;
 input.className = 'board-size';
 const buttonPixel = document.createElement('button');
 buttonPixel.innerHTML = 'VQV';
@@ -35,15 +36,15 @@ removeAllChildFromPixelBoard();
 
 
 function getInputValue() {
-  let inputPixels = document.querySelector('#board-size');
-  inputPixels = parseInt(inputPixels.value);
-    if (inputPixels >= input.min && inputPixels < 5) {
-      inputPixels = 5;
-    } else if (inputPixels > 50) {
-      inputPixels = 50;
-    } else if (inputPixels.value === "" || isNaN(inputPixels)) {
-      inputPixels = false;
-    }
+  let inputPixels = document.querySelector('#board-size').value;
+  inputPixels = parseInt(inputPixels);
+  if (inputPixels < 5) {
+    inputPixels = 5;
+  } else if (inputPixels > 50) {
+    inputPixels = 50;
+  } else if (inputPixels.value === '' || isNaN(inputPixels)) {
+    inputPixels = false;
+  }
   return inputPixels;
 }
 
