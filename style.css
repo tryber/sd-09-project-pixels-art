@@ -1,0 +1,41 @@
+#color-palette {
+  width: 267px;
+  height: 67px;
+}
+
+.color {
+  border: solid 1px black;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+  height: 2010px;
+  width: 2010px;
+}
