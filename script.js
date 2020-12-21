@@ -1,3 +1,6 @@
+const boardPixel = document.querySelector('#pixel-board');
+let qttyPixels = 5;
+
 function coloringTheColorPalette() {
   const colorsPalette = document.querySelectorAll('.color');
   colorsPalette[0].style.backgroundColor = 'black';
@@ -27,6 +30,37 @@ function designingTheColorPalette() {
   }
 }
 
+function drawBoard() {
+  boardPixel.innerHTML = '';
+  for (let index = 0; index < qttyPixels; index += 1) {
+    const linePixel = document.createElement('div');
+    linePixel.className = 'line-pixel';
+    boardPixel.appendChild(linePixel);
+    for (let pxindex = 0; pxindex < qttyPixels; pxindex += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      linePixel.appendChild(pixel);
+      pixel.addEventListener('click', coloringBoard);
+    }
+  }
+}
+
+function changeBoardSize() {
+  const input = document.querySelector('#board-size');
+  qttyPixels = input.value;
+  if (qttyPixels < 5 && qttyPixels) {
+    qttyPixels = 5;
+  }
+  if (qttyPixels > 50) {
+    qttyPixels = 50;
+  }
+  if (!qttyPixels) {
+    window.alert('Board inválido!');
+    qttyPixels = 5;
+  }
+  drawBoard();
+}
+
 function coloringBoard(event) {
   const selectedColor = document.querySelector('.selected');
   const fillColor = selectedColor.style.backgroundColor;
@@ -40,29 +74,16 @@ function clearBoard() {
   }
 }
 
-function addButton() {
-  const button = document.querySelector('#clear-board');
-  button.addEventListener('click', clearBoard);
-}
-
-function drawBoard() {
-  const boardPixel = document.querySelector('#pixel-board');
-  for (let index = 0; index < 5; index += 1) {
-    const linePixel = document.createElement('div');
-    linePixel.className = 'line-pixel';
-    boardPixel.appendChild(linePixel);
-    for (let pxindex = 0; pxindex < 5; pxindex += 1) {
-      const pixel = document.createElement('div');
-      pixel.addEventListener('click', coloringBoard);
-      pixel.className = 'pixel';
-      linePixel.appendChild(pixel);
-    }
-  }
+function addButtons() {
+  const clearButton = document.querySelector('#clear-board');
+  clearButton.addEventListener('click', clearBoard);
+  const generButton = document.querySelector('#generate-board');
+  generButton.addEventListener('click', changeBoardSize);
 }
 
 window.onload = () => {
   coloringTheColorPalette();
   designingTheColorPalette();
   drawBoard();
-  addButton();
+  addButtons();
 };
