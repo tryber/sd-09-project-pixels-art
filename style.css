@@ -5,17 +5,7 @@ link de consulta de como manipular o grid */
 h1 {
   color: rgb(248, 240, 240);
   font-size: 40px;
-  text-shadow: 3px 3px black;
 }
-
-/*
-.image, a{
-  color: white;
-  margin-top: -3px;
-  position: relative;
-  text-decoration: none;
-}
-*/
 
 .board_of_pixel {
   display: grid;
@@ -25,12 +15,30 @@ h1 {
   width: 100%;
 }
 
-/*
-.main-section {
-  background-color: rgba(10, 10, 12, 0.404);
-  padding-bottom: 30%;
+body {
+  background: rgb(102, 61, 129);
+  font-family: Georgia, Times New Roman, Times, serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
-*/
+
+.main-section {
+  background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+  border: 10px solid #d472b7;
+  border-radius: 5%;
+  bottom: 0;
+  height: 450px;
+  left: 0;
+  margin: auto;
+  margin-top: 70px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500px;
+}
 
 .color {
   border: 1px solid black;
@@ -77,15 +85,4 @@ h1 {
 
 .board-size {
   width: 60px;
-}
-
-body {
-  /*background-image: url('colors.jpg');
-  background-size: cover; */
-  font-family: Georgia, Times New Roman, Times, serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
 }
