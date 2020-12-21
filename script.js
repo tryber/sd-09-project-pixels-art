@@ -35,7 +35,8 @@ function coresRandon() {
 function table() {
     let numLines = [1, 2, 3, 4, 5];
     let tabela = document.createElement('table');
-    let boardPixel = document.querySelector('#pixel-board');
+    tabela.id = 'pixel-board';
+    let boardPixel = document.querySelector('section');
     boardPixel.appendChild(tabela);
     for (let index = 0; index < numLines.length; index++) {
         let lines = document.createElement('tr')
@@ -56,7 +57,11 @@ function listerner(evnt) {
 
 function clear() {
     const pixels = document.querySelectorAll('.pixel');
-    pixels.style.backgroundColor = 'white';
+    for (let index = 0; index < pixels.length; index++) {
+        pixels[index].style.backgroundColor = 'white';
+        
+    }
+    
 }
 
 //random color carregando a pagina
