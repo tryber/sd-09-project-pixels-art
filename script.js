@@ -20,13 +20,13 @@ const buttonsSection = document.querySelector('#buttons');
 buttonsSection.appendChild(button);
 
 function colorRandomPalette() {
-  const allColors = []  
-  for (let index = 0; index < 3; index += 1 ) {
-    let colorRandom = Math.floor(Math.random() * 255) + 1;
+  const allColors = [];
+  for (let index = 0; index < 3; index += 1) {
+    const colorRandom = Math.floor(Math.random() * 255) + 1;
     allColors.push(colorRandom);
   }
   const cors = allColors.toString();
-  result = `rgb(${cors})`;
+  const result = `rgb(${cors})`;
   return result;
 }
 
