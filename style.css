@@ -19,10 +19,12 @@ h1 {
   display: grid;
   justify-content: center;
   margin-top: 15px;
+  margin-bottom: 50px;
   width: 100%;
 }
 
 body {
+  background: black;
   background-image: url('colors.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,6 +34,11 @@ body {
   padding: 0;
   position: relative;
   width: 100%;
+}
+
+.main-section {
+  background-color: rgba(10, 10, 12, 0.404);
+  padding-bottom: 30%;
 }
 
 .color {
