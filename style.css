@@ -58,7 +58,7 @@ body {
 }
 
 .main-section {
-  background: radial-gradient(circle, rgba(238 ,174,202 , 1) 0%, rgba(148 ,187 ,233 , 1) 100%);
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgba(148 ,187 ,233 , 1) 100%);
   border: 10px solid #d472b7;
   border-radius: 5%;
   bottom: 0;

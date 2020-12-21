@@ -35,13 +35,13 @@ removeAllChildFromPixelBoard();
 
 
 function getInputValue() {
-  let inputPixels = document.querySelector('#board-size').value;
-  inputPixels = parseInt(inputPixels);
-    if (inputPixels > input.min && inputPixels < 5) {
+  let inputPixels = document.querySelector('#board-size');
+  inputPixels = parseInt(inputPixels.value);
+    if (inputPixels >= input.min && inputPixels < 5) {
       inputPixels = 5;
     } else if (inputPixels > 50) {
       inputPixels = 50;
-    } else if (inputPixels < input.min || isNaN(inputPixels)) {
+    } else if (inputPixels.value === "" || isNaN(inputPixels)) {
       inputPixels = false;
     }
   return inputPixels;
