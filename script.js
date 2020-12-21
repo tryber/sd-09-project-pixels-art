@@ -1,7 +1,7 @@
 const reedColors = document.querySelectorAll('#color-palette>div');
 const boardOfPixel = document.querySelector('#pixel-board');
 const input = document.createElement('input');
-input.type = 'number';
+input.min = 1;
 input.id = 'board-size';
 input.className = 'board-size';
 const buttonPixel = document.createElement('button');
