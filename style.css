@@ -18,21 +18,8 @@ h1 {
 .board_of_pixel {
   display: grid;
   justify-content: center;
-  margin-top: 15px;
   margin-bottom: 50px;
-  width: 100%;
-}
-
-body {
-  background: black;
-  background-image: url('colors.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: Georgia, Times New Roman, Times, serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
+  margin-top: 15px;
   width: 100%;
 }
 
@@ -86,4 +73,16 @@ body {
 
 .board-size {
   width: 60px;
+}
+
+body {
+  background-image: url('colors.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Georgia, Times New Roman, Times, serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
