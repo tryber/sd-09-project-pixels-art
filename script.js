@@ -30,6 +30,12 @@ function designingTheColorPalette() {
   }
 }
 
+function coloringBoard(event) {
+  const selectedColor = document.querySelector('.selected');
+  const fillColor = selectedColor.style.backgroundColor;
+  event.target.style.backgroundColor = fillColor;
+}
+
 function drawBoard() {
   boardPixel.innerHTML = '';
   for (let index = 0; index < qttyPixels; index += 1) {
@@ -59,12 +65,6 @@ function changeBoardSize() {
     qttyPixels = 5;
   }
   drawBoard();
-}
-
-function coloringBoard(event) {
-  const selectedColor = document.querySelector('.selected');
-  const fillColor = selectedColor.style.backgroundColor;
-  event.target.style.backgroundColor = fillColor;
 }
 
 function clearBoard() {
