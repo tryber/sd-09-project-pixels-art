@@ -1,0 +1,89 @@
+/* SOURCE:
+https://www.treinaweb.com.br/blog/css-grid-um-guia-interativo-parte-1-containers/
+link de consulta de como manipular o grid */
+
+h1 {
+  color: rgb(248, 240, 240);
+  font-size: 40px;
+  text-shadow: 3px 3px black;
+}
+
+.image , a {
+  color: white;
+  margin-top: -3px;
+  position: relative;
+  text-decoration: none;
+}
+
+.board_of_pixel {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+body {
+  background: black;
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/12/13/41/beaded-2137080_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Georgia, Times New Roman, Times, serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.main-section {
+  background-color: rgba(10, 10, 12, 0.404);
+  padding-bottom: 20%;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5px;
+  padding: 20px;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.page-title {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 40px;
+  margin: 1px;
+  width: 40px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  border: 3px solid #d472b7;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.button:hover {
+  background-color: #ffd9f4;
+}
+
+.board-size {
+  width: 60px;
+}
