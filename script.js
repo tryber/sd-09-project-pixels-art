@@ -36,6 +36,16 @@ function coloringBoard(event) {
   event.target.style.backgroundColor = fillColor;
 }
 
+function boardColorRandom() {
+  const color = document.querySelectorAll('.changeable');
+  for (let index = 0; index < color.length; index += 1) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    color[index].style.backgroundColor = `rgb(${r},${g},${b})`;
+  }
+}
+
 function drawBoard() {
   boardPixel.innerHTML = '';
   for (let index = 0; index < qttyPixels; index += 1) {
@@ -86,4 +96,5 @@ window.onload = () => {
   designingTheColorPalette();
   drawBoard();
   addButtons();
+  boardColorRandom();
 };
