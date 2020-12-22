@@ -114,6 +114,9 @@ function criarTR(){
       //let linhasPixel= document.getElementById('pixelBoard'); 
       let pixelIndivid = document.createElement('td');
       pixelIndivid.className = 'pixel';
+      pixelIndivid.style.width = '40px';
+      pixelIndivid.style.height = '40px';
+      pixelIndivid.style.border ='black 1px solid';
       linhaPaleta.appendChild(pixelIndivid);
       
     }
