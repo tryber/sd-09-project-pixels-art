@@ -64,3 +64,26 @@ function selectPixel() {
 
 }
 selectPixel()
+
+// 9 - Botão de limpar o board
+
+function clearBoard() {
+
+  const btn = document.querySelector('#clear-board');
+
+  btn.addEventListener('click', function(){
+
+    let pixels = document.querySelectorAll('.pixel');
+   
+    for (index = 0; index < pixels.length; index += 1) {
+      let pixel = pixels[index]
+
+      pixel.style.backgroundColor = 'white';
+
+    };
+
+  });
+
+};
+
+clearBoard();
