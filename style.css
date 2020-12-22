@@ -1,26 +1,28 @@
 #cabecalho {
   background-color: rgb(72, 164, 107);
   text-align: center;
-  display: block;
+  height:70px ;
+  
 }
 
 #title {
   font-family: Shadows Into Light, Arial, Helvetica;
   text-align: center;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 body {
   background-color: rgb(200, 219, 200);
+  text-align: center;
+  
+  
 }
 
 #color-palette {
-  border: 3px;
-  border-color: black;
   border: black 1px solid;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
-}
+  margin-left: 390px;
+ }
 
 #black {
   background-color: black;
@@ -58,9 +60,20 @@ body {
   display: inline-flex;
   height: 40px;
   width: 40px;
-  background-color: white;
+  background-color: green;
+  
 }
 
 #pixel-board {
-  display: block;
+  display: block; /*nao mexer*/
+  margin-left: 415px;
+}
+
+input {
+  width: 40px;
+  display: inline-flex; /*nao mexer*/
+}
+
+tabela{
+margin-left: 200px;
 }

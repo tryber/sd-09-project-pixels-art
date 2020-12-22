@@ -14,20 +14,37 @@ opcoesCores();
 
 
 
-function criarTR() {
+function criarTR(param1, param2) {
+  
   let paletta = document.querySelector('.pixel-board');
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < param1; i += 1) {
     let linhaPaleta = document.createElement('tr');
     linhaPaleta.id = 'pixel-board';
     paletta.appendChild(linhaPaleta);
-    for (let j = 0; j < 5; j += 1) {
-      //let linhasPixel= document.getElementById('pixelBoard'); 
+    for (let j = 0; j < param2; j += 1) {
+   
       let pixelIndivid = document.createElement('td');
       pixelIndivid.className = 'pixel';
-
       linhaPaleta.appendChild(pixelIndivid);
+        
+      } 
+
+      
 
     }
   }
+
+criarTR(5,5);
+
+let limpar = document.getElementById("clear-board");
+limpar.addEventListener('click', limpaTudo)
+
+function limpaTudo(){
+ let pixelIndivid = document.querySelectorAll('.pixel');
+ 
+ for(let i=0; i<pixelIndivid.length; i+=1){
+   if(pixelIndivid[i].style.backgroundColor !== 'white'){
+      pixelIndivid[i].style.backgroundColor = 'white'
+ }
+ }
 }
-criarTR();
