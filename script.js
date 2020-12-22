@@ -1,4 +1,4 @@
-// Cria paleta com quatro cores distintas
+// 02 | 03- Cria paleta com quatro cores distintas iniciando com 'preto'
 function paletteColor() {
   const palette = document.querySelector('#color-palette');
   palette.classList.add('color-palette')
@@ -10,68 +10,75 @@ function paletteColor() {
     palette.appendChild(divColor);
   }
 }
-paletteColor();
 
-// Botão limpar
-function clearButton() {
-  const container = document.querySelector('.container');
-  const divOptions = document.createElement('div');
-  const button = document.createElement('button');
-  divOptions.id = 'options-select';
-  divOptions.classList.add('options-select');
-  button.id =  'clear-board';
-  button.classList.add('clear-board');
-  button.innerText = 'Limpar';
-  divOptions.appendChild(button);
-  container.appendChild(divOptions);
-}
-clearButton();
-
-// Apaga quadro
-function clearBoard() {
-  const buttonClear = document.querySelector('.clear-board');
-  buttonClear.addEventListener('click', function (event) {
-    const pixel = document.querySelectorAll('.pixel');
-    for (let index = 0; index < pixel.length; index += 1) {
-      pixel[index].className = 'pixel white';
-    }
-  });
-}
-clearBoard();
-
-// Cria quadro com 25 pixels
-function pixelFrame() {
+// 04- Cria quadro com 25 pixels
+function pixelFrame(size) {
+  let select = parseInt(size);
+  if (select < 5) {
+    select = 5;
+  }
+  if (select > 50) {
+    select = 50;
+  }
+  /* if (select > 23) {
+    select = 23;
+  } */
+  // const square = Math.trunc(Math.sqrt(select));
   const container = document.querySelector('.container');
   const pixelBoard = document.createElement('div');
   pixelBoard.id = 'pixel-board';
   pixelBoard.classList.add('pixel-board');
-  for (let index = 1; index < 26; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.classList.add('pixel');
-    pixelBoard.appendChild(pixel);
+  for (let index = 0; index < select; index += 1) {
+    const line = document.createElement('div');
+    line.classList.add('line');
+    pixelBoard.appendChild(line);
+    for (let index = 0; index < select; index += 1) {
+      const divPixel = document.createElement('div');
+      divPixel.classList.add('pixel');
+      switch (select) {
+        case 5:
+          divPixel.style.width = '40px';
+          divPixel.style.height = '40px';
+          console.log('entrou no 5');
+          break;
+        case 6:
+          divPixel.style.width = '20px';
+          divPixel.style.height = '20px';
+          console.log('entrou no 6');
+          break;
+        case 7:
+          divPixel.style.width = '10px';
+          divPixel.style.height = '10px';
+          console.log('entrou no 7');
+          break;
+        default:
+          divPixel.style.width = '3px';
+          divPixel.style.height = '3px';
+          console.log('entrou no default');
+          break;
+      }
+      line.appendChild(divPixel);
+    }
   }
   container.appendChild(pixelBoard);
 }
-pixelFrame();
 
-// Seleciona a cor
-function selectColor(classElement) {
-  const color = `.${classElement}`;
-  const select = document.querySelector(color);
-  select.classList.add('selected');
-  select.style.borderRadius = '8px';
-}
-
-// Tira a seleção da cor
+  // 07- Tira a seleção da cor
 function stripSelection() {
   const unselect = document.querySelectorAll('.color');
   for (let index = 0; index < unselect.length; index += 1) {
     unselect[index].classList.remove('selected');
-    unselect[index].style.borderRadius = '0';
   }
 }
 
-// Seleciona a cor ao clicar
+// 07- Seleciona a cor
+function selectColor(classElement) {
+  const color = `.${classElement}`;
+  const select = document.querySelector(color);
+  select.classList.add('selected');
+}
+
+// 07- Seleciona a cor ao clicar
 function clicSelectColor() {
   const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', function (event) {
@@ -81,25 +88,111 @@ function clicSelectColor() {
     selectColor(cor);
   });
 }
-clicSelectColor();
 
-// Preenche cor
+// 08- Preenche cor
 function preenchimentoCor() {
   const pixelArt = document.querySelector('#pixel-board');
   pixelArt.addEventListener('click', function (event) {
     const pixelSelect = event.target.classList;
+    console.log(pixelSelect[0]);
     const colorPixel = document.querySelector('.selected').classList[1];
-    if(pixelSelect[1] === undefined) {
+    if (pixelSelect[0] === 'pixel' && pixelSelect[1] === undefined) {
       pixelSelect.add(colorPixel);
-    } else {
+    }
+    if (pixelSelect[0] === 'pixel') {
       pixelSelect.remove(pixelSelect[1]);
       pixelSelect.add(colorPixel);
     }
   });
 }
-preenchimentoCor();
 
-// Seleciona cor inicial da paleta de cores
+// 09- Apaga quadro
+function clearBoard() {
+  const buttonClear = document.querySelector('.clear-board');
+  buttonClear.addEventListener('click', function (event) {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].className = 'pixel white';
+    }
+  });
+}
+
+// 10- Redimenciona o quadro de pixels
+function inputResize() {
+  const div = document.querySelector('#controls');
+  const input = document.createElement('input');
+  input.id = 'board-size';
+  input.classList.add('board-size');
+  input.type = 'submit';
+  input.type = 'number';
+  input.min = '1';
+  input.max = '50';
+  input.value = '5';
+  div.appendChild(input);
+  input.addEventListener('input', function (event) {
+    let aux = event.target;
+    if (aux.value > parseInt(aux.getAttribute('max'))) {
+      aux.value = aux.getAttribute('max');
+    }
+    if (aux.value < parseInt(aux.getAttribute("min"))) {
+      alert('Board inválido!');
+      aux.value = 1;
+    }
+  });
+}
+
+function resizeBoard() {
+  const botao = document.querySelector('#generate-board');
+  botao.addEventListener('click', function () {
+    const value = document.querySelector('#board-size').value;
+    const board = document.querySelector('#pixel-board');
+    board.remove();
+    pixelFrame(value);
+    preenchimentoCor();
+  });
+}
+
+// Função para criar botão
+function criarBotao(descricao, identificador, pai) {
+  const elementoPai = document.getElementById(pai);
+  const botao = document.createElement('button');
+  botao.innerText = descricao;
+  botao.id = identificador;
+  botao.classList.add('botao', identificador);
+  elementoPai.appendChild(botao);
+}
+
+// Adiciona um círculo à página
+function criarCirculo() {
+  const corpo = document.querySelector('body');
+  const circulo = document.createElement('div');
+  circulo.id = 'circulo';
+  circulo.classList.add('circulo');
+  corpo.appendChild(circulo);
+}
+
+// Adiciona rodapé à página
+function createFooter() {
+  const corpo = document.querySelector('body');
+  const rodape = document.createElement('footer');
+  rodape.id = 'rodape';
+  rodape.classList.add('rodape');
+  rodape.innerText = 'Pixels Arts - Project - Bloco 5 - Trybe 🚀 - Criado por: Cleber Lopes Teixeira - Turma 09 - 2020 ©️';
+  corpo.appendChild(rodape);
+}
+
 window.onload = function () {
+  paletteColor();
   selectColor('black');
+  inputResize();
+  const inputSize = parseInt(document.querySelector('#board-size').value);
+  pixelFrame(inputSize);
+  criarBotao('VQV', 'generate-board', 'controls');
+  criarBotao('Limpar', 'clear-board', 'controls');
+  resizeBoard();
+  preenchimentoCor();
+  clearBoard();
+  clicSelectColor();
+  createFooter();
+  criarCirculo()
 };
