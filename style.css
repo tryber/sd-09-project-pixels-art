@@ -56,10 +56,11 @@ body{
 
 .pixel {
   background-color: white;
-  border: 1px solid black;
+  border: -1px solid black;
   display: table-cell;
   height: 40px;
   width: 40px;
+  
 }
 
 

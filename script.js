@@ -9,11 +9,7 @@ function opcoesCores(){
     const colunaPallete = document.createElement('th');
     colunaPallete.className = 'color';
     colunaPallete.id = linhaItens;
-    if(colunaPallete.id == 'black'){
-      colunaPallete.className = 'selected';
-    }
-    colorPallette.appendChild(colunaPallete);
-    
+    colorPallette.appendChild(colunaPallete);    
   }
 }
 opcoesCores();
