@@ -21,12 +21,9 @@
   background-color: rgb(59, 113, 64);
 }
 
-#pixel-board {
-
-}
 .pixel {
+  border: solid 1px black;
   height: 40px;
   width: 40px;
-  border: solid 1px black;
   display: inline-block;
 }
