@@ -15,8 +15,7 @@ function opcoesCores(){
 }
 opcoesCores();
 
-let colorSelected = document.getElementById('black');
-colorSelected.className = 'selected';
+
 
 function criarTR(){
   let paletta = document.querySelector('.pixel-board');
