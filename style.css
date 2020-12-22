@@ -11,6 +11,7 @@ main {
   flex-direction: column;
   padding: 32px;
   text-align: center;
+  border: 1px solid black;
 }
 
 header {
@@ -68,26 +69,37 @@ h1 {
   box-shadow: 0px 0px 0px 0px;
 }
 
+.commands .commands-btns {
+  display: inline-flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
 .commands input {
-  display: block;
   margin: 0 auto;
-  width: 16vw;
+  width: 120px;
   text-align: center;
   padding: 8px 0;
   font-weight: 700;
   font-size: 20px;
   border: 2px solid black;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.8);
+
 }
 
 .commands button {
   display: inline-block;
   padding: 8px 16px;
-  margin: 16px;
   background-color: rgb(123, 237, 159);
   border: 2px solid black;
   outline: none;
 }
 
-.commands-btns button:nth-child(2) {
+.commands .clear-board {
   background-color: rgb(255, 71, 87);
+  display: flex;
+  margin: 0 auto;
+  height: 40px;
+  align-items: center;
+  margin-bottom: 16px;
 }
