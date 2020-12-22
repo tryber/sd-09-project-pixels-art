@@ -55,12 +55,11 @@ body{
 
 
 .pixel {
-  background-color: white;
-  border: -1px solid black;
-  display: table-cell;
+  border: 1px solid black;
+  display: inline-flex;
   height: 40px;
   width: 40px;
-  
 }
-
-
+#pixel-board{
+  display: block;
+}
