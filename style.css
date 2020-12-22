@@ -20,3 +20,13 @@
 .green {
   background-color: rgb(59, 113, 64);
 }
+
+#pixel-board {
+
+}
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: solid 1px black;
+  display: inline-block;
+}
