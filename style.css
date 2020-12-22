@@ -8,9 +8,9 @@
   font-family: Shadows Into Light, Arial, Helvetica;
   text-align: center;
 }
-body{
+
+body {
   background-color: rgb(200, 219, 200);
- 
 }
 
 #color-palette {
@@ -53,7 +53,6 @@ body{
   height: 40px;
 }
 
-
 .pixel {
   border: 1px solid black;
   display: inline-flex;
@@ -61,6 +60,7 @@ body{
   width: 40px;
   background-color: white;
 }
-#pixel-board{
+
+#pixel-board {
   display: block;
 }
