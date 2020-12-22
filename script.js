@@ -1,7 +1,7 @@
 
- let linha = ['black', 'red', 'blue', 'yellow'];
-function opcoesCores(){
  
+function opcoesCores(){
+  let linha = ['black', 'red', 'blue', 'yellow'];
   let colorPallette = document.querySelector('.tableColor');
   for (let key = 0; key < linha.length; key += 1) {
     
@@ -35,4 +35,10 @@ function criarTR(){
 criarTR();
   
 
+windows.onload = colorDest;
+
+function colorDest(){
+
+  var colorSelected = 'black';
+} 
 
