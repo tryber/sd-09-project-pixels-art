@@ -1,8 +1,7 @@
 #cabecalho {
   background-color: rgb(72, 164, 107);
   text-align: center;
-  height:70px ;
-  
+  height: 70px;
 }
 
 #title {
@@ -15,14 +14,12 @@
 body {
   background-color: rgb(200, 219, 200);
   text-align: center;
-  
-  
 }
 
 #color-palette {
   border: black 1px solid;
   margin-left: 390px;
- }
+}
 
 #black {
   background-color: black;
@@ -60,20 +57,21 @@ body {
   display: inline-flex;
   height: 40px;
   width: 40px;
-  background-color: green;
-  
+  background-color: white;
 }
 
 #pixel-board {
-  display: block; /*nao mexer*/
+  display: block;
+  /*nao mexer*/
   margin-left: 415px;
 }
 
 input {
   width: 40px;
-  display: inline-flex; /*nao mexer*/
+  display: inline-flex;
+  /*nao mexer*/
 }
 
-tabela{
-margin-left: 200px;
+tabela {
+  margin-left: 200px;
 }
