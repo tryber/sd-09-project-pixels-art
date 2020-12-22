@@ -31,11 +31,3 @@ function criarTR() {
   }
 }
 criarTR();
-
-
-windows.onload = colorDest;
-
-function colorDest() {
-
-  var colorSelected = 'black';
-}
