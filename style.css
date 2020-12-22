@@ -22,7 +22,7 @@ body{
   vertical-align: middle;
 }
 
-.black {
+#black {
   background-color: black;
   border: black 1px solid;
   width: 40px;
@@ -30,7 +30,7 @@ body{
   padding: 1px;
 }
 
-.red {
+#red {
   background-color: red;
   border: black 1px solid;
   width: 40px;
@@ -38,7 +38,7 @@ body{
   padding: 1px;
 }
 
-.blue {
+#blue {
   background-color: blue;
   border: black 1px solid;
   width: 40px;
@@ -46,7 +46,7 @@ body{
   padding: 1px;
 }
 
-.yellow {
+#yellow {
   background-color: yellow;
   border: black 1px solid;
   width: 40px;
