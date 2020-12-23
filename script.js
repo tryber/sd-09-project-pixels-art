@@ -1,14 +1,15 @@
 const boxPallet = document.querySelector('#color-palette');
 
-
 //cria a caixa tabela da paleta
 const palletColors = 4;
 function boxPalletCollors() {
     for (let index = 0; index < palletColors; index += 1) {
         const boxCollors = document.createElement('div');
-        boxCollors.className = 'box color';
+        boxCollors.className = 'color';
         boxPallet.appendChild(boxCollors);
     }
+    let firstColor = document.querySelector('.color');
+    firstColor.className = 'color color1 selected'
 }
 boxPalletCollors();
 
@@ -50,11 +51,6 @@ function table() {
 }
 table();
 
-//escutador de eventos
-function listerner(evnt) {
-    
-}
-
 function clear() {
     const pixels = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixels.length; index++) {
@@ -63,6 +59,19 @@ function clear() {
     }
     
 }
+
+function selectedColor() {
+    let divColors = document.querySelectorAll('.color')
+    let colorSelected = divColors[0];
+    for (let index = 0; index < divColors.length; index += 1) {
+        divColors[index].addEventListener('click', function (event) {
+            colorSelected.className = 'color';
+            event.target.className = 'color selected';
+            return colorSelected = event.target;
+        })    
+    }
+}
+selectedColor()
 
 //random color carregando a pagina
 window.onload = function() {

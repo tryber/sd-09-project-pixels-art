@@ -21,17 +21,14 @@ section {
     text-align: center;
 }
 
-.box {
+.color {
+    display: inline-block;
     border: 1px solid;
     border-radius: 30px;
     height: 40px;
     margin: 0 5px 0 0;
     margin-right: 30px;
     width: 40px;
-}
-
-.color {
-    display: inline-block;
 }
 
 .pixel {
