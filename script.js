@@ -4,6 +4,9 @@ window.onload = function() {
   for (let index = 0; index < classPixel.length; index += 1) {
     classPixel[index].style.backgroundColor = 'white';
   }
+
+  let colorBlack = document.getElementsByClassName('color black')[0];
+  colorBlack.className = 'color black selected';
 }
 
 function addPixels(size) {
@@ -20,10 +23,3 @@ function addPixels(size) {
 }
 
 addPixels(5);
-
-function defineBoardDimensions(tamanho) {
-  document.getElementById('pixel-board').style.width = `${tamanho * 40} px`;
-  document.getElementById('pixel-board').style.height = `${tamanho * 40} px`;
-}
-
-defineBoardDimensions(5);
