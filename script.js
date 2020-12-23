@@ -61,7 +61,7 @@ function clear() {
 
 function buttonClear() {
     let cleanButton = document.querySelector('#clear-board');
-    cleanButton.addEventListener('click', clear())
+    cleanButton.addEventListener('click', clear)
 }
 
 function selectedColor() {
