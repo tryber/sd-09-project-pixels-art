@@ -41,3 +41,11 @@ function limpaTudo() {
     }
   }
 }
+
+function selectColor() {
+  let select = document.querySelector('.color');
+  if (select.id == 'black'){
+    select.className = 'selected';
+  }
+}
+window.onload = selectColor();
