@@ -37,10 +37,20 @@
 
 .clear-board {
   background-color: silver;
-  margin: 20px;
+  margin: 3px;
   text-align: center;
 }
 
 .input-box {
+  display: inline-block;
+}
+
+.generate-board {
+  background-color: silver;
+  margin: 3px;
+  text-align: center;
+}
+
+.pixel-board {
   display: inline-block;
 }

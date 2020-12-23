@@ -76,6 +76,42 @@ window.onload = function () {
   }
   minSizeBoard();
 
+  function vqvButton(buttonName2) {
+    const botao2 = document.querySelector('#clear');
+    const newButton2 = document.createElement('button');
+    const newButtonID2 = 'generate-board';
+    const newButtonClass2 = 'generate-board';
+    newButton2.innerHTML = buttonName2;
+    newButton2.id = newButtonID2;
+    newButton2.className = newButtonClass2;
+    botao2.appendChild(newButton2);
+  }
+  vqvButton('VQV');
+  const vqv = document.getElementById('board-size');
+  const bttn1 = document.getElementById('generate-board');
+  const divAvo = document.getElementById('pixel-board');
+  function createBoard() {
+    const vqvNumber = vqv.value;
+    divAvo.innerHTML = '';
+    for (let index = 0; index < vqvNumber; index += 1) {
+      const newDivPai = document.createElement('div');
+      const newDivPaiId = 'no-margin';
+      const newDivPaiClass = 'no-margin';
+      newDivPai.id = newDivPaiId;
+      newDivPai.className = newDivPaiClass
+      divAvo.appendChild(newDivPai);
+      for (let index2 = 0; index2 < vqvNumber; index2 += 1) {
+        const newDivFilho = document.createElement('div');
+        const newDivFilhoId = 'pixel';
+        const newDivFilhoClass = 'pixel';
+        newDivFilho.id = newDivFilhoId;
+        newDivFilho.className = newDivFilhoClass;
+        newDivPai.appendChild(newDivFilho);
+      }
+    }
+  }
+  bttn1.addEventListener('click', createBoard);
+  createBoard();
   function clearPixelsButton(buttonName) {
     const botao = document.querySelector('#clear');
     const newButton = document.createElement('button');
@@ -87,10 +123,10 @@ window.onload = function () {
     botao.appendChild(newButton);
   }
   clearPixelsButton('Limpar');
-  const clr = document.querySelectorAll('.pixel');
   const bttn = document.querySelector('#clear-board');
   const color = 'white';
   function clearPixels() {
+    const clr = document.querySelectorAll('.pixel');
     for (let index = 0; index < clr.length; index += 1) {
       clr[index].style.backgroundColor = color;
     }
