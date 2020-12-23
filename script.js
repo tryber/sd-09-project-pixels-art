@@ -4,10 +4,10 @@ window.onload = function () {
   for (let index = 0; index < classPixel.length; index += 1) {
     classPixel[index].style.backgroundColor = 'white';
   }
-
-  const colorBlack = document.getElementsByClassName('color black')[0];
-  colorBlack.className = 'color black selected';
 };
+
+const colorBlack = document.getElementsByClassName('color black')[0];
+colorBlack.className = 'color black selected';
 
 function addPixels(size) {
   for (let index = 1; index <= size; index += 1) {
@@ -23,3 +23,80 @@ function addPixels(size) {
 }
 
 addPixels(5);
+
+function verifySelectedClassesBlack() {
+  let colors = document.getElementsByClassName('color');
+  for (let index = 0; index < colors.length; index += 1) {
+    if (colors[index].className.includes('black selected')) {
+      colors[index].className = 'color black';
+    }
+  }
+}
+
+function verifySelectedClassesLightblue() {
+  let colors = document.getElementsByClassName('color');
+  for (let index = 0; index < colors.length; index += 1) {
+    if (colors[index].className.includes('lightblue selected')) {
+      colors[index].className = 'color lightblue';
+    }
+  }
+}
+
+function verifySelectedClassesMarineblue() {
+  let colors = document.getElementsByClassName('color');
+  for (let index = 0; index < colors.length; index += 1) {
+    if (colors[index].className.includes('marineblue selected')) {
+      colors[index].className = 'color marineblue';
+    }
+  }
+}
+
+function verifySelectedClassesGreen() {
+  let colors = document.getElementsByClassName('color');
+  for (let index = 0; index < colors.length; index += 1) {
+    if (colors[index].className.includes('green selected')) {
+      colors[index].className = 'color green';
+    }
+  }
+}
+
+function selectBlack() {
+  verifySelectedClassesBlack();
+  verifySelectedClassesLightblue();
+  verifySelectedClassesMarineblue();
+  verifySelectedClassesGreen();
+  colorBlack.className = 'color black selected';
+}
+
+function selectLightblue() {
+  verifySelectedClassesBlack();
+  verifySelectedClassesLightblue();
+  verifySelectedClassesMarineblue();
+  verifySelectedClassesGreen();
+  colorLightblue.className = 'color lightblue selected';
+}
+
+function selectMarineblue() {
+  verifySelectedClassesBlack();
+  verifySelectedClassesLightblue();
+  verifySelectedClassesMarineblue();
+  verifySelectedClassesGreen();
+  colorMarineblue.className = 'color marineblue selected';
+}
+
+function selectGreen() {
+  verifySelectedClassesBlack();
+  verifySelectedClassesLightblue();
+  verifySelectedClassesMarineblue();
+  verifySelectedClassesGreen();
+  colorGreen.className = 'color green selected';
+}
+
+const colorLightblue = document.getElementsByClassName('color lightblue')[0];
+const colorMarineblue = document.getElementsByClassName('color marineblue')[0];
+const colorGreen = document.getElementsByClassName('color green')[0];
+
+colorBlack.addEventListener('click', selectBlack);
+colorLightblue.addEventListener('click', selectLightblue);
+colorMarineblue.addEventListener('click', selectMarineblue);
+colorGreen.addEventListener('click', selectGreen);
