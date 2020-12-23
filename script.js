@@ -22,9 +22,9 @@ function addPixels(size) {
 
 addPixels(5);
 
-function defineBoardDimensions(size) {
-  document.getElementById('pixel-board').style.width = `${size * size} em`;
-  document.getElementById('pixel-board').style.height = `${size * size} em`;
+function defineBoardDimensions(tamanho) {
+  document.getElementById('pixel-board').style.width = `${tamanho * 40} px`;
+  document.getElementById('pixel-board').style.height = `${tamanho * 40} px`;
 }
 
 defineBoardDimensions(5);

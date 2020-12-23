@@ -1,3 +1,11 @@
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  text-align: center;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -22,8 +30,7 @@
 }
 
 #pixel-board {
-  height: 25em;
-  width: 25em;
+  text-align: center;
 }
 
 .pixel {
