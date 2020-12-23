@@ -37,7 +37,7 @@ function limpaTudo() {
 
   for (let i = 0; i < pixelIndivid.length; i += 1) {
     if (pixelIndivid[i].style.backgroundColor !== 'white') {
-      pixelIndivid[i].style.backgroundColor = 'white'
+      pixelIndivid[i].style.backgroundColor = 'white';
     }
   }
 }
@@ -45,7 +45,7 @@ function limpaTudo() {
 function selectColor() {
   let select = document.querySelector('.color');
   if (select.id == 'black'){
-    select.className = 'selected';
+    select.className = ' color selected';
   }
 }
 window.onload = selectColor();
