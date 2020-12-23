@@ -30,14 +30,13 @@ function criarTR(param1, param2) {
 criarTR(5, 5);
 
 let limpar = document.getElementById("clear-board");
-limpar.addEventListener('click', limpaTudo)
+limpar.addEventListener('click', clearBoard)
 
-function limpaTudo() {
+function clearBoard() {
   let pixelIndivid = document.querySelectorAll('.pixel');
-
   for (let i = 0; i < pixelIndivid.length; i += 1) {
     if (pixelIndivid[i].style.backgroundColor !== 'white') {
-      pixelIndivid[i].style.backgroundColor = 'white';
+      pixelIndivid[i].style.backgroundColor = 'rgb(255,255,255)';
     }
   }
 }
