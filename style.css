@@ -1,8 +1,8 @@
-#title {
+.title {
   text-align: center;
 }
 
-#color-palette {
+.color-palette {
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   background-color: rgb(59, 113, 64);
 }
 
-#pixel-board {
+.pixel-board {
   text-align: center;
 }
 
