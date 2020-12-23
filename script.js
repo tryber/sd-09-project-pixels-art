@@ -137,9 +137,9 @@ function colorFill(event) {
 }
 
 function addEventListenerOnPixels() {
-  let pixels = document.getElementsByClassName('pixel');
+  const pixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', colorFill)
+    pixels[index].addEventListener('click', colorFill);
   }
 }
 
