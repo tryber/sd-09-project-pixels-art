@@ -25,7 +25,7 @@ function addPixels(size) {
 addPixels(5);
 
 function verifySelectedClassesBlack() {
-  let colors = document.getElementsByClassName('color');
+  const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     if (colors[index].className.includes('black selected')) {
       colors[index].className = 'color black';
@@ -34,7 +34,7 @@ function verifySelectedClassesBlack() {
 }
 
 function verifySelectedClassesLightblue() {
-  let colors = document.getElementsByClassName('color');
+  const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     if (colors[index].className.includes('lightblue selected')) {
       colors[index].className = 'color lightblue';
@@ -43,7 +43,7 @@ function verifySelectedClassesLightblue() {
 }
 
 function verifySelectedClassesMarineblue() {
-  let colors = document.getElementsByClassName('color');
+  const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     if (colors[index].className.includes('marineblue selected')) {
       colors[index].className = 'color marineblue';
@@ -52,13 +52,17 @@ function verifySelectedClassesMarineblue() {
 }
 
 function verifySelectedClassesGreen() {
-  let colors = document.getElementsByClassName('color');
+  const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     if (colors[index].className.includes('green selected')) {
       colors[index].className = 'color green';
     }
   }
 }
+
+const colorLightblue = document.getElementsByClassName('color lightblue')[0];
+const colorMarineblue = document.getElementsByClassName('color marineblue')[0];
+const colorGreen = document.getElementsByClassName('color green')[0];
 
 function selectBlack() {
   verifySelectedClassesBlack();
@@ -91,10 +95,6 @@ function selectGreen() {
   verifySelectedClassesGreen();
   colorGreen.className = 'color green selected';
 }
-
-const colorLightblue = document.getElementsByClassName('color lightblue')[0];
-const colorMarineblue = document.getElementsByClassName('color marineblue')[0];
-const colorGreen = document.getElementsByClassName('color green')[0];
 
 colorBlack.addEventListener('click', selectBlack);
 colorLightblue.addEventListener('click', selectLightblue);
