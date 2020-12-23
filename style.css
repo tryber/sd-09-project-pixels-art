@@ -1,44 +1,50 @@
 .board-size {
-  font-variant-numeric: ordinal;
-  margin-right: 5px;
+  font-size: 2.2vh;
+  height: 65%;
   padding-left: 3px;
-  /* width: 30px; */
+  width: 10%;
 }
 
-body {
+html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   margin: 0;
-  /* max-height: 768px; */
-  /* max-width: 1366px; */
   text-align: center;
 }
 
+.botao {
+  font-size: 2.2vh;
+  height: 75%;
+  margin-bottom: 10%;
+  margin-left: 10px;
+  margin-top: 0.6%;
+  width: 10%;
+}
 .circulo {
-  background-image: url('img/trybe.png');
+  background-image: url('trybe.png');
   background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
-  border: rgba(0 , 0 , 0 , 0.5) double 2px;
+  border: rgba(0 , 0 , 0 , 0.5) double 1vh;
   border-radius: 50%;
   display: inline-block;
-  height: 70px;
+  height: 10vh;
+  left: 1%;
   opacity: 0.2;
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  width: 70px;
+  position: fixed;
+  top: 2%;
+  width: 10vh;
 }
 
 .clear-board {
   border: initial 1px;
-  margin: 0 5px;
 }
 
 .color {
   border: black solid 1px;
   display: inline-block;
-  margin: 0 6px;
-  padding: 25px;
+  margin: 0 1%;
+  padding: 2%;
 }
 
 .color-palette .black {
@@ -58,9 +64,12 @@ body {
 }
 
 .container {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding: 5px;
+  height: 5%;
+}
+
+.controls {
+  height: 100%;
+  width: 100%;
 }
 
 div.color {
@@ -72,34 +81,34 @@ div.selected {
 }
 
 h1 {
-  /* background-image: linear-gradient(to right, transparent, white 100%); */
-  /* border-radius: 30px; */
-  font-family: sans-serif;
-  height: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 5vh;
+  height: 10%;
+  letter-spacing: 0.5vh;
   margin: 5px auto;
   padding-right: 5px;
-  width: 250px;
 }
 
 .line {
   display: block;
 }
 
+.main {
+  height: 90%;
+}
+
 .pixel {
   background-color: white;
   border: black solid 1px;
   display: inline-block;
-  /* height: 40px; */
   margin: 0;
   padding: 25px;
-  /* width: 40px; */
 }
 
 .pixel-board {
   line-height: 0;
-  margin: 5px auto;
-  /* width: 470px;
-  height: 470px; */
+  padding-bottom: 3%;
+  padding-top: 0.8%;
 }
 
 .pixel-board .black {
@@ -127,12 +136,12 @@ h1 {
   bottom: 0;
   color: white;
   display: block;
-  font-size: 12px;
-  height: 18px;
+  font-weight: 600;
+  font-size: 1.3vh;
+  height: 2.5%;
   letter-spacing: 0.5px;
   margin-left: 0;
-  /* max-width: 1366px; */
-  padding-top: 3px;
+  padding-top: 1vh;
   position: fixed;
   text-align: center;
   width: 100%;

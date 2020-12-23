@@ -39,22 +39,18 @@ function pixelFrame(size) {
         case 5:
           divPixel.style.width = '40px';
           divPixel.style.height = '40px';
-          console.log('entrou no 5');
           break;
         case 6:
           divPixel.style.width = '20px';
           divPixel.style.height = '20px';
-          console.log('entrou no 6');
           break;
         case 7:
           divPixel.style.width = '10px';
           divPixel.style.height = '10px';
-          console.log('entrou no 7');
           break;
         default:
           divPixel.style.width = '3px';
           divPixel.style.height = '3px';
-          console.log('entrou no default');
           break;
       }
       line.appendChild(divPixel);
@@ -90,7 +86,7 @@ function clicSelectColor() {
 }
 
 // 08- Preenche cor
-function preenchimentoCor() {
+function colorFill() {
   const pixelArt = document.querySelector('#pixel-board');
   pixelArt.addEventListener('click', function (event) {
     const pixelSelect = event.target.classList;
@@ -118,7 +114,7 @@ function clearBoard() {
 }
 
 // 10- Redimenciona o quadro de pixels
-function inputResize() {
+/* function inputResize() {
   const div = document.querySelector('#controls');
   const input = document.createElement('input');
   input.id = 'board-size';
@@ -127,28 +123,40 @@ function inputResize() {
   input.type = 'number';
   input.min = '1';
   input.max = '50';
-  input.value = '5';
+  // input.value = '';
   div.appendChild(input);
   input.addEventListener('input', function (event) {
     let aux = event.target;
+    if (aux.value === '') {
+      console.log('tá passando no inputResize 131');
+      // alert('Board inválido!');
+    }
     if (aux.value > parseInt(aux.getAttribute('max'))) {
       aux.value = aux.getAttribute('max');
     }
     if (aux.value < parseInt(aux.getAttribute("min"))) {
-      alert('Board inválido!');
+      console.log('Tá passando no auxiliar 138');
+      // alert('Board inválido!');
       aux.value = 1;
     }
   });
-}
+} */
+
+
 
 function resizeBoard() {
   const botao = document.querySelector('#generate-board');
   botao.addEventListener('click', function () {
-    const value = document.querySelector('#board-size').value;
+    const valor = document.querySelector('#board-size').value;
     const board = document.querySelector('#pixel-board');
-    board.remove();
-    pixelFrame(value);
-    preenchimentoCor();
+    if(valor === '' || valor < 1) {
+      console.log('log 153 = ""');
+      alert('Board inválido!');
+    } else {
+      board.remove();
+      pixelFrame(valor);
+      colorFill();
+    }
   });
 }
 
@@ -184,13 +192,12 @@ function createFooter() {
 window.onload = function () {
   paletteColor();
   selectColor('black');
-  inputResize();
-  const inputSize = parseInt(document.querySelector('#board-size').value);
-  pixelFrame(inputSize);
+  // inputResize();
   criarBotao('VQV', 'generate-board', 'controls');
   criarBotao('Limpar', 'clear-board', 'controls');
+  pixelFrame(5);
   resizeBoard();
-  preenchimentoCor();
+  colorFill();
   clearBoard();
   clicSelectColor();
   createFooter();
