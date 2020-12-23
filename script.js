@@ -64,12 +64,26 @@ window.onload = function () {
     });
   }
   paintPixel();
+
+  function minSizeBoard() {
+    const minSize = document.getElementById('board-size');
+    minSize.addEventListener('keyup', function () {
+      if (minSize.value < 5) {
+        alert('Board inválido!');
+        minSize.value = '5';
+      }
+    });
+  }
+  minSizeBoard();
+
   function clearPixelsButton(buttonName) {
     const botao = document.querySelector('#clear');
     const newButton = document.createElement('button');
     const newButtonID = 'clear-board';
+    const newButtonClass = 'clear-board';
     newButton.innerHTML = buttonName;
     newButton.id = newButtonID;
+    newButton.className = newButtonClass;
     botao.appendChild(newButton);
   }
   clearPixelsButton('Limpar');
