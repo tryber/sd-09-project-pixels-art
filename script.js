@@ -98,7 +98,7 @@ window.onload = function () {
       const newDivPaiId = 'no-margin';
       const newDivPaiClass = 'no-margin';
       newDivPai.id = newDivPaiId;
-      newDivPai.className = newDivPaiClass
+      newDivPai.className = newDivPaiClass;
       divAvo.appendChild(newDivPai);
       for (let index2 = 0; index2 < vqvNumber; index2 += 1) {
         const newDivFilho = document.createElement('div');
