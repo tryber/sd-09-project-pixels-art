@@ -100,3 +100,47 @@ colorBlack.addEventListener('click', selectBlack);
 colorLightblue.addEventListener('click', selectLightblue);
 colorMarineblue.addEventListener('click', selectMarineblue);
 colorGreen.addEventListener('click', selectGreen);
+
+function colorFillToBlack(event) {
+  const selectedColor = document.getElementsByClassName('selected')[0];
+  if (selectedColor.className.includes('black')) {
+    event.target.style.backgroundColor = 'black';
+  }
+}
+
+function colorFillToLightblue(event) {
+  const selectedColor = document.getElementsByClassName('selected')[0];
+  if (selectedColor.className.includes('lightblue')) {
+    event.target.style.backgroundColor = 'rgb(154, 172, 192)';
+  }
+}
+
+function colorFillToMarineblue(event) {
+  const selectedColor = document.getElementsByClassName('selected')[0];
+  if (selectedColor.className.includes('marineblue')) {
+    event.target.style.backgroundColor = 'rgb(16, 40, 72)';
+  }
+}
+
+function colorFillToGreen(event) {
+  const selectedColor = document.getElementsByClassName('selected')[0];
+  if (selectedColor.className.includes('green')) {
+    event.target.style.backgroundColor = 'rgb(59, 113, 64)';
+  }
+}
+
+function colorFill(event) {
+  colorFillToBlack(event);
+  colorFillToLightblue(event);
+  colorFillToMarineblue(event);
+  colorFillToGreen(event);
+}
+
+function addEventListenerOnPixels() {
+  let pixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', colorFill)
+  }
+}
+
+addEventListenerOnPixels();
