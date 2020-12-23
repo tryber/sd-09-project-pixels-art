@@ -1,0 +1,41 @@
+.title {
+  text-align: center;
+}
+
+.color-palette {
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.black {
+  background-color: black;
+}
+
+.lightblue {
+  background-color: rgb(154, 172, 192);
+}
+
+.marineblue {
+  background-color: rgb(16, 40, 72);
+}
+
+.green {
+  background-color: rgb(59, 113, 64);
+}
+
+.pixel-board {
+  text-align: center;
+}
+
+.pixel {
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
