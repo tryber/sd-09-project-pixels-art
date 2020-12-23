@@ -56,8 +56,12 @@ function clear() {
     for (let index = 0; index < pixels.length; index++) {
         pixels[index].style.backgroundColor = 'white';
         
-    }
-    
+    }    
+}
+
+function buttonClear() {
+    let CleanButton = document.querySelector('clear');
+    buttonClear.addEventListener('click', clear())
 }
 
 function selectedColor() {
