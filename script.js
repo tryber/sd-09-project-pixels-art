@@ -10,7 +10,6 @@ function addPixels(size) {
   for (let index = 1; index <= size; index += 1) {
     const divPrincipal = document.createElement('div');
     const pixelBoard = document.getElementById('pixel-board');
-    divPrincipal.className = 'pixel';
     pixelBoard.appendChild(divPrincipal);
     for (let j = 1; j <= size; j += 1) {
       const divFilha = document.createElement('div');
