@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   const classPixel = document.getElementsByClassName('pixel');
 
   for (let index = 0; index < classPixel.length; index += 1) {
@@ -7,7 +7,6 @@ window.onload = function() {
 
   const colorBlack = document.getElementsByClassName('color black')[0];
   colorBlack.className = 'color black selected';
-
 };
 
 function addPixels(size) {
