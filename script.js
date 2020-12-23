@@ -1,3 +1,11 @@
+window.onload = function() {
+  let classPixel = document.getElementsByClassName('pixel');
+
+  for (let index = 0; index < classPixel.length; index += 1) {
+    classPixel[index].style.backgroundColor = 'white';
+  }
+}
+
 function addPixels(size) {
   for (let index = 1; index <= size; index += 1) {
     const divPrincipal = document.createElement('div');
@@ -15,8 +23,8 @@ function addPixels(size) {
 addPixels(5);
 
 function defineBoardDimensions(size) {
-  document.getElementById('pixel-board').style.width = `${size * 40} px`;
-  document.getElementById('pixel-board').style.height = `${size * 40} px`;
+  document.getElementById('pixel-board').style.width = `${size * size} em`;
+  document.getElementById('pixel-board').style.height = `${size * size} em`;
 }
 
 defineBoardDimensions(5);
