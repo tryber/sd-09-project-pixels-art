@@ -110,5 +110,4 @@ h1 {
 .selected {
   border-radius: 50%;
   box-shadow : 1px 1px 10px white, 0 0 0.5em white;
-  padding: 1.5%;
 }
