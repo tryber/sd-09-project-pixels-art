@@ -22,12 +22,12 @@ section {
 }
 
 .color {
-    display: inline-block;
-    border: 1px solid;
     border-radius: 30px;
+    border: 1px solid;
+    display: inline-block;
     height: 40px;
-    margin: 0 5px 0 0;
     margin-right: 30px;
+    margin: 0 5px 0 0;
     width: 40px;
 }
 

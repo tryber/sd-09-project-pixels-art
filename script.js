@@ -1,6 +1,7 @@
 const boxPallet = document.querySelector('#color-palette');
 
 //cria a caixa tabela da paleta
+
 const palletColors = 4;
 function boxPalletCollors() {
     for (let index = 0; index < palletColors; index += 1) {
@@ -8,17 +9,18 @@ function boxPalletCollors() {
         boxCollors.className = 'color';
         boxPallet.appendChild(boxCollors);
     }
-    let firstColor = document.querySelector('.color');
-    firstColor.className = 'color color1 selected'
+    const firstColor = document.querySelector('.color');
+    firstColor.className = 'color color1 selected';
 }
 boxPalletCollors();
 
 //coloca cores aleatorias as paletas
+
 function randonColor() {
     const randonFirstColor = parseInt(Math.random() * 255, 10);
     const randonSecondColor = parseInt(Math.random() * 255, 10);
     const randonThirdColor = parseInt(Math.random() * 255, 10);
-    return `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`
+    return `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
 }
 
 function coresRandon() {
@@ -40,12 +42,12 @@ function table() {
     let boardPixel = document.querySelector('section');
     boardPixel.appendChild(tabela);
     for (let index = 0; index < numLines.length; index++) {
-        let lines = document.createElement('tr')
+        let lines = document.createElement('tr');
         tabela.appendChild(lines)
         for (let index = 0; index < numLines.length; index++) {
-            let col = document.createElement('td')
-            col.className = 'pixel'
-            lines.appendChild(col)
+            let col = document.createElement('td');
+            col.className = 'pixel';
+            lines.appendChild(col);
         }
     }
 }
@@ -55,8 +57,7 @@ function clear() {
     const pixels = document.querySelectorAll('.pixel');
     for (let index = 0; index < pixels.length; index++) {
         pixels[index].style.backgroundColor = 'white';
-        
-    }    
+    }
 }
 
 function buttonClear() {
@@ -65,11 +66,10 @@ function buttonClear() {
     cleanButton.addEventListener('click',function () {
         for (let index = 0; index < pixels.length; index += 1) {
             pixels[index].style.backgroundColor = 'white';
-            
         }
-    }) 
+    })
 }
-buttonClear()
+buttonClear();
 
 function selectedColor() {
     let divColors = document.querySelectorAll('.color')
@@ -79,10 +79,10 @@ function selectedColor() {
             colorSelected.className = 'color';
             event.target.className = 'color selected';
             return colorSelected = event.target;
-        })    
+        })
     }
 }
-selectedColor()
+selectedColor();
 
 function paintPixel() {
     let pixels = document.querySelectorAll('.pixel');
@@ -94,11 +94,10 @@ function paintPixel() {
         })
     }
 }
-paintPixel()
+paintPixel();
+
 //random color carregando a pagina
 window.onload = function() {
     coresRandon();
     clear();
 }
-
-//
