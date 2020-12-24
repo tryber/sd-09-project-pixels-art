@@ -63,7 +63,7 @@ function buttonClear() {
     let pixels = document.querySelectorAll('.pixel')
     let cleanButton = document.querySelector('#clear-board');
     cleanButton.addEventListener('click',function () {
-        for (let index = 0; index < pixel.length; index += 1) {
+        for (let index = 0; index < pixels.length; index += 1) {
             pixels[index].style.backgroundColor = 'white';
             
         }
@@ -84,6 +84,17 @@ function selectedColor() {
 }
 selectedColor()
 
+function paintPixel() {
+    let pixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixels.length; index++) {
+        pixels[index].addEventListener('click', function (event) {
+            let selectColor = window.getComputedStyle(document.querySelector('.selected'));
+            let background = selectColor.backgroundColor;
+            event.target.style.backgroundColor = background;
+        })
+    }
+}
+paintPixel()
 //random color carregando a pagina
 window.onload = function() {
     coresRandon();
