@@ -2,30 +2,33 @@
   font-size: 2.2vh;
   height: 65%;
   padding-left: 3px;
-  width: 10%;
+  width: 5%;
 }
 
-html, body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html , body {
+  background-attachment: fixed;
+  background-image: url(bkg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   margin: 0;
   text-align: center;
 }
 
-.botao {
+.buttons {
   font-size: 2.2vh;
-  height: 75%;
+  height: 85%;
   margin-bottom: 10%;
   margin-left: 10px;
   margin-top: 0.6%;
-  width: 10%;
 }
-.circulo {
+
+.circle {
   background-image: url('trybe.png');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  border: rgba(0 , 0 , 0 , 0.5) double 1vh;
+  border: rgba(0 , 0 , 0 , .5) double 1vh;
   border-radius: 50%;
   display: inline-block;
   height: 10vh;
@@ -36,31 +39,13 @@ html, body {
   width: 10vh;
 }
 
-.clear-board {
-  border: initial 1px;
-}
-
 .color {
   border: black solid 1px;
+  border-radius: 2vh;
   display: inline-block;
-  margin: 0 1%;
-  padding: 2%;
-}
-
-.color-palette .black {
-  background-color: black;
-}
-
-.color-palette .blue {
-  background-color: blue;
-}
-
-.color-palette .red {
-  background-color: red;
-}
-
-.color-palette .yellow {
-  background-color: yellow;
+  margin: 0 0.5%;
+  padding: 1.2%;
+  transition: padding 0.5s;
 }
 
 .container {
@@ -72,21 +57,31 @@ html, body {
   width: 100%;
 }
 
-div.color {
-  border-radius: 10px;
-}
-
-div.selected {
-  border-radius: 50%;
+.footer {
+  background-color: rgba(0 , 0 , 0 , .5);
+  bottom: 0;
+  color: white;
+  display: block;
+  font-size: 1.5vh;
+  font-weight: 600;
+  height: 2.5%;
+  letter-spacing: 0.5px;
+  margin-left: 0;
+  padding-top: 1vh;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
 
 h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(35 , 92 , 112);
+  font-family: sans-serif;
   font-size: 5vh;
   height: 10%;
   letter-spacing: 0.5vh;
   margin: 5px auto;
   padding-right: 5px;
+  text-shadow: 1px 1px 5px white, 0 0 0.5em white;
 }
 
 .line {
@@ -103,6 +98,7 @@ h1 {
   display: inline-block;
   margin: 0;
   padding: 25px;
+  transition: 1s;
 }
 
 .pixel-board {
@@ -111,38 +107,7 @@ h1 {
   padding-top: 0.8%;
 }
 
-.pixel-board .black {
-  background-color: black;
-}
-
-.pixel-board .blue {
-  background-color: blue;
-}
-
-.pixel-board .red {
-  background-color: red;
-}
-
-.pixel-board .white {
-  background-color: white;
-}
-
-.pixel-board .yellow {
-  background-color: yellow;
-}
-
-.rodape {
-  background-color: rgba(0 , 0 , 0 , 0.5);
-  bottom: 0;
-  color: white;
-  display: block;
-  font-weight: 600;
-  font-size: 1.3vh;
-  height: 2.5%;
-  letter-spacing: 0.5px;
-  margin-left: 0;
-  padding-top: 1vh;
-  position: fixed;
-  text-align: center;
-  width: 100%;
+.selected {
+  border-radius: 50%;
+  padding: 1.5%;
 }
