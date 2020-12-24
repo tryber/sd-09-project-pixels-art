@@ -7,5 +7,7 @@
 
 function load() {
   console.log("Evento de carregamento detectado!");
+  let element = document.querySelector('.black');
+  element.className += ' selected'
 }
 window.onload = load;
