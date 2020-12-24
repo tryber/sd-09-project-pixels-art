@@ -17,22 +17,16 @@ boxPalletCollors();
 //coloca cores aleatorias as paletas
 
 function randonColor() {
+  const colorDaClasse = document.querySelectorAll('.color');
+  colorDaClasse[0].style.backgroundColor = 'black'
+  for (let index = 1; index < colorDaClasse.length; index += 1) {
     const randonFirstColor = parseInt(Math.random() * 255, 10);
     const randonSecondColor = parseInt(Math.random() * 255, 10);
     const randonThirdColor = parseInt(Math.random() * 255, 10);
-    return `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
+    colorDaClasse[index].style.backgroundColor = `rgb(${randonFirstColor}, ${randonSecondColor}, ${randonThirdColor})`;
+  }
 }
-
-function coresRandon() {
-    let color1 = document.querySelectorAll('.color')[0].classList.add('color1');
-    let color2 = document.querySelectorAll('.color')[1].classList.add('color2');
-    let color3 = document.querySelectorAll('.color')[2].classList.add('color3');
-    let color4 = document.querySelectorAll('.color')[3].classList.add('color4');
-    document.querySelector('.color1').style.backgroundColor = 'black';
-    document.querySelector('.color2').style.backgroundColor = randonColor();
-    document.querySelector('.color3').style.backgroundColor = randonColor();
-    document.querySelector('.color4').style.backgroundColor = randonColor();
-}
+randonColor() 
 
 //criar a tablec
 function table() {
