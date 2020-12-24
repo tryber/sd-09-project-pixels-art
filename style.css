@@ -1,0 +1,48 @@
+header {
+    background-color: blueviolet;
+    height: 100px;
+    margin-bottom: 30px;
+    padding-top: 25px;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: inline-table;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+div {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+.color {
+    border-radius: 30px;
+    border: 1px solid;
+    display: inline-block;
+    height: 40px;
+    margin-right: 30px;
+    margin: 0 5px 0 0;
+    width: 40px;
+}
+
+.pixel {
+  border: solid black 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  padding: 0;
+  width: 40px;
+}
+
+.line {
+    padding: 0;
+}
+.butons {
+    margin: 5px;
+}
