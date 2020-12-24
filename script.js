@@ -1,5 +1,24 @@
+window.addEventListener('load', start);
 
-document.getElementsByClassName('color')[0].style.backgroundColor="black";
-document.getElementsByClassName('color')[1].style.backgroundColor="red";
-document.getElementsByClassName('color')[2].style.backgroundColor="green";
-document.getElementsByClassName('color')[3].style.backgroundColor="blue";
+function start(){
+
+const colorPainel = document.getElementsByClassName('color');
+palletaCores();
+colorPainel[0].classList.add('selected');
+
+}
+
+function palletaCores(){
+  const colorPainel = document.getElementsByClassName('color');
+  let lengthPainel = colorPainel.length;
+  let colorSelect = ['black', 'red', 'green', 'blue']
+
+  for (let i = 0; i < lengthPainel; i +=1){
+    colorPainel[i].classList.add(colorSelect[i]);
+  }
+}
+
+function selecionaCor(){
+  const painelDeCores = document.getElementsByClassName('pixel');
+}
+
