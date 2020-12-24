@@ -43,9 +43,12 @@ main {
     align-items: center;
 }
 
+#clear-board {
+    margin: 20px;
+}
+
 #pixel-board {
     border: 1px solid black;
-    margin: 20px;
 }
 
 .pixel {
