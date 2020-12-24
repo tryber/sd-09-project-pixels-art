@@ -1,10 +1,5 @@
 #title {
-    display: none;
-}
-
-.header-container {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 main {
@@ -12,4 +7,32 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#color-palette {
+    display: flex;
+
+}
+
+.color {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+}
+
+.color#black {
+    background-color: black;
+}
+
+.color#red {
+    background-color: red;
+}
+
+.color#green {
+    background-color: green;
+}
+
+.color#blue {
+    background-color: blue;
 }
