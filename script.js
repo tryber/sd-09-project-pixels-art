@@ -1,5 +1,5 @@
 // Gera número aleatório
-function randomNumber(){
+function randomNumber() {
   const num = Math.floor(Math.random() * 256);
   return num;
 }
@@ -17,7 +17,7 @@ function paletteColor() {
   for (let index = 0; index < 4; index += 1) {
     const divColor = document.createElement('div');
     divColor.classList.add('color');
-    divColor.classList.add('color'+[index]);
+    divColor.classList.add(`color${[index]}`);
     if (index === 0) {
       divColor.style.backgroundColor = 'black';
     } else {
@@ -67,7 +67,7 @@ function pixelFrame(size) {
     const line = document.createElement('div');
     line.classList.add('line');
     pixelBoard.appendChild(line);
-    for (let index = 0; index < select; index += 1) {
+    for (let cont = 0; cont < select; cont += 1) {
       const divPixel = document.createElement('div');
       divPixel.classList.add('pixel');
       pixelSize(select, divPixel);

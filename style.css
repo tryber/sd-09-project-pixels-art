@@ -7,15 +7,17 @@
 
 html , body {
   background-attachment: fixed;
-  background-image: url(bkg.jpeg);
+  background-image: url('bkg.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: sans-serif;
   height: 100%;
   margin: 0;
   text-align: center;
 }
 
 .buttons {
+  box-shadow : 1px 1px 5px white, 0 0 0.5em white;
   font-size: 2.2vh;
   height: 85%;
   margin-bottom: 10%;
@@ -28,7 +30,7 @@ html , body {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  border: rgba(0 , 0 , 0 , .5) double 1vh;
+  border: rgba(0, 0, 0, 0.5) double 1vh;
   border-radius: 50%;
   display: inline-block;
   height: 10vh;
@@ -45,7 +47,6 @@ html , body {
   display: inline-block;
   margin: 0 0.5%;
   padding: 1.2%;
-  transition: padding 0.5s;
 }
 
 .container {
@@ -58,7 +59,7 @@ html , body {
 }
 
 .footer {
-  background-color: rgba(0 , 0 , 0 , .5);
+  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   color: white;
   display: block;
@@ -74,8 +75,7 @@ html , body {
 }
 
 h1 {
-  color: rgb(35 , 92 , 112);
-  font-family: sans-serif;
+  color: rgb(35, 92, 112);
   font-size: 5vh;
   height: 10%;
   letter-spacing: 0.5vh;
@@ -109,5 +109,6 @@ h1 {
 
 .selected {
   border-radius: 50%;
+  box-shadow : 1px 1px 10px white, 0 0 0.5em white;
   padding: 1.5%;
 }
