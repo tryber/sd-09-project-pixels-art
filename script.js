@@ -1,9 +1,4 @@
-window.onload = function() {
-  let colorsArray = ['black', 'red', 'green', 'blue'];
-  createColorPalette(colorsArray);
-  createPixelBoard(5, 5);
-  setSelectedClass();
-};
+let colorsArray = ['black', 'red', 'green', 'blue'];
 
 function createColorPalette(colorsArray) {
   const colorPalette = document.querySelector('#color-palette');
@@ -14,9 +9,10 @@ function createColorPalette(colorsArray) {
     colorPalette.appendChild(colorDiv);
     if (color === 'black') {
       colorDiv.className += ' selected';
-    };
-  };
-};
+    }
+  }
+}
+createColorPalette(colorsArray);
 
 function createPixelBoard(line, column) {
   const pixelBoard = document.querySelector('#pixel-board');
@@ -29,6 +25,7 @@ function createPixelBoard(line, column) {
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';
       lineOfPixels.appendChild(pixel);
-    };
-  };
-};
+    }
+  }
+}
+createPixelBoard(5, 5);
