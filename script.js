@@ -5,7 +5,7 @@ function start(){
 const colorPainel = document.getElementsByClassName('color');
 palletaCores();
 colorPainel[0].classList.add('selected');
-
+//teste commit
 }
 
 function palletaCores(){
