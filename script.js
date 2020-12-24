@@ -60,8 +60,14 @@ function clear() {
 }
 
 function buttonClear() {
+    let pixels = document.querySelectorAll('.pixel')
     let cleanButton = document.querySelector('#clear-board');
-    cleanButton.addEventListener('click', clear())
+    cleanButton.addEventListener('click',function () {
+        for (let index = 0; index < pixel.length; index += 1) {
+            pixels[index].style.backgroundColor = 'white';
+            
+        }
+    }) 
 }
 buttonClear()
 
