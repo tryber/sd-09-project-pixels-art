@@ -1,27 +1,25 @@
-let colorsArray = ['black', 'red', 'green', 'blue'];
-
 function createColorPalette(colorsArray) {
   const colorPalette = document.querySelector('#color-palette');
-  for (let color of colorsArray) {
-    colorDiv = document.createElement('div');
+  for (let index = 0; index < colorsArray.length; index += 1) {
+    const colorDiv = document.createElement('div');
     colorDiv.className = 'color';
-    colorDiv.style.backgroundColor = color;
+    colorDiv.style.backgroundColor = colorsArray[index];
     colorPalette.appendChild(colorDiv);
-    if (color === 'black') {
+    if (colorsArray[index] === 'black') {
       colorDiv.className += ' selected';
     }
   }
 }
-createColorPalette(colorsArray);
+createColorPalette(['black', 'red', 'green', 'blue']);
 
 function createPixelBoard(line, column) {
   const pixelBoard = document.querySelector('#pixel-board');
-  for (let index = 0; index < column; index += 1) {
-    lineOfPixels = document.createElement('div');
+  for (let indexOfLine = 0; indexOfLine < column; indexOfLine += 1) {
+    const lineOfPixels = document.createElement('div');
     lineOfPixels.className = 'line';
     pixelBoard.appendChild(lineOfPixels);
-    for (let index = 0; index < line; index += 1) {
-      pixel = document.createElement('div');
+    for (let indexOfPixel = 0; indexOfPixel < line; indexOfPixel += 1) {
+      const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';
       lineOfPixels.appendChild(pixel);
