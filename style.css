@@ -1,8 +1,8 @@
-.black {
+#firstColor{
   background-color: black;
 }
 
-.blue {
+#secondColor {
   background-color: blue;
 }
 
@@ -19,7 +19,7 @@ body {
   width: 5px;
 }
 
-.green {
+#thirdColor {
   background-color: green;
 }
 
@@ -39,11 +39,11 @@ body {
   width: 200px;
 }
 
-.red {
+#fourthColor {
   background-color: red;
 }
 
-#title {
+.title {
   background-color: rgb(74, 180, 251);
   text-align: center;
 }
