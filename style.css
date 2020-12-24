@@ -1,5 +1,5 @@
-#color-palette {
-
+body {
+  text-align: center;
 }
 
 .color {
@@ -9,28 +9,8 @@
   width: 50px;
 }
 
-#black {
-  background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
-}
-
-#pixel-board {
-
-}
-
 .line {
-  display: block;
+  height: 40px;
 }
 
 .pixel {
