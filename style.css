@@ -1,0 +1,113 @@
+.board-size {
+  font-size: 2.2vh;
+  height: 65%;
+  padding-left: 3px;
+  width: 5%;
+}
+
+html , body {
+  background-attachment: fixed;
+  background-image: url('bkg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.buttons {
+  box-shadow : 1px 1px 5px white, 0 0 0.5em white;
+  font-size: 2.2vh;
+  height: 85%;
+  margin-bottom: 10%;
+  margin-left: 10px;
+  margin-top: 0.6%;
+}
+
+.circle {
+  background-image: url('trybe.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: rgba(0, 0, 0, 0.5) double 1vh;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10vh;
+  left: 1%;
+  opacity: 0.2;
+  position: fixed;
+  top: 2%;
+  width: 10vh;
+}
+
+.color {
+  border: black solid 1px;
+  border-radius: 2vh;
+  display: inline-block;
+  margin: 0 0.5%;
+  padding: 1.2%;
+}
+
+.container {
+  height: 5%;
+}
+
+.controls {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: white;
+  display: block;
+  font-size: 1.5vh;
+  font-weight: 600;
+  height: 2.5%;
+  letter-spacing: 0.5px;
+  margin-left: 0;
+  padding-top: 1vh;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: rgb(35, 92, 112);
+  font-size: 5vh;
+  height: 10%;
+  letter-spacing: 0.5vh;
+  margin: 5px auto;
+  padding-right: 5px;
+  text-shadow: 1px 1px 5px white, 0 0 0.5em white;
+}
+
+.line {
+  display: block;
+}
+
+.main {
+  height: 90%;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: inline-block;
+  margin: 0;
+  padding: 25px;
+  transition: 1s;
+}
+
+.pixel-board {
+  line-height: 0;
+  padding-bottom: 3%;
+  padding-top: 0.8%;
+}
+
+.selected {
+  border-radius: 50%;
+  box-shadow : 1px 1px 10px white, 0 0 0.5em white;
+}
