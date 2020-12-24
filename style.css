@@ -11,7 +11,6 @@ main {
 
 #color-palette {
     display: flex;
-
 }
 
 .color {
@@ -35,4 +34,22 @@ main {
 
 .color#blue {
     background-color: blue;
+}
+
+#canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pixel-board {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.pixel {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
 }
