@@ -133,6 +133,15 @@ window.onload = function () {
 };
 
  */
+let color = "rgb(0 , 0 , 0)";
+
+function aleatoryColor() {
+  let newColor = "rgb(";
+  newColor += `${Math.round(Math.random() * 255)} , `;
+  newColor += `${Math.round(Math.random() * 255)} , `;
+  newColor += `${Math.round(Math.random() * 255)})`;
+  return newColor;
+}
 
 function createButton() {
   let getBody = document.querySelector("body");
@@ -197,6 +206,7 @@ function createPixelBox() {
 }
 
 window.onload = function () {
+  aleatoryColor();
   createPixelBox();
   createEventColor();
   selectedClass();
