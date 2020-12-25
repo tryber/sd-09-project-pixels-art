@@ -134,43 +134,6 @@ window.onload = function () {
 
  */
 
-function createTitle() {
-  let header = document.querySelector("header");
-  let createH1 = document.createElement("h1");
-  createH1.innerHTML = "Paleta de Cores";
-  createH1.id = "title";
-  header.appendChild(createH1);
-}
-
-function createPaletas() {
-  let getBody = document.querySelector("body");
-  let createSection = document.createElement("section");
-  let createDiv = document.createElement("div");
-  createSection.id = "boardline";
-  createDiv.id = "color-palette";
-  createDiv.className = "color-palette";
-  getBody.appendChild(createSection);
-  createSection.appendChild(createDiv);
-}
-
-function createDivChild() {
-  let getDiv = document.querySelector("#color-palette");
-  let createFirstDiv = document.createElement("div");
-  createFirstDiv.className = "color selected black";
-  getDiv.appendChild(createFirstDiv);
-
-  let createSecondDiv = document.createElement("div");
-  createSecondDiv.className = "color red";
-  getDiv.appendChild(createSecondDiv);
-
-  let createThirdDiv = document.createElement("div");
-  createThirdDiv.className = "color green";
-  getDiv.appendChild(createThirdDiv);
-
-  let createFourthDiv = document.createElement("div");
-  createFourthDiv.className = "color blue";
-  getDiv.appendChild(createFourthDiv);
-}
 function createButton() {
   let getBody = document.querySelector("body");
 
@@ -234,10 +197,6 @@ function createPixelBox() {
 }
 
 window.onload = function () {
-  createTitle();
-  createPaletas();
-  createDivChild();
-  createButton();
   createPixelBox();
   createEventColor();
   selectedClass();
