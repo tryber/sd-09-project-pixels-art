@@ -31,7 +31,7 @@ createPixelBoard(5, 5);
 function setSelectedColor() {
   const color = document.querySelectorAll('.color');
   for (let index = 0; index < color.length; index += 1) {
-    color[index].addEventListener ('click', function() {
+    color[index].addEventListener('click', function () {
       const selectedColor = document.querySelector('.selected');
       selectedColor.className = 'color';
       color[index].className += ' selected';
@@ -50,3 +50,14 @@ function setPixelColor() {
   }
 }
 setPixelColor();
+
+function clearPixelBoard() {
+  const clearBoard = document.querySelector('#clear-board');
+  let pixel = document.querySelectorAll('.pixel');
+  clearBoard.addEventListener('click', function () {
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].style.backgroundColor = 'white';
+    }
+  });
+}
+clearPixelBoard()
