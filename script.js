@@ -31,11 +31,11 @@ createPixelBoard(5, 5);
 function setSelectedColor() {
   const color = document.querySelectorAll('.color');
   for (let index = 0; index < color.length; index += 1) {
-    color[index].addEventListener('click', function(event) {
+    color[index].addEventListener('click', function() {
       const selectedColor = document.querySelector('.selected');
       selectedColor.className = 'color';
       color[index].className += ' selected';
-    })
+    });
   }
 }
 setSelectedColor();
