@@ -146,6 +146,7 @@ function createPaletas() {
   let getBody = document.querySelector("body");
   let createSection = document.createElement("section");
   let createDiv = document.createElement("div");
+  createSection.id = "boardline";
   createDiv.id = "color-palette";
   createDiv.className = "color-palette";
   getBody.appendChild(createSection);
