@@ -1,7 +1,10 @@
 const tabela = document.querySelector('#pixel-board');
+let getInput = document.querySelector('#board-size');
+let getButton = document.querySelector('#generate-board');
 
-function pixelTable(linha) {
-    for(let i = 0; i < 5; i += 1){
+
+function pixelTable(linha, boardSize) {
+    for(let i = 0; i < boardSize; i += 1){
         const quadrado = document.createElement('div');
         quadrado.className = 'pixel';
         linha.appendChild(quadrado);
@@ -10,15 +13,16 @@ function pixelTable(linha) {
 
 }
 
-function fiveTimesLine() {
-    for(let i = 0; i < 5; i += 1) {
+function fiveTimesLine(boardSize) {
+    for(let i = 0; i < boardSize; i += 1) {
         const linha = document.createElement('div');
-        linha.className = 'LinesPixel'
-        pixelTable(linha)
-        tabela.appendChild(linha)
+        linha.className = 'LinesPixel';
+        pixelTable(linha, boardSize);
+        tabela.appendChild(linha);
+
     }
 }
-fiveTimesLine()
+fiveTimesLine(5)
 
 let getPalet1 = document.querySelector('#color-palette')
 
@@ -55,3 +59,20 @@ function buttonClear() {
 }
 
 acessClearButton.addEventListener('click', buttonClear);
+
+
+
+function alerta() {
+  if(getInput.value === '') {
+    alert('Board inválido!')
+  }else {
+    tabela.innerHTML = '';
+    fiveTimesLine(getInput.value)
+  }
+}
+
+
+getButton.addEventListener('click', alerta)
+
+
+
