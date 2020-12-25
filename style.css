@@ -1,0 +1,66 @@
+* {
+  font-family: fantasy;
+}
+
+h1 {
+  margin-left: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+section {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.color {
+  border: solid 1px;
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.boardline {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.pixel {
+  background-color: white;
+  border: solid black 1px;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+}
+
+div {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
+
+.clear-board {
+  margin-left: 20px;
+  margin-top: 20px;
+}
