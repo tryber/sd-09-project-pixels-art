@@ -43,7 +43,7 @@ setSelectedColor();
 function setPixelColor() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].addEventListener ('click', function() {
+    pixel[index].addEventListener('click', function () {
       const color = document.querySelector('.selected').style.backgroundColor;
       pixel[index].style.backgroundColor = color;
     });
@@ -53,11 +53,11 @@ setPixelColor();
 
 function clearPixelBoard() {
   const clearBoard = document.querySelector('#clear-board');
-  let pixel = document.querySelectorAll('.pixel');
+  const pixel = document.querySelectorAll('.pixel');
   clearBoard.addEventListener('click', function () {
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.backgroundColor = 'white';
     }
   });
 }
-clearPixelBoard()
+clearPixelBoard();
