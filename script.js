@@ -1,9 +1,11 @@
 listenToColorPaletteSection();
+listenToPixelBoardTable();
 
 function listenToColorPaletteSection () {
     const colorPaletteSection = document.querySelector('#color-palette')
 
     colorPaletteSection.addEventListener('click', toggleSelectedClass)
+    colorPaletteSection.addEventListener('click', paintThePixelBoardTable)
 }
 
 function toggleSelectedClass (event) {
@@ -14,4 +16,30 @@ function toggleSelectedClass (event) {
     }
     
     event.target.classList.add('selected')
+}
+
+function listenToPixelBoardTable () {
+    const pixelBoardTable = document.querySelector('#pixel-board')
+
+    pixelBoardTable.addEventListener('click', paintPixel)
+}
+
+function paintPixel (event) {
+    const eventTargetStyle = event.target.style
+    const selectedColor = document.querySelector('.selected')
+
+    if (event.target.className === 'pixel') {
+        if (eventTargetStyle.backgroundColor && eventTargetStyle.backgroundColor !== 'white') {
+            eventTargetStyle.backgroundColor = 'white'
+        } else {   
+            eventTargetStyle.backgroundColor = selectedColor.id
+        }
+    }
+}
+
+function paintThePixelBoardTable () {
+    const pixelBoardTable = document.querySelector('#pixel-board')
+    const selectedColor = document.querySelector('.selected')
+
+    pixelBoardTable.style.backgroundColor = selectedColor.id
 }
