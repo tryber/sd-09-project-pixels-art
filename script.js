@@ -34,7 +34,7 @@ function applyColor() {
   for (let index = 0; index < pix.length; index += 1) {
     pix[index].addEventListener('click', function (event) {
       color = document.getElementsByClassName('selected')[0].style.backgroundColor;
-      pix[index].style.backgroundColor = color;
+      event.target.style.backgroundColor = color;
     });
   }
 }
