@@ -53,7 +53,7 @@ let acessClearButton = document.querySelector('#clear-board');
 
 function buttonClear() {
     let getNewAccess = document.querySelectorAll('.pixel');
-    for(let i = 0; i < getNewAccess.length; i += 1) {
+    for(let i = 0;  i < getNewAccess.length; i += 1) {
         getNewAccess[i].style.backgroundColor = 'white'
     }
 }
@@ -62,9 +62,14 @@ acessClearButton.addEventListener('click', buttonClear);
 
 
 
+
 function alerta() {
   if(getInput.value === '') {
     alert('Board inválido!')
+  }else if(getInput.value < 5) {
+    getInput.value = 5;
+  }else if(getInput.value > 50) {
+    getInput.value = 50;
   }else {
     tabela.innerHTML = '';
     fiveTimesLine(getInput.value)
