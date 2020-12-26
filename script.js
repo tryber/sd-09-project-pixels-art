@@ -27,15 +27,24 @@ function setColor() {
   }
 }
 setColor();
-
 function applyColor() {
   const pix = document.getElementsByClassName('pixel');
-  let color = document.getElementsByClassName('selected')[0].style.backgroundColor;
   for (let index = 0; index < pix.length; index += 1) {
     pix[index].addEventListener('click', function (event) {
-      color = document.getElementsByClassName('selected')[0].style.backgroundColor;
+      let color = document.getElementsByClassName('selected')[0].style.backgroundColor;
       event.target.style.backgroundColor = color;
     });
   }
 }
 applyColor();
+function clearBoard() {
+  let button = document.getElementById('clear-board');
+  console.log(button)
+  button.addEventListener('click',function() {
+    let board = document.getElementsByClassName('pixel');
+    for (let index = 0; index < board.length; index += 1){
+      board[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+  });
+}
+clearBoard();
