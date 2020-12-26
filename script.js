@@ -1,3 +1,5 @@
+window.onload = randomizeColorPalette()
+
 listenToColorPaletteSection();
 listenToPixelBoardTable();
 listenToClearBoardButton();
@@ -49,8 +51,34 @@ function listenToClearBoardButton () {
 
 function clearPixelBoard () {
     const pixelTdsNodeList = document.querySelectorAll('.pixel')
+    const pixelBoardTable = document.querySelector('#pixel-board')
     
     for (let i = 0; i < pixelTdsNodeList.length; i++) {
         pixelTdsNodeList[i].style.backgroundColor = 'white'
+    }
+
+    pixelBoardTable.style.backgroundColor = 'white'
+}
+
+function generateRandomColor () {
+    const randomNumberList = []
+
+    for (let i = 0; i < 3; i++) {
+        randomNumberList.push(Math.round(Math.random() * 255))
+    }
+
+    const randomColor = `rgb(${randomNumberList[0]}, ${randomNumberList[1]}, ${randomNumberList[2]})`
+
+    return randomColor
+}
+
+function randomizeColorPalette () {
+    const colorDivsNodeList = document.querySelectorAll('.color')
+
+    for (let i = 1; i < colorDivsNodeList.length; i++) {
+        colorDivsNodeList[i].id = `${generateRandomColor()}`
+        console.log(colorDivsNodeList[i].id)
+
+        colorDivsNodeList[i].style.backgroundColor = colorDivsNodeList[i].id
     }
 }
