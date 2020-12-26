@@ -1,12 +1,10 @@
 .color {
-    
   border: black solid 1px;
   padding: 35px;
   display: inline-block;
 }
 
 .pixel {
-
   border: black solid 1px;
   padding: 35px;
   height: 40px;
@@ -16,22 +14,21 @@
 }
 
 .black {
-  
   background-color: black;  
-  
 }
 
 .green {
-  
   background-color: green;    
 }
 
 .orange {
-  
   background-color: orange;   
 }
 
 .red {
-  
   background-color: red;    
+}
+
+#pixel-board table {
+  border-collapse: collapse;
 }
