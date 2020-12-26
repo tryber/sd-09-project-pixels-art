@@ -82,10 +82,12 @@ function alerta() {
 getButton.addEventListener('click', alerta);
 
 
+function creatNewColors() {
+  let red = Math.ceil(Math.random() * 255)
+  let green = Math.ceil(Math.random() * 255)
+  let blue = Math.ceil(Math.random() * 255)
 
+  return `rgb(${red}, ${green}, ${blue})`
 
-
-
-
-
-
+}
+console.log(creatNewColors());
