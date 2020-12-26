@@ -31,18 +31,17 @@ function applyColor() {
   const pix = document.getElementsByClassName('pixel');
   for (let index = 0; index < pix.length; index += 1) {
     pix[index].addEventListener('click', function (event) {
-      let color = document.getElementsByClassName('selected')[0].style.backgroundColor;
+      const color = document.getElementsByClassName('selected')[0].style.backgroundColor;
       event.target.style.backgroundColor = color;
     });
   }
 }
 applyColor();
 function clearBoard() {
-  let button = document.getElementById('clear-board');
-  console.log(button)
-  button.addEventListener('click',function() {
-    let board = document.getElementsByClassName('pixel');
-    for (let index = 0; index < board.length; index += 1){
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', function () {
+    const board = document.getElementsByClassName('pixel');
+    for (let index = 0; index < board.length; index += 1) {
       board[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   });
