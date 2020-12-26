@@ -68,7 +68,7 @@ function alerta() {
     alert('Board inválido!')
   }else if(getInput.value < 5) {
     getInput.value = 5;
-  }else if(getInput.value > 50) {
+  }else if(getInput.value < 50) {
     getInput.value = 50;
   }else {
     tabela.innerHTML = '';
