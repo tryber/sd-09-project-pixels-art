@@ -91,3 +91,21 @@ function creatNewColors() {
 
 }
 console.log(creatNewColors());
+
+function creatPallet() {
+  for(i = 0; i <= 3; i += 1 ) {
+     let div = document.createElement('div');
+
+    if(i === 0){
+      div.style.backgroundColor = 'black';
+      div.classList.add('selected')
+    }else{
+      div.style.backgroundColor = creatNewColors()
+    }
+
+    div.classList.add('color')
+
+    getPalet1.appendChild(div);
+  }
+}
+creatPallet();
