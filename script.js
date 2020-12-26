@@ -29,11 +29,7 @@ function paintPixel (event) {
     const selectedColor = document.querySelector('.selected')
 
     if (event.target.className === 'pixel') {
-        if (eventTargetStyle.backgroundColor && eventTargetStyle.backgroundColor !== 'white') {
-            eventTargetStyle.backgroundColor = 'white'
-        } else {   
-            eventTargetStyle.backgroundColor = selectedColor.id
-        }
+        eventTargetStyle.backgroundColor = selectedColor.id
     }
 }
 
