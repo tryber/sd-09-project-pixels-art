@@ -1,5 +1,6 @@
 listenToColorPaletteSection();
 listenToPixelBoardTable();
+listenToClearBoardButton();
 
 function listenToColorPaletteSection () {
     const colorPaletteSection = document.querySelector('#color-palette')
@@ -38,4 +39,18 @@ function paintThePixelBoardTable () {
     const selectedColor = document.querySelector('.selected')
 
     pixelBoardTable.style.backgroundColor = selectedColor.id
+}
+
+function listenToClearBoardButton () {
+    const clearBoardButton = document.querySelector('#clear-board')
+
+    clearBoardButton.addEventListener('click', clearPixelBoard)
+}
+
+function clearPixelBoard () {
+    const pixelTdsNodeList = document.querySelectorAll('.pixel')
+    
+    for (let i = 0; i < pixelTdsNodeList.length; i++) {
+        pixelTdsNodeList[i].style.backgroundColor = 'white'
+    }
 }
