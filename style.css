@@ -29,6 +29,11 @@
   background-color: red;    
 }
 
-#pixel-board table {
+#pixel-board{
   border-collapse: collapse;
+}
+
+#clear-board {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
