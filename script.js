@@ -62,22 +62,30 @@ acessClearButton.addEventListener('click', buttonClear);
 
 
 
-
 function alerta() {
   if(getInput.value === '') {
-    alert('Board inválido!')
-  }else if(getInput.value < 5) {
+     alert('Board inválido!');
+  }if(getInput.value < 5){
     getInput.value = 5;
-  }else if(getInput.value < 50) {
-    getInput.value = 50;
-  }else {
     tabela.innerHTML = '';
-    fiveTimesLine(getInput.value)
+    fiveTimesLine(getInput.value);
+  }if(getInput.value > 50) {
+    getInput.value = 50;
+    tabela.innerHTML = '';
+    fiveTimesLine(getInput.value);
   }
+  tabela.innerHTML = '';
+  fiveTimesLine(getInput.value);
 }
 
 
-getButton.addEventListener('click', alerta)
+getButton.addEventListener('click', alerta);
+
+
+
+
+
+
 
 
 
