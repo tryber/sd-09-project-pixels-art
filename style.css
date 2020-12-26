@@ -1,5 +1,5 @@
 #firstColor {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 #secondColor {
@@ -20,7 +20,7 @@ body {
 }
 
 #thirdColor {
-  background-color: green;
+  background-color: rgb(0, 128, 0);
 }
 
 .pixel {
@@ -40,7 +40,7 @@ body {
 }
 
 #fourthColor {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 
 .title {
