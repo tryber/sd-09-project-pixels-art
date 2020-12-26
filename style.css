@@ -1,0 +1,39 @@
+.color {
+  border: black solid 1px;
+  padding: 35px;
+  display: inline-block;
+}
+
+.pixel {
+  border: black solid 1px;
+  padding: 35px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: white;
+}
+
+.black {
+  background-color: black;  
+}
+
+.green {
+  background-color: green;    
+}
+
+.orange {
+  background-color: orange;   
+}
+
+.red {
+  background-color: red;    
+}
+
+#pixel-board{
+  border-collapse: collapse;
+}
+
+#clear-board {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
