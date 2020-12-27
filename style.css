@@ -40,11 +40,13 @@
 
 #pixel-board{
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px;
+ /*   display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;   */
+
     width: 200px;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
     
 }
 
@@ -52,5 +54,4 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-    background-color: white;
 }
