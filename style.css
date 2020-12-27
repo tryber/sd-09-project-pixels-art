@@ -40,8 +40,8 @@
 
 #pixel-board{
     margin-top: 20px;
-    display: grid;
- /*   grid-template-columns: 41px 41px 41px 41px 41px;
+ /*   display: grid;
+    grid-template-columns: 41px 41px 41px 41px 41px;
     grid-template-rows: 41px 41px 41px 41px 41px;*/
     width: 200px;
     margin-left: auto;
