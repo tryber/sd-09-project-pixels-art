@@ -1,17 +1,17 @@
-#pixel-board{
+#pixel-board {
   line-height: 0;
 }
 
-#color-palette{
-
+#color-palette {
+align-items: center;
 }
 
-#title{
+#title {
   text-align: center;
 
 }
 
-.color{
+.color {
   border: 1px solid black;
   border-radius: 100%;
   box-sizing: border-box;
@@ -20,30 +20,30 @@
   width: 50px;
 }
 
-.pixel{
-  background-color: rgb(255 , 255 , 255);
+.pixel {
+  background-color: white;
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
-.selected{
-  
+.selected {
+  border: 3px solid black;
 }
 
 #black {
   background-color: black;
 }
 
-#red{
-  background-color:red;
+#red {
+  background-color: red;
 }
 
-#green{
+#green {
   background-color: green;
 }
 
-#blue{
+#blue {
   background-color: blue;
 }
