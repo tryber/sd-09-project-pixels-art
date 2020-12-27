@@ -1,0 +1,49 @@
+#pixel-board {
+  line-height: 0;
+}
+
+#color-palette {
+align-items: center;
+}
+
+#title {
+  text-align: center;
+
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.selected {
+  border: 3px solid black;
+}
+
+#black {
+  background-color: black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
