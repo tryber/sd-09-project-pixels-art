@@ -18,6 +18,7 @@ main {
     height: 40px;
     width: 40px;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .color#black {
@@ -45,6 +46,7 @@ main {
 
 #clear-board {
     margin: 20px;
+    cursor: pointer;
 }
 
 #pixel-board {
@@ -57,4 +59,5 @@ main {
     height: 40px;
     width: 40px;
     background-color: white;
+    cursor: pointer;
 }

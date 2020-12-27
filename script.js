@@ -77,8 +77,6 @@ function randomizeColorPalette () {
 
     for (let i = 1; i < colorDivsNodeList.length; i++) {
         colorDivsNodeList[i].id = `${generateRandomColor()}`
-        console.log(colorDivsNodeList[i].id)
-
         colorDivsNodeList[i].style.backgroundColor = colorDivsNodeList[i].id
     }
 }
