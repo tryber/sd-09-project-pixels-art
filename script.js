@@ -29,11 +29,11 @@ function opcoesCores(param) {
   }
 }
 
-opcoesCores(10);
+opcoesCores(4);
 
 function criarTR(param1, param2) {
   for (let i = 0; i < param1; i += 1) {
-    let paletta = document.querySelector('.pixel-board');
+    let paletta = document.querySelector('#pixel-board');
 
     let linhaPaleta = document.createElement('tr');
     paletta.appendChild(linhaPaleta);
@@ -44,6 +44,7 @@ function criarTR(param1, param2) {
       linhaPaleta1.style.height = '40px';
       linhaPaleta1.style.width = '40px';
       linhaPaleta1.style.padding = '-2px';
+      linhaPaleta1.style.backgroundColor = 'white';
       paletta.appendChild(linhaPaleta1);
 
     }
