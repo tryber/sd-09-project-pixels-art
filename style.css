@@ -2,6 +2,7 @@
   background-color: rgb(72, 164, 107);
   text-align: center;
   height: 70px;
+  display: block;
 }
 
 #title {
@@ -19,12 +20,18 @@ body {
 #color-palette {
   border: black 1px solid;
   margin-left: 390px;
+  border: 3px;
+  border-color: black;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #pixel-board {
   display: block;
   /*nao mexer*/
   margin-left: 415px;
+  
 }
 
 input {
@@ -35,4 +42,38 @@ input {
 
 tabela {
   margin-left: 200px;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  margin: auto;
+
 }
+
+.pixel {
+  
+    border: black 1px solid;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    
+    display: inline-flex;
+  } 
+  #table{ 
+    display: table; 
+  }
+  .tr{ 
+    display: table-row; 
+  }
+  .td{ 
+    display: table-cell;
+  }
+
+  .linha {
+    border: black 0px solid;
+   
+    
+    
+    display: block;
+    /*nao mexer*/
+  }
+    
