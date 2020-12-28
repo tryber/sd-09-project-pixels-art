@@ -53,6 +53,3 @@ function criarTR(param1, param2) {
 
 
 criarTR(5, 5);
-
-let limpar = document.getElementById("clear-board");
-limpar.addEventListener('click', clearBoard)
