@@ -71,6 +71,7 @@ function setPixelColor() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].addEventListener('click', changePixelColor);
+    pixel[index].addEventListener('dragover', changePixelColor);
     pixel[index].addEventListener('contextmenu', changeToWhite);
   }
 }
