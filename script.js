@@ -4,13 +4,9 @@ function opcoesCores(param) {
     const colunaPallete = document.createElement('button');
     colunaPallete.className = 'color';
     if ([key] == 0) {
-      colunaPallete.style.backgroundColor = 'black';
-      colunaPallete.style.border = 'black, 1px, solid';
-      colunaPallete.style.width = '40px';
-      colunaPallete.style.height = '40px';
-      colunaPallete.style.padding = '1px';
-      colunaPallete.className = 'color selected'
-      colunaPallete.id = 'black'
+      colunaPallete.style. backgroundColor = 'black';
+      colunaPallete.classList.toogle('selected');
+      colunaPallete.id = 'black';
     } else {
       colunaPallete.style.width = '40px';
       colunaPallete.style.height = '40px';
