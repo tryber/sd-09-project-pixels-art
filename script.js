@@ -124,7 +124,7 @@ function generateBoard () {
     const boardSizeInputValue = parseInt(boardSizeInput.value)
 
     if (!boardSizeInput.value) {
-        window.alert('Board inválido')
+        window.alert('Board inválido!')
     } else {
         removeTableRows()
         addTableRows(boardSizeInputValue)
