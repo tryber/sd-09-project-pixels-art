@@ -4,14 +4,10 @@ function opcoesCores(param) {
     const colunaPallete = document.createElement('button');
     colunaPallete.className = 'color';
     if ([key] == 0) {
-      colunaPallete.style. backgroundColor = 'black';
-      colunaPallete.classList.toogle('selected');
+      colunaPallete.style.backgroundColor = 'black';
+      colunaPallete.className = 'color selected';
       colunaPallete.id = 'black';
     } else {
-      colunaPallete.style.width = '40px';
-      colunaPallete.style.height = '40px';
-      colunaPallete.style.padding = '1px';
-      colunaPallete.style.border = 'black, 1px, solid';
       let cor = 'rgb(' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ')';
       if (cor !== 'rgb(255,255,255') {
         colunaPallete.style.backgroundColor = `${cor}`;
@@ -32,7 +28,7 @@ function criarTR(param1, param2) {
     let linhaPaleta = document.createElement('tr');
     linhaPaleta.className = 'linha';
     paletta.appendChild(linhaPaleta);
-    for (let i = 0; i < param1; i += 1) {
+    for (let i = 0; i < param2; i += 1) {
       let linhaPaleta1 = document.createElement('button');
       linhaPaleta1.className = 'pixel';
       linhaPaleta1.style.backgroundColor = 'white';
