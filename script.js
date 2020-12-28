@@ -52,8 +52,6 @@ function listenToClearBoardButton () {
 
 function clearPixelBoard () {
     const pixelTdsNodeList = document.querySelectorAll('.pixel')
-    const pixelBoardTable = document.querySelector('#pixel-board')
-    const blackPalette = document.querySelector('#black')
     
     for (let i = 0; i < pixelTdsNodeList.length; i++) {
         pixelTdsNodeList[i].style.backgroundColor = 'white'
@@ -94,22 +92,42 @@ function removeTableRows () {
     for (let i = 0; i < tableRowsNodeList.length; i++) {
         const currentRow = tableRowsNodeList[i]
 
-        console.log(currentRow)
-
         pixelBoardTableBody.removeChild(currentRow)
     }
 }
 
-function addTableRows () {
+function addTableRows (boardSideSize) {
     const pixelBoardTableBody = document.querySelector('tbody')
+
+    for (let i = 0; i < boardSideSize; i++) {
+        const tableRow = document.createElement('tr')
+
+        pixelBoardTableBody.appendChild(tableRow)
+    }
+}
+
+function addTableDatas (boardSideSize) {
+    const tableRowsNodeList = document.querySelectorAll('#pixel-board tr')
+
+    for (let i = 0; i < tableRowsNodeList.length; i++) {
+        for (let j = 0; j < boardSideSize; j++) {
+            const tableData = document.createElement('td')
+
+            tableData.className = 'pixel'
+            tableRowsNodeList[i].appendChild(tableData)
+        }
+    }
 }
 
 function generateBoard () {
     const boardSizeInput = document.querySelector('#board-size')
+    const boardSizeInputValue = parseInt(boardSizeInput.value)
 
     if (!boardSizeInput.value) {
         window.alert('Board inválido')
     } else {
         removeTableRows()
+        addTableRows(boardSizeInputValue)
+        addTableDatas(boardSizeInputValue)
     }
 }

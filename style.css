@@ -13,10 +13,6 @@ main {
   display: flex;
 }
 
-.selected {
-
-}
-
 .color {
   border: 1px solid black;
   height: 40px;
