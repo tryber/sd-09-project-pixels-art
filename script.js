@@ -11,6 +11,14 @@ function createColorPalette(colorsArray) {
   }
 }
 
+function removeColorPalette() {
+  const colorPalette = document.querySelector('#color-palette');
+  const colorDiv = document.querySelectorAll('.color');
+  for (let index = 0; index < colorDiv.length; index += 1) {
+    colorPalette.removeChild(colorDiv[index]);
+  }
+}
+
 function createPixelBoard(size) {
   const pixelBoard = document.querySelector('#pixel-board');
   for (let indexOfLine = 0; indexOfLine < size; indexOfLine += 1) {
@@ -26,24 +34,46 @@ function createPixelBoard(size) {
   }
 }
 
-function setSelectedColor() {
-  const color = document.querySelectorAll('.color');
-  for (let index = 0; index < color.length; index += 1) {
-    color[index].addEventListener('click', function () {
-      const selectedColor = document.querySelector('.selected');
-      selectedColor.className = 'color';
-      color[index].className += ' selected';
-    });
+function removePixelBoard() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  const lineOfPixels = document.querySelectorAll('.line');
+  for (let index = 0; index < lineOfPixels.length; index += 1) {
+    pixelBoard.removeChild(lineOfPixels[index]);
   }
+}
+
+function removeSelectedClass() {
+  const coloDiv = document.querySelectorAll('.color');
+  for (let index = 0; index < coloDiv.length; index += 1) {
+    coloDiv[index].classList.remove('selected');
+  }
+}
+
+function setSelectedColor() {
+  const colorPalette = document.querySelector('#color-palette');
+  colorPalette.addEventListener('click', function (event) {
+    removeSelectedClass();
+    event.target.classList += ' selected';
+  });
+}
+
+function changePixelColor(event) {
+  const color = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = color;
+}
+
+function changeToWhite(event) {
+  event.preventDefault();
+  event.target.style.backgroundColor = 'white';
 }
 
 function setPixelColor() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].addEventListener('click', function () {
-      const color = document.querySelector('.selected').style.backgroundColor;
-      pixel[index].style.backgroundColor = color;
-    });
+    pixel[index].addEventListener('click', changePixelColor);
+    pixel[index].addEventListener('dragover', changePixelColor);
+    pixel[index].addEventListener('contextmenu', changeToWhite);
+
   }
 }
 
@@ -54,17 +84,9 @@ function clearPixelBoard() {
   }
 }
 
-function removeAllPixels() {
-  const pixelBoard = document.querySelector('#pixel-board');
-  const lineOfPixels = document.querySelectorAll('.line');
-  for (let index = 0; index < lineOfPixels.length; index += 1) {
-    pixelBoard.removeChild(lineOfPixels[index]);
-  }
-}
-
 function setPixelBoardSize() {
   const boardSize = document.querySelector('#board-size');
-  removeAllPixels();
+  removePixelBoard();
   if (boardSize.value > 50) {
     createPixelBoard(50);
   } else if (boardSize.value < 5) {
@@ -85,7 +107,7 @@ function checkBoardSize() {
   }
 }
 
-function generateRandomColor() {
+function randomColor() {
   const red = Math.floor(Math.random() * 255);
   const green = Math.floor(Math.random() * 255);
   const blue = Math.floor(Math.random() * 255);
@@ -93,14 +115,61 @@ function generateRandomColor() {
   const color = `rgb(${rgbArray})`;
   return color;
 }
+function smallGrid() {
+  const lineOfPixels = document.querySelectorAll('.line');
+  const pixel = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < lineOfPixels.length; index += 1) {
+    lineOfPixels[index].style.height = '20px';
+  }
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.height = '20px';
+    pixel[index].style.width = '20px';
+  }
+}
+
+function bigGrid() {
+  const lineOfPixels = document.querySelectorAll('.line');
+  const pixel = document.querySelectorAll('.pixel');
+
+  for (let index = 0; index < lineOfPixels.length; index += 1) {
+    lineOfPixels[index].style.height = '40px';
+  }
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.height = '40px';
+    pixel[index].style.width = '40px';
+  }
+}
+
+function randomColorPallete() {
+  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), 'white'];
+  removeColorPalette();
+  createColorPalette(randomArray);
+}
+
+function rainbownizer() {
+  const rainbow = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white'];
+  removeColorPalette();
+  createColorPalette(rainbow);
+}
 
 window.onload = function () {
   const clearBoard = document.querySelector('#clear-board');
-  clearBoard.addEventListener('click', clearPixelBoard);
   const generateBoard = document.querySelector('#generate-board');
-  generateBoard.addEventListener('click', checkBoardSize);
+  const smallButton = document.querySelector('#small');
+  const bigButton = document.querySelector('#big');
+  const randomdButton = document.querySelector('#random');
+  const raibowButton = document.querySelector('#rainbow');
+  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), 'white'];
 
-  createColorPalette(['black', generateRandomColor(), generateRandomColor(), generateRandomColor()]);
+  clearBoard.addEventListener('click', clearPixelBoard);
+  generateBoard.addEventListener('click', checkBoardSize);
+  smallButton.addEventListener('click', smallGrid);
+  bigButton.addEventListener('click', bigGrid);
+  randomdButton.addEventListener('click', randomColorPallete);
+  raibowButton.addEventListener('click', rainbownizer);
+
+  createColorPalette(randomArray);
   createPixelBoard(5, 5);
   setSelectedColor();
   setPixelColor();

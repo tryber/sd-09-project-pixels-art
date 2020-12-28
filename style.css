@@ -22,6 +22,10 @@ section {
   width: 50px;
 }
 
+.inline {
+  display: inline;
+}
+
 .line {
   height: 40px;
 }
