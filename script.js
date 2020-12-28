@@ -159,7 +159,7 @@ window.onload = function () {
   const bigButton = document.querySelector('#big');
   const randomdButton = document.querySelector('#random');
   const raibowButton = document.querySelector('#rainbow');
-  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor()];
+  const randomArray = ['black', randomColor(), randomColor(), randomColor()];
 
   clearBoard.addEventListener('click', clearPixelBoard);
   generateBoard.addEventListener('click', checkBoardSize);
