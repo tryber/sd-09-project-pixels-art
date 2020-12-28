@@ -123,6 +123,14 @@ function generateBoard () {
     const boardSizeInput = document.querySelector('#board-size')
     const boardSizeInputValue = parseInt(boardSizeInput.value)
 
+    if (boardSizeInputValue > 50) {
+        boardSizeInputValue = 50
+    }
+
+    if (boardSizeInputValue < 5) {
+        boardSizeInputValue = 5
+    }
+
     if (!boardSizeInput.value) {
         window.alert('Board inválido!')
     } else {
