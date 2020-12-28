@@ -10,6 +10,7 @@ function opcoesCores(param) {
       colunaPallete.style.height = '40px';
       colunaPallete.style.padding = '1px';
       colunaPallete.className = 'color selected'
+      colunaPallete.id = 'black'
     } else {
       colunaPallete.style.width = '40px';
       colunaPallete.style.height = '40px';
@@ -18,8 +19,10 @@ function opcoesCores(param) {
       let cor = 'rgb(' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ')';
       if (cor !== 'rgb(255,255,255') {
         colunaPallete.style.backgroundColor = `${cor}`;
+        colunaPallete.id =  `${cor}`;
       }
     }
+    
     colorPallette.appendChild(colunaPallete);
   }
 }
