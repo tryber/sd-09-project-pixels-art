@@ -71,9 +71,7 @@ function setPixelColor() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].addEventListener('click', changePixelColor);
-    pixel[index].addEventListener('dragover', changePixelColor);
     pixel[index].addEventListener('contextmenu', changeToWhite);
-
   }
 }
 
@@ -115,6 +113,7 @@ function randomColor() {
   const color = `rgb(${rgbArray})`;
   return color;
 }
+
 function smallGrid() {
   const lineOfPixels = document.querySelectorAll('.line');
   const pixel = document.querySelectorAll('.pixel');
@@ -142,13 +141,13 @@ function bigGrid() {
 }
 
 function randomColorPallete() {
-  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), 'white'];
+  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor()];
   removeColorPalette();
   createColorPalette(randomArray);
 }
 
 function rainbownizer() {
-  const rainbow = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'white'];
+  const rainbow = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
   removeColorPalette();
   createColorPalette(rainbow);
 }
@@ -160,7 +159,7 @@ window.onload = function () {
   const bigButton = document.querySelector('#big');
   const randomdButton = document.querySelector('#random');
   const raibowButton = document.querySelector('#rainbow');
-  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), 'white'];
+  const randomArray = ['black', randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor(), randomColor()];
 
   clearBoard.addEventListener('click', clearPixelBoard);
   generateBoard.addEventListener('click', checkBoardSize);
