@@ -62,15 +62,6 @@ function removeAllPixels() {
   }
 }
 
-function checkBoardSize() {
-  const boardSize = document.querySelector('#board-size');
-  if (boardSize.value !== '') {
-    setPixelBoardSize();
-  } else {
-    alert('Board inválido!');
-  }
-}
-
 function setPixelBoardSize() {
   const boardSize = document.querySelector('#board-size');
   removeAllPixels();
@@ -83,6 +74,15 @@ function setPixelBoardSize() {
   }
   setSelectedColor();
   setPixelColor();
+}
+
+function checkBoardSize() {
+  const boardSize = document.querySelector('#board-size');
+  if (boardSize.value !== '') {
+    setPixelBoardSize();
+  } else {
+    alert('Board inválido!');
+  }
 }
 
 function generateRandomColor() {
@@ -100,7 +100,7 @@ window.onload = function () {
   const generateBoard = document.querySelector('#generate-board');
   generateBoard.addEventListener('click', checkBoardSize);
 
-  createColorPalette(['black', generateRandomColor() , generateRandomColor(), generateRandomColor()]);
+  createColorPalette(['black', generateRandomColor(), generateRandomColor(), generateRandomColor()]);
   createPixelBoard(5, 5);
   setSelectedColor();
   setPixelColor();
