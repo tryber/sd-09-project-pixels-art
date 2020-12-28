@@ -19,8 +19,12 @@
         </section>
 
         <section id="canvas">
-            <button id="clear-board">Limpar</button>
-
+            <div id="buttons">
+                <button id="clear-board">Limpar</button>
+                <input type="number" name="board-size" id="board-size" min="0">
+                <button id='generate-board'>VQV</button>
+            </div>
+            
             <table id="pixel-board">
                 <tr>
                     <td class="pixel"></td>

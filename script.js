@@ -3,6 +3,7 @@ window.onload = randomizeColorPalette()
 listenToColorPaletteSection();
 listenToPixelBoardTable();
 listenToClearBoardButton();
+listenToGenerateBoardButton();
 
 function listenToColorPaletteSection () {
     const colorPaletteSection = document.querySelector('#color-palette')
@@ -52,12 +53,11 @@ function listenToClearBoardButton () {
 function clearPixelBoard () {
     const pixelTdsNodeList = document.querySelectorAll('.pixel')
     const pixelBoardTable = document.querySelector('#pixel-board')
+    const blackPalette = document.querySelector('#black')
     
     for (let i = 0; i < pixelTdsNodeList.length; i++) {
         pixelTdsNodeList[i].style.backgroundColor = 'white'
     }
-
-    pixelBoardTable.style.backgroundColor = 'white'
 }
 
 function generateRandomColor () {
@@ -78,5 +78,38 @@ function randomizeColorPalette () {
     for (let i = 1; i < colorDivsNodeList.length; i++) {
         colorDivsNodeList[i].id = `${generateRandomColor()}`
         colorDivsNodeList[i].style.backgroundColor = colorDivsNodeList[i].id
+    }
+}
+
+function listenToGenerateBoardButton () {
+    const generateBoardButton = document.querySelector('#generate-board')
+
+    generateBoardButton.addEventListener('click', generateBoard)
+}
+
+function removeTableRows () {
+    const pixelBoardTableBody = document.querySelector('tbody')
+    const tableRowsNodeList = document.querySelectorAll('#pixel-board tr')
+
+    for (let i = 0; i < tableRowsNodeList.length; i++) {
+        const currentRow = tableRowsNodeList[i]
+
+        console.log(currentRow)
+
+        pixelBoardTableBody.removeChild(currentRow)
+    }
+}
+
+function addTableRows () {
+    const pixelBoardTableBody = document.querySelector('tbody')
+}
+
+function generateBoard () {
+    const boardSizeInput = document.querySelector('#board-size')
+
+    if (!boardSizeInput.value) {
+        window.alert('Board inválido')
+    } else {
+        removeTableRows()
     }
 }
