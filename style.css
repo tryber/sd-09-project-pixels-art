@@ -74,6 +74,6 @@ tabela {
 }
 
 .linha {
-  border: black px solid;
+  border: black 0px solid;
   display: block;
 }

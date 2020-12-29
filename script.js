@@ -2,20 +2,19 @@
 function opcoesCores(param) {
   let colorPallette = document.querySelector('.tableColor');
   for (let key = 0; key < param; key += 1) {
-    const colunaPallete = document.createElement('button');
+    colunaPallete = document.createElement('button');
     colunaPallete.className = 'color';
     if ([key] == 0) {
       colunaPallete.style.backgroundColor = 'black';
-
       colunaPallete.id = 'black';
+      colunaPallete.className = 'color selected';
     } else {
-      let cor = 'rgb(' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ')';
+      const cor = 'rgb(' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ',' + Math.floor(Math.random(255) * (255 + 1)) + ')';
       if (cor !== 'rgb(255,255,255') {
         colunaPallete.style.backgroundColor = `${cor}`;
         colunaPallete.id = `${cor}`;
       }
     }
-
     colorPallette.appendChild(colunaPallete);
   }
 }
@@ -23,7 +22,7 @@ opcoesCores(4);
 
 
 //cria os pixels
-function criarTR(tamanho = 5) {
+function criarTR(tamanho) {
   let paletta = document.querySelector('#pixel-board');
 
 
@@ -36,12 +35,12 @@ function criarTR(tamanho = 5) {
       let linhaPaleta1 = document.createElement('button');
       linhaPaleta1.className = 'pixel';
 
-      linhaPaleta1.style.backgroundColor = 'green';
+      linhaPaleta1.style.backgroundColor = 'white';
       paletta.appendChild(linhaPaleta1);
     }
   }
 }
-criarTR();
+criarTR(5);
 
 //limpa os pixels para branco
 let pixelClear = document.getElementById('clear-board');
@@ -66,19 +65,18 @@ function refazer() {
   for (let i = 0; i < pixel.length; i += 1) {
     linha[i].remove();
     pixel[i].remove();
-
-    if (tamanhoLinha.value < 5) {
+    if (tamanhoLinha.value == '') {
+      alert('Board inválido!')
+    } else if (tamanhoLinha.value < 5) {
       tamanho = 5;
-
       criarTR(tamanho);
     } else if (tamanhoLinha.value > 50) {
       tamanho = 50;
       criarTR(tamanho);
     } else {
       tamanho = tamanhoLinha.value;
-
-      criarTR(tamanho);
     }
+    criarTR(tamanho);
   }
 }
 
