@@ -42,3 +42,13 @@ html {
   font-size: 1rem;
   padding: 20px;
 }
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  display: table-cell;
+  background-color: white;
+  border: black solid 1px;
+  box-sizing: border-box;
+}
+

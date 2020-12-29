@@ -42,7 +42,6 @@ function createPixelBoard(board, amount) {
   const line = Math.sqrt(amount);
   for (let index = 0; index < column; index += 1) {
     const squarecolumn = board.appendChild(newDiv());
-    squarecolumn.className = 'table-row';
     for (let index2 = 0; index2 < line; index2 += 1) {
       const squareLine = squarecolumn.appendChild(newDiv());
       squareLine.className = 'pixel';
@@ -50,3 +49,13 @@ function createPixelBoard(board, amount) {
     }
   }
 }
+
+const paletteColor = document.querySelector('#color-palette');
+const pixelBoard = document.querySelector('#pixel-board');
+const amountColors = 4;
+const amountSquares = 25;
+newPaletteColorSquares(paletteColor, amountColors);
+createPixelBoard(pixelBoard, amountSquares);
+paletteColor.addEventListener('click', selectColor);
+pixelBoard.addEventListener('click', paintPixel);
+document.querySelector('#generate-board').addEventListener('click', resizeBoard);
