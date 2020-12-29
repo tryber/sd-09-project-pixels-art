@@ -29,19 +29,19 @@ main {
   border-radius: 50%;
 }
 
-.color.black {
+.black {
   background-color: black;
 }
 
-.color.red {
+.red {
   background-color: red;
 }
 
-.color.green {
+.green {
   background-color: green;
 }
 
-.color.blue {
+.blue {
   background-color: blue;
 }
 
@@ -58,7 +58,7 @@ main {
   justify-content: space-between;
 }
 
-.clear-board, .generate-board {
+.clear-board , .generate-board {
   cursor: pointer;
 }
 
