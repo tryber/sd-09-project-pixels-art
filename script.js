@@ -43,8 +43,8 @@ function criarTR(tamanho) {
 criarTR(5);
 
 //limpa os pixels para branco
-let clearPixels = document.querySelector('#clear-board')
-clearPixels.addEventListener('click', clearPixels);
+let clearPixel = document.querySelector('#clear-board');
+clearPixel.addEventListener('click', clearPixels);
 
 
 
@@ -84,7 +84,7 @@ let selecaoCor = document.querySelector('#color-palette');
 selecaoCor.addEventListener('click', select);
 
 function select(event) {
-
+  selecaoCor.classList.remove('selected')
   event.target.classList.toggle('selected');
 
 }
