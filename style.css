@@ -38,6 +38,13 @@
     border: 1px solid black;
 }
 
+
+#clear-button{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
 #pixel-board{
     margin-top: 20px;
     display: grid;
