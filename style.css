@@ -1,10 +1,11 @@
-a {
-  text-decoration: none;
-  color: rgb(106, 98, 246);
-}
-
-a:hover {
-  color: rgba(250, 100, 100, 1);
+html {
+  font-family: Share Tech Mono, monospace;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(25, 25, 25);
+  text-align: center;
 }
 
 button {
@@ -19,14 +20,13 @@ form {
   margin-left: 3rem;
 }
 
-html {
-  font-family: Share Tech Mono, monospace;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(25, 25, 25);
-  text-align: center;
+a {
+  text-decoration: none;
+  color: rgb(106, 98, 246);
+}
+
+a:hover {
+  color: rgba(250, 100, 100, 1);
 }
 
 .clear-button {
@@ -53,13 +53,6 @@ html {
   text-transform: uppercase;
 }
 
-.page-footer {
-  background-color: rgb(10, 10, 10);
-  color: rgb(73, 73, 73);
-  font-size: 1rem;
-  padding: 20px;
-}
-
 .pixel {
   height: 40px;
   width: 40px;
@@ -67,6 +60,13 @@ html {
   background-color: white;
   border: black solid 1px;
   box-sizing: border-box;
+}
+
+.page-footer {
+  background-color: rgb(10, 10, 10);
+  color: rgb(73, 73, 73);
+  font-size: 1rem;
+  padding: 20px;
 }
 
 .resize-button {
