@@ -1,10 +1,3 @@
-window.onload = randomizeColorPalette();
-
-listenToColorPaletteSection();
-listenToPixelBoardTable();
-listenToClearBoardButton();
-listenToGenerateBoardButton();
-
 function listenToColorPaletteSection() {
   const colorPaletteSection = document.querySelector('#color-palette');
 
@@ -15,7 +8,7 @@ function listenToColorPaletteSection() {
 function toggleSelectedClass(event) {
   const colorDivsNodeList = document.querySelectorAll('.color');
 
-  for (let i = 0; i < colorDivsNodeList.length; i++) {
+  for (let i = 0; i < colorDivsNodeList.length; i += 1) {
     colorDivsNodeList[i].classList.remove('selected');
   }
 
@@ -53,7 +46,7 @@ function listenToClearBoardButton() {
 function clearPixelBoard() {
   const pixelTdsNodeList = document.querySelectorAll('.pixel');
 
-  for (let i = 0; i < pixelTdsNodeList.length; i++) {
+  for (let i = 0; i < pixelTdsNodeList.length; i += 1) {
     pixelTdsNodeList[i].style.backgroundColor = 'white';
   }
 }
@@ -61,7 +54,7 @@ function clearPixelBoard() {
 function generateRandomColor() {
   const randomNumberList = [];
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i += 1) {
     randomNumberList.push(Math.round(Math.random() * 255));
   }
 
@@ -73,7 +66,7 @@ function generateRandomColor() {
 function randomizeColorPalette() {
   const colorDivsNodeList = document.querySelectorAll('.color');
 
-  for (let i = 1; i < colorDivsNodeList.length; i++) {
+  for (let i = 1; i < colorDivsNodeList.length; i += 1) {
     colorDivsNodeList[i].id = `${generateRandomColor()}`;
     colorDivsNodeList[i].style.backgroundColor = colorDivsNodeList[i].id;
   }
@@ -89,7 +82,7 @@ function removeTableRows() {
   const pixelBoardTableBody = document.querySelector('tbody');
   const tableRowsNodeList = document.querySelectorAll('#pixel-board tr');
 
-  for (let i = 0; i < tableRowsNodeList.length; i++) {
+  for (let i = 0; i < tableRowsNodeList.length; i += 1) {
     const currentRow = tableRowsNodeList[i];
 
     pixelBoardTableBody.removeChild(currentRow);
@@ -99,7 +92,7 @@ function removeTableRows() {
 function addTableRows(boardSideSize) {
   const pixelBoardTableBody = document.querySelector('tbody');
 
-  for (let i = 0; i < boardSideSize; i++) {
+  for (let i = 0; i < boardSideSize; i += 1) {
     const tableRow = document.createElement('tr');
 
     pixelBoardTableBody.appendChild(tableRow);
@@ -109,7 +102,7 @@ function addTableRows(boardSideSize) {
 function addTableDatas(boardSideSize) {
   const tableRowsNodeList = document.querySelectorAll('#pixel-board tr');
 
-  for (let i = 0; i < tableRowsNodeList.length; i++) {
+  for (let i = 0; i < tableRowsNodeList.length; i += 1) {
     for (let j = 0; j < boardSideSize; j++) {
       const tableData = document.createElement('td');
 
@@ -121,7 +114,7 @@ function addTableDatas(boardSideSize) {
 
 function generateBoard() {
   const boardSizeInput = document.querySelector('#board-size');
-  let boardSizeInputValue = parseInt(boardSizeInput.value);
+  let boardSizeInputValue = parseInt(boardSizeInput.value, 10);
 
   if (boardSizeInputValue > 50) {
     boardSizeInputValue = 50;
@@ -139,3 +132,10 @@ function generateBoard() {
     addTableDatas(boardSizeInputValue);
   }
 }
+
+window.onload = randomizeColorPalette();
+
+listenToColorPaletteSection();
+listenToPixelBoardTable();
+listenToClearBoardButton();
+listenToGenerateBoardButton();
