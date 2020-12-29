@@ -16,7 +16,7 @@
 #cyan{
     background-color: cyan;
 }
-.pixel{
+div.pixel{
     border: 1px solid black;    
     width: 40px;
     height: 40px;
@@ -26,3 +26,4 @@
 #pixel-board div{
     display: flex;
 }
+
