@@ -3,7 +3,7 @@ a {
   color: rgb(106, 98, 246);
 }
 
-a:hover{
+a:hover {
   color: rgba(250, 100, 100, 1);
 }
 
@@ -20,17 +20,17 @@ form {
 }
 
 html {
-  font-family: "Share Tech Mono", monospace;
-  height:100%;
-  width:100%;
-  margin:0;
-  padding:0;
+  font-family: Share Tech Mono, monospace;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   background-color: rgb(25, 25, 25);
   text-align: center;
 }
 
 .clear-button {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   color: rgb(66, 66, 66);
 }
 
@@ -44,7 +44,7 @@ html {
 
 .main-page {
   background-color: rgb(202, 202, 202);
-  border: 5px solid rgb(0, 0, 0);
+  border: 5px solid black;
   margin: 2% 20%;
 }
 
@@ -71,7 +71,7 @@ html {
 
 .resize-button {
   background-color: rgb(48, 107, 82);
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .section-board {

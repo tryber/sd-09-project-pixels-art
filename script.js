@@ -135,16 +135,16 @@ function resizeBoard() {
   return true;
 }
 
-  const paletteColor = document.querySelector('#color-palette');
-  const pixelBoard = document.querySelector('#pixel-board');
-  const amountColors = 4;
-  const amountSquares = 25;
-  const buttonSection = document.querySelector('.section-form');
-  newPaletteColorSquares(paletteColor, amountColors);
-  createPixelBoard(pixelBoard, amountSquares);
-  createClearButton(buttonSection);
-  inputsForm(buttonSection);
-  paletteColor.addEventListener('click', selectColor);
-  pixelBoard.addEventListener('click', paintPixel);
-  document.querySelector('#generate-board').addEventListener('click', resizeBoard);
-  document.querySelector('#clear-board').addEventListener('click', clearBoard);
+const paletteColor = document.querySelector('#color-palette');
+const pixelBoard = document.querySelector('#pixel-board');
+const amountColors = 4;
+const amountSquares = 25;
+const buttonSection = document.querySelector('.section-form');
+newPaletteColorSquares(paletteColor, amountColors);
+createPixelBoard(pixelBoard, amountSquares);
+createClearButton(buttonSection);
+inputsForm(buttonSection);
+paletteColor.addEventListener('click', selectColor);
+pixelBoard.addEventListener('click', paintPixel);
+document.querySelector('#generate-board').addEventListener('click', resizeBoard);
+document.querySelector('#clear-board').addEventListener('click', clearBoard);
