@@ -52,3 +52,16 @@ html {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(106, 98, 246);
+}
+
+a:hover{
+  color: rgba(250, 100, 100, 1);
+}
+
+.section-board {
+  display: table;
+  margin: 5% auto;
+}
