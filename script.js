@@ -1,10 +1,3 @@
-function listenToColorPaletteSection() {
-  const colorPaletteSection = document.querySelector('#color-palette');
-
-  colorPaletteSection.addEventListener('click', toggleSelectedClass);
-  colorPaletteSection.addEventListener('click', paintThePixelBoardTable);
-}
-
 function toggleSelectedClass(event) {
   const colorDivsNodeList = document.querySelectorAll('.color');
 
@@ -13,12 +6,6 @@ function toggleSelectedClass(event) {
   }
 
   event.target.classList.add('selected');
-}
-
-function listenToPixelBoardTable() {
-  const pixelBoardTable = document.querySelector('#pixel-board');
-
-  pixelBoardTable.addEventListener('click', paintPixel);
 }
 
 function paintPixel(event) {
@@ -35,12 +22,6 @@ function paintThePixelBoardTable() {
   const selectedColor = document.querySelector('.selected');
 
   pixelBoardTable.style.backgroundColor = selectedColor.id;
-}
-
-function listenToClearBoardButton() {
-  const clearBoardButton = document.querySelector('#clear-board');
-
-  clearBoardButton.addEventListener('click', clearPixelBoard);
 }
 
 function clearPixelBoard() {
@@ -70,12 +51,6 @@ function randomizeColorPalette() {
     colorDivsNodeList[i].id = `${generateRandomColor()}`;
     colorDivsNodeList[i].style.backgroundColor = colorDivsNodeList[i].id;
   }
-}
-
-function listenToGenerateBoardButton() {
-  const generateBoardButton = document.querySelector('#generate-board');
-
-  generateBoardButton.addEventListener('click', generateBoard);
 }
 
 function removeTableRows() {
@@ -131,6 +106,33 @@ function generateBoard() {
     addTableRows(boardSizeInputValue);
     addTableDatas(boardSizeInputValue);
   }
+}
+
+// Functions that adds event listeners
+
+function listenToColorPaletteSection() {
+  const colorPaletteSection = document.querySelector('#color-palette');
+
+  colorPaletteSection.addEventListener('click', toggleSelectedClass);
+  colorPaletteSection.addEventListener('click', paintThePixelBoardTable);
+}
+
+function listenToPixelBoardTable() {
+  const pixelBoardTable = document.querySelector('#pixel-board');
+
+  pixelBoardTable.addEventListener('click', paintPixel);
+}
+
+function listenToClearBoardButton() {
+  const clearBoardButton = document.querySelector('#clear-board');
+
+  clearBoardButton.addEventListener('click', clearPixelBoard);
+}
+
+function listenToGenerateBoardButton() {
+  const generateBoardButton = document.querySelector('#generate-board');
+
+  generateBoardButton.addEventListener('click', generateBoard);
 }
 
 window.onload = randomizeColorPalette();
