@@ -21,7 +21,7 @@ body {
   text-align: center;
 }
 
-table#color-palette {
+#color-palette {
   align-items: center;
   border: black 1px solid;
   border: 3px;
@@ -43,7 +43,7 @@ p {
   display: inline;
   font-family: Shadows Into Light, Arial, Helvetica;
   font-size: x-large;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .button1 {
@@ -55,7 +55,7 @@ p {
   font-weight: 500;
 }
 
-table#pixel-board {
+#pixel-board {
   display: block;
   /*nao mexer*/
   margin-left: 42%;
@@ -66,7 +66,7 @@ input {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   display: inline-flex;
   width: 60px;
-  /*nao mexer*/
+  /* nao mexer */
 }
 
 .pixel {

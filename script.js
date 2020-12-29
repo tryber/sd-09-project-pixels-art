@@ -1,10 +1,10 @@
-//cria paleta das 4 opcoes ou mais de cores
-function opcoesCores(param) {
+// cria paleta das 4 opcoes ou mais de cores
+function opcoesCores (param) {
   let colorPallette = document.querySelector('.tableColor');
   for (let key = 0; key < param; key += 1) {
-    colunaPallete = document.createElement('button');
+    let colunaPallete = document.createElement('button');
     colunaPallete.className = 'color';
-    if ([key] == 0) {
+    if ([key] === 0) {
       colunaPallete.style.backgroundColor = 'black';
       colunaPallete.id = 'black';
       colunaPallete.className = 'color selected';
@@ -20,20 +20,16 @@ function opcoesCores(param) {
 }
 opcoesCores(4);
 
-//cria os pixels
-function criarTR(tamanho) {
-  let paletta = document.querySelector('#pixel-board');
-
-
+// cria os pixels
+function criarTR (tamanho) {
+  const paletta = document.querySelector('#pixel-board');
   for (let i = 0; i < tamanho; i += 1) {
-
-    let linhaPaleta = document.createElement('tr');
+    const linhaPaleta = document.createElement('tr');
     linhaPaleta.className = 'linha';
     paletta.appendChild(linhaPaleta);
-    for (let i = 0; i < tamanho; i += 1) {
-      let linhaPaleta1 = document.createElement('button');
+    for (let z = 0; z < tamanho; z += 1) {
+      const linhaPaleta1 = document.createElement('button');
       linhaPaleta1.className = 'pixel';
-
       linhaPaleta1.style.backgroundColor = 'white';
       paletta.appendChild(linhaPaleta1);
     }
@@ -41,28 +37,28 @@ function criarTR(tamanho) {
 }
 criarTR(5);
 
-//limpa os pixels para branco
-function limpar() {
+// limpa os pixels para branco
+function limpar () {
   const pixels = document.getElementsByClassName('pixel');
   const button = document.getElementById('clear-board');
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function () {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   });
 }
 limpar();
-//muda os tamanhos do box
+// muda os tamanhos do box
 
-let newBoard = document.getElementById('generate-board');
+const newBoard = document.getElementById('generate-board');
 newBoard.addEventListener('click', refazer);
 
-function refazer() {
-  let tamanhoLinha = document.getElementById('board-size');
+function refazer () {
+  const tamanhoLinha = document.getElementById('board-size');
 
   let tamanho;
-  if (tamanhoLinha.value == '') {
-    alert('Board inválido!')
+  if (tamanhoLinha.value === '') {
+    alert('Board inválido!');
   } else if (tamanhoLinha.value < 5) {
     tamanho = 5;
     criarTR(tamanho);
@@ -75,10 +71,10 @@ function refazer() {
   criarTR(tamanho);
 }
 
-function selectedElement() {
+function selectedElement () {
   const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener('click', function() {
+    colors[index].addEventListener('click', function () {
       for (let index2 = 0; index2 < colors.length; index2 += 1) {
         colors[index2].classList.remove('selected');
       }
@@ -86,9 +82,9 @@ function selectedElement() {
     });
   }
 }
-selectedElement();
+selectedElement ();
 
-let col = document.querySelector('#pixel-board');
+const col = document.querySelector('#pixel-board');
 col.addEventListener('click', pintar);
 
 function pintar(event) {
