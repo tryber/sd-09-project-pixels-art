@@ -25,7 +25,7 @@ main {
   border-radius: 25%;
 }
 
-.selected,
+.selected, 
 .selected:hover {
   border-radius: 50%;
 }
@@ -59,7 +59,7 @@ main {
   justify-content: space-between;
 }
 
-#clear-board,
+#clear-board, 
 #apply {
   cursor: pointer;
 }
@@ -68,8 +68,8 @@ main {
   margin: 20px;
 }
 
-#clear-board,
-#board-size,
+#clear-board, 
+#board-size, 
 #generate-board {
   width: 60px;
 }
