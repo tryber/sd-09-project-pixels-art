@@ -14,3 +14,22 @@ function box(){
     }    
 }
 box()
+
+function firstSelected(){
+    let firstSelected = document.querySelector('#black');
+    firstSelected.classList.add('selected');
+}
+firstSelected();
+
+
+function colorSelected(){
+    let classColor = document.querySelectorAll('.color');
+    for(let i=0; i<classColor.length; i+=1){
+        classColor[i].addEventListener('click', function(){
+            let classSelected = document.querySelectorAll('.selected')[0];
+            classSelected.classList.remove('selected');
+            classColor[i].classList.add('selected');
+        });
+    }
+}
+colorSelected();
