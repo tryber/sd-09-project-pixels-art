@@ -1,10 +1,10 @@
 // cria paleta das 4 opcoes ou mais de cores
-function opcoesCores (param) {
+function opcoesCores(param) {
   let colorPallette = document.querySelector('.tableColor');
   for (let key = 0; key < param; key += 1) {
     let colunaPallete = document.createElement('button');
     colunaPallete.className = 'color';
-    if ([key] === 0) {
+    if ([key] == 0) {
       colunaPallete.style.backgroundColor = 'black';
       colunaPallete.id = 'black';
       colunaPallete.className = 'color selected';
@@ -21,7 +21,7 @@ function opcoesCores (param) {
 opcoesCores(4);
 
 // cria os pixels
-function criarTR (tamanho) {
+function criarTR(tamanho) {
   const paletta = document.querySelector('#pixel-board');
   for (let i = 0; i < tamanho; i += 1) {
     const linhaPaleta = document.createElement('tr');
@@ -38,7 +38,7 @@ function criarTR (tamanho) {
 criarTR(5);
 
 // limpa os pixels para branco
-function limpar () {
+function limpar() {
   const pixels = document.getElementsByClassName('pixel');
   const button = document.getElementById('clear-board');
   button.addEventListener('click', function () {
@@ -53,11 +53,11 @@ limpar();
 const newBoard = document.getElementById('generate-board');
 newBoard.addEventListener('click', refazer);
 
-function refazer () {
+function refazer() {
   const tamanhoLinha = document.getElementById('board-size');
 
   let tamanho;
-  if (tamanhoLinha.value === '') {
+  if (tamanhoLinha.value == '') {
     alert('Board inválido!');
   } else if (tamanhoLinha.value < 5) {
     tamanho = 5;
@@ -71,7 +71,7 @@ function refazer () {
   criarTR(tamanho);
 }
 
-function selectedElement () {
+function selectedElement() {
   const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
     colors[index].addEventListener('click', function () {
@@ -82,7 +82,7 @@ function selectedElement () {
     });
   }
 }
-selectedElement ();
+selectedElement();
 
 const col = document.querySelector('#pixel-board');
 col.addEventListener('click', pintar);
