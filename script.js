@@ -43,60 +43,58 @@ function criarTR(tamanho) {
 criarTR(5);
 
 //limpa os pixels para branco
-let pixelClear = document.getElementById('clear-board');
-let pixels = document.querySelectorAll('.pixel');
-pixelClear.addEventListener('click', clear);
+let clearPixels = document.querySelector('#clear-board')
+clearPixels.addEventListener('click', clearPixels);
 
-function clear() {
+
+
+function clearPixels() {
+  let pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'white';
+    pixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
 //muda os tamanhos do box
-let tamanhoLinha = document.getElementById('board-size');
+
 let newBoard = document.getElementById('generate-board');
-let linha = document.querySelectorAll('.linha');
-let pixel = document.querySelectorAll('.pixel');
 newBoard.addEventListener('click', refazer);
 
 function refazer() {
+  let tamanhoLinha = document.getElementById('board-size');
+
   let tamanho;
-  for (let i = 0; i < pixel.length; i += 1) {
-    linha[i].remove();
-    pixel[i].remove();
-    if (tamanhoLinha.value == '') {
-      alert('Board inválido!')
-    } else if (tamanhoLinha.value < 5) {
-      tamanho = 5;
-      criarTR(tamanho);
-    } else if (tamanhoLinha.value > 50) {
-      tamanho = 50;
-      criarTR(tamanho);
-    } else {
-      tamanho = tamanhoLinha.value;
-    }
+  if (tamanhoLinha.value == '') {
+    alert('Board inválido!')
+  } else if (tamanhoLinha.value < 5) {
+    tamanho = 5;
     criarTR(tamanho);
+  } else if (tamanhoLinha.value > 50) {
+    tamanho = 50;
+    criarTR(tamanho);
+  } else {
+    tamanho = tamanhoLinha.value;
   }
+  criarTR(tamanho);
 }
 
 
-let selecaoCor = document.querySelector('.tableColor');
+
+let selecaoCor = document.querySelector('#color-palette');
 selecaoCor.addEventListener('click', select);
 
 function select(event) {
-  if (event.target.className !== 'selected') {
-    event.target.classList.add('selected');
-  } else {
-    event.target.classList.remove('selected');
 
-  }
+  event.target.classList.toggle('selected');
+
 }
 
 
-let col = document.querySelector('.pixel');
+
+let col = document.querySelector('#pixel-board');
 col.addEventListener('click', pintar);
 
 function pintar(event) {
+
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }

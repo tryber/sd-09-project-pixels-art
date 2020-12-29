@@ -2,7 +2,10 @@
   background-color: rgb(72, 164, 107);
   text-align: center;
   height: 70px;
-  display: block;
+  border-radius: 25px;
+  width: 70%;
+  align-items: center;
+  vertical-align: center;
 }
 
 #title {
@@ -15,13 +18,13 @@
 body {
   background-color: rgb(200, 219, 200);
   text-align: center;
+  box-sizing: border-box;
 }
 
 #color-palette {
   border: black 1px solid;
   margin-left: 390px;
   border: 3px;
-  border-color: black;
   align-items: center;
   text-align: center;
   vertical-align: middle;
