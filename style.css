@@ -3,10 +3,10 @@
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 
 #color-palette {
@@ -22,11 +22,12 @@ main {
 }
 
 .color:hover {
-    border-radius: 25%;
+  border-radius: 25%;
 }
 
-.selected, .selected:hover {
-    border-radius: 50%;
+.selected,
+.selected:hover {
+  border-radius: 50%;
 }
 
 .color#black {
@@ -58,7 +59,8 @@ main {
   align-items: center;
 }
 
-#clear-board, #apply {
+#clear-board,
+#apply {
   cursor: pointer;
 }
 
