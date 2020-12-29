@@ -70,3 +70,20 @@ function paintPixel(event) {
     selectedSquare.style.backgroundColor = currentColor.style.backgroundColor;
   }
 }
+
+function deletePixelBoard(board) {
+  while (board.firstChild) {
+    board.removeChild(board.lastChild);
+  }
+}
+
+function deselectColor() {
+  const currentColor = document.querySelector('.selected');
+  currentColor.className = 'color';
+}
+
+function selectColor(event) {
+  const selectedColor = event.target;
+  deselectColor();
+  selectedColor.className += ' selected';
+}
