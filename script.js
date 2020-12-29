@@ -148,4 +148,3 @@ function resizeBoard() {
   pixelBoard.addEventListener('click', paintPixel);
   document.querySelector('#generate-board').addEventListener('click', resizeBoard);
   document.querySelector('#clear-board').addEventListener('click', clearBoard);
-  // document.querySelector('#board-form').addEventListener('submit', preventSubmit);

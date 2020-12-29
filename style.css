@@ -17,6 +17,24 @@ html {
   text-align: center;
 }
 
+form {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(106, 98, 246);
+}
+
+a:hover{
+  color: rgba(250, 100, 100, 1);
+}
+
+#board-size {
+  padding: 0.3rem;
+}
+
 .color {
   border: black solid 1px;
   display: inline-block;
@@ -52,16 +70,32 @@ html {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(106, 98, 246);
-}
-
-a:hover{
-  color: rgba(250, 100, 100, 1);
-}
-
 .section-board {
   display: table;
   margin: 5% auto;
+}
+
+.section-form {
+  margin: 2% auto;
+}
+
+.section-palette {
+  margin-top: 2%;
+}
+
+button {
+  border-radius: 10%;
+  margin: 0.5rem;
+  padding: 0.3rem 1rem;
+  font-weight: 900;
+}
+
+.clear-button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(66, 66, 66);
+}
+
+.resize-button {
+  background-color: rgb(48, 107, 82);
+  color: rgb(255, 255, 255);
 }
