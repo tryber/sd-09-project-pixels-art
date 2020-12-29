@@ -20,7 +20,7 @@
     height: 40px;
     width: 40px;
 }
-.pixel-board div{
+#pixel-board div{
     display: flex;
 }
 .red{
