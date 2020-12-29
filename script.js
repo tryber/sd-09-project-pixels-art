@@ -78,7 +78,7 @@ function addTableDatas(boardSideSize) {
   const tableRowsNodeList = document.querySelectorAll('#pixel-board tr');
 
   for (let i = 0; i < tableRowsNodeList.length; i += 1) {
-    for (let j = 0; j < boardSideSize; j++) {
+    for (let j = 0; j < boardSideSize; j += 1) {
       const tableData = document.createElement('td');
 
       tableData.className = 'pixel';
