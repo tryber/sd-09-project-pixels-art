@@ -43,18 +43,16 @@ function criarTR(tamanho) {
 criarTR(5);
 
 //limpa os pixels para branco
-let clearPixel = document.querySelector('#clear-board');
-clearPixel.addEventListener('click', clearPixels);
-
-
-
-function clearPixels() {
-  let pixels = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
-  }
+function limpar() {
+  const pixels = document.getElementsByClassName('pixel');
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', function () {
+    for (let index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+  });
 }
-
+limpar();
 //muda os tamanhos do box
 
 let newBoard = document.getElementById('generate-board');
@@ -80,16 +78,18 @@ function refazer() {
 
 
 
-let selecaoCor = document.querySelector('#color-palette');
-selecaoCor.addEventListener('click', select);
-
-function select(event) {
-  selecaoCor.classList.remove('selected')
-  event.target.classList.toggle('selected');
-
+function selectedElement() {
+  const colors = document.getElementsByClassName('color');
+  for (let index = 0; index < colors.length; index += 1) {
+    colors[index].addEventListener('click', function () {
+      for (let index2 = 0; index2 < colors.length; index2 += 1) {
+        colors[index2].classList.remove('selected');
+      }
+      this.classList.add('selected');
+    });
+  }
 }
-
-
+selectedElement();
 
 let col = document.querySelector('#pixel-board');
 col.addEventListener('click', pintar);
