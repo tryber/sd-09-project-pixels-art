@@ -1,66 +1,79 @@
-#cabecalho {
+header {
   background-color: rgb(72, 164, 107);
-  text-align: center;
-  height: 70px;
   border-radius: 25px;
-  width: 70%;
-  align-items: center;
-  vertical-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  height: 70px;
+  margin-left: 20%;
+  width: 60%;
 }
 
-#title {
+h1 {
   font-family: Shadows Into Light, Arial, Helvetica;
-  text-align: center;
+  margin-left: 35%;
   margin-top: 10px;
   padding: 10px;
+  width: 30%;
 }
 
 body {
   background-color: rgb(200, 219, 200);
-  text-align: center;
   box-sizing: border-box;
+  text-align: center;
 }
 
-#color-palette {
-  border: black 1px solid;
-  margin-left: 390px;
-  border: 3px;
+table#color-palette {
   align-items: center;
-  text-align: center;
+  border: black 1px solid;
+  border: 3px;
+  margin-left: 42%;
+  padding: 10px;
   vertical-align: middle;
+  text-align: center;
 }
 
 .color {
   border: black 1px solid;
-  width: 40px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   height: 40px;
+  width: 40px;
 }
 
-#pixel-board {
+p {
+  display: inline;
+  font-family: Shadows Into Light, Arial, Helvetica;
+  font-size: x-large;
+  font-weight: 500px;
+}
+
+.button1 {
+  background-color: rgba(27, 68, 30, 0.432);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-family: Shadows Into Light, Arial, Helvetica;
+  font-size: small;
+  font-weight: 500;
+}
+
+table#pixel-board {
   display: block;
   /*nao mexer*/
-  margin-left: 415px;
+  margin-left: 42%;
 }
 
 input {
-  width: 40px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   display: inline-flex;
+  width: 60px;
   /*nao mexer*/
 }
 
-tabela {
-  margin-left: 200px;
-  text-align: center;
-  vertical-align: middle;
-  align-items: center;
-  margin: auto;
-}
-
 .pixel {
-  border: black 1px solid;
-  width: 40px;
-  height: 40px;
   background-color: white;
+  border: black 1px solid;
+  height: 40px;
+  width: 40px;
   display: inline-flex;
 }
 

@@ -20,7 +20,6 @@ function opcoesCores(param) {
 }
 opcoesCores(4);
 
-
 //cria os pixels
 function criarTR(tamanho) {
   let paletta = document.querySelector('#pixel-board');
@@ -46,7 +45,7 @@ criarTR(5);
 function limpar() {
   const pixels = document.getElementsByClassName('pixel');
   const button = document.getElementById('clear-board');
-  button.addEventListener('click', function () {
+  button.addEventListener('click', function() {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
@@ -76,12 +75,10 @@ function refazer() {
   criarTR(tamanho);
 }
 
-
-
 function selectedElement() {
   const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener('click', function () {
+    colors[index].addEventListener('click', function() {
       for (let index2 = 0; index2 < colors.length; index2 += 1) {
         colors[index2].classList.remove('selected');
       }
@@ -95,6 +92,5 @@ let col = document.querySelector('#pixel-board');
 col.addEventListener('click', pintar);
 
 function pintar(event) {
-
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
