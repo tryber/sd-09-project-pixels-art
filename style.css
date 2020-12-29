@@ -1,0 +1,84 @@
+.title {
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.color-palette {
+  display: flex;
+}
+
+.color {
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  margin: 0 5px;
+  width: 40px;
+}
+
+.color:hover {
+  border-radius: 25%;
+}
+
+.selected , .selected:hover {
+  border-radius: 50%;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.canvas {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear-board , .generate-board {
+  cursor: pointer;
+}
+
+.board-size {
+  margin: 20px;
+}
+
+.clear-board , .board-size , .generate-board {
+  width: 60px;
+}
+
+.pixel-board {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
