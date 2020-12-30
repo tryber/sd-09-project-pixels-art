@@ -22,11 +22,11 @@ function removeColorPalette() {
 function createPixelBoard(size) {
   const pixelBoard = document.querySelector('#pixel-board');
   for (let indexOfLine = 0; indexOfLine < size; indexOfLine += 1) {
-    const lineOfPixels = document.createElement('div');
+    const lineOfPixels = document.createElement('tr');
     lineOfPixels.className = 'line';
     pixelBoard.appendChild(lineOfPixels);
     for (let indexOfPixel = 0; indexOfPixel < size; indexOfPixel += 1) {
-      const pixel = document.createElement('div');
+      const pixel = document.createElement('td');
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';
       lineOfPixels.appendChild(pixel);
@@ -52,8 +52,10 @@ function removeSelectedClass() {
 function setSelectedColor() {
   const colorPalette = document.querySelector('#color-palette');
   colorPalette.addEventListener('click', function (event) {
-    removeSelectedClass();
-    event.target.classList += ' selected';
+    if (event.target.className === 'color') {
+      removeSelectedClass();
+      event.target.classList += ' selected';
+    }
   });
 }
 
@@ -119,9 +121,6 @@ function gridSize(size) {
   const lineOfPixels = document.querySelectorAll('.line');
   const pixel = document.querySelectorAll('.pixel');
 
-  for (let index = 0; index < lineOfPixels.length; index += 1) {
-    lineOfPixels[index].style.height = size;
-  }
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.height = size;
     pixel[index].style.width = size;

@@ -3,6 +3,29 @@ body {
   text-align: center;
 }
 
+button {
+  background-color: white;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px grey;
+  color: black;
+  font-weight: 600;
+  margin: 0 0.1em;
+  padding: 0.5em;
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+button:hover {
+  background-color: white;
+  box-shadow: 2px 2px 5px white;
+  color: black;
+  padding: 0.5em 1em;
+}
+
 header {
   color: white;
   font-family: monospace;
@@ -11,8 +34,23 @@ header {
   text-shadow: 5px 5px 5px black;
 }
 
+input {
+  border: 0.1em solid gray;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+input:hover {
+  border: 0.2em solid darkcyan;
+}
+
 section {
+  display: block;
   padding: 0.5em;
+}
+
+table {
+  margin: 0.5em;
 }
 
 .color {
@@ -28,7 +66,10 @@ section {
 }
 
 .line {
-  height: 40px;
+  border-collapse: collapse;
+  display: block;
+  margin: auto;
+  width: max-content;
 }
 
 .pixel {
