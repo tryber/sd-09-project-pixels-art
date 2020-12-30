@@ -1,3 +1,37 @@
+const colorTable = ['Gray', 'SlateBlue', 'Navy', 'DeepSkyBlue', 'SteelBlue', 'DarkTurquoise', 'DarkGreen', 'Olive', 'SaddleBrown', 'Indigo', 'HotPink', 'Red', 'Orange', 'Yellow'];
+let colorPallet = ['Black'];
+let colorAux;
+
+/* Funcoes */
+
+function findColor (selectedColors, sortColor) {
+  let result = false;
+  for (let index = 0; index < selectedColors.length; index += 1) {
+    if (selectedColors[index] === sortColor) {
+      result = true;
+    }
+  }
+  return result;
+}
+
+/* Inicio do programa */
+
+const colorsPaint = document.querySelector('#color-palette');
+for (let colorIndex = 1; colorIndex < 4; colorIndex += 1) {
+  do {
+    colorAux = colorTable[Math.floor(Math.random() * colorTable.length)];
+  } while (findColor(colorPallet, colorAux));
+  colorPallet.push(colorAux);
+  const colors = document.createElement('div');
+  colors.id = colorAux;
+  colors.className = 'color';
+  colors.style.backgroundColor = colorAux;
+  colors.style.border = '1px solid black';
+  colorsPaint.appendChild(colors);
+  
+
+}
+
 
 const selectColor = document.querySelector('#color-palette');
 selectColor.addEventListener('click', function (colorBase) {

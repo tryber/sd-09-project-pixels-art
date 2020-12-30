@@ -23,22 +23,6 @@
     border: 1px solid black;
 }
 
-#red {
-    background-color: red;
-    border: 1px solid black;
-}
-
-#green {
-    background-color: green;
-    border: 1px solid black;
-}
-
-#yellow {
-    background-color: yellow;
-    border: 1px solid black;
-}
-
-
 #clear-button{
     display: inline-block;
     text-align: center;
