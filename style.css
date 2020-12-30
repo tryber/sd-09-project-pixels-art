@@ -49,10 +49,6 @@ section {
   padding: 0.5em;
 }
 
-table {
-  margin: 0.5em;
-}
-
 .color {
   border: solid black 1px;
   display: inline-block;
@@ -61,15 +57,11 @@ table {
   width: 50px;
 }
 
-.inline {
-  display: inline;
-}
-
 .line {
-  border-collapse: collapse;
-  display: block;
+  height: 40px;
   margin: auto;
   width: max-content;
+
 }
 
 .pixel {

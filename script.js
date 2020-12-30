@@ -22,11 +22,11 @@ function removeColorPalette() {
 function createPixelBoard(size) {
   const pixelBoard = document.querySelector('#pixel-board');
   for (let indexOfLine = 0; indexOfLine < size; indexOfLine += 1) {
-    const lineOfPixels = document.createElement('tr');
+    const lineOfPixels = document.createElement('div');
     lineOfPixels.className = 'line';
     pixelBoard.appendChild(lineOfPixels);
     for (let indexOfPixel = 0; indexOfPixel < size; indexOfPixel += 1) {
-      const pixel = document.createElement('td');
+      const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';
       lineOfPixels.appendChild(pixel);
@@ -121,6 +121,9 @@ function gridSize(size) {
   const lineOfPixels = document.querySelectorAll('.line');
   const pixel = document.querySelectorAll('.pixel');
 
+  for (let index = 0; index < lineOfPixels.length; index += 1) {
+    lineOfPixels[index].style.height = size;
+  }
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.height = size;
     pixel[index].style.width = size;
