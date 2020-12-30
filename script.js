@@ -152,10 +152,10 @@ window.onload = function () {
   clearBoard.addEventListener('click', clearPixelBoard);
   generateBoard.addEventListener('click', checkBoardSize);
   smallButton.addEventListener('click', function () {
-    gridSize('20px')
+    gridSize('20px');
   });
   bigButton.addEventListener('click', function () {
-    gridSize('40px')
+    gridSize('40px');
   });
   randomdButton.addEventListener('click', randomColorPallete);
   raibowButton.addEventListener('click', rainbownizer);
