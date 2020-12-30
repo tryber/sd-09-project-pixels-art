@@ -1,6 +1,12 @@
 // selecionar a cor preta ao abrir o app
-function colorOnLoadd () {
-    let colorSelected = document.querySelector(".black")
+let a = addEventListener(`onload`, colorOnLoad)
 
-    return colorSelected
+function colorOnLoad() {
+  let colorSelected = document.querySelector('.black');
+
+  return colorSelected;
+}
+window.onload = function() {
+  document.querySelector('.black').className += ' selected';
+ 
 }
