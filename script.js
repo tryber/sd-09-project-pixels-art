@@ -44,3 +44,13 @@ function colorPixel(){
     }
 }
 colorPixel();
+
+function buttonClear(){
+    let createButtonClean = document.createElement('button');
+    createButtonClean.className = 'clear-board';
+    createButtonClean.innerText = 'Limpar';
+    const body = document.querySelector('body');
+    const pixelBoard = document.querySelector('#pixel-board');
+    body.insertBefore(createButtonClean, pixelBoard);
+}
+buttonClear();
