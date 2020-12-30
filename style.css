@@ -19,6 +19,7 @@ section {
   border: solid black 1px;
   display: inline-block;
   height: 50px;
+  transition: 0.5s;
   width: 50px;
 }
 
@@ -35,6 +36,7 @@ section {
   border: solid black 1px;
   display: inline-block;
   height: 40px;
+  transition: 0.3s;
   width: 40px;
 }
 

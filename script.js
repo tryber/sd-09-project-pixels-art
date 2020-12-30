@@ -115,29 +115,16 @@ function randomColor() {
   return color;
 }
 
-function smallGrid() {
+function gridSize(size) {
   const lineOfPixels = document.querySelectorAll('.line');
   const pixel = document.querySelectorAll('.pixel');
 
   for (let index = 0; index < lineOfPixels.length; index += 1) {
-    lineOfPixels[index].style.height = '20px';
+    lineOfPixels[index].style.height = size;
   }
   for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].style.height = '20px';
-    pixel[index].style.width = '20px';
-  }
-}
-
-function bigGrid() {
-  const lineOfPixels = document.querySelectorAll('.line');
-  const pixel = document.querySelectorAll('.pixel');
-
-  for (let index = 0; index < lineOfPixels.length; index += 1) {
-    lineOfPixels[index].style.height = '40px';
-  }
-  for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].style.height = '40px';
-    pixel[index].style.width = '40px';
+    pixel[index].style.height = size;
+    pixel[index].style.width = size;
   }
 }
 
@@ -164,8 +151,12 @@ window.onload = function () {
 
   clearBoard.addEventListener('click', clearPixelBoard);
   generateBoard.addEventListener('click', checkBoardSize);
-  smallButton.addEventListener('click', smallGrid);
-  bigButton.addEventListener('click', bigGrid);
+  smallButton.addEventListener('click', function () {
+    gridSize('20px')
+  });
+  bigButton.addEventListener('click', function () {
+    gridSize('40px')
+  });
   randomdButton.addEventListener('click', randomColorPallete);
   raibowButton.addEventListener('click', rainbownizer);
 
