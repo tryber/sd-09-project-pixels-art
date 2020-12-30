@@ -1,0 +1,28 @@
+.blue{
+    background-color: blue;
+}
+.black{
+    background-color: black;
+}
+.color{
+    border: 1px solid black;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+.cyan{
+    background-color: cyan;
+}
+.pixel{
+    border: 1px solid black;
+    background-color: white;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+#pixel-board div{
+    display: flex;
+}
+.red{
+    background-color: red;
+}
