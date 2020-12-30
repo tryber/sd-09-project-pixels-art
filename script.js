@@ -52,5 +52,13 @@ function buttonClear(){
     const body = document.querySelector('body');
     const pixelBoard = document.querySelector('#pixel-board');
     body.insertBefore(createButtonClean, pixelBoard);
+
+    const buttonClearBoard = document.querySelector('#clear-board');
+    buttonClearBoard.addEventListener('click', function(){
+        const pixelBoardClear = document.querySelectorAll('.pixel');
+        for (let indexClear = 0; indexClear < pixelBoardClear.length; indexClear +=1){
+            pixelBoardClear[indexClear].style.backgroundColor = 'rgb(255, 255, 255)';        
+        }
+    })    
 }
 buttonClear();
