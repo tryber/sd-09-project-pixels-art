@@ -1,0 +1,98 @@
+body {
+  background-color: rgb(34, 47, 62);
+}
+
+main {
+  background-color: rgb(241, 242, 246);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 32px;
+  text-align: center;
+}
+
+header {
+  margin: 32px auto;
+  text-align: center;
+}
+
+div .color-palette {
+  display: block;
+}
+
+.color {
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  margin: 10px;
+  position: relative;
+  width: 40px;
+}
+
+div .pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.pixel-line {
+  height: 40px;
+}
+
+.commands button, .commands input {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  color: rgb(241, 242, 246);
+  font-size: 30px;
+  text-shadow: 2px 2px rgba(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.commands button, .color {
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.commands .commands-btns {
+  display: inline-flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.commands input {
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 8px 0;
+  text-align: center;
+  width: 120px;
+}
+
+.commands button {
+  background-color: rgb(123, 237, 159);
+  border: 2px solid black;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.selected, .commands button:active {
+  box-shadow: 0 0 0 0;
+  transform: translate(2px, 2px);
+}
+
+.commands .clear-board {
+  align-items: center;
+  background-color: rgb(255, 71, 87);
+  display: flex;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
