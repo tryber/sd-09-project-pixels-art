@@ -8,22 +8,23 @@
 </head>
 <body>
 
-  <h1 id='title'>Paleta de Cores</h1>
+  <section id='menu'>
+    <h1 id='title'>Paleta de Cores</h1>
 
-  <table id="color-palette">
-    <tr>
-      <td class="color color1 selected"></td>
-      <td class="color color2"></td>
-      <td class="color color3"></td>
-      <td class="color color4"></td>
-    </tr>
-  </table>
+    <table id="color-palette"></table>
 
-  <button id='clear-board'>Limpar</button>
-  <button id='tableButton'>Tamanho</button>
-  <button id=''></button>
+    <div id='button'>
+      <button id='clear-board'>Limpar</button>
+      <!-- 
+      <button id='tableButton'>Tamanho do quadro</button>
+      <button id='paletteButton'>Tamanho da paleta</button>
+      -->
+    </div>
+  </section>
 
-  <table id='pixel-board'></table>
+  <section id='tablePixel'>
+    <table id='pixel-board'></table>
+  </section>
 
   <script src="script.js"></script>
 </body>

@@ -1,37 +1,63 @@
-.color {
-  border: black solid 1px;
-  height: 50px;
-  width: 50px;
+
+button {
+  margin: auto;
+  text-align: center;
+  width: 30%;
 }
 
-.color1 {
-  background-color: black;
+#button {
+  margin-top: 25px;
+  margin-left: 15%;
+  width: 100%;
 }
 
-.color2 {
-  background-color: red;
+#color-palette {
+  border: solid black 1px;
+  border-radius: 5%;
+  margin: auto;
+  padding: 10px;
 }
 
-.color3 {
-  background-color: green;
+#menu {
+  position: absolute;
+  border: solid black 5px;
+  height: 95%;
+  width: 20%;
 }
 
-.color4 {
+#pixel-board {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#tablePixel {
+  margin-left: 30%;
+  height: 95%;
+  position: absolute;
+  width: 70%;
+}
+
+#title {
+  text-align: center;
+}
+
+.colorPalette {
   background-color: blue;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel {
-  height: 40px;
-  width: 40px;
-}
-
-.white {
   background-color: white;
+  border: solid black 0.5px;
+  height: 20px;
+  width: 20px;
 }
 
-
-td {
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
+.selected {
+  border: solid yellow 2px;
 }
