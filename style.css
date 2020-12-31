@@ -1,5 +1,6 @@
 body {
   background-image: url('img/background.jpeg');
+  background-size: cover;
   text-align: center;
 }
 
@@ -7,7 +8,7 @@ button {
   background-color: white;
   border: none;
   border-radius: 1em;
-  box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 5px black;
   color: black;
   font-weight: 600;
   margin: 0 0.1em;
@@ -44,6 +45,16 @@ input:hover {
   border: 0.2em solid darkcyan;
 }
 
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.2em solid rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px black;
+  margin: 3em auto;
+  padding: 1em;
+  width: fit-content;
+}
+
 section {
   display: block;
   padding: 0.5em;
@@ -51,8 +62,10 @@ section {
 
 .color {
   border: solid black 1px;
+  border-radius: 50%;
   display: inline-block;
   height: 50px;
+  margin: 0.1em;
   transition: 0.5s;
   width: 50px;
 }
@@ -61,7 +74,6 @@ section {
   height: 40px;
   margin: auto;
   width: max-content;
-
 }
 
 .pixel {
@@ -74,6 +86,5 @@ section {
 }
 
 .selected {
-  border-radius: 0.3em;
   box-shadow: 0 5px 10px white;
 }
