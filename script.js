@@ -65,6 +65,9 @@ for (let colorIndex = 1; colorIndex < 4; colorIndex += 1) {
   colors.style.border = '1px solid black';
   colorsPaint.appendChild(colors);
 }
+colorsPaint.style.width = '260px';
+colorsPaint.style.marginLeft = 'auto';
+colorsPaint.style.marginRight = 'auto';
 
 createPixelBoard(5);
 

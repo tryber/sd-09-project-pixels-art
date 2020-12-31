@@ -12,11 +12,6 @@
     display: inline-block;
 
 }
-#color-palette{
-    width: 260px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 #black {
     background-color: black;
