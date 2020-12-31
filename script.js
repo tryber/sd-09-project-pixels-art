@@ -4,6 +4,7 @@ let colorAux;
 
 /* Funcoes */
 
+/* Pesquisa se a cor ja foi sorteada */
 function findColor (selectedColors, sortColor) {
   let result = false;
   for (let index = 0; index < selectedColors.length; index += 1) {
@@ -14,6 +15,41 @@ function findColor (selectedColors, sortColor) {
   return result;
 }
 
+/* Gera o pixel board */ 
+function createPixelBoard(pixelsNumber){
+  let pixelColumns = '';
+  let pixelRows = '';
+  for (let count = 0; count < pixelsNumber; count += 1) {
+    pixelColumns += '41px ';
+    pixelRows += '41px ';
+  }
+  const board = document.querySelector('#pixel-board');
+  const pixelsRemove = document.querySelectorAll('.pixel');
+  for (let indexRemove = 0; indexRemove < pixelsRemove.length; indexRemove += 1) {
+    pixelsRemove[indexRemove].remove();
+  }
+  for (let indexPixel = 0; indexPixel < Math.pow(pixelsNumber, 2); indexPixel += 1) {
+    const pixels = document.createElement('div');
+    pixels.className = 'pixel';
+    board.appendChild(pixels);
+  }
+  board.style.gridTemplateColumns = pixelColumns;
+  board.style.gridTemplateRows = pixelRows;
+  board.style.width = 40 * pixelsNumber + 'px';
+  board.style.marginLeft = 'auto';
+  board.style.marginRight = 'auto';
+}
+/* Valida o tamanho do board */
+function validateSize (valueSize) {
+  let tempValue = valueSize;
+  if (valueSize < 5) {
+    tempValue = 5;
+  }
+  else if (valueSize > 50) {
+    tempValue = 50;
+  }
+  return tempValue;
+}
 /* Inicio do programa */
 
 const colorsPaint = document.querySelector('#color-palette');
@@ -28,10 +64,11 @@ for (let colorIndex = 1; colorIndex < 4; colorIndex += 1) {
   colors.style.backgroundColor = colorAux;
   colors.style.border = '1px solid black';
   colorsPaint.appendChild(colors);
-  
-
 }
 
+createPixelBoard(5);
+
+/* Seleciona cor */
 
 const selectColor = document.querySelector('#color-palette');
 selectColor.addEventListener('click', function (colorBase) {
@@ -40,11 +77,15 @@ selectColor.addEventListener('click', function (colorBase) {
   colorBase.target.className += ' selected';
 });
 
+/* Pinta o pixel */
+
 const selectPixel = document.querySelector('#pixel-board');
 selectPixel.addEventListener('click', function (pixelSelected) {
   const  currentColor = document.querySelector('.selected');
   pixelSelected.target.style.backgroundColor = currentColor.id;
 });
+
+/* Limpa o pixel board */
 
 const btnClear = document.querySelector('#clear-board');
 btnClear.addEventListener('click', function (pressButton) {
@@ -52,4 +93,19 @@ btnClear.addEventListener('click', function (pressButton) {
   for (let index = 0; index < clearPixels.length; index += 1) {
     clearPixels[index].style.backgroundColor = 'white';
   }
+});
+
+/* Configura o pixel board */
+const btnGenerate = document.querySelector('#generate-board');
+const inputSize = document.querySelector('#board-size');
+btnGenerate.addEventListener('click', function () {
+  if (inputSize.value == '') {
+    alert('Board inválido!');
+  }
+  else {
+    let size = validateSize (inputSize.value);
+
+    createPixelBoard(size);
+  }
+  inputSize.value = '';
 });
