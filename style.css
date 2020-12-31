@@ -1,36 +1,45 @@
-.color {
-    border: solid;
-    width: 1px;
-    display: inline-block;
-}
-
-.red { 
-    background-color: red;
-}
 
 .black {
     background-color: black;
-}
-
-.green {
-    background-color: green;
 }
 
 .blue {
     background-color: blue;
 }
 
-.pixels {
-    display: inline-block;
+.color {
     border: 1px solid black;
-    color: blueviolet;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    
+}
+
+div {
     
 }
 
-.color {
+
+.green {
+    background-color: green;
+}
+
+.pixel {
+    color: blueviolet;
     width: 40px;
     height: 40px;
+    background-color: white;
+    display: inline-block;
+    border: 1px solid black;
 }
+
+.red { 
+    background-color: red;
+}
+
+
+
+
+
+
+
+
