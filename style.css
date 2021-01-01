@@ -1,18 +1,22 @@
 body {
+align-content: center;
 text-align: center;
 }
+
 #color-palette {
 /* display: inline-flex; */
-width: auto;
 height: auto;
+margin-top: 50px;
+width: auto;
 }
 
 .color {
-display: inline-block;
-width: 120px;
-height: 80px;
 border: black solid 1px;
+display: inline-block;
+height: 80px;
+width: 120px;
 }
+
 /* listagem das cores na paleta */
 #green {
 background-color: green;
@@ -29,4 +33,18 @@ background-color: yellow;
 #black {
 background-color: black;
 }
+
 /* final da listagem das cores na paleta */
+
+table {
+margin-top: 50px;
+display: inline-table;
+table-layout: fixed;
+border: solid 1px 1px;
+height: 400px;
+width: 600px;
+}
+
+.pixel {
+background-color: white;
+}
