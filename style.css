@@ -51,7 +51,7 @@ table-layout: fixed;
 
 .pixel {
 background-color: white;
-border: solid 1px;
+border: black solid 1px;
 height: 40px;
 width: 40px;
 }
