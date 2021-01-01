@@ -1,16 +1,16 @@
 .color {
   border: 1px solid;
-  height: 100px;
+  height: 40px;
   line-height: 0;
-  width: 100px;
+  width: 40px;
   margin: 0 5px 0 0;
 }
 
 .box {
   border: 1px solid;
-  height: 100px;
+  height: 40px;
   line-height: 0;
-  width: 100px;
+  width: 40px;
 }
 
 .black {
@@ -29,11 +29,15 @@
   background-color: blue;
 }
 
-#color-palette {
-  display: flex;
-  margin: 5px 0 5px 0;
-}
-
 .pixel {
   display: flex;
+}
+
+#color-palette {
+display: flex;
+margin: 5px 0 5px 0;
+}
+
+#pixel-board {
+  width: 210px;
 }

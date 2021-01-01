@@ -8,6 +8,7 @@ window.onload = function() {
     for (let index = 0; index < linhas; index += 1) {
       let box = createBox('box');
       divPixel.appendChild(box);
+      box.addEventListener('click', paintPixel)
     }
   }
 
@@ -23,4 +24,18 @@ window.onload = function() {
     }
   }
 
+  function painting() {
+    let pixelColor = document.querySelector('div.color.red');
+    pixelColor.addEventListener('click', getColor);
+  }
+
+  function getColor() {
+    let pixelColor = document.querySelector('div.color.red');
+  }
+}
+
+function paintPixel(event) {
+  let targ = event.target;
+  
+  console.log(targ);
 }
