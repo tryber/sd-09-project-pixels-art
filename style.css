@@ -36,7 +36,14 @@ background-color: black;
 
 /* final da listagem das cores na paleta */
 
-table {
+/* table {
+display: inline-table;
+margin-top: 50px;
+table-layout: fixed;
+} */
+
+#pixel-board {
+border-collapse: collapse;
 display: inline-table;
 margin-top: 50px;
 table-layout: fixed;
