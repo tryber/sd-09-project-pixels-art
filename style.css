@@ -1,32 +1,32 @@
 body {
-    text-align: center;
+text-align: center;
 }
 #color-palette {
-    /* display: inline-flex; */
-    width: auto;
-    height: auto;
+/* display: inline-flex; */
+width: auto;
+height: auto;
 }
 
 .color {
-    display: inline-block;
-    width: 120px;
-    height: 80px;
-    border: black solid 1px;
+display: inline-block;
+width: 120px;
+height: 80px;
+border: black solid 1px;
 }
 /* listagem das cores na paleta */
 #green {
-    background-color: green;
+background-color: green;
 }
 
 #blue {
-    background-color: blue;
+background-color: blue;
 }
 
 #yellow {
-    background-color: yellow;
+background-color: yellow;
 }
 
-#light_blue {
-    background-color: lightblue;
+#black {
+background-color: black;
 }
 /* final da listagem das cores na paleta */
