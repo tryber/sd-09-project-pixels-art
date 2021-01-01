@@ -36,14 +36,7 @@ background-color: black;
 
 /* final da listagem das cores na paleta */
 
-/* table {
-display: inline-table;
-margin-top: 50px;
-table-layout: fixed;
-} */
-
 #pixel-board {
-border-collapse: collapse;
 display: inline-table;
 margin-top: 50px;
 table-layout: fixed;
@@ -51,7 +44,7 @@ table-layout: fixed;
 
 .pixel {
 background-color: white;
-border: black solid 1px;
+border: solid 1px;
 height: 40px;
 width: 40px;
 }
