@@ -13,8 +13,8 @@ width: auto;
 .color {
 border: black solid 1px;
 display: inline-block;
-height: 80px;
-width: 120px;
+height: 40px;
+width: 40px;
 }
 
 /* listagem das cores na paleta */
@@ -37,14 +37,14 @@ background-color: black;
 /* final da listagem das cores na paleta */
 
 table {
-margin-top: 50px;
 display: inline-table;
+margin-top: 50px;
 table-layout: fixed;
-border: solid 1px 1px;
-height: 400px;
-width: 600px;
 }
 
 .pixel {
 background-color: white;
+border: solid 1px;
+height: 40px;
+width: 40px;
 }
