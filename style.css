@@ -22,7 +22,7 @@ button:focus {
 
 button:hover {
   background-color: white;
-  box-shadow: 2px 2px 5px white;
+  box-shadow: 0 2px 5px white;
   color: black;
   padding: 0.5em 1em;
 }
@@ -50,9 +50,9 @@ main {
   border: 0.2em solid rgba(255, 255, 255, 0.7);
   border-radius: 1em;
   box-shadow: 2px 2px 5px black;
+  display: inline-block;
   margin: 3em auto;
   padding: 1em;
-  width: fit-content;
 }
 
 section {
