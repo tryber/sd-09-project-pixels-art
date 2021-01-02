@@ -1,5 +1,5 @@
-#color-palette {
-  display: flex;
+.black {
+  background-color: black;
 }
 
 .color {
@@ -8,18 +8,18 @@
   border: 1px solid black;
 }
 
-#brown {
-  background-color: brown;
+#color-palette {
+  display: flex;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#yellow {
+.yellow {
   background-color: yellow;
 }
