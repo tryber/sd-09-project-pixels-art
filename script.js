@@ -1,7 +1,7 @@
   const paletteBox = 4;
 
-  // cria todas as caixas da linha
-  function createBoxes(number) {
+  // cria as caixas de paletas
+  function createColumnPalette(number) {
     for (let index = 0; index < number; index += 1) {
       createBoxPalette(number[index]);
 
@@ -14,9 +14,17 @@
     box.className = 'color box';
 
     searchPalette.appendChild(box);
-    box.addEventListener('click', paintPixel);
+    // box.addEventListener('click', paintPixel);
     return box;
   }
+
+  function buttonClean() {
+    let newButton = document.querySelector('#clear-board');
+    newButton.id = 'clear-board';
+    newButton.innerHTML = 'Limpar';
+    newButton.style.margin = '0 0 3px 0';
+  }
+  buttonClean();
 
   const searchPixel = document.querySelector('#pixel-board');
   // criando linhas para o quadro
@@ -28,22 +36,9 @@
       let column = document.createElement('td');
       column.className = 'pixel';
       line.appendChild(column);
-      line.addEventListener('click', paintPixel);
+      // line.addEventListener('click', paintPixel);
     }
   }
-
-  // criando uma caixa para linha
-  /*function createBoxLine(pixelBoard) {
-    const searchPixel = document.querySelector('#pixel-board');
-    const line = document.createElement('tr');
-    searchPixel.appendChild(line);
-    for (let index = 0; index < 5; index += 1) {
-      const box = document.createElement('td');
-      box.className = 'pixel';
-      line.appendChild(box);
-      box.addEventListener('click', paintPixel);
-    }
-  }*/
 
   // pinta as caixas da paleta
   function paintingPalette() {
@@ -61,29 +56,67 @@
     colorBlue.style.backgroundColor = 'blue';
   }
 
-  createBoxes(paletteBox);
+  createColumnPalette(paletteBox);
   paintingPalette();
-
-  function paintPixel(event) {
-    const targ = event.target;
-    console.log(targ);
-  }
 
   window.addEventListener('load', function (event) {
     const selected = document.querySelector('.color.box');
-    /*selected.style.border = '3px solid black';
-    selected.style.heigth = '60px';
-    selected.style.width = '50px';*/
     selected.className = 'color box selected';
     return selected;
   });
 
-  const deselected = document.querySelector('.color.box');
-
-  function deselect() {
-    deselected.style.border = '1px solid black';
-    deselected.style.heigth = '40px';
-    deselected.style.width = '40px';
-    return deselected;
+  function selectedBoxColor() {
+    let colorBox = document.querySelector('#color-palette').childNodes;
+    for (let index = 0; index < colorBox.length; index++) {
+      const elemento = colorBox[index];
+      elemento.addEventListener('click', function(event){
+        pegaItem()
+        event.target.classList.toggle('selected');
+      });
+    }
   }
-  deselected.addEventListener('click', deselect);
+  selectedBoxColor();
+  
+  function pegaItem() {
+    let colorBox = document.querySelector('#color-palette').childNodes;
+    for (let index = 0; index < colorBox.length; index++) {
+      const elemento = colorBox[index];
+      if (elemento.classList.contains('selected')) {
+        
+        elemento.classList.remove('selected');
+      }
+    }
+  }
+  
+  function painterBox() {
+    let colorBox = document.querySelector('#color-palette').childNodes;
+    let box = document.querySelectorAll('.pixel');
+    console.log(box);
+
+    for (let index = 0; index < colorBox.length; index++) {
+      const elementoPalete = colorBox[index];
+
+      for (let index = 0; index < box.length; index++) {
+        const elementoBox = box[index];
+        elementoBox.addEventListener('click', function(event) {
+          if (elementoPalete.classList.contains('selected')) {
+            elementoBox.style.backgroundColor = elementoPalete.style.backgroundColor;
+          }
+        });
+      }
+    }
+  }
+  painterBox();
+
+  let newButtonClean = document.querySelector('#clear-board');
+  function cleanBoard() {
+    let box = document.querySelectorAll('.pixel');
+
+    for (let index = 0; index < box.length; index++) {
+      const elementoBox = box[index];
+      if (elementoBox.style.backgroundColor !== 'white') {
+        elementoBox.style.backgroundColor = 'white';
+      }
+    }
+  }
+  newButtonClean.addEventListener('click', cleanBoard);

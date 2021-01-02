@@ -166,7 +166,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 
-### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels.
+### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels. :heavy_check_mark
 
 ##### As seguintes verificações serão feitas:
 
