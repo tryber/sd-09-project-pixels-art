@@ -1,0 +1,12 @@
+#color-palette {
+  display: block;
+}
+
+.color {
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
