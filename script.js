@@ -5,9 +5,9 @@ window.onload  = function(){
 }
 
 let clickSelection = document.getElementById('color-palette');
-clickSelection.addEventListener("click", changeColor);
+clickSelection.addEventListener('click', selectColor);
 
-function changeColor(eventoDeOrigem){
+function selectColor(eventoDeOrigem){
     let clickID = eventoDeOrigem.target.id;
     document.getElementById('black').className ='color';
     document.getElementById('green').className ='color';
@@ -17,4 +17,12 @@ function changeColor(eventoDeOrigem){
     if (clickID === 'black' || clickID === 'green' || clickID === 'blue' || clickID === 'cyan'){
         document.getElementById(clickID).className = 'color selected';
     }
+}
+
+let targetColor = document.getElementById('pixel-board')
+targetColor.addEventListener('click', changeColor)
+
+function changeColor(eventCreu){
+    let paint = document.querySelector('.selected').id;
+    eventCreu.target.style.backgroundColor = paint;
 }
