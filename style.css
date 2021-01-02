@@ -4,22 +4,24 @@
 }
 
 #board-param {
-  width: 250px;
+
   margin-left: auto;
   margin-right: auto;
+  width: 250px;
 }
 #board-size {
-  width: 50px;
+
   margin-left: 70px;
+  width: 50px;
 }
 #clear-board {
 
   background-color: rgb(51, 115, 87);
+  border-radius: 20px;
   color: white;
   padding: 5px;
-  width: 100px;
-  border-radius: 20px;
   transition-duration: 0.4s;
+  width: 100px;
 }
 #clear-button {
 
@@ -29,32 +31,33 @@
 }
 .color {
 
-  margin: 10px;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
   display: inline-block;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  width: 30px;
 }
 #main-frame {
 
   background-color: rgb(169, 199, 171);
-  padding: 30px;
-  margin-left: auto;
-  margin-right: auto;
   border: 4px solid rgb(46, 45, 77);
   border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;  
 }
 .pixel {
  
-  width: 40px;
-  height: 40px;
   background-color: white;
   border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  
 }
 #pixel-board{
 
-  margin-top: 20px;
   display: grid;
+  margin-top: 20px;
 }
 #text-pixels {
 
@@ -63,7 +66,7 @@
 }
 #title {
 
+  color: rgb(203, 72, 183);
   font-family: sans-serif;
   text-align: center;
-  color: rgb(203, 72, 183);
 }
