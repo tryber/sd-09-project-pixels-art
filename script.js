@@ -18,7 +18,7 @@ function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
   // let tmPixels = pixels.length;
   // console.log(tmPixels);
-  for(let index = 0; index < pixels.length; index +=1){
+  for (let index = 0; index < pixels.length; index +=1) {
     pixels[index].classList.add('color-white');
     // console.log(pixels[index]);
   }
