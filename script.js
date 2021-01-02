@@ -16,11 +16,11 @@ color4.addEventListener("click",selectingColor)*/
 //function paintPixel() {}
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
-  let tmPixels = pixels.length;
-  console.log(tmPixels);
+  //let tmPixels = pixels.length;
+  //console.log(tmPixels);
   for (let index = 0; index < pixels.length; index +=1){
     pixels[index].classList.add("color-white");
-    console.log(pixels[index]);
+    //console.log(pixels[index]);
   }
   
 }
@@ -31,6 +31,6 @@ function testEvent() {
 }
 
 let clickButton = document.getElementById('clear-board');
-//clickButton.addEventListener('click', testEvent);
-clickButton.addEventListener('click', clearBoard);
+clickButton.addEventListener('click', testEvent);
+//clickButton.addEventListener('click', clearBoard);
 
