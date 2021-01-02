@@ -2,7 +2,11 @@
   border: 1px solid black;
   display: inline-block;
   height: 50px;
-  width: 50px;  
+  width: 50px;
+}
+
+.black {
+  background-color: black;
 }
 
 .greenlight {
@@ -15,8 +19,4 @@
 
 .purple {
   background-color: #41197f;
-}
-
-.black {
-  background-color: black;
 }
