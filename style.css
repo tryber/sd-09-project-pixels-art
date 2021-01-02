@@ -1,0 +1,22 @@
+#pixel-board {
+  border: 1px solid;
+  width: 210px;
+}
+
+.box {
+  border: 1px solid;
+  height: 40px;
+  margin: 0 5px 0 0;
+  width: 40px;
+}
+
+.color {
+  display: inline-block;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
