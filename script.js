@@ -4,33 +4,31 @@ const color3 = document.getElementsByClassName('third-color')[0];
 const color4 = document.getElementsByClassName('fourth-color')[0];
 
 
-/*color1.addEventListener("click",selectingColor)
+/* color1.addEventListener("click",selectingColor)
 color2.addEventListener("click",selectingColor)
 color3.addEventListener("click",selectingColor)
-color4.addEventListener("click",selectingColor)*/
+color4.addEventListener("click",selectingColor) */
 
-//let selectedColor = selectingColor();
-//color1.classList.add("selected");  
-//console.log(color1);
+// let selectedColor = selectingColor();
+// color1.classList.add("selected");
+// console.log(color1);
 
-//function paintPixel() {}
+// function paintPixel() {}
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
-  //let tmPixels = pixels.length;
-  //console.log(tmPixels);
-  for (let index = 0; index < pixels.length; index +=1){
-    pixels[index].classList.add("color-white");
-    //console.log(pixels[index]);
+  // let tmPixels = pixels.length;
+  // console.log(tmPixels);
+  for(let index = 0; index < pixels.length; index +=1){
+    pixels[index].classList.add('color-white');
+    // console.log(pixels[index]);
   }
-  
 }
 
-function testEvent() {    
-  let textToPrint = document.getElementById('teste');
+function testEvent() {
+  const textToPrint = document.getElementById('teste');
   textToPrint.innerText = 'Hora da verdade. Acho que funcionou!';
 }
 
-let clickButton = document.getElementById('clear-board');
+const clickButton = document.getElementById('clear-board');
 clickButton.addEventListener('click', testEvent);
-//clickButton.addEventListener('click', clearBoard);
-
+clickButton.addEventListener('click', clearBoard);
