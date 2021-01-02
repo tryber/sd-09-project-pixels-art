@@ -37,6 +37,15 @@
   width: 30px;
 }
 
+#generate-board {
+  background-color: rgb(46, 45, 77);
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+  transition-duration: 0.4s;
+  width: 70px; 
+}
+
 #main-frame {
   background-color: rgb(169, 199, 171);
   border: 4px solid rgb(46, 45, 77);
