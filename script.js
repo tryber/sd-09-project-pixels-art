@@ -1,11 +1,11 @@
 const colorTable = ['Gray', 'SlateBlue', 'Navy', 'DeepSkyBlue', 'SteelBlue', 'DarkTurquoise', 'DarkGreen', 'Olive', 'SaddleBrown', 'Indigo', 'HotPink', 'Red', 'Orange', 'Yellow'];
-let colorPallet = ['Black'];
+const colorPallet = ['Black'];
 let colorAux;
 
 /* Funcoes */
 
 /* Pesquisa se a cor ja foi sorteada */
-function findColor (selectedColors, sortColor) {
+function findColor(selectedColors, sortColor) {
   let result = false;
   for (let index = 0; index < selectedColors.length; index += 1) {
     if (selectedColors[index] === sortColor) {
@@ -15,8 +15,8 @@ function findColor (selectedColors, sortColor) {
   return result;
 }
 
-/* Gera o pixel board */ 
-function createPixelBoard(pixelsNumber){
+/* Gera o pixel board */
+function createPixelBoard(pixelsNumber) {
   let pixelColumns = '';
   let pixelRows = '';
   for (let count = 0; count < pixelsNumber; count += 1) {
@@ -29,7 +29,7 @@ function createPixelBoard(pixelsNumber){
   for (let indexRemove = 0; indexRemove < pixelsRemove.length; indexRemove += 1) {
     pixelsRemove[indexRemove].remove();
   }
-  mainFrame.style.width = 40 * pixelsNumber + 60 + 'px';
+  mainFrame.style.width = ((40 * pixelsNumber) + 60) + 'px';
   for (let indexPixel = 0; indexPixel < Math.pow(pixelsNumber, 2); indexPixel += 1) {
     const pixels = document.createElement('div');
     pixels.className = 'pixel';
@@ -37,20 +37,15 @@ function createPixelBoard(pixelsNumber){
   }
   board.style.gridTemplateColumns = pixelColumns;
   board.style.gridTemplateRows = pixelRows;
-  board.style.width = 40 * pixelsNumber + 'px';
+  board.style.width = (40 * pixelsNumber) + 'px';
   board.style.marginLeft = 'auto';
   board.style.marginRight = 'auto';
-  
 }
 /* Valida o tamanho do board */
-function validateSize (valueSize) {
+function validateSize(valueSize) {
   let tempValue = valueSize;
-  if (valueSize < 5) {
-    tempValue = 5;
-  }
-  else if (valueSize > 50) {
-    tempValue = 50;
-  }
+  if (valueSize < 5) {tempValue = 5; }
+  else if (valueSize > 50) {tempValue = 50;}
   return tempValue;
 }
 /* Inicio do programa */
