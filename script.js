@@ -26,3 +26,14 @@ function changeColor(eventCreu){
     let paint = document.querySelector('.selected').id;
     eventCreu.target.style.backgroundColor = paint;
 }
+
+let clickClearButon = document.getElementById('clear-board');
+clickClearButon.addEventListener('click', clearMan)
+
+function clearMan(){
+   let rexona = document.querySelectorAll('.pixel')
+   for (let index = 0; index < rexona.length; index += 1) {
+       rexona[index].style.backgroundColor = 'white';       
+   }
+   console.log(rexona)
+}
