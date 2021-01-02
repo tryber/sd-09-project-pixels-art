@@ -23,3 +23,14 @@ function colorize (colorPixel) {
 }
 
 variavel.addEventListener("click", colorize);
+
+const clearBoard = document.querySelector("#clear-board");
+
+function boardCleanAll () {
+    let pixelQuadro = document.querySelectorAll(".pixel");
+    for (let index = 0; index < pixelQuadro.length; index += 1) {
+        pixelQuadro[index].style.backgroundColor = "white";
+    }
+}
+
+clearBoard.addEventListener("click", boardCleanAll);

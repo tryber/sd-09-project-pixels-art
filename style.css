@@ -6,7 +6,7 @@ text-align: center;
 #color-palette {
 /* display: inline-flex; */
 height: auto;
-margin-top: 50px;
+margin-top: 30px;
 width: auto;
 }
 
@@ -38,7 +38,7 @@ background-color: black;
 
 #pixel-board {
 display: inline-table;
-margin-top: 50px;
+margin-top: 30px;
 table-layout: fixed;
 }
 
@@ -47,4 +47,8 @@ background-color: white;
 border: solid 1px;
 height: 40px;
 width: 40px;
+}
+
+#clear-board {
+border-radius: 5px;
 }
