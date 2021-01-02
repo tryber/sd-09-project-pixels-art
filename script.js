@@ -1,2 +1,2 @@
 let selectBlack = document.querySelector(".color");
-selectBlack.className = "selected";
+selectBlack.className = "color selected";
