@@ -1,15 +1,22 @@
 .color {
-  height: 50px;
-  width: 50px;
   border: 1px solid black;
   display: inline-block;
+  height: 50px;
+  width: 50px;  
 }
+
 .greenlight {
   background-color: #2fc18c;
 }
+
 .greendark {
   background-color: #036b52;
 }
+
 .purple {
   background-color: #41197f;
+}
+
+.black {
+  background-color: black;
 }
