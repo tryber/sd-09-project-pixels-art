@@ -100,11 +100,9 @@ btnClear.addEventListener('click', function () {
 const btnGenerate = document.querySelector('#generate-board');
 const inputSize = document.querySelector('#board-size');
 btnGenerate.addEventListener('click', function () {
-  if (inputSize.value == '') {
-    alert('Board inválido!');
-  }
+  if (inputSize.value === '') { alert('Board inválido!'); }
   else {
-    let size = validateSize (inputSize.value);
+    const size = validateSize(inputSize.value);
 
     createPixelBoard(size);
   }
