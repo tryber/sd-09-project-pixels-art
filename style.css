@@ -1,0 +1,29 @@
+#black{
+    background-color: black;
+}
+
+#green{
+    background-color: green;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#cyan{
+    background-color: cyan;
+}
+
+.color{
+    border: black solid 1px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+.pixel{
+    background-color: white;
+    height: 40px;
+    width: 40px; 
+    border: solid 1px; 
+}
