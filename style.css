@@ -1,1 +1,15 @@
-//Iniciando o projeto!
+.color {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  display: inline-block;
+}
+.greenlight {
+  background-color: #2fc18c;
+}
+.greendark {
+  background-color: #036b52;
+}
+.purple {
+  background-color: #41197f;
+}
