@@ -14,3 +14,12 @@ function colorSelected (event) {
 }
 
 alteraNomeClasse.addEventListener("click", colorSelected);
+
+const variavel = document.getElementById("pixel-board");
+
+function colorize (colorPixel) {
+    let colorizePixel = document.querySelector(".selected").id;
+    colorPixel.target.style.backgroundColor = colorizePixel;
+}
+
+variavel.addEventListener("click", colorize);
