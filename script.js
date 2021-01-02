@@ -30,7 +30,7 @@ function createPixelBoard(pixelsNumber) {
     pixelsRemove[indexRemove].remove();
   }
   mainFrame.style.width = ((40 * pixelsNumber) + 60) + 'px';
-  for (let indexPixel = 0; indexPixel < Math.pow(pixelsNumber, 2); indexPixel += 1) {
+  for (let indexPixel = 0; indexPixel < pixelsNumber ** 2; indexPixel += 1) {
     const pixels = document.createElement('div');
     pixels.className = 'pixel';
     board.appendChild(pixels);
@@ -44,8 +44,8 @@ function createPixelBoard(pixelsNumber) {
 /* Valida o tamanho do board */
 function validateSize(valueSize) {
   let tempValue = valueSize;
-  if (valueSize < 5) {tempValue = 5; }
-  else if (valueSize > 50) {tempValue = 50;}
+  if (valueSize < 5) { tempValue = 5; }
+  else if (valueSize > 50) { tempValue = 50; }
   return tempValue;
 }
 /* Inicio do programa */
@@ -73,7 +73,7 @@ createPixelBoard(5);
 
 const selectColor = document.querySelector('#color-palette');
 selectColor.addEventListener('click', function (colorBase) {
-  let prevSelectColor = document.querySelector('.selected');
+  const prevSelectColor = document.querySelector('.selected');
   prevSelectColor.className = 'color';
   colorBase.target.className += ' selected';
 });
@@ -82,14 +82,14 @@ selectColor.addEventListener('click', function (colorBase) {
 
 const selectPixel = document.querySelector('#pixel-board');
 selectPixel.addEventListener('click', function (pixelSelected) {
-  const  currentColor = document.querySelector('.selected');
+  const currentColor = document.querySelector('.selected');
   pixelSelected.target.style.backgroundColor = currentColor.id;
 });
 
 /* Limpa o pixel board */
 
 const btnClear = document.querySelector('#clear-board');
-btnClear.addEventListener('click', function (pressButton) {
+btnClear.addEventListener('click', function () {
   const clearPixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < clearPixels.length; index += 1) {
     clearPixels[index].style.backgroundColor = 'white';
