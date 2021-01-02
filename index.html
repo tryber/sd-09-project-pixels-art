@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div id="main-frame">
     <header>
         <h1 id="title">Paleta de Cores</h1>
     </header>   
@@ -19,7 +20,7 @@
             <button id="clear-board">Limpar</button>
         </section>
         <section id="board-param">
-            <p>Tamanho do quadro em pixels (5 - 50)</p>
+            <p id="text-pixels">Tamanho do quadro em pixels (5 - 50)</p>
             <input id="board-size" type="number" min="1">
             <button id="generate-board">VQV</button>
         </section>
@@ -27,5 +28,6 @@
         </section>
     </main> 
     <script src="script.js"></script>
+    </div>
 </body>
 </html>

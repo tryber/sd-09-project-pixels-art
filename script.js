@@ -25,9 +25,11 @@ function createPixelBoard(pixelsNumber){
   }
   const board = document.querySelector('#pixel-board');
   const pixelsRemove = document.querySelectorAll('.pixel');
+  const mainFrame = document.querySelector('#main-frame');
   for (let indexRemove = 0; indexRemove < pixelsRemove.length; indexRemove += 1) {
     pixelsRemove[indexRemove].remove();
   }
+  mainFrame.style.width = 40 * pixelsNumber + 60 + 'px';
   for (let indexPixel = 0; indexPixel < Math.pow(pixelsNumber, 2); indexPixel += 1) {
     const pixels = document.createElement('div');
     pixels.className = 'pixel';
@@ -38,6 +40,7 @@ function createPixelBoard(pixelsNumber){
   board.style.width = 40 * pixelsNumber + 'px';
   board.style.marginLeft = 'auto';
   board.style.marginRight = 'auto';
+  
 }
 /* Valida o tamanho do board */
 function validateSize (valueSize) {
