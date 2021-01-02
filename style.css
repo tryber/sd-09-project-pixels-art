@@ -1,0 +1,54 @@
+body {
+align-content: center;
+text-align: center;
+}
+
+#color-palette {
+/* display: inline-flex; */
+height: auto;
+margin-top: 30px;
+width: auto;
+}
+
+.color {
+border: black solid 1px;
+display: inline-block;
+height: 40px;
+width: 40px;
+}
+
+/* listagem das cores na paleta */
+#green {
+background-color: green;
+}
+
+#blue {
+background-color: blue;
+}
+
+#yellow {
+background-color: yellow;
+}
+
+#black {
+background-color: black;
+}
+
+/* final da listagem das cores na paleta */
+
+#pixel-board {
+display: inline-table;
+margin-top: 30px;
+table-layout: fixed;
+}
+
+.pixel {
+background-color: white;
+border: solid 1px;
+height: 40px;
+width: 40px;
+}
+
+#clear-board {
+border-radius: 5px;
+}
