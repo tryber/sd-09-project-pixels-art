@@ -76,23 +76,23 @@ button {
   padding: 8px 16px;
 }
 
-div div > button:last-child {
-  margin-right: 32px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  float: right;
-}
-
 button:hover {
   background-color: transparent;
   color: rgba(238, 37, 96, 1);
+}
+
+div div > button:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  float: right;
+  margin-right: 32px;
 }
 
 /* Pixel Board */
 .pixel-board {
   border: 1px solid black;
   display: table;
-  margin: 0 auto 70px auto;
+  margin: 0 auto 70px;
   max-width: 80%;
   overflow: auto;
   text-align: center;
@@ -101,14 +101,12 @@ button:hover {
 .line-pixel {
   display: table-row;
   height: 40px;
-  margin: 0 16px;
   white-space: nowrap;
 }
 
 .pixel {
   display: table-cell;
   height: 40px;
-  margin: 0 auto;
   min-width: 40px;
   text-align: center;
   width: 40px;
