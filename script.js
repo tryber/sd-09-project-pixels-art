@@ -1,6 +1,7 @@
 window.onload = function() {
     selectedColor()
     paintPixel ()
+    clearBoardButton()
 };
  
 function selectedColor () {
@@ -33,7 +34,18 @@ function paintPixel () {
      }
  }
 
-function clearBoardButton {
-    
+function clearBoardButton() {
+    let clearButton = document.getElementById('clear-board');
+
+    clearButton.addEventListener('click' , function(event) {
+        
+        let pixels = document.
+        getElementsByClassName('pixel')
+
+        for ( let counter = 0 ; counter < pixels.length ; counter += 1 ) {
+            pixels[counter].style.backgroundColor = 'white';
+        }
+
+    })
 
 }
