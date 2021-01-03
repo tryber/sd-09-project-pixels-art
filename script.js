@@ -5,11 +5,18 @@ const cor3 = document.getElementById('color3');
 const cor4 = document.getElementById('color4');
 
 cor1.style.backgroundColor = 'black';
-cor2.style.backgroundColor = 'blue';
-cor3.style.backgroundColor = 'red';
-cor4.style.backgroundColor = 'yellow';
 
 
+function randonColor(){
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
+cor2.style.backgroundColor = randonColor();
+cor3.style.backgroundColor = randonColor();
+cor4.style.backgroundColor = randonColor();
 
 const pixelBoard = document.getElementById('pixel-board');
 
