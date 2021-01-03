@@ -1,0 +1,124 @@
+body {
+  background-color: rgba(244, 244, 244, 1);
+  font-family: Ubuntu Mono, monospace;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(238, 37, 96, 1);
+  color: rgba(8, 24, 43, 1);
+  font-family: 'Press Start 2P', cursive;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+}
+
+main {
+  margin-top: 96px;
+}
+
+.block {
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* Palette */
+.color-palette {
+  height: 34px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
+}
+
+.color {
+  display: inline-block;
+  height: 32px;
+  margin: 0 8px;
+  width: 32px;
+}
+
+.selected {
+  box-shadow: 0 0 8px rgba(238, 37, 96, 1);
+}
+
+/* Buttons */
+.buttons {
+  margin: 16px;
+  text-align: center;
+}
+
+.buttons > div {
+  display: inline-block;
+}
+
+.board-size {
+  border: 2px solid rgba(238, 37, 96, 1);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-right: -2px;
+  padding: 8px 16px;
+}
+
+.board-size::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+button {
+  background-color: rgba(238, 37, 96, 1);
+  border: 2px solid rgba(238, 37, 96, 1);
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+}
+
+button:hover {
+  background-color: transparent;
+  color: rgba(238, 37, 96, 1);
+}
+
+div div > button:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  float: right;
+  margin-right: 32px;
+}
+
+/* Pixel Board */
+.pixel-board {
+  border: 1px solid black;
+  display: table;
+  margin: 0 auto 70px;
+  max-width: 80%;
+  overflow: auto;
+  text-align: center;
+}
+
+.line-pixel {
+  display: table-row;
+  height: 40px;
+  white-space: nowrap;
+}
+
+.pixel {
+  display: table-cell;
+  height: 40px;
+  min-width: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+footer {
+  background-color: rgba(8, 24, 43, 1);
+  bottom: 0;
+  color: rgba(69, 217, 253, 1);
+  font-size: 14px;
+  padding: 4px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
