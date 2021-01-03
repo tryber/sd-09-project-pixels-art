@@ -1,18 +1,18 @@
 html {
+  background-color: rgb(25, 25, 25);
   font-family: Share Tech Mono, monospace;
   height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(25, 25, 25);
   text-align: center;
+  width: 100%;
 }
 
 button {
   border-radius: 10%;
+  font-weight: 900;
   margin: 0.5rem;
   padding: 0.3rem 1rem;
-  font-weight: 900;
 }
 
 form {
@@ -21,8 +21,8 @@ form {
 }
 
 a {
-  text-decoration: none;
   color: rgb(106, 98, 246);
+  text-decoration: none;
 }
 
 a:hover {
@@ -37,9 +37,9 @@ a:hover {
 .color {
   border: black solid 1px;
   display: inline-block;
-  width: 100px;
   height: 100px;
   margin: 2%;
+  width: 100px;
 }
 
 .main-page {
@@ -54,12 +54,12 @@ a:hover {
 }
 
 .pixel {
-  height: 40px;
-  width: 40px;
-  display: table-cell;
   background-color: white;
   border: black solid 1px;
   box-sizing: border-box;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
 }
 
 .page-footer {
