@@ -1,0 +1,91 @@
+body {
+  background-image: url('img/background.jpeg');
+  background-size: cover;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px black;
+  color: black;
+  font-weight: 600;
+  margin: 0 0.1em;
+  padding: 0.5em;
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+button:hover {
+  background-color: white;
+  box-shadow: 0 2px 5px white;
+  color: black;
+  padding: 0.5em 1em;
+}
+
+header {
+  color: white;
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px black;
+}
+
+input {
+  border: 0.1em solid gray;
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 5px black;
+  padding: 0.3em;
+}
+
+input:hover {
+  border: 0.2em solid darkcyan;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.2em solid rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  box-shadow: 3px 3px 5px black;
+  display: inline-block;
+  margin: 3em auto;
+  padding: 1em;
+}
+
+section {
+  display: block;
+  padding: 0.5em;
+}
+
+.color {
+  border: solid black 1px;
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  margin: 0.1em;
+  transition: 0.5s;
+  width: 50px;
+}
+
+.line {
+  height: 40px;
+  margin: auto;
+  width: max-content;
+}
+
+.pixel {
+  background-color: white;
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  transition: 0.3s;
+  width: 40px;
+}
+
+.selected {
+  box-shadow: 0 5px 10px white;
+}
