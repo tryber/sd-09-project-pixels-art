@@ -13,7 +13,7 @@ header {
   position: fixed;
   text-align: center;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 main {
@@ -28,9 +28,10 @@ main {
 /* Palette */
 .color-palette {
   height: 34px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
+  width: 100vw;
 }
 
 .color {
@@ -91,8 +92,9 @@ button:hover {
 .pixel-board {
   border: 1px solid black;
   display: table;
-  margin: 0 auto;
-  margin-bottom: 70px;
+  margin: 0 auto 70px auto;
+  max-width: 80%;
+  overflow: auto;
   text-align: center;
 }
 
@@ -101,14 +103,13 @@ button:hover {
   height: 40px;
   margin: 0 16px;
   white-space: nowrap;
-  width: auto;
 }
 
 .pixel {
   display: table-cell;
   height: 40px;
   margin: 0 auto;
-  max-width: 40px;
+  min-width: 40px;
   text-align: center;
   width: 40px;
 }
