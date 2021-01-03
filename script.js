@@ -40,10 +40,9 @@ function VQV() {
 }
 // creating random rgb to set on palette
 function getRandomRgb() {
-  const num = Math.round(0xffffff * Math.random());
-  const r = num >> 8;
-  const g = num >> 8 & 250;
-  const b = num & 250;
+  const r = Math.floor(Math.random()*255);
+  const g = Math.floor(Math.random()*255);
+  const b = Math.floor(Math.random()*255);
   return `rgb(${r}, ${g}, ${b})`;
 }
 // setting colors to palette without equal colors
