@@ -1,3 +1,4 @@
+const btnClear = document.querySelector('#clear-board');
 const paletteBoard = document.querySelector('#color-palette');
 const cor1 = document.getElementById('color1');
 const cor2 = document.getElementById('color2');
@@ -45,6 +46,12 @@ function selectedColor() {
     event.target.className = 'color selected';
   })
 }
+
+btnClear.addEventListener('click', () => {
+  for (let item = 0; item < paletteBoard.length; item += 1) {
+    paletteBoard[item].style.backgroundColor = '#fff';
+  }
+});
 
 createColumPixel(5);
 selectedColor();
