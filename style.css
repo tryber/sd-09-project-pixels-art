@@ -54,6 +54,18 @@ main {
   display: inline-block;
 }
 
+.board-size {
+  border: 2px solid rgba(238, 37, 96, 1);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-right: -2px;
+  padding: 8px 16px;
+}
+
+.board-size::-webkit-inner-spin-button {
+  appearance: none;
+}
+
 button {
   background-color: rgba(238, 37, 96, 1);
   border: 2px solid rgba(238, 37, 96, 1);
@@ -63,7 +75,8 @@ button {
   padding: 8px 16px;
 }
 
-button:last-child {
+div div > button:last-child {
+  margin-right: 32px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   float: right;
@@ -74,27 +87,17 @@ button:hover {
   color: rgba(238, 37, 96, 1);
 }
 
-.board-size {
-  border: 2px solid rgba(238, 37, 96, 1);
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
-  margin-left: 60px;
-  margin-right: -2px;
-  padding: 8px 16px;
-}
-
-.board-size::-webkit-inner-spin-button {
-  appearance: none;
-}
-
 /* Pixel Board */
 .pixel-board {
+  border: 1px solid black;
+  display: table;
+  margin: 0 auto;
   margin-bottom: 70px;
   text-align: center;
-  width: 100%;
 }
 
 .line-pixel {
+  display: table-row;
   height: 40px;
   margin: 0 16px;
   white-space: nowrap;
@@ -102,7 +105,7 @@ button:hover {
 }
 
 .pixel {
-  display: inline-block;
+  display: table-cell;
   height: 40px;
   margin: 0 auto;
   max-width: 40px;

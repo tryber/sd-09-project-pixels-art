@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Arte com Pixels</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1 id="title">Paleta de Cores</h1>
-    </header>
-    <main>
-      <div id="color-palette" class="color-palette">
-        <!-- function createColorPalette(); appendChild -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Arte com Pixels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <main>
+    <div id="color-palette" class="color-palette">
+      <!-- function createColorPalette(); appendChild -->
+    </div>
+    <div class="buttons">
+      <div>
+        <input type="number" min="1" id="board-size" class="board-size" placeholder="Números maiores que 0 ">
+        <button id="generate-board">VQV</button>
       </div>
-      <div class="buttons">
-        <button id="clear-board">Limpar</button>
-        <div>
-          <input type="number" min="1" id="board-size" class="board-size" placeholder="Números maiores que 0 ">
-          <button id="generate-board">VQV</button>
-        </div>
-      </div>
-      <div id="pixel-board" class="pixel-board">
-        <!-- function createPixelBoard(); appendChild -->
-      </div>
-    </main>
-    <footer>
-      <p>Feito com 💙 & ☕ por Nathália Veneziano &copy; 12/2020</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      <button id="clear-board">Limpar</button>
+    </div>
+    <div id="pixel-board" class="pixel-board">
+      <!-- function createPixelBoard(); appendChild -->
+    </div>
+  </main>
+  <footer>
+    <p>Feito com 💙 & ☕ por Nathália Veneziano &copy; 12/2020</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
