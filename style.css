@@ -1,0 +1,62 @@
+.color-palette {
+  border: black 1px solid;
+  height: 47px;
+  margin-left: 16px;
+  width: 188px;
+}
+
+.color {
+  border: solid black 1px;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+}
+
+.black {
+  background-color: black;
+}
+
+.pixel-board {
+  margin-left: 5px;
+  margin-top: 30px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.container div {
+  height: 40px;  
+}
+
+button {
+  background-color: white;
+}
+
+.allButtons {
+  border-radius: 50px;
+  display: block;
+  float: left;
+  width: 60px;
+}
+
+.mario {
+  float: left;
+  position: relative;
+}
+
+body {
+  background-image: url('itsMeMario.png'); 
+  background-repeat: no-repeat;
+  background-size: 1400px;
+  right: 0px;
+  left: 160px;
+  top: 5px;
+  float: left;
+  position: relative;
+}
+/* img href: href: https://nintendatos.files.wordpress.com/2018/03/super-mario-maker-opinic3b3n.png?w=580 */
