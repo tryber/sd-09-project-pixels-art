@@ -32,12 +32,13 @@ header {
   font-family: monospace;
   font-size: 1.5em;
   font-weight: 900;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 2px 2px 2px black;
 }
 
 input {
   border: 0.1em solid gray;
   border-radius: 0.3em;
+  box-shadow: 2px 2px 5px black;
   padding: 0.3em;
 }
 
@@ -49,7 +50,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   border: 0.2em solid rgba(255, 255, 255, 0.7);
   border-radius: 1em;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 3px 3px 5px black;
   display: inline-block;
   margin: 3em auto;
   padding: 1em;
