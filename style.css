@@ -1,5 +1,5 @@
 .black {
-  background-color: black;
+  background-color: black !important;
 }
 
 .color {
@@ -14,7 +14,7 @@
 }
 
 .green {
-  background-color: green;
+  background-color: green !important;
 }
 
 .pixel {
@@ -29,6 +29,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   height: 210px;
+  padding-top: 10px;
   width: 210px;
 }
 
