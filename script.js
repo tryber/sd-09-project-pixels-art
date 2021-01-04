@@ -8,10 +8,9 @@ window.onload = function () {
   colors[3].style.backgroundColor = 'blue';
 
   // function createBoard() {
-
   // }
 
   function clearBoard() {
-    document.getElementsByClassName('pixel')style.backgroundColor = 'white';
+    document.getElementsByClassName('pixel').style.backgroundColor = 'white';
   }
 };
