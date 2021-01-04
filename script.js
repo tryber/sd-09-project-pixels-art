@@ -13,12 +13,12 @@ window.onload = function () {
       chageClassSelectedElement(colorSelectedElementId);
       currentColorSelected = colorSelectedElementId;       
   }
+  
   function changePixelColor (evt) {
       if (evt.target.className === 'pixel') {
           let clickedElement = evt.target;
           clickedElement.style.backgroundColor = currentColorSelected;
       }
-
   }
 
   function clearPixelBoard () {
@@ -38,3 +38,4 @@ window.onload = function () {
       element.classList.toggle('selected');
   }
 }
+// esse programa é para ser incluido
