@@ -2,8 +2,8 @@ const colorBlack = document.querySelector("#color-palette ul li.black");
 const colorRed = document.querySelector("#color-palette ul li.red");
 const colorGreen = document.querySelector("#color-palette ul li.green");
 const colorBlue = document.querySelector("#color-palette ul li.blue");
+const clearBoard = document.querySelector("#clear-board");
 const table = document.querySelector("#table");
-
 let color;
 
 window.addEventListener("load", function(event) {
@@ -44,5 +44,14 @@ colorBlue.addEventListener("click", function(event) {
 })
 
 table.addEventListener("click", function(e) {
-  console.log(e.target.style.backgroundColor = color);
+  e.target.style.backgroundColor = color;
+})
+
+clearBoard.addEventListener("click", function(event) {
+  event.preventDefault();
+  let pixels = document.querySelectorAll(".pixel");
+  console.log(pixels);
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = "white";
+  }
 })
