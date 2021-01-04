@@ -15,3 +15,23 @@
   border: 1px solid black;
   margin:-2.5px;
 }
+
+.black{
+  background-color: black;
+  color: black;
+}
+
+.azul{
+  background-color: blue;
+  color: blue;
+}
+
+.verde{
+  background-color: green;
+  color: green;
+}
+
+.vermelho{
+  background-color: red;
+  color: red;
+}
