@@ -1,19 +1,38 @@
+body {
+  text-align: center;
+}
+
+#color-palette ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+
 .color {
   border: 1px solid black;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 4px;
 }
 
 .black {
   background-color: black;
+  float: left;
 }
 
 .red {
   background-color: red;
+  float: left;
 }
 
 .blue {
   background-color: blue;
+  float: left;
 }
 
 .green {
   background-color: green;
+  float: left;
 }
+
