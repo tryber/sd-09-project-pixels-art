@@ -2,10 +2,13 @@ body {
   text-align: center;
 }
 
-#color-palette ul {
-  list-style: none;
-  display: inline-block;
+#color-palette {
   margin: 0 auto;
+}
+
+#color-palette ul {
+  list-style: square;
+  display: inline-block;
 }
 
 .color {
@@ -43,3 +46,7 @@ body {
   border: solid 1px black;
 }
 
+#pixel-board {
+  display: inline-block;
+  margin: 0 auto;
+}
