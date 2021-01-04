@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   // let boardSize = 5;
   const colors = document.querySelectorAll('.color');
 
@@ -7,4 +7,11 @@ window.onload = function() {
   colors[2].style.backgroundColor = 'green';
   colors[3].style.backgroundColor = 'blue';
 
+  // function createBoard() {
+
+  // }
+
+  function clearBoard() {
+    document.getElementsByClassName('pixel')style.backgroundColor = 'white';
+  }
 };
