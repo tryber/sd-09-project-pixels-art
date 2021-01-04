@@ -66,7 +66,7 @@ Este Pull Request deverá conter os arquivos `index.html`, `style.css` e `script
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
 
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
+Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
 
 ---
 

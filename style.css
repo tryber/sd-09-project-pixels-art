@@ -1,0 +1,35 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+#title {
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 40px;
+  margin-left: 4px;
+  margin-top: 10px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+#pixel-board {
+  position: relative;
+  display: inline-block;
+}
+
+#clear-board {
+  display: block;
+}
