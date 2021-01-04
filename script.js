@@ -1,12 +1,11 @@
+const pixelBoard = document.getElementById('pixel-board');
+const pixelBoard1 = document.getElementsByClassName('pixelBoard');
 const btnClear = document.querySelector('#clear-board');
 const paletteBoard = document.querySelector('#color-palette');
 const cor1 = document.getElementById('color1');
 const cor2 = document.getElementById('color2');
 const cor3 = document.getElementById('color3');
 const cor4 = document.getElementById('color4');
-
-cor1.style.backgroundColor = 'black';
-
 
 function randonColor(){
   const red = Math.floor(Math.random() * 256);
@@ -15,11 +14,10 @@ function randonColor(){
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
+cor1.style.backgroundColor = 'black';
 cor2.style.backgroundColor = randonColor();
 cor3.style.backgroundColor = randonColor();
 cor4.style.backgroundColor = randonColor();
-
-const pixelBoard = document.getElementById('pixel-board');
 
 function createLinePixel(number, pixelLine) {
   for (let i = 0; i < number; i+= 1) {
@@ -47,11 +45,22 @@ function selectedColor() {
   })
 }
 
-btnClear.addEventListener('click', () => {
-  for (let item = 0; item < paletteBoard.length; item += 1) {
-    paletteBoard[item].style.backgroundColor = '#fff';
-  }
-});
+function colorPixels(){
+  pixelBoard.addEventListener('click', function(event) {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = colorSelected;
+  })
+}
+
+function clearBoard(){
+  btnClear.addEventListener('click', function() {
+    for (let i = 0; i < pixelBoard.length; i += 1) {
+      pixelBoard1[i].style.backgroundColor = '#fff';
+    }
+  });
+}
 
 createColumPixel(5);
 selectedColor();
+colorPixels();
+clearBoard();

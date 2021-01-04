@@ -24,3 +24,12 @@ body {
   height: 40px;
   width: 40px;
 }
+
+#pixel-board {
+  position: relative;
+  display: inline-block;
+}
+
+#clear-board {
+  display: block;
+}
