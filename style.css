@@ -4,6 +4,7 @@ body {
 
 #color-palette {
   margin: 0 auto;
+  display: block;
 }
 
 #color-palette ul {
@@ -46,7 +47,15 @@ body {
   border: solid 1px black;
 }
 
+.clear-board {
+  display: block;
+}
+
 #pixel-board {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+}
+
+#table {
   margin: 0 auto;
 }
