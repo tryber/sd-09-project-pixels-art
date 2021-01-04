@@ -44,13 +44,15 @@ colorBlue.addEventListener("click", function(event) {
 })
 
 table.addEventListener("click", function(e) {
+  if (e.target.id == "table") {
+    return;
+  }
   e.target.style.backgroundColor = color;
 })
 
 clearBoard.addEventListener("click", function(event) {
   event.preventDefault();
   let pixels = document.querySelectorAll(".pixel");
-  console.log(pixels);
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = "white";
   }
