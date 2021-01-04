@@ -1,34 +1,35 @@
-let selectedPixel, selectedColor = 'black'
+let selectedPixel;
+let selectedColor = 'black';
 
 // Pegando a cor
-let colors = document.querySelectorAll('.color')
+const colors = document.querySelectorAll('.color');
 
-colors.forEach(color => {
-    color.addEventListener('click', (e) => {
-        // Deixando classe selected apenas a cor selecionada
-        colors.forEach(clr => {
-            clr.classList.remove('selected')
-        })
-        selectedColor = e.target.classList[1]
-        e.target.classList.add('selected')
+colors.forEach((color) => {
+  color.addEventListener('click', (e) => {
+  // Deixando classe selected apenas a cor selecionada
+    colors.forEach((clr) => {
+    clr.classList.remove('selected');
     })
-})
+    selectedColor = e.target.classList[1];
+    e.target.classList.add('selected');
+  });
+});
 
 // Selecionando o pixel
-let pixels = document.querySelectorAll('.pixel')
+let pixels = document.querySelectorAll('.pixel');
 
-pixels.forEach(pixel => {
+pixels.forEach((pixel) => {
     pixel.addEventListener('click', (e) => {
-        selectedPixel = pixels[e.target.id-1];
+        selectedPixel = pixels[e.target.id - 1];
         // Adicionando a classe ao pixel selecionado
-        selectedPixel.classList.remove('black', 'green', 'red', 'yellow')
-        selectedPixel.classList.add(selectedColor)
-    })
-})
+        selectedPixel.classList.remove('black', 'green', 'red', 'yellow');
+        selectedPixel.classList.add(selectedColor);
+    });
+});
 
 // Botão para limpar
 document.querySelector('#clear-board').addEventListener('click', () => {
     pixels.forEach(pixel => {
-        pixel.classList.remove('black', 'green', 'red', 'yellow')
+        pixel.classList.remove('black', 'green', 'red', 'yellow');
     });
-})
+});
