@@ -6,5 +6,27 @@
     <title>Document</title>
 </head>
 <body>
+    <main class="container">
+        <h1 id="title">Paleta de Cores</h1>
+        <section id="color-palette">
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+          <div class="color"></div>
+        </section>
+        <section>
+          <label for="board-size">Tamanho do quadro ( min:5, max:50 )</label>
+          <form onsubmit="return false">
+            <input type='number' min='5' max='50' id='board-size' />
+            <input id="generate-board" type="submit" value="VQV" />
+          </form>
+          <button id="clear-board">Limpar</button>
+        </section>
+        <section>
+          <table id="pixel-board"></table>
+        </section>
+      </main>
+      <script src="script.js"></script>
+  
 </body>
 </html>
