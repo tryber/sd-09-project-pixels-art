@@ -9,8 +9,8 @@ window.onload = function () {
 
   // function createBoard() {
   // }
-
-  function clearBoard() {
-    document.getElementsByClassName('pixel').style.backgroundColor = 'white';
-  }
 };
+
+function clearBoard() {
+  document.getElementsByClassName('pixel').style.backgroundColor = 'white';
+}
