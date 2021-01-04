@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <header>
+        <h1 id ="title">Paleta de Cores</h1>
+    </header>
+    <div id="color-palette">
+        <li class="selected color cor1" id="preto" onclick="cliquePreto()"></li>
+        <li id="vermelho" class="color cor2" onclick="cliqueVermelho()"></li>
+        <li id="azul" class="color cor3" onclick="cliqueAzul()"></li>
+        <li id="rosa" class="color cor4" onclick="cliqueRosa()"></li>
+    </div>
+    <section>
+        <input type="number" min="1" name="" id="board-size">
+        <button id="generate-board" onclick="btnFunction()">VQV</button>
+    </section>
+    <div>
+        <button id="clear-board">Limpar</button>
+    </div>
+    
+
+    <table id="pixel-board">
+      <tbody>
+        <tr>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+        </tr>
+        <tr>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+        </tr>
+        <tr>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+        </tr>
+        <tr>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+        </tr>
+        <tr>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+            <td class="pixel branco" onclick="pintarQuad(this)"></td>
+        </tr>
+    </tbody>
+  </table>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
