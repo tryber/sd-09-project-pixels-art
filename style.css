@@ -1,0 +1,42 @@
+.black {
+  background-color: black ! important;
+}
+
+.color {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+#color-palette {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.green {
+  background-color: green ! important;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 210px;
+  padding-top: 10px;
+  width: 210px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
