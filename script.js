@@ -10,7 +10,7 @@ function selectedSquareColor() {
   const square = document.getElementsByClassName("color");
 
   for (let index = 0; index < square.length; index += 1) {
-    return square[index].addEventListener("click", function (event) {
+    square[index].addEventListener("click", function (event) {
       const selected = document.getElementsByClassName("selected");
       let color = square[index].attributes[0].value.split(" ", 2)[1];
 
@@ -37,6 +37,7 @@ function clearSquare() {
     square[index].style.backgroundColor = 'white';
   }
 }
+
 function clickButton() {
   const btnClear = document.querySelectorAll('.button');
   btnClear.addEventListener('click', clearSquare());
