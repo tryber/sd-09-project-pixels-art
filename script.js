@@ -34,7 +34,7 @@ function paintSquareColor() {
 function clearSquare() {
   square = document.getElementsByTagName('td');
   for (i = 0; i < square.length; i++) {
-    square[i].style.background = "white";
+    square[i].style.background = "#00ffff";
   }
 }
 
