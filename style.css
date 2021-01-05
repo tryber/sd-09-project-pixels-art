@@ -1,40 +1,20 @@
-body{
-  background-color: bisque;
-}
-.color{
+.color {
+  font-size: 0pt;
   display: inline-block;
-  height: 40px;
   width: 40px;
-  margin:1px;
-  border: 1px solid black;
-  margin-bottom: 10px;
+  height: 40px;
+  margin: black 1px;
+  border: 2px solid rgb(0, 0, 0);
 }
 
-.pixel{
+.pixel-board {
+  margin: auto;
+  width: 240px;
+  height: 240px;
+}
+.pixel {
   display: inline-block;
-  height: 40px;
   width: 40px;
-  background-color: white;
-  border: 1px solid black;
-  margin:-2.5px;
-}
-
-.black{
-  background-color: black;
-  color: black;
-}
-
-.azul{
-  background-color: blue;
-  color: blue;
-}
-
-.verde{
-  background-color: green;
-  color: green;
-}
-
-.vermelho{
-  background-color: red;
-  color: red;
+  height: 40px;
+  border: 2px solid rgb(0, 0, 0);
 }
