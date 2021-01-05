@@ -23,7 +23,7 @@ function generatePalette() {
 
 let selectedColor = document.querySelector('.selected').style.backgroundColor;
 const colorPalette = document.querySelector('#color-palette');
-colorPalette.addEventListener ('click', function(event) {
+colorPalette.addEventListener('click', function (event) {
   selectedColor = event.target.style.backgroundColor;
   document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
@@ -36,13 +36,13 @@ window.onload = function () {
 };
 
 const coloredBoard = document.querySelector('#pixel-board');
-coloredBoard.addEventListener ('click', function(paint) {
+coloredBoard.addEventListener('click', function (paint) {
   paint.target.style.backgroundColor = selectedColor;
 });
 
 function clearBoard() {
   const clear = document.querySelectorAll('.pixel');
-  for (indexClear = 0; indexClear < clear.length; indexClear += 1) {
+  for (let indexClear = 0; indexClear < clear.length; indexClear += 1) {
     clear[indexClear].style.backgroundColor = 'white';
   }
 }
