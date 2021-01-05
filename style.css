@@ -1,9 +1,12 @@
 * {
     font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
 }
 
-#title {
-    text-align: center;
+#color-pattern {
+    display: table;
+    margin: 10px auto;
+    align-items: center;
 }
 
 .color {
@@ -12,10 +15,6 @@
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin: auto;
-    position: relative;
-    left: 38%;
-    transform: translateX(-62%);
 }
 
 #color1 {
@@ -32,4 +31,22 @@
 
 #color4 {
     background-color: lightcoral;
+}
+
+#pixels-board {
+    text-align: center;
+    display: table;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.tr {
+    display: table-row;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    display: table-cell;
+    border: 1px solid black;
 }
