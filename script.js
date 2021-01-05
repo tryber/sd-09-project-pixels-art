@@ -1,83 +1,52 @@
-window.onload = function () {
-  this.sessionStorage.setItem("uColor", "black")
-  function random() {
-      const r = Math.floor(Math.random() * 256);
-      const g = Math.floor(Math.random() * 256);
-      const b = Math.floor(Math.random() * 256);
-    
-      const cor = `rgb(${r}, ${g}, ${b})`;
-      return cor;
-  }
-
-  let colorArray = ["black", random(), random(), random()]
-
-  let palColor = document.getElementsByClassName("color")
-  for (let i = 0; i < colorArray.length; i+=1) {
-      palColor[i].style.backgroundColor = colorArray[i];
-      palColor[i].addEventListener('click', function () {
-          let selected = document.getElementsByClassName("selected")
-          selected[0].classList.remove("selected")
-          let bgcolor = palColor[i].style.backgroundColor
-          sessionStorage.setItem("uColor", bgcolor)
-          palColor[i].classList.add("selected")
-      })
-  }
-  let pixels = document.getElementsByClassName("pixel")
-
-  for (let x = 0; x < pixels.length; x+=1) {
-
-
-      pixels[x].addEventListener('click', function () {
-          let coloring = sessionStorage.getItem("uColor")
-          pixels[x].style.backgroundColor = coloring;
-      })
-
-  }
-
-  let clear = document.getElementById("clear-board")
-
-  clear.addEventListener('click', function(){
-      for (let y = 0; y < pixels.length; y+=1){
-          pixels[y].style.backgroundColor = "white"
-      }
-  })
-
-  let size = document.getElementById("board-size");
-  let generate = document.getElementById("generate-board");
-  let board = document.getElementById("pixel-board");
+window.onload= function(){
+  caneta ="black"
+  let valor= document.getElementsByClassName("generate-board")[0];
+  let tamanho= document.getElementsByClassName("board-size")[0];
   
-  generate.addEventListener('click', function(){
-      let n = parseInt(size.value)
-      
-      if(n<5){
-          n = 5;
-      }
-      else if(n>50){
-          n = 50;
-      }
-      
-      let newPixelNumber = n*n
-      let newDimensions = (42 * n) + "px";
-      board.style.height = newDimensions;
-      board.style.width = newDimensions;
-
-      document.querySelectorAll('.pixel').forEach(e => e.remove());
-      
-     for (let k = 0; k < newPixelNumber; k++) {
-         let newPixel = document.createElement("div");
-         newPixel.classList = "pixel"
-         newPixel.addEventListener('click', function () {
-              let coloring = sessionStorage.getItem("uColor")
-              newPixel.style.backgroundColor = coloring;
-         })
-          document.getElementById("pixel-board").appendChild(newPixel)
-      }
-  })
-
-      
-
+  function apagaTabela(){
+     let tabela=document.querySelectorAll(".tabela")
+     tabela.forEach(i =>{
+        i.innerHTML=""
+     })
+  }
+  valor.addEventListener("click", apagaTabela)
   
 
+  function gerarTabela(){
+     if(tamanho.value<5 || tamanho.value>50){
+        window.alert("OPS, insira um valor entre 5 e 50")
+     }else{
+        for (let i=0; i<tamanho.value;i++){
+           let sec = document.createElement("section");
+           sec.classList.add("tab")
+           document.getElementsByClassName("tabela")[0].appendChild(sec)
+           for(let  g=0; g<tamanho.value;g++){
+              let linhaCreada= document.getElementsByClassName("tab")[i]
+              let linha=document.createElement("div")
+              linha.addEventListener("click", function(){
+                 linha.style.backgroundColor=caneta
+              })
+              linha.classList.add("pixel")
+              linhaCreada.appendChild(linha)
+           }
+        }
+     }
+  }
+  valor.addEventListener("click", gerarTabela)
 
+  let limpaQuadro=document.getElementById("clear-board")
+  function apagaCores(){
+     let tabela=document.querySelectorAll(".pixel")
+     tabela.forEach(i =>{
+        i.style.backgroundColor="white"
+     })
+  }
+  limpaQuadro.addEventListener("click", apagaCores)
 
+}
+function setcaneta(pixel){
+  caneta=pixel
+}
+function trocaCor(selected){
+  selected.style.backgroundColor=caneta;
 }
