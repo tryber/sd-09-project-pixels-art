@@ -32,7 +32,7 @@ checks:
 exclude_patterns:
   - "**/libs/*.css"
   - "**/libs/*.js"
-  - "**/*.{gif,png,jpeg}"
+  - "**/*.{gif,png,jpeg,jpg}"
   - "node_modules/"
 plugins:
   csslint:
