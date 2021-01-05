@@ -27,5 +27,15 @@ function paintPixel(event) {
   pixelCLicked.classList.add(classToAdd);
 }
 
+function clearBoard() {
+  for (let index = 0; index < pixelBoard.length; index += 1) {
+    if (pixelBoard[index].classList[1] = !undefined) {
+      console.log(pixelBoard[index].classList[1]);
+      let color = pixelBoard[index].classList[1];
+      pixelBoard[index].classList.remove(color);
+    }
+  }
+}
+
 addListener(paleta, changeClassSelected);
 addListener(pixelBoard, paintPixel);
