@@ -1,52 +1,17 @@
-window.onload= function(){
-  caneta ="black"
-  let valor= document.getElementsByClassName("generate-board")[0];
-  let tamanho= document.getElementsByClassName("board-size")[0];
-  
-  function apagaTabela(){
-     let tabela=document.querySelectorAll(".tabela")
-     tabela.forEach(i =>{
-        i.innerHTML=""
-     })
-  }
-  valor.addEventListener("click", apagaTabela)
-  
+let pixels = document.querySelectorAll(".pixel");
+let palette = document.querySelectorAll(".color");
 
-  function gerarTabela(){
-     if(tamanho.value<5 || tamanho.value>50){
-        window.alert("OPS, insira um valor entre 5 e 50")
-     }else{
-        for (let i=0; i<tamanho.value;i++){
-           let sec = document.createElement("section");
-           sec.classList.add("tab")
-           document.getElementsByClassName("tabela")[0].appendChild(sec)
-           for(let  g=0; g<tamanho.value;g++){
-              let linhaCreada= document.getElementsByClassName("tab")[i]
-              let linha=document.createElement("div")
-              linha.addEventListener("click", function(){
-                 linha.style.backgroundColor=caneta
-              })
-              linha.classList.add("pixel")
-              linhaCreada.appendChild(linha)
-           }
-        }
-     }
-  }
-  valor.addEventListener("click", gerarTabela)
-
-  let limpaQuadro=document.getElementById("clear-board")
-  function apagaCores(){
-     let tabela=document.querySelectorAll(".pixel")
-     tabela.forEach(i =>{
-        i.style.backgroundColor="white"
-     })
-  }
-  limpaQuadro.addEventListener("click", apagaCores)
-
+let paletteColors = ["black", "purple", "blue", "green"];
+for (let index = 0; index < palette.length; index++) {
+    palette[index].style.backgroundColor = paletteColors[index];
 }
-function setcaneta(pixel){
-  caneta=pixel
-}
-function trocaCor(selected){
-  selected.style.backgroundColor=caneta;
-}
+for( let i = 0; i < palette.length; i++) {
+    palette[i].addEventListener("click", function() {
+    let color = sessionStorage.setItem("color", event.target.innerHTML);
+    for ( let e = 0; e < pixels.length; e++) {
+        pixels[e].addEventListener("click", function(){
+            pixels[e].style.backgroundColor = sessionStorage.color;
+        })
+    }
+})
+} 
