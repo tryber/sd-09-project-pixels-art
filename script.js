@@ -33,7 +33,7 @@ let btn = document.getElementById('clear-board');
 
 function clearAll() {
   let childsBoard = document.querySelector('#pixel-board').childNodes;
-  for (index = 0; index <= childsBoard.length; index += 1) {
+  for (index = 0; index < childsBoard.length; index += 1) {
     childsBoard[index].style.backgroundColor = 'white';
   }
 }
