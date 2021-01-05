@@ -12,16 +12,16 @@
     width: 50px;
 }
 #black {
-    background-color: rgb(0,0,0);
+    background-color: black;
 }
 #yellow {
-    background-color: rgb(255,255,0);
+    background-color: yellow;
 }
 #violet {
     background-color:violet;
 }
 #green {
-    background-color: rgb(0,100,0);
+    background-color: green;
 }
 #pixel-board {
     line-height: 0;
