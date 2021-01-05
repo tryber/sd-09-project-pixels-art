@@ -4,15 +4,15 @@
   height: 50px;
   width: 50px;
 }
-#cyan {
+#cyanBox {
   background-color: cyan;
 }
-#magenta {
+#magentaBox {
   background-color: magenta;
 }
-#yellow {
+#yellowBox {
   background-color: yellow;
 }
-#black {
+#blackBox {
   background-color: black;
 }
