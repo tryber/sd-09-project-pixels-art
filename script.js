@@ -26,13 +26,13 @@ function paintSquareColor() {
   const table = document.querySelectorAll("td");
   for (let index = 0; index < table.length; index += 1) {
     table[index].addEventListener("click", function () {
-      table[index].style.backgroundColor = selectedSquareColor();
+      table[index].style.backgroundColor = "black";
     });
   }
 }
 
 function clearSquare() {
-  var btnClear = document.getElementById("clear-board");
+  const btnClear = document.getElementById("clear-board");
   btnClear.addEventListener("click", function clickMouseLocation() {
     window.location.reload();
   });
