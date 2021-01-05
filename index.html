@@ -1,61 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>Caio Ribeiro | Projeto 5.1 Paleta de Cores</title>
 </head>
 <body>
-<h1 id="title">Paleta de Cores</h1>
-<section id="color-palette">
-  <div class="color black selected" onclick="setcaneta('black')"></div>
-  <div class="color azul" onclick="setcaneta('blue')"></div>
-  <div class="color vermelho" onclick="setcaneta('red')"></div>
-  <div class="color verde" onclick="setcaneta('green')"></div>
-</section>
-  <table id="pixel-board">
-    <input type="number" name="digite" min="5" max="50" class="board-size"></br>
-    <button class="generate-board">escolha um valor</button>
-    <button id="clear-board">Limpar</button>
-<section class="tabela">
-<section class="tab">
-    <div class="pixel" onclick="trocaCor(this)"></div>
-    <div class="pixel" onclick="trocaCor(this)"></div>
-    <div class="pixel" onclick="trocaCor(this)"></div>
-   <div class="pixel" onclick="trocaCor(this)"></div>
-   <div class="pixel" onclick="trocaCor(this)"></div>
-</section>
-<section class="tab">
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-</section>
-<section class="tab">
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-</section>
-<section class="tab">
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-</section>
-<section class="tab">
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-  <div class="pixel" onclick="trocaCor(this)"></div>
-</section>
-</section> 
-</table>
-<script src="script.js"></script>
+
+        <h1 id="title">Paleta de Cores</h1>
+<div id="color-palette">
+    <div class="color" id="black">Black</div>
+    <div class="color" id="purple">Purple</div>
+    <div class="color" id="blue">Blue</div>
+    <div class="color" id="green">Green</div>
+</div>
+
+<div class="pixel-board" id="pixel-board">
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+</div>
+<script src="script.js"></script>    
 </body>
+</html> 
