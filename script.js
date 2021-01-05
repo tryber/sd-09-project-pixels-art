@@ -115,4 +115,4 @@ window.onload = function () {
   paintPixel();
   clearPixelBoard();
   randomPalette();
-}
+};
