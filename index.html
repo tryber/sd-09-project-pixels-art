@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Paleta de Cores</title>
+</head>
+<body>
+  <header>
+  <h1 id='title'> Paleta de Cores </h1>
+  </header>
+  <main>
+    <div class = 'central-background'>
+      <div id='color-palette'></div>
+      <button id='clear-board'>Limpar</button>
+      <button id='randomize-color'>Alterar Cores</button>
+      <input type="number" min='1' max='50' id='board-size' name='board-size'>
+      <button id='generate-board' onclick='newBoard()'>VQV</button>
+      <div id='pixel-board'></div>
+    </div>
+  </main>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
