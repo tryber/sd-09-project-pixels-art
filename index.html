@@ -1,65 +1,29 @@
 <!DOCTYPE html>
-<html lang="">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Pixels art</title>
+    <title>Paleta de Cores</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <h1 id='title' class='title1'>Paleta de Cores</h1><br><br>
-
-  <div id="color-palette">
-    <div id="black-palette" class="color selected"></div>
-    <div id="red-palette" class="color"></div>
-    <div id="green-palette" class="color"></div>
-    <div id="yellow-palette" class="color"></div>
-  </div>
-
-  <button type="button" id="clear-board">Limpar</button><br><br>
-
-  <table id="pixel-board" class="pixel_board">
-    <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-    </tr>
-    <tr>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-    </tr>
-    <tr>
-      <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-    </tr>
-    <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-    </tr>
-    <tr>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-      <td class="pixel"></td>
-    </tr>
-  </table>
-
-
+    <header>
+        <h1 id="title" > Paleta de Cores </h1>
+    </header>
+    <section id="color-palette">
+        <div class="color"></div>
+        <div class="color" ></div>
+        <div class="color"></div>
+        <div class="color"></div>
+    </section>
+    <div class="button" ></div>
+    <section class="user-interactive">
+        <input id="board-size" min="1" max="50" type="number">
+        <button type="button" id="generate-board"> VQV </button>
+        <button type="button" id="teste"> TESTE </button>
+    </section>
+    <section id="pixel-board"></section>
+   
+    <script src="./script.js"> </script>
 </body>
-
 </html>
