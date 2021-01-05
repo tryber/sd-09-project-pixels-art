@@ -40,10 +40,6 @@
     align-items: center;
 }
 
-.tr {
-    display: table-row;
-}
-
 .pixel {
     width: 40px;
     height: 40px;
