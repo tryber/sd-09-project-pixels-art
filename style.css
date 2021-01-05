@@ -4,5 +4,32 @@
 
 #title {
     text-align: center;
+}
 
+.color {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    position: relative;
+    left: 38%;
+    transform: translateX(-62%);
+}
+
+#color1 {
+    background-color: black;
+}
+
+#color2 {
+    background-color: brown;
+}
+
+#color3 {
+    background-color: red;
+}
+
+#color4 {
+    background-color: lightcoral;
 }
