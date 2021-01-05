@@ -14,7 +14,6 @@ function selected(event) {
   let selectedItem = document.getElementsByClassName("selected")[0];
   selectedItem.className = "color";
   event.target.className = "color selected";
-  storeColor = event.target.style.backgroundColor;
 }
 function clickColorPalette() {
   const colorPalette = document.getElementById("color-palette");
@@ -25,6 +24,17 @@ clickColorPalette();
 let pixList = document.querySelector('#pixel-board');
 
 function changePixels(evento) {
-  evento.target.style.backgroundColor = storeColor;
+  let selectedColor = document.querySelector('.selected').id;
+  evento.target.style.backgroundColor = selectedColor;
 }
-changePixels();
+pixList.addEventListener('click', changePixels);
+
+let btn = document.getElementById('clear-board');
+
+function clearAll() {
+  let childsBoard = document.querySelector('#pixel-board').childNodes;
+  for (index = 0; index <= childsBoard.length; index += 1) {
+    childsBoard[index].style.backgroundColor = 'white';
+  }
+}
+btn.addEventListener('click', clearAll);
