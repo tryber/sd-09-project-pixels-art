@@ -29,12 +29,6 @@ colorPalette.addEventListener('click', function (event) {
   event.target.classList.add('selected');
 });
 
-window.onload = function () {
-  generatePalette();
-  createBoard(boardSize);
-  selectedColor = document.querySelector('.selected').style.backgroundColor;
-};
-
 const coloredBoard = document.querySelector('#pixel-board');
 coloredBoard.addEventListener('click', function (paint) {
   paint.target.style.backgroundColor = selectedColor;
@@ -46,3 +40,10 @@ function clearBoard() {
     clear[indexClear].style.backgroundColor = 'white';
   }
 }
+
+window.onload = function () {
+  generatePalette();
+  createBoard(boardSize);
+  clearBoard();
+  selectedColor = document.querySelector('.selected').style.backgroundColor;
+};
