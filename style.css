@@ -1,3 +1,6 @@
+body{
+  background-color: bisque;
+}
 .color{
   display: inline-block;
   height: 40px;
