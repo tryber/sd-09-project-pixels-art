@@ -1,6 +1,17 @@
-/* #color-palette {
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  margin: auto;
   display: block;
-} */
+  width: fit-content;
+}
+
+#clear-board {
+  display: block;
+  margin: auto;
+}
 
 .color {
   background-color: black;
@@ -9,4 +20,27 @@
   display: inline-block;
   height: 40px;
   width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  margin: auto;
+  padding: 0;
+  width: 40px;
+}
+
+.line {
+  display: table-row;
+  height: fit-content;
+  width: fit-content;
+}
+
+.pixel-board {
+  display: block;
+  height: fit-content;
+  margin: auto;
+  width: fit-content;
 }
