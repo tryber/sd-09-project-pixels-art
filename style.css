@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+}
+.color {
+    border: black solid 1px;
+    height: 50px;
+    width: 50px;
+}
+#black {
+    background-color: black;
+}
+#yellow {
+    background-color: yellow;
+}
+#violet {
+    background-color:violet;
+}
+#green {
+    background-color: green;
+}
+#pixel-board {
+    line-height: 0;
+    height: 200px;
+    width: 200px;
+}
+.pixel {
+    background-color: white;
+    border: black solid 1px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+#clear-board {
+    margin: 10px;
+}
