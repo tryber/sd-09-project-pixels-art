@@ -1,4 +1,4 @@
-body{
+body {
   text-align: center;
 }
 
@@ -20,19 +20,19 @@ body{
 }
 
 .black {
-  background-color: black;
+  background-color: black !important;
 }
 
 .red {
-  background-color: red;
+  background-color: red !important;
 }
 
 .green {
-  background-color: green;
+  background-color: green !important;
 }
 
 .blue {
-  background-color: blue;
+  background-color: blue !important;
 }
 
 tr {
