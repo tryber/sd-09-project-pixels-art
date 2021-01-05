@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+}
+
+/*
+Técnica para background full screen no link abaixo:
+https://css-tricks.com/perfect-full-page-background-image/
+*/
+
+html {
+  background-attachment: fixed;
+  background-image: url("pics/bg-image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Class styles */
+
+/*
+Uso de Viewport lengths fez a div main content ter sempre pelo menos o tamanho da tela. 
+Possibilitando que os boxes não se sobrepusessem.
+Link com o material consultado abaixo:
+https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window
+https://every-layout.dev/layouts/cover/
+*/
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.palette-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 6px -6px black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+}
+
+.color-palette-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.color-palette-item {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Tangerine, cursive;
+  list-style-type: none;
+  width: 100px;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.black {
+  background-color: black;
+}
+.color2 {
+  background-color: red;
+}
+.color3 {
+  background-color: green;
+}
+.color4 {
+  background-color: blue;
+}
+
+.board-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 6px -6px black;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.actions-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 30px;
+  font-family: Balsamiq Sans, cursive;
+  padding: 10px;
+}
+
+.actions-container-wraper {
+  margin: 0 0 10px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+/* ID styles */
+#title {
+  font-family: Tangerine, cursive;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clear-board {
+  font-size: 20px;
+  width: 100px;
+}
+
+#board-size {
+  font-size: 20px;
+  width: 50px;
+}
+
+#generate-board {
+  font-size: 20px;
+}
+
+#pixel-board {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  overflow: auto;
+  padding: 0;
+  width: 210px;
+}
