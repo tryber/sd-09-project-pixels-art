@@ -1,14 +1,13 @@
 /* #title {
   text-align: center;
-}
+} */
 
-#color-palette {
+.palette {
   display: block;
-  margin: auto;
   width: fit-content;
 }
 
-#clear-board {
+/* #clear-board {
   display: block;
   margin: auto;
 } */
