@@ -1,0 +1,18 @@
+.color {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+#cyan {
+  background-color: cyan;
+}
+#magenta {
+  background-color: magenta;
+}
+#yellow {
+  background-color: yellow;
+}
+#black {
+  background-color: black;
+}
