@@ -32,15 +32,14 @@ function paintSquareColor() {
 }
 
 function clearSquare() {
-  const btnClear = document.getElementById("clear-board");
-  btnClear.addEventListener("click", function clickMouseLocation() {
-    window.location.reload();
-  });
+  square = document.getElementsByTagName('td');
+  for (i = 0; i < square.length; i++) {
+    square[i].style.background = "white";
+  }
 }
 
 window.onload = function () {
   selectedSquareColorInitial();
   selectedSquareColor();
   paintSquareColor();
-  clearSquare();
 };
