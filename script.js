@@ -91,3 +91,24 @@ function generatePixelBoard() {
     drawPixelBoard(inputValue);
   }
 }
+
+function drawMenu() {
+  const clearBtn = document.createElement('button');
+  clearBtn.id = 'clear-board';
+  clearBtn.innerText = 'Limpar';
+  clearBtn.addEventListener('click', clearPixelBoard);
+  document.querySelector('.button-list').appendChild(clearBtn);
+
+  const boardSizeInput = document.createElement('input');
+  boardSizeInput.id = 'board-size';
+  boardSizeInput.type = 'number';
+  boardSizeInput.min = '1';
+  boardSizeInput.max = '50';
+  document.querySelector('.button-list').appendChild(boardSizeInput);
+
+  const boardSizeBtn = document.createElement('button');
+  boardSizeBtn.id = 'generate-board';
+  boardSizeBtn.innerText = 'VQV';
+  boardSizeBtn.addEventListener('click', generatePixelBoard);
+  document.querySelector('.button-list').appendChild(boardSizeBtn);
+}
