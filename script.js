@@ -8,14 +8,14 @@ corClique.addEventListener("click", corSelecionada);
 
 function corSelecionada(eventOrigem) {
     let IdClique = eventOrigem.target.id;
-    document.getElementById("black").className ="color"; 
-    document.getElementById("red").className ="color";
-    document.getElementById("blue").className ="color";
-    document.getElementById("green").className ="color";
+    document.getElementById("black").className = "color"; 
+    document.getElementById("red").className = "color";
+    document.getElementById("blue").className = "color";
+    document.getElementById("green").className = "color";
 
     if (IdClique == "black" || IdClique == "red" || 
     IdClique == "blue" || IdClique == "green") {
-        document.getElementById(IdClique).className ="color selected";
+        document.getElementById(IdClique).className = "color selected";
     }
 }
 
