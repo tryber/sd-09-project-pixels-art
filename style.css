@@ -46,3 +46,7 @@ h1 {
 .row {
   line-height: 0;
 }
+
+section {
+  display: block;
+}
