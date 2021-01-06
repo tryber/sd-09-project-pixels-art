@@ -12,9 +12,26 @@ for (let indexColumn = 0; indexColumn < 5; indexColumn += 1) {
     pixelCell.className = 'pixel';
     pixelBoard.appendChild(pixelCell);
   }
-  const pixelBreak = document.createElement('br');
-  pixelBoard.appendChild(pixelBreak);
+  pixelBoard.appendChild(document.createElement('br'));
 }
 
-const colorSelector = boxColor[0].style.backgroundColor;
-boxColor[0].className = 'color selected';
+window.onload = onLoadFunction;
+
+let selectedColor = '';
+
+function onLoadFunction () {
+  selectedColor = boxColor[0].style.backgroundColor;
+  boxColor[0].className = 'color selected';
+}
+
+const colorPalette = document.querySelector('#color-palette');
+
+colorPalette.addEventListener("click", colorSelector);
+
+function colorSelector(originEvent) {
+  for (let index = 0; index < boxColor.length; index += 1) {
+    boxColor[index].className = 'color';
+  }
+  selectedColor = originEvent.target.style.backgroundColor;
+  originEvent.target.className = 'color selected';
+}
