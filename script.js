@@ -3,7 +3,7 @@ function clearPixel () {
   eventClear.id = 'clear-board';
 
   const body = document.querySelector('body');
-  const board = document.querySelector('#pixel-board');
+  const board = document.querySelector('.pixel-board ');
   body.insertBefore(eventClear, board);
 
   const buttonClear = document.querySelector('#clear-board');
