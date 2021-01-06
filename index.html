@@ -1,63 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paleta de Cores</title>
-  <link rel="stylesheet" type="text/css"  href="style.css"/>
+    <meta charset='UTF-8'>
+    <title>Pixels art</title>
+    <link rel='stylesheet' href='style.css'>
 </head>
-<body>
-  <h1 id="title"> Paleta de Cores </h1>
-  <main class="mainContainer">
-    <section class="center" id="color-palette" > </section> 
-      <div class="color select" style="background-color: black;"> </div>
-      <div class="color" style="background-color: green;" ></div>
-      <div class="color" style="background-color: orange;" ></div>
-      <div class="color" style="background-color: indianred;" ></div>
-    </section>
-    <section class="button-container">
-      <button id="clear-board">Limpar</button>
-      <input type="number" id="board-size" min="1" placeholder="Dimension">
-      <button id="generate-board">VQV</button>
-    </section>
-    <section class="center" id="pixel-board">
-      <div class="row">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>
-      <div class="row">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>
-      <div class="row">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>
-      <div class="row">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>
-      <div class="row">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>
-    </section>
-  </main>
-  <script></script>
+<body class="center">
+    <header>
+        <h1 id='title' class="center">Paleta de Cores</h1>
+    </header>
+
+    <div id='color-palette' class="center">
+        <div class='color black'></div>
+        <div class='color blue'></div>
+        <div class='color red'></div>
+        <div class='color cyan'></div>
+    </div>
+
+    <div class="center" id="pixel-board">
+    </div>
+    <script src='script.js'></script>    
 </body>
 </html>

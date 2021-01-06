@@ -1,5 +1,8 @@
-title {
-  color: black;
+.blue{
+  background-color: green;
+}
+.black{
+  background-color: black;
 }
 
 .center {
@@ -7,60 +10,25 @@ title {
   text-align: center;
 }
 
-.mainContainer {
-  background-color: aliceblue;
-  border: 5px solid black;
-  border-radius: 15px;
-  box-shadow: 5px 10px 15px;
-  margin: 0 auto;
-  padding: 20px;
-  width: fit-content;
-}
-
-h1 {
-  color: black;
-  font-size: 40px;
-  text-align: center;
-}
-
-.color {
-  border: solid 1px black;
+.color{
+  border: 1px solid black;
   display: inline-block;
   height: 50px;
-  margin: 2px;
   width: 50px;
 }
-
-.pixel {
+.cyan{
+  background-color: sienna;
+}
+.pixel{
+  border: 1px solid black;
   background-color: white;
-  border: solid 1px black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
-
-.row {
-  line-height: 0;
-}
-
-.pixel-board {
-  display: flex;
-}
-
 #pixel-board div{
   display: flex;
 }
-
-section {
-  display: block;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-button , input {
-  margin-right: 3px;
+.red{
+  background-color: yellow;
 }
