@@ -50,3 +50,9 @@ h1 {
 section {
   display: block;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
