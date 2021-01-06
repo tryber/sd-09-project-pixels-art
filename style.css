@@ -1,3 +1,39 @@
 #title {
   color: rgb(0, 0, 0);
 }
+.center {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+section {
+  display: block;
+}
+
+.mainContainer {
+  background-color: aliceblue;
+  border: 5px solid black;
+  border-radius: 15px;
+  box-shadow: 5px 10px 15px;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+}
+
+h1 {
+  color: crimson;
+  font-size: 40px;
+  text-align: center;
+}
+
+element.style {
+  background-color: green;
+}
+
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
