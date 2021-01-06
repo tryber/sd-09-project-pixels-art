@@ -19,3 +19,10 @@ function corSelecionada(eventOrigem) {
     }
 }
 
+let targetColour = document.getElementById("pixel-board");
+targetColour.addEventListener("click", transferColour);
+
+function transferColour(eventChange) {
+    let toColour = document.querySelector(".selected").id;
+    eventChange.target.style.backgroundColor = toColour;
+}
