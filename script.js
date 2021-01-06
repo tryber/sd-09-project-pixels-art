@@ -35,7 +35,7 @@ function squarePaint() {
 function clearSquare() {
   const square = document.getElementsByTagName('td');
   for (let i = 0; i < square.length; i+=1) {
-    square[i].style.background = 'white';
+    square[i].style.backgroundColor = 'white';
   }
 }
 
