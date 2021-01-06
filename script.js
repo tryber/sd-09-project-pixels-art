@@ -32,16 +32,13 @@ function paintSquareColor() {
 }
 
 function clearSquare() {
-  const square = document.querySelectorAll('.pixel');
-  for (let index = 0; index < square.length; index += 1) {
-    square[index].style.backgroundColor = 'white';
+  const square = document.getElementsByTagName('td');
+  for (i = 0; i < square.length; i++) {
+    square[i].style.background = "white";
   }
 }
 
-function clickButton() {
-  const btnClear = document.querySelectorAll('.button');
-  btnClear.addEventListener('click', clearSquare());
-}
+
 
 window.onload = function () {
   selectedSquareColorInitial();
