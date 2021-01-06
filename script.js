@@ -54,15 +54,15 @@ function drawPixelBoard(boardSize) {
     const pixelLine = document.createElement('div');
     pixelLine.style.display = 'table-row';
     for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
-    const pixelSquare = document.createElement('div');
-    pixelSquare.className = 'pixel';
-    pixelSquare.style.backgroundColor = 'white';
-    pixelSquare.style.display = 'table-cell';
-    pixelSquare.style.width = '40px';
-    pixelSquare.style.height = '40px';
-    pixelSquare.style.border = '1px black solid';
-    pixelLine.appendChild(pixelSquare);
-  }
+      const pixelSquare = document.createElement('div');
+      pixelSquare.className = 'pixel';
+      pixelSquare.style.backgroundColor = 'white';
+      pixelSquare.style.display = 'table-cell';
+      pixelSquare.style.width = '40px';
+      pixelSquare.style.height = '40px';
+      pixelSquare.style.border = '1px black solid';
+     pixelLine.appendChild(pixelSquare);
+    }
     pixelBoard.appendChild(pixelLine);
   }
 }
