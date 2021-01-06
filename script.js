@@ -22,9 +22,19 @@ function selectedSquareColor() {
   }
 }
 
+function squarePaint() {
+  const selected = document.getElementsByClassName('selected')
+  const square = document.getElementsByTagName('td');
+  for (let i = 0; i < square.length; i+=1) {
+    square[i].addEventListener('click', function (event) {
+      square[i].style.backgroundColor = selected[0].attributes[0].value.split(' ', 2)[1]
+    });
+  }
+}
+
 function clearSquare() {
   const square = document.getElementsByTagName('td');
-  for (let i = 0; i < square.length; i++) {
+  for (let i = 0; i < square.length; i+=1) {
     square[i].style.background = 'white';
   }
 }
@@ -32,5 +42,6 @@ function clearSquare() {
 window.onload = function () {
   selectedSquareColorInitial();
   selectedSquareColor();
+  squarePaint()
   clearSquare()
 };
