@@ -1,4 +1,4 @@
-#title {
+title {
   color: black;
 }
 
@@ -33,4 +33,12 @@ h1 {
   height: 50px;
   margin: 2px;
   width: 50px;
+}
+
+.pixel {
+  background-color: white;
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
