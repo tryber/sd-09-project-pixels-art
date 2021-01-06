@@ -22,14 +22,16 @@ function selectedSquareColor() {
   }
 }
 
-function paintSquareColor() {
-  const table = document.querySelectorAll('td');
-  for (let index = 0; index < table.length; index += 1) {
-    table[index].addEventListener('click', function () {
-      table[index].style.backgroundColor = 'black';
-    });
-  }
+const pixelBoard = document.getElementById('pixel-board');
+
+function paintSquareColor(event) {
+  const currentColor = document.querySelector('.selected').classList[1];
+  const oldColor = event.target.classList[1];
+  event.target.classList.remove(oldColor);
+  event.target.classList.add(currentColor);
 }
+
+pixelBoard.addEventListener('click', paintSquareColor);
 
 function clearSquare() {
   const square = document.getElementsByTagName('td');
@@ -41,5 +43,4 @@ function clearSquare() {
 window.onload = function () {
   selectedSquareColorInitial();
   selectedSquareColor();
-  paintSquareColor();
 };
