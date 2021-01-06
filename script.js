@@ -40,8 +40,8 @@ function drawColorPallets() {
     color.style.backgroundColor = stdColors[index];
     color.style.display = 'inline-block';
     color.style.margin = '1px';
-    color.style.width = '36px';
-    color.style.height = '36px';
+    color.style.width = '40px';
+    color.style.height = '40px';
     colorPalette.appendChild(color);
   }
 }
@@ -58,8 +58,8 @@ function drawPixelBoard(boardSize) {
     pixelSquare.className = 'pixel';
     pixelSquare.style.backgroundColor = 'white';
     pixelSquare.style.display = 'table-cell';
-    pixelSquare.style.width = '36px';
-    pixelSquare.style.height = '36px';
+    pixelSquare.style.width = '40px';
+    pixelSquare.style.height = '40px';
     pixelSquare.style.border = '1px black solid';
     pixelLine.appendChild(pixelSquare);
   }
@@ -108,7 +108,7 @@ function drawMenu() {
 
   const boardSizeBtn = document.createElement('button');
   boardSizeBtn.id = 'generate-board';
-  boardSizeBtn.innerText = 'VQV';
+  boardSizeBtn.innerText = 'goTrybe';
   boardSizeBtn.addEventListener('click', generatePixelBoard);
   document.querySelector('.button-list').appendChild(boardSizeBtn);
 }
