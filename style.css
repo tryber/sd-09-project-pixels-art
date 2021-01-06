@@ -1,0 +1,37 @@
+.color {
+    border: black solid 1px;
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+}
+
+/* .second {
+    background-color:;
+}
+
+.third {
+    background-color:;
+}
+
+.fourth {
+    background-color:;
+} */
+
+.black {
+    background-color: black;
+}
+
+.pixel {
+    background-color: white;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row-pixel {
+    margin: 0px;
+    display: flex;
+}
