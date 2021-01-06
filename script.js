@@ -15,3 +15,6 @@ for (let indexColumn = 0; indexColumn < 5; indexColumn += 1) {
   const pixelBreak = document.createElement('br');
   pixelBoard.appendChild(pixelBreak);
 }
+
+const colorSelector = boxColor[0].style.backgroundColor;
+boxColor[0].className = 'selected';
