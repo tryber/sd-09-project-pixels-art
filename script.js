@@ -15,4 +15,5 @@ function clearPixel () {
       }
   })
 }
-buttonClear();
+clearPixel();
+

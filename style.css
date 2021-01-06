@@ -54,7 +54,7 @@ section {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 button, input {
