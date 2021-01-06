@@ -38,8 +38,6 @@ function clearSquare() {
   }
 }
 
-
-
 window.onload = function () {
   selectedSquareColorInitial();
   selectedSquareColor();
