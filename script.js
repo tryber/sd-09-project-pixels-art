@@ -19,14 +19,14 @@ window.onload = onLoadFunction;
 
 let selectedColor = '';
 
-function onLoadFunction () {
+function onLoadFunction() {
   selectedColor = boxColor[0].style.backgroundColor;
   boxColor[0].className = 'color selected';
 }
 
 const colorPalette = document.querySelector('#color-palette');
 
-colorPalette.addEventListener("click", colorSelector);
+colorPalette.addEventListener('click', colorSelector);
 
 function colorSelector(originEvent) {
   for (let index = 0; index < boxColor.length; index += 1) {
@@ -34,4 +34,10 @@ function colorSelector(originEvent) {
   }
   selectedColor = originEvent.target.style.backgroundColor;
   originEvent.target.className = 'color selected';
+}
+
+pixelBoard.addEventListener('click', pixelColor);
+
+function pixelColor(originEvent) {
+  originEvent.target.style.backgroundColor = selectedColor;
 }
