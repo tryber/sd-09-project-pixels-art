@@ -1,0 +1,38 @@
+tr {
+  border-collapse: collapse;
+}
+
+table {
+  border-spacing: 0;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
+.black {
+  background-color: black;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
