@@ -22,8 +22,10 @@ function createButton (container) {
   const size = document.getElementById('board-size');
   if (size.value <= 5) {
   size.value = 5;
-  } else (size.value >= 50) {
+  } else if (size.value >= 50) {
   size.value = 50;
+  } else {
+    return;
   }
 }
 
