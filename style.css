@@ -52,3 +52,19 @@ section {
   justify-content: center;
   margin-bottom: 10px;
 }
+
+button, input {
+  margin-right: 3px;
+}
+
+button {
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
