@@ -44,7 +44,7 @@ h1 {
 }
 
 .pixel-board {
-  display: flex
+  display: flex;
 }
 
 section {
@@ -57,6 +57,6 @@ section {
   margin-bottom: 10px;
 }
 
-button, input {
+button , input {
   margin-right: 3px;
 }
