@@ -53,7 +53,7 @@ function drawPixelBoard(boardSize) {
   for (let index = 0; index < boardSize; index += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.style.display = 'table-row';
-  for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
+    for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
     const pixelSquare = document.createElement('div');
     pixelSquare.className = 'pixel';
     pixelSquare.style.backgroundColor = 'white';
@@ -62,7 +62,7 @@ function drawPixelBoard(boardSize) {
     pixelSquare.style.height = '36px';
     pixelSquare.style.border = '1px black solid';
     pixelLine.appendChild(pixelSquare);
-    }
+  }
     pixelBoard.appendChild(pixelLine);
   }
 }
