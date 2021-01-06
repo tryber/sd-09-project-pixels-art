@@ -68,9 +68,15 @@ body {
   height: 200px;
   margin: auto;
   display: table;
+  flex-wrap: wrap;
+
 }
 
-sec1, sec2, sec3, sec4, sec5 {
+sec1,
+sec2,
+sec3,
+sec4,
+sec5 {
   width: 210px;
   height: 42px;
   margin: auto;
