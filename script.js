@@ -2,19 +2,12 @@ function clearPixel () {
   const buttonContainer = document.querySelector('.button-container');
   const button = document.createElement('button');
   button.id = 'clear-board';
-  button.innerText = 'limpar';
-  container.appendChild(button);
+  buttonContainer.appendChild(button);
 
-  const body = document.querySelector('body');
-  const board = document.querySelector('.pixel-board');
-  body.insertBefore(eventClear, board);
-
-  const buttonClear = document.querySelector('#clear-board');
-  buttonClear.addEventListener('click', function(){
-    const board = document.querySelector('.pixel');
-
-      for (index = 0; index < board.length; index += 1) {
-        board[index].style.backgroundColor = 'rgb(255, 255, 255)';
-      }
-  })
+  button.addEventListener('click', function () {
+    const allPixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < allPixel.length; index += 1){
+      allPixel[index].style.backgroundColor = '';
+    }
+  });
 }
