@@ -4,9 +4,10 @@ window.onload = function () {
     const randomPalette = document.querySelectorAll('.random');
     for (let index = 0; index<randomPalette.length; index++) {
         let randomColor = 'rgb('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
-        randomPalette[index].backgroundColor = "red";
+        randomPalette[index].style.backgroundColor = randomColor;
         console.log(randomColor)
     }
+    randomPalette[0].style.backgroundColor = "black";
 
 }
 function grid(gridN = 5){
@@ -42,7 +43,7 @@ function colorPaletteSelector(chosenColor) {
 }
 function pixelColoring(chosenPixel) {
     const pixelSelected = chosenPixel.target;
-    const chosenPaletteColor = document.querySelector('.selected').classList[1];
+    const chosenPaletteColor = document.querySelector('.selected').style.backgroundColor;
     pixelSelected.style.backgroundColor = chosenPaletteColor;
 }
 
