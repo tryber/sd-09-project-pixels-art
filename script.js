@@ -21,10 +21,10 @@ function black() {
 black();
 
 function colorSelected() {
-  let classColor = document.querySelectorAll('color');
+  const classColor = document.querySelectorAll('color');
   for (let i = 0; i < classColor.length; i += 1) {
     classColor[i].addEventListener('click', function () {
-      let classSelected = document.querySelectorAll('.selected')[0];
+      const classSelected = document.querySelectorAll('.selected')[0];
       classSelected.classList.remove('selected');
       classColor[i].classList.add('selected');
     });
@@ -33,10 +33,10 @@ function colorSelected() {
 colorSelected();
 
 function colorPixel() {
-  let classPixel = document.querySelectorAll('.pixel');
+  const classPixel = document.querySelectorAll('.pixel');
   for (let indexPixel = 0; indexPixel < classPixel.length; indexPixel += 1) {
     classPixel[indexPixel].addEventListener('click', function () {
-      let selectedBackground = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+      const selectedBackground = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
       classPixel[indexPixel].style.backgroundColor = selectedBackground;
     });
   }
@@ -44,7 +44,7 @@ function colorPixel() {
 colorPixel();
 
 function buttonClear() {
-  let createButtonClean = document.createElement('button');
+  const createButtonClean = document.createElement('button');
   createButtonClean.id = 'clear-board';
   createButtonClean.innerText = 'Limpar';
   const body = document.querySelector('body');
