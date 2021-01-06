@@ -17,4 +17,4 @@ for (let indexColumn = 0; indexColumn < 5; indexColumn += 1) {
 }
 
 const colorSelector = boxColor[0].style.backgroundColor;
-boxColor[0].className = 'selected';
+boxColor[0].className = 'color selected';
