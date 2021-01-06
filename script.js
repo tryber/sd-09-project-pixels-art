@@ -60,17 +60,20 @@ const inputSize = document.getElementById('board-size');
 const generateBoardButton = document.getElementById('generate-board');
 generateBoardButton.addEventListener('click', generateBoard)
 function generateBoard() {
-    if ( inputSize.value>0 && inputSize.value !== null){
-        if (inputSize.value >= 5 && inputSize.value <= 50){
-            const pixelItems = document.querySelectorAll('.pixel')
-            for (let index = 0; index<pixelItems.length; index++){
+    if ( inputSize.value>0 ){
+        if (inputSize.value < 5) {
+            inputSize.value = 5;
+        }
+        else if (inputSize.value > 50) {
+            inputSize.value = 50;
+        }
+        const pixelItems = document.querySelectorAll('.pixel')
+        for (let index = 0; index<pixelItems.length; index++){
                 pixelItems[index].remove()
             }
-            // const newPixelBoard = document.createElement('div');
-            grid(inputSize.value);
-        }
+        grid(inputSize.value);
         
-    } else {
+    } else if (inputSize.value !== null){
         alert('Board inválido!');
     }
 }
