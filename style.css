@@ -43,6 +43,10 @@ h1 {
   line-height: 0;
 }
 
+#pixel-board div{
+  display: flex;
+}
+
 .pixel-board {
   display: flex
 }
@@ -54,7 +58,7 @@ section {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 button, input {
