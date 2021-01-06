@@ -1,17 +1,13 @@
-#title {
-    background-color: antiquewhite;
-}
-
-#color-palette {
-    background-color: beige;
-}
-
 .color {
     border: 1px solid black;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
 }
 
 .black {
     background-color: black;
+    color: honeydew;
 }
 
 .yellow {
@@ -24,4 +20,19 @@
 
 .green {
     background-color: green;
+}
+
+table {
+    background-color: rgb(214, 202, 223);
+    border: 1px solid black;
+    display: inline-block;
+    border-spacing: 0;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
 }
