@@ -47,22 +47,30 @@ function drawColorPallets() {
 }
 
 function drawPixelBoard(boardSize) {
-    const pixelBoard = document.querySelector('#pixel-board');
-    pixelBoard.style.display = 'table';
-    pixelBoard.addEventListener('click', paintSquare);
-    for (let index = 0; index < boardSize; index += 1) {
-      const pixelLine = document.createElement('div');
-      pixelLine.style.display = 'table-row';
-    for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
-      const pixelSquare = document.createElement('div');
-      pixelSquare.className = 'pixel';
-      pixelSquare.style.backgroundColor = 'white';
-      pixelSquare.style.display = 'table-cell';
-      pixelSquare.style.width = '36px';
-      pixelSquare.style.height = '36px';
-      pixelSquare.style.border = '1px black solid';
-      pixelLine.appendChild(pixelSquare);
+  const pixelBoard = document.querySelector('#pixel-board');
+  pixelBoard.style.display = 'table';
+  pixelBoard.addEventListener('click', paintSquare);
+  for (let index = 0; index < boardSize; index += 1) {
+    const pixelLine = document.createElement('div');
+    pixelLine.style.display = 'table-row';
+  for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
+    const pixelSquare = document.createElement('div');
+    pixelSquare.className = 'pixel';
+    pixelSquare.style.backgroundColor = 'white';
+    pixelSquare.style.display = 'table-cell';
+    pixelSquare.style.width = '36px';
+    pixelSquare.style.height = '36px';
+    pixelSquare.style.border = '1px black solid';
+    pixelLine.appendChild(pixelSquare);
     }
     pixelBoard.appendChild(pixelLine);
+  }
+}
+
+function deleteBoard() {
+  const pixelBoard = document.querySelector('#pixel-board');
+  while (pixelBoard.firstElementChild) {
+    const child = pixelBoard.firstElementChild;
+    pixelBoard.removeChild(child);
   }
 }
