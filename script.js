@@ -13,6 +13,34 @@ function clearPixel () {
   });
 }
 
+function firstSelected(){
+  let firstSelected = document.querySelector('#black');
+  firstSelected.classList.add('selected');
+}
+firstSelected();
+
+
+function colorSelected(){
+  let classColor = document.querySelectorAll('.color');
+  for(let i=0; i<classColor.length; i+=1){
+      classColor[i].addEventListener('click', function(){
+          let classSelected = document.querySelectorAll('.selected')[0];
+          classSelected.classList.remove('selected');
+          classColor[i].classList.add('selected');
+      });
+  }
+}
+colorSelected();
+
+function buttonClear(){
+  let createButtonClean = document.createElement('button');
+  createButtonClean.className = 'clear-board';
+  createButtonClean.innerText = 'Limpar';
+  const body = document.querySelector('body');
+  const pixelBoard = document.querySelector('#pixel-board');
+  body.insertBefore(createButtonClean, pixelBoard);
+}
+buttonClear(); 
 
 window.onload = function () {
   clearPixel();
