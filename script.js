@@ -29,9 +29,16 @@ function criarTR(tamanho) {
     paletta.appendChild(linhaPaleta);
     for (let z = 0; z < tamanho; z += 1) {
       const linhaPaleta1 = document.createElement('button');
-      linhaPaleta1.className = 'pixel';
+      if (tamanho > 10) {
+        linhaPaleta1.className = 'pixel1';
+        paletta.id = "pixel-board1"
+      } else {
+        linhaPaleta1.className = 'pixel';
+        paletta.id = "pixel-board"
+      }
       linhaPaleta1.style.backgroundColor = 'white';
       paletta.appendChild(linhaPaleta1);
+
     }
   }
 }
@@ -41,7 +48,7 @@ criarTR(5);
 function limpar() {
   const pixels = document.getElementsByClassName('pixel');
   const button = document.getElementById('clear-board');
-  button.addEventListener('click', function () {
+  button.addEventListener('click', function() {
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
@@ -61,20 +68,23 @@ function refazer() {
     alert('Board inválido!');
   } else if (tamanhoLinha.value < 5) {
     tamanho = 5;
-    criarTR(tamanho);
+
   } else if (tamanhoLinha.value > 50) {
     tamanho = 50;
-    criarTR(tamanho);
+
   } else {
     tamanho = tamanhoLinha.value;
   }
+  document.querySelector('#pixel-board').innerHTML = '';
+
   criarTR(tamanho);
+
 }
 
 function selectedElement() {
   const colors = document.getElementsByClassName('color');
   for (let index = 0; index < colors.length; index += 1) {
-    colors[index].addEventListener('click', function () {
+    colors[index].addEventListener('click', function() {
       for (let index2 = 0; index2 < colors.length; index2 += 1) {
         colors[index2].classList.remove('selected');
       }
