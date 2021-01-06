@@ -7,7 +7,7 @@ let corClique = document.getElementById("color-palette");
 corClique.addEventListener("click", corSelecionada);
 
 function corSelecionada(eventOrigem) {
-    let IdClique = eventOrigem.taret.id;
+    let IdClique = eventOrigem.target.id;
     document.getElementById("black").className ="color"; 
     document.getElementById("red").className ="color";
     document.getElementById("blue").className ="color";
@@ -18,3 +18,4 @@ function corSelecionada(eventOrigem) {
         document.getElementById(IdClique).className ="color selected";
     }
 }
+
