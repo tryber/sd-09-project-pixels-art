@@ -10,7 +10,7 @@ function selectedSquareColor() {
   const square = document.getElementsByClassName("color");
 
   for (let index = 0; index < square.length; index += 1) {
-    square[index].addEventListener("click", function (event) {
+    return square[index].addEventListener("click", function (event) {
       const selected = document.getElementsByClassName("selected");
       let color = square[index].attributes[0].value.split(" ", 2)[1];
 
@@ -32,17 +32,14 @@ function paintSquareColor() {
 }
 
 function clearSquare() {
-  const square = document.getElementsByTagName('td');
+  square = document.getElementsByTagName('td');
   for (i = 0; i < square.length; i++) {
     square[i].style.background = "white";
   }
 }
 
-
-
 window.onload = function () {
   selectedSquareColorInitial();
   selectedSquareColor();
   paintSquareColor();
-  clickButton();
 };
