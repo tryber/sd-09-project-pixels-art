@@ -61,7 +61,7 @@ function drawPixelBoard(boardSize) {
       pixelSquare.style.width = '40px';
       pixelSquare.style.height = '40px';
       pixelSquare.style.border = '1px black solid';
-     pixelLine.appendChild(pixelSquare);
+      pixelLine.appendChild(pixelSquare);
     }
     pixelBoard.appendChild(pixelLine);
   }
