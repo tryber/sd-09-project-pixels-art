@@ -43,6 +43,10 @@ h1 {
   line-height: 0;
 }
 
+#pixel-board div{
+  display: flex;
+}
+
 section {
   display: block;
 }
