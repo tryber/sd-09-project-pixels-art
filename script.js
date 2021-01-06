@@ -1,9 +1,9 @@
-
+const numberOfColumns = 5;
+const numberOfLine = 5;
+let pixelBoard = document.querySelector('#pixel-board');
+let pallet  = document.querySelectorAll('.color');
 function board() {
-    const numberOfColumns = 5;
-    const numberOfLine = 5;
     for (let index = 0; index < numberOfLine; index+=1){
-        let pixelBoard = document.querySelector('#pixel-board');
         let createLine = document.createElement('div');
         for(i = 0; i < numberOfColumns; i += 1){
             let createColumn = document.createElement('div');
@@ -19,9 +19,9 @@ function initialColor(){
     initialColor.classList.add('selected');
 }
 initialColor();
+
 function choseCollor (){
-    let pallet  = document.querySelectorAll('.color');
-    for(let i=0; i<pallet .length; i +=1 ){
+        for(let i=0; i<pallet .length; i +=1 ){
         pallet[i].addEventListener('click', function(){
             let colorOn  = document.querySelectorAll('.selected')[0];
             colorOn .classList.remove('selected');
