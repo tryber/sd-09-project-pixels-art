@@ -47,6 +47,10 @@ h1 {
   display: flex;
 }
 
+.pixel-board {
+  display: flex
+}
+
 section {
   display: block;
 }
