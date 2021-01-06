@@ -74,3 +74,20 @@ function deleteBoard() {
     pixelBoard.removeChild(child);
   }
 }
+
+function generatePixelBoard() {
+  let inputValue = document.querySelector('#board-size').value;
+  if (!inputValue) {
+    alert('Board inválido!');
+  }
+  if (inputValue < 5) {
+    inputValue = 5;
+  }
+  if (inputValue > 50) {
+    inputValue = 50;
+  }
+  if (inputValue) {
+    deleteBoard();
+    drawPixelBoard(inputValue);
+  }
+}
