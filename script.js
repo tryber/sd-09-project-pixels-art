@@ -11,3 +11,8 @@ function clearPixel () {
     }
   });
 }
+
+window.onload = function () {
+  clearPixel();
+}
+

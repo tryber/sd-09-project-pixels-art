@@ -61,19 +61,18 @@ button, input {
   margin-right: 3px;
 }
 
-input[type="number" i] {
+input [type = "number" i] {
   padding: 1px 2px;
 }
 
 input {
-  -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark(black, white);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
   text-indent: 0px;
-  text-shadow: none;
+  text-shadow: 0;
   display: inline-block;
   text-align: start;
   appearance: textfield;
@@ -98,7 +97,7 @@ button {
   word-spacing: normal;
   text-transform: none;
   text-indent: 0px;
-  text-shadow: none;
+  text-shadow: 0;
   display: inline-block;
   text-align: center;
   align-items: flex-start;
