@@ -1,6 +1,13 @@
 window.onload = function () {
     const colorSelected = document.querySelector('.black');
     colorSelected.classList.add('selected')
+    const randomPalette = document.querySelectorAll('.random');
+    for (let index = 0; index<randomPalette.length; index++) {
+        let randomColor = 'rgb('+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+','+Math.round(Math.random()*255)+')';
+        randomPalette[index].backgroundColor = "red";
+        console.log(randomColor)
+    }
+
 }
 function grid(gridN = 5){
     const gridBase = document.querySelector("#pixel-board");
@@ -19,13 +26,13 @@ function grid(gridN = 5){
 }
 grid()
 const paletteBlack = document.getElementsByClassName('black')[0]
-const paletteRed = document.getElementsByClassName('red')[0]
-const paletteGreen = document.getElementsByClassName('green')[0]
-const paletteBlue = document.getElementsByClassName('blue')[0]
+const paletteSecond = document.getElementsByClassName('second')[0]
+const paletteThird = document.getElementsByClassName('third')[0]
+const paletteFourth = document.getElementsByClassName('fourth')[0]
 paletteBlack.addEventListener('click', colorPaletteSelector)
-paletteRed.addEventListener('click', colorPaletteSelector)
-paletteGreen.addEventListener('click', colorPaletteSelector)
-paletteBlue.addEventListener('click', colorPaletteSelector)
+paletteSecond.addEventListener('click', colorPaletteSelector)
+paletteThird.addEventListener('click', colorPaletteSelector)
+paletteFourth.addEventListener('click', colorPaletteSelector)
 
 function colorPaletteSelector(chosenColor) {
     const chosenPaletteColor = chosenColor.target;
@@ -76,4 +83,5 @@ function generateBoard() {
     } else if (inputSize.value !== null){
         alert('Board inválido!');
     }
+    inputSize.value = null;
 }
