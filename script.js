@@ -1,6 +1,9 @@
 function clearPixel () {
-  let eventClear = document.createElement('button');
-  eventClear.id = 'clear-board';
+  const buttonContainer = document.querySelector('.button-container');
+  const button = document.createElement('button');
+  button.id = 'clear-board';
+  button.innerText = 'limpar';
+  container.appendChild(button);
 
   const body = document.querySelector('body');
   const board = document.querySelector('.pixel-board');
@@ -15,4 +18,3 @@ function clearPixel () {
       }
   })
 }
-clearPixel ();
