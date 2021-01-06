@@ -17,9 +17,31 @@ function clearPixelBoard() {
 }
 
 function randomRGB() {
-    const Red = Math.floor(Math.random() * 255);
-    const Green = Math.floor(Math.random() * 255);
-    const Blue = Math.floor(Math.random() * 255);
-    return (`rgb(${Red}, ${Green}, ${Blue})`);
+  const Red = Math.floor(Math.random() * 255);
+  const Green = Math.floor(Math.random() * 255);
+  const Blue = Math.floor(Math.random() * 255);
+  return `rgb(${Red}, ${Green}, ${Blue})`;
+}
+
+function drawColorPallets() {
+  const colorPalette = document.querySelector("#color-palette");
+  const stdColors = ["black"];
+  stdColors.push(randomRGB());
+  stdColors.push(randomRGB());
+  stdColors.push(randomRGB());
+  colorPalette.addEventListener("click", selectColor);
+  for (let index = 0; index < stdColors.length; index += 1) {
+    const color = document.createElement("div");
+    color.className = "color";
+    color.style.border = "1px black solid";
+    if (index === 0) {
+      color.className = "color selected";
+    }
+    color.style.backgroundColor = stdColors[index];
+    color.style.display = "inline-block";
+    color.style.margin = "1px";
+    color.style.width = "40px";
+    color.style.height = "40px";
+    colorPalette.appendChild(color);
   }
-  
+}
