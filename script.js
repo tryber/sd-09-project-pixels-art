@@ -1,10 +1,10 @@
-// function selectedSquareColorInitial() {
-//   const squareColorDefault = document.getElementsByClassName('color')[0];
-//   squareColorDefault.classList.add('selected');
-//   const color = squareColorDefault.attributes[0].value.split(' ', 2)[1];
-//   const colorEnd = `'${color}'`;
-//   return colorEnd;
-// }
+function selectedSquareColorInitial() {
+  const squareColorDefault = document.getElementsByClassName('color')[0];
+  squareColorDefault.classList.add('selected');
+  const color = squareColorDefault.attributes[0].value.split(' ', 2)[1];
+  const colorEnd = `'${color}'`;
+  return colorEnd;
+}
 
 function selectedSquareColor() {
   const square = document.getElementsByClassName('color');
@@ -34,7 +34,7 @@ function paintSquareColor() {
 function clearSquare() {
   const square = document.getElementsByTagName('td');
   for (let index = 0; index < square.length; index+=1) {
-    square[i].style.background = 'white';
+    square[index].style.background = 'white';
   }
 }
 
