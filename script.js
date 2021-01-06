@@ -112,3 +112,9 @@ function drawMenu() {
   boardSizeBtn.addEventListener('click', generatePixelBoard);
   document.querySelector('.button-list').appendChild(boardSizeBtn);
 }
+
+window.onload = function () {
+  drawColorPallets();
+  drawPixelBoard(5);
+  drawMenu();
+};
