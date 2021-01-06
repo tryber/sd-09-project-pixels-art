@@ -2,7 +2,7 @@ function clearPixel () {
   const buttonContainer = document.querySelector('.button-container');
   const button = document.createElement('button');
   button.id = 'clear-board';
-  button.innerText = 'Limpar';
+  button.innerText = 'VQV';
   buttonContainer.appendChild(button);
 
   button.addEventListener('click', function () {
@@ -12,6 +12,7 @@ function clearPixel () {
     }
   });
 }
+
 
 window.onload = function () {
   clearPixel();
