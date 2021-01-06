@@ -29,7 +29,7 @@ function drawColorPallets() {
   stdColors.push(randomRGB());
   stdColors.push(randomRGB());
   stdColors.push(randomRGB());
-  colorPalette.addEventListener("click", selectColor);
+  colorPalette.addEventListener('click', selectColor);
   for (let index = 0; index < stdColors.length; index += 1) {
     const color = document.createElement('div');
     color.className = 'color';
@@ -43,5 +43,26 @@ function drawColorPallets() {
     color.style.width = '36px';
     color.style.height = '36px';
     colorPalette.appendChild(color);
+  }
+}
+
+function drawPixelBoard(boardSize) {
+    const pixelBoard = document.querySelector('#pixel-board');
+    pixelBoard.style.display = 'table';
+    pixelBoard.addEventListener('click', paintSquare);
+    for (let index = 0; index < boardSize; index += 1) {
+      const pixelLine = document.createElement('div');
+      pixelLine.style.display = 'table-row';
+    for (let indexSquares = 0; indexSquares < boardSize; indexSquares += 1) {
+      const pixelSquare = document.createElement('div');
+      pixelSquare.className = 'pixel';
+      pixelSquare.style.backgroundColor = 'white';
+      pixelSquare.style.display = 'table-cell';
+      pixelSquare.style.width = '36px';
+      pixelSquare.style.height = '36px';
+      pixelSquare.style.border = '1px black solid';
+      pixelLine.appendChild(pixelSquare);
+    }
+    pixelBoard.appendChild(pixelLine);
   }
 }
