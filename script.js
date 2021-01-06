@@ -15,3 +15,11 @@ function clearPixelBoard() {
     pixelSquare[index].style.backgroundColor = "white";
   }
 }
+
+function randomRGB() {
+    const Red = Math.floor(Math.random() * 255);
+    const Green = Math.floor(Math.random() * 255);
+    const Blue = Math.floor(Math.random() * 255);
+    return (`rgb(${Red}, ${Green}, ${Blue})`);
+  }
+  
