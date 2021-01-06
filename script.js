@@ -13,6 +13,14 @@ function clearPixel () {
   });
 }
 
+  const size = document.getElementById('board-size');
+  if (size.value <= 5) {
+    size.value = 5;
+  } else if (size.value >= 50) {
+    size.value = 50;
+  }
+
+
 window.onload = function () {
   clearPixel();
 }
