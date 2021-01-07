@@ -35,18 +35,24 @@ function clearBoard() {
   }
 }
 
+function newBoardCheck(check) {
+  if (check > 50) {
+    document.getElementById('pixel-board').innerHTML = '';
+    createBoard(50);
+  } else if (check >= 5 && check <= 50) {
+    document.getElementById('pixel-board').innerHTML = '';
+    createBoard(check);
+  } else if (check < 5) {
+    document.getElementById('pixel-board').innerHTML = '';
+    createBoard(5);
+  }
+}
+
 function newBoard() {
-  const newBoardSize = parseInt(document.getElementById('board-size').value);
+  const newBoardSize = parseInt(document.getElementById('board-size').value, 10);
   if (newBoardSize) {
-    if (newBoardSize > 50) {
-      document.getElementById('pixel-board').innerHTML = ''
-      createBoard(50);
-    } else if (newBoardSize >= 5 && newBoardSize <= 50) {
-      document.getElementById('pixel-board').innerHTML = ''
-      createBoard(newBoardSize);
-    } else if (newBoardSize > 0 && newBoardSize < 5) {
-      document.getElementById('pixel-board').innerHTML = ''
-      createBoard(5);
+    if (newBoardSize > 0) {
+      newBoardCheck(newBoardSize);
     }
   } else {
     alert('Board inválido!');
