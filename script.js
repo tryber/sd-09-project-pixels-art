@@ -51,9 +51,7 @@ function newBoardCheck(check) {
 function newBoard() {
   const newBoardSize = parseInt(document.getElementById('board-size').value, 10);
   if (newBoardSize) {
-    if (newBoardSize > 0) {
-      newBoardCheck(newBoardSize);
-    }
+    newBoardCheck(newBoardSize);
   } else {
     alert('Board inválido!');
   }
