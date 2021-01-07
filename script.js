@@ -7,7 +7,7 @@ const paletaCores = [color1, color2, color3, color4];
 
 function selectingColor(event) {
   for (let index = 0; index < paletaCores.length; index += 1) {
-    if (paletaCores[index].classList.contains('selected')){
+    if (paletaCores[index].classList.contains('selected')) {
       paletaCores[index].classList.remove('selected');
     }
   }

@@ -11,7 +11,7 @@
 }
 
 .color-white {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 252);
 }
 
 .container {
@@ -36,6 +36,7 @@ h1 {
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
