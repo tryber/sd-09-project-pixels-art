@@ -1,6 +1,6 @@
 body{
   background-color: #231134;
-  font-family:monospace
+  font-family: monospace;
 }
 
 button {
@@ -37,7 +37,7 @@ button:hover {
 h1 {
   color: #EA3662;
   text-align: center;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 h2{
@@ -52,5 +52,5 @@ h2{
 }
 
 .pixel {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
