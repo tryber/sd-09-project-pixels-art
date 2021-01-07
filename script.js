@@ -11,22 +11,21 @@ function colorSumary() {
   const red = document.getElementById('#red');
   const blue = document.getElementById('#blue');
   const green = document.getElementById('#green');
-  
-	black.style.background = 'black';
-	red.style.background = 'red';
-	blue.style.background = 'blue';
-	green.style.background = 'green';
+	black.style.backgroundColor = 'black';
+	red.style.backgroundColor = 'red';
+	blue.style.backgroundColor = 'blue';
+	green.style.backgroundColor = 'green';
 }
 
 colorSumary();
 
 color.addEventListener('click', function (event) {
-	const color = document.querySelector('#color-palette');
-	let select = document.getElementsByClassName('.selected');
-	selected.classList.remove('selected');
-	event.target.classList.add('selected');
+  const color = document.querySelector('#color-palette');
+  let select = document.getElementsByClassName('.selected');
+  selected.classList.remove('selected');
+  event.target.classList.add('selected');
         
-})
+});
 
 function selectSquare() {
 	let pixels = document.querySelectorAll('.tr');
@@ -41,6 +40,5 @@ function selectSquare() {
 
     });
   };
-
 }
 selectSquare();
