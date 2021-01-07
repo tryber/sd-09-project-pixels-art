@@ -19,18 +19,10 @@ color2.addEventListener('click', selectingColor);
 color3.addEventListener('click', selectingColor);
 color4.addEventListener('click', selectingColor);
 
-// let selectedColor = selectingColor();
-// color1.classList.add("selected");
-// console.log(color1);
-
-// function paintPixel() {}
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
-  // let tmPixels = pixels.length;
-  // console.log(tmPixels);
   for (let index = 0; index < pixels.length; index +=1) {
-    pixels[index].classList.add('color-white');
-    // console.log(pixels[index]);
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
