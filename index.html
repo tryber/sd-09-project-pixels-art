@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paleta de Cores</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="title">
-        <h1>Paleta de Cores</h1>
+    <header >
+        <h1 id="title">Paleta de Cores</h1>
         <nav id="color-palette">
             <div>
                 <span class="color black" class="selected"></span>
@@ -20,7 +21,44 @@
 
     <button id="clear-board">Limpar</button>
 
-    <table ></table>
+    <!-- na melhoria fazer a criação dos elementos da tabela de forma dinamica (assim usar appendChil e CreatElement)-->
+    <table id="pixel-board"> 
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+    </table>
 
     <script src="script.js"></script>
 

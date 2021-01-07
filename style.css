@@ -1,0 +1,38 @@
+  .color {
+    border: 1px solid black;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+  }
+  
+  .black {
+    background-color: black;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+
+  #pixel-board {
+    border-spacing: 0;
+  }
+
+  .pixel {
+      background-color: white;
+      border-collapse: collapse;
+      border: 1px solid black;
+      height: 40px;
+      width: 40px;
+  }
+
+
+
+
