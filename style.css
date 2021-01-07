@@ -1,0 +1,36 @@
+#header{
+  display:flex;
+  margin-left: 10px;
+}
+
+#title{
+  text-align:center;  
+}
+
+#color-palette{
+  display:flex;
+}
+
+.color {
+  width:40px;
+  height:40px;
+  border:2px solid;
+  border-color:black;
+  margin: 10px;
+}
+
+.black{
+  background-color:black;
+}
+
+.red{
+  background-color:red;
+}
+
+.blue{
+  background-color:blue;
+}
+
+.green{
+  background-color:green;
+}
