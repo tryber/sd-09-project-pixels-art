@@ -4,13 +4,13 @@ body {
   text-align: center;
 }
 
-#color-palette {
+.color-palette {
   display: table;
   margin: auto;
   margin-bottom: 5%;
 }
 
-#pixel-board {
+.pixel-board {
   display: block;
   margin: auto;
   width: fit-content;
