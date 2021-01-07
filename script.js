@@ -20,7 +20,7 @@ window.onload = function() {
 let currentColor = 'black';
 
 function createPixelElement(pixelNumber) {
-    let pai = document.getElementsByClassName('pixel-board')[0];
+    let pai = document.getElementById('pixel-board');
     for (index = 0; index < pixelNumber; index += 1) {
         let createPixel = document.createElement('div');
         createPixel.className = 'pixel';
@@ -32,7 +32,7 @@ function createPixelElement(pixelNumber) {
 }
 
 function clearBoard() {
-    let caprtureButtom = document.querySelector('.buttom');
+    let caprtureButtom = document.querySelector('.button');
     caprtureButtom.addEventListener('click', function(event) {
         let paiPercorrer = document.getElementsByClassName('pixel')
         for (index = 0; index < paiPercorrer.length; index += 1) {
