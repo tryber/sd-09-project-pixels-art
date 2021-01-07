@@ -22,7 +22,7 @@ color4.addEventListener('click', selectingColor);
 function clearBoard() {
   const pixels = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixels.length; index +=1) {
-    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    pixels[index].style.backgroundColor = 'rgb(0, 0, 255)';
   }
 }
 
