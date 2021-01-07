@@ -3,7 +3,7 @@
   background-color: white;
   width: 40px;
   height: 40px;
-  float: left;
+  display: flex;
 }
 
 body {
@@ -36,49 +36,14 @@ body {
   float: left;
 }
 
-#red {
-  background-color: red;
+.color {
   border: 1px solid black;
-  box-sizing: content-box;
   width: 40px;
   height: 40px;
-  float: left;
-}
-
-#ice {
-  background-color: whitesmoke;
-  border: 1px solid black;
-  box-sizing: content-box;
-  width: 40px;
-  height: 40px;
-  float: left;
-}
-
-#green {
-  background-color: green;
-  border: 1px solid black;
-  box-sizing: content-box;
-  width: 40px;
-  height: 40px;
-  float: left;
-}
+  display: inline-block;
+  }
 
 #pixel-board {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  display: table;
+  display: flex;
   flex-wrap: wrap;
-
-}
-
-sec1,
-sec2,
-sec3,
-sec4,
-sec5 {
-  width: 210px;
-  height: 42px;
-  margin: auto;
-  display: table;
-}
+  }
