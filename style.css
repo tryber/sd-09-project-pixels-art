@@ -1,33 +1,44 @@
-.blue {
-    background-color: green;
-  }
-  .black {
+#color-palette {
+    border: 1px solid pink;
+    
+}
+
+.color {
+    border: 1px solid black;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+
+.black {
     background-color: black;
-  }
-  .center {
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .color {
+    color: honeydew;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+table {
+    background-color: rgb(214, 202, 223);
     border: 1px solid black;
     display: inline-block;
-    height: 50px;
-    width: 50px;
-  }
-  .cyan {
-    background-color: sienna;
-  }
-  .pixel {
-    border: 1px solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.pixel {
     background-color: white;
-    display: inline-block;
+    border: 1px solid black;
     height: 40px;
     width: 40px;
-  }
-  #pixel-board div {
-    display: flex;
-  }
-  .red {
-    background-color: yellow;
-  }
+    display: inline-block;
+}
