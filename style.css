@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+  }
+    
+  html {
+    background-attachment: fixed;
+    background-image: url("pics/bg-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    
+  .main-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+  }
+  
+  .palette-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 6px -6px black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .color-palette-options {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .color-palette-item {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: sans-serif;
+    list-style-type: none;
+    width: 100px;
+  }
+  
+  .color {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .black {
+    background-color: black;
+  }
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .color4 {
+    background-color: blue;
+  }
+  
+  .board-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 6px -6px black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .actions-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 10px;
+  }
+  
+  .actions-container-wraper {
+    margin: 0 0 10px;
+  }
+  
+  .pixel {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+  }
+  
+  #title {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  
+  #color-palette {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #clear-board {
+    font-size: 15px;
+    width: 100px;
+  }
+  
+  #board-size {
+    font-size: 20px;
+    width: 50px;
+  }
+  
+  #generate-board {
+    font-size: 15px;
+  }
+  
+  #pixel-board {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 0;
+    width: 210px;
+  }
