@@ -30,7 +30,7 @@ function createColorBlocks() {
       colorBlock.classList.add('selected');
     } else {
       // Utilizei a solução de Henrique Brito para gerar aleatoriamente cores
-        colorBlock.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)})`;
+      colorBlock.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)} , ${Math.floor(Math.random() * 256)})`;
     }
     palette.appendChild(colorBlock);
   }
@@ -46,6 +46,7 @@ function createPixelBoard(pixelside) {
   const pixelBoard = document.createElement('div');
   const main = document.querySelector('main');
   pixelBoard.id = 'pixel-board';
+  pixelBoard.className = 'pixel-board';
   pixelBoard.style.width = `${pixelside}px`;
   pixelBoard.style.height = `${pixelside}px`;
   main.appendChild(pixelBoard);
@@ -76,6 +77,7 @@ function createClearButton() {
   const pixelBoard = document.querySelector('#pixel-board');
   const clearButton = document.createElement('button');
   clearButton.id = 'clear-board';
+  clearButton.className = 'clear-board';
   clearButton.innerText = 'Limpar';
   const main = pixelBoard.parentElement;
   main.insertBefore(clearButton, pixelBoard);
@@ -124,13 +126,10 @@ function boardSize() {
     return alert('Board inválido!');
   } else if (userInputSize < 5 && userInputSize > 0) {
     userInputSize = 5;
-    return recreatePixelBoard(userInputSize);
   } else if (userInputSize > 50) {
     userInputSize = 50;
-    return recreatePixelBoard(userInputSize);
-  } else {
-    recreatePixelBoard(userInputSize);
   }
+  return recreatePixelBoard(userInputSize);
 }
 
 window.onload = function () {
