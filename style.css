@@ -3,8 +3,13 @@
   background-color: white;
   width: 40px;
   height: 40px;
-  display: flex;
-  box-sizing: border-box;
+  display: inline-block;
+}
+
+.row {
+  display: block;
+  width: max-content;
+  height: 40px;
 }
 
 body {
@@ -27,6 +32,7 @@ body {
   }
 
 #pixel-board {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  margin: auto;
+  width: fit-content;
   }
