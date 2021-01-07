@@ -10,9 +10,8 @@ function colorSumary() {
   const black = document.getElementById('#black');
   const red = document.getElementById('#red');
   const blue = document.getElementById('#blue');
-  const green = document.getElementById('#green');/bin/sh: 1: node: not found
+  const green = document.getElementById('#green');
   
-
 	black.style.background = 'black';
 	red.style.background = 'red';
 	blue.style.background = 'blue';
