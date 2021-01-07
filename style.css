@@ -4,6 +4,7 @@
   width: 40px;
   height: 40px;
   display: flex;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,24 +17,6 @@ body {
   margin: auto;
   display: table;
   margin-bottom: 5%;
-}
-
-#black {
-  background-color: black;
-  border: 1px solid black;
-  box-sizing: content-box;
-  width: 40px;
-  height: 40px;
-  float: left;
-}
-
-#yellow {
-  background-color: yellow;
-  border: 1px solid black;
-  box-sizing: content-box;
-  width: 40px;
-  height: 40px;
-  float: left;
 }
 
 .color {

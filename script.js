@@ -22,7 +22,10 @@ function createPallets(qty) {
     color.className = 'color'
     color.style.backgroundColor = qty[i]
     colorpalet.appendChild(color)
+    if (qty[i]=== 'black') {
+      color.className += ' selected'
+    }
   }
 }
 
-createPallets(['black','red','blue','green','yellow'])
+createPallets(['black','red','blue','green'])
