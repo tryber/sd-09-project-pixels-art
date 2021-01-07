@@ -41,11 +41,15 @@
 }
 
 .pixel{
-  background-color: white;
-  height: 40px;
-  width: 40px; 
-  border: solid 1px;
+  background-color:white;
+  height:40px;
+  width:40px; 
+  border:solid 1px;
 }
 #pixel-board{
-  margin-left: 10px;
+  margin-left:10px;
+}
+
+#clear-board{
+  margin-left:10px;
 }
