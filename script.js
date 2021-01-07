@@ -11,14 +11,20 @@ function createBoard(entry) {
   }
 }
 
-const boardSize = 5;
+function randomColor() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  const randomRGB = 'rgb('.concat(red, ' , ', green, ' , ', blue, ')');
+  return randomRGB;
+}
 
 function generatePalette() {
   const colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
-  colors[1].style.backgroundColor = 'red';
-  colors[2].style.backgroundColor = 'green';
-  colors[3].style.backgroundColor = 'blue';
+  colors[1].style.backgroundColor = randomColor();
+  colors[2].style.backgroundColor = randomColor();
+  colors[3].style.backgroundColor = randomColor();
 }
 
 let selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -42,6 +48,7 @@ function clearBoard() {
 }
 
 window.onload = function () {
+  let boardSize = 5;
   generatePalette();
   createBoard(boardSize);
   clearBoard();
