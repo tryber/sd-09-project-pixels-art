@@ -1,0 +1,58 @@
+.titulos {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+div {
+    width: 50px;
+    height: 50px;
+}
+
+#color-palette {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: auto;
+    width: 30%;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.color {
+    display: flex;
+    border: 3px solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: black;
+}
+
+.pixel-board {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 210px;
+}
+
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+
+.buttom {
+    margin: 10px auto;
+}
