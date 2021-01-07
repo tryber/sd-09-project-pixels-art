@@ -53,3 +53,11 @@
 #clear-board{
   margin-left:10px;
 }
+
+#selected-color{
+  margin-left: 10px;
+}
+
+h2{
+  display: inline;
+}
