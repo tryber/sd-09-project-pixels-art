@@ -7,10 +7,10 @@ function colorOnload() {
 colorOnload();
 
 function colorSumary() {
-  const black = document.getElementById('#black');
-  const red = document.getElementById('#red');
-  const blue = document.getElementById('#blue');
-  const green = document.getElementById('#green');
+  const black = document.getElementById('black');
+  const red = document.getElementById('red');
+  const blue = document.getElementById('blue');
+  const green = document.getElementById('green');
 	black.style.backgroundColor = 'black';
 	red.style.backgroundColor = 'red';
 	blue.style.backgroundColor = 'blue';
