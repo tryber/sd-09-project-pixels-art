@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+}
+
+.color {
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  margin: 0 6px;
+  width: 40px;
+}
+
+.pixel {
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.selected {
+  animation: slide-top 0.5s ease-in both;
+}
+
+.clear-board {
+  display: block;
+  margin: 0.5em auto;
+}
+
+.pixel-board {
+  display: inline-block;
+  line-height: 1px;
+}
+
+/* Used Animista website for the side up animation */
+
+@keyframes slide-top {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
