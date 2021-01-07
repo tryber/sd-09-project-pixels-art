@@ -1,0 +1,38 @@
+body {
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.color-palette {
+  display: table;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.pixel-board {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.row {
+  display: block;
+  height: 40px;
+  width: max-content;
+}
