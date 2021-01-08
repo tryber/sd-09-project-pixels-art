@@ -6,21 +6,20 @@
     <title>Paleta de Cores</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header >
+<body class="body">
+    <header class="header">
         <h1 id="title">Paleta de Cores</h1>
         <nav id="color-palette">
             <div>
-                <span class="color black" class="selected"></span>
-                <span class="color red"></span>
-                <span class="color green"></span>
-                <span class="color blue"></span>
+                <button class="color black selected"></button>
+                <button class="color red"></button>
+                <button class="color green"></button>
+                <button class="color blue"></button>
             </div>
         </nav>
     </header>
 
-    <button id="clear-board">Limpar</button>
-
+    <button id="clear-board">Limpar</button> 
     <!-- na melhoria fazer a criação dos elementos da tabela de forma dinamica (assim usar appendChil e CreatElement)-->
     <table id="pixel-board"> 
         <tr>

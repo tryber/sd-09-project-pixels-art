@@ -1,0 +1,1 @@
+let colorClass = document.getElementsByClassName
