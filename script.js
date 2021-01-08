@@ -1,3 +1,5 @@
+
+
 function colorOnload() {
   let colorSelected = document.querySelector('#black');
 
@@ -16,20 +18,23 @@ function colorSumary() {
 	blue.style.backgroundColor = 'blue';
 	green.style.backgroundColor = 'green';
 }
-
 colorSumary();
 
-color.addEventListener('click', function (event) {
+//seleciona outra cor na paleta
+function selectColor() {
   const color = document.querySelector('#color-palette');
-  let select = document.getElementsByClassName('.selected');
-  selected.classList.remove('selected');
-  event.target.classList.add('selected');
-        
-});
+  for (index = 0; index < color.length; index += 1) {
+    color[index].addEventListener('click', function (event) {
+      select.classList.remove('selected');
+      event.target.classList.add('selected');
+    })
+  }
+};
+  selectColor();
 
 function selectSquare() {
 	let pixels = document.querySelectorAll('.tr');
-
+  
   for (index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function(event) {
 
