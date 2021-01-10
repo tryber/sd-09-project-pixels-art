@@ -1,17 +1,27 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;  
   }
   
-  .body {
+  body {
       background-image: url('background.jpg');
       background-size: cover;
       background-color: white;      
   }
 
-  .header {    
-    text-align: center;       
+  header {    
+    text-align: center;          
+  } 
+
+  footer {
+
+  }
+
+  .skills {
+    border: 1px solid white;
+    border-radius: 10ch;
+    font-size: large;   
   }
 
   .color {
@@ -39,7 +49,7 @@
   }
 
   #pixel-board {
-    border-spacing: 0;    
+    border-spacing: 0;         
   }
 
   .pixel {
