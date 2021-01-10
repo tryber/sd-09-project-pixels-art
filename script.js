@@ -1,5 +1,3 @@
-
-
 function colorOnload() {
   let colorSelected = document.querySelector('#black');
 
@@ -23,12 +21,16 @@ colorSumary();
 //seleciona outra cor na paleta
 function selectColor() {
   const color = document.querySelector('#color-palette');
-  for (index = 0; index < color.length; index += 1) {
-    color[index].addEventListener('click', function (event) {
-      select.classList.remove('selected');
-      event.target.classList.add('selected');
-    })
-  }
+  const select = document.getElementsByClassName('color');
+  color.addEventListener('click', function (event) {
+    for (index = 0; index < select.length; index += 1) {
+      if (select[index].classList.contains('selected')) {
+        select[index].classList.remove('selected');
+        event.target.classList.add('selected');
+      }
+      console.log(event.target);
+    }
+  });
 };
   selectColor();
 
