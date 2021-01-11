@@ -49,15 +49,15 @@
   }
 
   #pixel-board {
-    border-spacing: 0;         
+    border-spacing: 0; 
+    background-color: white;        
   }
 
   .pixel {
-      background-color: white;
-      border-collapse: collapse;
-      border: 1px solid black;
-      height: 40px;
-      width: 40px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
   }
 
 
