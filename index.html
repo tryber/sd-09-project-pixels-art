@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paleta de Cores</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
+  </head>
+
+  <body>
+
     <header>
-        <h1 id="title">Paleta de Cores</h1>
-        <nav id="color-palette">
-                <button class="color black selected"></button>
-                <button class="color red"></button>
-                <button class="color green"></button>
-                <button class="color blue"></button>
-        </nav>
 
-        <nav>
-            <label for="board-size"></label>
-            <input type="number" min="5" max="50" id="board-size" name="board-size">
-            <button id="generate-board">VQV</button>
-        </nav>
-        
-        <button id="clear-board">Limpar</button>
+      <h1 id="title">Paleta de Cores</h1>
 
-    </header>        
+      <nav id="color-palette">
+        <button class="color black selected"></button>
+        <button class="color red"></button>
+        <button class="color green"></button>
+        <button class="color blue"></button>
+      </nav>
 
-            <table id="pixel-board"></table>                        
+      <nav>
+        <label for="board-size"></label>
+        <input type="number" min="5" max="50" id="board-size" name="board-size">
+        <button id="generate-board">VQV</button>
+      </nav>
+
+      <button id="clear-board">Limpar</button>
+
+    </header>
+
+    <main>
+      <table id="pixel-board"></table>
+    </main>
 
     <script src="script.js"></script>
 
-</body>
+  </body>
+
 </html>
