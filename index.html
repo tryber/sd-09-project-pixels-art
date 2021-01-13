@@ -16,56 +16,18 @@
                 <button class="color green"></button>
                 <button class="color blue"></button>
         </nav>
-    </header>
 
-    <button id="clear-board">Limpar</button> 
-    <!-- na melhoria fazer a criação dos elementos da tabela de forma dinamica (assim usar appendChil e CreatElement)-->
-    <table id="pixel-board"> 
-        <tr>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-        </tr>
-        <tr>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-        </tr>
-        <tr>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-        </tr>
-        <tr>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-        </tr>
-        <tr>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-            <td class="pixel"></td>
-        </tr>
-    </table>
-
-    <footer class="footer">
-        <h4> Choose your skills level</h4>
         <nav>
-            <button class="skills">CalArts leftist millennial dude</button>
-            <button class="skills">4 years old children</button>
-            <button class="skills">Caravaggio</button>            
+            <label for="board-size"></label>
+            <input type="number" min="5" max="50" id="board-size" name="board-size">
+            <button id="generate-board">VQV</button>
         </nav>
-    </footer>
+        
+        <button id="clear-board">Limpar</button>
+
+    </header>        
+
+            <table id="pixel-board"></table>                        
 
     <script src="script.js"></script>
 
