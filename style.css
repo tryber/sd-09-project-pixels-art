@@ -1,49 +1,48 @@
 #title {
-    color: lime;
+  color: lime;
 }
 
 #color-palette {
-    background-color: lightgray;
-    display: flex;
-    padding-left: 1px;
+  background-color: lightgray;
+  display: flex;
+  padding-left: 1px;
 }
 
 .color {
-    border: black solid 1px;
-    display: inline-block;
-    height: 45px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 45px;
+  border: black solid 1px;
+  display: inline-block;
+  height: 45px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 45px;
 }
 
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .blue {
-    background-color: blue;
+  background-color: blue;
 }
 
 .pixel {
-    background-color: white;
-    border: 1px solid black;
-    display: inline-block;
-    height: 40px;
-    margin: 0;
-    width: 40px;
-
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
 }
 
 .line-board {
-    display: flex;
-    margin: 0;
+  display: flex;
+  margin: 0;
 }
