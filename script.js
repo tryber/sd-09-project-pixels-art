@@ -20,8 +20,8 @@ window.onload = function () {
     // Adicionando a cor selecionada ao elemento pixel
     //??? const pixelBoard = document.querySelector('#pixel-board');
     //??? pixelBoard.addEventListener('click', function (event) {
-        const selectedElement = document.querySelector('.selected');
-        event.target.style.backgroundColor = getComputedStyle(selectedElement).backgroundColor;
+      const selectedElement = document.querySelector('.selected');
+      event.target.style.backgroundColor = getComputedStyle(selectedElement).backgroundColor;
     //??? });
   });
 
@@ -32,8 +32,8 @@ window.onload = function () {
     erasingClass.classList.remove('selected');
     const erasingPixels = document.querySelectorAll('.pixel');
     for (let index = 0; index < erasingPixels.length; index += 1) {
-        erasingPixels[index].style.backgroundColor = 'white';
-      }
+      erasingPixels[index].style.backgroundColor = 'white';
+    }
   });
 
   //Botão VQV(input)
