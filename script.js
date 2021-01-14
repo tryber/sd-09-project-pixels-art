@@ -1,3 +1,4 @@
+// Condição de inicio do quadro de pixels.
 function firstOrDefault() {
   let table = document.getElementById('pixel-board');
   for(let line = 0; line < 5; line += 1) {
@@ -12,7 +13,7 @@ function firstOrDefault() {
   paint();
 }
 
-window.onload = firstOrDefault;
+window.onload = firstOrDefault();
 
 // Ação de pintar
 function singlePixel(clickPixel) {
@@ -33,6 +34,16 @@ function genBoard() {
   let inputValue = document.getElementById('board-size').value;
   let table = document.getElementById('pixel-board');
   table.innerHTML = '';
+  if(inputValue < 5 && inputValue > 0) {
+    inputValue = 5;
+  }
+  else if(inputValue > 50) {
+    inputValue = 50;
+  }
+  else if(inputValue < 0 || inputValue === '') {
+    window.alert('Está errado disgraça!');
+    firstOrDefault()
+  }
   for(let line = 0; line < inputValue; line += 1) {
     let tr = document.createElement('tr');
     for(let column = 0; column < inputValue; column += 1) {
