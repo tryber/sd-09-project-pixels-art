@@ -41,7 +41,7 @@ function genBoard() {
     inputValue = 50;
   }
   else if(inputValue < 0 || inputValue === '') {
-    window.alert('Está errado disgraça!');
+    window.alert('Board inválido!');
     firstOrDefault()
   }
   for(let line = 0; line < inputValue; line += 1) {
