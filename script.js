@@ -18,11 +18,11 @@ window.onload = function () {
     erasingClass.classList.remove('selected');
     event.target.classList.add('selected');
     // Adicionando a cor selecionada ao elemento pixel
-    //??? const pixelBoard = document.querySelector('#pixel-board');
-    //??? pixelBoard.addEventListener('click', function (event) {
+    // ???const pixelBoard = document.querySelector('#pixel-board');
+    // ???pixelBoard.addEventListener('click', function (event) {
       const selectedElement = document.querySelector('.selected');
       event.target.style.backgroundColor = getComputedStyle(selectedElement).backgroundColor;
-    //??? });
+    // ???});
   });
 
   // Botão limpar
@@ -36,11 +36,11 @@ window.onload = function () {
     }
   });
 
-  //Botão VQV(input)
+  // Botão VQV(input)
   const generateBoard = document.querySelector('#generate-board');
   generateBoard.addEventListener('click', function () {
     const boardSize = document.querySelector('#board-size');
-    if (boardSize.value === "") {
+    if (boardSize.value === '') {
       alert('Board inválido!');
     } else if (boardSize.value < 5) {
       boardSize.value = 5;
@@ -49,19 +49,19 @@ window.onload = function () {
     }
     // Construindo um quadrado de pixels
     if (boardSize.value > 1) {
-      const pixelBoard = document.querySelector('#pixel-board')
+      // ???const pixelBoard = document.querySelector('#pixel-board');
       while (pixelBoard.firstChild) {
-        pixelBoard.removeChild(pixelBoard.firstChild)
+        pixelBoard.removeChild(pixelBoard.firstChild);
       }
     }
-    //??? const removingPixelSquare = pixelBoard.childNodes;
-    //??? document.pixelBoard.removeChild(removingPixelSquare);
+    // ???const removingPixelSquare = pixelBoard.childNodes;
+    // ???document.pixelBoard.removeChild(removingPixelSquare);
     for (let index = 0; index < boardSize.value; index += 1) {
-      const creatingDiv = document.createElement('div')
+      const creatingDiv = document.createElement('div');
       pixelBoard.appendChild(creatingDiv);
       const lastLineDiv = pixelBoard.lastChild;
       lastLineDiv.className = 'line-board';
-      for (let index = 0; index < boardSize.value; index += 1) {
+      for (let index2 = 0; index2 < boardSize.value; index2 += 1) {
         const creatingPixel = document.createElement('div');
         creatingDiv.appendChild(creatingPixel);
         const lastPixelDiv = creatingDiv.lastChild;
