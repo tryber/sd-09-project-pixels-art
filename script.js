@@ -17,7 +17,8 @@ function firstOrDefault() {
 function defaultColors() {
   let colorPalette = document.getElementById('color-palette');
   let black = document.createElement('button');
-  black.classList.add('color', 'black', 'selected');
+  black.classList.add('color', 'selected');
+  black.style.backgroundColor = 'black'
   colorPalette.appendChild(black);
   for(let line = 0; line < 3; line += 1) {
     let btn = document.createElement('button');

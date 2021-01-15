@@ -25,10 +25,6 @@ header {
   width: 45px;
 }
 
-.black {
-  background-color: black;
-}
-
 #pixel-board {
   border-spacing: 0;
 }
