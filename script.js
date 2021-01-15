@@ -13,11 +13,29 @@ function firstOrDefault() {
   paint();
 }
 
-window.onload = firstOrDefault();
+//Condição de inicio Pallet-Color
+function defaultColors() {
+  let colorPalette = document.getElementById('color-palette');
+  let black = document.createElement('button');
+  black.classList.add('color', 'black', 'selected');
+  colorPalette.appendChild(black);
+  for(let line = 0; line < 3; line += 1) {
+    let btn = document.createElement('button');
+    btn.classList.add('color');
+    colorPalette.appendChild(btn);
+  }
+  let colorBtn = document.getElementsByClassName('color');
+  for (let index = 1; index < colorBtn.length; index += 1) {
+    let randonColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    colorBtn[index].style.backgroundColor = randonColor;
+  }
+}
 
-// Ação de pintar
-function singlePixel(clickPixel) {
-  let chargedBrush = document.querySelector('.selected').classList[1];
+window.onload = firstOrDefault(), defaultColors();
+
+// Ação de pintar VAI MUDAR ESSA DESGRAÇA TBM!
+function jetColor(clickPixel) {
+  let chargedBrush = document.querySelector('.selected').style.backgroundColor;
   let selectedPixel = clickPixel.target;
   selectedPixel.style.backgroundColor = chargedBrush;
 }
@@ -25,7 +43,7 @@ function singlePixel(clickPixel) {
 function paint() {
   let pixelEcran = document.getElementsByClassName('pixel');
   for(let index = 0; index < pixelEcran.length; index += 1) {
-    pixelEcran[index].addEventListener('click', singlePixel);
+    pixelEcran[index].addEventListener('click', jetColor);
   }
 }
 
@@ -60,7 +78,7 @@ let btnGenBoard = document.getElementById('generate-board');
 btnGenBoard.addEventListener('click', genBoard);
 
 // Mudança na cor do pincel -- 1° desabilita seletor anterior 2° gera novo seletor
-let colorPallete = document.getElementsByClassName('color');
+let colorPalette = document.getElementsByClassName('color');
 function getColor(clickButton) {
   let buttonPressed = clickButton.target;
   buttonPressed.classList.add('selected');
@@ -70,9 +88,9 @@ function disableColor() {
   document.querySelector('.selected').classList.remove('selected');
 }
 
-for(let index = 0; index < colorPallete.length; index += 1) {
-  colorPallete[index].addEventListener('click', disableColor);
-  colorPallete[index].addEventListener('click', getColor);
+for(let index = 0; index < colorPalette.length; index += 1) {
+  colorPalette[index].addEventListener('click', disableColor);
+  colorPalette[index].addEventListener('click', getColor);
 }
 
 // Botão para limpar todos os pixels
