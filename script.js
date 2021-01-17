@@ -71,7 +71,7 @@ window.onload = function () {
   });
 
   // Gerando cor aleatoriamente ao carregar
-  function generatingColors () {
+  function generatingColors() {
     const hexadecimal = '0123456789ABCDEF';
     let color = '#';
     for (let index = 0; index < 6; index += 1) {
@@ -80,9 +80,9 @@ window.onload = function () {
     return color;
   }
   const secondColor = document.querySelector('.yellow');
-  secondColor.style.backgroundColor = generatingColors ();
+  secondColor.style.backgroundColor = generatingColors();
   const thirdColor = document.querySelector('.red');
-  thirdColor.style.backgroundColor = generatingColors ();
+  thirdColor.style.backgroundColor = generatingColors();
   const fourthColor = document.querySelector('.blue');
-  fourthColor.style.backgroundColor = generatingColors ();
+  fourthColor.style.backgroundColor = generatingColors();
 };
