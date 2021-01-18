@@ -1,8 +1,7 @@
-.pixel {
-  background-color: white;
+.color {
   border: 1px solid black;
-  height: 40px;
-  width: 40px;
+  height: 3.2em;
+  width: 3.2em;
 }
 
 .line {
@@ -23,4 +22,11 @@
 
 .blue {
   background-color: blue;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
