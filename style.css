@@ -5,12 +5,6 @@
   width: 3.2em;
 }
 
-.line {
-  display: inline-block;
-  height: 210px;
-  width: 42px;
-}
-
 .black {
   background-color: black;
 }
@@ -27,9 +21,17 @@
   background-color: blue;
 }
 
+#pixel-board {
+  height: 210px;
+  line-height: 0;
+  margin-left: 7.5px;
+  width: 210px;
+}
+
 .pixel {
   background-color: white;
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
   width: 40px;
 }
