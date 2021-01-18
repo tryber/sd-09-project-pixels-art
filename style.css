@@ -1,11 +1,14 @@
 .color {
   border: 1px solid black;
+  display: inline-block;
   height: 3.2em;
   width: 3.2em;
 }
 
 .line {
   display: inline-block;
+  height: 210px;
+  width: 42px;
 }
 
 .black {
