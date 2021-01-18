@@ -1,7 +1,6 @@
-const board = document.getElementById('pixel-board');
-
 function pixelBoard() {
-  for (let i = 0; i < 25; i += 1) {
+  const board = document.getElementById('pixel-board');
+  for (let i = 1; i <= 25; i += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
     board.appendChild(pixel);
@@ -9,3 +8,9 @@ function pixelBoard() {
 }
 
 pixelBoard();
+
+function selectedColor () {
+
+}
+
+selectedColor();
