@@ -1,4 +1,4 @@
-window.onload = function pixelBoard() {
+window.onload = function() {
   const board = document.getElementById('pixel-board');
   for (let i = 0; i < 5; i += 1) {
     for (let j = 0; j < 5; j += 1) {
@@ -6,10 +6,8 @@ window.onload = function pixelBoard() {
       pixel.className = 'pixel';
       board.appendChild(pixel);
     }
-  }
-}
-
-pixelBoard();
+  }  
+};
 
 function selectedColor() {
 }
