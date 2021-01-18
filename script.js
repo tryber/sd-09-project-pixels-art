@@ -5,7 +5,7 @@ window.onload = function () {
     father.appendChild(son);
     for (let j = 0; j < 5; j += 1) {
       const grandSon = document.createElement('div');
-      grandSon.className = 'pixel color';
+      grandSon.className = 'pixel';
       son.appendChild(grandSon);
     }
   }
