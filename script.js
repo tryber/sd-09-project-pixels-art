@@ -1,16 +1,17 @@
-function pixelBoard() {
+window.onload = function pixelBoard() {
   const board = document.getElementById('pixel-board');
-  for (let i = 0; i < 25; i += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    board.appendChild(pixel);
+  for (let i = 0; i < 5; i += 1) {
+    for (let j = 0; j < 5; j += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      board.appendChild(pixel);
+    }
   }
 }
 
 pixelBoard();
 
 function selectedColor() {
-  
 }
 
 selectedColor();

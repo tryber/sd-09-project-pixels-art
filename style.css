@@ -9,19 +9,19 @@
   display: inline-block;
 }
 
-#black {
+.black {
   background-color: black;
 }
 
-#red {
+.red {
   background-color: red;
 }
 
-#green {
+.green {
   background-color: green;
 }
 
-#blue {
+.blue {
   background-color: blue;
 }
 
