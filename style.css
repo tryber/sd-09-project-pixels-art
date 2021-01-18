@@ -1,19 +1,23 @@
+.color-palette {
+  display: inline-block;
+}
+
 .color {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .green {
-    background-color: green;
+  background-color: green;
 }
 
 .blue {
-    background-color: blue;
+  background-color: blue;
 }
