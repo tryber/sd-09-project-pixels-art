@@ -21,7 +21,7 @@
   background-color: blue;
 }
 
-#pixel-board {
+.board {
   height: 210px;
   line-height: 0;
   margin-left: 7.5px;

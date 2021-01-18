@@ -1,18 +1,16 @@
 window.onload = function () {
-  const father = document.getElementById('pixel-board');
+  const board = document.getElementById('pixel-board');
   for (let i = 0; i < 5; i += 1) {
-    const son = document.createElement('div');
-    son.className = 'line';
-    father.appendChild(son);
     for (let j = 0; j < 5; j += 1) {
-      const grandSon = document.createElement('div');
-      grandSon.className = 'pixel';
-      son.appendChild(grandSon);
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      board.appendChild(pixel);
     }
   }
 };
 
 function selectedColor() {
+  const colorPalette = document.getElementById('color-palette');
 }
 
 selectedColor();
