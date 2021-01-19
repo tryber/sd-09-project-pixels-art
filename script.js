@@ -42,9 +42,7 @@ function selectColor() {
     }
   });
 };
-
-
-  selectColor();
+ selectColor();
 
 function selectSquare() {
 	let pixels = document.querySelectorAll('.tr');
