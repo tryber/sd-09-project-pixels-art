@@ -7,10 +7,8 @@ function generatingColors() {
     const randomColor = `rgb(${r}, ${g} , ${b})`;
     color[i].style.backgroundColor = randomColor;
   }
-  color[0].style.backgroundColor = 'black';
+  color[0].style.backgroundColor = 'rgb(0 , 0 , 0)';
 }
-
-generatingColors();
 
 function boardPixels(number) {
   const board = document.getElementById('pixel-board');
@@ -23,16 +21,12 @@ function boardPixels(number) {
   }
 }
 
-boardPixels(5);
-
 function selectedColor(selected) {
   const previousSelected = document.querySelector('.selected');
   const newSelected = selected.target;
   previousSelected.classList.remove('selected');
   newSelected.classList.add('selected');
 }
-
-document.getElementById('color-palette').addEventListener('click', selectedColor);
 
 function paintPixel(paint) {
   if (paint.target.className === 'pixel') {
@@ -41,18 +35,14 @@ function paintPixel(paint) {
   }
 }
 
-document.getElementById('pixel-board').addEventListener('click', paintPixel);
-
 function clear() {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
     if (pixels[i].className === 'pixel') {
-      pixels[i].style.backgroundColor = 'white';
+      pixels[i].style.backgroundColor = 'rgb(255 , 255 , 255)';
     }
   }
 }
-
-document.getElementById('clear-board').addEventListener('click', clear);
 
 function removeTable() {
   const pixels = document.querySelectorAll('div');
@@ -81,4 +71,9 @@ function generatePixels() {
   clear();
 }
 
+generatingColors();
+boardPixels(5);
+document.getElementById('color-palette').addEventListener('click', selectedColor);
+document.getElementById('pixel-board').addEventListener('click', paintPixel);
+document.getElementById('clear-board').addEventListener('click', clear);
 document.getElementById('generate-board').addEventListener('click', generatePixels);
