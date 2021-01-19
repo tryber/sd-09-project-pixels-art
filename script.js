@@ -24,15 +24,15 @@ function selectedColor(color) {
   const newSelected = color.target;
   previousSelected.classList.remove('selected');
   newSelected.classList.add('selected');
-  const paintColor = newSelected.style.backgroundColor;
-  const pixelBoard = document.querySelector('#pixel-board');
-
-  pixelBoard.addEventListener('click', function (paint) {
-    if (paint.target.classList === 'pixel') {
-      const pixel = paint.target;
-      pixel.style.backgroundColor = paintColor;
-    }
-  });
 }
 
 document.getElementById('color-palette').addEventListener('click', selectedColor);
+
+function paintPixel (paint) {
+  const paintColor = document.querySelector('.selected').style.backgroundColor;
+  if (paint.target.className === 'pixel') {
+    paint.target.style.backgroundColor = paintColor;
+  }
+}
+
+document.querySelector('#pixel-board').addEventListener('click', paintPixel);
