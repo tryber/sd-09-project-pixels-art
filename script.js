@@ -20,10 +20,20 @@ window.onload = function () {
 };
 
 function selectedColor(color) {
-  let previousSelected = document.querySelector('.selected');
-  let newSelected = color.target;
+  
+  const previousSelected = document.querySelector('.selected');
+  const newSelected = color.target;
   previousSelected.classList.remove('selected');
   newSelected.classList.add('selected');
+  const paintColor = newSelected.style.backgroundColor;
+  const pixelBoard = document.querySelector('#pixel-board');
+
+  pixelBoard.addEventListener ('click', function (event) {
+    if (event.target.classList = 'pixel') {
+      const pixel = event.target;
+      pixel.style.backgroundColor = paintColor;
+    }
+  });
 }
 
 document.getElementById('color-palette').addEventListener('click', selectedColor);

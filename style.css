@@ -1,14 +1,19 @@
 .color {
   border: 1px solid black;
-  display: inline-block;
-  height: 3.2em;
-  width: 3.2em;
+  display: table-cell;
+  height: 50.275px;
+  width: 50.275px;
+}
+
+section {
+  width: 210px;
+  margin: 0 0 5px 5px;
 }
 
 .board {
   height: 210px;
   line-height: 0;
-  margin-left: 7.5px;
+  margin-left: 5px;
   width: 210px;
 }
 
