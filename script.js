@@ -66,7 +66,7 @@ function generatePixels() {
   } if (size.value > 50) {
     size.value = 50;
   }
-  let calculation = 2.625 * size.value;
+  const calculation = 2.625 * size.value;
   board.style.height = `${calculation}em`;
   board.style.width = `${calculation}em`;
   boardPixels(size.value)
