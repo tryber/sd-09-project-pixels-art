@@ -14,9 +14,20 @@ function colorSumary() {
 	black.style.backgroundColor = 'black';
 	red.style.backgroundColor = 'red';
 	blue.style.backgroundColor = 'blue';
-	green.style.backgroundColor = 'green';
+  green.style.backgroundColor = 'green';
 }
 colorSumary();
+
+function resetBoard() {
+  let clear = document.getElementById('clear-board');
+  clear.addEventListener('click', function () {
+    let pixels = document.querySelectorAll('.pixel');
+    for (index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = 'white';
+    }
+  })
+};
+resetBoard();
 
 //seleciona outra cor na paleta
 function selectColor() {
@@ -28,21 +39,19 @@ function selectColor() {
         select[index].classList.remove('selected');
         event.target.classList.add('selected');
       }
-      console.log(event.target);
     }
   });
 };
+
+
   selectColor();
 
 function selectSquare() {
 	let pixels = document.querySelectorAll('.tr');
-  
   for (index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function(event) {
-
       const selectedColor = document.querySelector('.selected');
       let pixelBg = selectedColor.style.backgroundColor;
-
       event.target.style.backgroundColor = pixelBg;
 
     });

@@ -1,7 +1,21 @@
-h1{
-	color:slateblue;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+.container{
+	width:70%;
+	border: 7px dotted lightblue;
+	margin: auto;
 	text-align: center;
+	padding: 10px;
+	background-color: lightgoldenrodyellow;
+}
+h1{
+	color: rebeccapurple;
+	font-family:'Times New Roman', Times, serif
+}
+
+#pixel-board{
+	width: 13em;;	
+	margin-left: auto;
+    margin-right: auto;
+
 }
 
 .tr{
@@ -21,12 +35,16 @@ h1{
 	padding: 60px;
 	width: 350px;
 }
+
+button{
+	margin: 30px;
+}
 #green{
 	border: 1px solid black;
 	width: 50px;
 	height:50px;
 	background-color: green;
-	margin-left:20px;
+	margin-left:10px;
 	float: left;
 }
 
@@ -36,7 +54,7 @@ h1{
 	height:50px;
 	background-color:blue;
 	float: left;
-	margin-left:20px;
+	margin-left:10px;
 }
 
 #black{
@@ -45,7 +63,7 @@ h1{
 	height:50px;
 	background-color: black;
 	float: left;
-	margin-left:20px;
+	margin-left:10px;
 }
 
 #red{
@@ -54,6 +72,14 @@ h1{
 	height:50px;
 	background-color:red;
 	float: left;
-	margin-left:20px;
+	margin-left:10px;
 	
+}
+
+.white{
+	border: 1px solid black;
+	width: 50px;
+	height:50px;
+	background-color:white;
+	margin-left:10px;
 }
