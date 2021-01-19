@@ -1,4 +1,4 @@
-.container{
+.container {
 	width:70%;
 	border: 7px dotted lightblue;
 	margin: auto;
@@ -6,24 +6,24 @@
 	padding: 10px;
 	background-color: lightgoldenrodyellow;
 }
-h1{
+h1 {
 	color: rebeccapurple;
 	font-family:'Times New Roman', Times, serif
 }
 
-#pixel-board{
+#pixel-board {
 	width: 13em;;	
 	margin-left: auto;
     margin-right: auto;
 
 }
 
-.tr{
+.tr {
 	display: table-row;
 	border: 1px solid black;
 }
 
-.pixel{
+.pixel {
 	display: table-cell;
 	border: 1px solid black;
 	height: 40px;
@@ -36,10 +36,10 @@ h1{
 	width: 350px;
 }
 
-button{
+button {
 	margin: 30px;
 }
-#green{
+#green {
 	border: 1px solid black;
 	width: 50px;
 	height:50px;
@@ -48,7 +48,7 @@ button{
 	float: left;
 }
 
-#blue{
+#blue { 
 	border: 1px solid black;
 	width: 50px;
 	height:50px;
@@ -57,7 +57,7 @@ button{
 	margin-left:10px;
 }
 
-#black{
+#black {
 	border: 1px solid black;
 	width: 50px;
 	height:50px;
@@ -66,7 +66,7 @@ button{
 	margin-left:10px;
 }
 
-#red{
+#red {
 	border: 1px solid black;
 	width: 50px;
 	height:50px;
@@ -74,12 +74,4 @@ button{
 	float: left;
 	margin-left:10px;
 	
-}
-
-.white{
-	border: 1px solid black;
-	width: 50px;
-	height:50px;
-	background-color:white;
-	margin-left:10px;
 }
