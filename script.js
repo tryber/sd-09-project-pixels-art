@@ -20,7 +20,6 @@ window.onload = function () {
 };
 
 function selectedColor(color) {
-  
   const previousSelected = document.querySelector('.selected');
   const newSelected = color.target;
   previousSelected.classList.remove('selected');
@@ -28,9 +27,10 @@ function selectedColor(color) {
   const paintColor = newSelected.style.backgroundColor;
   const pixelBoard = document.querySelector('#pixel-board');
 
-  pixelBoard.addEventListener ('click', function (event) {
-    if (event.target.classList = 'pixel') {
-      const pixel = event.target;
+  pixelBoard.addEventListener('click', function (paint) {
+    const paintClassList = paint.target.classList;
+    if (paintClassList = 'pixel') {
+      const pixel = paint.target;
       pixel.style.backgroundColor = paintColor;
     }
   });
