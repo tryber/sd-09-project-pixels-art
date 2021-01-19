@@ -28,8 +28,7 @@ function selectedColor(color) {
   const pixelBoard = document.querySelector('#pixel-board');
 
   pixelBoard.addEventListener('click', function (paint) {
-    const paintClassList = paint.target.classList;
-    if (paintClassList = 'pixel') {
+    if (paint.target.classList === 'pixel') {
       const pixel = paint.target;
       pixel.style.backgroundColor = paintColor;
     }
