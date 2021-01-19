@@ -5,22 +5,6 @@
   width: 3.2em;
 }
 
-.black {
-  background-color: black;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
 .board {
   height: 210px;
   line-height: 0;
