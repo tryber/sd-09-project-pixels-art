@@ -39,24 +39,21 @@ function paintPixel(paint) {
 
 document.getElementById('pixel-board').addEventListener('click', paintPixel);
 
-function clearButton() {
+function clear(event) {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
-    if (pixels[i].className === 'pixel') {
+    if (pixels[i].className === 'pixel' && event === 'input') {
+      pixels[i].remove();
+    } else if (pixels[i].className === 'pixel') {
       pixels[i].style.backgroundColor = 'white';
     }
   }
 }
 
-document.getElementById('clear-board').addEventListener('click', clearButton);
+document.getElementById('clear-board').addEventListener('click', clear);
 
 function generatePixels() {
-  const pixels = document.querySelectorAll('div');
-  for (let i = 0; i < pixels.length; i += 1) {
-    if (pixels[i].className === 'pixel') {
-      pixels[i].remove();
-    }
-  }
+  clear('input');
   const board = document.querySelector('.board');
   const size = document.getElementById('board-size');
   if (size.value === '') {
@@ -69,7 +66,7 @@ function generatePixels() {
   const calculation = 2.625 * size.value;
   board.style.height = `${calculation}em`;
   board.style.width = `${calculation}em`;
-  boardPixels(size.value)
+  boardPixels(size.value);
   clearButton();
 }
 
