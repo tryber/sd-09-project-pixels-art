@@ -1,12 +1,13 @@
-const black = document.getElementsByTagName('div')[0];
-const red = document.getElementsByTagName('div')[1];
-const green = document.getElementsByTagName('div')[2];
-const blue = document.getElementsByTagName('div')[3];
+function generatingColors() {
+  const color = document.querySelectorAll('.color');
+  for (let i = 0; i < color.length; i += 1) {
+    const randomColor = 'rgb(' + Math.random() * 256 + ',' + Math.random() * 256 + ',' + Math.random() * 256 + ')';
+    color[i].style.backgroundColor = randomColor;
+  }
+  color[0].style.backgroundColor = 'black';
+}
 
-black.style.backgroundColor = 'black';
-red.style.backgroundColor = 'red';
-green.style.backgroundColor = 'green';
-blue.style.backgroundColor = 'blue';
+generatingColors();
 
 function boardPixels(number) {
   const board = document.getElementById('pixel-board');
@@ -21,9 +22,9 @@ function boardPixels(number) {
 
 boardPixels(5);
 
-function selectedColor(color) {
+function selectedColor(selected) {
   const previousSelected = document.querySelector('.selected');
-  const newSelected = color.target;
+  const newSelected = selected.target;
   previousSelected.classList.remove('selected');
   newSelected.classList.add('selected');
 }
