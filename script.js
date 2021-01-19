@@ -39,12 +39,10 @@ function paintPixel(paint) {
 
 document.getElementById('pixel-board').addEventListener('click', paintPixel);
 
-function clear(event) {
+function clear() {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
-    if (pixels[i].className === 'pixel' && event === 'input') {
-      pixels[i].remove();
-    } else if (pixels[i].className === 'pixel') {
+    if (pixels[i].className === 'pixel') {
       pixels[i].style.backgroundColor = 'white';
     }
   }
@@ -52,8 +50,17 @@ function clear(event) {
 
 document.getElementById('clear-board').addEventListener('click', clear);
 
+function removeTable() {
+  const pixels = document.querySelectorAll('div');
+  for (let i = 0; i < pixels.length; i += 1) {
+    if (pixels[i].className === 'pixel') {
+      pixels[i].remove();
+    }
+  }
+}
+
 function generatePixels() {
-  clear('input');
+  removeTable();
   const board = document.querySelector('.board');
   const size = document.getElementById('board-size');
   if (size.value === '') {
@@ -67,7 +74,7 @@ function generatePixels() {
   board.style.height = `${calculation}em`;
   board.style.width = `${calculation}em`;
   boardPixels(size.value);
-  clearButton();
+  clear();
 }
 
 document.getElementById('generate-board').addEventListener('click', generatePixels);
