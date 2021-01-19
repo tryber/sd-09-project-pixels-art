@@ -24,3 +24,7 @@ section {
   height: 40px;
   width: 40px;
 }
+
+button {
+  margin: 0 0 5px 82px;
+}

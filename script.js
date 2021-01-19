@@ -28,11 +28,22 @@ function selectedColor(color) {
 
 document.getElementById('color-palette').addEventListener('click', selectedColor);
 
-function paintPixel (paint) {
+function paintPixel(paint) {
   const paintColor = document.querySelector('.selected').style.backgroundColor;
   if (paint.target.className === 'pixel') {
     paint.target.style.backgroundColor = paintColor;
   }
 }
 
-document.querySelector('#pixel-board').addEventListener('click', paintPixel);
+document.getElementById('pixel-board').addEventListener('click', paintPixel);
+
+function clearButton() {
+  const pixels = document.querySelectorAll('div');
+  for (let i = 0; i < pixels.length; i += 1) {
+    if (pixels[i].className === 'pixel') {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  }
+}
+
+document.getElementById('clear-board').addEventListener('click', clearButton);
