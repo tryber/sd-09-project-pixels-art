@@ -10,6 +10,15 @@ section {
   width: 210px;
 }
 
+input {
+  margin-left: 5px;
+  width: 78px;
+}
+
+button {
+  margin: 0 5px 5px 5px;
+}
+
 .board {
   height: 210px;
   line-height: 0;
@@ -23,8 +32,4 @@ section {
   display: inline-block;
   height: 40px;
   width: 40px;
-}
-
-button {
-  margin: 0 0 5px 82px;
 }
