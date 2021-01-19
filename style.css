@@ -16,14 +16,14 @@ input {
 }
 
 button {
-  margin: 0 5px 5px 5px;
+  margin: 0 5px 5px;
 }
 
 .board {
-  height: 210px;
+  height: 13.125em;
   line-height: 0;
   margin-left: 5px;
-  width: 210px;
+  width: 13.125em;
 }
 
 .pixel {

@@ -8,16 +8,18 @@ red.style.backgroundColor = 'red';
 green.style.backgroundColor = 'green';
 blue.style.backgroundColor = 'blue';
 
-window.onload = function () {
+function boardPixels(number) {
   const board = document.getElementById('pixel-board');
-  for (let i = 0; i < 5; i += 1) {
-    for (let j = 0; j < 5; j += 1) {
+  for (let i = 0; i < number; i += 1) {
+    for (let j = 0; j < number; j += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       board.appendChild(pixel);
     }
   }
-};
+}
+
+boardPixels(5);
 
 function selectedColor(color) {
   const previousSelected = document.querySelector('.selected');
@@ -47,3 +49,28 @@ function clearButton() {
 }
 
 document.getElementById('clear-board').addEventListener('click', clearButton);
+
+function generatePixels() {
+  const pixels = document.querySelectorAll('div');
+  for (let i = 0; i < pixels.length; i += 1) {
+    if (pixels[i].className === 'pixel') {
+      pixels[i].remove();
+    }
+  }
+  const board = document.querySelector('.board');
+  const size = document.getElementById('board-size');
+  if (size.value === '') {
+    alert('Board inválido!');
+  } if (size.value < 5) {
+    size.value = 5;
+  } if (size.value > 50) {
+    size.value = 50;
+  }
+  let calculation = 2.625 * size.value;
+  board.style.height = `${calculation}em`;
+  board.style.width = `${calculation}em`;
+  boardPixels(size.value)
+  clearButton();
+}
+
+document.getElementById('generate-board').addEventListener('click', generatePixels);
