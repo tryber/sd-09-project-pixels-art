@@ -1,7 +1,10 @@
 function generatingColors() {
   const color = document.querySelectorAll('.color');
   for (let i = 0; i < color.length; i += 1) {
-    const randomColor = 'rgb(' + Math.random() * 256 + ',' + Math.random() * 256 + ',' + Math.random() * 256 + ')';
+    const r = Math.random() * 256;
+    const g = Math.random() * 256;
+    const b = Math.random() * 256;
+    const randomColor = `rgb(${r}, ${g} , ${b})`;
     color[i].style.backgroundColor = randomColor;
   }
   color[0].style.backgroundColor = 'black';
