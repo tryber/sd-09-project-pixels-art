@@ -29,7 +29,7 @@ function selectedColor(selected) {
 }
 
 function paintPixel(paint) {
-  if (paint.target.className === 'pixel') {
+  if (paint.target.classList.contains('pixel')) {
     const paintColor = document.querySelector('.selected').style.backgroundColor;
     paint.target.style.backgroundColor = paintColor;
   }
@@ -38,7 +38,7 @@ function paintPixel(paint) {
 function clear() {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
-    if (pixels[i].className === 'pixel') {
+    if (pixels[i].classList.contains('pixel')) {
       pixels[i].style.backgroundColor = 'rgb(255 , 255 , 255)';
     }
   }
@@ -47,7 +47,7 @@ function clear() {
 function removeTable() {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
-    if (pixels[i].className === 'pixel') {
+    if (pixels[i].classList.contains('pixel')) {
       pixels[i].remove();
     }
   }
