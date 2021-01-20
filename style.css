@@ -1,0 +1,35 @@
+.color {
+  border: 1px solid black;
+  display: table-cell;
+  height: 50.275px;
+  width: 50.275px;
+}
+
+section {
+  margin: 0 0 5px 5px;
+  width: 210px;
+}
+
+input {
+  margin-left: 5px;
+  width: 78px;
+}
+
+button {
+  margin: 0 5px 5px;
+}
+
+.board {
+  height: 13.125em;
+  line-height: 0;
+  margin-left: 5px;
+  width: 13.125em;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
