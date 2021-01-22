@@ -1,6 +1,15 @@
+.button-container {
+  display: inline-block;
+  width: 266px;
+}
+
+.button-generate {
+  text-align: center;
+  width: 22%;
+}
 .button-reset {
   text-align: center;
-  width: 100%;
+  width: 20%;
 }
 
 .color {
@@ -30,6 +39,10 @@ h1 {
   padding-left: 30px;
 }
 
+.input {
+  width: 33%;
+}
+
 .page-title {
   color: blueviolet;
   font-style: italic;
@@ -43,7 +56,6 @@ h1 {
 }
 
 .pixels-box {
-  background-color: grey;
   height: 260px;
   width: 260px;
 }
