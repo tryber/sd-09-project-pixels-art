@@ -11,13 +11,6 @@ h1 {
 	font-family:'Times New Roman', Times, serif
 }
 
-#pixel-board {
-	width: 13em;;	
-	margin-left: auto;
-    margin-right: auto;
-
-}
-
 .tr {
 	display: table-row;
 	border: 1px solid black;

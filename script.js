@@ -18,6 +18,7 @@ function colorSumary() {
 }
 colorSumary();
 
+//limpa o board
 function resetBoard() {
   let clear = document.getElementById('clear-board');
   clear.addEventListener('click', function () {
@@ -44,6 +45,7 @@ function selectColor() {
 };
  selectColor();
 
+ 
 function selectSquare() {
 	let pixels = document.querySelectorAll('.tr');
   for (index = 0; index < pixels.length; index += 1) {
