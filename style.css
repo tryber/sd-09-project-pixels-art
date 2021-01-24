@@ -1,0 +1,32 @@
+.color {
+    border:1px solid black;
+    
+    
+}
+
+#color-palette {
+    display: flex;
+    justify-content: space-between;
+    
+}
+div {
+    width: 50px;
+    height: 50px;
+}
+
+.a {
+    background-color: black;
+}
+
+.e {
+    background-color: red;
+}
+
+.i {
+    background-color: blue;
+}
+
+.o {
+    background-color:  green;
+}
+
