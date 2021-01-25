@@ -60,9 +60,13 @@ const clickButton = document.getElementById('clear-board');
 clickButton.addEventListener('click', clearBoard);
 
 function createTabPixels() {
+  const valueFromInput = document.getElementById('board-size');
+  if (valueFromInput.value === ""){
+    alert('Board inválido!');
+    return null;
+  }
   const tabela = document.getElementById('pixel-board');
   tabela.innerHTML = '';
-  const valueFromInput = document.getElementById('board-size');
   for (let indexTR = 0; indexTR < valueFromInput.value; indexTR += 1) {
     const elementByTable = document.createElement('tr');
     tabela.appendChild(elementByTable);    
