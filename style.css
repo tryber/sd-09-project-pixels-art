@@ -16,22 +16,6 @@ div {
     border: 1px solid black;
 }
 
-.a {
-    background-color: black;
-}
-
-.e {
-    background-color: red;
-}
-
-.i {
-    background-color: blue;
-}
-
-.o {
-    background-color:  green;
-}
-
 #pixel-board {
     display: flex;
     flex-direction: row;
