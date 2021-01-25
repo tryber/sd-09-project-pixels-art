@@ -34,21 +34,25 @@ color2.addEventListener('click', selectingColor);
 color3.addEventListener('click', selectingColor);
 color4.addEventListener('click', selectingColor);
 
-const arrayDePixels = document.getElementsByClassName('pixel');
 
 function paintingPixel(event) {
   const corAtual = document.querySelector('.selected');
   event.target.style.backgroundColor = getComputedStyle(corAtual).backgroundColor;
 }
 
-for (let index = 0; index < arrayDePixels.length; index += 1) {
-  arrayDePixels[index].addEventListener('click', paintingPixel);
+function createListener() {
+  const arrayDePixels = document.getElementsByClassName('pixel');
+  for (let index = 0; index < arrayDePixels.length; index += 1) {
+    arrayDePixels[index].addEventListener('click', paintingPixel);
+  }
 }
+
+createListener();
 
 function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
-    for (let index = 0; index < pixels.length; index +=1) {
-      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+  for (let index = 0; index < pixels.length; index +=1) {
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
@@ -56,5 +60,21 @@ const clickButton = document.getElementById('clear-board');
 clickButton.addEventListener('click', clearBoard);
 
 function createTabPixels() {
-  
+  const tabela = document.getElementById('pixel-board');
+  tabela.innerHTML = '';
+  const valueFromInput = document.getElementById('board-size');
+  for (let indexTR = 0; indexTR < valueFromInput.value; indexTR += 1) {
+    const elementByTable = document.createElement('tr');
+    tabela.appendChild(elementByTable);    
+    for (let index = 0; index < valueFromInput.value; index += 1) {
+      const td = document.createElement('td');
+      td.classList.add('pixel');
+      elementByTable.appendChild(td);
+    }    
+  }
+  createListener();
 }
+
+
+const btGenBoard = document.getElementById('generate-board');
+btGenBoard.addEventListener('click', createTabPixels);
