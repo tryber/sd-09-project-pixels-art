@@ -36,11 +36,13 @@ div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap ;
-    max-width: 20%;
+    max-width: 18%;
     
 }
 
 .pixel {
     background-color: rgb(255, 255, 255);
+    max-width: 40px;
+    max-height: 40px;
 }
 
