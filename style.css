@@ -1,0 +1,68 @@
+.button-container {
+  display: inline-block;
+  width: 266px;
+}
+
+.button-generate {
+  text-align: center;
+  width: 22%;
+}
+.button-reset {
+  text-align: center;
+  width: 20%;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+}
+
+.color-white {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  padding-left: 550px;
+}
+
+.first-color {
+  background-color: black;
+}
+
+.fourth-color {
+  background-color: darkgoldenrod;
+}
+
+h1 {
+  padding-left: 30px;
+}
+
+.input {
+  width: 33%;
+}
+
+.page-title {
+  color: blueviolet;
+  font-style: italic;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.second-color {
+  background-color: blue;
+}
+
+table {
+  margin-left: 15px;
+}
+
+.third-color {
+  background-color: coral;
+}

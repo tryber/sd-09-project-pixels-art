@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title" id="title">Paleta de Cores</h1>
+    <div id="color-palette">
+      <div class="color first-color selected"></div>
+      <div class="color second-color"></div>
+      <div class="color third-color"></div>
+      <div class="color fourth-color"></div>
+    </div>
+      <div class="button-container">
+        <button class="button-reset" id="clear-board">Limpar</button>
+        <input type="number" id="board-size" class="imput" size="16" placeholder="Digite o tam da board" min="1" max="50"> 
+        <button id="generate-board" class="button-generate">VQV</button>
+      </div>
+      <div class="pixels-box">    
+        <table id="pixel-board">
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        </table>
+        <table class="table-test">
+
+        </table>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
