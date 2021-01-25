@@ -7,7 +7,7 @@
 #color-palette {
     display: flex;
     justify-content: space-between;
-    max-width: 20%;
+    max-width: 15%;
     
 }
 div {
@@ -30,5 +30,13 @@ div {
 
 .o {
     background-color:  green;
+}
+
+#pixel-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    max-width: 20%;
+    
 }
 
