@@ -5,8 +5,6 @@ const color4 = document.getElementsByClassName('fourth-color')[0];
 
 const paletaCores = [color1, color2, color3, color4];
 
-//color2.style.backgroundColor = 'rgb(128, 128, 128)';
-
 function changinColor() {
   const clrR = Math.floor(Math.random() * 256);
   const clrG = Math.floor(Math.random() * 256);
@@ -14,14 +12,13 @@ function changinColor() {
   const colorRGB = "rgb(" + clrR + ", " + clrG + ", " + clrB +")";
   return colorRGB;
 }
-//let addColor = changinColor();
-//console.log(addColor, color2);
+
 color2.style.backgroundColor = changinColor();
 color3.style.backgroundColor = changinColor();
 color4.style.backgroundColor = changinColor();
 
 function selectingColor(event) {
-  for (let index = 0; index < paletaCores.length; index += 1) {
+  for (let index = 0; index < paletaCores.length; index += 1 ) {
     if (paletaCores[index].classList.contains('selected')) {
       paletaCores[index].classList.remove('selected');
     }
@@ -42,7 +39,7 @@ function paintingPixel(event) {
 
 function createListener() {
   const arrayDePixels = document.getElementsByClassName('pixel');
-  for (let index = 0; index < arrayDePixels.length; index += 1) {
+  for (let index = 0; index < arrayDePixels.length; index += 1 ) {
     arrayDePixels[index].addEventListener('click', paintingPixel);
   }
 }
@@ -51,7 +48,7 @@ createListener();
 
 function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
-  for (let index = 0; index < pixels.length; index +=1) {
+  for (let index = 0; index < pixels.length; index +=1 ) {
     pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
@@ -61,7 +58,7 @@ clickButton.addEventListener('click', clearBoard);
 
 function createTabPixels() {
   const valueFromInput = document.getElementById('board-size');
-  if (valueFromInput.value === ""){
+  if (valueFromInput.value === ''){
     alert('Board inválido!');
     return null;
   }
@@ -69,16 +66,15 @@ function createTabPixels() {
   tabela.innerHTML = '';
   for (let indexTR = 0; indexTR < valueFromInput.value; indexTR += 1) {
     const elementByTable = document.createElement('tr');
-    tabela.appendChild(elementByTable);    
+    tabela.appendChild(elementByTable);
     for (let index = 0; index < valueFromInput.value; index += 1) {
       const td = document.createElement('td');
       td.classList.add('pixel');
       elementByTable.appendChild(td);
-    }    
+    }
   }
   createListener();
 }
-
 
 const btGenBoard = document.getElementById('generate-board');
 btGenBoard.addEventListener('click', createTabPixels);
