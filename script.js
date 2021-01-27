@@ -55,6 +55,15 @@ buttonGreen.addEventListener('click', selectYellow);
 const buttonBlack = document.getElementById('black');
 buttonBlack.addEventListener('click', selectBlack);
 
+function paintPixels(event) {
+    const selectedColor = document.querySelector('.selected').id;
+    const pixel = event.target;
+    pixel.style.backgroundColor = selectedColor;
+}
+
+const pixels = document.getElementById('pixel-board');
+pixels.addEventListener('click', paintPixels);
+
 
 
 
