@@ -6,3 +6,18 @@
   display: inline-block;
 }
 
+#black {
+  background-color: black;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
