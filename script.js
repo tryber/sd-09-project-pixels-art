@@ -64,6 +64,14 @@ function paintPixels(event) {
 const pixels = document.getElementById('pixel-board');
 pixels.addEventListener('click', paintPixels);
 
+function clearPixels() {
+    const pixels = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixels.length; index += 1) {
+        pixels[index].style.backgroundColor = 'white';
+    }
+}
 
+const buttonClean = document.getElementById('clear-board');
+buttonClean.addEventListener('click', clearPixels);
 
 
