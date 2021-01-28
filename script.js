@@ -1,7 +1,25 @@
+const colorBlack = document.getElementById('black');
+const colorYellow = document.getElementById('yellow');
+const colorRed = document.getElementById('red');
+const colorGreen = document.getElementById('green');
+
+function rgbRandom() {
+    const r = Math.ceil(Math.random() * 256);
+    const g = Math.ceil(Math.random() * 256);
+    const b = Math.ceil(Math.random() * 256);
+  
+    const rgb = `rgb(${r}, ${g}, ${b})`;
+  
+    return rgb;
+}
+
+colorBlack.style.backgroundColor = 'rgb(0, 0, 0)';
+colorYellow.style.backgroundColor = rgbRandom();
+colorRed.style.backgroundColor = rgbRandom();
+colorGreen.style.backgroundColor = rgbRandom();
+
+
 function selectYellow(event) {
-  const colorBlack = document.getElementById('black');
-  const colorRed = document.getElementById('red');
-  const colorGreen = document.getElementById('green');
 
   colorBlack.classList.remove('selected');
   colorRed.classList.remove('selected');
@@ -10,10 +28,6 @@ function selectYellow(event) {
 }
 
 function selectRed(event) {
-    const colorBlack = document.getElementById('black');
-    const colorYellow = document.getElementById('yellow');
-    const colorGreen = document.getElementById('green');
-  
     colorBlack.classList.remove('selected');
     colorYellow.classList.remove('selected');
     colorGreen.classList.remove('selected');
@@ -21,10 +35,6 @@ function selectRed(event) {
 }
 
 function selectGreen(event) {
-    const colorBlack = document.getElementById('black');
-    const colorRed = document.getElementById('red');
-    const colorYellow = document.getElementById('yellow');
-  
     colorBlack.classList.remove('selected');
     colorRed.classList.remove('selected');
     colorYellow.classList.remove('selected');
@@ -32,10 +42,6 @@ function selectGreen(event) {
 }
 
 function selectBlack(event) {
-    const colorYellow = document.getElementById('yellow');
-    const colorRed = document.getElementById('red');
-    const colorGreen = document.getElementById('green');
-  
     colorYellow.classList.remove('selected');
     colorRed.classList.remove('selected');
     colorGreen.classList.remove('selected');
@@ -56,7 +62,7 @@ const buttonBlack = document.getElementById('black');
 buttonBlack.addEventListener('click', selectBlack);
 
 function paintPixels(event) {
-    const selectedColor = document.querySelector('.selected').id;
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
     const pixel = event.target;
     pixel.style.backgroundColor = selectedColor;
 }

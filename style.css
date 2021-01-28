@@ -6,22 +6,6 @@
   display: inline-block;
 }
 
-#black {
-  background-color: black;
-}
-
-#yellow{
-  background-color: yellow;
-}
-
-#red {
-  background-color: red;
-}
-
-#green {
-  background-color: green;
-}
-
 #pixel-board {
   display: grid;
   grid-template-columns: repeat(5, 40px);
