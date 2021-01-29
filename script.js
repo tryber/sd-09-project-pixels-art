@@ -40,4 +40,13 @@ function eventoDaTabela(){
 
 eventoDaTabela();
 
+//Botao limpar
+function myFunction() {
+    let element = document.querySelectorAll(".pixel")
+
+    for (let i = 0; i < element.length; i += 1) {
+        element[i].style.backgroundColor = 'white';
+      }
+      
+}
 
