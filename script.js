@@ -1,3 +1,8 @@
+window.onload = function () {
+    let corPreta = document.getElementById('color1');
+    corPreta.className += ' selected'
+}
+
 function criarQuadro () {
     
         for (index = 0; index < 5; index += 1) {
