@@ -35,7 +35,7 @@
 }
 
 #pixels-board {
-    display: inline;
+    display: inline-block;
 }
 
 td {
@@ -44,4 +44,5 @@ td {
     cursor: pointer;
     border: 1px solid black;
     background-color: white;
+    margin: 0%;
 }
