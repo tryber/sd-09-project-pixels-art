@@ -11,6 +11,12 @@ function setBoardSize () {
     let boardSize = input.value;
     if (boardSize) {
       pixelBoard.innerText = '';
+      if (boardSize < 5) {
+        boardSize = 5;
+      }
+      if (boardSize > 50) {
+        boardSize = 50;
+      }
     function criarQuadro (boardSize) {
       for (index = 0 ; index < boardSize ; index += 1) {
         let linha = document.createElement('tr');
