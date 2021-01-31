@@ -6,14 +6,16 @@ window.onload = function () {
 function setBoardSize () {
   let botaoVqv = document.querySelector('#generate-board');
   let input = document.querySelector('input');
+  let pixelBoard = document.querySelector('#pixel-board');
   botaoVqv.addEventListener ('click', function () {
     let boardSize = input.value;
-    function criarQuadro (tamanho) {
-      for (index = 0 ; index < tamanho ; index += 1) {
+    pixelBoard.innerText = '';
+    function criarQuadro (boardSize) {
+      for (index = 0 ; index < boardSize ; index += 1) {
         let linha = document.createElement('tr');
         let pixelBoard = document.getElementById('pixel-board');
         pixelBoard.appendChild(linha);
-        for (index2 = 0; index2 < tamanho; index2 += 1) {
+        for (index2 = 0; index2 < boardSize; index2 += 1) {
           let coluna = document.createElement('td');
           coluna.className = 'pixel';
           document.getElementById('pixel-board').appendChild(coluna);
@@ -54,7 +56,21 @@ function limpaQuadro () {
   })
 }
 
+function criarQuadro () {
+  for (index = 0 ; index < 5 ; index += 1) {
+    let linha = document.createElement('tr');
+    let pixelBoard = document.getElementById('pixel-board');
+    pixelBoard.appendChild(linha);
+    for (index2 = 0; index2 < 5; index2 += 1) {
+      let coluna = document.createElement('td');
+      coluna.className = 'pixel';
+      document.getElementById('pixel-board').appendChild(coluna);
+    }
+  }
+}
+
 selectedColorChoise();
 paintPixel();
 limpaQuadro();
 setBoardSize();
+criarQuadro();
