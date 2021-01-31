@@ -16,18 +16,16 @@ function createPalette() {
 
 }
 
-createPalette()
-
 function createTable() {
   const tablePixelLocation = document.querySelector('#pixel-board')
 
-  for (let index = 0; index < 23; index += 1) {
+  for (let index = 0; index < 25; index += 1) {
     const createPixelLine = document.createElement('tr')
     createPixelLine.className = 'line'
   
     tablePixelLocation.appendChild(createPixelLine)
 
-    for (let index = 0; index < 23; index += 1) {
+    for (let index = 0; index < 25; index += 1) {
       const createPixelColumn = document.createElement('td')
       createPixelColumn.className = 'pixel'
 
@@ -35,8 +33,6 @@ function createTable() {
     }
   }
 }
-
-createTable()
 
 function selectColor() {
   const paletteListener = document.querySelector('#color-palette')
@@ -57,10 +53,18 @@ function selectColor() {
   })
 }
 
-selectColor()
+function clear() {
+  const litenerButtonClear = document.querySelector('#clear-board')
 
-
-
+  litenerButtonClear.addEventListener('click', function() {
+    let tableSize = document.querySelectorAll('.pixel')
+    
+    for(let index = 0; index < tableSize.length; index += 1) {
+      tableSize[index].style.backgroundColor = 'white'
+    }
+  
+  })
+}
 
 function assignColor() {
   const selectedPixelListener = document.querySelector('#pixel-board')
@@ -81,61 +85,10 @@ function assignColor() {
   })
 }
 
-assignColor()
-
-
-
-/*
-
-for (let index = 0; index < 4; index += 1) {
-    const createSquareColorPalette = document.createElement('td')
-
-    createSquareColorPalette.classList('colorPalette')
-
-    let insertChild = tableLocation.appendChild(createSquareColorPalette)
-  }
-
-
-// Selecionar Cor
-function colorSelected() {
-  const colorOfpalette = document.querySelector('#color-palette');
-
-  colorOfpalette.addEventListener('click', function (event) {
-    // Remover ".selected" anterior
-    const initialColor = document.querySelector('.selected');
-    initialColor.classList.remove('selected');
-
-    // Colocar o ".selected" na cor clicada
-    const newSelected = event.target;
-    newSelected.classList.add('selected');
-  });
-}
-colorSelected();
-
-// Pintar Pixel
-function paintPixel() {
-  const selectedPixel = document.querySelector('#pixel-board');
-
-  selectedPixel.addEventListener('click', function (event) {
-    const selectedColor = document.querySelector('.selected').classList[1];
-
-    const pixel = event.target;
-    pixel.className = `pixel ${selectedColor}`;
-  });
-}
-paintPixel();
-
-// Limpar Painel
-function clear() {
-  const buttonClear = document.querySelector('#clear-board');
-
-  buttonClear.addEventListener('click', function () {
-    const clearPixel = document.querySelectorAll('.pixel');
-
-    for (let index = 0; index < clearPixel.length; index += 1) {
-      clearPixel[index].className = '.pixel .white';
-    }
-  });
-}
-clear();
-*/
+window.onload(
+  assignColor(),
+  clear(),
+  createPalette(),
+  createTable(),
+  selectColor()
+)

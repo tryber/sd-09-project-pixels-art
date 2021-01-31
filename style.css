@@ -1,52 +1,57 @@
 
 button {
   margin: auto;
+  min-width: 60px;
   text-align: center;
   width: 30%;
 }
 
 #button {
-  margin-top: 25px;
   margin-left: 15%;
+  margin-top: 25px;
   width: 100%;
 }
 
 #color-palette {
+  background-color: black;
   border: solid black 1px;
   border-radius: 5%;
+  padding: 50px;
   margin: auto;
   padding: 10px;
 }
 
 #menu {
-  position: absolute;
-  border: solid black 5px;
+  background-color: darkblue;
+  border: solid black 3px;
   height: 95%;
+  position: absolute;
   width: 20%;
 }
 
 #pixel-board {
-  margin: auto;
-  position: absolute;
-  top: 50%;
   left: 50%;
+  margin: auto;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
 }
 
 #tablePixel {
-  margin-left: 30%;
   height: 95%;
+  margin-left: 22%;
   position: absolute;
   width: 70%;
 }
 
 #title {
+  color: white;
   text-align: center;
 }
 
 .colorPalette {
-  background-color: blue;
+  border: solid white 1px;
   height: 40px;
   width: 40px;
 }
@@ -59,5 +64,5 @@ button {
 }
 
 .selected {
-  border: solid yellow 2px;
+  border: solid yellow 3px;
 }
