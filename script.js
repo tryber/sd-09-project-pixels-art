@@ -9,7 +9,8 @@ function setBoardSize () {
   let pixelBoard = document.querySelector('#pixel-board');
   botaoVqv.addEventListener ('click', function () {
     let boardSize = input.value;
-    pixelBoard.innerText = '';
+    if (boardSize) {
+      pixelBoard.innerText = '';
     function criarQuadro (boardSize) {
       for (index = 0 ; index < boardSize ; index += 1) {
         let linha = document.createElement('tr');
@@ -23,6 +24,10 @@ function setBoardSize () {
       }
     }
     criarQuadro(boardSize);
+    }
+    else {
+      alert('Board inválido!');
+    }
   })
 }
 
