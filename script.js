@@ -36,6 +36,17 @@ function paintPixel () {
   })
 }
 
+function limpaQuadro () {
+  let botaoLimpa = document.querySelector('button');
+  botaoLimpa.addEventListener('click', function () {
+    pixels = document.getElementsByClassName ('pixel');
+    for (index = 0; index < pixels.length; index += 1) {
+      pixels[index].style.backgroundColor = '';
+    }
+  })
+}
+
 selectedColorChoise();
 criarQuadro();
 paintPixel();
+limpaQuadro();
