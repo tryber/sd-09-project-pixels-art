@@ -23,9 +23,19 @@ function selectedColorChoise () {
     for (index = 0; index < divsCores.length; index += 1) {
       divsCores[index].classList.remove('selected');
     }
-    event.target.className += ' selected';
+    event.target.classList.add('selected');
+  })
+}
+
+function paintPixel () {
+  let quadroPixels = document.querySelector('#pixel-board');
+  quadroPixels.addEventListener('click', function (event) {
+      let corSelecionada = document.querySelector('.selected');
+      let styleCorSelecionada = window.getComputedStyle(corSelecionada).getPropertyValue('background-color');
+      event.target.style.backgroundColor = styleCorSelecionada;
   })
 }
 
 selectedColorChoise();
 criarQuadro();
+paintPixel();
