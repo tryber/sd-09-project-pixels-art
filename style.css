@@ -9,6 +9,10 @@ button {
     display: block;
 }
 
+#generate-board {
+    display: inline;
+}
+
 #color-pattern {
     align-items: center;
     display: table;

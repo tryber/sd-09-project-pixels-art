@@ -3,17 +3,25 @@ window.onload = function () {
   corPreta.className += ' selected';
 }
 
-function criarQuadro () {
-  for (index = 0 ; index < 5 ; index += 1) {
-    let linha = document.createElement('tr');
-    let pixelBoard = document.getElementById('pixel-board');
-    pixelBoard.appendChild(linha);
-    for (index2 = 0; index2 < 5; index2 += 1) {
-      let coluna = document.createElement('td');
-      coluna.className = 'pixel';
-      document.getElementById('pixel-board').appendChild(coluna);
+function setBoardSize () {
+  let botaoVqv = document.querySelector('#generate-board');
+  let input = document.querySelector('input');
+  botaoVqv.addEventListener ('click', function () {
+    let boardSize = input.value;
+    function criarQuadro (tamanho) {
+      for (index = 0 ; index < tamanho ; index += 1) {
+        let linha = document.createElement('tr');
+        let pixelBoard = document.getElementById('pixel-board');
+        pixelBoard.appendChild(linha);
+        for (index2 = 0; index2 < tamanho; index2 += 1) {
+          let coluna = document.createElement('td');
+          coluna.className = 'pixel';
+          document.getElementById('pixel-board').appendChild(coluna);
+        }
+      }
     }
-  }
+    criarQuadro(boardSize);
+  })
 }
 
 function selectedColorChoise () {
@@ -37,7 +45,7 @@ function paintPixel () {
 }
 
 function limpaQuadro () {
-  let botaoLimpa = document.querySelector('button');
+  let botaoLimpa = document.querySelector('#clear-board');
   botaoLimpa.addEventListener('click', function () {
     pixels = document.getElementsByClassName ('pixel');
     for (index = 0; index < pixels.length; index += 1) {
@@ -47,6 +55,6 @@ function limpaQuadro () {
 }
 
 selectedColorChoise();
-criarQuadro();
 paintPixel();
 limpaQuadro();
+setBoardSize();
