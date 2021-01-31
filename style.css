@@ -32,18 +32,6 @@ button {
     background-color: black;
 }
 
-#color2 {
-    background-color: brown;
-}
-
-#color3 {
-    background-color: red;
-}
-
-#color4 {
-    background-color: lightcoral;
-}
-
 #pixel-board {
     display: inline-block;
 }

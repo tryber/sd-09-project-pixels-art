@@ -80,8 +80,23 @@ function criarQuadro () {
   }
 }
 
+function gerarCorAleatoria () {
+  let paletaCores = document.getElementsByClassName ('color');
+  for (index = 0; index < paletaCores.length; index += 1) {
+    if (paletaCores[index].id === 'color1') {
+    }
+    else {
+      let cor1 = Math.floor(Math.random() * 256);
+      let cor2 = Math.floor(Math.random() * 256);
+      let cor3 = Math.floor(Math.random() * 256);
+      paletaCores[index].style.backgroundColor = 'rgb(' + cor1 + ', ' + cor2 + ', ' + cor3 + ')';
+    }
+  }
+}
+
 selectedColorChoise();
 paintPixel();
 limpaQuadro();
 setBoardSize();
 criarQuadro();
+gerarCorAleatoria();
