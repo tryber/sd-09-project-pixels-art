@@ -58,3 +58,20 @@ function selectSquare() {
   };
 }
 selectSquare();
+
+function validateUserInput() {
+  const queryInput = document.querySelector('#board-size');
+  const vqvButton = document.querySelector('#generate-board');
+  vqvButton.addEventListener('click', function (event) {
+    let userInput = queryInput.value;
+    if (userInput === '' || userInput <= 0) {
+      return alert('Board inválido!');
+    } else if (userInput < 5 && userInput > 0) {
+      userInput = 5;
+    } else if (userInput > 50) {
+      userInput = 50;
+    }
+  });
+}
+validateUserInput();
+
