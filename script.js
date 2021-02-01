@@ -9,7 +9,7 @@ colorOnload();
 function colorSumary() {
   const colorPallete = document.querySelectorAll('.color');
   colorPallete[0].style.backgroundColor = 'black'
-  for (let index = 0; index < colorPallete.length; index += 1) {
+  for (let index = 1; index < colorPallete.length; index += 1) {
     const colorOne = parseInt(Math.random() * 255, 10);
     const colorTwo = parseInt(Math.random() * 255, 10);
     const colorThree = parseInt(Math.random() * 255, 10);
