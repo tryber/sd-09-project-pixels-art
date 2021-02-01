@@ -7,14 +7,14 @@ function colorOnload() {
 colorOnload();
 
 function colorSumary() {
-  const black = document.getElementById('black');
-  const red = document.getElementById('red');
-  const blue = document.getElementById('blue');
-  const green = document.getElementById('green');
-	black.style.backgroundColor = 'black';
-	red.style.backgroundColor = 'red';
-	blue.style.backgroundColor = 'blue';
-  green.style.backgroundColor = 'green';
+  const colorPallete = document.querySelectorAll('.color');
+  colorPallete[0].style.backgroundColor = 'black'
+  for (let index = 0; index < colorPallete.length; index += 1) {
+    const colorOne = parseInt(Math.random() * 255, 10);
+    const colorTwo = parseInt(Math.random() * 255, 10);
+    const colorThree = parseInt(Math.random() * 255, 10);
+    colorPallete[index].style.backgroundColor = `rgb(${colorOne}, ${colorTwo}, ${colorThree})`;
+  }
 }
 colorSumary();
 
