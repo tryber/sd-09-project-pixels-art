@@ -37,23 +37,19 @@ function selectColor() {
       if (select[index].classList.contains('selected')) {
         select[index].classList.remove('selected');
         event.target.classList.add('selected');
-        console.log(select[index]);
       }
     }
   });
 };
  selectColor();
 
-function selectSquare() {
-  let pixels = document.getElementsByClassName('pixel');
-  for (index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', function(event) {
-      let selectedColor = document.querySelector('.selected');
-      event.target.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
-    });
-  };
+ //pintar o quadro
+function selectSquare(event) {
+  const selectBoard = document.querySelector('.selected');
+  event.target.style.backgroundColor = selectBoard.style.backgroundColor;
 }
-selectSquare();
+const pixelBoard = document.querySelector('.pixel-board');
+pixelBoard.addEventListener('click', selectSquare);
 
 function validateUserInput() {
   const vqvButton = document.querySelector('#generate-board');
