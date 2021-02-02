@@ -1,10 +1,8 @@
-function colorOnload() {
-  let colorSelected = document.querySelector('#black');
-
-  return colorSelected;
+let pixelMatriz = 5;
+window.onload = function () {
+  const colorSelected = document.querySelector('#black');
+  colorSelected.classList.add('selected');
 }
-
-colorOnload();
 
 function colorSumary() {
   const colorPallete = document.querySelectorAll('.color');
@@ -39,39 +37,52 @@ function selectColor() {
       if (select[index].classList.contains('selected')) {
         select[index].classList.remove('selected');
         event.target.classList.add('selected');
+        console.log(select[index]);
       }
     }
   });
 };
  selectColor();
 
- 
 function selectSquare() {
-	let pixels = document.querySelectorAll('.tr');
+  let pixels = document.getElementsByClassName('pixel');
   for (index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', function(event) {
-      const selectedColor = document.querySelector('.selected');
-      let pixelBg = selectedColor.style.backgroundColor;
-      event.target.style.backgroundColor = pixelBg;
-
+      let selectedColor = document.querySelector('.selected');
+      event.target.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
     });
   };
 }
 selectSquare();
 
 function validateUserInput() {
-  const queryInput = document.querySelector('#board-size');
   const vqvButton = document.querySelector('#generate-board');
   vqvButton.addEventListener('click', function (event) {
-    let userInput = queryInput.value;
-    if (userInput === '' || userInput <= 0) {
-      return alert('Board inválido!');
-    } else if (userInput < 5 && userInput > 0) {
-      userInput = 5;
-    } else if (userInput > 50) {
-      userInput = 50;
+    let queryInput = document.querySelector('#board-size').value;
+    if (queryInput === '') {
+      alert('Board inválido!');
+    } else if (queryInput < 5) {
+      queryInput = 5;
+    } else if (queryInput > 50) {
+      queryInput = 50;
     }
+    pixelMatriz = queryInput;
+    customBoard();
   });
 }
 validateUserInput();
 
+function customBoard() {
+  const userBoard = document.getElementById('pixel-board');
+  userBoard.innerHTML = '';
+  for (let line = 0; line < pixelMatriz; line += 1) {
+    const div = document.createElement('div');
+    for (let colum = 0; colum < pixelMatriz; colum += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      div.appendChild(pixel);
+    }
+    userBoard.appendChild(div);
+  }
+}
+customBoard();
