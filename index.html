@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paleta de Cores</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1 id="title" >Paleta de Cores</h1>
     </header>
+    <section id="color-palette">
+        <div class="color selected"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+    </section>
+
+    <input id='board-size' type='number' min='1'>
+    <button id='generate-board'>VQV</button>
+
+    <button id='clear-board'>Limpar</button>
+
+    <section id='pixel-board' class='board'></section>
+
+    <script src="script.js"></script>
 </body>
 </html>
