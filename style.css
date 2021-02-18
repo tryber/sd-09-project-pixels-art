@@ -1,5 +1,6 @@
 body {
-  background-color: #3cc47c;
+  background-image: url(./images/michael-trimble-pXW5ZLx2mbY-unsplash.jpg);
+  background-size: 1912px;
   margin: 0;
 }
 .color {
@@ -9,12 +10,31 @@ body {
   width: 50px;
 }
 
+#title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #title {
-  background-color: #1e392ad7;
+  align-items: center;
+  background-color: #0d0464d7;
   box-shadow: 0 1px 15px black;
-  color: #3cc47c;
-  text-align: center;
+  border-radius: 6px;
+  color: #d4d10b;
+  display: flex;
+  font-family: "Indie Flower", cursive;
+  margin-top: 57px;
+  justify-content: center;
+  font-size: 2.4rem;
+  height: 70px;
+  padding: 10px;
   text-shadow: 1px 1px 2px black;
+  width: 290px;
+}
+
+#heart-id {
+  width: 80px;
 }
 
 #color-palette {
@@ -78,10 +98,11 @@ body {
 }
 
 #clear-board {
-  background-color: #05386b;
-  border: 1px solid #05386b;
+  background-color: #0d0464d7;
+  border: 1px solid #0d0464d7;
   border-radius: 5px;
   color: #edf5e1;
+  cursor: pointer;
   height: 25px;
   width: 60px;
 }
@@ -91,10 +112,11 @@ body {
 }
 
 #generate-board {
-  background-color: #05386b;
-  border: 1px solid #05386b;
+  background-color: #0d0464d7;
+  border: 1px solid #0d0464d7;
   border-radius: 5px;
   color: #edf5e1;
+  cursor: pointer;
   height: 25px;
   width: 60px;
 }
@@ -104,10 +126,10 @@ body {
 }
 
 footer {
-  background-color: #1e392ad7;
+  background-color: #0d0464d7;
   bottom: 0;
   box-shadow: 0 1px 15px black;
-  color: #3cc47c;
+  color: #d4d10b;
   font-style: italic;
   font-weight: 800;
   left: 0;
