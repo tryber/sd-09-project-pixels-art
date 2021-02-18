@@ -1,0 +1,147 @@
+body {
+  background-image: url(./images/michael-trimble-pXW5ZLx2mbY-unsplash.jpg);
+  background-size: 1912px;
+  margin: 0;
+}
+.color {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+#title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  align-items: center;
+  background-color: #0d0464d7;
+  box-shadow: 0 1px 15px black;
+  border-radius: 6px;
+  color: #d4d10b;
+  display: flex;
+  font-family: "Indie Flower", cursive;
+  margin-top: 57px;
+  justify-content: center;
+  font-size: 2.4rem;
+  height: 70px;
+  padding: 10px;
+  text-shadow: 1px 1px 2px black;
+  width: 290px;
+}
+
+#heart-id {
+  width: 80px;
+}
+
+#color-palette {
+  text-align: center;
+}
+
+#pixel-board {
+  display: table;
+  margin: 0 auto;
+}
+
+#middle-content {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+.color:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.black {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.blue {
+  background-color: blue;
+  border: 1px solid black;
+}
+
+.green {
+  background-color: green;
+  border: 1px solid black;
+}
+
+.pixel-row {
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel:hover {
+  cursor: pointer;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+#board-size {
+  width: 8%;
+}
+
+#clear-board {
+  background-color: #0d0464d7;
+  border: 1px solid #0d0464d7;
+  border-radius: 5px;
+  color: #edf5e1;
+  cursor: pointer;
+  height: 25px;
+  width: 60px;
+}
+
+#clear-board:hover {
+  background-color: rgb(17, 83, 145);
+}
+
+#generate-board {
+  background-color: #0d0464d7;
+  border: 1px solid #0d0464d7;
+  border-radius: 5px;
+  color: #edf5e1;
+  cursor: pointer;
+  height: 25px;
+  width: 60px;
+}
+
+#generate-board:hover {
+  background-color: rgb(17, 83, 145);
+}
+
+footer {
+  background-color: #0d0464d7;
+  bottom: 0;
+  box-shadow: 0 1px 15px black;
+  color: #d4d10b;
+  font-style: italic;
+  font-weight: 800;
+  left: 0;
+  margin-top: 75px;
+  position: fixed;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  width: 100%;
+}
+
+#img-trybe {
+  width: 115px;
+  position: relative;
+  top: 5px;
+}
